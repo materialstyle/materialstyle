@@ -1,8 +1,8 @@
 # Material Style
-Material Style lets you add the visual language of Google Material Design to the popular framework Bootstrap 4 with ease.
+Material Style is an easy to use UI wrapper that lets you add Material Design styles and animations to Bootstrap 4 components.
 
-## Download
-https://cdn.materialstyle.io/store/material-style-1.0.0.zip
+## Download the latest release
+https://cdn.materialstyle.io/store/material-style-1.1.0.zip
 
 ## Get Started
 ### Styles
@@ -18,7 +18,7 @@ Material Style recommends using Material Icons. However, You are free to use Fon
 <!-- Material Icons -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- Material Style CSS -->
-<link rel="stylesheet" href="https://cdn.materialstyle.io/1.0.0/css/material-style.css">
+<link rel="stylesheet" href="https://cdn.materialstyle.io/1.1.0/css/material-style.css">
 ```
 ### Scripts
 Full version of JQuery is required!
@@ -38,8 +38,10 @@ Full version of JQuery is required!
 ```
 ```
 <!-- Material Style JS -->
-<script src="https://cdn.materialstyle.io/1.0.0/js/material-style.js"></script>
+<script src="https://cdn.materialstyle.io/1.1.0/js/material-style.js"></script>
 ```
 
 That's it! You are now ready to add Material Style components on your site.
 
+## Components
+https://materialstyle.io/components
