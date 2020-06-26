@@ -1,14 +1,16 @@
 const path = require("path");
 const webpack = require("webpack");
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const merge = require("webpack-merge");
+const common = require("./webpack.common.js");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Components = require("./components.js");
 
-module.exports = merge(common, {
+webpackConfig = merge(common, {
     mode: "development",
     devServer: {
         contentBase: path.join(__dirname, "src/examples"),
         port: 3000,
-        hot: true,
+        hot: false,
         watchContentBase: true,
         liveReload: true,
         open: true,
@@ -18,3 +20,16 @@ module.exports = merge(common, {
         new webpack.HotModuleReplacementPlugin()
     ]
 });
+
+Components.forEach(function (component) {
+    webpackConfig.plugins.push(
+        new HtmlWebpackPlugin({
+            inject: false,
+            hash: true,
+            template: "./src/examples/" + component + ".html",
+            filename: "examples/" + component + ".html"
+        })
+    );
+});
+
+module.exports = webpackConfig;
