@@ -1,0 +1,158 @@
+@import "node_modules/bootstrap/scss/forms";
+
+.static-label, .floating-label, .floating-label-floating {
+  transition: .2s cubic-bezier(.4,0,.2,1);
+  display: block;
+  padding: 3.08px 0 3.08px 0;
+  margin: 0;
+  height: 24px;
+  width: fit-content;
+  font-family: $input-font-family;
+  position: relative;
+  z-index: 1;
+}
+
+.static-label {
+  transform: translate(0, 12px);
+  color: theme-color("dark");
+  font-size: 12px;
+}
+
+.floating-label {
+  transform: translate(0, 32px);
+  color: theme-color("dark");
+  font-size: 16px;
+  cursor: text;
+}
+
+.floating-label-floating {
+  transform: translate(0, 12px);
+  font-size: 12px !important;
+  cursor: text;
+}
+
+.select2-selection {
+  transition: .3s cubic-bezier(.4, 0, .2, 1);
+  outline: 0 !important;
+  padding: 0.375rem 0.75rem;
+  box-shadow: none;
+  min-height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+}
+
+.ms-select {
+  visibility: hidden;
+
+  .select2-selection {
+    border: none !important;
+    background: linear-gradient(theme-color("primary"), theme-color("primary")) center bottom/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center bottom/ 100% 1px no-repeat border-box transparent;
+  }
+
+  .select2-container--open {
+    .select2-selection {
+      background-size: 100% 2px, 100% 1px !important;
+      background-color: transparent;
+    }
+  }
+}
+
+.ms-select-outline {
+  visibility: hidden;
+
+  .select2-selection {
+    background-clip: border-box;
+    border-radius: 4px;
+    border: 1px solid theme-color("dark");
+    background: transparent;
+  }
+
+  .static-label, .floating-label, .floating-label-floating {
+    padding: 3.08px 5px 3.08px 5px;
+  }
+
+  .static-label {
+    transform: translate(9px, 12px) !important;
+  }
+
+  .floating-label {
+    transform: translate(9px, 30px) !important;
+  }
+
+  .floating-label-floating {
+    transform: translate(9px, 12px) !important;
+  }
+}
+
+.select2-selection__arrow {
+  height: 34px !important;
+}
+
+.select2-dropdown {
+  border: 0;
+  border-radius: 0 !important;
+  box-shadow: map-get($elevations, 2dp);
+}
+
+.select2-search__field {
+  box-shadow: none;
+  outline: none;
+}
+
+.select2-results__option--highlighted {
+  background-color: theme-color("grey-200") !important;
+  color: theme-color("dark") !important;
+}
+
+.select2-results__option[aria-selected="true"] {
+  background-color: theme-color("grey-100") !important;
+  color: theme-color("dark") !important;
+  position: relative;
+}
+
+.select2-selection__rendered {
+  line-height: 26px !important;
+}
+
+.select2-selection__choice {
+  border-radius: 0 !important;
+  border: 0 !important;
+  margin-top: 5px !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  background-color: #F5F5F5 !important;
+  z-index: 1;
+}
+
+.select2-selection--multiple {
+  padding: 0.375rem 0.75rem 0 0.75rem !important;
+
+  .select2-selection__rendered {
+    line-height: 20px !important;
+  }
+}
+
+.select2-selection__choice__remove {
+  margin-right: 5px !important;
+}
+
+.select2-results__options[aria-multiselectable="true"] {
+  .select2-results__option[aria-selected="true"] {
+    &:after {
+      transition: background-color 100ms ease-in 100ms;
+      content: "";
+      position: absolute;
+      display: block;
+      right: 10px;
+      top: 10px;
+      width: 6px;
+      height: 13px;
+      border: solid theme-color("dark");
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

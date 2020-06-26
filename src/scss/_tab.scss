@@ -1,0 +1,130 @@
+@each $color, $value in $theme-colors {
+  .nav-tabs.accent-#{$color} .nav-link.active,
+  .nav-tabs.primary-#{$color} .nav-link:not(.active) {
+    color: $value !important;
+  }
+
+  .nav-tabs.accent-#{$color} {
+    .active-indicator, .ink {
+      background-color: $value !important;
+    }
+  }
+}
+
+.ms-tabs-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  align-items: center;
+  overflow: hidden;
+
+  .ms-tab-arrow-icon-left {
+    padding: 0 10px 0 0;
+    cursor: pointer;
+  }
+
+  .ms-tab-arrow-icon-right {
+    padding: 0 0 0 10px;
+    cursor: pointer;
+  }
+}
+
+.nav-tabs {
+  //flex-wrap: nowrap;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: hidden;
+  border-bottom: 1px solid  theme-color("grey-100");
+
+  &.icon-top {
+    .nav-link {
+      flex-direction: column;
+    }
+  }
+
+  &.icon-right {
+    .nav-link {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.icon-bottom {
+    .nav-link {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &.icon-left {
+    .nav-link {
+      flex-direction: row;
+    }
+  }
+
+  .nav-item {
+    margin: 0;
+    position: relative;
+
+
+    .nav-link {
+      font-size: .875rem;
+      font-family: "Roboto",sans-serif;
+      line-height: 2.25rem;
+      font-weight: 500;
+      letter-spacing: .08929em;
+      color: theme-color("grey-900");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      outline: none;
+      box-shadow:none;
+      border: 0;
+      text-transform: uppercase;
+
+      .ink {
+        background: theme-color("blue-100");
+      }
+
+      &.active {
+        border: 0;
+        color: theme-color("blue");
+        background: transparent;
+      }
+
+      &.focus, &:focus {
+        background-color: theme-color("grey-100");
+      }
+
+      .material-icons {
+        margin: 5px;
+      }
+    }
+    &:hover {
+      border: 0;
+      background-color: theme-color("grey-200");
+      border-radius: 2px;
+    }
+  }
+
+  .active-indicator {
+    bottom: 0;
+    position: absolute;
+    height: 2px;
+    background: theme-color("blue");
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transform-origin: left top;
+    transition: transform .24s cubic-bezier(0,0,.2,1) 0ms;
+    will-change: transform;
+  }
+
+  .ms-tab-active {
+    opacity: 1;
+  }
+}

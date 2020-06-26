@@ -1,0 +1,37 @@
+@import "node_modules/bootstrap/scss/custom-forms";
+
+@each $color, $value in $theme-colors {
+  .range-#{$color} {
+    &.custom-range:not(:disabled) {
+      &::-webkit-slider-thumb {
+        background-color: $value;
+      }
+
+      &::-moz-range-thumb {
+        background-color: $value;
+      }
+
+      &::-ms-thumb {
+        background-color: $value;
+      }
+    }
+  }
+
+}
+
+.custom-range:not(:disabled) {
+  &:active {
+    &::-webkit-slider-thumb {
+      transform: scale(1.5);
+      transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
+    }
+    &::-moz-range-thumb {
+      transform: scale(1.5);
+      transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
+    }
+    &::-ms-thumb {
+      transform: scale(1.5);
+      transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
+    }
+  }
+}

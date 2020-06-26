@@ -1,0 +1,39 @@
+.snackbar {
+  min-width: 250px;
+  box-shadow: map-get($elevations, 2dp) !important;
+  background-color: map-get($theme-colors, 'dark');
+  color: map-get($theme-colors, 'white');
+  font: 500 16px "Roboto", sans-serif;
+  text-align: left;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1060;
+  bottom: -20px;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, 0);
+  transition-property: opacity, bottom;
+  transition-duration: 0.3s, 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.snackbar.show {
+  opacity:1;
+  bottom: 20px;
+  transition-property: opacity, bottom;
+  transition-duration: 0.2s, 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.snackbar.snackbar-left {
+  left: 20px;
+  right: auto;
+  transform: translate(0, 0);
+}
+
+.snackbar.snackbar-right {
+  left: auto;
+  right: 20px;
+  transform: translate(0, 0);
+}

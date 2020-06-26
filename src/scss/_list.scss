@@ -1,0 +1,61 @@
+@import "node_modules/bootstrap/scss/list-group";
+
+@each $color, $value in $theme-colors {
+  @include list-group-item-variant($color, map-get($material-colors, "white"), theme-color-level($color));
+}
+
+.list-group-item {
+  border-top: 0;
+  border-bottom: 0;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  &:first-child {
+    border-top: 1px solid map-get($material-colors, "grey-300");
+  }
+  &:last-child {
+    border-bottom: 1px solid map-get($material-colors, "grey-300");
+  }
+  &.active {
+    background-color: theme-color("white");
+    color: theme-color("blue");
+  }
+  &:hover {
+    background-color: map-get($material-colors, "grey-100");
+  }
+
+  .list-item, .list-icon, .list-icon-right {
+    display: inline-block;
+  }
+
+  .list-icon {
+    display: flex;
+    padding-right: 15px;
+  }
+
+  .list-icon-right {
+    display: flex;
+    padding-left: 15px;
+    margin-left: auto;
+  }
+
+  &.list-divider {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid map-get($material-colors, "grey-300");
+  }
+
+  .primary-text, .secondary-text {
+    display: block;
+  }
+  .secondary-text {
+    font-size: 0.9rem;
+  }
+}
+
+.list-group-item-action {
+  position: relative;
+}

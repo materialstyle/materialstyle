@@ -1,0 +1,27 @@
+@import "node_modules/bootstrap/scss/custom-forms";
+
+@each $color, $value in $theme-colors {
+  .input-#{$color} {
+
+    .custom-control-input {
+      &:checked ~ .custom-control-label::before {
+        border-color: $value;
+        background-color: $value;
+      }
+
+      &:focus ~ .custom-control-label::before {
+        box-shadow: 0 0 0 .3rem rgba($value, .25);
+      }
+
+      &:focus:not(:checked) ~ .custom-control-label::before {
+        border-color: lighten($value, 25%);
+      }
+
+      &:not(:disabled):active ~ .custom-control-label::before {
+        background-color: lighten($value, 35%);
+        border-color: lighten($value, 35%);
+      }
+    }
+
+  }
+}

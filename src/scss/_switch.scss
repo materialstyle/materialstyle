@@ -1,0 +1,55 @@
+@import "node_modules/bootstrap/scss/custom-forms";
+
+@each $color, $value in $theme-colors {
+  .input-#{$color} {
+
+    .custom-control-input {
+      &:checked ~ .custom-control-label::before {
+        border-color: $value;
+        background-color: $value;
+      }
+
+      &:focus ~ .custom-control-label::before {
+        box-shadow: 0 0 0 .3rem rgba($value, .25);
+      }
+
+      &:focus:not(:checked) ~ .custom-control-label::before {
+        border-color: lighten($value, 25%);
+      }
+
+      &:not(:disabled):active ~ .custom-control-label::before {
+        background-color: lighten($value, 35%);
+        border-color: lighten($value, 35%);
+      }
+    }
+
+    &.switch-android {
+      .custom-control-input {
+        &:checked ~ .custom-control-label::after {
+          border: 2px solid $value;
+        }
+      }
+    }
+
+  }
+
+}
+
+.switch-square {
+  .custom-control-label::before, .custom-control-label::after {
+    border-radius: 0;
+  }
+}
+
+.switch-android {
+  .custom-control-label::before {
+    height: calc(1rem - 4px);
+    top: calc(0.25rem + 2px);
+  }
+  .custom-control-label::after {
+    height: 1rem;
+    width: 1rem;
+    top: .25rem;
+    left: -2.25rem;
+  }
+}
