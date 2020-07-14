@@ -7,14 +7,14 @@
   visibility: hidden;
 
   .form-control {
-    transition: .3s cubic-bezier(.4,0,.2,1);
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
     background: linear-gradient(theme-color("primary"), theme-color("primary")) center bottom/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center bottom/ 100% 1px no-repeat border-box transparent;
     border: none !important;
     outline: 0 !important;
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
-  .form-control:focus, .selected-item.options-visible  {
+  .form-control:focus, .selected-item.options-visible {
     background-size: 100% 2px, 100% 1px !important;
     background-color: transparent;
   }
@@ -35,17 +35,25 @@
   visibility: hidden;
 
   .form-control {
-    transition: .3s cubic-bezier(.4,0,.2,1);
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
     box-shadow: none;
     background-clip: border-box;
     outline: 0;
     border-radius: 4px;
     border: 1px solid theme-color("dark");
   }
+
+  .static-label, .floating-label-active {
+    transform: translate(9px, 12px) !important;
+    padding: 3.08px 5px 3.08px 5px;
+  }
+  .floating-label {
+    transform: translate(9px, 30px);
+  }
 }
 
-.static-label, .floating-label, .floating-label-floating {
-  transition: .2s cubic-bezier(.4,0,.2,1);
+.static-label, .floating-label, .floating-label-active {
+  transition: .2s cubic-bezier(.4, 0, .2, 1);
   display: block;
   padding: 3.08px 0 3.08px 0;
   margin: 0;
@@ -67,8 +75,8 @@
   cursor: text;
 }
 
-.floating-label-floating {
-  transform: translate(0, 12px);
+.floating-label-active {
+  transform: translate(0, 12px) !important;
   font-size: 12px !important;
   cursor: text;
 }

@@ -1,216 +1,154 @@
-import {getAccentColor, getPrimaryColor, getElementsToBeRendered} from '../js/util.js';
+import {getAccentColor, getPrimaryColor} from '../js/util.js';
 
-function changeLabelColorAndPosition(element) {
-    let contentLength = $(element).val().length;
+const NAME = 'textfield'
+const VERSION = '4.5.0'
+const DATA_KEY = 'ms.textfield'
+const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-    if ($(element).is('div')) {
-        contentLength = $(element).html().length;
+const CLASS_NAME_TEXTFIELD = 'ms-text-field'
+const CLASS_NAME_TEXTFIELD_OUTLINE = 'ms-text-field-outline'
+
+const CLASS_NAME_STATIC_LABEL = 'static-label'
+const CLASS_NAME_FLOATING_LABEL = 'floating-label'
+const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
+
+class TextField {
+    constructor(element) {
+        this._element = element
+        this._inputField = element.querySelector('.form-control')
+        this._inputFieldClass = element.className.includes(CLASS_NAME_TEXTFIELD_OUTLINE) ? CLASS_NAME_TEXTFIELD_OUTLINE : CLASS_NAME_TEXTFIELD
+        this._inputValueLength = this._inputField.value.length
+
+        this._primaryColor = getPrimaryColor(element)
+        this._accentColor = getAccentColor(element)
+
+        this._inputLabel = element.querySelector('label')
+        this._inputLabelClass = this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
+
+        this._iconLeft = element.querySelector('.icon-left')
+        this._iconRight = element.querySelector('.icon-right')
+
+        this._paddingLeft = this._iconLeft != null ? this._iconLeft.offsetWidth : 0
+        this._paddingRight = this._iconRight != null ? this._iconRight.offsetWidth : 0
     }
 
-    if (contentLength > 0) {
-        $(element).parent('div').find('.floating-label').removeClass('floating-label').addClass('floating-label-floating');
-        $(element).parent('div').find('.floating-label, .static-label, .floating-label-floating').css('color', getAccentColor(element));
-    } else {
-        $(element).parent('div').find('.floating-label-floating').addClass('floating-label').removeClass('floating-label-floating');
-        $(element).parent('div').find('.floating-label, .static-label, .floating-label-floating').css('color', getPrimaryColor(element));
-    }
-};
+    static _jQueryInterface(config) {
+        return this.each(function () {
+            const $element = $(this)
+            let data = $element.data(DATA_KEY)
 
-function changeTextFieldColor(field) {
-    $(field).css(
-        'background-image',
-        'linear-gradient(' + getAccentColor(field) + ', ' + getAccentColor(field) + '), ' +
-        'linear-gradient(' + getPrimaryColor(field) + ', ' + getPrimaryColor(field) + ')'
-    );
-};
+            if (!data) {
+                data = new TextField(this)
+                $element.data(DATA_KEY, data)
 
-function changeOutlineTextFieldColor(field) {
-    $(field).css('border-color', getPrimaryColor(field));
-};
+                data['changeLabelColor']()
+                data['changeLabelPosition']()
+                data['changeTextFieldColor']()
+                data['initInputGroup']()
+                data['registerLabelClick']()
 
-function initTextFields(parent) {
-    let msTextFields = $('.ms-text-field > .form-control').filter(function () {
-        return getElementsToBeRendered(this, parent);
-    });
-
-    let msTextFieldsOutline = $('.ms-text-field-outline > .form-control').filter(function () {
-        return getElementsToBeRendered(this, parent);
-    });
-
-    /** Text fields */
-    if (msTextFields.length) {
-        msTextFields.each(function () {
-            $(this).addClass('ms-rendered');
-            changeTextFieldColor(this);
-            changeLabelColorAndPosition(this);
-            $(this).parent('.ms-text-field').css('visibility', 'visible');
-        });
-
-        msTextFields.focus(function () {
-            changeLabelColorAndPosition(this);
-            $(this).prev('.floating-label').addClass('floating-label-floating').removeClass('floating-label');
-            $(this).prev('.floating-label-floating, .static-label').css('color', getAccentColor(this));
-            $(this).prev('.floating-label-floating').css({
-                'transform': 'translate(0, 12px)'
-            });
-        });
-
-        msTextFields.focusout(function () {
-            changeLabelColorAndPosition(this);
-
-            if ($(this).val().length === 0) {
-                $(this).prev('.floating-label-floating').addClass('floating-label').removeClass('floating-label-floating');
-            }
-
-            var translateX = $(this).prev('.floating-label').data('translatex');
-            if (undefined == translateX) {
-                translateX = 0;
-            }
-
-            $(this).prev('.floating-label').css({
-                'transform': 'translate(' + translateX + 'px, 30px)'
-            });
-        });
-    }
-
-    /** Outline text fields */
-    if (msTextFieldsOutline.length) {
-        msTextFieldsOutline.each(function () {
-            $(this).addClass('ms-rendered');
-            changeOutlineTextFieldColor(this);
-            changeLabelColorAndPosition(this);
-            $(this).prev('.static-label, .floating-label-floating')
-                .css({
-                    'transform': 'translate(9px, 12px)',
-                    'padding-left': '5px',
-                    'padding-right': '5px'
-                });
-            $(this).prev('.floating-label')
-                .css({
-                    'transform': 'translate(9px, 30px)',
-                    'padding-left': '5px',
-                    'padding-right': '5px'
+                $(data._inputField).on('change', function () {
+                    data._inputValueLength = data._inputField.value.length
                 });
 
-            $(this).parent('.ms-text-field-outline').css('visibility', 'visible');
-        });
+                $(data._inputField).focus(function () {
+                    data['handleFocus']()
+                });
 
-        msTextFieldsOutline.focus(function () {
-            changeLabelColorAndPosition(this);
-            $(this).prev('.floating-label').addClass('floating-label-floating').removeClass('floating-label');
-            $(this).prev('.floating-label-floating, .static-label').css('color', getAccentColor(this));
-            $(this).prev('.floating-label-floating').css({
-                'transform': 'translate(9px, 12px)'
-            });
-            $(this).css({
-                'border-color': getAccentColor(this),
-                '-webkit-box-shadow': 'inset 0 0 1px 1px ' + getAccentColor(this),
-                'box-shadow': 'inset 0 0 1px 1px ' + getAccentColor(this)
-            });
-        });
+                $(data._inputField).focusout(function () {
+                    data['handleFocusOut']()
+                });
 
-        msTextFieldsOutline.focusout(function () {
-            changeLabelColorAndPosition(this);
-            $(this).css({
-                'border-color': getPrimaryColor(this),
-                '-webkit-box-shadow': 'none',
-                'box-shadow': 'none'
-            });
+                $(data._inputLabel).on('click', function () {
+                    if (data._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL)) {
+                        data._inputField.focus();
+                    }
+                });
 
-            if ($(this).val().length === 0) {
-                $(this).prev('.floating-label-floating').addClass('floating-label').removeClass('floating-label-floating');
+                data._element.style.visibility = 'visible';
             }
-
-            var translateX = $(this).prev('.floating-label').data('translatex');
-            if (undefined == translateX) {
-                translateX = 9;
-            }
-
-            $(this).prev('.floating-label').css({
-                'transform': 'translate(' + translateX + 'px, 30px)'
-            });
-
-        });
+        })
     }
 
-    $('.text-field-with-icon > .form-control').each(function () {
-        $(this).removeClass('ms-rendered');
-    });
-};
+    changeLabelColor() {
+        if (this._inputValueLength) {
+            this._inputLabel.style.color = this._accentColor;
+        } else {
+            this._inputLabel.style.color = this._primaryColor;
+        }
+    }
 
-function initInputGroups(parent) {
-    let inputGroups = $('.text-field-with-icon > .form-control').filter(function () {
-        return getElementsToBeRendered(this, parent);
-    });
-
-    if (inputGroups.length) {
-        inputGroups.each(function () {
-            $(this).addClass('ms-rendered');
-            var prepend = $(this).parent('.text-field-with-icon').find('.icon-left');
-            var append = $(this).parent('.text-field-with-icon').find('.icon-right');
-
-            var field = $(this);
-            var fieldOutline = $(this);
-
-            var paddingLeft = 0;
-            var paddingRight = 0;
-
-            if (prepend.length) {
-                paddingLeft += prepend.innerWidth();
+    changeLabelPosition() {
+        if (this._inputLabelClass === CLASS_NAME_FLOATING_LABEL) {
+            if (this._inputValueLength) {
+                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
+                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+            } else {
+                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL)
             }
+        }
+    }
 
-            if (append.length) {
-                paddingRight += append.innerWidth();
+    changeTextFieldColor() {
+        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD) {
+            this._inputField.style.backgroundImage =
+                'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
+                'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')';
+        } else {
+            this._inputField.style.borderColor = this._primaryColor;
+        }
+    };
+
+    handleFocus() {
+        this._inputLabel.style.color = this._accentColor;
+        this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL);
+        this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE);
+
+        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+            this._inputField.style.borderColor = this._accentColor;
+            this._inputField.style.boxShadow = 'inset 0 0 1px 1px ' + this._accentColor;
+        }
+    };
+
+    handleFocusOut() {
+        this.changeLabelColor();
+        this.changeLabelPosition();
+
+        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+            this._inputField.style.borderColor = this._primaryColor;
+            this._inputField.style.boxShadow = 'none';
+        }
+    }
+
+    initInputGroup() {
+        if (0 !== this._paddingLeft) {
+            this._inputField.style.paddingLeft = this._paddingLeft + 'px';
+
+            if (this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL)) {
+                this._inputLabel.style.transform = 'translate(' + this._paddingLeft + 'px, 30px)'
             }
+        }
 
-            if (field.length) {
-
-                if (0 !== paddingLeft) {
-                    field.css({
-                        'padding-left': paddingLeft + 'px'
-                    });
-
-                    var floatingLabel = field.parent('.ms-text-field').find('.floating-label');
-                    floatingLabel.css({
-                        'transform': 'translate(' + paddingLeft + 'px, 30px)'
-                    });
-
-                    field.prev('.floating-label-floating, .floating-label').attr('data-translatex', paddingLeft);
-                }
-
-                if (0 !== paddingRight) {
-                    field.css({
-                        'padding-right': paddingRight + 'px'
-                    });
-                }
-            }
-
-            if (fieldOutline.length) {
-
-                if (0 !== paddingLeft) {
-                    fieldOutline.css({
-                        'padding-left': paddingLeft + 'px'
-                    });
-
-                    var floatingLabel = fieldOutline.parent('.ms-text-field-outline').find('.floating-label');
-                    floatingLabel.css({
-                        'transform': 'translate(' + paddingLeft + 'px, 30px)'
-                    });
-
-                    fieldOutline.prev('.floating-label-floating, .floating-label').attr('data-translatex', paddingLeft);
-                }
-
-                if (0 !== paddingRight) {
-                    fieldOutline.css({
-                        'padding-right': paddingRight + 'px'
-                    });
-                }
-            }
-        });
+        if (0 !== this._paddingRight) {
+            this._inputField.style.paddingRight = this._paddingRight + 'px';
+        }
     }
 }
 
-$(function () {
-    initTextFields();
-    initInputGroups();
-});
+/**
+ * ------------------------------------------------------------------------
+ * jQuery
+ * ------------------------------------------------------------------------
+ */
+
+$.fn[NAME] = TextField._jQueryInterface
+$.fn[NAME].Constructor = TextField
+$.fn[NAME].noConflict = () => {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return TextField._jQueryInterface
+}
+
+export default TextField
