@@ -105,5 +105,9 @@
   .files {
     padding: 7px 10px;
     margin-bottom: 0;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-flex;
   }
 }
