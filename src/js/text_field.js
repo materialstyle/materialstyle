@@ -1,10 +1,8 @@
 import {getAccentColor, getPrimaryColor} from '../js/util.js';
 
 const NAME = 'textfield'
-const VERSION = '4.5.0'
+const VERSION = '2.0.0'
 const DATA_KEY = 'ms.textfield'
-const EVENT_KEY = `.${DATA_KEY}`
-const DATA_API_KEY = '.data-api'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const CLASS_NAME_TEXTFIELD = 'ms-text-field'
@@ -34,6 +32,10 @@ class TextField {
         this._paddingRight = this._iconRight != null ? this._iconRight.offsetWidth : 0
     }
 
+    static get VERSION() {
+        return VERSION
+    }
+
     static _jQueryInterface(config) {
         return this.each(function () {
             const $element = $(this)
@@ -47,7 +49,6 @@ class TextField {
                 data['changeLabelPosition']()
                 data['changeTextFieldColor']()
                 data['initInputGroup']()
-                data['registerLabelClick']()
 
                 $(data._inputField).on('change', function () {
                     data._inputValueLength = data._inputField.value.length
