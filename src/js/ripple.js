@@ -58,8 +58,16 @@ class Ripple {
 
     handleMouseDown(event) {
         this._ripple.classList.remove('animate');
-        let x = event.pageX - this._element.offsetLeft - this._ripple.offsetWidth / 2;
-        let y = event.pageY - this._element.offsetTop - this._ripple.offsetHeight / 2;
+
+        let boundingRect = this._element.getBoundingClientRect();
+
+        let offset = {
+            top: boundingRect.top + window.scrollY,
+            left: boundingRect.left + window.scrollX
+        };
+
+        let x = event.pageX - offset.left - this._ripple.offsetWidth / 2;
+        let y = event.pageY - offset.top - this._ripple.offsetHeight / 2;
 
         this._ripple.style.top = y + 'px';
         this._ripple.style.left = x + 'px';
