@@ -41,8 +41,8 @@
 @import "jumbotron";
 @import "node_modules/bootstrap/scss/alert";
 
-// progress and spinners are imported in progress_bar
 @import "progress_bar";
+@import "spinner";
 
 @import "node_modules/bootstrap/scss/media";
 @import "list";

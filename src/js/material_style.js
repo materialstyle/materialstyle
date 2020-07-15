@@ -12,12 +12,13 @@ import './tooltip';
 import './util';
 
 import './file_input';
-import './progress_bar';
 import './ripple';
 import './select';
 import './shape';
 import './sidebar';
 import './snackbar';
+import './spinner';
+import './rainbow';
 import './text_field';
 
 import '../scss/material_style.scss';
