@@ -12,7 +12,6 @@ import './tooltip';
 import './util';
 
 import './file_input';
-import './list';
 import './progress_bar';
 import './ripple';
 import './select';

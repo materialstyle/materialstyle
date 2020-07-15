@@ -5,7 +5,7 @@
   }
 
   .nav-tabs.accent-#{$color} {
-    .active-indicator, .ink {
+    .active-indicator, .ms-ripple {
       background-color: $value !important;
     }
   }
@@ -38,7 +38,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   visibility: hidden;
-  border-bottom: 1px solid  theme-color("grey-100");
+  border-bottom: 1px solid map-get($material-colors, "grey-200") !important;
 
   &.icon-top {
     .nav-link {
@@ -75,7 +75,7 @@
       line-height: 2.25rem;
       font-weight: 500;
       letter-spacing: .08929em;
-      color: theme-color("grey-900");
+      color: map-get($material-colors, "grey-900");
       display: flex;
       justify-content: center;
       align-items: center;
@@ -86,18 +86,18 @@
       border: 0;
       text-transform: uppercase;
 
-      .ink {
-        background: theme-color("blue-100");
+      .ms-ripple {
+        background: theme-color("primary");
       }
 
       &.active {
         border: 0;
-        color: theme-color("blue");
+        color: theme-color("primary");
         background: transparent;
       }
 
       &.focus, &:focus {
-        background-color: theme-color("grey-100");
+        background-color: map-get($material-colors, "grey-100");
       }
 
       .material-icons {
@@ -106,7 +106,7 @@
     }
     &:hover {
       border: 0;
-      background-color: theme-color("grey-200");
+      background-color: map-get($material-colors, "grey-200");
       border-radius: 2px;
     }
   }
@@ -115,7 +115,7 @@
     bottom: 0;
     position: absolute;
     height: 2px;
-    background: theme-color("blue");
+    background: theme-color("primary");
     display: block;
     width: 100%;
     opacity: 0;

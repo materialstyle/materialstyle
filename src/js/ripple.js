@@ -1,75 +1,109 @@
-import $ from "jquery";
-import {getElementsToBeRendered} from "../js/util.js";
+const NAME = 'ripple'
+const VERSION = '2.0.0'
+const DATA_KEY_RIPPLE = 'ms.ripple'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-const initRipple = (component, parent) => {
-    let rippleElement = $(component).filter(function () {
-        return getElementsToBeRendered(this, parent);
-    });
+class Ripple {
+    constructor(element) {
+        this._element = element
+    }
 
-    if (rippleElement.length) {
-        $(rippleElement).on("mousedown", function (e) {
-            $(this).addClass("ms-rendered");
-            let rippleElement = $(this);
+    static get VERSION() {
+        return VERSION
+    }
 
-            /** create .ink element if it doesn't exist */
-            if (rippleElement.find(".ink").length == 0) {
-                rippleElement.append("<span class='ink'></span>");
+    static _jQueryInterface(config) {
+        return this.each(function () {
+            const $element = $(this)
+            let data = $element.data(DATA_KEY_RIPPLE)
+
+            if (!data) {
+                data = new Ripple(this)
+                $element.data(DATA_KEY_RIPPLE, data)
+
+                data['addRipple']()
+
+                $element.on('mousedown', function (event) {
+                    data['handleMouseDown'](event)
+                });
+
+                $element.on('mouseup', function () {
+                    data['handleMouseUpMouseMove']()
+                });
+
+                $element.on('mousemove', function () {
+                    data['handleMouseUpMouseMove']()
+                });
             }
+        })
+    }
 
-            let ink = rippleElement.find(".ink");
+    addRipple() {
+        let maxDimension = Math.max(
+            this._element.offsetWidth,
+            this._element.offsetHeight
+        );
 
-            /** prevent quick double clicks */
-            ink.removeClass("animate");
+        let ripple = document.createElement('span');
+        ripple.className = 'ms-ripple';
+        ripple.style.width = maxDimension + 'px';
+        ripple.style.height = maxDimension + 'px';
 
-            /** set .ink diameter */
-            if (!ink.height() && !ink.width()) {
-                let d = Math.max(
-                    rippleElement.outerWidth(),
-                    rippleElement.outerHeight()
-                );
-                ink.css({height: d, width: d});
-            }
+        if (this._element.querySelector('.ms-ripple') == null) {
+            this._element.appendChild(ripple);
+        }
 
-            /** get click coordinates */
-            let x = e.pageX - rippleElement.offset().left - ink.width() / 2;
-            let y = e.pageY - rippleElement.offset().top - ink.height() / 2;
+        this._ripple = ripple;
+    }
 
-            /** set .ink position and add class .animate */
-            ink
-                .css({
-                    top: y + "px",
-                    left: x + "px"
-                })
-                .removeClass('stop-animate')
-                .data('mousedown', 'true')
-                .data('animationstate', 'running')
-                .addClass("animate");
+    handleMouseDown(event) {
+        this._ripple.classList.remove('animate');
+        let x = event.pageX - this._element.offsetLeft - this._ripple.offsetWidth / 2;
+        let y = event.pageY - this._element.offsetTop - this._ripple.offsetHeight / 2;
 
-            $(this).find('.animate').on('animationend webkitAnimationEnd', function () {
-                if ('false' == $(this).data('mousedown')) {
-                    $(this).removeClass('animate');
+        this._ripple.style.top = y + 'px';
+        this._ripple.style.left = x + 'px';
+
+        this._ripple.classList.remove('stop-animate');
+        this._ripple.setAttribute('data-mousedown', 'true');
+        this._ripple.setAttribute('data-animationstate', 'running');
+        this._ripple.classList.add('animate');
+
+        if (this._element.querySelector('.animate') != null) {
+            this._element.querySelector('.animate').addEventListener('animationend', function (e) {
+                if ('false' == e.target.getAttribute('data-mousedown')) {
+                    e.target.classList.remove('animate');
                 } else {
-                    $(this).data('animationstate', 'stopped');
+                    e.target.setAttribute('data-animationstate', 'stopped');
                 }
             });
-        });
-
-        $(rippleElement).on("mouseup", function (e) {
-            $(this).find('.animate').data('mousedown', 'false');
-
-            if ('stopped' == $(this).find('.animate').data('animationstate')) {
-                $(this).find('.animate').removeClass('animate');
-            }
-        });
-
-        $(rippleElement).on("mousemove", function (e) {
-            $(this).find('.animate').data('mousedown', 'false');
-
-            if ('stopped' == $(this).find('.animate').data('animationstate')) {
-                $(this).find('.animate').removeClass('animate');
-            }
-        });
+        }
     }
-};
 
-export default initRipple;
+    handleMouseUpMouseMove() {
+        let animate = this._element.querySelector('.animate');
+
+        if (animate != null) {
+            animate.setAttribute('data-mousedown', 'false');
+
+            if ('stopped' == animate.getAttribute('data-animationstate')) {
+                animate.classList.remove('animate');
+            }
+        }
+    }
+}
+
+/**
+ * ------------------------------------------------------------------------
+ * jQuery
+ * ------------------------------------------------------------------------
+ */
+
+$.fn[NAME] = Ripple._jQueryInterface
+$.fn[NAME].Constructor = Ripple
+$.fn[NAME].noConflict = () => {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return Ripple._jQueryInterface
+}
+
+export default Ripple

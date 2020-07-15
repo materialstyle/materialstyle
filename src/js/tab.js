@@ -65,6 +65,5 @@ function initTabs(parent) {
 }
 
 $(function () {
-    initRipple('.nav-tabs .nav-link');
     initTabs();
 });
