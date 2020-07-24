@@ -1,4 +1,18 @@
-import {getAccentColor, getPrimaryColor} from '../js/util.js';
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): text_field.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+import $ from 'jquery'
+import {getAccentColor, getPrimaryColor} from '../js/util.js'
+
+/**
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
+ */
 
 const NAME = 'textfield'
 const VERSION = '2.0.0'
@@ -23,7 +37,11 @@ class TextField {
         this._accentColor = getAccentColor(element)
 
         this._inputLabel = element.querySelector('label')
-        this._inputLabelClass = this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
+        this._inputLabelClass = ''
+
+        if (this._inputLabel != null) {
+            this._inputLabelClass = this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
+        }
 
         this._iconLeft = element.querySelector('.icon-left')
         this._iconRight = element.querySelector('.icon-right')
@@ -33,7 +51,7 @@ class TextField {
         return VERSION
     }
 
-    static _jQueryInterface(config) {
+    static _jQueryInterface() {
         return this.each(function () {
             const $element = $(this)
             let data = $element.data(DATA_KEY)
@@ -43,107 +61,135 @@ class TextField {
                 $element.data(DATA_KEY, data)
 
                 data['initTextFields']()
-                data['initLabel']()
-                data['changeLabelColor']()
-                data['changeLabelPosition']()
-                data['changeTextFieldColor']()
-                data['initInputGroup']()
 
                 if (data._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
-                    data._notch.style.height = data._inputField.offsetHeight + 'px';
+                    data._notch.style.height = data._inputField.offsetHeight + 'px'
                 }
 
                 $(data._inputField).on('change', function () {
                     data._inputValueLength = data._inputField.value.length
-                });
+                })
 
                 $(data._inputField).focus(function () {
                     data['handleFocus']()
-                });
+                })
 
                 $(data._inputField).focusout(function () {
                     data['handleFocusOut']()
-                });
+                })
 
                 $(data._inputLabel).on('click', function () {
                     if (data._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL)) {
-                        data._inputField.focus();
+                        data._inputField.focus()
                     }
-                });
+                })
 
-                data._element.style.visibility = 'visible';
+                data._element.style.visibility = 'visible'
             }
         })
     }
 
     initTextFields() {
-        if (this._inputFieldClass == CLASS_NAME_TEXTFIELD) {
-            let ripple = document.createElement('div');
-            ripple.className = 'ms-line-ripple';
+        this.addRippleOrBorder()
+        this.setIconHeight()
+        this.addNotch()
 
-            this._ripple = ripple;
-            this._inputField.after(ripple);
+        if (this._inputLabel != null) {
+            this.initLabel()
+        }
+    }
+
+    addRippleOrBorder() {
+        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD) {
+            let ripple = document.createElement('div')
+            ripple.className = 'ms-line-ripple'
+            ripple.style.backgroundImage =
+                'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
+                'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')'
+
+            this._ripple = ripple
+            this._inputField.after(ripple)
+        } else {
+            this._inputField.style.borderColor = this._primaryColor
+        }
+    }
+
+    setIconHeight() {
+        if (this._iconLeft != null) {
+            this._iconLeft.style.height = this._inputField.offsetHeight + 'px'
+        }
+
+        if (this._iconRight != null) {
+            this._iconRight.style.height = this._inputField.offsetHeight + 'px'
+        }
+    }
+
+    addNotch() {
+        if (this._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
+            let notch = document.createElement('div')
+            notch.className = 'ms-notch'
+
+            let notchBefore = document.createElement('div')
+            notchBefore.className = 'ms-notch-before'
+            notchBefore.style.borderColor = this._primaryColor
+
+            let notchBetween = document.createElement('div')
+            notchBetween.className = 'ms-notch-between width-auto'
+            notchBetween.style.borderColor = this._primaryColor
+            notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+
+            if (this._inputLabel != null && this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
+                notchBetween.style.borderTopWidth = 0
+            }
+
+            let notchAfter = document.createElement('div')
+            notchAfter.className = 'ms-notch-after'
+            notchAfter.style.borderColor = this._primaryColor
+
+            // Wrap notchBetween around label
+            this._inputLabel.parentNode.insertBefore(notchBetween, this._inputLabel)
+            notchBetween.appendChild(this._inputLabel)
+
+            // Wrap notch around notchBefore, notchBetween and notchAfter
+            notchBetween.parentNode.insertBefore(notchBefore, notchBetween)
+            notchBetween.parentNode.insertBefore(notchAfter, notchBetween)
+            notchBetween.parentNode.insertBefore(notch, notchBetween)
+
+            notch.appendChild(notchBefore)
+            notch.appendChild(notchBetween)
+            notch.appendChild(notchAfter)
+
+            this._notch = notch
+            this._notchBefore = notchBefore
+            this._notchBetween = notchBetween
+            this._notchAfter = notchAfter
         }
     }
 
     initLabel() {
-        if (this._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
-            let notch = document.createElement('div');
-            notch.className = 'ms-notch';
-
-            let notchBefore = document.createElement('div');
-            notchBefore.className = 'ms-notch-before';
-            notchBefore.style.borderColor = this._primaryColor;
-
-            let notchLabel = document.createElement('div');
-            notchLabel.className = 'ms-notch-label width-auto';
-            notchLabel.style.borderColor = this._primaryColor;
-            notchLabel.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px';
-            if (this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
-                notchLabel.style.borderTopWidth = 0;
-            }
-
-            let notchAfter = document.createElement('div');
-            notchAfter.className = 'ms-notch-after';
-            notchAfter.style.borderColor = this._primaryColor;
-
-            // Wrap notchLabel around label
-            this._inputLabel.parentNode.insertBefore(notchLabel, this._inputLabel);
-            notchLabel.appendChild(this._inputLabel);
-
-            // Wrap notch around notchBefore, notchLabel and notchAfter
-            notchLabel.parentNode.insertBefore(notchBefore, notchLabel);
-            notchLabel.parentNode.insertBefore(notchAfter, notchLabel);
-            notchLabel.parentNode.insertBefore(notch, notchLabel);
-
-            notch.appendChild(notchBefore);
-            notch.appendChild(notchLabel);
-            notch.appendChild(notchAfter);
-
-            this._notch = notch;
-            this._notchBefore = notchBefore;
-            this._notchLabel = notchLabel;
-            this._notchAfter = notchAfter;
-        }
+        this.setLabelColor()
+        this.setLabelPosition()
     }
 
-    changeLabelColor() {
+    setLabelColor() {
         if (this._inputValueLength) {
-            this._inputLabel.style.color = this._accentColor;
+            this._inputLabel.style.color = this._accentColor
+
             if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-                this._notchLabel.style.borderTopWidth = 0;
+                this._notchBetween.style.borderTopWidth = 0
             }
         } else {
-            this._inputLabel.style.color = this._primaryColor;
+            this._inputLabel.style.color = this._primaryColor
+
             if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE
                 && this._inputLabelClass == CLASS_NAME_FLOATING_LABEL
             ) {
-                this._notchLabel.style.borderTopWidth = '1px';
+                this._notchBetween.style.borderTopWidth = '1px'
             }
         }
     }
 
-    changeLabelPosition() {
+    setLabelPosition() {
         if (this._inputLabelClass === CLASS_NAME_FLOATING_LABEL) {
             if (this._inputValueLength) {
                 this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
@@ -155,53 +201,35 @@ class TextField {
         }
     }
 
-    changeTextFieldColor() {
-        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD) {
-            this._ripple.style.backgroundImage =
-                'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
-                'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')';
-        } else {
-            this._inputField.style.borderColor = this._primaryColor;
-        }
-    };
-
     handleFocus() {
-        this._inputLabel.style.color = this._accentColor;
-        this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL);
-        this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE);
+        this._inputLabel.style.color = this._accentColor
+        this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
+        this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
 
         if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-            this._inputField.style.borderColor = this._accentColor;
-            this._inputField.style.boxShadow = 'inset 0 0 1px 1px ' + this._accentColor;
-            this._notchLabel.style.borderTopWidth = 0;
-            this._notch.classList.add('notch-active');
-            this._notchBefore.style.borderColor = this._accentColor;
-            this._notchLabel.style.borderColor = this._accentColor;
-            this._notchAfter.style.borderColor = this._accentColor;
-        }
-    };
-
-    handleFocusOut() {
-        this.changeLabelColor();
-        this.changeLabelPosition();
-
-        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-            this._inputField.style.borderColor = this._primaryColor;
-            this._inputField.style.boxShadow = 'none';
-            this._notch.classList.remove('notch-active');
-            this._notchBefore.style.borderColor = this._primaryColor;
-            this._notchLabel.style.borderColor = this._primaryColor;
-            this._notchAfter.style.borderColor = this._primaryColor;
+            this._inputField.style.borderColor = this._accentColor
+            this._inputField.style.boxShadow = 'inset 0 0 1px 1px ' + this._accentColor
+            this._notchBetween.style.borderTopWidth = 0
+            this._notch.classList.add('notch-active')
+            this._notchBefore.style.borderColor = this._accentColor
+            this._notchBetween.style.borderColor = this._accentColor
+            this._notchAfter.style.borderColor = this._accentColor
         }
     }
 
-    initInputGroup() {
-        if (this._iconLeft != null) {
-            this._iconLeft.style.height = this._inputField.offsetHeight + 'px';
+    handleFocusOut() {
+        if (this._inputLabel != null) {
+            this.setLabelColor()
+            this.setLabelPosition()
         }
 
-        if (this._iconRight != null) {
-            this._iconRight.style.height = this._inputField.offsetHeight + 'px';
+        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+            this._inputField.style.borderColor = this._primaryColor
+            this._inputField.style.boxShadow = 'none'
+            this._notch.classList.remove('notch-active')
+            this._notchBefore.style.borderColor = this._primaryColor
+            this._notchBetween.style.borderColor = this._primaryColor
+            this._notchAfter.style.borderColor = this._primaryColor
         }
     }
 }
