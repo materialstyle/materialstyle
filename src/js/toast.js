@@ -1,1 +1,1 @@
-import 'bootstrap/js/dist/toast';
+import 'bootstrap/js/dist/toast'

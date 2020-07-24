@@ -1,1 +1,1 @@
-import 'bootstrap/js/dist/tooltip';
+import 'bootstrap/js/dist/tooltip'
