@@ -11,6 +11,35 @@
     outline: 0 !important;
     border-radius: 4px 4px 0 0;
   }
+
+  .prepend, .append {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    padding: 7px;
+    z-index: 1;
+  }
+
+  .prepend {
+    left: 0;
+
+    & + label, & + .ms-notch {
+      & + .form-control, & + .form-control-sm, & + .form-control-lg {
+        padding-left: 2.5rem;
+      }
+    }
+  }
+
+  .append {
+    right: 0;
+
+    & + label, & + .ms-notch {
+      & + .form-control, & + .form-control-sm, & + .form-control-lg {
+        padding-right: 2.5rem;
+      }
+    }
+  }
 }
 
 .ms-text-field {
@@ -61,7 +90,7 @@
     transform: translate(.75rem, 1.2rem);
   }
 
-  .icon-left {
+  .prepend {
     & + .static-label, & + .floating-label-active {
       transform: translate(2.5rem, 0.5rem) scale(0.75);
     }
@@ -113,7 +142,7 @@
     transform: translate(0, 1.2rem);
   }
 
-  .icon-left {
+  .prepend {
     & + .floating-label {
       transform: translate(2.5rem, 1.2rem) !important;
     }
@@ -154,7 +183,7 @@
     }
   }
   .ms-text-field-outline {
-    .ms-notch-before, .ms-notch-label, .ms-notch-after {
+    .ms-notch-before, .ms-notch-between, .ms-notch-after {
       border-color: theme-color("danger") !important;
     }
   }
@@ -163,37 +192,6 @@
 .help-block {
   display: block;
   font-size: 0.8rem;
-}
-
-.text-field-with-icon {
-  .icon-left, .icon-right {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    padding: 7px;
-    z-index: 1;
-  }
-
-  .icon-left {
-    left: 0;
-
-    & + label, & + .ms-notch {
-      & + .form-control, & + .form-control-sm, & + .form-control-lg {
-        padding-left: 2.5rem;
-      }
-    }
-  }
-
-  .icon-right {
-    right: 0;
-
-    & + label, & + .ms-notch {
-      & + .form-control, & + .form-control-sm, & + .form-control-lg {
-        padding-right: 2.5rem;
-      }
-    }
-  }
 }
 
 .ms-notch {
@@ -209,7 +207,7 @@
   text-align: left;
   pointer-events: none;
 
-  .ms-notch-before, .ms-notch-label, .ms-notch-after {
+  .ms-notch-before, .ms-notch-between, .ms-notch-after {
     border: 1px solid theme-color("dark");
     border-radius: 4px;
     pointer-events: none;
@@ -222,7 +220,7 @@
     width: 0.75rem;
   }
 
-  .ms-notch-label {
+  .ms-notch-between {
     border-left: 0;
     border-right: 0;
     border-radius: 0;
@@ -241,7 +239,7 @@
   }
 
   &.notch-active {
-    .ms-notch-before, .ms-notch-label, .ms-notch-after {
+    .ms-notch-before, .ms-notch-between, .ms-notch-after {
       border-width: 2px;
     }
   }

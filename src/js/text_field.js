@@ -9,9 +9,9 @@ import $ from 'jquery'
 import {getAccentColor, getPrimaryColor} from '../js/util.js'
 
 /**
- * ------------------------------------------------------------------------
+ * --------------------------------------------------------------------------
  * Constants
- * ------------------------------------------------------------------------
+ * --------------------------------------------------------------------------
  */
 
 const NAME = 'textfield'
@@ -43,28 +43,27 @@ class TextField {
             this._inputLabelClass = this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
         }
 
-        this._iconLeft = element.querySelector('.icon-left')
-        this._iconRight = element.querySelector('.icon-right')
+        this._prepend = element.querySelector('.prepend')
+        this._append = element.querySelector('.append')
     }
 
     static get VERSION() {
         return VERSION
     }
 
-    static _jQueryInterface() {
+    static _jQueryInterface(config) {
         return this.each(function () {
             const $element = $(this)
             let data = $element.data(DATA_KEY)
+            let shouldRedraw = true;
 
             if (!data) {
+                shouldRedraw = false;
+
                 data = new TextField(this)
                 $element.data(DATA_KEY, data)
 
                 data['initTextFields']()
-
-                if (data._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
-                    data._notch.style.height = data._inputField.offsetHeight + 'px'
-                }
 
                 $(data._inputField).on('change', function () {
                     data._inputValueLength = data._inputField.value.length
@@ -86,16 +85,29 @@ class TextField {
 
                 data._element.style.visibility = 'visible'
             }
+
+            if (config === 'redraw' && shouldRedraw) {
+                data['reDrawTextFields']()
+            }
         })
     }
 
     initTextFields() {
         this.addRippleOrBorder()
-        this.setIconHeight()
+        this.setAddonHeight()
         this.addNotch()
 
         if (this._inputLabel != null) {
             this.initLabel()
+        }
+    }
+
+    reDrawTextFields() {
+        this.setAddonHeight()
+
+        if (this._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
+            this._notch.style.height = this._inputField.offsetHeight + 'px'
+            this._notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
         }
     }
 
@@ -114,13 +126,13 @@ class TextField {
         }
     }
 
-    setIconHeight() {
-        if (this._iconLeft != null) {
-            this._iconLeft.style.height = this._inputField.offsetHeight + 'px'
+    setAddonHeight() {
+        if (this._prepend != null) {
+            this._prepend.style.height = this._inputField.offsetHeight + 'px'
         }
 
-        if (this._iconRight != null) {
-            this._iconRight.style.height = this._inputField.offsetHeight + 'px'
+        if (this._append != null) {
+            this._append.style.height = this._inputField.offsetHeight + 'px'
         }
     }
 
@@ -128,6 +140,7 @@ class TextField {
         if (this._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
             let notch = document.createElement('div')
             notch.className = 'ms-notch'
+            notch.style.height = this._inputField.offsetHeight + 'px'
 
             let notchBefore = document.createElement('div')
             notchBefore.className = 'ms-notch-before'
