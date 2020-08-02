@@ -1,187 +1,189 @@
-import {getElementsToBeRendered} from '../js/util.js';
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): shape.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-function initShapes(parent) {
+import $ from 'jquery'
+import {getColor} from '../js/util.js'
 
-    let shapes = $('.ms-shape-container').filter(function() {
-        return getElementsToBeRendered(this, parent);
-    });
+/**
+ * --------------------------------------------------------------------------
+ * Constants
+ * --------------------------------------------------------------------------
+ */
 
-    let btnShapes = $('.ms-btn-shape-container').filter(function() {
-        return getElementsToBeRendered(this, parent);
-    });
+const NAME = 'shape'
+const VERSION = '2.0.0'
+const DATA_KEY = 'ms.shape'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-    /** shapes */
-    if (shapes.length) {
-        shapes.each(function () {
-            $(this).addClass('ms-rendered');
-            let cornerBg = this.className.match(/shape-parent-bg-[^\s]+/);
-            let shapeOutline = this.className.match(/shape-outline-[^\s]+/);
-
-            let cardOutline = $(this).find('> [class*="card-outline-"]');
-
-            if (cardOutline.length) {
-                shapeOutline = cardOutline[0].className.match(/card-outline-[^\s]+/);
-            }
-
-            if (cornerBg) {
-                cornerBg = cornerBg[0].replace('shape-parent-', '');
-                $(this).find('> .angle-top-left').addClass(cornerBg);
-                $(this).find('> .angle-top-right').addClass(cornerBg);
-                $(this).find('> .angle-bottom-left').addClass(cornerBg);
-                $(this).find('> .angle-bottom-right').addClass(cornerBg);
-            }
-            let topLeftCut = $(this).find('> .angle-top-left');
-            let topRightCut = $(this).find('> .angle-top-right');
-            let bottomLeftCut = $(this).find('> .angle-bottom-left');
-            let bottomRightCut = $(this).find('> .angle-bottom-right');
-
-            let topLeftWidth = 0, topRightWidth = 0, bottomLeftWidth = 0, bottomRightWidth = 0;
-            if (topLeftCut.length) {
-                topLeftWidth = topLeftCut.attr('class').match(/width-[^\s]+/);
-                if (topLeftWidth) {
-                    topLeftWidth = parseInt(topLeftWidth[0].replace('width-', ''));
-                }
-            }
-
-            if (topRightCut.length) {
-                topRightWidth = topRightCut.attr('class').match(/width-[^\s]+/);
-                if (topRightWidth) {
-                    topRightWidth = parseInt(topRightWidth[0].replace('width-', ''));
-                }
-            }
-
-            if (bottomLeftCut.length) {
-                bottomLeftWidth = bottomLeftCut.attr('class').match(/width-[^\s]+/);
-                if (bottomLeftWidth) {
-                    bottomLeftWidth = parseInt(bottomLeftWidth[0].replace('width-', ''));
-                }
-            }
-
-            if (bottomRightCut.length) {
-                bottomRightWidth = bottomRightCut.attr('class').match(/width-[^\s]+/);
-                if (bottomRightWidth) {
-                    bottomRightWidth = parseInt(bottomRightWidth[0].replace('width-', ''));
-                }
-            }
-
-            $(this).find('> .angle-top-left').css({
-                'top': -(topLeftWidth / 2),
-                'left': -(topLeftWidth / 2),
-                'width': topLeftWidth,
-                'height': topLeftWidth
-            });
-
-            $(this).find('> .angle-top-right').css({
-                'top': -(topRightWidth / 2),
-                'right': -(topRightWidth / 2),
-                'width': topRightWidth,
-                'height': topRightWidth
-            });
-
-            $(this).find('> .angle-bottom-left').css({
-                'bottom': -(bottomLeftWidth / 2),
-                'left': -(bottomLeftWidth / 2),
-                'width': bottomLeftWidth,
-                'height': bottomLeftWidth
-            });
-
-            $(this).find('> .angle-bottom-right').css({
-                'bottom': -(bottomRightWidth / 2),
-                'right': -(bottomRightWidth / 2),
-                'width': bottomRightWidth,
-                'height': bottomRightWidth
-            });
-
-            if (shapeOutline) {
-
-                if (cardOutline.length) {
-                    shapeOutline = shapeOutline[0].replace('card-outline-', '');
-                } else {
-                    shapeOutline = shapeOutline[0].replace('shape-outline-', '');
-                }
-
-                let label = $('<label class="text-' + shapeOutline + '"></label>').hide().appendTo('body');
-                shapeOutline = label.css('color');
-                label.remove();
-
-                $(this).find('> .angle-top-left, > .angle-top-right, > .angle-bottom-left, > .angle-bottom-right')
-                    .css('border-bottom', '2px solid ' + shapeOutline);
-
-            }
-
-            $(this).css('visibility', 'visible');
-        });
+class Shape {
+    constructor(element) {
+        this._element = element
+        this._topLeftAngle = element.querySelector('.angle-top-left')
+        this._topRightAngle = element.querySelector('.angle-top-right')
+        this._bottomLeftAngle = element.querySelector('.angle-bottom-left')
+        this._bottomRightAngle = element.querySelector('.angle-bottom-right')
     }
 
-    /** btn shapes */
-    if (btnShapes.length) {
-        btnShapes.each(function () {
-            $(this).addClass('ms-rendered');
-            let cornerBg = this.className.match(/shape-parent-bg-[^\s]+/);
-            let shapeOutline;
+    static get VERSION() {
+        return VERSION
+    }
 
-            let btnOutline = $(this).find('> [class*="btn-outline-"]');
+    static _jQueryInterface() {
+        return this.each(function () {
+            const $element = $(this)
+            let data = $element.data(DATA_KEY)
 
-            if (btnOutline.length) {
-                shapeOutline = btnOutline[0].className.match(/btn-outline-[^\s]+/);
+            if (!data) {
+                data = new Shape(this)
+                $element.data(DATA_KEY, data)
+
+                data['initShape']()
+
+                data._element.style.visibility = 'visible'
             }
+        })
+    }
 
-            if (cornerBg) {
-                cornerBg = cornerBg[0].replace('shape-parent-', '');
-                $(this).find('> .angle-top-left').addClass(cornerBg);
-                $(this).find('> .angle-top-right').addClass(cornerBg);
-                $(this).find('> .angle-bottom-left').addClass(cornerBg);
-                $(this).find('> .angle-bottom-right').addClass(cornerBg);
+    initShape() {
+        this.setShapeColor()
+        this.setShapeSize()
+        this.setShapeOutline()
+    }
+
+    setShapeColor() {
+        let shapeColor = this._element.className.match(/shape-parent-bg-[^\s]+/)
+
+        if (shapeColor) {
+            shapeColor = shapeColor[0].replace('shape-parent-', '')
+
+            if (this._topLeftAngle) {
+                this._topLeftAngle.classList.add(shapeColor)
             }
-
-            let angleWidth = 14;
-
-            if (shapeOutline) {
-                shapeOutline = shapeOutline[0].replace('btn-outline-', '');
-
-                let label = $('<label class="text-' + shapeOutline + '"></label>').hide().appendTo('body');
-                shapeOutline = label.css('color');
-                label.remove();
-
-                $(this).find('> .angle-top-left, > .angle-top-right, > .angle-bottom-left, > .angle-bottom-right')
-                    .css('border-bottom', '1px solid ' + shapeOutline);
-
-                angleWidth = 18;
+            if (this._topRightAngle) {
+                this._topRightAngle.classList.add(shapeColor)
             }
+            if (this._bottomLeftAngle) {
+                this._bottomLeftAngle.classList.add(shapeColor)
+            }
+            if (this._bottomRightAngle) {
+                this._bottomRightAngle.classList.add(shapeColor)
+            }
+        }
+    }
 
-            $(this).find('> .angle-top-left').css({
-                'top': -(angleWidth / 2),
-                'left': -(angleWidth / 2),
-                'width': angleWidth,
-                'height': angleWidth
-            });
+    setShapeSize() {
+        let topLeftWidth = 0, topRightWidth = 0, bottomLeftWidth = 0, bottomRightWidth = 0
 
-            $(this).find('> .angle-top-right').css({
-                'top': -(angleWidth / 2),
-                'right': -(angleWidth / 2),
-                'width': angleWidth,
-                'height': angleWidth
-            });
+        if (this._topLeftAngle) {
+            topLeftWidth = this._topLeftAngle.className.match(/size-[^\s]+/)
+            if (topLeftWidth) {
+                topLeftWidth = parseInt(topLeftWidth[0].replace('size-', ''))
+            }
+        }
 
-            $(this).find('> .angle-bottom-left').css({
-                'bottom': -(angleWidth / 2),
-                'left': -(angleWidth / 2),
-                'width': angleWidth,
-                'height': angleWidth
-            });
+        if (this._topRightAngle) {
+            topRightWidth = this._topRightAngle.className.match(/size-[^\s]+/)
+            if (topRightWidth) {
+                topRightWidth = parseInt(topRightWidth[0].replace('size-', ''))
+            }
+        }
 
-            $(this).find('> .angle-bottom-right').css({
-                'bottom': -(angleWidth / 2),
-                'right': -(angleWidth / 2),
-                'width': angleWidth,
-                'height': angleWidth
-            });
+        if (this._bottomLeftAngle) {
+            bottomLeftWidth = this._bottomLeftAngle.className.match(/size-[^\s]+/)
+            if (bottomLeftWidth) {
+                bottomLeftWidth = parseInt(bottomLeftWidth[0].replace('size-', ''))
+            }
+        }
 
-            $(this).css('visibility', 'visible');
-        });
+        if (this._bottomRightAngle) {
+            bottomRightWidth = this._bottomRightAngle.className.match(/size-[^\s]+/)
+
+            if (bottomRightWidth) {
+                bottomRightWidth = parseInt(bottomRightWidth[0].replace('size-', ''))
+            }
+        }
+
+        if (topLeftWidth) {
+            this._topLeftAngle.style.top = -(topLeftWidth / 2) + 'px'
+            this._topLeftAngle.style.left = -(topLeftWidth / 2) + 'px'
+            this._topLeftAngle.style.width = topLeftWidth + 'px'
+            this._topLeftAngle.style.height = topLeftWidth + 'px'
+        }
+
+        if (topRightWidth) {
+            this._topRightAngle.style.top = -(topRightWidth / 2) + 'px'
+            this._topRightAngle.style.right = -(topRightWidth / 2) + 'px'
+            this._topRightAngle.style.width = topRightWidth + 'px'
+            this._topRightAngle.style.height = topRightWidth + 'px'
+        }
+
+        if (bottomLeftWidth) {
+            this._bottomLeftAngle.style.bottom = -(bottomLeftWidth / 2) + 'px'
+            this._bottomLeftAngle.style.left = -(bottomLeftWidth / 2) + 'px'
+            this._bottomLeftAngle.style.width = bottomLeftWidth + 'px'
+            this._bottomLeftAngle.style.height = bottomLeftWidth + 'px'
+        }
+
+        if (bottomRightWidth) {
+            this._bottomRightAngle.style.bottom = -(bottomRightWidth / 2) + 'px'
+            this._bottomRightAngle.style.right = -(bottomRightWidth / 2) + 'px'
+            this._bottomRightAngle.style.width = bottomRightWidth + 'px'
+            this._bottomRightAngle.style.height = bottomRightWidth + 'px'
+        }
+    }
+
+    setShapeOutline() {
+        let shapeOutline
+
+        let cardOutline = this._element.querySelector('[class*="card-outline-"]')
+        let btnOutline = this._element.querySelector('[class*="btn-outline-"]')
+
+        if (cardOutline) {
+            shapeOutline = cardOutline.className.match(/card-outline-[^\s]+/)
+            shapeOutline = shapeOutline[0].replace('card-outline-', '')
+        }
+
+        if (btnOutline) {
+            shapeOutline = btnOutline.className.match(/btn-outline-[^\s]+/)
+            shapeOutline = shapeOutline[0].replace('btn-outline-', '')
+        }
+
+        if (shapeOutline) {
+            shapeOutline = getColor(shapeOutline)
+
+            let borderBottom = '1px solid ' + shapeOutline
+
+            if (this._topLeftAngle) {
+                this._topLeftAngle.style.borderBottom = borderBottom
+            }
+            if (this._topRightAngle) {
+                this._topRightAngle.style.borderBottom = borderBottom
+            }
+            if (this._bottomLeftAngle) {
+                this._bottomLeftAngle.style.borderBottom = borderBottom
+            }
+            if (this._bottomRightAngle) {
+                this._bottomRightAngle.style.borderBottom = borderBottom
+            }
+        }
     }
 }
 
-$(function () {
-    initShapes();
-});
+/**
+ * ------------------------------------------------------------------------
+ * jQuery
+ * ------------------------------------------------------------------------
+ */
+
+$.fn[NAME] = Shape._jQueryInterface
+$.fn[NAME].Constructor = Shape
+$.fn[NAME].noConflict = () => {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return Shape._jQueryInterface
+}
+
+export default Shape
