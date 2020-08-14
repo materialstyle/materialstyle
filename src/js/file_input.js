@@ -1,3 +1,18 @@
+/**
+* --------------------------------------------------------------------------
+* Material Style (v2.0.0): file_input.js
+* Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+* --------------------------------------------------------------------------
+*/
+
+import $ from 'jquery'
+
+/**
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
+ */
+
 const NAME = 'fileinput'
 const VERSION = '2.0.0'
 const DATA_KEY = 'ms.fileinput'
@@ -16,7 +31,7 @@ class FileInput {
         return VERSION
     }
 
-    static _jQueryInterface(config) {
+    static _jQueryInterface() {
         return this.each(function () {
             const $element = $(this)
             let data = $element.data(DATA_KEY)
@@ -26,45 +41,45 @@ class FileInput {
                 $element.data(DATA_KEY, data)
 
                 $(data._button).on('click', function (event) {
-                    event.stopImmediatePropagation();
+                    event.stopImmediatePropagation()
                     data['handleButtonClick']()
-                });
+                })
 
                 $(data._fileInput).on('change', function () {
                     data['handleFileChange']()
-                });
+                })
             }
         })
     }
 
     handleButtonClick() {
-        this._fileInput.click();
+        this._fileInput.click()
     }
 
     handleFileChange() {
-        let files = [], fileArr, filename = 'No file chosen';
+        let files = [], fileArr, filename = 'No file chosen'
 
         if (this._multipleSupport) {
-            fileArr = this._fileInput.files;
+            fileArr = this._fileInput.files
             for (
                 let i = 0, len = fileArr.length;
                 i < len;
                 i++
             ) {
-                files.push(fileArr[i].name);
+                files.push(fileArr[i].name)
             }
-            filename = files.join(', ');
+            filename = files.join(', ')
 
         } else {
-            filename = this._fileInput.val().split('\\').pop();
+            filename = this._fileInput.val().split('\\').pop()
         }
 
         if ('' == filename) {
-            filename = 'No file chosen';
+            filename = 'No file chosen'
         }
 
-        this._fileList.innerHTML = filename;
-        this._fileList.setAttribute('title', filename);
+        this._fileList.innerHTML = filename
+        this._fileList.setAttribute('title', filename)
     }
 
 }

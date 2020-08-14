@@ -1,3 +1,18 @@
+/**
+* --------------------------------------------------------------------------
+* Material Style (v2.0.0): spinner.js
+* Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+* --------------------------------------------------------------------------
+*/
+
+import $ from 'jquery'
+
+/**
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
+ */
+
 const NAME = 'spinner'
 const VERSION = '2.0.0'
 const DATA_KEY_SPINNER = 'ms.spinner'
@@ -12,7 +27,7 @@ class Spinner {
         return VERSION
     }
 
-    static _jQueryInterface(config) {
+    static _jQueryInterface() {
         return this.each(function () {
             const $element = $(this)
             let data = $element.data(DATA_KEY_SPINNER)
@@ -31,7 +46,7 @@ class Spinner {
             '<svg class="circular" viewBox="25 25 50 50">' +
             '<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4">' +
             '</svg>' +
-            '</div>';
+            '</div>'
     }
 }
 

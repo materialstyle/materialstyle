@@ -6,7 +6,7 @@
  */
 
 import $ from 'jquery'
-import {getColor} from '../js/util.js'
+import {getColor} from '../js/utility.js'
 
 /**
  * --------------------------------------------------------------------------

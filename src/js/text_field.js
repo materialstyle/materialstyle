@@ -6,7 +6,7 @@
  */
 
 import $ from 'jquery'
-import {getAccentColor, getPrimaryColor} from '../js/util.js'
+import {getAccentColor, getPrimaryColor} from '../js/utility.js'
 
 /**
  * --------------------------------------------------------------------------
@@ -55,10 +55,10 @@ class TextField {
         return this.each(function () {
             const $element = $(this)
             let data = $element.data(DATA_KEY)
-            let shouldRedraw = true;
+            let shouldRedraw = true
 
             if (!data) {
-                shouldRedraw = false;
+                shouldRedraw = false
 
                 data = new TextField(this)
                 $element.data(DATA_KEY, data)
