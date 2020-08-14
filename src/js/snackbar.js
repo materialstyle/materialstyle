@@ -1,48 +1,100 @@
-var waitingQueue = [], runningQueue = [], activeSnackbar;
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): snackbar.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-function showSnackbar(snackbar) {
-    waitingQueue.pushToWaitingQueue(snackbar);
+import $ from 'jquery'
+
+/**
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
+ */
+
+const NAME = 'snackbar'
+const VERSION = '2.0.0'
+const DATA_KEY_SNACKBAR = 'ms.snackbar'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
+
+let waitingQueue = [], runningQueue = [], activeSnackbar
+
+Object.defineProperty(waitingQueue, 'pushToWaitingQueue', {
+    value: function () {
+        if (runningQueue.length) {
+            waitingQueue.push(arguments[0])
+        } else {
+            runningQueue.pushToRunningQueue(arguments[0])
+        }
+    }
+})
+
+Object.defineProperty(runningQueue, 'pushToRunningQueue', {
+    value: function () {
+        activeSnackbar = arguments[0]
+        activeSnackbar.addClass('show')
+        runningQueue.push(activeSnackbar)
+
+        setTimeout(function () {
+            activeSnackbar.removeClass('show')
+            runningQueue.removeFromRunningQueue(activeSnackbar)
+        }, 3000)
+    }
+})
+
+Object.defineProperty(runningQueue, 'removeFromRunningQueue', {
+    value: function () {
+        if (waitingQueue.length) {
+            setTimeout(function () {
+                runningQueue.shift()
+                runningQueue.pushToRunningQueue(waitingQueue.shift())
+            }, 200)
+        } else {
+            runningQueue.shift()
+        }
+    }
+})
+
+class Snackbar {
+    constructor(element) {
+        this._element = element
+        this._snackbar = element.dataset.target
+    }
+
+    static get VERSION() {
+        return VERSION
+    }
+
+    static _jQueryInterface() {
+        return this.each(function () {
+            const $element = $(this)
+            let data = $element.data(DATA_KEY_SNACKBAR)
+
+            if (!data) {
+                data = new Snackbar(this)
+                $element.data(DATA_KEY_SNACKBAR, data)
+
+                $(data._element).on('click', function (event) {
+                    event.stopImmediatePropagation()
+                    waitingQueue.pushToWaitingQueue($(data._snackbar))
+                })
+            }
+        })
+    }
 }
 
-$(function () {
-    $('[data-toggle="snackbar"]').on('click', function () {
-        let snackbar = $(this).data('target');
-        showSnackbar($(snackbar));
-    });
+/**
+ * ------------------------------------------------------------------------
+ * jQuery
+ * ------------------------------------------------------------------------
+ */
 
-    Object.defineProperty(waitingQueue, "pushToWaitingQueue", {
-        value: function () {
-            if (runningQueue.length) {
-                waitingQueue.push(arguments[0]);
-            } else {
-                runningQueue.pushToRunningQueue(arguments[0]);
-            }
-        }
-    });
+$.fn[NAME] = Snackbar._jQueryInterface
+$.fn[NAME].Constructor = Snackbar
+$.fn[NAME].noConflict = () => {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return Snackbar._jQueryInterface
+}
 
-    Object.defineProperty(runningQueue, "pushToRunningQueue", {
-        value: function () {
-            activeSnackbar = arguments[0];
-            activeSnackbar.addClass('show');
-            runningQueue.push(activeSnackbar);
-
-            setTimeout(function () {
-                activeSnackbar.removeClass('show');
-                runningQueue.removeFromRunningQueue(activeSnackbar);
-            }, 3000);
-        }
-    });
-
-    Object.defineProperty(runningQueue, "removeFromRunningQueue", {
-        value: function () {
-            if (waitingQueue.length) {
-                setTimeout(function () {
-                    runningQueue.shift()
-                    runningQueue.pushToRunningQueue(waitingQueue.shift());
-                }, 200);
-            } else {
-                runningQueue.shift()
-            }
-        }
-    });
-});
+export default Snackbar
