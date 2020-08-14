@@ -1,69 +1,136 @@
-import 'bootstrap/js/dist/tab';
-import initRipple from '../js/ripple.js';
-import {getElementsToBeRendered} from '../js/util.js';
+import 'bootstrap/js/dist/tab'
 
-function initTabs(parent) {
-    let msTabs = $('.nav-tabs').filter(function () {
-        return getElementsToBeRendered(this, parent);
-    });
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): tab.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-    if (msTabs.length) {
+import $ from 'jquery'
 
-        msTabs.find('.nav-item').append('<span class="active-indicator"></span>');
+/**
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
+ */
 
-        msTabs.each(function () {
-            $(this).addClass('ms-rendered');
+const NAME = 'tab'
+const VERSION = '2.0.0'
+const DATA_KEY_TAB = 'ms.tab'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-            $(this).find('.nav-link.active').closest('.nav-item').find('.active-indicator').addClass('ms-tab-active');
-
-            var leftValue = 0;
-
-            if ($(this).find('.ms-tab-active').length) {
-                leftValue = $(this).find('.ms-tab-active').closest('.nav-item').position().left;
-            }
-
-            var count = 1;
-            $(this).find('.active-indicator').each(function () {
-                $(this).data('indicatorPosition', count++);
-                $(this).css({
-                    'transform': 'translateX(0px) scale(1, 1)'
-                });
-
-            });
-
-            $(this).data('leftValue', leftValue);
-
-            $(this).css('visibility', 'visible');
-        });
+class Tab {
+    constructor(element) {
+        this._element = element
+        this._navItem = element.querySelectorAll('.nav-item')
     }
 
-    $('.nav-tabs .nav-item').on('mousedown', function () {
-        if (!$(this).find('.ms-tab-active').length) {
-            var leftValue = $(this).closest('.nav-tabs').data('leftValue');
+    static get VERSION() {
+        return VERSION
+    }
 
-            if ($(this).find('.active-indicator').data('indicatorPosition') > $(this).closest('.nav-tabs').find('.ms-tab-active').data('indicatorPosition')) {
-                leftValue = '-' + ($(this).position().left - leftValue);
+    static _jQueryInterface() {
+        return this.each(function () {
+            const $element = $(this)
+            let data = $element.data(DATA_KEY_TAB)
+
+            if (!data) {
+                data = new Tab(this)
+                $element.data(DATA_KEY_TAB, data)
+
+                data['initTab']()
+
+                data._element.style.visibility = 'visible'
+
+                $(data._navItem).on('mousedown', function () {
+                    data['handleMouseDown'](this)
+                })
+
+                $(data._navItem).on('mouseup', function () {
+                    data['handleMouseUp'](this)
+                })
+            }
+        })
+    }
+
+    initTab() {
+        this.addActiveIndicators()
+
+        if (this._element.querySelector('.nav-link.active')) {
+            this._element.querySelector('.nav-link.active').closest('.nav-item').querySelector('.active-indicator').classList.add('ms-tab-active')
+        }
+
+        let leftValue = 0
+
+        if (this._element.querySelector('.ms-tab-active')) {
+            leftValue = this._element.querySelector('.ms-tab-active').closest('.nav-item').offsetLeft
+        }
+
+        let count = 1
+        let activeIndicators = this._element.querySelectorAll('.active-indicator')
+        for (let i = 0; i < activeIndicators.length; i++) {
+            this._element.dataset.indicatorPosition = count++
+            this._element.style.transform = 'translateX(0px) scale(1, 1)'
+        }
+
+        this._element.dataset.leftValue = leftValue
+    }
+
+    addActiveIndicators() {
+        let navItems = this._element.querySelectorAll('.nav-item')
+
+        for (let i = 0; i < navItems.length; i++) {
+            let activeIndicator = document.createElement('span')
+            activeIndicator.className = 'active-indicator'
+
+            navItems[i].appendChild(activeIndicator)
+        }
+    }
+
+    handleMouseDown(target) {
+        if (target.querySelector('.ms-tab-active') == null) {
+            let leftValue = target.closest('.nav-tabs').dataset.leftValue
+
+            if (target.closest('.nav-tabs').querySelector('.ms-tab-active')
+                && (target.querySelector('.active-indicator').dataset.indicatorPosition
+                > target.closest('.nav-tabs').querySelector('.ms-tab-active').dataset.indicatorPosition)
+            ) {
+                leftValue = '-' + (target.offsetLeft - leftValue)
             } else {
-                leftValue = leftValue - $(this).position().left;
+                leftValue = leftValue - target.offsetLeft
             }
 
-            $(this).find('.active-indicator').css({
-                'transform': 'translateX(' + leftValue + 'px) scale(1, 1)',
-            });
+            target.querySelector('.active-indicator').style.transform = 'translateX(' + leftValue + 'px) scale(1, 1)'
         }
-    });
+    }
 
-    $('.nav-tabs .nav-item').on('mouseup', function () {
-        var leftValue = $(this).position().left;
+    handleMouseUp(target) {
+        let leftValue = target.offsetLeft
 
-        $(this).closest('.nav-tabs').find('.ms-tab-active').removeClass('ms-tab-active');
-        $(this).find('.active-indicator').addClass('ms-tab-active').css({
-            'transform': 'translateX(0px) scale(1, 1)',
-        });
-        $(this).closest('.nav-tabs').data('leftValue', leftValue);
-    });
+        if (target.closest('.nav-tabs').querySelector('.ms-tab-active')) {
+            target.closest('.nav-tabs').querySelector('.ms-tab-active').classList.remove('ms-tab-active')
+        }
+
+        let activeIndicator = target.querySelector('.active-indicator')
+        activeIndicator.classList.add('ms-tab-active')
+        activeIndicator.style.transform = 'translateX(0px) scale(1, 1)'
+
+        target.closest('.nav-tabs').dataset.leftValue = leftValue
+    }
 }
 
-$(function () {
-    initTabs();
-});
+/**
+ * ------------------------------------------------------------------------
+ * jQuery
+ * ------------------------------------------------------------------------
+ */
+
+$.fn[NAME] = Tab._jQueryInterface
+$.fn[NAME].Constructor = Tab
+$.fn[NAME].noConflict = () => {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return Tab._jQueryInterface
+}
+
+export default Tab
