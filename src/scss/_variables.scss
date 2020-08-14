@@ -11,6 +11,7 @@ $alert-border-level: -5;
 $btn-border-width: 0;
 $btn-border-radius: 4px;
 $btn-border-radius-lg: 4px;
+$input-btn-focus-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 
 // Card
 $card-border-width: 0;
@@ -27,7 +28,7 @@ $custom-range-thumb-active-bg: map-get($theme-colors, 'primary');
 // Dropdown
 $dropdown-border-width: 0;
 $enable-shadows: true;
-$dropdown-box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+$dropdown-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
 
 // List
 $list-group-border-radius: 0;
@@ -40,6 +41,9 @@ $list-group-active-border-color: map-get($material-colors, "grey-300");
 // Modal
 $modal-content-border-radius: 0;
 
+// Pagination
+$pagination-focus-box-shadow: none;
+
 // Text Field
 $input-border-radius: 0;
 $input-border-radius-lg: 0;
@@ -51,4 +55,4 @@ $input-font-family: "Roboto", sans-serif;
 
 // Toast
 $toast-border-width: 0;
-$toast-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+$toast-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);

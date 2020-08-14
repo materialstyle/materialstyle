@@ -1,27 +1,16 @@
 .image-list {
   display: flex !important;
-  align-items: flex-start!important;
   flex-wrap: wrap;
   padding: 5px;
 
   .image-list-item {
     margin: 5px;
-    position: relative;
     flex-shrink: 0;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
 
     .image-list-label {
       padding: 8px;
       text-align: center;
-      position: absolute;
-      bottom: 0;
       width: 100%;
-      background: rgba(0,0,0,.6);
-      color: white;
     }
   }
 
@@ -30,23 +19,18 @@
       img {
         border-radius: 8px;
       }
-
-      .image-list-label {
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-      }
     }
   }
 
   &.masonry {
-    display: block!important;
+    display: block !important;
     column-count: auto;
     column-gap: 5px;
-    column-width: 300px;
     padding: 10px;
 
     .image-list-item {
       margin: 0 0 10px 0;
+      text-align: center;
     }
   }
 }

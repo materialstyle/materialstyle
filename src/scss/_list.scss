@@ -26,7 +26,7 @@
     background-color: map-get($material-colors, "grey-100");
   }
 
-  .list-item, .list-icon, .list-icon-right {
+  .list-item, .list-icon, .list-append {
     display: inline-block;
   }
 
@@ -35,7 +35,7 @@
     padding-right: 15px;
   }
 
-  .list-icon-right {
+  .list-append {
     display: flex;
     padding-left: 15px;
     margin-left: auto;
