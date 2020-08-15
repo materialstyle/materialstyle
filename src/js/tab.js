@@ -55,68 +55,47 @@ class Tab {
     }
 
     initTab() {
-        this.addActiveIndicators()
-
-        if (this._element.querySelector('.nav-link.active')) {
-            this._element.querySelector('.nav-link.active').closest('.nav-item').querySelector('.active-indicator').classList.add('ms-tab-active')
-        }
-
         let leftValue = 0
 
-        if (this._element.querySelector('.ms-tab-active')) {
-            leftValue = this._element.querySelector('.ms-tab-active').closest('.nav-item').offsetLeft
-        }
+        for (let i = 0; i < this._navItem.length; i++) {
+            let activeIndicator = document.createElement('span')
+            activeIndicator.className = 'active-indicator'
+            activeIndicator.dataset.indicatorPosition = i + 1
+            activeIndicator.style.transform = 'translateX(0px) scale(1, 1)'
 
-        let count = 1
-        let activeIndicators = this._element.querySelectorAll('.active-indicator')
-        for (let i = 0; i < activeIndicators.length; i++) {
-            this._element.dataset.indicatorPosition = count++
-            this._element.style.transform = 'translateX(0px) scale(1, 1)'
+            if (this._navItem[i].querySelector('.nav-link.active')) {
+                leftValue = this._navItem[i].offsetLeft
+                this._activeIndicatorPosition = i + 1
+            }
+
+            this._navItem[i].appendChild(activeIndicator)
         }
 
         this._element.dataset.leftValue = leftValue
     }
 
-    addActiveIndicators() {
-        let navItems = this._element.querySelectorAll('.nav-item')
-
-        for (let i = 0; i < navItems.length; i++) {
-            let activeIndicator = document.createElement('span')
-            activeIndicator.className = 'active-indicator'
-
-            navItems[i].appendChild(activeIndicator)
-        }
-    }
-
     handleMouseDown(target) {
-        if (target.querySelector('.ms-tab-active') == null) {
-            let leftValue = target.closest('.nav-tabs').dataset.leftValue
+        if (target.querySelector('.nav-link.active') == null) {
+            let leftValue = this._element.dataset.leftValue
+            let indicatorPosition = target.querySelector('.active-indicator').dataset.indicatorPosition
 
-            if (target.closest('.nav-tabs').querySelector('.ms-tab-active')
-                && (target.querySelector('.active-indicator').dataset.indicatorPosition
-                > target.closest('.nav-tabs').querySelector('.ms-tab-active').dataset.indicatorPosition)
-            ) {
+            if (indicatorPosition > this._activeIndicatorPosition) {
                 leftValue = '-' + (target.offsetLeft - leftValue)
             } else {
                 leftValue = leftValue - target.offsetLeft
             }
+
+            this._activeIndicatorPosition = indicatorPosition
 
             target.querySelector('.active-indicator').style.transform = 'translateX(' + leftValue + 'px) scale(1, 1)'
         }
     }
 
     handleMouseUp(target) {
+        target.querySelector('.active-indicator').style.transform = 'translateX(0px) scale(1, 1)'
+
         let leftValue = target.offsetLeft
-
-        if (target.closest('.nav-tabs').querySelector('.ms-tab-active')) {
-            target.closest('.nav-tabs').querySelector('.ms-tab-active').classList.remove('ms-tab-active')
-        }
-
-        let activeIndicator = target.querySelector('.active-indicator')
-        activeIndicator.classList.add('ms-tab-active')
-        activeIndicator.style.transform = 'translateX(0px) scale(1, 1)'
-
-        target.closest('.nav-tabs').dataset.leftValue = leftValue
+        this._element.dataset.leftValue = leftValue
     }
 }
 

@@ -11,26 +11,6 @@
   }
 }
 
-.ms-tabs-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  align-items: center;
-  overflow: hidden;
-
-  .ms-tab-arrow-icon-left {
-    padding: 0 10px 0 0;
-    cursor: pointer;
-  }
-
-  .ms-tab-arrow-icon-right {
-    padding: 0 0 0 10px;
-    cursor: pointer;
-  }
-}
-
 .nav-tabs {
   //flex-wrap: nowrap;
   position: relative;
@@ -46,7 +26,7 @@
     }
   }
 
-  &.icon-right {
+  &.append {
     .nav-link {
       flex-direction: row-reverse;
     }
@@ -58,7 +38,7 @@
     }
   }
 
-  &.icon-left {
+  &.prepend {
     .nav-link {
       flex-direction: row;
     }
@@ -94,6 +74,10 @@
         border: 0;
         color: theme-color("primary");
         background: transparent;
+
+        + .active-indicator {
+          opacity: 1;
+        }
       }
 
       &.focus, &:focus {
@@ -122,9 +106,5 @@
     transform-origin: left top;
     transition: transform .24s cubic-bezier(0,0,.2,1) 0ms;
     will-change: transform;
-  }
-
-  .ms-tab-active {
-    opacity: 1;
   }
 }
