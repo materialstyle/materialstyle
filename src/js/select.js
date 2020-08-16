@@ -1,132 +1,470 @@
-import {getAccentColor, getPrimaryColor, getElementsToBeRendered} from '../js/util.js';
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): text_field.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-function changeLabelColorAndPosition(element) {
-    let contentLength = $(element).find('select').val().length;
+import $ from 'jquery'
+import {getAccentColor, getPrimaryColor} from '../js/utility.js'
 
-    if (contentLength) {
-        $(element).find('.floating-label').removeClass('floating-label').addClass('floating-label-floating');
-        $(element).find('.floating-label, .static-label, .floating-label-floating').css('color', getAccentColor(element));
-    } else {
-        $(element).find('.floating-label-floating').addClass('floating-label').removeClass('floating-label-floating');
-        $(element).find('.floating-label, .static-label, .floating-label-floating').css('color', getPrimaryColor(element));
+/**
+ * --------------------------------------------------------------------------
+ * Constants
+ * --------------------------------------------------------------------------
+ */
+
+const NAME = 'select'
+const VERSION = '2.0.0'
+const DATA_KEY = 'ms.select'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
+
+const CLASS_NAME_SELECT = 'ms-select'
+const CLASS_NAME_SELECT_OUTLINE = 'ms-select-outline'
+
+const CLASS_NAME_STATIC_LABEL = 'static-label'
+const CLASS_NAME_FLOATING_LABEL = 'floating-label'
+const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
+
+const CLASS_NAME_SEARCHABLE = 'searchable'
+const CLASS_NAME_MULTI_SELECT = 'multi-select'
+
+class Select {
+    constructor(element) {
+        this._element = element
+        this._inputField = element.querySelector('.form-control')
+        this._inputFieldClass = element.className.includes(CLASS_NAME_SELECT_OUTLINE) ? CLASS_NAME_SELECT_OUTLINE : CLASS_NAME_SELECT
+
+        this._primaryColor = getPrimaryColor(element)
+        this._accentColor = getAccentColor(element)
+
+        this._inputLabel = element.querySelector('label')
+        this._inputLabelClass = ''
+
+        if (this._inputLabel != null) {
+            this._inputLabelClass = this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
+        }
+
+        this._prepend = element.querySelector('.prepend')
+        this._append = element.querySelector('.append')
+
+        this._isSearchable = element.className.includes(CLASS_NAME_SEARCHABLE) ? true : false
+        this._multiSelectEnabled = element.className.includes(CLASS_NAME_MULTI_SELECT) ? true : false
     }
-};
 
-function changeSelectColor(field) {
-    $(field).find('.select2-selection').css(
-        'background-image',
-        'linear-gradient(' + getAccentColor(field) + ', ' + getAccentColor(field) + '), ' +
-        'linear-gradient(' + getPrimaryColor(field) + ', ' + getPrimaryColor(field) + ')'
-    );
-};
-
-function changeOutlineSelectColor(field) {
-    $(field).find('.select2-selection').css('border-color', getPrimaryColor(field));
-};
-
-function initSelect(parent) {
-    let msSelect = $('.ms-select').filter(function () {
-        return getElementsToBeRendered(this, parent);
-    });
-
-    let msSelectOutline = $('.ms-select-outline').filter(function () {
-        return getElementsToBeRendered(this, parent);
-    });
-
-    if (msSelect.length) {
-        msSelect.each(function () {
-            initSelect2($(this).find('select'));
-            changeSelectColor(this);
-            changeLabelColorAndPosition(this);
-            $(this).addClass('ms-rendered');
-            $(this).css('visibility', 'visible');
-        });
+    static get VERSION() {
+        return VERSION
     }
 
-    if (msSelectOutline.length) {
-        msSelectOutline.each(function () {
-            initSelect2Outline($(this).find('select'));
-            changeOutlineSelectColor(this);
-            changeLabelColorAndPosition(this);
-            $(this).addClass('ms-rendered');
-            $(this).css('visibility', 'visible');
-        });
+    static _jQueryInterface(config) {
+        return this.each(function () {
+            const $element = $(this)
+            let data = $element.data(DATA_KEY)
+            let shouldRedraw = true
+
+            if (!data) {
+                shouldRedraw = false
+
+                data = new Select(this)
+                $element.data(DATA_KEY, data)
+
+                data['initSelect']()
+
+                $(data._inputField).on('change', function () {
+                    data._inputValueLength = data._selectedItem.innerHTML.length
+                })
+
+                $(data._dropdown).on("shown.bs.dropdown", function(){
+                    data['handleFocus']()
+                });
+
+                $(data._dropdown).on("hidden.bs.dropdown", function(){
+                    data['handleFocusOut']()
+                });
+
+                $(data._inputLabel).on('click', function (event) {
+                    event.stopPropagation()
+                    $(data._selectedItem).dropdown('toggle')
+                })
+
+                $(data._dropdown).find('.select-items .custom-control-input').on('change', function () {
+                    data['selectItem']($(this).val(), $(this).closest('.custom-control').find('.custom-control-label').html(), $(this).is(":checked"))
+                })
+
+                $(data._dropdown).find('.select-all-container .custom-control-input').on('change', function () {
+                    data['selectAll']($(this).is(":checked"))
+                })
+
+                $(data._dropdown).find('.search-input').on('keyup', function (event) {
+                    data['search']($(this).val())
+                })
+
+                data._element.style.visibility = 'visible'
+            }
+
+            if (config === 'redraw' && shouldRedraw) {
+                data['reDrawSelects']()
+            }
+        })
     }
 
-    $('.floating-label').on('click', function () {
-        let selectBox = $(this).closest('.ms-select');
+    initSelect() {
+        this.createDropdown()
+        this.showSelectedItems()
+        this.addRippleOrBorder()
+        this.setAddonHeight()
+        this.addNotch()
 
-        if (selectBox.length) {
-            selectBox.find('.select2-selection').trigger('click');
+        if (this._inputLabel != null) {
+            this.initLabel()
+        }
+    }
+
+    reDrawSelects() {
+        this.setAddonHeight()
+
+        if (this._inputFieldClass == CLASS_NAME_SELECT_OUTLINE) {
+            this._notch.style.height = this._selectedItem.offsetHeight + 'px'
+            this._notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+        }
+    }
+
+    createDropdown() {
+        let dropdown = document.createElement('div')
+        dropdown.className = 'dropdown'
+
+        let selectedItem = document.createElement('div')
+        selectedItem.className = 'selected-item dropdown-toggle'
+        selectedItem.dataset.toggle = 'dropdown'
+
+        let dropdownMenu = document.createElement('div')
+        dropdownMenu.className = 'dropdown-menu'
+
+        let form = document.createElement('form')
+
+        dropdownMenu.appendChild(form)
+
+        if (this._isSearchable) {
+            form.appendChild(this.createSearchContainer())
+        }
+
+        if (this._multiSelectEnabled) {
+            form.appendChild(this.createSelectAllContainer())
+            form.appendChild(this.createSelectItems())
+            dropdownMenu.appendChild(form)
+
+            let closeButton = document.createElement('button')
+            closeButton.className = 'btn btn-text-dark'
+            closeButton.innerHTML = 'close'
+
+            dropdownMenu.appendChild(closeButton)
         } else {
-            selectBox = $(this).closest('.ms-select-outline');
-            selectBox.find('.select2-selection').trigger('click');
+            dropdownMenu.appendChild(form)
+            dropdownMenu.appendChild(this.createSelectItems())
         }
-    });
-};
 
-function initSelect2(select) {
-    if ($(select).attr('multiple')) {
-        $(select).select2({
-            closeOnSelect: false
-        });
-    } else {
-        $(select).select2();
+        dropdown.appendChild(selectedItem)
+        dropdown.appendChild(dropdownMenu)
+
+        this._element.appendChild(dropdown)
+
+        this._dropdown = dropdown
+        this._selectedItem = selectedItem
     }
 
-    select.on("select2:open", function (e) {
-        $(this).closest('.ms-select').find('.floating-label').addClass('floating-label-floating').removeClass('floating-label');
-        $(this).closest('.ms-select').find('.floating-label-floating, .static-label').css('color', getAccentColor($(this).closest('.ms-select').get(0)));
-    });
+    createSearchContainer() {
+        let searchContainer = '';
 
-    select.on("select2:close", function (e) {
-        if ($(this).val().length === 0) {
-            $(this).closest('.ms-select').find('.floating-label-floating').addClass('floating-label').removeClass('floating-label-floating');
+        if (this._isSearchable) {
+            searchContainer = document.createElement('div');
+            searchContainer.className = 'search-container m-0 p-0';
+
+            let searchInput = document.createElement('input');
+            searchInput.type = 'text';
+            searchInput.placeholder = 'Search';
+            searchInput.className = `search-input form-control`;
+
+            searchContainer.appendChild(searchInput);
         }
 
-        $(this).closest('.ms-select').find('.floating-label').css({
-            'color': getPrimaryColor($(this).closest('.ms-select').get(0))
-        });
-    });
-}
-
-function initSelect2Outline(select) {
-    if ($(select).attr('multiple')) {
-        $(select).select2({
-            closeOnSelect: false
-        });
-    } else {
-        $(select).select2();
+        return searchContainer;
     }
 
-    select.on("select2:open", function (e) {
-        $(this).closest('.ms-select-outline').find('.floating-label').addClass('floating-label-floating').removeClass('floating-label');
-        $(this).closest('.ms-select-outline').find('.floating-label-floating, .static-label').css('color', getAccentColor($(this).closest('.ms-select-outline').get(0)));
+    createSelectAllContainer() {
+        let selectAllContainer = '';
 
-        $(this).closest('.ms-select-outline').find('.select2-selection').css({
-            'border-color': getAccentColor($(this).closest('.ms-select-outline').get(0)),
-            '-webkit-box-shadow': 'inset 0 0 1px 1px ' + getAccentColor($(this).closest('.ms-select-outline').get(0)),
-            'box-shadow': 'inset 0 0 1px 1px ' + getAccentColor($(this).closest('.ms-select-outline').get(0))
-        });
-    });
+        if (this._multiSelectEnabled) {
+            selectAllContainer = document.createElement('div');
+            selectAllContainer.className = 'm-0 p-0 select-all-container';
 
-    select.on("select2:close", function (e) {
-        if ($(this).val().length === 0) {
-            $(this).closest('.ms-select-outline').find('.floating-label-floating').addClass('floating-label').removeClass('floating-label-floating');
+            selectAllContainer.appendChild(this.createCheckbox('Select All', ''));
         }
 
-        $(this).closest('.ms-select-outline').find('.floating-label').css({
-            'color': getPrimaryColor($(this).closest('.ms-select-outline').get(0))
-        });
+        return selectAllContainer;
+    }
 
-        $(this).closest('.ms-select-outline').find('.select2-selection').css({
-            'border-color': getPrimaryColor($(this).closest('.ms-select-outline').get(0)),
-            '-webkit-box-shadow': 'none',
-            'box-shadow': 'none'
-        });
-    });
+    createSelectItems() {
+        let selectItems = document.createElement('div');
+        selectItems.className = 'select-items';
+
+        let options = this._inputField.querySelectorAll('option');
+        let selected = [];
+
+        for (let i = 0; i < options.length; i++) {
+            selectItems.appendChild(this.createCheckbox(options[i].innerHTML, options[i].value, options[i].selected));
+
+            if (options[i].selected) {
+                selected.push(options[i].innerHTML)
+            }
+        }
+
+        if (this._multiSelectEnabled) {
+            this._selections = selected
+        } else {
+            this._selections = selected[0]
+        }
+
+        return selectItems;
+    }
+
+    createCheckbox(text, value, checked) {
+        let checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.className = 'custom-control-input';
+        checkbox.id = 'check' + Date.now().toString(36) + Math.random().toString(36).substr(2);
+        checkbox.value = value;
+        checkbox.checked = checked
+
+        let label = document.createElement('label');
+        label.className = 'custom-control-label';
+        label.innerHTML = text;
+        label.setAttribute('for', checkbox.id);
+
+        let customCheckbox = document.createElement('div');
+        customCheckbox.className = `custom-control custom-checkbox input-dark dropdown-item`;
+
+        if (checked) {
+            customCheckbox.classList.add('checked')
+        }
+
+        customCheckbox.appendChild(checkbox);
+        customCheckbox.appendChild(label);
+
+        return customCheckbox;
+    }
+
+    showSelectedItems() {
+        if (this._multiSelectEnabled) {
+            this._selectedItem.innerHTML = this._selections.map(s => `<span class="badge badge-primary">${s}</span>`).join(' ')
+        } else {
+            this._selectedItem.innerHTML = this._selections
+        }
+
+        this._inputValueLength = this._selectedItem.innerHTML.length
+    }
+
+    addRippleOrBorder() {
+        if (this._inputFieldClass === CLASS_NAME_SELECT) {
+            let ripple = document.createElement('div')
+            ripple.className = 'ms-line-ripple'
+            ripple.style.backgroundImage =
+                'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
+                'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')'
+
+            this._ripple = ripple
+            this._selectedItem.after(ripple)
+        } else {
+            this._selectedItem.style.borderColor = this._primaryColor
+        }
+    }
+
+    setAddonHeight() {
+        if (this._prepend != null) {
+            this._prepend.style.height = this._selectedItem.offsetHeight + 'px'
+        }
+
+        if (this._append != null) {
+            this._append.style.height = this._selectedItem.offsetHeight + 'px'
+        }
+    }
+
+    addNotch() {
+        if (this._inputFieldClass == CLASS_NAME_SELECT_OUTLINE) {
+            let notch = document.createElement('div')
+            notch.className = 'ms-notch'
+            notch.style.height = this._selectedItem.offsetHeight + 'px'
+
+            let notchBefore = document.createElement('div')
+            notchBefore.className = 'ms-notch-before'
+            notchBefore.style.borderColor = this._primaryColor
+
+            let notchBetween = document.createElement('div')
+            notchBetween.className = 'ms-notch-between width-auto'
+            notchBetween.style.borderColor = this._primaryColor
+            notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+
+            if (this._inputLabel != null && this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
+                notchBetween.style.borderTopWidth = 0
+            }
+
+            let notchAfter = document.createElement('div')
+            notchAfter.className = 'ms-notch-after'
+            notchAfter.style.borderColor = this._primaryColor
+
+            // Wrap notchBetween around label
+            this._inputLabel.parentNode.insertBefore(notchBetween, this._inputLabel)
+            notchBetween.appendChild(this._inputLabel)
+
+            // Wrap notch around notchBefore, notchBetween and notchAfter
+            notchBetween.parentNode.insertBefore(notchBefore, notchBetween)
+            notchBetween.parentNode.insertBefore(notchAfter, notchBetween)
+            notchBetween.parentNode.insertBefore(notch, notchBetween)
+
+            notch.appendChild(notchBefore)
+            notch.appendChild(notchBetween)
+            notch.appendChild(notchAfter)
+
+            this._notch = notch
+            this._notchBefore = notchBefore
+            this._notchBetween = notchBetween
+            this._notchAfter = notchAfter
+        }
+    }
+
+    initLabel() {
+        this.setLabelColor()
+        this.setLabelPosition()
+    }
+
+    setLabelColor() {
+        if (this._inputValueLength) {
+            this._inputLabel.style.color = this._accentColor
+
+            if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
+                this._notchBetween.style.borderTopWidth = 0
+            }
+        } else {
+            this._inputLabel.style.color = this._primaryColor
+
+            if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE
+                && this._inputLabelClass == CLASS_NAME_FLOATING_LABEL
+            ) {
+                this._notchBetween.style.borderTopWidth = '1px'
+            }
+        }
+    }
+
+    setLabelPosition() {
+        if (this._inputLabelClass === CLASS_NAME_FLOATING_LABEL) {
+            if (this._inputValueLength) {
+                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
+                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+            } else {
+                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL)
+            }
+        }
+    }
+
+    handleFocus() {
+        this._inputLabel.style.color = this._accentColor
+        this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
+        this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+
+        if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
+            this._selectedItem.style.borderColor = this._accentColor
+            this._selectedItem.style.boxShadow = 'inset 0 0 1px 1px ' + this._accentColor
+            this._notchBetween.style.borderTopWidth = 0
+            this._notch.classList.add('notch-active')
+            this._notchBefore.style.borderColor = this._accentColor
+            this._notchBetween.style.borderColor = this._accentColor
+            this._notchAfter.style.borderColor = this._accentColor
+        }
+    }
+
+    handleFocusOut() {
+        if (this._inputLabel != null) {
+            this.setLabelColor()
+            this.setLabelPosition()
+        }
+
+        if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
+            this._selectedItem.style.borderColor = this._primaryColor
+            this._selectedItem.style.boxShadow = 'none'
+            this._notch.classList.remove('notch-active')
+            this._notchBefore.style.borderColor = this._primaryColor
+            this._notchBetween.style.borderColor = this._primaryColor
+            this._notchAfter.style.borderColor = this._primaryColor
+        }
+    }
+
+    selectItem(value, text, checked) {
+        this._inputField.querySelector('option[value="' + value + '"]').selected = checked
+
+        if (checked) {
+            if (this._multiSelectEnabled) {
+                this._selections.push(text)
+            } else {
+                this._selections = text
+            }
+        } else {
+            if (this._multiSelectEnabled) {
+                this._selections = this._selections.filter(i => i != text)
+            } else {
+                this._selections = ''
+            }
+        }
+
+        this.showSelectedItems()
+    }
+
+    search(value) {
+        value = value.toLowerCase()
+
+        $(this._dropdown.querySelectorAll('.select-items .custom-checkbox')).filter(function() {
+            if ($(this).find('.custom-control-label').html().toLowerCase().indexOf(value) == -1) {
+                $(this).hide()
+            } else {
+                $(this).show()
+            }
+        })
+    }
+
+    selectAll(checked) {
+        let options = this._inputField.querySelectorAll('option');
+        let checkboxes = this._dropdown.querySelectorAll('.select-items .custom-control-input');
+
+        let selected = [];
+
+        for (let i = 0; i < options.length; i++) {
+            options[i].selected = checked
+
+            if (checked) {
+                selected.push(options[i].innerHTML)
+            }
+        }
+
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = checked
+        }
+
+        this._selections = selected
+
+        this.showSelectedItems()
+    }
 }
 
-$(function () {
-    initSelect();
-});
+/**
+ * ------------------------------------------------------------------------
+ * jQuery
+ * ------------------------------------------------------------------------
+ */
+
+$.fn[NAME] = Select._jQueryInterface
+$.fn[NAME].Constructor = Select
+$.fn[NAME].noConflict = () => {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return Select._jQueryInterface
+}
+
+export default Select
