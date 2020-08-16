@@ -76,11 +76,11 @@ class Select {
 
                 $(data._dropdown).on("shown.bs.dropdown", function(){
                     data['handleFocus']()
-                });
+                })
 
                 $(data._dropdown).on("hidden.bs.dropdown", function(){
                     data['handleFocusOut']()
-                });
+                })
 
                 $(data._inputLabel).on('click', function (event) {
                     event.stopPropagation()
@@ -88,7 +88,21 @@ class Select {
                 })
 
                 $(data._dropdown).find('.select-items .custom-control-input').on('change', function () {
-                    data['selectItem']($(this).val(), $(this).closest('.custom-control').find('.custom-control-label').html(), $(this).is(":checked"))
+                    let isChecked = $(this).is(":checked")
+
+                    if (!data._multiSelectEnabled) {
+                        let checkboxes = data._dropdown.querySelectorAll('.select-items .custom-control-input')
+
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            checkboxes[i].checked = false
+                            checkboxes[i].closest('.custom-control').classList.remove('checked')
+                        }
+
+                        this.checked = isChecked
+                        this.closest('.custom-control').classList.add('checked')
+                    }
+
+                    data['selectItem']($(this).val(), $(this).closest('.custom-control').find('.custom-control-label').html(), isChecked)
                 })
 
                 $(data._dropdown).find('.select-all-container .custom-control-input').on('change', function () {
@@ -173,91 +187,102 @@ class Select {
     }
 
     createSearchContainer() {
-        let searchContainer = '';
+        let searchContainer = ''
 
         if (this._isSearchable) {
-            searchContainer = document.createElement('div');
-            searchContainer.className = 'search-container m-0 p-0';
+            searchContainer = document.createElement('div')
+            searchContainer.className = 'search-container m-0 p-0'
 
-            let searchInput = document.createElement('input');
-            searchInput.type = 'text';
-            searchInput.placeholder = 'Search';
-            searchInput.className = `search-input form-control`;
+            let searchInput = document.createElement('input')
+            searchInput.type = 'text'
+            searchInput.placeholder = 'Search'
+            searchInput.className = `search-input form-control`
 
-            searchContainer.appendChild(searchInput);
+            searchContainer.appendChild(searchInput)
         }
 
-        return searchContainer;
+        return searchContainer
     }
 
     createSelectAllContainer() {
-        let selectAllContainer = '';
+        let selectAllContainer = ''
 
         if (this._multiSelectEnabled) {
-            selectAllContainer = document.createElement('div');
-            selectAllContainer.className = 'm-0 p-0 select-all-container';
+            selectAllContainer = document.createElement('div')
+            selectAllContainer.className = 'm-0 p-0 select-all-container'
 
-            selectAllContainer.appendChild(this.createCheckbox('Select All', ''));
+            selectAllContainer.appendChild(this.createCheckbox('Select All', ''))
         }
 
-        return selectAllContainer;
+        return selectAllContainer
     }
 
     createSelectItems() {
-        let selectItems = document.createElement('div');
-        selectItems.className = 'select-items';
+        let selectItems = document.createElement('div')
+        selectItems.className = 'select-items'
 
-        let options = this._inputField.querySelectorAll('option');
-        let selected = [];
+        let options = this._inputField.querySelectorAll('option')
+        let selected = []
+        let optionsState = []
 
         for (let i = 0; i < options.length; i++) {
-            selectItems.appendChild(this.createCheckbox(options[i].innerHTML, options[i].value, options[i].selected));
+            selectItems.appendChild(this.createCheckbox(options[i].innerHTML, options[i].value, options[i].selected))
 
             if (options[i].selected) {
                 selected.push(options[i].innerHTML)
             }
+
+            optionsState.push({
+                value: options[i].value,
+                text: options[i].innerHTML,
+                selected: options[i].selected
+            })
         }
 
-        if (this._multiSelectEnabled) {
-            this._selections = selected
-        } else {
-            this._selections = selected[0]
-        }
+        this._options = optionsState
 
-        return selectItems;
+        return selectItems
     }
 
     createCheckbox(text, value, checked) {
-        let checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
-        checkbox.className = 'custom-control-input';
-        checkbox.id = 'check' + Date.now().toString(36) + Math.random().toString(36).substr(2);
-        checkbox.value = value;
+        let checkbox = document.createElement('input')
+        checkbox.setAttribute('type', 'checkbox')
+        checkbox.className = 'custom-control-input'
+        checkbox.id = 'check' + Date.now().toString(36) + Math.random().toString(36).substr(2)
+        checkbox.value = value
         checkbox.checked = checked
 
-        let label = document.createElement('label');
-        label.className = 'custom-control-label';
-        label.innerHTML = text;
-        label.setAttribute('for', checkbox.id);
+        let label = document.createElement('label')
+        label.className = 'custom-control-label'
+        label.innerHTML = text
+        label.setAttribute('for', checkbox.id)
 
-        let customCheckbox = document.createElement('div');
-        customCheckbox.className = `custom-control custom-checkbox input-dark dropdown-item`;
+        let customCheckbox = document.createElement('div')
+        customCheckbox.className = `custom-control custom-checkbox input-dark dropdown-item`
 
-        if (checked) {
+        if (checked && !this._multiSelectEnabled) {
             customCheckbox.classList.add('checked')
         }
 
-        customCheckbox.appendChild(checkbox);
-        customCheckbox.appendChild(label);
+        customCheckbox.appendChild(checkbox)
+        customCheckbox.appendChild(label)
 
-        return customCheckbox;
+        return customCheckbox
     }
 
     showSelectedItems() {
         if (this._multiSelectEnabled) {
-            this._selectedItem.innerHTML = this._selections.map(s => `<span class="badge badge-primary">${s}</span>`).join(' ')
+            this._selectedItem.innerHTML = this._options.map(option => {
+                if (option.selected) {
+                    return `<span class="badge badge-primary">${option.text}</span>`
+                }
+            }).join('')
         } else {
-            this._selectedItem.innerHTML = this._selections
+            this._selectedItem.innerHTML = this._options.map(option => {
+                if (option.selected) {
+                    return option.text
+                }
+            }).join('')
         }
 
         this._inputValueLength = this._selectedItem.innerHTML.length
@@ -399,21 +424,28 @@ class Select {
     }
 
     selectItem(value, text, checked) {
-        this._inputField.querySelector('option[value="' + value + '"]').selected = checked
+        let index
 
-        if (checked) {
-            if (this._multiSelectEnabled) {
-                this._selections.push(text)
-            } else {
-                this._selections = text
+        if (!this._multiSelectEnabled) {
+            let selectedOptions = this._inputField.querySelectorAll('option')
+
+            for (let i = 0; i < selectedOptions.length; i++) {
+                if (selectedOptions[i].selected) {
+                    selectedOptions[i].selected = false
+                }
             }
-        } else {
-            if (this._multiSelectEnabled) {
-                this._selections = this._selections.filter(i => i != text)
-            } else {
-                this._selections = ''
+
+            index = this._options.findIndex(o => o.selected == true)
+
+            if (index != -1) {
+                this._options[index].selected = false
             }
         }
+
+        this._inputField.querySelector('option[value="' + value + '"]').selected = checked
+
+        index = this._options.findIndex(o => o.value == value)
+        this._options[index].selected = checked
 
         this.showSelectedItems()
     }
@@ -431,24 +463,18 @@ class Select {
     }
 
     selectAll(checked) {
-        let options = this._inputField.querySelectorAll('option');
-        let checkboxes = this._dropdown.querySelectorAll('.select-items .custom-control-input');
-
-        let selected = [];
+        let options = this._inputField.querySelectorAll('option')
+        let checkboxes = this._dropdown.querySelectorAll('.select-items .custom-control-input')
 
         for (let i = 0; i < options.length; i++) {
             options[i].selected = checked
-
-            if (checked) {
-                selected.push(options[i].innerHTML)
-            }
         }
 
         for (let i = 0; i < checkboxes.length; i++) {
             checkboxes[i].checked = checked
         }
 
-        this._selections = selected
+        this._options.map(option => option.selected = checked)
 
         this.showSelectedItems()
     }
