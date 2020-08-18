@@ -70,10 +70,6 @@ class Select {
 
                 data['initSelect']()
 
-                $(data._inputField).on('change', function () {
-                    data._inputValueLength = data._selectedItem.innerHTML.length
-                })
-
                 $(data._dropdown).on("shown.bs.dropdown", function(){
                     data['handleFocus']()
                 })
@@ -103,6 +99,10 @@ class Select {
                     }
 
                     data['selectItem']($(this).val(), $(this).closest('.custom-control').find('.custom-control-label').html(), isChecked)
+
+                    if (!data._multiSelectEnabled) {
+                        $(data._selectedItem).dropdown('toggle')
+                    }
                 })
 
                 $(data._dropdown).find('.select-all-container .custom-control-input').on('change', function () {
@@ -127,7 +127,10 @@ class Select {
         this.showSelectedItems()
         this.addRippleOrBorder()
         this.setAddonHeight()
-        this.addNotch()
+
+        if (this._inputFieldClass == CLASS_NAME_SELECT_OUTLINE) {
+            this.addNotch()
+        }
 
         if (this._inputLabel != null) {
             this.initLabel()
@@ -173,17 +176,17 @@ class Select {
 
             dropdownMenu.appendChild(closeButton)
         } else {
+            form.appendChild(this.createSelectItems())
             dropdownMenu.appendChild(form)
-            dropdownMenu.appendChild(this.createSelectItems())
         }
 
         dropdown.appendChild(selectedItem)
         dropdown.appendChild(dropdownMenu)
 
-        this._element.appendChild(dropdown)
-
         this._dropdown = dropdown
         this._selectedItem = selectedItem
+
+        this._element.insertBefore(this._dropdown, this._inputField)
     }
 
     createSearchContainer() {
@@ -284,8 +287,6 @@ class Select {
                 }
             }).join('')
         }
-
-        this._inputValueLength = this._selectedItem.innerHTML.length
     }
 
     addRippleOrBorder() {
@@ -298,8 +299,6 @@ class Select {
 
             this._ripple = ripple
             this._selectedItem.after(ripple)
-        } else {
-            this._selectedItem.style.borderColor = this._primaryColor
         }
     }
 
@@ -314,46 +313,39 @@ class Select {
     }
 
     addNotch() {
-        if (this._inputFieldClass == CLASS_NAME_SELECT_OUTLINE) {
-            let notch = document.createElement('div')
-            notch.className = 'ms-notch'
-            notch.style.height = this._selectedItem.offsetHeight + 'px'
+        let notch = document.createElement('div')
+        notch.className = 'ms-notch'
+        notch.style.height = this._selectedItem.offsetHeight + 'px'
 
-            let notchBefore = document.createElement('div')
-            notchBefore.className = 'ms-notch-before'
-            notchBefore.style.borderColor = this._primaryColor
+        let notchBefore = document.createElement('div')
+        notchBefore.className = 'ms-notch-before'
+        notchBefore.style.borderColor = this._primaryColor
 
-            let notchBetween = document.createElement('div')
-            notchBetween.className = 'ms-notch-between width-auto'
-            notchBetween.style.borderColor = this._primaryColor
-            notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+        let notchBetween = document.createElement('div')
+        notchBetween.className = 'ms-notch-between width-auto'
+        notchBetween.style.borderColor = this._primaryColor
+        notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
 
-            if (this._inputLabel != null && this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
-                notchBetween.style.borderTopWidth = 0
-            }
-
-            let notchAfter = document.createElement('div')
-            notchAfter.className = 'ms-notch-after'
-            notchAfter.style.borderColor = this._primaryColor
-
-            // Wrap notchBetween around label
-            this._inputLabel.parentNode.insertBefore(notchBetween, this._inputLabel)
-            notchBetween.appendChild(this._inputLabel)
-
-            // Wrap notch around notchBefore, notchBetween and notchAfter
-            notchBetween.parentNode.insertBefore(notchBefore, notchBetween)
-            notchBetween.parentNode.insertBefore(notchAfter, notchBetween)
-            notchBetween.parentNode.insertBefore(notch, notchBetween)
-
-            notch.appendChild(notchBefore)
-            notch.appendChild(notchBetween)
-            notch.appendChild(notchAfter)
-
-            this._notch = notch
-            this._notchBefore = notchBefore
-            this._notchBetween = notchBetween
-            this._notchAfter = notchAfter
+        if (this._inputLabel != null && this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
+            notchBetween.style.borderTopWidth = 0
         }
+
+        notchBetween.appendChild(this._inputLabel)
+
+        let notchAfter = document.createElement('div')
+        notchAfter.className = 'ms-notch-after'
+        notchAfter.style.borderColor = this._primaryColor
+
+        notch.appendChild(notchBefore)
+        notch.appendChild(notchBetween)
+        notch.appendChild(notchAfter)
+
+        this._element.insertBefore(notch, this._dropdown)
+
+        this._notch = notch
+        this._notchBefore = notchBefore
+        this._notchBetween = notchBetween
+        this._notchAfter = notchAfter
     }
 
     initLabel() {
@@ -362,7 +354,7 @@ class Select {
     }
 
     setLabelColor() {
-        if (this._inputValueLength) {
+        if (this._selectedItem.innerHTML.length) {
             this._inputLabel.style.color = this._accentColor
 
             if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
@@ -381,7 +373,7 @@ class Select {
 
     setLabelPosition() {
         if (this._inputLabelClass === CLASS_NAME_FLOATING_LABEL) {
-            if (this._inputValueLength) {
+            if (this._selectedItem.innerHTML.length) {
                 this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
                 this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
             } else {
@@ -397,8 +389,6 @@ class Select {
         this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
 
         if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
-            this._selectedItem.style.borderColor = this._accentColor
-            this._selectedItem.style.boxShadow = 'inset 0 0 1px 1px ' + this._accentColor
             this._notchBetween.style.borderTopWidth = 0
             this._notch.classList.add('notch-active')
             this._notchBefore.style.borderColor = this._accentColor
@@ -414,8 +404,6 @@ class Select {
         }
 
         if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
-            this._selectedItem.style.borderColor = this._primaryColor
-            this._selectedItem.style.boxShadow = 'none'
             this._notch.classList.remove('notch-active')
             this._notchBefore.style.borderColor = this._primaryColor
             this._notchBetween.style.borderColor = this._primaryColor
