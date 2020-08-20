@@ -50,6 +50,8 @@ class Select {
 
         this._isSearchable = element.className.includes(CLASS_NAME_SEARCHABLE) ? true : false
         this._multiSelectEnabled = element.className.includes(CLASS_NAME_MULTI_SELECT) ? true : false
+
+        this._options = []
     }
 
     static get VERSION() {
@@ -111,6 +113,38 @@ class Select {
 
                 $(data._dropdown).find('.search-input').on('keyup', function (event) {
                     data['search']($(this).val())
+                })
+
+                $(data._inputField).on('change', function () {
+                    if (!data._multiSelectEnabled) {
+                        let checkboxes = data._dropdown.querySelectorAll('.select-items .custom-control-input')
+
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if (checkboxes[i].value == $(this).val()) {
+                                checkboxes[i].checked = true
+                                checkboxes[i].closest('.custom-control').classList.add('checked')
+                            } else {
+                                checkboxes[i].checked = false
+                                checkboxes[i].closest('.custom-control').classList.remove('checked')
+                            }
+                        }
+
+                        data['selectItem']($(this).val(), this.options[this.selectedIndex].text, true)
+                    } else {
+                        let checkboxes = data._dropdown.querySelectorAll('.select-items .custom-control-input')
+
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if ($(this).val().includes(checkboxes[i].value)) {
+                                checkboxes[i].checked = true
+                                checkboxes[i].closest('.custom-control').classList.add('checked')
+                                data['selectItem'](checkboxes[i].value, checkboxes[i].text, true)
+                            } else {
+                                checkboxes[i].checked = false
+                                checkboxes[i].closest('.custom-control').classList.remove('checked')
+                                data['selectItem'](checkboxes[i].value, checkboxes[i].text, false)
+                            }
+                        }
+                    }
                 })
 
                 data._element.style.visibility = 'visible'
@@ -226,7 +260,6 @@ class Select {
 
         let options = this._inputField.querySelectorAll('option')
         let selected = []
-        let optionsState = []
 
         for (let i = 0; i < options.length; i++) {
             selectItems.appendChild(this.createCheckbox(options[i].innerHTML, options[i].value, options[i].selected))
@@ -235,14 +268,12 @@ class Select {
                 selected.push(options[i].innerHTML)
             }
 
-            optionsState.push({
+            this._options.push({
                 value: options[i].value,
                 text: options[i].innerHTML,
                 selected: options[i].selected
             })
         }
-
-        this._options = optionsState
 
         return selectItems
     }
