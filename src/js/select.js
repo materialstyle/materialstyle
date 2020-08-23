@@ -19,6 +19,9 @@ const VERSION = '2.0.0'
 const DATA_KEY = 'ms.select'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
+const EVENT_HIDDEN = 'hidden.bs.dropdown'
+const EVENT_SHOWN = 'shown.bs.dropdown'
+
 const CLASS_NAME_SELECT = 'ms-select'
 const CLASS_NAME_SELECT_OUTLINE = 'ms-select-outline'
 
@@ -29,20 +32,23 @@ const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'
 
+const SELECTOR_CHECKBOX = '.select-items .custom-control-input'
+const SELECTOR_SELECT_ALL_CHECKBOX = '.select-all-container .custom-control-input'
+
 class Select {
     constructor(element) {
         this._element = element
-        this._inputField = element.querySelector('.form-control')
-        this._inputFieldClass = element.className.includes(CLASS_NAME_SELECT_OUTLINE) ? CLASS_NAME_SELECT_OUTLINE : CLASS_NAME_SELECT
+        this._select = element.querySelector('.form-control')
+        this._selectClass = element.className.includes(CLASS_NAME_SELECT_OUTLINE) ? CLASS_NAME_SELECT_OUTLINE : CLASS_NAME_SELECT
 
         this._primaryColor = getPrimaryColor(element)
         this._accentColor = getAccentColor(element)
 
-        this._inputLabel = element.querySelector('label')
-        this._inputLabelClass = ''
+        this._label = element.querySelector('label')
+        this._labelClass = ''
 
-        if (this._inputLabel != null) {
-            this._inputLabelClass = this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
+        if (this._label != null) {
+            this._labelClass = this._label.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
         }
 
         this._prepend = element.querySelector('.prepend')
@@ -51,7 +57,11 @@ class Select {
         this._isSearchable = element.className.includes(CLASS_NAME_SEARCHABLE) ? true : false
         this._multiSelectEnabled = element.className.includes(CLASS_NAME_MULTI_SELECT) ? true : false
 
-        this._options = []
+        this._options = this.createOptions()
+
+        this.initSelect()
+
+        this.addEventListeners()
     }
 
     static get VERSION() {
@@ -70,90 +80,33 @@ class Select {
                 data = new Select(this)
                 $element.data(DATA_KEY, data)
 
-                data['initSelect']()
-
-                $(data._dropdown).on("shown.bs.dropdown", function(){
-                    data['handleFocus']()
-                })
-
-                $(data._dropdown).on("hidden.bs.dropdown", function(){
-                    data['handleFocusOut']()
-                })
-
-                $(data._inputLabel).on('click', function (event) {
-                    event.stopPropagation()
-                    $(data._selectedItem).dropdown('toggle')
-                })
-
-                $(data._dropdown).find('.select-items .custom-control-input').on('change', function () {
-                    let isChecked = $(this).is(":checked")
-
-                    if (!data._multiSelectEnabled) {
-                        let checkboxes = data._dropdown.querySelectorAll('.select-items .custom-control-input')
-
-                        for (let i = 0; i < checkboxes.length; i++) {
-                            checkboxes[i].checked = false
-                            checkboxes[i].closest('.custom-control').classList.remove('checked')
-                        }
-
-                        this.checked = isChecked
-                        this.closest('.custom-control').classList.add('checked')
-                    }
-
-                    data['selectItem']($(this).val(), $(this).closest('.custom-control').find('.custom-control-label').html(), isChecked)
-
-                    if (!data._multiSelectEnabled) {
-                        $(data._selectedItem).dropdown('toggle')
-                    }
-                })
-
-                $(data._dropdown).find('.select-all-container .custom-control-input').on('change', function () {
-                    data['selectAll']($(this).is(":checked"))
-                })
-
-                $(data._dropdown).find('.search-input').on('keyup', function (event) {
-                    data['search']($(this).val())
-                })
-
-                $(data._inputField).on('change', function () {
-                    if (!data._multiSelectEnabled) {
-                        let checkboxes = data._dropdown.querySelectorAll('.select-items .custom-control-input')
-
-                        for (let i = 0; i < checkboxes.length; i++) {
-                            if (checkboxes[i].value == $(this).val()) {
-                                checkboxes[i].checked = true
-                                checkboxes[i].closest('.custom-control').classList.add('checked')
-                            } else {
-                                checkboxes[i].checked = false
-                                checkboxes[i].closest('.custom-control').classList.remove('checked')
-                            }
-                        }
-
-                        data['selectItem']($(this).val(), this.options[this.selectedIndex].text, true)
-                    } else {
-                        let checkboxes = data._dropdown.querySelectorAll('.select-items .custom-control-input')
-
-                        for (let i = 0; i < checkboxes.length; i++) {
-                            if ($(this).val().includes(checkboxes[i].value)) {
-                                checkboxes[i].checked = true
-                                checkboxes[i].closest('.custom-control').classList.add('checked')
-                                data['selectItem'](checkboxes[i].value, checkboxes[i].text, true)
-                            } else {
-                                checkboxes[i].checked = false
-                                checkboxes[i].closest('.custom-control').classList.remove('checked')
-                                data['selectItem'](checkboxes[i].value, checkboxes[i].text, false)
-                            }
-                        }
-                    }
-                })
-
                 data._element.style.visibility = 'visible'
             }
 
-            if (config === 'redraw' && shouldRedraw) {
-                data['reDrawSelects']()
+            if (typeof config === 'string') {
+                if (typeof data[config] === 'undefined') {
+                    throw new TypeError(`No method named "${config}"`)
+                } else if (config === 'redraw' && shouldRedraw) {
+                    data[config]()
+                }
             }
         })
+    }
+
+    createOptions() {
+        let optionsArray = []
+        let options = this._select.querySelectorAll('option')
+
+        let selectItems = document.createElement('div')
+        selectItems.className = 'select-items'
+
+        for (let [key, value] of  Object.entries(options)) {
+            selectItems.appendChild(this.createCheckbox(value.text, value.value, value.selected))
+            optionsArray.push({value: value.value, text: value.innerHTML, selected: value.selected})
+        }
+
+        this._selectItems = selectItems
+        return optionsArray
     }
 
     initSelect() {
@@ -162,21 +115,21 @@ class Select {
         this.addRippleOrBorder()
         this.setAddonHeight()
 
-        if (this._inputFieldClass == CLASS_NAME_SELECT_OUTLINE) {
+        if (this._selectClass == CLASS_NAME_SELECT_OUTLINE) {
             this.addNotch()
         }
 
-        if (this._inputLabel != null) {
+        if (this._label != null) {
             this.initLabel()
         }
     }
 
-    reDrawSelects() {
+    redraw() {
         this.setAddonHeight()
 
-        if (this._inputFieldClass == CLASS_NAME_SELECT_OUTLINE) {
+        if (this._selectClass == CLASS_NAME_SELECT_OUTLINE) {
             this._notch.style.height = this._selectedItem.offsetHeight + 'px'
-            this._notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+            this._notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
         }
     }
 
@@ -201,7 +154,7 @@ class Select {
 
         if (this._multiSelectEnabled) {
             form.appendChild(this.createSelectAllContainer())
-            form.appendChild(this.createSelectItems())
+            form.appendChild(this._selectItems)
             dropdownMenu.appendChild(form)
 
             let closeButton = document.createElement('button')
@@ -210,7 +163,7 @@ class Select {
 
             dropdownMenu.appendChild(closeButton)
         } else {
-            form.appendChild(this.createSelectItems())
+            form.appendChild(this._selectItems)
             dropdownMenu.appendChild(form)
         }
 
@@ -220,7 +173,7 @@ class Select {
         this._dropdown = dropdown
         this._selectedItem = selectedItem
 
-        this._element.insertBefore(this._dropdown, this._inputField)
+        this._element.insertBefore(this._dropdown, this._select)
     }
 
     createSearchContainer() {
@@ -233,7 +186,7 @@ class Select {
             let searchInput = document.createElement('input')
             searchInput.type = 'text'
             searchInput.placeholder = 'Search'
-            searchInput.className = `search-input form-control`
+            searchInput.className = 'search-input form-control'
 
             searchContainer.appendChild(searchInput)
         }
@@ -254,30 +207,6 @@ class Select {
         return selectAllContainer
     }
 
-    createSelectItems() {
-        let selectItems = document.createElement('div')
-        selectItems.className = 'select-items'
-
-        let options = this._inputField.querySelectorAll('option')
-        let selected = []
-
-        for (let i = 0; i < options.length; i++) {
-            selectItems.appendChild(this.createCheckbox(options[i].innerHTML, options[i].value, options[i].selected))
-
-            if (options[i].selected) {
-                selected.push(options[i].innerHTML)
-            }
-
-            this._options.push({
-                value: options[i].value,
-                text: options[i].innerHTML,
-                selected: options[i].selected
-            })
-        }
-
-        return selectItems
-    }
-
     createCheckbox(text, value, checked) {
         let checkbox = document.createElement('input')
         checkbox.setAttribute('type', 'checkbox')
@@ -292,7 +221,7 @@ class Select {
         label.setAttribute('for', checkbox.id)
 
         let customCheckbox = document.createElement('div')
-        customCheckbox.className = `custom-control custom-checkbox input-dark dropdown-item`
+        customCheckbox.className = 'custom-control custom-checkbox input-dark dropdown-item'
 
         if (checked && !this._multiSelectEnabled) {
             customCheckbox.classList.add('checked')
@@ -321,7 +250,7 @@ class Select {
     }
 
     addRippleOrBorder() {
-        if (this._inputFieldClass === CLASS_NAME_SELECT) {
+        if (this._selectClass === CLASS_NAME_SELECT) {
             let ripple = document.createElement('div')
             ripple.className = 'ms-line-ripple'
             ripple.style.backgroundImage =
@@ -355,13 +284,13 @@ class Select {
         let notchBetween = document.createElement('div')
         notchBetween.className = 'ms-notch-between width-auto'
         notchBetween.style.borderColor = this._primaryColor
-        notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+        notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
 
-        if (this._inputLabel != null && this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
+        if (this._label != null && this._labelClass == CLASS_NAME_STATIC_LABEL) {
             notchBetween.style.borderTopWidth = 0
         }
 
-        notchBetween.appendChild(this._inputLabel)
+        notchBetween.appendChild(this._label)
 
         let notchAfter = document.createElement('div')
         notchAfter.className = 'ms-notch-after'
@@ -386,16 +315,16 @@ class Select {
 
     setLabelColor() {
         if (this._selectedItem.innerHTML.length) {
-            this._inputLabel.style.color = this._accentColor
+            this._label.style.color = this._accentColor
 
-            if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
+            if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
                 this._notchBetween.style.borderTopWidth = 0
             }
         } else {
-            this._inputLabel.style.color = this._primaryColor
+            this._label.style.color = this._primaryColor
 
-            if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE
-                && this._inputLabelClass == CLASS_NAME_FLOATING_LABEL
+            if (this._selectClass === CLASS_NAME_SELECT_OUTLINE
+                && this._labelClass == CLASS_NAME_FLOATING_LABEL
             ) {
                 this._notchBetween.style.borderTopWidth = '1px'
             }
@@ -403,23 +332,23 @@ class Select {
     }
 
     setLabelPosition() {
-        if (this._inputLabelClass === CLASS_NAME_FLOATING_LABEL) {
+        if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
             if (this._selectedItem.innerHTML.length) {
-                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
-                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+                this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
+                this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
             } else {
-                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
-                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL)
+                this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+                this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
             }
         }
     }
 
     handleFocus() {
-        this._inputLabel.style.color = this._accentColor
-        this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
-        this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+        this._label.style.color = this._accentColor
+        this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
+        this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
 
-        if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
+        if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
             this._notchBetween.style.borderTopWidth = 0
             this._notch.classList.add('notch-active')
             this._notchBefore.style.borderColor = this._accentColor
@@ -429,12 +358,12 @@ class Select {
     }
 
     handleFocusOut() {
-        if (this._inputLabel != null) {
+        if (this._label != null) {
             this.setLabelColor()
             this.setLabelPosition()
         }
 
-        if (this._inputFieldClass === CLASS_NAME_SELECT_OUTLINE) {
+        if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
             this._notch.classList.remove('notch-active')
             this._notchBefore.style.borderColor = this._primaryColor
             this._notchBetween.style.borderColor = this._primaryColor
@@ -442,26 +371,39 @@ class Select {
         }
     }
 
-    selectItem(value, text, checked) {
+    setSelectValue(value, checked) {
         let index
 
         if (!this._multiSelectEnabled) {
-            let selectedOptions = this._inputField.querySelectorAll('option')
-
+            let selectedOptions = this._select.querySelectorAll('option')
             for (let i = 0; i < selectedOptions.length; i++) {
                 if (selectedOptions[i].selected) {
                     selectedOptions[i].selected = false
                 }
             }
 
-            index = this._options.findIndex(o => o.selected == true)
+            let checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
+            for (let i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false
+                checkboxes[i].closest('.custom-control').classList.remove('checked')
+            }
 
+            index = this._options.findIndex(o => o.selected == true)
             if (index != -1) {
                 this._options[index].selected = false
             }
         }
 
-        this._inputField.querySelector('option[value="' + value + '"]').selected = checked
+        this._select.querySelector('option[value="' + value + '"]').selected = checked
+
+        this._dropdown.querySelector('.custom-control-input[value="' + value + '"]').checked = checked
+
+        if (checked) {
+            this._dropdown.querySelector('.custom-control-input[value="' + value + '"]').closest('.custom-control').classList.add('checked')
+        } else {
+            this._dropdown.querySelector('.custom-control-input[value="' + value + '"]').closest('.custom-control').classList.remove('checked')
+        }
+
 
         index = this._options.findIndex(o => o.value == value)
         this._options[index].selected = checked
@@ -472,7 +414,7 @@ class Select {
     search(value) {
         value = value.toLowerCase()
 
-        $(this._dropdown.querySelectorAll('.select-items .custom-checkbox')).filter(function() {
+        $(this._dropdown.querySelectorAll('.select-items .custom-checkbox')).filter(function () {
             if ($(this).find('.custom-control-label').html().toLowerCase().indexOf(value) == -1) {
                 $(this).hide()
             } else {
@@ -482,8 +424,8 @@ class Select {
     }
 
     selectAll(checked) {
-        let options = this._inputField.querySelectorAll('option')
-        let checkboxes = this._dropdown.querySelectorAll('.select-items .custom-control-input')
+        let options = this._select.querySelectorAll('option')
+        let checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
 
         for (let i = 0; i < options.length; i++) {
             options[i].selected = checked
@@ -496,6 +438,49 @@ class Select {
         this._options.map(option => option.selected = checked)
 
         this.showSelectedItems()
+    }
+
+    addEventListeners() {
+        $(this._dropdown).on(EVENT_SHOWN, () => this.handleFocus())
+        $(this._dropdown).on(EVENT_HIDDEN, () => this.handleFocusOut())
+
+        $(this._label).on('click', (event) => {
+            event.preventDefault()
+            event.stopPropagation()
+            $(this._selectedItem).dropdown('toggle')
+        })
+
+        $(this._dropdown).find(SELECTOR_SELECT_ALL_CHECKBOX).on('change', (event) => {
+            this.selectAll($(event.target).is(':checked'))
+        })
+
+        $(this._dropdown).find('.search-input').on('keyup', (event) => {
+            this.search($(event.target).val())
+        })
+
+        $(this._dropdown).find(SELECTOR_CHECKBOX).on('change', (event) => {
+            this.setSelectValue($(event.target).val(), $(event.target).is(':checked'))
+
+            if (!this._multiSelectEnabled) {
+                $(this._selectedItem).dropdown('toggle')
+            }
+        })
+
+        $(this._select).on('change', (event) => {
+            if (!this._multiSelectEnabled) {
+                this.setSelectValue($(event.target).val(), true)
+            } else {
+                let selectValue = $(event.target).val()
+
+                for (let [key, value] of  Object.entries(this._options)) {
+                    if (selectValue.includes(value.value)) {
+                        this.setSelectValue(value.value, true)
+                    } else {
+                        this.setSelectValue(value.value, false)
+                    }
+                }
+            }
+        })
     }
 }
 
