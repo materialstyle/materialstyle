@@ -237,7 +237,7 @@ class Select {
         if (this._multiSelectEnabled) {
             this._selectedItem.innerHTML = this._options.map(option => {
                 if (option.selected) {
-                    return `<span class="badge badge-primary">${option.text}</span>`
+                    return `<span class="badge badge-dark">${option.text}</span>`
                 }
             }).join('')
         } else {
@@ -433,6 +433,12 @@ class Select {
 
         for (let i = 0; i < checkboxes.length; i++) {
             checkboxes[i].checked = checked
+
+            if (checked) {
+                checkboxes[i].closest('.custom-control').classList.add('checked')
+            } else {
+                checkboxes[i].closest('.custom-control').classList.remove('checked')
+            }
         }
 
         this._options.map(option => option.selected = checked)
