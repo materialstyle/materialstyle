@@ -172,7 +172,7 @@
 }
 
 .has-error {
-  .help-block, label {
+  .help-block, .floating-label, .floating-label-active, .static-label {
     color: theme-color("danger") !important;
   }
   .ms-text-field {
