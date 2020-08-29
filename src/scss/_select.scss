@@ -30,6 +30,10 @@
       border-color: transparent transparent #424242 transparent;
       bottom: 16px;
     }
+
+    .badge {
+      margin: 0.1rem;
+    }
   }
 
   .prepend, .append {
@@ -45,7 +49,7 @@
     left: 0;
 
     & + label, & + .ms-notch {
-      & + .selected-item {
+      & + .dropdown .selected-item {
         padding-left: 2.5rem;
       }
     }
@@ -55,14 +59,14 @@
     right: 0;
 
     & + label, & + .ms-notch {
-      & + .selected-item {
+      & + .dropdown .selected-item {
         padding-right: 2.5rem;
       }
     }
   }
 
   .search-input {
-    transition: .3s cubic-bezier(.4,0,.2,1);
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
     box-shadow: none !important;
     background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9E9E9E, #9E9E9E) center bottom/ 100% 1px no-repeat border-box transparent;
     border-radius: 0;
@@ -77,7 +81,7 @@
   }
 
   .dropdown-menu {
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
     border: none;
     border-radius: 2px;
     padding: 0;
@@ -90,6 +94,7 @@
 
   .custom-control-label {
     padding: 0.5rem 0;
+    height: 40px;
     &::before, &::after {
       top: 0.7rem;
     }
@@ -146,10 +151,11 @@
     }
   }
 
-  .selected-item:focus {
-    background-color: #e4e4e4;
-
-    & + .ms-line-ripple {
+  .dropdown.show {
+    .selected-item {
+      background-color: #e4e4e4;
+    }
+    .ms-line-ripple {
       background-size: 100% 2px, 100% 1px !important;
     }
   }
@@ -239,7 +245,7 @@
 }
 
 .has-error {
-  .help-block, label {
+  .help-block, .floating-label, .floating-label-active, .static-label {
     color: theme-color("danger") !important;
   }
   .ms-select {
