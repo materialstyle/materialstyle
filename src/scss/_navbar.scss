@@ -1,0 +1,12 @@
+@import "node_modules/bootstrap/scss/navbar";
+
+.navbar {
+  transform: translateY(0);
+  transition: transform 300ms 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms 300ms;
+  opacity: 1;
+
+  &.hide {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
