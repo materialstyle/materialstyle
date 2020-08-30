@@ -9,21 +9,23 @@ webpackConfig = {
         button: "./src/js/button.js",
         carousel: "./src/js/carousel.js",
         collapse: "./src/js/collapse.js",
+        drawer: "./src/js/drawer.js",
         dropdown: "./src/js/dropdown.js",
+        file_input: "./src/js/file_input.js",
         modal: "./src/js/modal.js",
+        navbar: "./src/js/navbar.js",
         popover: "./src/js/popover.js",
         scrollspy: "./src/js/scrollspy.js",
         tab: "./src/js/tab.js",
         toast: "./src/js/toast.js",
         tooltip: "./src/js/tooltip.js",
-        util: "./src/js/util.js",
-        list: "./src/js/list.js",
-        progress_bar: "./src/js/progress_bar.js",
+        utility: "./src/js/utility.js",
         ripple: "./src/js/ripple.js",
         select: "./src/js/select.js",
         shape: "./src/js/shape.js",
-        sidebar: "./src/js/sidebar.js",
         snackbar: "./src/js/snackbar.js",
+        spinner: "./src/js/spinner.js",
+        rainbow: "./src/js/rainbow.js",
         text_field: "./src/js/text_field.js",
         material_style: "./src/js/material_style.js"
     },
@@ -41,7 +43,7 @@ webpackConfig = {
 
         },
         publicPath: "/",
-        library: "$ms",
+        library: "materialstyle",
         libraryTarget: "umd",
     },
     module: {
@@ -96,7 +98,13 @@ webpackConfig = {
     ],
     externals: {
         jquery: "jQuery",
-        select2: "select2"
+        // jquery: {
+        //     commonjs: 'jquery',
+        //     commonjs2: 'jquery',
+        //     amd: 'jquery',
+        //     umd: 'jquery',
+        //     root: '$'
+        // },
     }
 };
 

@@ -9,7 +9,7 @@ webpackConfig = merge(common, {
     mode: "development",
     devServer: {
         contentBase: path.join(__dirname, "src/examples"),
-        port: 3000,
+        port: 3005,
         hot: false,
         watchContentBase: true,
         liveReload: true,
