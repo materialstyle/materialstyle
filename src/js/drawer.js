@@ -7,13 +7,13 @@ function openNav() {
         let div = $('<div />').appendTo('body');
         div.attr('id', 'ms-shade');
     }
-    $('.ms-sidebar').css('left', '0');
+    $('.drawer').css('left', '0');
 };
 
 function closeNav() {
-    if (!$('.ms-sidebar').hasClass('--visible')) {
-        $('.ms-sidebar').css('left', '-350px');
-        setTimeout(function(){
+    if (!$('.drawer').hasClass('--visible')) {
+        $('.drawer').css('left', '-350px');
+        setTimeout(function () {
             $('#ms-shade').hide();
         }, 400);
     }
@@ -21,35 +21,39 @@ function closeNav() {
 
 function changeSideNavClass() {
     if ($(window).innerWidth() < 1281) {
-        $('.ms-sidebar.--visible').addClass('--switched')
+        $('.drawer.--visible').addClass('--switched')
             .removeClass('--visible')
-            .css({ 'left': '-350px' });
+            .css({'left': '-350px'});
 
-        $('.ms-sidebar-toggle').show();
+        setTimeout(function () {
+            $('#ms-shade').hide();
+        }, 400);
+
+        $('.drawer-toggle').show();
 
         $('footer').css('margin-left', 0);
     } else {
 
-        $('.ms-sidebar.--switched').addClass('--visible')
+        $('.drawer.--switched').addClass('--visible')
             .removeClass('--switched')
-            .css({ 'left': 0 });
+            .css({'left': 0});
 
-        $('.ms-sidebar-toggle').hide();
+        $('.drawer-toggle').hide();
 
-        if ($('.ms-sidebar.--visible').hasClass('--fixed')) {
+        if ($('.drawer.--visible').hasClass('--fixed')) {
             $('footer').css('margin-left', 250);
         }
     }
 };
 
-/** Initialize Menus on the sidebar */
+/** Initialize Menus on the drawer */
 function initMenus() {
     let navLink = $('.nav-link');
 
-    navLink.each(function() {
+    navLink.each(function () {
         let clicker = true;
 
-        $(this).click(function() {
+        $(this).click(function () {
             let subMenu = $(this).parent().next('.sub-menu-container').find('.sub-menu');
             let subMenuHeight = subMenu.outerHeight();
 
@@ -71,21 +75,69 @@ function initMenus() {
         })
     });
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
+        let navbarHeight = $('.fixed-top').innerHeight();
+
         if ($('aside').hasClass('--visible') || $('aside').hasClass('--switched')) {
             changeSideNavClass();
         }
-        $('.ms-root').css('margin-top', $('.fixed-top').innerHeight());
-        $('.ms-sidebar').css('min-height', 'calc(100vh - ' + $('.fixed-top').innerHeight() + 'px)');
+
+        $('.drawer-brand').css('height', navbarHeight + 'px');
+        $('.ms-fixed').css('top', navbarHeight + 'px');
+        $('.ms-fixed').css('height', 'calc(100vh - ' + navbarHeight + 'px)');
     });
 
-    navLink.click(function() {
+    navLink.click(function () {
         if (!$(this).hasClass('sub-menu-link')) {
             closeNav();
         }
     });
 
-    $('.nav-close-btn').click(function() {
+    $('.nav-close-btn').click(function () {
         closeNav();
     });
 };
+
+$(function () {
+    $('.drawer-toggle').on('click', openNav);
+
+    if ($('.drawer.--visible.--fixed').length) {
+        let fixedSideNavBg = $('.drawer.--visible.--fixed')[0].className.match(/bg-[^\s]+/);
+
+        $('.drawer.--visible.--fixed').html(
+            $('.drawer.--visible.--fixed').find('.drawer-brand')[0].outerHTML
+            + '<div class="ms-fixed ' + fixedSideNavBg + '">'
+            + $('.drawer.--visible.--fixed').html()
+            + '</div>'
+        );
+
+        $('.ms-fixed').find('.drawer-brand')[0].remove();
+    }
+
+    let navbarHeight = $('.fixed-top').innerHeight();
+
+    $('.drawer-brand').css('height', navbarHeight + 'px');
+    $('.ms-fixed').css('top', navbarHeight + 'px');
+    $('.ms-fixed').css('height', 'calc(100vh - ' + navbarHeight + 'px)');
+
+    $('.drawer .nav-link.active').closest('.sub-menu-container').prev('.nav-item').find('> .sub-menu-link').trigger('click');
+
+    if ($('aside, div').hasClass('--visible')) {
+        changeSideNavClass();
+    }
+
+    $(document).on('click', function (event) {
+        let nav = $('.drawer');
+        let toggle = $('.drawer-toggle');
+        let target = $(event.target);
+
+        if (!target.is(nav)
+            && !target.is(toggle)
+            && !nav.has(event.target).length
+        ) {
+            closeNav();
+        }
+    });
+
+    initMenus();
+});

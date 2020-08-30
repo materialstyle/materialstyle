@@ -1,6 +1,6 @@
-.ms-sidebar {
-  box-shadow: map-get($elevations, 4dp) !important;
-  transition: left .2s cubic-bezier(.4,0,.2,1) .2s;
+.drawer {
+  box-shadow: map-get($elevations, 4 dp) !important;
+  transition: left .2s cubic-bezier(.4, 0, .2, 1) .2s;
   height: 100%;
   top: 0;
   left: -350px;
@@ -13,7 +13,7 @@
   .nav {
     width: 100%;
   }
-  .sidebar-brand {
+  .drawer-brand {
     padding: .5rem 1rem;
   }
   .nav-link.active {
@@ -28,8 +28,8 @@
     left: 0;
     position: relative;
 
-    ~ .ms-nav .ms-sidebar-toggle,
-    ~ .ms-sidebar-toggle,
+    ~ .ms-nav .drawer-toggle,
+    ~ .drawer-toggle,
     .nav-close-btn {
       display: none;
     }
@@ -64,7 +64,7 @@
   }
 }
 
-.ms-sidebar-toggle {
+.drawer-toggle {
   cursor: pointer;
   padding: 0 15px 0 5px;
 }
