@@ -19,11 +19,12 @@
     "bootstrap-theme",
     "google-material-design"
   ],
-  "main": "",
+  "main": "material-style/dist/js/material-style.min.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "js-lint": "eslint src/js/*"
   },
   "author": "Neeraj Kumar Das (https://github.com/nkdas91)",
   "license": "MIT",
@@ -42,6 +43,7 @@
     "bootstrap": "^4.5.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
+    "eslint": "^7.5.0",
     "exports-loader": "^0.7.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.7.0",
