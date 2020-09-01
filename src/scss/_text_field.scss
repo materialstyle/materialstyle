@@ -105,7 +105,7 @@
     width: 100%;
     transform: translateY(-2px);
     transition: .3s cubic-bezier(.4, 0, .2, 1);
-    background: linear-gradient(theme-color("primary"), theme-color("primary")) center bottom/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center bottom/ 100% 1px no-repeat border-box #f5f5f5;
+    background: linear-gradient(theme-color("primary"), theme-color("primary")) center top/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center top/ 100% 1px no-repeat border-box #f5f5f5;
   }
 }
 
