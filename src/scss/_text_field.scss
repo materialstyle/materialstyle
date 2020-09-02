@@ -5,40 +5,36 @@
   position: relative;
   visibility: hidden;
 
-  .form-control, .form-control-sm, .form-control-lg {
+  .input-group {
+    flex-wrap: nowrap;
+
+    .input-container {
+      flex-grow: 1;
+    }
+  }
+
+  .input-group-text {
+    border: 0;
+    background: transparent;
+  }
+
+  .input-group-prepend {
+    .input-group-text {
+      padding-right: 0;
+    }
+  }
+
+  .input-group-append {
+    .input-group-text {
+      padding-left: 0;
+    }
+  }
+
+  .form-control, .form-control-sm, .form-control-lg, .input-group {
     box-shadow: none !important;
     border: none !important;
     outline: 0 !important;
     border-radius: 4px 4px 0 0;
-  }
-
-  .prepend, .append {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    padding: 7px;
-    z-index: 1;
-  }
-
-  .prepend {
-    left: 0;
-
-    & + label, & + .ms-notch {
-      & + .form-control, & + .form-control-sm, & + .form-control-lg {
-        padding-left: 2.5rem;
-      }
-    }
-  }
-
-  .append {
-    right: 0;
-
-    & + label, & + .ms-notch {
-      & + .form-control, & + .form-control-sm, & + .form-control-lg {
-        padding-right: 2.5rem;
-      }
-    }
   }
 }
 
@@ -58,24 +54,8 @@
     padding-bottom: 0.7rem;
   }
 
-  .form-control, .form-control-sm, .form-control-lg {
+  .form-control, .form-control-sm, .form-control-lg, .input-group {
     background-color: #f5f5f5;
-
-    &:hover {
-      background-color: #ececec;
-
-      & + .ms-line-ripple {
-        background-color: #ececec;
-      }
-    }
-  }
-
-  .form-control:focus, .form-control-sm:focus, .form-control-lg:focus {
-    background-color: #e4e4e4;
-
-    & + .ms-line-ripple {
-      background-size: 100% 2px, 100% 1px !important;
-    }
   }
 
   .static-label, .floating-label, .floating-label-active {
@@ -90,22 +70,27 @@
     transform: translate(.75rem, 1.2rem);
   }
 
-  .prepend {
-    & + .static-label, & + .floating-label-active {
-      transform: translate(2.5rem, 0.5rem) scale(0.75);
-    }
-    & + .floating-label {
-      transform: translate(2.5rem, 1.2rem);
-    }
-  }
-
   .ms-line-ripple {
     position: absolute;
     height: 2px;
     width: 100%;
-    transform: translateY(-2px);
     transition: .3s cubic-bezier(.4, 0, .2, 1);
-    background: linear-gradient(theme-color("primary"), theme-color("primary")) center top/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center top/ 100% 1px no-repeat border-box #f5f5f5;
+    background: linear-gradient(theme-color("primary"), theme-color("primary")) center top/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center top/ 100% 1px no-repeat border-box transparent;
+  }
+
+  &:hover {
+    .form-control, .form-control-sm, .form-control-lg, .input-group {
+      background-color: #ececec;
+    }
+  }
+
+  &.active {
+    .form-control, .form-control-sm, .form-control-lg, .input-group {
+      background-color: #e4e4e4;
+    }
+    .ms-line-ripple {
+      background-size: 100% 2px, 100% 1px !important;
+    }
   }
 }
 
@@ -135,21 +120,11 @@
   }
 
   .static-label, .floating-label-active {
-    transform: translate(0, -0.5rem) scale(0.75);
+    transform: translate(0, -0.5rem) scale(0.75) !important;
   }
 
   .floating-label {
     transform: translate(0, 1.2rem);
-  }
-
-  .prepend {
-    & + .floating-label {
-      transform: translate(2.5rem, 1.2rem) !important;
-    }
-
-    & + .ms-notch .floating-label {
-      transform: translate(1.4rem, 1.2rem) !important;
-    }
   }
 }
 
