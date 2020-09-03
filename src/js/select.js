@@ -240,6 +240,11 @@ class Select {
                     return `<span class="badge badge-dark">${option.text}</span>`
                 }
             }).join('')
+
+            if (this._notch !== null && this._notch) {
+                this._notch.style.height = this._selectedItem.offsetHeight + 'px'
+            }
+
         } else {
             this._selectedItem.innerHTML = this._options.map(option => {
                 if (option.selected) {
@@ -265,10 +270,12 @@ class Select {
     setAddonHeight() {
         if (this._prepend != null) {
             this._prepend.style.height = this._selectedItem.offsetHeight + 'px'
+            this._selectedItem.style.paddingLeft = this._prepend.offsetWidth + 'px'
         }
 
         if (this._append != null) {
             this._append.style.height = this._selectedItem.offsetHeight + 'px'
+            this._selectedItem.style.paddingRight = this._append.offsetWidth + 'px'
         }
     }
 
@@ -336,9 +343,32 @@ class Select {
             if (this._selectedItem.innerHTML.length) {
                 this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
                 this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+
+                if (this._prepend != null) {
+                    if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
+                        this._label.style.transform = `translate(0, -0.5rem) scale(0.75)`
+                    } else {
+                        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+                    }
+                }
+
             } else {
                 this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
                 this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
+
+                if (this._prepend != null) {
+                    if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
+                        this._label.style.transform = `translate(${this._prepend.offsetWidth - 17}px, 1.2rem)`
+                    } else {
+                        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
+                    }
+                }
+            }
+        } else {
+            if (this._prepend != null) {
+                if (this._selectClass === CLASS_NAME_SELECT) {
+                    this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+                }
             }
         }
     }
@@ -347,6 +377,14 @@ class Select {
         this._label.style.color = this._accentColor
         this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
         this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+
+        if (this._prepend != null) {
+            if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
+                this._label.style.transform = `translate(0, -0.5rem) scale(0.75)`
+            } else {
+                this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+            }
+        }
 
         if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
             this._notchBetween.style.borderTopWidth = 0

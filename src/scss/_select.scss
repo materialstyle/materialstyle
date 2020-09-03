@@ -47,22 +47,10 @@
 
   .prepend {
     left: 0;
-
-    & + label, & + .ms-notch {
-      & + .dropdown .selected-item {
-        padding-left: 2.5rem;
-      }
-    }
   }
 
   .append {
     right: 0;
-
-    & + label, & + .ms-notch {
-      & + .dropdown .selected-item {
-        padding-right: 2.5rem;
-      }
-    }
   }
 
   .search-input {
@@ -108,6 +96,9 @@
   &.multi-select {
     .custom-checkbox {
       padding: 0 2.2rem;
+    }
+    .dropdown-toggle {
+      white-space: normal;
     }
   }
 
@@ -173,15 +164,6 @@
     transform: translate(.75rem, 1.2rem);
   }
 
-  .prepend {
-    & + .static-label, & + .floating-label-active {
-      transform: translate(2.5rem, 0.5rem) scale(0.75);
-    }
-    & + .floating-label {
-      transform: translate(2.5rem, 1.2rem);
-    }
-  }
-
   .ms-line-ripple {
     position: absolute;
     height: 2px;
@@ -213,16 +195,6 @@
 
   .floating-label {
     transform: translate(0, 1.2rem);
-  }
-
-  .prepend {
-    & + .floating-label {
-      transform: translate(2.5rem, 1.2rem) !important;
-    }
-
-    & + .ms-notch .floating-label {
-      transform: translate(1.4rem, 1.2rem) !important;
-    }
   }
 }
 
