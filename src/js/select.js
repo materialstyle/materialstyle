@@ -100,7 +100,7 @@ class Select {
         let selectItems = document.createElement('div')
         selectItems.className = 'select-items'
 
-        for (let [key, value] of  Object.entries(options)) {
+        for (let [, value] of  Object.entries(options)) {
             selectItems.appendChild(this.createCheckbox(value.text, value.value, value.selected))
             optionsArray.push({value: value.value, text: value.innerHTML, selected: value.selected})
         }
@@ -237,9 +237,19 @@ class Select {
         if (this._multiSelectEnabled) {
             this._selectedItem.innerHTML = this._options.map(option => {
                 if (option.selected) {
-                    return `<span class="badge badge-dark">${option.text}</span>`
+                    return `<span class="badge badge-dark">${option.text}<span class="badge-close" aria-hidden="true" data-value="${option.value}">&times;</span></span>`
                 }
             }).join('')
+
+            let closeButton = this._selectedItem.querySelectorAll('.badge-close')
+
+            for (let [, value] of  Object.entries(closeButton)) {
+                value.addEventListener('click', event => {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    this.setSelectValue(event.target.dataset.value, false)
+                })
+            }
 
             if (this._notch !== null && this._notch) {
                 this._notch.style.height = this._selectedItem.offsetHeight + 'px'
@@ -346,7 +356,7 @@ class Select {
 
                 if (this._prepend != null) {
                     if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-                        this._label.style.transform = `translate(0, -0.5rem) scale(0.75)`
+                        this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
                     } else {
                         this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
                     }
@@ -380,7 +390,7 @@ class Select {
 
         if (this._prepend != null) {
             if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-                this._label.style.transform = `translate(0, -0.5rem) scale(0.75)`
+                this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
             } else {
                 this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
             }
@@ -516,7 +526,7 @@ class Select {
             } else {
                 let selectValue = $(event.target).val()
 
-                for (let [key, value] of  Object.entries(this._options)) {
+                for (let [, value] of  Object.entries(this._options)) {
                     if (selectValue.includes(value.value)) {
                         this.setSelectValue(value.value, true)
                     } else {

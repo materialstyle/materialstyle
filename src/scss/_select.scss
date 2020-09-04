@@ -33,6 +33,10 @@
 
     .badge {
       margin: 0.1rem;
+      span {
+        margin-left: 5px;
+        cursor: pointer;
+      }
     }
   }
 
