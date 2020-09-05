@@ -12,7 +12,6 @@
 }
 
 .nav-tabs {
-  //flex-wrap: nowrap;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
@@ -96,15 +95,13 @@
   }
 
   .active-indicator {
-    bottom: 0;
     position: absolute;
+    z-index: 10;
+    bottom: 0;
     height: 2px;
     background: theme-color("primary");
     display: block;
-    width: 100%;
-    opacity: 0;
-    transform-origin: left top;
-    transition: transform .24s cubic-bezier(0,0,.2,1) 0ms;
-    will-change: transform;
+    left: 0;
+    transition: left .2s ease;
   }
 }

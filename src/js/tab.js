@@ -23,7 +23,6 @@ const JQUERY_NO_CONFLICT = $.fn[NAME]
 class Tab {
     constructor(element) {
         this._element = element
-        this._navItem = element.querySelectorAll('.nav-item')
         this.initTab()
     }
 
@@ -31,70 +30,97 @@ class Tab {
         return VERSION
     }
 
-    static _jQueryInterface() {
+    static _jQueryInterface(config) {
         return this.each(function () {
             const $element = $(this)
             let data = $element.data(DATA_KEY_TAB)
+            let shouldRedraw = true
 
             if (!data) {
+                shouldRedraw = false
+
                 data = new Tab(this)
                 $element.data(DATA_KEY_TAB, data)
 
                 data._element.style.visibility = 'visible'
 
-                $(data._navItem).on('mousedown', function () {
-                    data['handleMouseDown'](this)
+                $(data._element).find('.nav-item').on('mousedown, mouseup', function () {
+                    data['setIndicatorPosition'](this)
                 })
 
-                $(data._navItem).on('mouseup', function () {
-                    data['handleMouseUp'](this)
+                $(window).resize(function () {
+                    data['setIndicatorPositionOnResize'](this)
                 })
+            }
+
+            if (typeof config === 'string') {
+                if (typeof data[config] === 'undefined') {
+                    throw new TypeError(`No method named "${config}"`)
+                } else if (config === 'redraw' && shouldRedraw) {
+                    data[config]()
+                }
             }
         })
     }
 
     initTab() {
-        let leftValue = 0
+        let indicatorLeft = 0, indicatorWidth = 0, indicatorTop = 0
 
-        for (let i = 0; i < this._navItem.length; i++) {
-            let activeIndicator = document.createElement('span')
-            activeIndicator.className = 'active-indicator'
-            activeIndicator.dataset.indicatorPosition = i + 1
-            activeIndicator.style.transform = 'translateX(0px) scale(1, 1)'
+        let activeItem = this._element.querySelector('.nav-link.active')
 
-            if (this._navItem[i].querySelector('.nav-link.active')) {
-                leftValue = this._navItem[i].offsetLeft
-                this._activeIndicatorPosition = i + 1
-            }
-
-            this._navItem[i].appendChild(activeIndicator)
+        if (activeItem == null) {
+            activeItem = this._element.querySelector('.nav-item')
+        } else {
+            activeItem = activeItem.closest('.nav-item')
         }
 
-        this._element.dataset.leftValue = leftValue
-    }
-
-    handleMouseDown(target) {
-        if (target.querySelector('.nav-link.active') == null) {
-            let leftValue = this._element.dataset.leftValue
-            let indicatorPosition = target.querySelector('.active-indicator').dataset.indicatorPosition
-
-            if (indicatorPosition > this._activeIndicatorPosition) {
-                leftValue = '-' + (target.offsetLeft - leftValue)
-            } else {
-                leftValue = leftValue - target.offsetLeft
-            }
-
-            this._activeIndicatorPosition = indicatorPosition
-
-            target.querySelector('.active-indicator').style.transform = 'translateX(' + leftValue + 'px) scale(1, 1)'
+        if (activeItem != null) {
+            indicatorLeft = activeItem.offsetLeft + 'px'
+            indicatorTop = (activeItem.offsetTop + activeItem.offsetHeight - 2) + 'px'
+            indicatorWidth = activeItem.offsetWidth + 'px'
         }
+
+        let activeIndicator = document.createElement('span')
+        activeIndicator.className = 'active-indicator'
+        activeIndicator.style.left = indicatorLeft
+        activeIndicator.style.top = indicatorTop
+        activeIndicator.style.width = indicatorWidth
+
+        this._activeIndicator = activeIndicator
+
+        this._element.appendChild(activeIndicator)
     }
 
-    handleMouseUp(target) {
-        target.querySelector('.active-indicator').style.transform = 'translateX(0px) scale(1, 1)'
+    redraw() {
+        this.setIndicatorPositionOnResize()
+    }
 
-        let leftValue = target.offsetLeft
-        this._element.dataset.leftValue = leftValue
+    setIndicatorPosition(target) {
+        this._activeIndicator.style.left = target.offsetLeft + 'px'
+        this._activeIndicator.style.top = (target.offsetTop + target.offsetHeight - 2) + 'px'
+        this._activeIndicator.style.width = target.offsetWidth + 'px'
+    }
+
+    setIndicatorPositionOnResize() {
+        let indicatorLeft = 0, indicatorWidth = 0, indicatorTop = 0
+
+        let activeItem = this._element.querySelector('.nav-link.active')
+
+        if (activeItem == null) {
+            activeItem = this._element.querySelector('.nav-item')
+        } else {
+            activeItem = activeItem.closest('.nav-item')
+        }
+
+        if (activeItem != null) {
+            indicatorLeft = activeItem.offsetLeft + 'px'
+            indicatorTop = (activeItem.offsetTop + activeItem.offsetHeight - 2) + 'px'
+            indicatorWidth = activeItem.offsetWidth + 'px'
+        }
+
+        this._activeIndicator.style.left = indicatorLeft
+        this._activeIndicator.style.top = indicatorTop
+        this._activeIndicator.style.width = indicatorWidth
     }
 }
 
