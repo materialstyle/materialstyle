@@ -1,9 +1,9 @@
 /**
-* --------------------------------------------------------------------------
-* Material Style (v2.0.0): rainbow.js
-* Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
-* --------------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): rainbow.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
 import $ from 'jquery'
 
@@ -21,6 +21,7 @@ const JQUERY_NO_CONFLICT = $.fn[NAME]
 class Rainbow {
     constructor(element) {
         this._element = element
+        this.initRainbow()
     }
 
     static get VERSION() {
@@ -35,8 +36,6 @@ class Rainbow {
             if (!data) {
                 data = new Rainbow(this)
                 $element.data(DATA_KEY_RAINBOW, data)
-
-                data['initRainbow']()
             }
         })
     }

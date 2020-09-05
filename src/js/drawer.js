@@ -1,3 +1,10 @@
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): drawer.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 function openNav() {
     let msShade = $('#ms-shade');
 
@@ -76,7 +83,7 @@ function initMenus() {
     });
 
     $(window).on('resize', function () {
-        let navbarHeight = $('.fixed-top').innerHeight();
+        let navbarHeight = $('.navbar').innerHeight();
 
         if ($('aside').hasClass('--visible') || $('aside').hasClass('--switched')) {
             changeSideNavClass();
@@ -114,7 +121,7 @@ $(function () {
         $('.ms-fixed').find('.drawer-brand')[0].remove();
     }
 
-    let navbarHeight = $('.fixed-top').innerHeight();
+    let navbarHeight = $('.navbar').innerHeight();
 
     $('.drawer-brand').css('height', navbarHeight + 'px');
     $('.ms-fixed').css('top', navbarHeight + 'px');

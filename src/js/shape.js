@@ -26,6 +26,7 @@ class Shape {
         this._topRightAngle = element.querySelector('.angle-top-right')
         this._bottomLeftAngle = element.querySelector('.angle-bottom-left')
         this._bottomRightAngle = element.querySelector('.angle-bottom-right')
+        this.initShape()
     }
 
     static get VERSION() {
@@ -40,8 +41,6 @@ class Shape {
             if (!data) {
                 data = new Shape(this)
                 $element.data(DATA_KEY, data)
-
-                data['initShape']()
 
                 data._element.style.visibility = 'visible'
             }

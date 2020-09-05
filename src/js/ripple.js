@@ -1,9 +1,9 @@
 /**
-* --------------------------------------------------------------------------
-* Material Style (v2.0.0): ripple.js
-* Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
-* --------------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): ripple.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
 import $ from 'jquery'
 
@@ -21,6 +21,8 @@ const JQUERY_NO_CONFLICT = $.fn[NAME]
 class Ripple {
     constructor(element) {
         this._element = element
+        this.addRipple()
+        this.addEventListeners()
     }
 
     static get VERSION() {
@@ -35,20 +37,6 @@ class Ripple {
             if (!data) {
                 data = new Ripple(this)
                 $element.data(DATA_KEY_RIPPLE, data)
-
-                data['addRipple']()
-
-                $element.on('mousedown', function (event) {
-                    data['handleMouseDown'](event)
-                })
-
-                $element.on('mouseup', function () {
-                    data['handleMouseUpMouseMove']()
-                })
-
-                $element.on('mousemove', function () {
-                    data['handleMouseUpMouseMove']()
-                })
             }
         })
     }
@@ -113,6 +101,20 @@ class Ripple {
                 animate.classList.remove('animate')
             }
         }
+    }
+
+    addEventListeners() {
+        $(this._element).on('mousedown', event => {
+            this.handleMouseDown(event)
+        })
+
+        $(this._element).on('mouseup', () => {
+            this.handleMouseUpMouseMove()
+        })
+
+        $(this._element).on('mousemove', () => {
+            this.handleMouseUpMouseMove()
+        })
     }
 }
 

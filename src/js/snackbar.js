@@ -60,6 +60,7 @@ class Snackbar {
     constructor(element) {
         this._element = element
         this._snackbar = element.dataset.target
+        this.addEventListeners()
     }
 
     static get VERSION() {
@@ -74,12 +75,14 @@ class Snackbar {
             if (!data) {
                 data = new Snackbar(this)
                 $element.data(DATA_KEY_SNACKBAR, data)
-
-                $(data._element).on('click', function (event) {
-                    event.stopImmediatePropagation()
-                    waitingQueue.pushToWaitingQueue($(data._snackbar))
-                })
             }
+        })
+    }
+
+    addEventListeners() {
+        $(this._element).on('click', event => {
+            event.stopImmediatePropagation()
+            waitingQueue.pushToWaitingQueue($(this._snackbar))
         })
     }
 }

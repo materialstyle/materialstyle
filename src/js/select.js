@@ -131,6 +131,8 @@ class Select {
             this._notch.style.height = this._selectedItem.offsetHeight + 'px'
             this._notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
         }
+
+        this.setLabelPosition()
     }
 
     createDropdown() {

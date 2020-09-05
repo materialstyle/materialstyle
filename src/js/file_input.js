@@ -1,9 +1,9 @@
 /**
-* --------------------------------------------------------------------------
-* Material Style (v2.0.0): file_input.js
-* Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
-* --------------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): file_input.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
 import $ from 'jquery'
 
@@ -25,6 +25,7 @@ class FileInput {
         this._button = element.querySelector('.btn-file')
         this._fileList = element.querySelector('.files')
         this._multipleSupport = typeof this._fileInput.multiple !== 'undefined'
+        this.addEventListeners()
     }
 
     static get VERSION() {
@@ -39,15 +40,6 @@ class FileInput {
             if (!data) {
                 data = new FileInput(this)
                 $element.data(DATA_KEY, data)
-
-                $(data._button).on('click', function (event) {
-                    event.stopImmediatePropagation()
-                    data['handleButtonClick']()
-                })
-
-                $(data._fileInput).on('change', function () {
-                    data['handleFileChange']()
-                })
             }
         })
     }
@@ -82,6 +74,16 @@ class FileInput {
         this._fileList.setAttribute('title', filename)
     }
 
+    addEventListeners() {
+        $(this._button).on('click', event => {
+            event.stopImmediatePropagation()
+            this.handleButtonClick()
+        })
+
+        $(this._fileInput).on('change', () => {
+            this.handleFileChange()
+        })
+    }
 }
 
 /**

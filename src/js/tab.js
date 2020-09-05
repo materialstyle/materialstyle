@@ -24,6 +24,7 @@ class Tab {
     constructor(element) {
         this._element = element
         this._navItem = element.querySelectorAll('.nav-item')
+        this.initTab()
     }
 
     static get VERSION() {
@@ -38,8 +39,6 @@ class Tab {
             if (!data) {
                 data = new Tab(this)
                 $element.data(DATA_KEY_TAB, data)
-
-                data['initTab']()
 
                 data._element.style.visibility = 'visible'
 

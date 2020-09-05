@@ -1,5 +1,4 @@
 .drawer {
-  box-shadow: map-get($elevations, 4 dp) !important;
   transition: left .2s cubic-bezier(.4, 0, .2, 1) .2s;
   height: 100%;
   top: 0;
@@ -10,15 +9,6 @@
   overflow-y: auto;
   position: fixed;
 
-  .nav {
-    width: 100%;
-  }
-  .drawer-brand {
-    padding: .5rem 1rem;
-  }
-  .nav-link.active {
-    color: map-get($theme-colors, blue) !important;
-  }
   &.--visible {
     flex: 0 0 250px;
     top: auto;
@@ -28,20 +18,45 @@
     left: 0;
     position: relative;
 
-    ~ .ms-nav .drawer-toggle,
     ~ .drawer-toggle,
     .nav-close-btn {
       display: none;
     }
+  }
 
-    &.--fixed {
-      .ms-fixed {
-        position: fixed;
-        height: 100%;
-        width: 250px;
-        overflow: auto;
-      }
+  .drawer-brand {
+    padding: .5rem .5rem .5rem 1rem;
+    width: inherit;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &.--fixed, &.--visible {
+    .drawer-brand {
+      position: fixed;
     }
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav-item {
+    &:hover {
+      background: #efefef;
+    }
+  }
+
+  .nav-link.active {
+    color: blue !important;
+  }
+
+  .ms-fixed {
+    position: fixed;
+    height: 100%;
+    width: inherit;
+    overflow: auto;
   }
 
   .sub-menu-container {
@@ -59,7 +74,8 @@
   }
 
   .nav-close-btn {
-    float: right;
+    text-align: end;
+    flex-grow: 1;
     cursor: pointer;
   }
 }
@@ -77,10 +93,4 @@
   bottom: 0;
   left: 0;
   z-index: 1030;
-}
-
-@media only screen and (max-width: 320px) {
-  .drawer {
-    width: 100%;
-  }
 }

@@ -1,9 +1,9 @@
 /**
-* --------------------------------------------------------------------------
-* Material Style (v2.0.0): spinner.js
-* Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
-* --------------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------------
+ * Material Style (v2.0.0): spinner.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
 import $ from 'jquery'
 
@@ -21,6 +21,7 @@ const JQUERY_NO_CONFLICT = $.fn[NAME]
 class Spinner {
     constructor(element) {
         this._element = element
+        this.initSpinner()
     }
 
     static get VERSION() {
@@ -35,8 +36,6 @@ class Spinner {
             if (!data) {
                 data = new Spinner(this)
                 $element.data(DATA_KEY_SPINNER, data)
-
-                data['initSpinner']()
             }
         })
     }

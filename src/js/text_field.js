@@ -44,6 +44,9 @@ class TextField {
         }
 
         this._prepend = element.querySelector('.input-group-prepend')
+
+        this.initTextFields()
+        this.addEventListeners()
     }
 
     static get VERSION() {
@@ -61,26 +64,6 @@ class TextField {
 
                 data = new TextField(this)
                 $element.data(DATA_KEY, data)
-
-                data['initTextFields']()
-
-                $(data._inputField).on('change', function () {
-                    data._inputValueLength = data._inputField.value.length
-                })
-
-                $(data._inputField).focus(function () {
-                    data['handleFocus']()
-                })
-
-                $(data._inputField).focusout(function () {
-                    data['handleFocusOut']()
-                })
-
-                $(data._inputLabel).on('click', function () {
-                    if (data._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL)) {
-                        data._inputField.focus()
-                    }
-                })
 
                 data._element.style.visibility = 'visible'
             }
@@ -243,6 +226,26 @@ class TextField {
             this._notchBetween.style.borderColor = this._primaryColor
             this._notchAfter.style.borderColor = this._primaryColor
         }
+    }
+
+    addEventListeners() {
+        $(this._inputField).on('change', () => {
+            this._inputValueLength = this._inputField.value.length
+        })
+
+        $(this._inputField).on('focus', () => {
+            this['handleFocus']()
+        })
+
+        $(this._inputField).on('focusout', () => {
+            this['handleFocusOut']()
+        })
+
+        $(this._inputLabel).on('click', () => {
+            if (this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL)) {
+                this._inputField.focus()
+            }
+        })
     }
 }
 
