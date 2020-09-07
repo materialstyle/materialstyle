@@ -60,7 +60,6 @@ class Select {
         this._options = this.createOptions()
 
         this.initSelect()
-
         this.addEventListeners()
     }
 
@@ -112,12 +111,14 @@ class Select {
     initSelect() {
         this.createDropdown()
         this.showSelectedItems()
-        this.addRippleOrBorder()
-        this.setAddonHeight()
 
-        if (this._selectClass == CLASS_NAME_SELECT_OUTLINE) {
+        if (this._selectClass === CLASS_NAME_SELECT) {
+            this.addRipple()
+        } else {
             this.addNotch()
         }
+
+        this.setAddonHeight()
 
         if (this._label != null) {
             this.initLabel()
@@ -266,17 +267,15 @@ class Select {
         }
     }
 
-    addRippleOrBorder() {
-        if (this._selectClass === CLASS_NAME_SELECT) {
-            let ripple = document.createElement('div')
-            ripple.className = 'ms-line-ripple'
-            ripple.style.backgroundImage =
-                'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
-                'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')'
+    addRipple() {
+        let ripple = document.createElement('div')
+        ripple.className = 'ms-line-ripple'
+        ripple.style.backgroundImage =
+            'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
+            'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')'
 
-            this._ripple = ripple
-            this._selectedItem.after(ripple)
-        }
+        this._ripple = ripple
+        this._selectedItem.after(ripple)
     }
 
     setAddonHeight() {
@@ -303,13 +302,18 @@ class Select {
         let notchBetween = document.createElement('div')
         notchBetween.className = 'ms-notch-between width-auto'
         notchBetween.style.borderColor = this._primaryColor
-        notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
 
-        if (this._label != null && this._labelClass == CLASS_NAME_STATIC_LABEL) {
-            notchBetween.style.borderTopWidth = 0
+        if (this._label == null) {
+            notchBetween.style.padding = 0
+        } else {
+            notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
+
+            if (this._labelClass == CLASS_NAME_STATIC_LABEL) {
+                notchBetween.style.borderTopWidth = 0
+            }
+
+            notchBetween.appendChild(this._label)
         }
-
-        notchBetween.appendChild(this._label)
 
         let notchAfter = document.createElement('div')
         notchAfter.className = 'ms-notch-after'
@@ -386,15 +390,17 @@ class Select {
     }
 
     handleFocus() {
-        this._label.style.color = this._accentColor
-        this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
-        this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+        if (this._label != null) {
+            this._label.style.color = this._accentColor
+            this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
+            this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
 
-        if (this._prepend != null) {
-            if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-                this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
-            } else {
-                this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+            if (this._prepend != null) {
+                if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
+                    this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
+                } else {
+                    this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+                }
             }
         }
 
@@ -500,7 +506,7 @@ class Select {
         $(this._dropdown).on(EVENT_SHOWN, () => this.handleFocus())
         $(this._dropdown).on(EVENT_HIDDEN, () => this.handleFocusOut())
 
-        $(this._label).on('click', (event) => {
+        $(this._label).add(this._prepend).add(this._append).on('click', (event) => {
             event.preventDefault()
             event.stopPropagation()
             $(this._selectedItem).dropdown('toggle')
