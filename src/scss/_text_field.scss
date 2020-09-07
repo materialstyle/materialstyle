@@ -19,14 +19,24 @@
   }
 
   .input-group-prepend {
+    align-items: center;
+    padding-left: 0.75rem;
+    padding-right: 0.2rem;
+    border-radius: 4px 0 0 4px;
+    margin: 0;
     .input-group-text {
-      padding-right: 0;
+      padding: 0;
     }
   }
 
   .input-group-append {
+    align-items: center;
+    padding-right: 0.75rem;
+    padding-left: 0.2rem;
+    border-radius: 0 4px 4px 0;
+    margin: 0;
     .input-group-text {
-      padding-left: 0;
+      padding: 0;
     }
   }
 
@@ -91,6 +101,14 @@
     .ms-line-ripple {
       background-size: 100% 2px, 100% 1px !important;
     }
+  }
+
+  .input-group-prepend {
+    border-radius: 4px 0 0 0;
+  }
+
+  .input-group-append {
+    border-radius: 0 4px 0 0;
   }
 }
 
