@@ -44,6 +44,7 @@ class TextField {
         }
 
         this._prepend = element.querySelector('.input-group-prepend')
+        this._append = element.querySelector('.input-group-append')
 
         this.initTextFields()
         this.addEventListeners()
@@ -124,28 +125,32 @@ class TextField {
             let notchBetween = document.createElement('div')
             notchBetween.className = 'ms-notch-between width-auto'
             notchBetween.style.borderColor = this._primaryColor
-            notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
 
-            if (this._inputLabel != null && this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
-                notchBetween.style.borderTopWidth = 0
+            if (this._inputLabel == null) {
+                notchBetween.style.padding = 0
+            } else {
+                notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+
+                if (this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
+                    notchBetween.style.borderTopWidth = 0
+                }
+
+                notchBetween.appendChild(this._inputLabel)
             }
 
             let notchAfter = document.createElement('div')
             notchAfter.className = 'ms-notch-after'
             notchAfter.style.borderColor = this._primaryColor
 
-            // Wrap notchBetween around label
-            this._inputLabel.parentNode.insertBefore(notchBetween, this._inputLabel)
-            notchBetween.appendChild(this._inputLabel)
-
-            // Wrap notch around notchBefore, notchBetween and notchAfter
-            notchBetween.parentNode.insertBefore(notchBefore, notchBetween)
-            notchBetween.parentNode.insertBefore(notchAfter, notchBetween)
-            notchBetween.parentNode.insertBefore(notch, notchBetween)
-
             notch.appendChild(notchBefore)
             notch.appendChild(notchBetween)
             notch.appendChild(notchAfter)
+
+            if (this._element.querySelector('.input-group') == null) {
+                this._element.insertBefore(notch, this._inputField)
+            } else {
+                this._element.insertBefore(notch, this._element.querySelector('.input-group'))
+            }
 
             this._notch = notch
             this._notchBefore = notchBefore
@@ -194,9 +199,12 @@ class TextField {
     }
 
     handleFocus() {
-        this._inputLabel.style.color = this._accentColor
-        this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
-        this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+        if (this._inputLabel != null) {
+            this._inputLabel.style.color = this._accentColor
+            this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
+            this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+        }
+
         this._element.classList.add('active')
 
         if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
