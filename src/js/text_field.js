@@ -29,22 +29,22 @@ const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
 class TextField {
     constructor(element) {
         this._element = element
-        this._inputField = element.querySelector('.form-control')
-        this._inputFieldClass = element.className.includes(CLASS_NAME_TEXTFIELD_OUTLINE) ? CLASS_NAME_TEXTFIELD_OUTLINE : CLASS_NAME_TEXTFIELD
-        this._inputValueLength = this._inputField.value.length
+        this._textField = element.querySelector('.form-control')
+        this._textFieldClass = element.className.includes(CLASS_NAME_TEXTFIELD_OUTLINE) ? CLASS_NAME_TEXTFIELD_OUTLINE : CLASS_NAME_TEXTFIELD
+        this._inputLength = this._textField.value.length
 
         this._primaryColor = getPrimaryColor(element)
         this._accentColor = getAccentColor(element)
 
-        this._inputLabel = element.querySelector('label')
-        this._inputLabelClass = ''
+        this._label = element.querySelector('label')
+        this._labelClass = ''
 
-        if (this._inputLabel != null) {
-            this._inputLabelClass = this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
+        if (this._label != null) {
+            this._labelClass = this._label.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
         }
 
-        this._prepend = element.querySelector('.input-group-prepend')
-        this._append = element.querySelector('.input-group-append')
+        this._prepend = element.querySelector('.prepend')
+        this._append = element.querySelector('.append')
 
         this.initTextFields()
         this.addEventListeners()
@@ -69,94 +69,101 @@ class TextField {
                 data._element.style.visibility = 'visible'
             }
 
-            if (config === 'redraw' && shouldRedraw) {
-                data['reDrawTextFields']()
+            if (typeof config === 'string') {
+                if (typeof data[config] === 'undefined') {
+                    throw new TypeError(`No method named "${config}"`)
+                } else if (config === 'redraw' && shouldRedraw) {
+                    data[config]()
+                }
             }
         })
     }
 
     initTextFields() {
-        this.addRippleOrBorder()
-        this.addNotch()
+        if (this._textFieldClass === CLASS_NAME_TEXTFIELD) {
+            this.addRipple()
+        } else {
+            this.addNotch()
+        }
 
-        if (this._inputLabel != null) {
+        this.setAddonHeight()
+
+        if (this._label != null) {
             this.initLabel()
         }
     }
 
-    reDrawTextFields() {
-        if (this._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
-            this._notch.style.height = this._inputField.offsetHeight + 'px'
-            this._notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+    redraw() {
+        this.setAddonHeight()
+
+        if (this._textFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
+            this._notch.style.height = this._textField.offsetHeight + 'px'
+            this._notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
         }
     }
 
-    addRippleOrBorder() {
-        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD) {
-            let ripple = document.createElement('div')
-            ripple.className = 'ms-line-ripple'
-            ripple.style.backgroundImage =
-                'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
-                'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')'
+    addRipple() {
+        let ripple = document.createElement('div')
+        ripple.className = 'ms-line-ripple'
+        ripple.style.backgroundImage =
+            'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
+            'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')'
 
-            this._ripple = ripple
+        this._ripple = ripple
+        this._textField.after(ripple)
+    }
 
-            if (this._inputField.closest('.input-group') !== null) {
-                this._inputField.closest('.input-group').after(ripple)
-            } else {
-                this._inputField.after(ripple)
-            }
+    setAddonHeight() {
+        if (this._prepend != null) {
+            this._prepend.style.height = this._textField.offsetHeight + 'px'
+            this._textField.style.paddingLeft = this._prepend.offsetWidth + 'px'
+        }
 
-        } else {
-            this._inputField.style.borderColor = this._primaryColor
+        if (this._append != null) {
+            this._append.style.height = this._textField.offsetHeight + 'px'
+            this._textField.style.paddingRight = this._append.offsetWidth + 'px'
         }
     }
 
     addNotch() {
-        if (this._inputFieldClass == CLASS_NAME_TEXTFIELD_OUTLINE) {
-            let notch = document.createElement('div')
-            notch.className = 'ms-notch'
-            notch.style.height = this._inputField.offsetHeight + 'px'
+        let notch = document.createElement('div')
+        notch.className = 'ms-notch'
+        notch.style.height = this._textField.offsetHeight + 'px'
 
-            let notchBefore = document.createElement('div')
-            notchBefore.className = 'ms-notch-before'
-            notchBefore.style.borderColor = this._primaryColor
+        let notchBefore = document.createElement('div')
+        notchBefore.className = 'ms-notch-before'
+        notchBefore.style.borderColor = this._primaryColor
 
-            let notchBetween = document.createElement('div')
-            notchBetween.className = 'ms-notch-between width-auto'
-            notchBetween.style.borderColor = this._primaryColor
+        let notchBetween = document.createElement('div')
+        notchBetween.className = 'ms-notch-between width-auto'
+        notchBetween.style.borderColor = this._primaryColor
 
-            if (this._inputLabel == null) {
-                notchBetween.style.padding = 0
-            } else {
-                notchBetween.style.width = ((this._inputLabel.offsetWidth * 0.75) + 10) + 'px'
+        if (this._label == null) {
+            notchBetween.style.padding = 0
+        } else {
+            notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
 
-                if (this._inputLabelClass == CLASS_NAME_STATIC_LABEL) {
-                    notchBetween.style.borderTopWidth = 0
-                }
-
-                notchBetween.appendChild(this._inputLabel)
+            if (this._labelClass == CLASS_NAME_STATIC_LABEL) {
+                notchBetween.style.borderTopWidth = 0
             }
 
-            let notchAfter = document.createElement('div')
-            notchAfter.className = 'ms-notch-after'
-            notchAfter.style.borderColor = this._primaryColor
-
-            notch.appendChild(notchBefore)
-            notch.appendChild(notchBetween)
-            notch.appendChild(notchAfter)
-
-            if (this._element.querySelector('.input-group') == null) {
-                this._element.insertBefore(notch, this._inputField)
-            } else {
-                this._element.insertBefore(notch, this._element.querySelector('.input-group'))
-            }
-
-            this._notch = notch
-            this._notchBefore = notchBefore
-            this._notchBetween = notchBetween
-            this._notchAfter = notchAfter
+            notchBetween.appendChild(this._label)
         }
+
+        let notchAfter = document.createElement('div')
+        notchAfter.className = 'ms-notch-after'
+        notchAfter.style.borderColor = this._primaryColor
+
+        notch.appendChild(notchBefore)
+        notch.appendChild(notchBetween)
+        notch.appendChild(notchAfter)
+
+        this._element.insertBefore(notch, this._textField)
+
+        this._notch = notch
+        this._notchBefore = notchBefore
+        this._notchBetween = notchBetween
+        this._notchAfter = notchAfter
     }
 
     initLabel() {
@@ -165,17 +172,17 @@ class TextField {
     }
 
     setLabelColor() {
-        if (this._inputValueLength) {
-            this._inputLabel.style.color = this._accentColor
+        if (this._inputLength) {
+            this._label.style.color = this._accentColor
 
-            if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+            if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
                 this._notchBetween.style.borderTopWidth = 0
             }
         } else {
-            this._inputLabel.style.color = this._primaryColor
+            this._label.style.color = this._primaryColor
 
-            if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE
-                && this._inputLabelClass == CLASS_NAME_FLOATING_LABEL
+            if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE
+                && this._labelClass == CLASS_NAME_FLOATING_LABEL
             ) {
                 this._notchBetween.style.borderTopWidth = '1px'
             }
@@ -183,33 +190,61 @@ class TextField {
     }
 
     setLabelPosition() {
-        if (this._inputLabelClass === CLASS_NAME_FLOATING_LABEL) {
-            if (this._inputValueLength) {
-                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
-                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+        if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
+            if (this._inputLength) {
+                this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
+                this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+
+                if (this._prepend != null) {
+                    if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+                        this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
+                    } else {
+                        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+                    }
+                }
             } else {
-                this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
-                this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL)
+                this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+                this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
+
+                if (this._prepend != null) {
+                    if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+                        this._label.style.transform = `translate(${this._prepend.offsetWidth - 17}px, 1.2rem)`
+                    } else {
+                        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
+                    }
+                }
             }
 
-            if (this._prepend != null && this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-                this._inputLabel.style.transform = `translate(${this._prepend.offsetWidth - 5}px, 1.2rem)`
+        } else {
+            if (this._prepend != null) {
+                if (this._textFieldClass === CLASS_NAME_TEXTFIELD) {
+                    this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+                }
             }
         }
     }
 
     handleFocus() {
-        if (this._inputLabel != null) {
-            this._inputLabel.style.color = this._accentColor
-            this._inputLabel.classList.remove(CLASS_NAME_FLOATING_LABEL)
-            this._inputLabel.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
-        }
-
         this._element.classList.add('active')
 
-        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-            this._inputField.style.borderColor = this._accentColor
-            this._inputField.style.boxShadow = 'inset 0 0 1px 1px ' + this._accentColor
+        if (this._label != null) {
+            this._label.style.color = this._accentColor
+            this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
+            this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+
+            if (this._prepend != null) {
+                if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+                    this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
+                } else {
+                    this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+                }
+            }
+        }
+
+        if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+            this._textField.style.borderColor = this._accentColor
+            this._textField.style.boxShadow = 'inset 0 0 1px 1px ' + this._accentColor
+
             this._notchBetween.style.borderTopWidth = 0
             this._notch.classList.add('notch-active')
             this._notchBefore.style.borderColor = this._accentColor
@@ -221,14 +256,14 @@ class TextField {
     handleFocusOut() {
         this._element.classList.remove('active')
 
-        if (this._inputLabel != null) {
+        if (this._label != null) {
             this.setLabelColor()
             this.setLabelPosition()
         }
 
-        if (this._inputFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-            this._inputField.style.borderColor = this._primaryColor
-            this._inputField.style.boxShadow = 'none'
+        if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+            this._textField.style.borderColor = this._primaryColor
+            this._textField.style.boxShadow = 'none'
             this._notch.classList.remove('notch-active')
             this._notchBefore.style.borderColor = this._primaryColor
             this._notchBetween.style.borderColor = this._primaryColor
@@ -237,22 +272,20 @@ class TextField {
     }
 
     addEventListeners() {
-        $(this._inputField).on('change', () => {
-            this._inputValueLength = this._inputField.value.length
+        $(this._textField).on('change', () => {
+            this._inputLength = this._textField.value.length
         })
 
-        $(this._inputField).on('focus', () => {
+        $(this._textField).on('focus', () => {
             this['handleFocus']()
         })
 
-        $(this._inputField).on('focusout', () => {
+        $(this._textField).on('focusout', () => {
             this['handleFocusOut']()
         })
 
-        $(this._inputLabel).on('click', () => {
-            if (this._inputLabel.className.includes(CLASS_NAME_FLOATING_LABEL)) {
-                this._inputField.focus()
-            }
+        $(this._label).add(this._prepend).add(this._append).on('click', () => {
+            this._textField.focus()
         })
     }
 }
