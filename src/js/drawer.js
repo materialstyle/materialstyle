@@ -18,10 +18,6 @@ const VERSION = '2.0.0'
 const DATA_KEY = 'ms.drawer'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-const EVENT_HIDDEN = 'hidden.bs.dropdown'
-const EVENT_SHOWN = 'shown.bs.dropdown'
-
-const CLASS_NAME_DRAWER = 'drawer'
 const CLASS_NAME_VISIBLE = '--visible'
 const CLASS_NAME_SWITCHED = '--switched'
 const CLASS_NAME_FIXED = '--fixed'
@@ -93,9 +89,9 @@ class Drawer {
             this._drawerBrand.style.height = navbarHeight + 'px'
         }
 
-        if (this._element.className.includes(CLASS_NAME_FIXED) && typeof(fixed) !== 'undefined') {
-            fixed.style.top = navbarHeight + 'px'
-            fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
+        if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed != null) {
+            this._fixed.style.top = navbarHeight + 'px'
+            this._fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
         }
 
         if (this._element.querySelector('.nav-link.active') != null) {
@@ -170,29 +166,37 @@ class Drawer {
         let links = this._element.querySelectorAll('.nav-link')
 
         for (let [, value] of  Object.entries(links)) {
-            let clicker = true
+            let show = true
 
-            $(value).on('click', event => {
-                let subMenu = $(event.target).parent().next('.sub-menu-container').find('.sub-menu')
-                let subMenuHeight = subMenu.outerHeight()
+            value.addEventListener('click', event => {
+                let subMenuContainer = event.target.closest('.nav-item').nextElementSibling
+                let subMenu = null
 
-                if (clicker) {
-                    $(subMenu).css('margin-top', '0')
-                    clicker = false
+                if (subMenuContainer != null) {
+                    subMenu = subMenuContainer.querySelector('.sub-menu')
+                }
 
-                    if ($(event.target).hasClass('sub-menu-link')) {
-                        $(event.target).find('.material-icons').html('keyboard_arrow_down')
-                    }
-                } else if (!clicker) {
-                    $(subMenu).css('margin-top', '-' + subMenuHeight + 'px')
-                    clicker = true
+                if (subMenu != null) {
+                    let subMenuHeight = subMenu.offsetHeight
 
-                    if ($(event.target).hasClass('sub-menu-link')) {
-                        $(event.target).find('.material-icons').html('keyboard_arrow_right')
+                    if (show) {
+                        subMenu.style.marginTop = 0
+                        show = false
+
+                        if (event.target.className.includes('sub-menu-link')) {
+                            event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_up'
+                        }
+                    } else {
+                        subMenu.style.marginTop = '-' + subMenuHeight + 'px'
+                        show = true
+
+                        if (event.target.className.includes('sub-menu-link')) {
+                            event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_down'
+                        }
                     }
                 }
 
-                if (!$(event.target).hasClass('sub-menu-link')) {
+                if (!event.target.className.includes('sub-menu-link')) {
                     this.hide()
                 }
             })
@@ -218,7 +222,7 @@ class Drawer {
             }
         })
 
-        this._element.querySelector('.nav-close-btn').addEventListener('click', event => {
+        this._element.querySelector('.drawer-close-btn').addEventListener('click', () => {
             this.hide()
         })
     }
