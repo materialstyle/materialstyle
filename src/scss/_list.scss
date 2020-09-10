@@ -1,7 +1,7 @@
 @import "node_modules/bootstrap/scss/list-group";
 
 @each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, map-get($material-colors, "white"), theme-color-level($color));
+  @include list-group-item-variant($color, map-get($theme-colors, "white"), theme-color-level($color));
 }
 
 .list-group-item {

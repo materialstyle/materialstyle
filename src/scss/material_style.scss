@@ -9,10 +9,9 @@
 @import "node_modules/bootstrap/scss/code";
 @import "node_modules/bootstrap/scss/grid";
 @import "ripple";
-@import "elevation";
 @import "image_list";
 @import "node_modules/bootstrap/scss/tables";
-@import "text";
+
 // forms is imported in text_field, select
 @import "text_field";
 @import "select";
@@ -54,6 +53,10 @@
 @import "popover";
 @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/utilities";
+@import "utilities/elevation";
+@import "utilities/text";
+@import "utilities/background";
+@import "utilities/borders";
 @import "node_modules/bootstrap/scss/print";
 
 @import "shape";

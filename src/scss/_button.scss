@@ -8,6 +8,24 @@
   }
 }
 
+@each $color, $value in $material-colors {
+  .btn-text-#{$color} {
+    @include button-text-variant($value);
+  }
+}
+
+@each $color, $value in $material-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $material-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
 .btn {
   position: relative;
   overflow: hidden;
