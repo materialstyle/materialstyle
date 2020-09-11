@@ -1,25 +1,31 @@
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/button-group";
 
-// "Text Button" variant
+$raised-2dp: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+$raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+
+// Add buttom-text-variant
 @each $color, $value in $theme-colors {
   .btn-text-#{$color} {
     @include button-text-variant($value);
   }
 }
 
+// Add material colors to button-text-variant
 @each $color, $value in $material-colors {
   .btn-text-#{$color} {
     @include button-text-variant($value);
   }
 }
 
+// Add material colors to button-variant
 @each $color, $value in $material-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
   }
 }
 
+// Add material colors to button-outline-variant
 @each $color, $value in $material-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
@@ -35,7 +41,7 @@
   box-shadow: $raised-2dp;
 
   .fas, .material-icons {
-    vertical-align: middle !important;
+    vertical-align: middle;
   }
 
   &.unelevated {
@@ -43,7 +49,7 @@
   }
 
   &.btn-fab {
-    border-radius: 100% !important;
+    border-radius: 100%;
     width: 56px;
     height: 56px;
   }
