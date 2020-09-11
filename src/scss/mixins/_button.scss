@@ -7,25 +7,12 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   $hover-background: darken($background, 5%), $hover-border: darken($border, 5%),
   $active-background: darken($background, 8%), $active-border: darken($border, 8%)
 ) {
-  box-shadow: $raised-2dp;
   color: color-yiq($background);
   @include gradient-bg($background);
 
   &:active, &.active, &:hover, &:focus, &.focus, .show > &.dropdown-toggle {
-    box-shadow: $raised-6dp;
     color: color-yiq($hover-background);
     @include gradient-bg($hover-background);
-  }
-
-  &.disabled,
-  &:disabled {
-    box-shadow: none;
-    color: color-yiq($background);
-    background-color: $background;
-
-    @if $enable-gradients {
-      background-image: none;
-    }
   }
 
   .ms-ripple {
@@ -35,22 +22,11 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
 
 @mixin button-outline-variant($color, $color-hover: $color, $active-background: lighten($color, 45%), $active-border: $color) {
   color: $color;
-  border: 1px solid;
-  box-shadow: $raised-2dp;
 
   &:active, &.active, &:hover, &:focus, &.focus, .show > &.dropdown-toggle {
     color: color-yiq($active-background, darken($color, 10%));
     background-color: $active-background;
-    box-shadow: $raised-6dp;
     border-color: color-yiq($active-background, darken($color, 10%));
-  }
-
-  &.disabled,
-  &:disabled {
-    box-shadow: none;
-    color: $color;
-    border-color: $color;
-    background-color: transparent;
   }
 
   .ms-ripple {
@@ -66,12 +42,6 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
     background-color: $active-background;
   }
 
-  &.disabled,
-  &:disabled {
-    color: $color;
-    background-color: transparent;
-  }
-
   .ms-ripple {
     background: lighten($color, 20%);
   }
@@ -81,6 +51,5 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   padding: $padding-y $padding-x;
   @include font-size($font-size);
   line-height: $line-height;
-  // Manually declare to provide an override to the browser default
   @include border-radius($border-radius, 0);
 }
