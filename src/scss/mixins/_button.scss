@@ -30,7 +30,8 @@
   }
 }
 
-@mixin button-text-variant($color, $active-background: rgba($color, .15)) {
+@mixin button-text-variant($color) {
+  $active-background: rgba($color, .15);
   color: $color;
 
   &:active, &.active, &:hover, &:focus, &.focus, .show > &.dropdown-toggle {

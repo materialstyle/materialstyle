@@ -11,24 +11,18 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   }
 }
 
-// Add material colors to button-text-variant
-@each $color, $value in $material-colors {
-  .btn-text-#{$color} {
-    @include button-text-variant($value);
-  }
-}
-
-// Add material colors to button-variant
+// Add material colors
 @each $color, $value in $material-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
   }
-}
 
-// Add material colors to button-outline-variant
-@each $color, $value in $material-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
+  }
+
+  .btn-text-#{$color} {
+    @include button-text-variant($value);
   }
 }
 
@@ -41,7 +35,7 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   box-shadow: $raised-2dp;
 
   .fas, .material-icons {
-    vertical-align: middle;
+    vertical-align: middle !important;
   }
 
   &.unelevated {
@@ -49,7 +43,7 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   }
 
   &.btn-fab {
-    border-radius: 100%;
+    border-radius: 100% !important;
     width: 56px;
     height: 56px;
   }
