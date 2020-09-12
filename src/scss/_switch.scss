@@ -5,8 +5,8 @@
 
     .custom-control-input {
       &:checked ~ .custom-control-label::before {
-        border-color: $value;
         background-color: $value;
+        border-color: $value;
       }
 
       &:focus ~ .custom-control-label::before {
@@ -35,20 +35,21 @@
 }
 
 .switch-square {
-  .custom-control-label::before, .custom-control-label::after {
+  .custom-control-label::before,
+  .custom-control-label::after {
     border-radius: 0 !important;
   }
 }
 
 .switch-android {
   .custom-control-label::before {
+    top: calc(.25rem + 2px);
     height: calc(1rem - 4px);
-    top: calc(0.25rem + 2px);
   }
   .custom-control-label::after {
-    height: 1rem !important;
-    width: 1rem !important;
     top: .25rem !important;
     left: -2.25rem !important;
+    width: 1rem !important;
+    height: 1rem !important;
   }
 }

@@ -1,8 +1,9 @@
 @import "node_modules/bootstrap/scss/forms";
 
-.ms-select, .ms-select-outline {
-  margin-bottom: 0;
+.ms-select,
+.ms-select-outline {
   position: relative;
+  margin-bottom: 0;
   visibility: hidden;
 
   select {
@@ -10,29 +11,29 @@
   }
 
   .selected-item {
-    border-radius: 4px 4px 0 0;
     display: block;
     width: 100%;
-    padding: 0.375rem 0.75rem;
     min-height: 60px;
+    padding: .375rem .75rem;
+    border-radius: 4px 4px 0 0;
 
-    &:after {
+    &::after {
       position: absolute;
-      content: "";
-      bottom: 1.5rem;
       right: 10px;
+      bottom: 1.5rem;
       width: 0;
       height: 0;
+      content: "";
       border: 4px solid transparent;
       border-color: #424242 transparent transparent transparent;
     }
-    &.select-arrow-active:after {
-      border-color: transparent transparent #424242 transparent;
+    &.select-arrow-active::after {
       bottom: 16px;
+      border-color: transparent transparent #424242 transparent;
     }
 
     .badge {
-      margin: 0.1rem;
+      margin: .1rem;
       .badge-close {
         margin-left: 5px;
         cursor: pointer;
@@ -40,13 +41,14 @@
     }
   }
 
-  .prepend, .append {
-    display: flex;
-    align-items: center;
+  .prepend,
+  .append {
     position: absolute;
     top: 0;
-    padding: 7px;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 7px;
   }
 
   .prepend {
@@ -58,43 +60,47 @@
   }
 
   .search-input {
-    transition: .3s cubic-bezier(.4, 0, .2, 1);
-    box-shadow: none !important;
-    background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9E9E9E, #9E9E9E) center bottom/ 100% 1px no-repeat border-box transparent;
-    border-radius: 0;
+    padding: .5rem .75rem;
+    background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9e9e9e, #9e9e9e) center bottom/ 100% 1px no-repeat border-box transparent;
     border: none !important;
+    border-radius: 0;
     outline: 0 !important;
-    padding: 0.5rem 0.75rem;
+    box-shadow: none !important;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
 
     &:focus {
-      background-size: 100% 2px, 100% 1px !important;
       background-color: transparent;
+      background-size: 100% 2px, 100% 1px !important;
     }
   }
 
   .dropdown-menu {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
-    border: none;
-    border-radius: 2px;
     padding: 0;
     user-select: none;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
   }
 
-  .dropdown-menu, .custom-control-label, .btn {
+  .dropdown-menu,
+  .custom-control-label,
+  .btn {
     width: 100%;
   }
 
   .custom-control-label {
-    padding: 0.5rem 0;
     height: 40px;
-    &::before, &::after {
-      top: 0.7rem;
+    padding: .5rem 0;
+    &::before,
+    &::after {
+      top: .7rem;
     }
   }
 
-  .custom-checkbox:hover, .custom-checkbox:active {
-    background: #F5F5F5;
+  .custom-checkbox:hover,
+  .custom-checkbox:active {
     color: #212121;
+    background: #f5f5f5;
   }
 
   &.multi-select {
@@ -108,11 +114,12 @@
 
   &:not(.multi-select) {
     .custom-checkbox {
-      padding: 0 0.8rem;
+      padding: 0 .8rem;
     }
 
     .custom-control-label {
-      &::before, &::after {
+      &::before,
+      &::after {
         display: none;
       }
     }
@@ -123,7 +130,7 @@
     overflow-y: auto;
 
     .checked {
-      background: #F5F5F5;
+      background: #f5f5f5;
     }
   }
 }
@@ -131,10 +138,7 @@
 .ms-select {
   .selected-item {
     padding-top: 1.675rem;
-    padding-bottom: 0.575rem;
-  }
-
-  .selected-item {
+    padding-bottom: .575rem;
     background-color: #f5f5f5;
 
     &:hover {
@@ -155,13 +159,16 @@
     }
   }
 
-  .static-label, .floating-label, .floating-label-active {
+  .static-label,
+  .floating-label,
+  .floating-label-active {
     position: absolute;
     z-index: 1;
   }
 
-  .static-label, .floating-label-active {
-    transform: translate(0.75rem, 0.5rem) scale(0.75);
+  .static-label,
+  .floating-label-active {
+    transform: translate(.75rem, .5rem) scale(.75);
   }
 
   .floating-label {
@@ -170,11 +177,11 @@
 
   .ms-line-ripple {
     position: absolute;
-    height: 2px;
     width: 100%;
-    transform: translateY(-2px);
-    transition: .3s cubic-bezier(.4, 0, .2, 1);
+    height: 2px;
     background: linear-gradient(theme-color("primary"), theme-color("primary")) center bottom/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center bottom/ 100% 1px no-repeat border-box #f5f5f5;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
+    transform: translateY(-2px);
   }
 }
 
@@ -182,19 +189,17 @@
   .selected-item {
     padding-top: 1.125rem;
     padding-bottom: 1.125rem;
-  }
-
-  .selected-item {
     background: transparent;
     border-radius: 4px;
+
+    &:focus {
+      background: transparent;
+    }
   }
 
-  .selected-item:focus {
-    background: transparent;
-  }
-
-  .static-label, .floating-label-active {
-    transform: translate(0, -0.5rem) scale(0.75);
+  .static-label,
+  .floating-label-active {
+    transform: translate(0, -.5rem) scale(.75);
   }
 
   .floating-label {
@@ -202,16 +207,19 @@
   }
 }
 
-.static-label, .floating-label, .floating-label-active {
-  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: left top;
+.static-label,
+.floating-label,
+.floating-label-active {
+  position: relative;
   margin: 0;
   text-overflow: clip;
-  position: relative;
   white-space: nowrap;
+  transition: transform 150ms cubic-bezier(.4, 0, .2, 1), color 150ms cubic-bezier(.4, 0, .2, 1);
+  transform-origin: left top;
 }
 
-.static-label, .floating-label-active {
+.static-label,
+.floating-label-active {
   color: theme-color("dark");
 }
 
@@ -221,7 +229,10 @@
 }
 
 .has-error {
-  .help-block, .floating-label, .floating-label-active, .static-label {
+  .help-block,
+  .floating-label,
+  .floating-label-active,
+  .static-label {
     color: theme-color("danger") !important;
   }
   .ms-select {
@@ -232,7 +243,9 @@
     }
   }
   .ms-select-outline {
-    .ms-notch-before, .ms-notch-between, .ms-notch-after {
+    .ms-notch-before,
+    .ms-notch-between,
+    .ms-notch-after {
       border-color: theme-color("danger") !important;
     }
   }
@@ -240,55 +253,58 @@
 
 .help-block {
   display: block;
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
 
 .ms-notch {
-  background: transparent;
-  display: flex;
   position: absolute;
   right: 0;
   left: 0;
   box-sizing: border-box;
+  display: flex;
   width: 100%;
   max-width: 100%;
   height: 100%;
   text-align: left;
   pointer-events: none;
+  background: transparent;
 
-  .ms-notch-before, .ms-notch-between, .ms-notch-after {
+  .ms-notch-before,
+  .ms-notch-between,
+  .ms-notch-after {
+    pointer-events: none;
     border: 1px solid theme-color("dark");
     border-radius: 4px;
-    pointer-events: none;
   }
 
   .ms-notch-before {
+    width: .75rem;
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    width: 0.75rem;
   }
 
   .ms-notch-between {
-    border-left: 0;
-    border-right: 0;
-    border-radius: 0;
-    padding: 0 5px;
-
+    box-sizing: border-box;
     flex: 0 0 auto;
     width: auto;
-    box-sizing: border-box;
+    padding: 0 5px;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
   }
 
   .ms-notch-after {
+    flex: 1;
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    flex: 1;
   }
 
   &.notch-active {
-    .ms-notch-before, .ms-notch-between, .ms-notch-after {
+    .ms-notch-before,
+    .ms-notch-between,
+    .ms-notch-after {
       border-width: 2px;
     }
   }

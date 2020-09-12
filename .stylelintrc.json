@@ -1,16 +1,5 @@
 {
   "extends": [
     "stylelint-config-twbs-bootstrap/scss"
-  ],
-  "rules": {
-    "property-disallowed-list": [
-      "border-radius",
-      "border-top-left-radius",
-      "border-top-right-radius",
-      "border-bottom-right-radius",
-      "border-bottom-left-radius",
-      "transition"
-    ],
-    "function-disallowed-list": ["calc"]
-  }
+  ]
 }

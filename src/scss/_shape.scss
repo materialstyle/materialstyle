@@ -1,45 +1,49 @@
 .ms-shape-container {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   overflow: hidden;
-  visibility: hidden;
   vertical-align: middle;
+  visibility: hidden;
 
-  *:not(.ms-ripple), *:not(.ms-ripple):hover {
-    box-shadow: none;
+  *:not(.ms-ripple),
+  *:not(.ms-ripple):hover {
     border-radius: 0;
     outline: none;
+    box-shadow: none;
   }
 
-  .angle-top-left, .angle-top-right, .angle-bottom-left, .angle-bottom-right {
+  .angle-top-left,
+  .angle-top-right,
+  .angle-bottom-left,
+  .angle-bottom-right {
+    position: absolute;
+    z-index: 10;
     width: 8px;
     height: 8px;
     background: #fff;
-    position: absolute;
-    z-index: 10;
   }
 
   .angle-top-left {
-    transform: rotate(-45deg);
     top: -4px;
     left: -4px;
+    transform: rotate(-45deg);
   }
 
   .angle-top-right {
-    transform: rotate(45deg);
     top: -4px;
     right: -4px;
+    transform: rotate(45deg);
   }
 
   .angle-bottom-left {
-    transform: rotate(-135deg);
     bottom: -4px;
     left: -4px;
+    transform: rotate(-135deg);
   }
 
   .angle-bottom-right {
-    transform: rotate(135deg);
-    bottom: -4px;
     right: -4px;
+    bottom: -4px;
+    transform: rotate(135deg);
   }
 }

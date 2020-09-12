@@ -8,7 +8,7 @@ $theme-colors: (
   "blue": #2196f3,
   "primary": #2196f3,
   "light-blue": #03a9f4,
-  "cyan": #00bcd4,ua
+  "cyan": #00bcd4,
   "info": #00bcd4,
   "teal": #009688,
   "green": #4caf50,
@@ -29,6 +29,7 @@ $theme-colors: (
   "black": #000,
   "white": #fff
 );
+
 $material-colors: (
   "red-50": #ffebee,
   "red-100": #ffcdd2,
@@ -44,7 +45,6 @@ $material-colors: (
   "red-a200": #ff5252,
   "red-a400": #ff1744,
   "red-a700": #d50000,
-
   "pink-50": #fce4ec,
   "pink-100": #f8bbd0,
   "pink-200": #f48fb1,
@@ -59,7 +59,6 @@ $material-colors: (
   "pink-a200": #ff4081,
   "pink-a400": #f50057,
   "pink-a700": #c51162,
-
   "purple-50": #f3e5f5,
   "purple-100": #e1bee7,
   "purple-200": #ce93d8,
@@ -74,7 +73,6 @@ $material-colors: (
   "purple-a200": #e040fb,
   "purple-a400": #d500f9,
   "purple-a700": #a0f,
-
   "deep-purple-50": #ede7f6,
   "deep-purple-100": #d1c4e9,
   "deep-purple-200": #b39ddb,
@@ -89,7 +87,6 @@ $material-colors: (
   "deep-purple-a200": #7c4dff,
   "deep-purple-a400": #651fff,
   "deep-purple-a700": #6200ea,
-
   "indigo-50": #e8eaf6,
   "indigo-100": #c5cae9,
   "indigo-200": #9fa8da,
@@ -104,7 +101,6 @@ $material-colors: (
   "indigo-a200": #536dfe,
   "indigo-a400": #3d5afe,
   "indigo-a700": #304ffe,
-
   "blue-50": #e3f2fd,
   "blue-100": #bbdefb,
   "blue-200": #90caf9,
@@ -119,7 +115,6 @@ $material-colors: (
   "blue-a200": #448aff,
   "blue-a400": #2979ff,
   "blue-a700": #2962ff,
-
   "light-blue-50": #e1f5fe,
   "light-blue-100": #b3e5fc,
   "light-blue-200": #81d4fa,
@@ -134,7 +129,6 @@ $material-colors: (
   "light-blue-a200": #40c4ff,
   "light-blue-a400": #00b0ff,
   "light-blue-a700": #0091ea,
-
   "cyan-50": #e0f7fa,
   "cyan-100": #b2ebf2,
   "cyan-200": #80deea,
@@ -149,7 +143,6 @@ $material-colors: (
   "cyan-a200": #18ffff,
   "cyan-a400": #00e5ff,
   "cyan-a700": #00b8d4,
-
   "teal-50": #e0f2f1,
   "teal-100": #b2dfdb,
   "teal-200": #80cbc4,
@@ -164,7 +157,6 @@ $material-colors: (
   "teal-a200": #64ffda,
   "teal-a400": #1de9b6,
   "teal-a700": #00bfa5,
-
   "green-50": #e8f5e9,
   "green-100": #c8e6c9,
   "green-200": #a5d6a7,
@@ -179,7 +171,6 @@ $material-colors: (
   "green-a200": #69f0ae,
   "green-a400": #00e676,
   "green-a700": #00c853,
-
   "light-green-50": #f1f8e9,
   "light-green-100": #dcedc8,
   "light-green-200": #c5e1a5,
@@ -194,7 +185,6 @@ $material-colors: (
   "light-green-a200": #b2ff59,
   "light-green-a400": #76ff03,
   "light-green-a700": #64dd17,
-
   "lime-50": #f9fbe7,
   "lime-100": #f0f4c3,
   "lime-200": #e6ee9c,
@@ -209,7 +199,6 @@ $material-colors: (
   "lime-a200": #eeff41,
   "lime-a400": #c6ff00,
   "lime-a700": #aeea00,
-
   "yellow-50": #fffde7,
   "yellow-100": #fff9c4,
   "yellow-200": #fff59d,
@@ -224,7 +213,6 @@ $material-colors: (
   "yellow-a200": #ff0,
   "yellow-a400": #ffea00,
   "yellow-a700": #ffd600,
-
   "amber-50": #fff8e1,
   "amber-100": #ffecb3,
   "amber-200": #ffe082,
@@ -239,7 +227,6 @@ $material-colors: (
   "amber-a200": #ffd740,
   "amber-a400": #ffc400,
   "amber-a700": #ffab00,
-
   "orange-50": #fff3e0,
   "orange-100": #ffe0b2,
   "orange-200": #ffcc80,
@@ -254,7 +241,6 @@ $material-colors: (
   "orange-a200": #ffab40,
   "orange-a400": #ff9100,
   "orange-a700": #ff6d00,
-
   "deep-orange-50": #fbe9e7,
   "deep-orange-100": #ffccbc,
   "deep-orange-200": #ffab91,
@@ -269,7 +255,6 @@ $material-colors: (
   "deep-orange-a200": #ff6e40,
   "deep-orange-a400": #ff3d00,
   "deep-orange-a700": #dd2c00,
-
   "brown-50": #efebe9,
   "brown-100": #d7ccc8,
   "brown-200": #bcaaa4,
@@ -280,7 +265,6 @@ $material-colors: (
   "brown-700": #5d4037,
   "brown-800": #4e342e,
   "brown-900": #3e2723,
-
   "grey-50": #fafafa,
   "grey-100": #f5f5f5,
   "grey-200": #eee,
@@ -291,7 +275,6 @@ $material-colors: (
   "grey-700": #616161,
   "grey-800": #424242,
   "grey-900": #212121,
-
   "blue-grey-50": #eceff1,
   "blue-grey-100": #cfd8dc,
   "blue-grey-200": #b0bec5,
