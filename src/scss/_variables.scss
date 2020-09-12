@@ -1,5 +1,5 @@
 // Theme Colors
-@import 'utilities/color';
+@import "utilities/color";
 
 // Alert
 $alert-border-radius: 4px;
@@ -12,7 +12,7 @@ $btn-font-weight: 500;
 $btn-border-width: 0;
 $btn-border-radius: 4px;
 $btn-border-radius-lg: 4px;
-$input-btn-focus-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+$input-btn-focus-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
 
 // Card
 $card-border-width: 0;
@@ -20,11 +20,11 @@ $card-border-radius: 2px;
 
 // Checkbox, Radio, Switch
 $custom-control-indicator-border-width: 2px;
-$custom-control-indicator-focus-box-shadow: 0 0 0 .3rem rgba(map-get($theme-colors, 'primary'), .25);
+$custom-control-indicator-focus-box-shadow: 0 0 0 .3rem rgba(map-get($theme-colors, "primary"), .25);
 
 // Range Slider
 $custom-range-track-height: .2rem;
-$custom-range-thumb-active-bg: map-get($theme-colors, 'primary');
+$custom-range-thumb-active-bg: map-get($theme-colors, "primary");
 
 // Dropdown
 $dropdown-border-width: 0;
@@ -53,8 +53,8 @@ $input-height: auto;
 $input-height-sm: auto;
 $input-height-lg: auto;
 $input-font-family: "Roboto", sans-serif;
-$input-padding-x-sm: 0.75rem;
-$input-padding-x-lg: 0.75rem;
+$input-padding-x-sm: .75rem;
+$input-padding-x-lg: .75rem;
 
 // Toast
 $toast-border-width: 0;
