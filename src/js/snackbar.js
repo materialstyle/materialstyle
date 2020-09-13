@@ -18,29 +18,33 @@ const VERSION = '2.0.0'
 const DATA_KEY_SNACKBAR = 'ms.snackbar'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-const waitingQueue = []; const runningQueue = []; let
-  activeSnackbar
+const SNACKBAR_VISIBLE_DURATION = 3000
+const SNACKBAR_VISIBLE_DELAY = 200
+
+const waitingQueue = []
+const runningQueue = []
+let activeSnackbar
 
 Object.defineProperty(waitingQueue, 'pushToWaitingQueue', {
-  value() {
+  value(...args) {
     if (runningQueue.length) {
-      waitingQueue.push(arguments[0])
+      waitingQueue.push(args[0])
     } else {
-      runningQueue.pushToRunningQueue(arguments[0])
+      runningQueue.pushToRunningQueue(args[0])
     }
   }
 })
 
 Object.defineProperty(runningQueue, 'pushToRunningQueue', {
-  value() {
-    activeSnackbar = arguments[0]
+  value(...args) {
+    activeSnackbar = args[0]
     activeSnackbar.addClass('show')
     runningQueue.push(activeSnackbar)
 
     setTimeout(() => {
       activeSnackbar.removeClass('show')
       runningQueue.removeFromRunningQueue(activeSnackbar)
-    }, 3000)
+    }, SNACKBAR_VISIBLE_DURATION)
   }
 })
 
@@ -50,7 +54,7 @@ Object.defineProperty(runningQueue, 'removeFromRunningQueue', {
       setTimeout(() => {
         runningQueue.shift()
         runningQueue.pushToRunningQueue(waitingQueue.shift())
-      }, 200)
+      }, SNACKBAR_VISIBLE_DELAY)
     } else {
       runningQueue.shift()
     }

@@ -20,6 +20,8 @@ const VERSION = '2.0.0'
 const DATA_KEY_TAB = 'ms.tab'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
+const INDICATOR_HEIGHT = 2
+
 class Tab {
   constructor(element) {
     this._element = element
@@ -64,20 +66,21 @@ class Tab {
   }
 
   initTab() {
-    let indicatorLeft = 0; let indicatorTop = 0; let
-      indicatorWidth = 0
+    let indicatorLeft = 0
+    let indicatorTop = 0
+    let indicatorWidth = 0
 
     let activeItem = this._element.querySelector('.nav-link.active')
 
-    if (activeItem == null) {
+    if (activeItem === null) {
       activeItem = this._element.querySelector('.nav-item')
     } else {
       activeItem = activeItem.closest('.nav-item')
     }
 
-    if (activeItem != null) {
+    if (activeItem !== null) {
       indicatorLeft = `${activeItem.offsetLeft}px`
-      indicatorTop = `${activeItem.offsetTop + activeItem.offsetHeight - 2}px`
+      indicatorTop = `${activeItem.offsetTop + activeItem.offsetHeight - INDICATOR_HEIGHT}px`
       indicatorWidth = `${activeItem.offsetWidth}px`
     }
 
@@ -98,25 +101,26 @@ class Tab {
 
   setIndicatorPosition(target) {
     this._activeIndicator.style.left = `${target.offsetLeft}px`
-    this._activeIndicator.style.top = `${target.offsetTop + target.offsetHeight - 2}px`
+    this._activeIndicator.style.top = `${target.offsetTop + target.offsetHeight - INDICATOR_HEIGHT}px`
     this._activeIndicator.style.width = `${target.offsetWidth}px`
   }
 
   setIndicatorPositionOnResize() {
-    let indicatorLeft = 0; let indicatorTop = 0; let
-      indicatorWidth = 0
+    let indicatorLeft = 0
+    let indicatorTop = 0
+    let indicatorWidth = 0
 
     let activeItem = this._element.querySelector('.nav-link.active')
 
-    if (activeItem == null) {
+    if (activeItem === null) {
       activeItem = this._element.querySelector('.nav-item')
     } else {
       activeItem = activeItem.closest('.nav-item')
     }
 
-    if (activeItem != null) {
+    if (activeItem !== null) {
       indicatorLeft = `${activeItem.offsetLeft}px`
-      indicatorTop = `${activeItem.offsetTop + activeItem.offsetHeight - 2}px`
+      indicatorTop = `${activeItem.offsetTop + activeItem.offsetHeight - INDICATOR_HEIGHT}px`
       indicatorWidth = `${activeItem.offsetWidth}px`
     }
 
