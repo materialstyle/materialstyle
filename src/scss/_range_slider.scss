@@ -16,22 +16,21 @@
       }
     }
   }
-
 }
 
 .custom-range:not(:disabled) {
   &:active {
     &::-webkit-slider-thumb {
-      transform: scale(1.5);
       transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
+      transform: scale(1.5);
     }
     &::-moz-range-thumb {
-      transform: scale(1.5);
       transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
+      transform: scale(1.5);
     }
     &::-ms-thumb {
-      transform: scale(1.5);
       transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
+      transform: scale(1.5);
     }
   }
 }

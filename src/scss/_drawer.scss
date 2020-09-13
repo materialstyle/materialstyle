@@ -1,22 +1,22 @@
 .drawer {
-  transition: left .2s cubic-bezier(.4, 0, .2, 1) .1s;
-  height: 100%;
+  position: fixed;
   top: 0;
   left: -350px;
-  width: 250px;
-  background: #fff;
   z-index: 1031;
+  width: 250px;
+  height: 100%;
   overflow-y: auto;
-  position: fixed;
+  background: #fff;
+  transition: left .2s cubic-bezier(.4, 0, .2, 1) .1s;
 
   &.--visible {
-    flex: 0 0 250px;
-    top: auto;
-    height: auto;
-    z-index: 1029;
-    min-width: 250px;
-    left: 0;
     position: relative;
+    top: auto;
+    left: 0;
+    z-index: 1029;
+    flex: 0 0 250px;
+    min-width: 250px;
+    height: auto;
 
     ~ .drawer-toggle,
     .drawer-close-btn {
@@ -25,14 +25,15 @@
   }
 
   .drawer-brand {
-    padding: .5rem .5rem .5rem 1rem;
-    width: inherit;
     top: 0;
     display: flex;
     align-items: center;
+    width: inherit;
+    padding: .5rem .5rem .5rem 1rem;
   }
 
-  &.--fixed, &.--visible {
+  &.--fixed,
+  &.--visible {
     .drawer-brand {
       position: fixed;
     }
@@ -49,13 +50,13 @@
   }
 
   .nav-link.active {
-    color: blue !important;
+    color: theme-color("primary") !important;
   }
 
   .ms-fixed {
     position: fixed;
-    height: 100%;
     width: inherit;
+    height: 100%;
     overflow: auto;
   }
 
@@ -68,29 +69,29 @@
   }
 
   .sub-menu {
-    transition: all .2s ease;
-    margin-top: -2000px;
     padding-left: 20px;
+    margin-top: -2000px;
+    transition: all .2s ease;
   }
 
   .drawer-close-btn {
-    text-align: end;
     flex-grow: 1;
+    text-align: end;
     cursor: pointer;
   }
 }
 
 .drawer-toggle {
-  cursor: pointer;
   padding: 0 15px 0 5px;
+  cursor: pointer;
 }
 
 #ms-shade {
-  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1030;
+  background-color: rgba(0, 0, 0, .5);
 }

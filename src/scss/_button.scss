@@ -29,12 +29,13 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
 .btn {
   position: relative;
   overflow: hidden;
-  vertical-align: middle;
   text-transform: uppercase;
   letter-spacing: .0892857143em;
+  vertical-align: middle;
   box-shadow: $raised-2dp;
 
-  .fas, .material-icons {
+  .fas,
+  .material-icons {
     vertical-align: middle !important;
   }
 
@@ -43,9 +44,9 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   }
 
   &.btn-fab {
-    border-radius: 100% !important;
     width: 56px;
     height: 56px;
+    border-radius: 100% !important;
   }
 
   &.mini-fab {
@@ -62,56 +63,61 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
 
   &.leaf-fab-inverted {
     border-radius: 0 !important;
-    border-bottom-left-radius: 50% !important;
     border-top-right-radius: 50% !important;
+    border-bottom-left-radius: 50% !important;
   }
 
   &.extended-fab,
   &.extended-mini-fab {
-    height: 48px !important;
-    border-radius: 28px !important;
-    padding: 0 15px;
     width: auto;
     max-width: 100%;
+    height: 48px !important;
+    padding: 0 15px;
+    border-radius: 28px !important;
   }
 
   &.extended-mini-fab {
     height: 40px !important;
   }
 
-  &:active, &.active, &:hover, &:focus, &.focus, .show > &.dropdown-toggle {
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  &.focus,
+  .show > &.dropdown-toggle {
     box-shadow: $raised-6dp;
   }
 
   &.disabled,
   &:disabled {
+    color: rgba(0, 0, 0, .37);
+    background-color: rgba(0, 0, 0, .12);
     box-shadow: none;
-    background-color: rgba(0,0,0,.12);
-    color: rgba(0,0,0,.37);
   }
 }
 
 [class*="btn-outline-"] {
-  padding: 5px 14px 5px 14px;
-  box-shadow: none !important;
+  padding: 5px 14px;
   background-color: transparent;
   border: 1px solid;
+  box-shadow: none !important;
 
   &.disabled,
   &:disabled {
-    color: rgba(0,0,0,.37);
-    border-color: rgba(0,0,0,.37);
+    color: rgba(0, 0, 0, .37);
     background-color: transparent;
+    border-color: rgba(0, 0, 0, .37);
   }
 }
 
 [class*="btn-text-"] {
-  box-shadow: none !important;
   background-color: transparent;
+  box-shadow: none !important;
 
   &.disabled,
   &:disabled {
-    color: rgba(0,0,0,.37);
+    color: rgba(0, 0, 0, .37);
     background-color: transparent;
   }
 }
@@ -150,11 +156,11 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   }
 
   .files {
+    display: inline-flex;
+    max-width: 200px;
     padding: 7px 10px;
     margin-bottom: 0;
-    max-width: 200px;
-    white-space: nowrap;
     overflow: hidden;
-    display: inline-flex;
+    white-space: nowrap;
   }
 }

@@ -4,13 +4,13 @@
   padding: 5px;
 
   .image-list-item {
-    margin: 5px;
     flex-shrink: 0;
+    margin: 5px;
 
     .image-list-label {
+      width: 100%;
       padding: 8px;
       text-align: center;
-      width: 100%;
     }
   }
 
@@ -24,9 +24,9 @@
 
   &.masonry {
     display: block !important;
+    padding: 10px;
     column-count: auto;
     column-gap: 5px;
-    padding: 10px;
 
     .image-list-item {
       margin: 0 0 10px 0;

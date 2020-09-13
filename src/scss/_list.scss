@@ -5,12 +5,12 @@
 }
 
 .list-group-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   border-top: 0;
   border-bottom: 0;
-  align-items: center;
-  display: flex;
-  position: relative;
-  overflow: hidden;
 
   &:first-child {
     border-top: 1px solid map-get($material-colors, "grey-300");
@@ -19,14 +19,16 @@
     border-bottom: 1px solid map-get($material-colors, "grey-300");
   }
   &.active {
-    background-color: theme-color("white");
     color: theme-color("blue");
+    background-color: theme-color("white");
   }
   &:hover {
     background-color: map-get($material-colors, "grey-100");
   }
 
-  .list-item, .list-icon, .list-append {
+  .list-item,
+  .list-icon,
+  .list-append {
     display: inline-block;
   }
 
@@ -43,16 +45,17 @@
 
   &.list-divider {
     height: 0;
-    margin: 0;
     padding: 0;
+    margin: 0;
     border-bottom: 1px solid map-get($material-colors, "grey-300");
   }
 
-  .primary-text, .secondary-text {
+  .primary-text,
+  .secondary-text {
     display: block;
   }
   .secondary-text {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
 }
 

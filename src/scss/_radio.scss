@@ -5,8 +5,8 @@
 
     .custom-control-input {
       &:checked ~ .custom-control-label::before {
-        border-color: $value;
         background-color: $value;
+        border-color: $value;
       }
 
       &:focus ~ .custom-control-label::before {

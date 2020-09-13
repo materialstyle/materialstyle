@@ -1,6 +1,8 @@
 @import "node_modules/bootstrap/scss/pagination";
 
-.page-item, .pagination-lg .page-item, .pagination-sm .page-item {
+.page-item,
+.pagination-lg .page-item,
+.pagination-sm .page-item {
   &:first-child {
     .page-link {
       margin-left: 0;

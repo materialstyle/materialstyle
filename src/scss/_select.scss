@@ -25,11 +25,7 @@
       height: 0;
       content: "";
       border: 4px solid transparent;
-      border-color: #424242 transparent transparent transparent;
-    }
-    &.select-arrow-active::after {
-      bottom: 16px;
-      border-color: transparent transparent #424242 transparent;
+      border-top-color: #424242;
     }
 
     .badge {
