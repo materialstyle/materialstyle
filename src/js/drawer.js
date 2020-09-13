@@ -24,208 +24,208 @@ const CLASS_NAME_FIXED = '--fixed'
 const ID_SHADE = 'ms-shade'
 
 class Drawer {
-    constructor(element) {
-        this._element = element
-        this._shade = this.createShade()
-        this._hamburger = document.querySelector('.drawer-toggle')
-        this._drawerBrand = element.querySelector('.drawer-brand')
-        this._footer = document.querySelector('footer')
-        this._navBar = document.querySelector('.navbar')
+  constructor(element) {
+    this._element = element
+    this._shade = this.createShade()
+    this._hamburger = document.querySelector('.drawer-toggle')
+    this._drawerBrand = element.querySelector('.drawer-brand')
+    this._footer = document.querySelector('footer')
+    this._navBar = document.querySelector('.navbar')
 
-        this.initDrawer()
-        this.addEventListeners()
+    this.initDrawer()
+    this.addEventListeners()
+  }
+
+  static get VERSION() {
+    return VERSION
+  }
+
+  static _jQueryInterface() {
+    return this.each(function () {
+      const $element = $(this)
+      let data = $element.data(DATA_KEY)
+
+      if (!data) {
+        data = new Drawer(this)
+        $element.data(DATA_KEY, data)
+      }
+    })
+  }
+
+  createShade() {
+    let shade = document.createElement('div')
+    shade.id = ID_SHADE
+    shade.style.display = 'none'
+    document.querySelector('body').append(shade)
+
+    return shade
+  }
+
+  initDrawer() {
+    if (this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
+      let fixedSideNavBg = this._element.className.match(/bg-[^\s]+/)
+
+      let fixed = document.createElement('div')
+      fixed.className = 'ms-fixed ' + fixedSideNavBg
+
+      let children = this._element.childNodes
+
+      for (let [, value] of  Object.entries(children)) {
+        fixed.appendChild(value)
+      }
+
+      this._element.appendChild(this._drawerBrand)
+      this._element.appendChild(fixed)
+
+      this._fixed = fixed
     }
 
-    static get VERSION() {
-        return VERSION
+    let navbarHeight = '56px'
+    if (this._navBar != null) {
+      navbarHeight = this._navBar.offsetHeight
     }
 
-    static _jQueryInterface() {
-        return this.each(function () {
-            const $element = $(this)
-            let data = $element.data(DATA_KEY)
-
-            if (!data) {
-                data = new Drawer(this)
-                $element.data(DATA_KEY, data)
-            }
-        })
+    if (this._drawerBrand != null) {
+      this._drawerBrand.style.height = navbarHeight + 'px'
     }
 
-    createShade() {
-        let shade = document.createElement('div')
-        shade.id = ID_SHADE
-        shade.style.display = 'none'
-        document.querySelector('body').append(shade)
-
-        return shade
+    if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed != null) {
+      this._fixed.style.top = navbarHeight + 'px'
+      this._fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
     }
 
-    initDrawer() {
-        if (this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
-            let fixedSideNavBg = this._element.className.match(/bg-[^\s]+/)
-
-            let fixed = document.createElement('div')
-            fixed.className = 'ms-fixed ' + fixedSideNavBg
-
-            let children = this._element.childNodes
-
-            for (let [, value] of  Object.entries(children)) {
-                fixed.appendChild(value)
-            }
-
-            this._element.appendChild(this._drawerBrand)
-            this._element.appendChild(fixed)
-
-            this._fixed = fixed
-        }
-
-        let navbarHeight = '56px'
-        if (this._navBar != null) {
-            navbarHeight = this._navBar.offsetHeight
-        }
-
-        if (this._drawerBrand != null) {
-            this._drawerBrand.style.height = navbarHeight + 'px'
-        }
-
-        if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed != null) {
-            this._fixed.style.top = navbarHeight + 'px'
-            this._fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
-        }
-
-        if (this._element.querySelector('.nav-link.active') != null) {
-            this._element.querySelector('.nav-link.active').closest('.sub-menu-container').prev('.nav-item').find('> .sub-menu-link').trigger('click')
-        }
-
-        if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
-            this.toggle()
-        }
+    if (this._element.querySelector('.nav-link.active') != null) {
+      this._element.querySelector('.nav-link.active').closest('.sub-menu-container').prev('.nav-item').find('> .sub-menu-link').trigger('click')
     }
 
-    show() {
-        this._shade.style.display = 'block'
+    if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
+      this.toggle()
+    }
+  }
+
+  show() {
+    this._shade.style.display = 'block'
+    this._element.style.left = 0
+  }
+
+  hide() {
+    this._shade.style.display = 'none'
+
+    if (!this._element.className.includes(CLASS_NAME_VISIBLE)) {
+      this._element.style.left = '-350px'
+    }
+  }
+
+  toggle() {
+    if ($(window).innerWidth() < 1281) {
+      if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
+        this._element.classList.add(CLASS_NAME_SWITCHED)
+        this._element.classList.remove(CLASS_NAME_VISIBLE)
+        this._element.style.left = '-350px'
+      }
+
+      this._shade.style.display = 'none'
+
+      if (this._hamburger != null) {
+        this._hamburger.style.display = 'block'
+      }
+
+      if (this._footer != null) {
+        this._footer.style.marginLeft = 0
+      }
+    } else {
+
+      if (this._element.className.includes(CLASS_NAME_SWITCHED)) {
+        this._element.classList.remove(CLASS_NAME_SWITCHED)
+        this._element.classList.add(CLASS_NAME_VISIBLE)
         this._element.style.left = 0
+      }
+
+      if (this._hamburger != null) {
+        this._hamburger.style.display = 'none'
+      }
+
+      if (this._footer != null && this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
+        this._footer.style.marginLeft = '250px'
+      }
     }
+  }
 
-    hide() {
-        this._shade.style.display = 'none'
+  addEventListeners() {
+    this._hamburger.addEventListener('click', () => this.show())
 
-        if (!this._element.className.includes(CLASS_NAME_VISIBLE)) {
-            this._element.style.left = '-350px'
-        }
-    }
+    document.addEventListener('click', event => {
+      if (event.target != this._element
+        && event.target != this._hamburger
+        && !this._element.contains(event.target)
+      ) {
+        this.hide()
+      }
+    })
 
-    toggle() {
-        if ($(window).innerWidth() < 1281) {
-            if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
-                this._element.classList.add(CLASS_NAME_SWITCHED)
-                this._element.classList.remove(CLASS_NAME_VISIBLE)
-                this._element.style.left = '-350px'
-            }
+    let links = this._element.querySelectorAll('.nav-link')
 
-            this._shade.style.display = 'none'
+    for (let [, value] of  Object.entries(links)) {
+      let show = true
 
-            if (this._hamburger != null) {
-                this._hamburger.style.display = 'block'
-            }
+      value.addEventListener('click', event => {
+        let subMenuContainer = event.target.closest('.nav-item').nextElementSibling
+        let subMenu = null
 
-            if (this._footer != null) {
-                this._footer.style.marginLeft = 0
-            }
-        } else {
-
-            if (this._element.className.includes(CLASS_NAME_SWITCHED)) {
-                this._element.classList.remove(CLASS_NAME_SWITCHED)
-                this._element.classList.add(CLASS_NAME_VISIBLE)
-                this._element.style.left = 0
-            }
-
-            if (this._hamburger != null) {
-                this._hamburger.style.display = 'none'
-            }
-
-            if (this._footer != null && this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
-                this._footer.style.marginLeft = '250px'
-            }
-        }
-    }
-
-    addEventListeners() {
-        this._hamburger.addEventListener('click', () => this.show())
-
-        document.addEventListener('click', event => {
-            if (event.target != this._element
-                && event.target != this._hamburger
-                && !this._element.contains(event.target)
-            ) {
-                this.hide()
-            }
-        })
-
-        let links = this._element.querySelectorAll('.nav-link')
-
-        for (let [, value] of  Object.entries(links)) {
-            let show = true
-
-            value.addEventListener('click', event => {
-                let subMenuContainer = event.target.closest('.nav-item').nextElementSibling
-                let subMenu = null
-
-                if (subMenuContainer != null) {
-                    subMenu = subMenuContainer.querySelector('.sub-menu')
-                }
-
-                if (subMenu != null) {
-                    let subMenuHeight = subMenu.offsetHeight
-
-                    if (show) {
-                        subMenu.style.marginTop = 0
-                        show = false
-
-                        if (event.target.className.includes('sub-menu-link')) {
-                            event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_up'
-                        }
-                    } else {
-                        subMenu.style.marginTop = '-' + subMenuHeight + 'px'
-                        show = true
-
-                        if (event.target.className.includes('sub-menu-link')) {
-                            event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_down'
-                        }
-                    }
-                }
-
-                if (!event.target.className.includes('sub-menu-link')) {
-                    this.hide()
-                }
-            })
+        if (subMenuContainer != null) {
+          subMenu = subMenuContainer.querySelector('.sub-menu')
         }
 
-        window.addEventListener('resize', () => {
-            if (this._element.className.includes(CLASS_NAME_VISIBLE) || this._element.className.includes(CLASS_NAME_SWITCHED)) {
-                this.toggle()
-            }
+        if (subMenu != null) {
+          let subMenuHeight = subMenu.offsetHeight
 
-            let navbarHeight = '56px'
-            if (this._navBar != null) {
-                navbarHeight = this._navBar.offsetHeight
-            }
+          if (show) {
+            subMenu.style.marginTop = 0
+            show = false
 
-            if (this._drawerBrand != null) {
-                this._drawerBrand.style.height = navbarHeight + 'px'
+            if (event.target.className.includes('sub-menu-link')) {
+              event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_up'
             }
+          } else {
+            subMenu.style.marginTop = '-' + subMenuHeight + 'px'
+            show = true
 
-            if (this._fixed != null) {
-                this._fixed.style.top = navbarHeight + 'px'
-                this._fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
+            if (event.target.className.includes('sub-menu-link')) {
+              event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_down'
             }
-        })
+          }
+        }
 
-        this._element.querySelector('.drawer-close-btn').addEventListener('click', () => {
-            this.hide()
-        })
+        if (!event.target.className.includes('sub-menu-link')) {
+          this.hide()
+        }
+      })
     }
+
+    window.addEventListener('resize', () => {
+      if (this._element.className.includes(CLASS_NAME_VISIBLE) || this._element.className.includes(CLASS_NAME_SWITCHED)) {
+        this.toggle()
+      }
+
+      let navbarHeight = '56px'
+      if (this._navBar != null) {
+        navbarHeight = this._navBar.offsetHeight
+      }
+
+      if (this._drawerBrand != null) {
+        this._drawerBrand.style.height = navbarHeight + 'px'
+      }
+
+      if (this._fixed != null) {
+        this._fixed.style.top = navbarHeight + 'px'
+        this._fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
+      }
+    })
+
+    this._element.querySelector('.drawer-close-btn').addEventListener('click', () => {
+      this.hide()
+    })
+  }
 }
 
 /**
@@ -237,12 +237,12 @@ class Drawer {
 $.fn[NAME] = Drawer._jQueryInterface
 $.fn[NAME].Constructor = Drawer
 $.fn[NAME].noConflict = () => {
-    $.fn[NAME] = JQUERY_NO_CONFLICT
-    return Drawer._jQueryInterface
+  $.fn[NAME] = JQUERY_NO_CONFLICT
+  return Drawer._jQueryInterface
 }
 
 export default Drawer
 
 $(function () {
-    $('.drawer').drawer()
+  $('.drawer').drawer()
 })
