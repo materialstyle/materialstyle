@@ -36,7 +36,7 @@ $dropdown-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0
 $list-group-border-radius: 0;
 $list-group-border-color: map-get($material-colors, "grey-300");
 $list-group-hover-bg: map-get($material-colors, "grey-100");
-$list-group-active-color: map-get($theme-colors, "blue");
+$list-group-active-color: map-get($theme-colors, "primary");
 $list-group-active-bg: map-get($theme-colors, "white");
 $list-group-active-border-color: map-get($material-colors, "grey-300");
 

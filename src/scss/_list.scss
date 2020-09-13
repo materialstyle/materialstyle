@@ -19,7 +19,7 @@
     border-bottom: 1px solid map-get($material-colors, "grey-300");
   }
   &.active {
-    color: theme-color("blue");
+    color: theme-color("primary");
     background-color: theme-color("white");
   }
   &:hover {
