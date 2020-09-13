@@ -53,7 +53,7 @@ class Drawer {
   }
 
   createShade() {
-    let shade = document.createElement('div')
+    const shade = document.createElement('div')
     shade.id = ID_SHADE
     shade.style.display = 'none'
     document.querySelector('body').append(shade)
@@ -63,14 +63,14 @@ class Drawer {
 
   initDrawer() {
     if (this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
-      let fixedSideNavBg = this._element.className.match(/bg-[^\s]+/)
+      const fixedSideNavBg = this._element.className.match(/bg-[^\s]+/)
 
-      let fixed = document.createElement('div')
-      fixed.className = 'ms-fixed ' + fixedSideNavBg
+      const fixed = document.createElement('div')
+      fixed.className = `ms-fixed ${fixedSideNavBg}`
 
-      let children = this._element.childNodes
+      const children = this._element.childNodes
 
-      for (let [, value] of  Object.entries(children)) {
+      for (const [, value] of Object.entries(children)) {
         fixed.appendChild(value)
       }
 
@@ -86,12 +86,12 @@ class Drawer {
     }
 
     if (this._drawerBrand != null) {
-      this._drawerBrand.style.height = navbarHeight + 'px'
+      this._drawerBrand.style.height = `${navbarHeight}px`
     }
 
     if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed != null) {
-      this._fixed.style.top = navbarHeight + 'px'
-      this._fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
+      this._fixed.style.top = `${navbarHeight}px`
+      this._fixed.style.height = `calc(100vh - ${navbarHeight}px)`
     }
 
     if (this._element.querySelector('.nav-link.active') != null) {
@@ -134,7 +134,6 @@ class Drawer {
         this._footer.style.marginLeft = 0
       }
     } else {
-
       if (this._element.className.includes(CLASS_NAME_SWITCHED)) {
         this._element.classList.remove(CLASS_NAME_SWITCHED)
         this._element.classList.add(CLASS_NAME_VISIBLE)
@@ -154,22 +153,22 @@ class Drawer {
   addEventListeners() {
     this._hamburger.addEventListener('click', () => this.show())
 
-    document.addEventListener('click', event => {
-      if (event.target != this._element
-        && event.target != this._hamburger
-        && !this._element.contains(event.target)
+    document.addEventListener('click', (event) => {
+      if (event.target != this._element &&
+        event.target != this._hamburger &&
+        !this._element.contains(event.target)
       ) {
         this.hide()
       }
     })
 
-    let links = this._element.querySelectorAll('.nav-link')
+    const links = this._element.querySelectorAll('.nav-link')
 
-    for (let [, value] of  Object.entries(links)) {
+    for (const [, value] of Object.entries(links)) {
       let show = true
 
-      value.addEventListener('click', event => {
-        let subMenuContainer = event.target.closest('.nav-item').nextElementSibling
+      value.addEventListener('click', (event) => {
+        const subMenuContainer = event.target.closest('.nav-item').nextElementSibling
         let subMenu = null
 
         if (subMenuContainer != null) {
@@ -177,7 +176,7 @@ class Drawer {
         }
 
         if (subMenu != null) {
-          let subMenuHeight = subMenu.offsetHeight
+          const subMenuHeight = subMenu.offsetHeight
 
           if (show) {
             subMenu.style.marginTop = 0
@@ -187,7 +186,7 @@ class Drawer {
               event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_up'
             }
           } else {
-            subMenu.style.marginTop = '-' + subMenuHeight + 'px'
+            subMenu.style.marginTop = `-${subMenuHeight}px`
             show = true
 
             if (event.target.className.includes('sub-menu-link')) {
@@ -213,12 +212,12 @@ class Drawer {
       }
 
       if (this._drawerBrand != null) {
-        this._drawerBrand.style.height = navbarHeight + 'px'
+        this._drawerBrand.style.height = `${navbarHeight}px`
       }
 
       if (this._fixed != null) {
-        this._fixed.style.top = navbarHeight + 'px'
-        this._fixed.style.height = 'calc(100vh - ' + navbarHeight + 'px)'
+        this._fixed.style.top = `${navbarHeight}px`
+        this._fixed.style.height = `calc(100vh - ${navbarHeight}px)`
       }
     })
 
@@ -243,6 +242,6 @@ $.fn[NAME].noConflict = () => {
 
 export default Drawer
 
-$(function () {
+$(() => {
   $('.drawer').drawer()
 })

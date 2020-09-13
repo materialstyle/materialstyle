@@ -6,7 +6,9 @@
  */
 
 import $ from 'jquery'
-import {getColor} from '../js/utility.js'
+import {
+  getColor
+} from '../js/utility.js'
 
 /**
  * --------------------------------------------------------------------------
@@ -75,7 +77,8 @@ class Shape {
   }
 
   setShapeSize() {
-    let topLeftWidth = 0, topRightWidth = 0, bottomLeftWidth = 0, bottomRightWidth = 0
+    let bottomLeftWidth = 0; let bottomRightWidth = 0; let topLeftWidth = 0; let
+      topRightWidth = 0
 
     if (this._topLeftAngle) {
       topLeftWidth = this._topLeftAngle.className.match(/size-[^\s]+/)
@@ -107,39 +110,39 @@ class Shape {
     }
 
     if (topLeftWidth) {
-      this._topLeftAngle.style.top = -(topLeftWidth / 2) + 'px'
-      this._topLeftAngle.style.left = -(topLeftWidth / 2) + 'px'
-      this._topLeftAngle.style.width = topLeftWidth + 'px'
-      this._topLeftAngle.style.height = topLeftWidth + 'px'
+      this._topLeftAngle.style.top = `${-(topLeftWidth / 2)}px`
+      this._topLeftAngle.style.left = `${-(topLeftWidth / 2)}px`
+      this._topLeftAngle.style.width = `${topLeftWidth}px`
+      this._topLeftAngle.style.height = `${topLeftWidth}px`
     }
 
     if (topRightWidth) {
-      this._topRightAngle.style.top = -(topRightWidth / 2) + 'px'
-      this._topRightAngle.style.right = -(topRightWidth / 2) + 'px'
-      this._topRightAngle.style.width = topRightWidth + 'px'
-      this._topRightAngle.style.height = topRightWidth + 'px'
+      this._topRightAngle.style.top = `${-(topRightWidth / 2)}px`
+      this._topRightAngle.style.right = `${-(topRightWidth / 2)}px`
+      this._topRightAngle.style.width = `${topRightWidth}px`
+      this._topRightAngle.style.height = `${topRightWidth}px`
     }
 
     if (bottomLeftWidth) {
-      this._bottomLeftAngle.style.bottom = -(bottomLeftWidth / 2) + 'px'
-      this._bottomLeftAngle.style.left = -(bottomLeftWidth / 2) + 'px'
-      this._bottomLeftAngle.style.width = bottomLeftWidth + 'px'
-      this._bottomLeftAngle.style.height = bottomLeftWidth + 'px'
+      this._bottomLeftAngle.style.bottom = `${-(bottomLeftWidth / 2)}px`
+      this._bottomLeftAngle.style.left = `${-(bottomLeftWidth / 2)}px`
+      this._bottomLeftAngle.style.width = `${bottomLeftWidth}px`
+      this._bottomLeftAngle.style.height = `${bottomLeftWidth}px`
     }
 
     if (bottomRightWidth) {
-      this._bottomRightAngle.style.bottom = -(bottomRightWidth / 2) + 'px'
-      this._bottomRightAngle.style.right = -(bottomRightWidth / 2) + 'px'
-      this._bottomRightAngle.style.width = bottomRightWidth + 'px'
-      this._bottomRightAngle.style.height = bottomRightWidth + 'px'
+      this._bottomRightAngle.style.bottom = `${-(bottomRightWidth / 2)}px`
+      this._bottomRightAngle.style.right = `${-(bottomRightWidth / 2)}px`
+      this._bottomRightAngle.style.width = `${bottomRightWidth}px`
+      this._bottomRightAngle.style.height = `${bottomRightWidth}px`
     }
   }
 
   setShapeOutline() {
     let shapeOutline
 
-    let cardOutline = this._element.querySelector('[class*="card-outline-"]')
-    let btnOutline = this._element.querySelector('[class*="btn-outline-"]')
+    const cardOutline = this._element.querySelector('[class*="card-outline-"]')
+    const btnOutline = this._element.querySelector('[class*="btn-outline-"]')
 
     if (cardOutline) {
       shapeOutline = cardOutline.className.match(/card-outline-[^\s]+/)
@@ -154,7 +157,7 @@ class Shape {
     if (shapeOutline) {
       shapeOutline = getColor(shapeOutline)
 
-      let borderBottom = '1px solid ' + shapeOutline
+      const borderBottom = `1px solid ${shapeOutline}`
 
       if (this._topLeftAngle) {
         this._topLeftAngle.style.borderBottom = borderBottom

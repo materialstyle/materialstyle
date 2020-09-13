@@ -49,7 +49,8 @@ class FileInput {
   }
 
   handleFileChange() {
-    let files = [], fileArr, filename = 'No file chosen'
+    const files = []; let fileArr; let
+      filename = 'No file chosen'
 
     if (this._multipleSupport) {
       fileArr = this._fileInput.files
@@ -61,12 +62,11 @@ class FileInput {
         files.push(fileArr[i].name)
       }
       filename = files.join(', ')
-
     } else {
       filename = this._fileInput.val().split('\\').pop()
     }
 
-    if ('' == filename) {
+    if (filename == '') {
       filename = 'No file chosen'
     }
 
@@ -75,7 +75,7 @@ class FileInput {
   }
 
   addEventListeners() {
-    $(this._button).on('click', event => {
+    $(this._button).on('click', (event) => {
       event.stopImmediatePropagation()
       this.handleButtonClick()
     })

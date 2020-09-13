@@ -18,10 +18,11 @@ const VERSION = '2.0.0'
 const DATA_KEY_SNACKBAR = 'ms.snackbar'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-let waitingQueue = [], runningQueue = [], activeSnackbar
+const waitingQueue = []; const runningQueue = []; let
+  activeSnackbar
 
 Object.defineProperty(waitingQueue, 'pushToWaitingQueue', {
-  value: function () {
+  value() {
     if (runningQueue.length) {
       waitingQueue.push(arguments[0])
     } else {
@@ -31,12 +32,12 @@ Object.defineProperty(waitingQueue, 'pushToWaitingQueue', {
 })
 
 Object.defineProperty(runningQueue, 'pushToRunningQueue', {
-  value: function () {
+  value() {
     activeSnackbar = arguments[0]
     activeSnackbar.addClass('show')
     runningQueue.push(activeSnackbar)
 
-    setTimeout(function () {
+    setTimeout(() => {
       activeSnackbar.removeClass('show')
       runningQueue.removeFromRunningQueue(activeSnackbar)
     }, 3000)
@@ -44,9 +45,9 @@ Object.defineProperty(runningQueue, 'pushToRunningQueue', {
 })
 
 Object.defineProperty(runningQueue, 'removeFromRunningQueue', {
-  value: function () {
+  value() {
     if (waitingQueue.length) {
-      setTimeout(function () {
+      setTimeout(() => {
         runningQueue.shift()
         runningQueue.pushToRunningQueue(waitingQueue.shift())
       }, 200)
@@ -80,7 +81,7 @@ class Snackbar {
   }
 
   addEventListeners() {
-    $(this._element).on('click', event => {
+    $(this._element).on('click', (event) => {
       event.stopImmediatePropagation()
       waitingQueue.pushToWaitingQueue($(this._snackbar))
     })

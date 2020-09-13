@@ -6,7 +6,9 @@
  */
 
 import $ from 'jquery'
-import {getAccentColor, getPrimaryColor} from '../js/utility.js'
+import {
+  getAccentColor, getPrimaryColor
+} from '../js/utility.js'
 
 /**
  * --------------------------------------------------------------------------
@@ -54,8 +56,8 @@ class Select {
     this._prepend = element.querySelector('.prepend')
     this._append = element.querySelector('.append')
 
-    this._isSearchable = element.className.includes(CLASS_NAME_SEARCHABLE) ? true : false
-    this._multiSelectEnabled = element.className.includes(CLASS_NAME_MULTI_SELECT) ? true : false
+    this._isSearchable = Boolean(element.className.includes(CLASS_NAME_SEARCHABLE))
+    this._multiSelectEnabled = Boolean(element.className.includes(CLASS_NAME_MULTI_SELECT))
 
     this._options = this.createOptions()
 
@@ -93,15 +95,19 @@ class Select {
   }
 
   createOptions() {
-    let optionsArray = []
-    let options = this._select.querySelectorAll('option')
+    const optionsArray = []
+    const options = this._select.querySelectorAll('option')
 
-    let selectItems = document.createElement('div')
+    const selectItems = document.createElement('div')
     selectItems.className = 'select-items'
 
-    for (let [, value] of  Object.entries(options)) {
+    for (const [, value] of Object.entries(options)) {
       selectItems.appendChild(this.createCheckbox(value.text, value.value, value.selected))
-      optionsArray.push({value: value.value, text: value.innerHTML, selected: value.selected})
+      optionsArray.push({
+        value: value.value,
+        text: value.innerHTML,
+        selected: value.selected
+      })
     }
 
     this._selectItems = selectItems
@@ -129,25 +135,25 @@ class Select {
     this.setAddonHeight()
 
     if (this._selectClass == CLASS_NAME_SELECT_OUTLINE) {
-      this._notch.style.height = this._selectedItem.offsetHeight + 'px'
-      this._notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
+      this._notch.style.height = `${this._selectedItem.offsetHeight}px`
+      this._notchBetween.style.width = `${this._label.offsetWidth * 0.75 + 10}px`
     }
 
     this.setLabelPosition()
   }
 
   createDropdown() {
-    let dropdown = document.createElement('div')
+    const dropdown = document.createElement('div')
     dropdown.className = 'dropdown'
 
-    let selectedItem = document.createElement('div')
+    const selectedItem = document.createElement('div')
     selectedItem.className = 'selected-item dropdown-toggle'
     selectedItem.dataset.toggle = 'dropdown'
 
-    let dropdownMenu = document.createElement('div')
+    const dropdownMenu = document.createElement('div')
     dropdownMenu.className = 'dropdown-menu'
 
-    let form = document.createElement('form')
+    const form = document.createElement('form')
 
     dropdownMenu.appendChild(form)
 
@@ -160,7 +166,7 @@ class Select {
       form.appendChild(this._selectItems)
       dropdownMenu.appendChild(form)
 
-      let closeButton = document.createElement('button')
+      const closeButton = document.createElement('button')
       closeButton.className = 'btn btn-text-dark'
       closeButton.innerHTML = 'close'
 
@@ -186,7 +192,7 @@ class Select {
       searchContainer = document.createElement('div')
       searchContainer.className = 'search-container m-0 p-0'
 
-      let searchInput = document.createElement('input')
+      const searchInput = document.createElement('input')
       searchInput.type = 'text'
       searchInput.placeholder = 'Search'
       searchInput.className = 'search-input form-control'
@@ -211,19 +217,19 @@ class Select {
   }
 
   createCheckbox(text, value, checked) {
-    let checkbox = document.createElement('input')
+    const checkbox = document.createElement('input')
     checkbox.setAttribute('type', 'checkbox')
     checkbox.className = 'custom-control-input'
-    checkbox.id = 'check' + Date.now().toString(36) + Math.random().toString(36).substr(2)
+    checkbox.id = `check${Date.now().toString(36)}${Math.random().toString(36).substr(2)}`
     checkbox.value = value
     checkbox.checked = checked
 
-    let label = document.createElement('label')
+    const label = document.createElement('label')
     label.className = 'custom-control-label'
     label.innerHTML = text
     label.setAttribute('for', checkbox.id)
 
-    let customCheckbox = document.createElement('div')
+    const customCheckbox = document.createElement('div')
     customCheckbox.className = 'custom-control custom-checkbox input-dark dropdown-item'
 
     if (checked && !this._multiSelectEnabled) {
@@ -238,16 +244,16 @@ class Select {
 
   showSelectedItems() {
     if (this._multiSelectEnabled) {
-      this._selectedItem.innerHTML = this._options.map(option => {
+      this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
           return `<span class="badge badge-dark">${option.text}<span class="badge-close" aria-hidden="true" data-value="${option.value}">&times;</span></span>`
         }
       }).join('')
 
-      let closeButton = this._selectedItem.querySelectorAll('.badge-close')
+      const closeButton = this._selectedItem.querySelectorAll('.badge-close')
 
-      for (let [, value] of  Object.entries(closeButton)) {
-        value.addEventListener('click', event => {
+      for (const [, value] of Object.entries(closeButton)) {
+        value.addEventListener('click', (event) => {
           event.preventDefault()
           event.stopPropagation()
           this.setSelectValue(event.target.dataset.value, false)
@@ -255,11 +261,10 @@ class Select {
       }
 
       if (this._notch !== null && this._notch) {
-        this._notch.style.height = this._selectedItem.offsetHeight + 'px'
+        this._notch.style.height = `${this._selectedItem.offsetHeight}px`
       }
-
     } else {
-      this._selectedItem.innerHTML = this._options.map(option => {
+      this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
           return option.text
         }
@@ -268,11 +273,11 @@ class Select {
   }
 
   addRipple() {
-    let ripple = document.createElement('div')
+    const ripple = document.createElement('div')
     ripple.className = 'ms-line-ripple'
     ripple.style.backgroundImage =
-      'linear-gradient(' + this._accentColor + ', ' + this._accentColor + '), ' +
-      'linear-gradient(' + this._primaryColor + ', ' + this._primaryColor + ')'
+      `linear-gradient(${this._accentColor}, ${this._accentColor}), ` +
+      `linear-gradient(${this._primaryColor}, ${this._primaryColor})`
 
     this._ripple = ripple
     this._selectedItem.after(ripple)
@@ -280,33 +285,33 @@ class Select {
 
   setAddonHeight() {
     if (this._prepend != null) {
-      this._prepend.style.height = this._selectedItem.offsetHeight + 'px'
-      this._selectedItem.style.paddingLeft = this._prepend.offsetWidth + 'px'
+      this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
+      this._selectedItem.style.paddingLeft = `${this._prepend.offsetWidth}px`
     }
 
     if (this._append != null) {
-      this._append.style.height = this._selectedItem.offsetHeight + 'px'
-      this._selectedItem.style.paddingRight = this._append.offsetWidth + 'px'
+      this._append.style.height = `${this._selectedItem.offsetHeight}px`
+      this._selectedItem.style.paddingRight = `${this._append.offsetWidth}px`
     }
   }
 
   addNotch() {
-    let notch = document.createElement('div')
+    const notch = document.createElement('div')
     notch.className = 'ms-notch'
-    notch.style.height = this._selectedItem.offsetHeight + 'px'
+    notch.style.height = `${this._selectedItem.offsetHeight}px`
 
-    let notchBefore = document.createElement('div')
+    const notchBefore = document.createElement('div')
     notchBefore.className = 'ms-notch-before'
     notchBefore.style.borderColor = this._primaryColor
 
-    let notchBetween = document.createElement('div')
+    const notchBetween = document.createElement('div')
     notchBetween.className = 'ms-notch-between width-auto'
     notchBetween.style.borderColor = this._primaryColor
 
     if (this._label == null) {
       notchBetween.style.padding = 0
     } else {
-      notchBetween.style.width = ((this._label.offsetWidth * 0.75) + 10) + 'px'
+      notchBetween.style.width = `${this._label.offsetWidth * 0.75 + 10}px`
 
       if (this._labelClass == CLASS_NAME_STATIC_LABEL) {
         notchBetween.style.borderTopWidth = 0
@@ -315,7 +320,7 @@ class Select {
       notchBetween.appendChild(this._label)
     }
 
-    let notchAfter = document.createElement('div')
+    const notchAfter = document.createElement('div')
     notchAfter.className = 'ms-notch-after'
     notchAfter.style.borderColor = this._primaryColor
 
@@ -346,8 +351,8 @@ class Select {
     } else {
       this._label.style.color = this._primaryColor
 
-      if (this._selectClass === CLASS_NAME_SELECT_OUTLINE
-        && this._labelClass == CLASS_NAME_FLOATING_LABEL
+      if (this._selectClass === CLASS_NAME_SELECT_OUTLINE &&
+        this._labelClass == CLASS_NAME_FLOATING_LABEL
       ) {
         this._notchBetween.style.borderTopWidth = '1px'
       }
@@ -367,7 +372,6 @@ class Select {
             this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
           }
         }
-
       } else {
         this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
         this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
@@ -380,11 +384,9 @@ class Select {
           }
         }
       }
-    } else {
-      if (this._prepend != null) {
-        if (this._selectClass === CLASS_NAME_SELECT) {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
-        }
+    } else if (this._prepend != null) {
+      if (this._selectClass === CLASS_NAME_SELECT) {
+        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
       }
     }
   }
@@ -431,37 +433,37 @@ class Select {
     let index
 
     if (!this._multiSelectEnabled) {
-      let selectedOptions = this._select.querySelectorAll('option')
+      const selectedOptions = this._select.querySelectorAll('option')
       for (let i = 0; i < selectedOptions.length; i++) {
         if (selectedOptions[i].selected) {
           selectedOptions[i].selected = false
         }
       }
 
-      let checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
+      const checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
       for (let i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = false
         checkboxes[i].closest('.custom-control').classList.remove('checked')
       }
 
-      index = this._options.findIndex(o => o.selected == true)
+      index = this._options.findIndex((o) => o.selected == true)
       if (index != -1) {
         this._options[index].selected = false
       }
     }
 
-    this._select.querySelector('option[value="' + value + '"]').selected = checked
+    this._select.querySelector(`option[value="${value}"]`).selected = checked
 
-    this._dropdown.querySelector('.custom-control-input[value="' + value + '"]').checked = checked
+    this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).checked = checked
 
     if (checked) {
-      this._dropdown.querySelector('.custom-control-input[value="' + value + '"]').closest('.custom-control').classList.add('checked')
+      this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).closest('.custom-control').classList.add('checked')
     } else {
-      this._dropdown.querySelector('.custom-control-input[value="' + value + '"]').closest('.custom-control').classList.remove('checked')
+      this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).closest('.custom-control').classList.remove('checked')
     }
 
 
-    index = this._options.findIndex(o => o.value == value)
+    index = this._options.findIndex((o) => o.value == value)
     this._options[index].selected = checked
 
     this.showSelectedItems()
@@ -480,8 +482,8 @@ class Select {
   }
 
   selectAll(checked) {
-    let options = this._select.querySelectorAll('option')
-    let checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
+    const options = this._select.querySelectorAll('option')
+    const checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
 
     for (let i = 0; i < options.length; i++) {
       options[i].selected = checked
@@ -497,7 +499,7 @@ class Select {
       }
     }
 
-    this._options.map(option => option.selected = checked)
+    this._options.map((option) => option.selected = checked)
 
     this.showSelectedItems()
   }
@@ -532,9 +534,9 @@ class Select {
       if (!this._multiSelectEnabled) {
         this.setSelectValue($(event.target).val(), true)
       } else {
-        let selectValue = $(event.target).val()
+        const selectValue = $(event.target).val()
 
-        for (let [, value] of  Object.entries(this._options)) {
+        for (const [, value] of Object.entries(this._options)) {
           if (selectValue.includes(value.value)) {
             this.setSelectValue(value.value, true)
           } else {

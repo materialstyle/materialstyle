@@ -7,7 +7,7 @@
 import $ from 'jquery'
 
 const getColor = (color) => {
-  let label = $('<label class="text-' + color + '"></label>').hide().appendTo('body')
+  const label = $(`<label class="text-${color}"></label>`).hide().appendTo('body')
   color = label.css('color')
   label.remove()
 
@@ -38,21 +38,8 @@ const getPrimaryColor = (element) => {
   return primaryColor
 }
 
-const getElementsToBeRendered = (element, parent) => {
-  if ('collapse' === parent) {
-    if ($(element).parents('.collapse').length && !$(element).hasClass('ms-rendered')) {
-      return $(element)
-    }
-  } else if ('modal' === parent) {
-    if ($(element).parents('.modal').length && !$(element).hasClass('ms-rendered')) {
-      return $(element)
-    }
-  } else if (0 === $(element).parents('.modal').length
-    && 0 === $(element).parents('.collapse').length
-    && !$(element).hasClass('ms-rendered')
-  ) {
-    return $(element)
-  }
+export {
+  getColor,
+  getAccentColor,
+  getPrimaryColor
 }
-
-export {getColor, getAccentColor, getPrimaryColor, getElementsToBeRendered}

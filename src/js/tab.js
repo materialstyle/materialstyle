@@ -45,11 +45,11 @@ class Tab {
         data._element.style.visibility = 'visible'
 
         $(data._element).find('.nav-item').on('mousedown, mouseup', function () {
-          data['setIndicatorPosition'](this)
+          data.setIndicatorPosition(this)
         })
 
         $(window).resize(function () {
-          data['setIndicatorPositionOnResize'](this)
+          data.setIndicatorPositionOnResize(this)
         })
       }
 
@@ -64,7 +64,8 @@ class Tab {
   }
 
   initTab() {
-    let indicatorLeft = 0, indicatorWidth = 0, indicatorTop = 0
+    let indicatorLeft = 0; let indicatorTop = 0; let
+      indicatorWidth = 0
 
     let activeItem = this._element.querySelector('.nav-link.active')
 
@@ -75,12 +76,12 @@ class Tab {
     }
 
     if (activeItem != null) {
-      indicatorLeft = activeItem.offsetLeft + 'px'
-      indicatorTop = (activeItem.offsetTop + activeItem.offsetHeight - 2) + 'px'
-      indicatorWidth = activeItem.offsetWidth + 'px'
+      indicatorLeft = `${activeItem.offsetLeft}px`
+      indicatorTop = `${activeItem.offsetTop + activeItem.offsetHeight - 2}px`
+      indicatorWidth = `${activeItem.offsetWidth}px`
     }
 
-    let activeIndicator = document.createElement('span')
+    const activeIndicator = document.createElement('span')
     activeIndicator.className = 'active-indicator'
     activeIndicator.style.left = indicatorLeft
     activeIndicator.style.top = indicatorTop
@@ -96,13 +97,14 @@ class Tab {
   }
 
   setIndicatorPosition(target) {
-    this._activeIndicator.style.left = target.offsetLeft + 'px'
-    this._activeIndicator.style.top = (target.offsetTop + target.offsetHeight - 2) + 'px'
-    this._activeIndicator.style.width = target.offsetWidth + 'px'
+    this._activeIndicator.style.left = `${target.offsetLeft}px`
+    this._activeIndicator.style.top = `${target.offsetTop + target.offsetHeight - 2}px`
+    this._activeIndicator.style.width = `${target.offsetWidth}px`
   }
 
   setIndicatorPositionOnResize() {
-    let indicatorLeft = 0, indicatorWidth = 0, indicatorTop = 0
+    let indicatorLeft = 0; let indicatorTop = 0; let
+      indicatorWidth = 0
 
     let activeItem = this._element.querySelector('.nav-link.active')
 
@@ -113,9 +115,9 @@ class Tab {
     }
 
     if (activeItem != null) {
-      indicatorLeft = activeItem.offsetLeft + 'px'
-      indicatorTop = (activeItem.offsetTop + activeItem.offsetHeight - 2) + 'px'
-      indicatorWidth = activeItem.offsetWidth + 'px'
+      indicatorLeft = `${activeItem.offsetLeft}px`
+      indicatorTop = `${activeItem.offsetTop + activeItem.offsetHeight - 2}px`
+      indicatorWidth = `${activeItem.offsetWidth}px`
     }
 
     this._activeIndicator.style.left = indicatorLeft
