@@ -21,6 +21,8 @@ const VERSION = '2.0.0'
 const DATA_KEY = 'ms.shape'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
+const DIVISOR = 2
+
 class Shape {
   constructor(element) {
     this._element = element
@@ -77,27 +79,29 @@ class Shape {
   }
 
   setShapeSize() {
-    let bottomLeftWidth = 0; let bottomRightWidth = 0; let topLeftWidth = 0; let
-      topRightWidth = 0
+    let bottomLeftWidth = 0
+    let bottomRightWidth = 0
+    let topLeftWidth = 0
+    let topRightWidth = 0
 
     if (this._topLeftAngle) {
       topLeftWidth = this._topLeftAngle.className.match(/size-[^\s]+/)
       if (topLeftWidth) {
-        topLeftWidth = parseInt(topLeftWidth[0].replace('size-', ''))
+        topLeftWidth = parseInt(topLeftWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._topRightAngle) {
       topRightWidth = this._topRightAngle.className.match(/size-[^\s]+/)
       if (topRightWidth) {
-        topRightWidth = parseInt(topRightWidth[0].replace('size-', ''))
+        topRightWidth = parseInt(topRightWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._bottomLeftAngle) {
       bottomLeftWidth = this._bottomLeftAngle.className.match(/size-[^\s]+/)
       if (bottomLeftWidth) {
-        bottomLeftWidth = parseInt(bottomLeftWidth[0].replace('size-', ''))
+        bottomLeftWidth = parseInt(bottomLeftWidth[0].replace('size-', ''), 10)
       }
     }
 
@@ -105,34 +109,34 @@ class Shape {
       bottomRightWidth = this._bottomRightAngle.className.match(/size-[^\s]+/)
 
       if (bottomRightWidth) {
-        bottomRightWidth = parseInt(bottomRightWidth[0].replace('size-', ''))
+        bottomRightWidth = parseInt(bottomRightWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (topLeftWidth) {
-      this._topLeftAngle.style.top = `${-(topLeftWidth / 2)}px`
-      this._topLeftAngle.style.left = `${-(topLeftWidth / 2)}px`
+      this._topLeftAngle.style.top = `${-(topLeftWidth / DIVISOR)}px`
+      this._topLeftAngle.style.left = `${-(topLeftWidth / DIVISOR)}px`
       this._topLeftAngle.style.width = `${topLeftWidth}px`
       this._topLeftAngle.style.height = `${topLeftWidth}px`
     }
 
     if (topRightWidth) {
-      this._topRightAngle.style.top = `${-(topRightWidth / 2)}px`
-      this._topRightAngle.style.right = `${-(topRightWidth / 2)}px`
+      this._topRightAngle.style.top = `${-(topRightWidth / DIVISOR)}px`
+      this._topRightAngle.style.right = `${-(topRightWidth / DIVISOR)}px`
       this._topRightAngle.style.width = `${topRightWidth}px`
       this._topRightAngle.style.height = `${topRightWidth}px`
     }
 
     if (bottomLeftWidth) {
-      this._bottomLeftAngle.style.bottom = `${-(bottomLeftWidth / 2)}px`
-      this._bottomLeftAngle.style.left = `${-(bottomLeftWidth / 2)}px`
+      this._bottomLeftAngle.style.bottom = `${-(bottomLeftWidth / DIVISOR)}px`
+      this._bottomLeftAngle.style.left = `${-(bottomLeftWidth / DIVISOR)}px`
       this._bottomLeftAngle.style.width = `${bottomLeftWidth}px`
       this._bottomLeftAngle.style.height = `${bottomLeftWidth}px`
     }
 
     if (bottomRightWidth) {
-      this._bottomRightAngle.style.bottom = `${-(bottomRightWidth / 2)}px`
-      this._bottomRightAngle.style.right = `${-(bottomRightWidth / 2)}px`
+      this._bottomRightAngle.style.bottom = `${-(bottomRightWidth / DIVISOR)}px`
+      this._bottomRightAngle.style.right = `${-(bottomRightWidth / DIVISOR)}px`
       this._bottomRightAngle.style.width = `${bottomRightWidth}px`
       this._bottomRightAngle.style.height = `${bottomRightWidth}px`
     }

@@ -5,10 +5,11 @@
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
 import {
   getAccentColor, getPrimaryColor
 } from '../js/utility.js'
+
+import $ from 'jquery'
 
 /**
  * --------------------------------------------------------------------------
@@ -37,6 +38,13 @@ const CLASS_NAME_MULTI_SELECT = 'multi-select'
 const SELECTOR_CHECKBOX = '.select-items .custom-control-input'
 const SELECTOR_SELECT_ALL_CHECKBOX = '.select-all-container .custom-control-input'
 
+const FLOATING_LABEL_SCALE = 0.75
+const NOTCH_BETWEEN_PADDING_SUM = 10
+const NOTCH_BETWEEN_PADDING_LEFT = 5
+const NOTCH_BEFORE_WIDTH = 12
+const TO_STRING_BASE = 36
+const SUBSTR_INDEX = 2
+
 class Select {
   constructor(element) {
     this._element = element
@@ -49,7 +57,7 @@ class Select {
     this._label = element.querySelector('label')
     this._labelClass = ''
 
-    if (this._label != null) {
+    if (this._label !== null) {
       this._labelClass = this._label.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
     }
 
@@ -126,7 +134,7 @@ class Select {
 
     this.setAddonHeight()
 
-    if (this._label != null) {
+    if (this._label !== null) {
       this.initLabel()
     }
   }
@@ -134,9 +142,9 @@ class Select {
   redraw() {
     this.setAddonHeight()
 
-    if (this._selectClass == CLASS_NAME_SELECT_OUTLINE) {
+    if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
       this._notch.style.height = `${this._selectedItem.offsetHeight}px`
-      this._notchBetween.style.width = `${this._label.offsetWidth * 0.75 + 10}px`
+      this._notchBetween.style.width = `${this._label.offsetWidth * FLOATING_LABEL_SCALE + NOTCH_BETWEEN_PADDING_SUM}px`
     }
 
     this.setLabelPosition()
@@ -220,7 +228,7 @@ class Select {
     const checkbox = document.createElement('input')
     checkbox.setAttribute('type', 'checkbox')
     checkbox.className = 'custom-control-input'
-    checkbox.id = `check${Date.now().toString(36)}${Math.random().toString(36).substr(2)}`
+    checkbox.id = `check${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).substr(SUBSTR_INDEX)}`
     checkbox.value = value
     checkbox.checked = checked
 
@@ -248,6 +256,7 @@ class Select {
         if (option.selected) {
           return `<span class="badge badge-dark">${option.text}<span class="badge-close" aria-hidden="true" data-value="${option.value}">&times;</span></span>`
         }
+        return ''
       }).join('')
 
       const closeButton = this._selectedItem.querySelectorAll('.badge-close')
@@ -268,6 +277,7 @@ class Select {
         if (option.selected) {
           return option.text
         }
+        return ''
       }).join('')
     }
   }
@@ -284,12 +294,12 @@ class Select {
   }
 
   setAddonHeight() {
-    if (this._prepend != null) {
+    if (this._prepend !== null) {
       this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
       this._selectedItem.style.paddingLeft = `${this._prepend.offsetWidth}px`
     }
 
-    if (this._append != null) {
+    if (this._append !== null) {
       this._append.style.height = `${this._selectedItem.offsetHeight}px`
       this._selectedItem.style.paddingRight = `${this._append.offsetWidth}px`
     }
@@ -308,12 +318,12 @@ class Select {
     notchBetween.className = 'ms-notch-between width-auto'
     notchBetween.style.borderColor = this._primaryColor
 
-    if (this._label == null) {
+    if (this._label === null) {
       notchBetween.style.padding = 0
     } else {
-      notchBetween.style.width = `${this._label.offsetWidth * 0.75 + 10}px`
+      notchBetween.style.width = `${this._label.offsetWidth * FLOATING_LABEL_SCALE + NOTCH_BETWEEN_PADDING_SUM}px`
 
-      if (this._labelClass == CLASS_NAME_STATIC_LABEL) {
+      if (this._labelClass === CLASS_NAME_STATIC_LABEL) {
         notchBetween.style.borderTopWidth = 0
       }
 
@@ -352,7 +362,7 @@ class Select {
       this._label.style.color = this._primaryColor
 
       if (this._selectClass === CLASS_NAME_SELECT_OUTLINE &&
-        this._labelClass == CLASS_NAME_FLOATING_LABEL
+        this._labelClass === CLASS_NAME_FLOATING_LABEL
       ) {
         this._notchBetween.style.borderTopWidth = '1px'
       }
@@ -365,43 +375,43 @@ class Select {
         this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
         this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
 
-        if (this._prepend != null) {
+        if (this._prepend !== null) {
           if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-            this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
+            this._label.style.transform = `translate(0, -0.5rem) scale(${FLOATING_LABEL_SCALE})`
           } else {
-            this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+            this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
           }
         }
       } else {
         this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
         this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
 
-        if (this._prepend != null) {
+        if (this._prepend !== null) {
           if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-            this._label.style.transform = `translate(${this._prepend.offsetWidth - 17}px, 1.2rem)`
+            this._label.style.transform = `translate(${this._prepend.offsetWidth - (NOTCH_BEFORE_WIDTH + NOTCH_BETWEEN_PADDING_LEFT)}px, 1.2rem)`
           } else {
             this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
           }
         }
       }
-    } else if (this._prepend != null) {
+    } else if (this._prepend !== null) {
       if (this._selectClass === CLASS_NAME_SELECT) {
-        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
       }
     }
   }
 
   handleFocus() {
-    if (this._label != null) {
+    if (this._label !== null) {
       this._label.style.color = this._accentColor
       this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
       this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
 
-      if (this._prepend != null) {
+      if (this._prepend !== null) {
         if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-          this._label.style.transform = 'translate(0, -0.5rem) scale(0.75)'
+          this._label.style.transform = `translate(0, -0.5rem) scale(${FLOATING_LABEL_SCALE})`
         } else {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(0.75)`
+          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
         }
       }
     }
@@ -416,7 +426,7 @@ class Select {
   }
 
   handleFocusOut() {
-    if (this._label != null) {
+    if (this._label !== null) {
       this.setLabelColor()
       this.setLabelPosition()
     }
@@ -446,8 +456,8 @@ class Select {
         checkboxes[i].closest('.custom-control').classList.remove('checked')
       }
 
-      index = this._options.findIndex((o) => o.selected == true)
-      if (index != -1) {
+      index = this._options.findIndex((o) => o.selected === true)
+      if (index !== -1) {
         this._options[index].selected = false
       }
     }
@@ -463,7 +473,7 @@ class Select {
     }
 
 
-    index = this._options.findIndex((o) => o.value == value)
+    index = this._options.findIndex((o) => o.value === value)
     this._options[index].selected = checked
 
     this.showSelectedItems()
@@ -472,8 +482,8 @@ class Select {
   search(value) {
     value = value.toLowerCase()
 
-    $(this._dropdown.querySelectorAll('.select-items .custom-checkbox')).filter(function () {
-      if ($(this).find('.custom-control-label').html().toLowerCase().indexOf(value) == -1) {
+    $(this._dropdown.querySelectorAll('.select-items .custom-checkbox')).each(function () {
+      if ($(this).find('.custom-control-label').html().toLowerCase().indexOf(value) === -1) {
         $(this).hide()
       } else {
         $(this).show()
@@ -499,7 +509,9 @@ class Select {
       }
     }
 
-    this._options.map((option) => option.selected = checked)
+    this._options.forEach((option) => {
+      option.selected = checked
+    })
 
     this.showSelectedItems()
   }
