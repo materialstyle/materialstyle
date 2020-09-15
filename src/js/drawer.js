@@ -22,6 +22,7 @@ const CLASS_NAME_VISIBLE = '--visible'
 const CLASS_NAME_SWITCHED = '--switched'
 const CLASS_NAME_FIXED = '--fixed'
 const ID_SHADE = 'ms-shade'
+const TOGGLE_AT_WIDTH = 1280
 
 class Drawer {
   constructor(element) {
@@ -81,20 +82,20 @@ class Drawer {
     }
 
     let navbarHeight = '56px'
-    if (this._navBar != null) {
+    if (this._navBar !== null) {
       navbarHeight = this._navBar.offsetHeight
     }
 
-    if (this._drawerBrand != null) {
+    if (this._drawerBrand !== null) {
       this._drawerBrand.style.height = `${navbarHeight}px`
     }
 
-    if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed != null) {
+    if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed !== null) {
       this._fixed.style.top = `${navbarHeight}px`
       this._fixed.style.height = `calc(100vh - ${navbarHeight}px)`
     }
 
-    if (this._element.querySelector('.nav-link.active') != null) {
+    if (this._element.querySelector('.nav-link.active') !== null) {
       this._element.querySelector('.nav-link.active').closest('.sub-menu-container').prev('.nav-item').find('> .sub-menu-link').trigger('click')
     }
 
@@ -117,7 +118,7 @@ class Drawer {
   }
 
   toggle() {
-    if ($(window).innerWidth() < 1281) {
+    if ($(window).innerWidth() < TOGGLE_AT_WIDTH) {
       if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
         this._element.classList.add(CLASS_NAME_SWITCHED)
         this._element.classList.remove(CLASS_NAME_VISIBLE)
@@ -126,11 +127,11 @@ class Drawer {
 
       this._shade.style.display = 'none'
 
-      if (this._hamburger != null) {
+      if (this._hamburger !== null) {
         this._hamburger.style.display = 'block'
       }
 
-      if (this._footer != null) {
+      if (this._footer !== null) {
         this._footer.style.marginLeft = 0
       }
     } else {
@@ -140,11 +141,11 @@ class Drawer {
         this._element.style.left = 0
       }
 
-      if (this._hamburger != null) {
+      if (this._hamburger !== null) {
         this._hamburger.style.display = 'none'
       }
 
-      if (this._footer != null && this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
+      if (this._footer !== null && this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
         this._footer.style.marginLeft = '250px'
       }
     }
@@ -154,8 +155,8 @@ class Drawer {
     this._hamburger.addEventListener('click', () => this.show())
 
     document.addEventListener('click', (event) => {
-      if (event.target != this._element &&
-        event.target != this._hamburger &&
+      if (event.target !== this._element &&
+        event.target !== this._hamburger &&
         !this._element.contains(event.target)
       ) {
         this.hide()
@@ -171,11 +172,11 @@ class Drawer {
         const subMenuContainer = event.target.closest('.nav-item').nextElementSibling
         let subMenu = null
 
-        if (subMenuContainer != null) {
+        if (subMenuContainer !== null) {
           subMenu = subMenuContainer.querySelector('.sub-menu')
         }
 
-        if (subMenu != null) {
+        if (subMenu !== null) {
           const subMenuHeight = subMenu.offsetHeight
 
           if (show) {
@@ -207,15 +208,15 @@ class Drawer {
       }
 
       let navbarHeight = '56px'
-      if (this._navBar != null) {
+      if (this._navBar !== null) {
         navbarHeight = this._navBar.offsetHeight
       }
 
-      if (this._drawerBrand != null) {
+      if (this._drawerBrand !== null) {
         this._drawerBrand.style.height = `${navbarHeight}px`
       }
 
-      if (this._fixed != null) {
+      if (this._fixed !== null && this._fixed !== undefined) {
         this._fixed.style.top = `${navbarHeight}px`
         this._fixed.style.height = `calc(100vh - ${navbarHeight}px)`
       }

@@ -49,8 +49,9 @@ class FileInput {
   }
 
   handleFileChange() {
-    const files = []; let fileArr; let
-      filename = 'No file chosen'
+    const files = []
+    let fileArr
+    let filename = 'No file chosen'
 
     if (this._multipleSupport) {
       fileArr = this._fileInput.files
@@ -66,7 +67,7 @@ class FileInput {
       filename = this._fileInput.val().split('\\').pop()
     }
 
-    if (filename == '') {
+    if (filename === '') {
       filename = 'No file chosen'
     }
 

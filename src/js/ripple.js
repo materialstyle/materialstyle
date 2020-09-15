@@ -18,6 +18,8 @@ const VERSION = '2.0.0'
 const DATA_KEY_RIPPLE = 'ms.ripple'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
+const DIVISOR = 2
+
 class Ripple {
   constructor(element) {
     this._element = element
@@ -52,7 +54,7 @@ class Ripple {
     ripple.style.width = `${maxDimension}px`
     ripple.style.height = `${maxDimension}px`
 
-    if (this._element.querySelector('.ms-ripple') == null) {
+    if (this._element.querySelector('.ms-ripple') === null) {
       this._element.appendChild(ripple)
     }
 
@@ -69,8 +71,8 @@ class Ripple {
       left: elementPosition.left + window.scrollX
     }
 
-    const x = event.pageX - offset.left - this._ripple.offsetWidth / 2
-    const y = event.pageY - offset.top - this._ripple.offsetHeight / 2
+    const x = event.pageX - offset.left - this._ripple.offsetWidth / DIVISOR
+    const y = event.pageY - offset.top - this._ripple.offsetHeight / DIVISOR
 
     this._ripple.style.top = `${y}px`
     this._ripple.style.left = `${x}px`
@@ -80,9 +82,9 @@ class Ripple {
     this._ripple.setAttribute('data-animationstate', 'running')
     this._ripple.classList.add('animate')
 
-    if (this._element.querySelector('.animate') != null) {
+    if (this._element.querySelector('.animate') !== null) {
       this._element.querySelector('.animate').addEventListener('animationend', (e) => {
-        if (e.target.getAttribute('data-mousedown') == 'false') {
+        if (e.target.getAttribute('data-mousedown') === 'false') {
           e.target.classList.remove('animate')
         } else {
           e.target.setAttribute('data-animationstate', 'stopped')
@@ -94,10 +96,10 @@ class Ripple {
   handleMouseUpMouseMove() {
     const animate = this._element.querySelector('.animate')
 
-    if (animate != null) {
+    if (animate !== null) {
       animate.setAttribute('data-mousedown', 'false')
 
-      if (animate.getAttribute('data-animationstate') == 'stopped') {
+      if (animate.getAttribute('data-animationstate') === 'stopped') {
         animate.classList.remove('animate')
       }
     }
