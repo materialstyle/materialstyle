@@ -6,15 +6,6 @@
   margin-bottom: 0;
   visibility: hidden;
 
-  .form-control,
-  .form-control-sm,
-  .form-control-lg {
-    border: none !important;
-    border-radius: 4px 4px 0 0;
-    outline: 0 !important;
-    box-shadow: none !important;
-  }
-
   .prepend,
   .append {
     position: absolute;
@@ -94,7 +85,7 @@
       background-color: #e4e4e4;
     }
     .ms-line-ripple {
-      background-size: 100% 2px, 100% 1px !important;
+      background-size: 100% 2px, 100% 1px;
     }
   }
 }
@@ -130,7 +121,7 @@
 
   .static-label,
   .floating-label-active {
-    transform: translate(0, -.5rem) scale(.75) !important;
+    transform: translate(0, -.5rem) scale(.75);
   }
 
   .floating-label {
@@ -164,14 +155,14 @@
   .floating-label,
   .floating-label-active,
   .static-label {
-    color: theme-color("danger") !important;
+    color: theme-color("danger");
   }
   .ms-text-field {
     .form-control,
     .form-control-sm,
     .form-control-lg {
       & + .ms-line-ripple {
-        background-image: linear-gradient(theme-color("danger"), theme-color("danger")), linear-gradient(theme-color("danger"), theme-color("danger")) !important;
+        background-image: linear-gradient(theme-color("danger"), theme-color("danger")), linear-gradient(theme-color("danger"), theme-color("danger")) !important; /* stylelint-disable-line declaration-no-important */
       }
     }
   }
@@ -179,7 +170,7 @@
     .ms-notch-before,
     .ms-notch-between,
     .ms-notch-after {
-      border-color: theme-color("danger") !important;
+      border-color: theme-color("danger") !important; /* stylelint-disable-line declaration-no-important */
     }
   }
 }

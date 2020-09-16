@@ -1,13 +1,13 @@
 @each $color, $value in $theme-colors {
   .nav-tabs.accent-#{$color} .nav-link.active,
   .nav-tabs.primary-#{$color} .nav-link:not(.active) {
-    color: $value !important;
+    color: $value;
   }
 
   .nav-tabs.accent-#{$color} {
     .active-indicator,
     .ms-ripple {
-      background-color: $value !important;
+      background: $value;
     }
   }
 }
@@ -18,7 +18,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   visibility: hidden;
-  border-bottom: 1px solid map-get($material-colors, "grey-200") !important;
 
   &.icon-top {
     .nav-link {
@@ -65,18 +64,10 @@
       outline: none;
       box-shadow: none;
 
-      .ms-ripple {
-        background: theme-color("primary");
-      }
-
       &.active {
         color: theme-color("primary");
         background: transparent;
         border: 0;
-
-        + .active-indicator {
-          opacity: 1;
-        }
       }
 
       &.focus,
@@ -95,6 +86,12 @@
     }
   }
 
+  .nav-link.active {
+    + .active-indicator {
+      opacity: 1;
+    }
+  }
+
   .active-indicator {
     position: absolute;
     bottom: 0;
@@ -104,5 +101,9 @@
     height: 2px;
     background: theme-color("primary");
     transition: left .2s ease;
+  }
+
+  .ms-ripple {
+    background: theme-color("primary");
   }
 }

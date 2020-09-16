@@ -58,15 +58,11 @@
   .search-input {
     padding: .5rem .75rem;
     background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9e9e9e, #9e9e9e) center bottom/ 100% 1px no-repeat border-box transparent;
-    border: none !important;
-    border-radius: 0;
-    outline: 0 !important;
-    box-shadow: none !important;
     transition: .3s cubic-bezier(.4, 0, .2, 1);
 
     &:focus {
       background-color: transparent;
-      background-size: 100% 2px, 100% 1px !important;
+      background-size: 100% 2px, 100% 1px;
     }
   }
 
@@ -151,7 +147,7 @@
       background-color: #e4e4e4;
     }
     .ms-line-ripple {
-      background-size: 100% 2px, 100% 1px !important;
+      background-size: 100% 2px, 100% 1px;
     }
   }
 
@@ -229,12 +225,12 @@
   .floating-label,
   .floating-label-active,
   .static-label {
-    color: theme-color("danger") !important;
+    color: theme-color("danger") !important; /* stylelint-disable-line declaration-no-important */
   }
   .ms-select {
     .selected-item {
       & + .ms-line-ripple {
-        background-image: linear-gradient(theme-color("danger"), theme-color("danger")), linear-gradient(theme-color("danger"), theme-color("danger")) !important;
+        background-image: linear-gradient(theme-color("danger"), theme-color("danger")), linear-gradient(theme-color("danger"), theme-color("danger")) !important; /* stylelint-disable-line declaration-no-important */
       }
     }
   }
@@ -242,7 +238,7 @@
     .ms-notch-before,
     .ms-notch-between,
     .ms-notch-after {
-      border-color: theme-color("danger") !important;
+      border-color: theme-color("danger") !important; /* stylelint-disable-line declaration-no-important */
     }
   }
 }

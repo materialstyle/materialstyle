@@ -34,22 +34,22 @@
 
 }
 
-.switch-square {
+.custom-switch.switch-square {
   .custom-control-label::before,
   .custom-control-label::after {
-    border-radius: 0 !important;
+    border-radius: 0;
   }
 }
 
-.switch-android {
+.custom-switch.switch-android {
   .custom-control-label::before {
     top: calc(.25rem + 2px);
     height: calc(1rem - 4px);
   }
   .custom-control-label::after {
-    top: .25rem !important;
-    left: -2.25rem !important;
-    width: 1rem !important;
-    height: 1rem !important;
+    top: .25rem;
+    left: -2.25rem;
+    width: 1rem;
+    height: 1rem;
   }
 }

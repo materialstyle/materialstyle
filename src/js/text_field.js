@@ -247,9 +247,6 @@ class TextField {
     }
 
     if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-      this._textField.style.borderColor = this._accentColor
-      this._textField.style.boxShadow = `inset 0 0 1px 1px ${this._accentColor}`
-
       this._notchBetween.style.borderTopWidth = 0
       this._notch.classList.add('notch-active')
       this._notchBefore.style.borderColor = this._accentColor
@@ -267,8 +264,6 @@ class TextField {
     }
 
     if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
-      this._textField.style.borderColor = this._primaryColor
-      this._textField.style.boxShadow = 'none'
       this._notch.classList.remove('notch-active')
       this._notchBefore.style.borderColor = this._primaryColor
       this._notchBetween.style.borderColor = this._primaryColor

@@ -9,7 +9,7 @@
   background: #fff;
   transition: left .2s cubic-bezier(.4, 0, .2, 1) .1s;
 
-  &.--visible {
+  &.drawer-visible {
     position: relative;
     top: auto;
     left: 0;
@@ -32,8 +32,8 @@
     padding: .5rem .5rem .5rem 1rem;
   }
 
-  &.--fixed,
-  &.--visible {
+  &.drawer-fixed,
+  &.drawer-visible {
     .drawer-brand {
       position: fixed;
     }
@@ -50,7 +50,7 @@
   }
 
   .nav-link.active {
-    color: theme-color("primary") !important;
+    color: theme-color("primary");
   }
 
   .ms-fixed {
@@ -86,7 +86,7 @@
   cursor: pointer;
 }
 
-#ms-shade {
+.ms-shade {
   position: fixed;
   top: 0;
   right: 0;

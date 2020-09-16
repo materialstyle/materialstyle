@@ -46,7 +46,11 @@ $modal-content-border-radius: 0;
 // Pagination
 $pagination-focus-box-shadow: none;
 
+// Tab
+$nav-tabs-border-color: map-get($material-colors, "grey-200");
+
 // Text Field
+$input-border-width: 0;
 $input-border-radius: 0;
 $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
@@ -56,6 +60,8 @@ $input-height-lg: auto;
 $input-font-family: "Roboto", sans-serif;
 $input-padding-x-sm: .75rem;
 $input-padding-x-lg: .75rem;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
 
 // Toast
 $toast-border-width: 0;

@@ -18,10 +18,10 @@ const VERSION = '2.0.0'
 const DATA_KEY = 'ms.drawer'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-const CLASS_NAME_VISIBLE = '--visible'
+const CLASS_NAME_VISIBLE = 'drawer-visible'
 const CLASS_NAME_SWITCHED = '--switched'
-const CLASS_NAME_FIXED = '--fixed'
-const ID_SHADE = 'ms-shade'
+const CLASS_NAME_FIXED = 'drawer-fixed'
+const CLASS_SHADE = 'ms-shade'
 const TOGGLE_AT_WIDTH = 1280
 
 class Drawer {
@@ -54,12 +54,16 @@ class Drawer {
   }
 
   createShade() {
-    const shade = document.createElement('div')
-    shade.id = ID_SHADE
-    shade.style.display = 'none'
-    document.querySelector('body').append(shade)
+    if (document.querySelector(`.${CLASS_SHADE}`) === null) {
+      const shade = document.createElement('div')
+      shade.className = CLASS_SHADE
+      shade.style.display = 'none'
+      document.querySelector('body').append(shade)
 
-    return shade
+      return shade
+    }
+
+    return document.querySelector(`.${CLASS_SHADE}`)
   }
 
   initDrawer() {
