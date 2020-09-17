@@ -5,8 +5,8 @@
   vertical-align: middle;
   visibility: hidden;
 
-  *:not(.ms-ripple),
-  *:not(.ms-ripple):hover {
+  *:not(.ms-ripple):not(.btn-fab),
+  *:not(.ms-ripple):not(.btn-fab):hover {
     border-radius: 0;
     outline: none;
     box-shadow: none;
