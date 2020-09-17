@@ -41,7 +41,7 @@ webpackConfig = {
                 return "../js/dist/" + chunkName + ".js";
             }
         },
-        publicPath: "/",
+        publicPath: "dist",
         library: "materialstyle",
         libraryTarget: "umd",
     },
