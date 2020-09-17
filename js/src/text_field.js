@@ -7,7 +7,7 @@
 
 import {
   getAccentColor, getPrimaryColor
-} from '../js/utility.js'
+} from '../src/utility.js'
 
 import $ from 'jquery'
 

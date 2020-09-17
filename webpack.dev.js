@@ -8,7 +8,7 @@ const Components = require("./components.js");
 webpackConfig = merge(common, {
     mode: "development",
     devServer: {
-        contentBase: path.join(__dirname, "src/examples"),
+        contentBase: path.join(__dirname, "examples"),
         port: 3005,
         hot: false,
         watchContentBase: true,
@@ -26,7 +26,7 @@ Components.forEach(function (component) {
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
-            template: "./src/examples/" + component + ".html",
+            template: "./examples/" + component + ".html",
             filename: "examples/" + component + ".html"
         })
     );

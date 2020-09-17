@@ -8,7 +8,7 @@
 import $ from 'jquery'
 import {
   getColor
-} from '../js/utility.js'
+} from '../src/utility.js'
 
 /**
  * --------------------------------------------------------------------------

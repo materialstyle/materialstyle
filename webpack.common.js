@@ -5,42 +5,41 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 webpackConfig = {
     entry: {
-        alert: "./src/js/alert.js",
-        button: "./src/js/button.js",
-        carousel: "./src/js/carousel.js",
-        collapse: "./src/js/collapse.js",
-        drawer: "./src/js/drawer.js",
-        dropdown: "./src/js/dropdown.js",
-        file_input: "./src/js/file_input.js",
-        modal: "./src/js/modal.js",
-        navbar: "./src/js/navbar.js",
-        popover: "./src/js/popover.js",
-        scrollspy: "./src/js/scrollspy.js",
-        tab: "./src/js/tab.js",
-        toast: "./src/js/toast.js",
-        tooltip: "./src/js/tooltip.js",
-        utility: "./src/js/utility.js",
-        ripple: "./src/js/ripple.js",
-        select: "./src/js/select.js",
-        shape: "./src/js/shape.js",
-        snackbar: "./src/js/snackbar.js",
-        spinner: "./src/js/spinner.js",
-        rainbow: "./src/js/rainbow.js",
-        text_field: "./src/js/text_field.js",
-        material_style: "./src/js/material_style.js"
+        alert: "./js/src/alert.js",
+        button: "./js/src/button.js",
+        carousel: "./js/src/carousel.js",
+        collapse: "./js/src/collapse.js",
+        drawer: "./js/src/drawer.js",
+        dropdown: "./js/src/dropdown.js",
+        file_input: "./js/src/file_input.js",
+        modal: "./js/src/modal.js",
+        navbar: "./js/src/navbar.js",
+        popover: "./js/src/popover.js",
+        scrollspy: "./js/src/scrollspy.js",
+        tab: "./js/src/tab.js",
+        toast: "./js/src/toast.js",
+        tooltip: "./js/src/tooltip.js",
+        utility: "./js/src/utility.js",
+        ripple: "./js/src/ripple.js",
+        select: "./js/src/select.js",
+        shape: "./js/src/shape.js",
+        snackbar: "./js/src/snackbar.js",
+        spinner: "./js/src/spinner.js",
+        rainbow: "./js/src/rainbow.js",
+        text_field: "./js/src/text_field.js",
+        material_style: "./js/src/material_style.js"
     },
     devtool: "source-map",
     output: {
-        path: path.resolve(__dirname, "material-style"),
+        path: path.resolve(__dirname, "dist"),
         filename: chunkData => {
             let chunkName = chunkData.chunk.name;
 
             if (chunkName === "material_style") {
-                return "dist/js/material-style.min.js";
+                return "js/material-style.min.js";
             } else {
-                return "js/" + chunkName + ".js";
+                return "../js/dist/" + chunkName + ".js";
             }
-
         },
         publicPath: "/",
         library: "materialstyle",
@@ -50,14 +49,14 @@ webpackConfig = {
         rules: [
             {
                 test: /\.js$/,
-                include: path.resolve(__dirname, "src/js"),
+                include: path.resolve(__dirname, "js/src"),
                 use: {
                     loader: "babel-loader"
                 }
             },
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, "src/scss"),
+                include: path.resolve(__dirname, "scss"),
                 use: [
                     "style-loader",
                     MiniCssExtractPlugin.loader,
@@ -76,14 +75,8 @@ webpackConfig = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            moduleFilename: chunkData => {
-                let chunkName = chunkData.name;
-
-                if (chunkName === "material_style") {
-                    return "dist/css/material-style.min.css";
-                } else {
-                    return "css/" + chunkName + ".css";
-                }
+            moduleFilename: () => {
+              return "css/material-style.min.css";
             },
 
             // chunkFilename: "[name].css"

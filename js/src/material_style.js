@@ -23,4 +23,4 @@ import './spinner'
 import './rainbow'
 import './text_field'
 
-import '../scss/material_style.scss'
+import '../../scss/material_style.scss'
