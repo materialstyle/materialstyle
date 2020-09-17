@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+    <title>Button</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+</head>
+<body>
+
+<h1 class="m-3">Button</h1>
+
+<div class="m-3">
+    <label class="d-block">Button</label>
+    <button type="button" class="btn btn-pink">
+        Raised
+    </button>
+    <button type="button" class="btn btn-pink unelevated">
+        Unelevated
+    </button>
+    <button type="button" class="btn btn-pink">
+        Icon <i class="material-icons">thumb_up</i>
+    </button>
+    <button type="button" class="btn btn-pink btn-lg">
+        Large
+    </button>
+    <button type="button" class="btn btn-pink btn-sm">
+        Small
+    </button>
+    <button type="button" class="btn btn-pink" disabled>
+        Disabled
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Outlined button</label>
+    <button type="button" class="btn btn-outline-purple">
+        Icon <i class="material-icons">thumb_up</i>
+    </button>
+    <button type="button" class="btn btn-outline-purple btn-lg">
+        Large
+    </button>
+    <button type="button" class="btn btn-outline-purple btn-sm">
+        Small
+    </button>
+    <button type="button" class="btn btn-outline-purple" disabled>
+        Disabled
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Text button</label>
+    <button type="button" class="btn btn-text-green">
+        Icon <i class="material-icons">thumb_up</i>
+    </button>
+    <button type="button" class="btn btn-text-green btn-lg">
+        Large
+    </button>
+    <button type="button" class="btn btn-text-green btn-sm">
+        Small
+    </button>
+    <button type="button" class="btn btn-text-green" disabled>
+        Disabled
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Horizontal button group</label>
+    <div class="btn-group">
+        <button type="button" class="btn btn-indigo">Raised</button>
+        <button type="button" class="btn btn-indigo">Raised</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-indigo">
+            Icon <i class="material-icons">thumb_up</i>
+        </button>
+        <button type="button" class="btn btn-indigo">
+            Icon <i class="material-icons">thumb_up</i>
+        </button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-indigo btn-lg">Large</button>
+        <button type="button" class="btn btn-indigo btn-lg">Large</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-indigo btn-sm">Small</button>
+        <button type="button" class="btn btn-indigo btn-sm">Small</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+    </div>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Horizontal button group</label>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-indigo">Raised</button>
+        <button type="button" class="btn btn-indigo">Raised</button>
+    </div>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+    </div>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-indigo">
+            Icon <i class="material-icons">thumb_up</i>
+        </button>
+        <button type="button" class="btn btn-indigo">
+            Icon <i class="material-icons">thumb_up</i>
+        </button>
+    </div>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-indigo btn-lg">Large</button>
+        <button type="button" class="btn btn-indigo btn-lg">Large</button>
+    </div>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-indigo btn-sm">Small</button>
+        <button type="button" class="btn btn-indigo btn-sm">Small</button>
+    </div>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+    </div>
+</div>
+
+<div class="m-3">
+    <label class="d-block">File input button</label>
+    <div class="ms-file-input">
+        <input type="file" name="myfile">
+        <button type="button" class="btn btn-dark btn-file">
+            <i class="material-icons">attach_file</i> Browse Single</button>
+        <label class="files"></label>
+    </div>
+
+    <div class="ms-file-input">
+        <input type="file" name="myfiles[]" multiple>
+        <button type="button" class="btn btn-dark btn-file">
+            <i class="material-icons">attach_file</i> Browse Multiple</button>
+        <label class="files"></label>
+    </div>
+</div>
+
+<h1 class="m-3">Floating Action Button (FAB)</h1>
+
+<div class="m-3">
+    <label class="d-block">Standard</label>
+    <button type="button" class="btn btn-fab btn-teal">
+        <i class="material-icons">favorite</i>
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Disabled</label>
+    <button type="button" class="btn btn-fab btn-teal" disabled>
+        <i class="material-icons">favorite</i>
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Mini</label>
+    <button type="button" class="btn btn-fab mini-fab btn-teal">
+        <i class="material-icons">favorite</i>
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Leaf</label>
+    <button type="button" class="btn btn-fab leaf-fab btn-teal">
+        <i class="material-icons">favorite</i>
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Leaf Inverted</label>
+    <button type="button" class="btn btn-fab leaf-fab-inverted btn-teal">
+        <i class="material-icons">favorite</i>
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Extended</label>
+    <button type="button" class="btn btn-fab extended-fab btn-teal">
+        <i class="material-icons">favorite</i> Like
+    </button>
+</div>
+
+<div class="m-3">
+    <label class="d-block">Extended Mini</label>
+    <button type="button" class="btn btn-fab extended-mini-fab btn-teal">
+        <i class="material-icons">favorite</i> Like
+    </button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/material-style.min.js"></script>
+<script>
+    $(function(){
+        $('.ms-file-input').fileinput();
+        $('.btn').ripple();
+    })
+
+</script>
+</body>
+</html>

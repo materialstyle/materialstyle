@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snackbar</title>
+    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+</head>
+<body>
+<h1 class="m-3">Snackbar</h1>
+
+<div class="m-3">
+    <button type="button" class="btn btn-indigo" data-toggle="snackbar"
+            data-target="#snackbar-left">
+        Show Snackbar
+    </button>
+    <div class="snackbar snackbar-left" id="snackbar-left">This is a Snackbar</div>
+</div>
+
+<div class="m-3">
+    <button type="button" class="btn btn-ms btn-indigo ripple" data-toggle="snackbar"
+            data-target="#snackbar">
+        Show Snackbar
+    </button>
+    <div class="snackbar bg-primary" id="snackbar">This is a Snackbar</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/material-style.min.js"></script>
+<script>
+    $('[data-toggle="snackbar"]').snackbar();
+</script>
+</body>
+</html>

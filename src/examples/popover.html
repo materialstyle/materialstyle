@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popover</title>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+</head>
+<body>
+<h1 class="m-3">Popover</h1>
+
+<div class="m-3">
+    <a href="#" data-toggle="popover" title="Popover Header"
+       data-content="Some content inside the popover">
+        Toggle popover
+    </a>
+</div>
+
+<div class="m-3">
+    <button type="button" class="btn btn-blue" data-toggle="popover"
+            title="Popover Header" data-content="Some content inside the popover">
+        Toggle popover
+    </button>
+</div>
+
+<div class="m-3">
+    <a href="#" data-toggle="popover" data-placement="top"
+       title="Popover Header" data-content="Some content inside the popover">
+        Toggle popover
+    </a>
+</div>
+
+<div class="m-3">
+    <a href="#" data-toggle="popover" data-trigger="focus" title="Dismissible Popover"
+       data-content="Click anywhere in the document to close this popover">
+        Toggle popover
+    </a>
+</div>
+
+<div class="m-3">
+    <!-- Showing popovers on Hover -->
+    <a href="#" data-toggle="popover" data-trigger="hover" title="Popover on Hover"
+       data-content="Click anywhere in the document to close this popover">
+        Toggle popover
+    </a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/material-style.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+</body>
+</html>

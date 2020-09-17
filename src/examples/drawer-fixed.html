@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drawer (Fixed)</title>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+    <style>
+        footer {
+            padding: 15px;
+        }
+
+        .sample {
+            padding: 35px;
+            text-align: center;
+            font-size: 40px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-blue navbar-dark">
+    <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+    <a class="navbar-brand" href="javascript:">
+        Brand
+    </a>
+</nav>
+
+<section class="ms-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light raised-4dp">
+        <div class="drawer-brand bg-dark text-light">
+            <a class="navbar-brand text-light" href="javascript:">
+                Brand
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="javascript:">
+                    Link
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="javascript:">
+                    Link
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark sub-menu-link" href="javascript:">
+                    Menu A <i class="material-icons">keyboard_arrow_down</i>
+                </a>
+            </li>
+            <li class="nav-item sub-menu-container">
+                <ul class=" nav flex-column sub-menu" data-ic-class="sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="javascript:">
+                            Menu Item
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="javascript:">
+                            Menu Item
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark sub-menu-link" href="javascript:">
+                    Menu B <i class="material-icons">keyboard_arrow_down</i>
+                </a>
+            </li>
+            <li class="nav-item sub-menu-container">
+                <ul class=" nav flex-column sub-menu" data-ic-class="sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="javascript:">
+                            Menu Item
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="javascript:">
+                            Menu Item
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <div class="ms-container">
+        <label class="sample bg-blue">
+            S<br>O<br>M<br>E<br><br>
+            I<br>N<br>T<br>E<br>R<br>E<br>S<br>T<br>I<br>N<br>G<br><br>
+            S<br>T<br>U<br>F<br>F
+        </label>
+    </div>
+</section>
+
+<footer class="bg-dark text-white">
+    Footer
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/material-style.min.js"></script>
+</body>
+</html>
