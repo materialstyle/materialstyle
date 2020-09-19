@@ -21,6 +21,27 @@
 
             <div class="modal-body">
                 <div class="m-3">
+                    <label class="d-block">File input button</label>
+                    <div class="ms-file-input">
+                        <input type="file" name="myfile">
+                        <button type="button" class="btn btn-dark btn-file">
+                            <i class="material-icons">attach_file</i> Browse Single</button>
+                        <label class="files"></label>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="custom-control custom-checkbox custom-control-inline input-indigo">
+                        <input type="checkbox" class="custom-control-input" id="customCheckbox" name="example" value="">
+                        <label class="custom-control-label" for="customCheckbox">Inline Checkbox</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline input-indigo">
+                        <input type="checkbox" class="custom-control-input" id="customCheckbox2" name="example" value="">
+                        <label class="custom-control-label" for="customCheckbox2">Inline Checkbox</label>
+                    </div>
+                </div>
+
+                <div class="m-3">
                     <div class="form-group">
                         <div class="ms-text-field">
                             <label for="name" class="static-label label">First Name</label>
@@ -79,7 +100,7 @@
 
                 <div class="m-3">
                     <div class="form-group">
-                        <ul class="nav nav-tabs nav-justified">
+                        <ul class="nav nav-tabs nav-justified primary-dark accent-indigo">
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#apple">Apple</a>
                             </li>
@@ -98,6 +119,30 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="m-3">
+                    <div class="progress">
+                        <div class="progress-bar bg-indigo ms-progress"></div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <button type="button" class="btn btn-dark" data-toggle="snackbar"
+                            data-target="#snackbar-left">
+                        Show Snackbar
+                    </button>
+                </div>
+
+                <div class="m-3">
+                    <div class="ms-shape-container shape-parent-bg-white">
+                        <button type="button" class="btn btn-dark">
+                            Shaped Button
+                        </button>
+                        <div class="angle-top-right"></div>
+                        <div class="angle-bottom-left"></div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="modal-footer">
@@ -113,13 +158,18 @@
     </button>
 </div>
 
+<div class="snackbar snackbar-left" id="snackbar-left">This is a Snackbar</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../dist/js/material-style.min.js"></script>
 <script>
+    $('.ms-file-input').fileinput();
     $('.ms-select').select();
     $('.ms-select-outline').select();
     $('.nav-tabs').tab();
     $('.nav-tabs .nav-link').ripple();
+    $('[data-toggle="snackbar"]').snackbar();
+    $('.ms-shape-container').shape();
 
     $("#myModal").on('shown.bs.modal', function () {
         $('.ms-text-field').textfield('redraw');
@@ -127,6 +177,7 @@
         $('.ms-select').select('redraw');
         $('.ms-select-outline').select('redraw');
         $('.nav-tabs').tab('redraw');
+        $('.btn').ripple();
     });
 </script>
 </body>

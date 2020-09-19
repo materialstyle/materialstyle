@@ -1,7 +1,7 @@
 @each $color, $value in $theme-colors {
   .nav-tabs.accent-#{$color} .nav-link.active,
   .nav-tabs.primary-#{$color} .nav-link:not(.active) {
-    color: $value;
+    color: $value !important; /* stylelint-disable-line declaration-no-important */
   }
 
   .nav-tabs.accent-#{$color} {

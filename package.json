@@ -24,8 +24,8 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "js-lint": "eslint src/js/*",
-    "scss-lint": "stylelint src/scss/*"
+    "js-lint": "eslint js/src/*",
+    "scss-lint": "stylelint scss/*"
   },
   "author": "Neeraj Kumar Das (https://github.com/nkdas91)",
   "license": "MIT",
