@@ -99,10 +99,6 @@ class Drawer {
       this._fixed.style.height = `calc(100vh - ${navbarHeight}px)`
     }
 
-    if (this._element.querySelector('.nav-link.active') !== null) {
-      this._element.querySelector('.nav-link.active').closest('.sub-menu-container').prev('.nav-item').find('> .sub-menu-link').trigger('click')
-    }
-
     if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
       this.toggle()
     }
@@ -229,6 +225,11 @@ class Drawer {
     this._element.querySelector('.drawer-close-btn').addEventListener('click', () => {
       this.hide()
     })
+
+    if (this._element.querySelector('.nav-link.active') !== null && this._element.querySelector('.nav-link.active').closest('.sub-menu-container') !== null) {
+        this._element.querySelector('.nav-link.active').closest('.sub-menu-container').previousElementSibling.querySelector('.sub-menu-link').click()
+    }
+
   }
 }
 

@@ -204,6 +204,7 @@ class Select {
       searchInput.type = 'text'
       searchInput.placeholder = 'Search'
       searchInput.className = 'search-input form-control'
+      searchInput.autocomplete = 'off'
 
       searchContainer.appendChild(searchInput)
     }
@@ -265,7 +266,7 @@ class Select {
         value.addEventListener('click', (event) => {
           event.preventDefault()
           event.stopPropagation()
-          this.setSelectValue(event.target.dataset.value, false)
+          this.selectOne(event.target.dataset.value, false)
         })
       }
 
@@ -439,9 +440,7 @@ class Select {
     }
   }
 
-  setSelectValue(value, checked) {
-    let index
-
+  selectOne(value, checked) {
     if (!this._multiSelectEnabled) {
       const selectedOptions = this._select.querySelectorAll('option')
       for (let i = 0; i < selectedOptions.length; i++) {
@@ -449,7 +448,27 @@ class Select {
           selectedOptions[i].selected = false
         }
       }
+    }
 
+    this._select.querySelector(`option[value="${value}"]`).selected = checked;
+
+    $(this._select).trigger('change')
+  }
+
+  selectAll(checked) {
+    const options = this._select.querySelectorAll('option')
+
+    for (let i = 0; i < options.length; i++) {
+      options[i].selected = checked
+    }
+
+    $(this._select).trigger('change')
+  }
+
+  setSelectValue(value, checked) {
+    let index
+
+    if (!this._multiSelectEnabled) {
       const checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
       for (let i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = false
@@ -462,8 +481,6 @@ class Select {
       }
     }
 
-    this._select.querySelector(`option[value="${value}"]`).selected = checked
-
     this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).checked = checked
 
     if (checked) {
@@ -471,7 +488,6 @@ class Select {
     } else {
       this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).closest('.custom-control').classList.remove('checked')
     }
-
 
     index = this._options.findIndex((o) => o.value === value)
     this._options[index].selected = checked
@@ -489,31 +505,6 @@ class Select {
         $(this).show()
       }
     })
-  }
-
-  selectAll(checked) {
-    const options = this._select.querySelectorAll('option')
-    const checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
-
-    for (let i = 0; i < options.length; i++) {
-      options[i].selected = checked
-    }
-
-    for (let i = 0; i < checkboxes.length; i++) {
-      checkboxes[i].checked = checked
-
-      if (checked) {
-        checkboxes[i].closest('.custom-control').classList.add('checked')
-      } else {
-        checkboxes[i].closest('.custom-control').classList.remove('checked')
-      }
-    }
-
-    this._options.forEach((option) => {
-      option.selected = checked
-    })
-
-    this.showSelectedItems()
   }
 
   addEventListeners() {
@@ -535,7 +526,7 @@ class Select {
     })
 
     $(this._dropdown).find(SELECTOR_CHECKBOX).on('change', (event) => {
-      this.setSelectValue($(event.target).val(), $(event.target).is(':checked'))
+      this.selectOne($(event.target).val(), $(event.target).is(':checked'))
 
       if (!this._multiSelectEnabled) {
         $(this._selectedItem).dropdown('toggle')

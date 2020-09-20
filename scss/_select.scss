@@ -59,6 +59,8 @@
     padding: .5rem .75rem;
     background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9e9e9e, #9e9e9e) center bottom/ 100% 1px no-repeat border-box transparent;
     transition: .3s cubic-bezier(.4, 0, .2, 1);
+    border-radius: 0;
+    border: 0;
 
     &:focus {
       background-color: transparent;
