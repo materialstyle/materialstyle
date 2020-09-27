@@ -133,10 +133,10 @@
   .selected-item {
     padding-top: 1.675rem;
     padding-bottom: .575rem;
-    background-color: #f5f5f5;
+    background-color: #fafafa;
 
     &:hover {
-      background-color: #ececec;
+      background-color: #f5f5f5;
 
       & + .m-line-ripple {
         background-color: #ececec;
@@ -146,7 +146,7 @@
 
   .dropdown.show {
     .selected-item {
-      background-color: #e4e4e4;
+      background-color: #eee;
     }
     .m-line-ripple {
       background-size: 100% 2px, 100% 1px;
