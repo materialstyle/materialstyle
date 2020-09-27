@@ -6,7 +6,7 @@
 
   .nav-tabs.accent-#{$color} {
     .active-indicator,
-    .ms-ripple {
+    .m-ripple {
       background: $value;
     }
   }
@@ -103,7 +103,7 @@
     transition: left .2s ease;
   }
 
-  .ms-ripple {
+  .m-ripple {
     background: theme-color("primary");
   }
 }

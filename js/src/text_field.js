@@ -22,8 +22,8 @@ const VERSION = '2.0.0'
 const DATA_KEY = 'ms.textfield'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-const CLASS_NAME_TEXTFIELD = 'ms-text-field'
-const CLASS_NAME_TEXTFIELD_OUTLINE = 'ms-text-field-outline'
+const CLASS_NAME_TEXTFIELD = 'm-text-field'
+const CLASS_NAME_TEXTFIELD_OUTLINE = 'm-text-field-outline'
 
 const CLASS_NAME_STATIC_LABEL = 'static-label'
 const CLASS_NAME_FLOATING_LABEL = 'floating-label'
@@ -112,7 +112,7 @@ class TextField {
 
   addRipple() {
     const ripple = document.createElement('div')
-    ripple.className = 'ms-line-ripple'
+    ripple.className = 'm-line-ripple'
     ripple.style.backgroundImage =
       `linear-gradient(${this._accentColor}, ${this._accentColor}), ` +
       `linear-gradient(${this._primaryColor}, ${this._primaryColor})`
@@ -135,15 +135,15 @@ class TextField {
 
   addNotch() {
     const notch = document.createElement('div')
-    notch.className = 'ms-notch'
+    notch.className = 'm-notch'
     notch.style.height = `${this._textField.offsetHeight}px`
 
     const notchBefore = document.createElement('div')
-    notchBefore.className = 'ms-notch-before'
+    notchBefore.className = 'm-notch-before'
     notchBefore.style.borderColor = this._primaryColor
 
     const notchBetween = document.createElement('div')
-    notchBetween.className = 'ms-notch-between width-auto'
+    notchBetween.className = 'm-notch-between width-auto'
     notchBetween.style.borderColor = this._primaryColor
 
     if (this._label === null) {
@@ -159,7 +159,7 @@ class TextField {
     }
 
     const notchAfter = document.createElement('div')
-    notchAfter.className = 'ms-notch-after'
+    notchAfter.className = 'm-notch-after'
     notchAfter.style.borderColor = this._primaryColor
 
     notch.appendChild(notchBefore)

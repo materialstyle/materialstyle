@@ -10,7 +10,7 @@ function setMsContainerPadding() {
   const containerPadding = 15
 
   if (fixedTop !== null) {
-    const msContainer = document.querySelector('.ms-container')
+    const msContainer = document.querySelector('.m-container')
     if (msContainer !== null) {
       msContainer.style.paddingTop = `${fixedTop.offsetHeight + containerPadding}px`
     }

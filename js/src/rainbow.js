@@ -41,11 +41,11 @@ class Rainbow {
   }
 
   initRainbow() {
-    const colorBars = this._element.querySelectorAll('.ms-bar')
+    const colorBars = this._element.querySelectorAll('.m-bar')
     const barCount = colorBars.length
 
     for (let i = 0; i < barCount; i++) {
-      colorBars[i].style.animation = `ms-rainbow ${barCount}s cubic-bezier(0.165, 0.84, 0.44, 1) ${i}s infinite`
+      colorBars[i].style.animation = `m-rainbow ${barCount}s cubic-bezier(0.165, 0.84, 0.44, 1) ${i}s infinite`
     }
   }
 }

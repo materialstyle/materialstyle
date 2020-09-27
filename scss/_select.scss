@@ -1,7 +1,7 @@
 @import "node_modules/bootstrap/scss/forms";
 
-.ms-select,
-.ms-select-outline {
+.m-select,
+.m-select-outline {
   position: relative;
   margin-bottom: 0;
   visibility: hidden;
@@ -58,9 +58,9 @@
   .search-input {
     padding: .5rem .75rem;
     background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9e9e9e, #9e9e9e) center bottom/ 100% 1px no-repeat border-box transparent;
-    transition: .3s cubic-bezier(.4, 0, .2, 1);
-    border-radius: 0;
     border: 0;
+    border-radius: 0;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
 
     &:focus {
       background-color: transparent;
@@ -129,7 +129,7 @@
   }
 }
 
-.ms-select {
+.m-select {
   .selected-item {
     padding-top: 1.675rem;
     padding-bottom: .575rem;
@@ -138,7 +138,7 @@
     &:hover {
       background-color: #ececec;
 
-      & + .ms-line-ripple {
+      & + .m-line-ripple {
         background-color: #ececec;
       }
     }
@@ -148,7 +148,7 @@
     .selected-item {
       background-color: #e4e4e4;
     }
-    .ms-line-ripple {
+    .m-line-ripple {
       background-size: 100% 2px, 100% 1px;
     }
   }
@@ -169,7 +169,7 @@
     transform: translate(.75rem, 1.2rem);
   }
 
-  .ms-line-ripple {
+  .m-line-ripple {
     position: absolute;
     width: 100%;
     height: 2px;
@@ -179,7 +179,7 @@
   }
 }
 
-.ms-select-outline {
+.m-select-outline {
   .selected-item {
     padding-top: 1.125rem;
     padding-bottom: 1.125rem;
@@ -229,17 +229,17 @@
   .static-label {
     color: theme-color("danger") !important; /* stylelint-disable-line declaration-no-important */
   }
-  .ms-select {
+  .m-select {
     .selected-item {
-      & + .ms-line-ripple {
+      & + .m-line-ripple {
         background-image: linear-gradient(theme-color("danger"), theme-color("danger")), linear-gradient(theme-color("danger"), theme-color("danger")) !important; /* stylelint-disable-line declaration-no-important */
       }
     }
   }
-  .ms-select-outline {
-    .ms-notch-before,
-    .ms-notch-between,
-    .ms-notch-after {
+  .m-select-outline {
+    .m-notch-before,
+    .m-notch-between,
+    .m-notch-after {
       border-color: theme-color("danger") !important; /* stylelint-disable-line declaration-no-important */
     }
   }
@@ -250,7 +250,7 @@
   font-size: .8rem;
 }
 
-.ms-notch {
+.m-notch {
   position: absolute;
   right: 0;
   left: 0;
@@ -263,22 +263,22 @@
   pointer-events: none;
   background: transparent;
 
-  .ms-notch-before,
-  .ms-notch-between,
-  .ms-notch-after {
+  .m-notch-before,
+  .m-notch-between,
+  .m-notch-after {
     pointer-events: none;
     border: 1px solid theme-color("dark");
     border-radius: 4px;
   }
 
-  .ms-notch-before {
+  .m-notch-before {
     width: .75rem;
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .ms-notch-between {
+  .m-notch-between {
     box-sizing: border-box;
     flex: 0 0 auto;
     width: auto;
@@ -288,7 +288,7 @@
     border-radius: 0;
   }
 
-  .ms-notch-after {
+  .m-notch-after {
     flex: 1;
     border-left: 0;
     border-top-left-radius: 0;
@@ -296,9 +296,9 @@
   }
 
   &.notch-active {
-    .ms-notch-before,
-    .ms-notch-between,
-    .ms-notch-after {
+    .m-notch-before,
+    .m-notch-between,
+    .m-notch-after {
       border-width: 2px;
     }
   }

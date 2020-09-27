@@ -129,14 +129,14 @@
 
 <div class="m-3">
     <label class="d-block">File input button</label>
-    <div class="ms-file-input">
+    <div class="m-file-input">
         <input type="file" name="myfile">
         <button type="button" class="btn btn-dark btn-file">
             <i class="material-icons">attach_file</i> Browse Single</button>
         <label class="files"></label>
     </div>
 
-    <div class="ms-file-input">
+    <div class="m-file-input">
         <input type="file" name="myfiles[]" multiple>
         <button type="button" class="btn btn-dark btn-file">
             <i class="material-icons">attach_file</i> Browse Multiple</button>
@@ -199,7 +199,7 @@
 <script src="../dist/js/material-style.min.js"></script>
 <script>
     $(function(){
-        $('.ms-file-input').fileinput();
+        $('.m-file-input').fileinput();
         $('.btn').ripple();
     })
 

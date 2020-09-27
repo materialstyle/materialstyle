@@ -21,7 +21,7 @@ const JQUERY_NO_CONFLICT = $.fn[NAME]
 const CLASS_NAME_VISIBLE = 'drawer-visible'
 const CLASS_NAME_SWITCHED = '--switched'
 const CLASS_NAME_FIXED = 'drawer-fixed'
-const CLASS_SHADE = 'ms-shade'
+const CLASS_SHADE = 'm-shade'
 const TOGGLE_AT_WIDTH = 1280
 
 class Drawer {
@@ -71,7 +71,7 @@ class Drawer {
       const fixedSideNavBg = this._element.className.match(/bg-[^\s]+/)
 
       const fixed = document.createElement('div')
-      fixed.className = `ms-fixed ${fixedSideNavBg}`
+      fixed.className = `m-fixed ${fixedSideNavBg}`
 
       const children = this._element.childNodes
 
@@ -227,9 +227,8 @@ class Drawer {
     })
 
     if (this._element.querySelector('.nav-link.active') !== null && this._element.querySelector('.nav-link.active').closest('.sub-menu-container') !== null) {
-        this._element.querySelector('.nav-link.active').closest('.sub-menu-container').previousElementSibling.querySelector('.sub-menu-link').click()
+      this._element.querySelector('.nav-link.active').closest('.sub-menu-container').previousElementSibling.querySelector('.sub-menu-link').click()
     }
-
   }
 }
 

@@ -50,11 +50,11 @@ class Ripple {
     )
 
     const ripple = document.createElement('span')
-    ripple.className = 'ms-ripple'
+    ripple.className = 'm-ripple'
     ripple.style.width = `${maxDimension}px`
     ripple.style.height = `${maxDimension}px`
 
-    if (this._element.querySelector('.ms-ripple') === null) {
+    if (this._element.querySelector('.m-ripple') === null) {
       this._element.appendChild(ripple)
     }
 

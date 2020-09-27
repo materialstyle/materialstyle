@@ -25,8 +25,8 @@ const JQUERY_NO_CONFLICT = $.fn[NAME]
 const EVENT_HIDDEN = 'hidden.bs.dropdown'
 const EVENT_SHOWN = 'shown.bs.dropdown'
 
-const CLASS_NAME_SELECT = 'ms-select'
-const CLASS_NAME_SELECT_OUTLINE = 'ms-select-outline'
+const CLASS_NAME_SELECT = 'm-select'
+const CLASS_NAME_SELECT_OUTLINE = 'm-select-outline'
 
 const CLASS_NAME_STATIC_LABEL = 'static-label'
 const CLASS_NAME_FLOATING_LABEL = 'floating-label'
@@ -97,6 +97,8 @@ class Select {
           throw new TypeError(`No method named "${config}"`)
         } else if (config === 'redraw' && shouldRedraw) {
           data[config]()
+        } else if (config === 'rebuild' && shouldRedraw) {
+          data[config]()
         }
       }
     })
@@ -147,7 +149,32 @@ class Select {
       this._notchBetween.style.width = `${this._label.offsetWidth * FLOATING_LABEL_SCALE + NOTCH_BETWEEN_PADDING_SUM}px`
     }
 
-    this.setLabelPosition()
+    if (this._label !== null) {
+      this.initLabel()
+    }
+  }
+
+  rebuild() {
+    this._options = []
+    this._selectItems.innerHTML = ''
+
+    const options = this._select.querySelectorAll('option')
+
+    for (const [, value] of Object.entries(options)) {
+      this._selectItems.appendChild(this.createCheckbox(value.text, value.value, value.selected))
+
+      this._options.push({
+        value: value.value,
+        text: value.innerHTML,
+        selected: value.selected
+      })
+    }
+
+    this.showSelectedItems()
+
+    this.redraw()
+
+    this.addDropdownItemsEventListeners()
   }
 
   createDropdown() {
@@ -285,7 +312,7 @@ class Select {
 
   addRipple() {
     const ripple = document.createElement('div')
-    ripple.className = 'ms-line-ripple'
+    ripple.className = 'm-line-ripple'
     ripple.style.backgroundImage =
       `linear-gradient(${this._accentColor}, ${this._accentColor}), ` +
       `linear-gradient(${this._primaryColor}, ${this._primaryColor})`
@@ -308,15 +335,15 @@ class Select {
 
   addNotch() {
     const notch = document.createElement('div')
-    notch.className = 'ms-notch'
+    notch.className = 'm-notch'
     notch.style.height = `${this._selectedItem.offsetHeight}px`
 
     const notchBefore = document.createElement('div')
-    notchBefore.className = 'ms-notch-before'
+    notchBefore.className = 'm-notch-before'
     notchBefore.style.borderColor = this._primaryColor
 
     const notchBetween = document.createElement('div')
-    notchBetween.className = 'ms-notch-between width-auto'
+    notchBetween.className = 'm-notch-between width-auto'
     notchBetween.style.borderColor = this._primaryColor
 
     if (this._label === null) {
@@ -332,7 +359,7 @@ class Select {
     }
 
     const notchAfter = document.createElement('div')
-    notchAfter.className = 'ms-notch-after'
+    notchAfter.className = 'm-notch-after'
     notchAfter.style.borderColor = this._primaryColor
 
     notch.appendChild(notchBefore)
@@ -450,7 +477,7 @@ class Select {
       }
     }
 
-    this._select.querySelector(`option[value="${value}"]`).selected = checked;
+    this._select.querySelector(`option[value="${value}"]`).selected = checked
 
     $(this._select).trigger('change')
   }
@@ -525,13 +552,7 @@ class Select {
       this.search($(event.target).val())
     })
 
-    $(this._dropdown).find(SELECTOR_CHECKBOX).on('change', (event) => {
-      this.selectOne($(event.target).val(), $(event.target).is(':checked'))
-
-      if (!this._multiSelectEnabled) {
-        $(this._selectedItem).dropdown('toggle')
-      }
-    })
+    this.addDropdownItemsEventListeners()
 
     $(this._select).on('change', (event) => {
       if (!this._multiSelectEnabled) {
@@ -546,6 +567,16 @@ class Select {
             this.setSelectValue(value.value, false)
           }
         }
+      }
+    })
+  }
+
+  addDropdownItemsEventListeners() {
+    $(this._dropdown).find(SELECTOR_CHECKBOX).on('change', (event) => {
+      this.selectOne($(event.target).val(), $(event.target).is(':checked'))
+
+      if (!this._multiSelectEnabled) {
+        $(this._selectedItem).dropdown('toggle')
       }
     })
   }

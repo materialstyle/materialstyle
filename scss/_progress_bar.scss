@@ -1,6 +1,6 @@
 @import "node_modules/bootstrap/scss/progress";
 
-@keyframes ms-progress {
+@keyframes m-progress {
   0% {
     right: 100%;
     left: -35%;
@@ -15,7 +15,7 @@
   }
 }
 
-@keyframes ms-progress-short {
+@keyframes m-progress-short {
   0% {
     right: 100%;
     left: -200%;
@@ -39,7 +39,7 @@
     background-image: linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
   }
 
-  .ms-progress {
+  .m-progress {
     &::before {
       position: absolute;
       top: 0;
@@ -47,7 +47,7 @@
       left: 0;
       content: "";
       background-color: inherit;
-      animation: ms-progress 2.1s cubic-bezier(.65, .815, .735, .395) infinite;
+      animation: m-progress 2.1s cubic-bezier(.65, .815, .735, .395) infinite;
       will-change: left, right;
     }
     &::after {
@@ -57,14 +57,14 @@
       left: 0;
       content: "";
       background-color: inherit;
-      animation: ms-progress-short 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
+      animation: m-progress-short 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
       animation-delay: 1.15s;
       will-change: left, right;
     }
   }
 }
 
-@keyframes ms-rainbow {
+@keyframes m-rainbow {
   from {
     left: 50%;
     z-index: 100;
@@ -81,7 +81,7 @@
   }
 }
 
-.ms-bar {
+.m-bar {
   position: absolute;
   left: 50%;
   display: inline;

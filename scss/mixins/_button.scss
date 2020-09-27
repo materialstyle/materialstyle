@@ -16,7 +16,7 @@
     @include gradient-bg($hover-background);
   }
 
-  .ms-ripple {
+  .m-ripple {
     background: lighten($background, 20%);
   }
 }
@@ -35,7 +35,7 @@
     border-color: color-yiq($active-background, darken($color, 10%));
   }
 
-  .ms-ripple {
+  .m-ripple {
     background: lighten($color, 20%);
   }
 }
@@ -54,7 +54,7 @@
     background-color: $active-background;
   }
 
-  .ms-ripple {
+  .m-ripple {
     background: lighten($color, 20%);
   }
 }

@@ -11,7 +11,7 @@
         background-color: $value;
       }
 
-      &::-ms-thumb {
+      &::-m-thumb {
         background-color: $value;
       }
     }
@@ -28,7 +28,7 @@
       transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
       transform: scale(1.5);
     }
-    &::-ms-thumb {
+    &::-m-thumb {
       transition: transform .1s ease-out, fill .1s ease-out, stroke .1s ease-out, -webkit-transform .1s ease-out;
       transform: scale(1.5);
     }
