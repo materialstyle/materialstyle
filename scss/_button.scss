@@ -34,8 +34,8 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   vertical-align: middle;
   box-shadow: $raised-2dp;
 
-  &.unelevated {
-    box-shadow: none;
+  &.unelevated, &.btn-link {
+    box-shadow: none !important; /* stylelint-disable-line declaration-no-important */
   }
 
   &.btn-fab {
@@ -62,17 +62,12 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
     border-bottom-left-radius: 50%;
   }
 
-  &.extended-fab,
-  &.extended-mini-fab {
+  &.extended-fab {
     width: auto;
     max-width: 100%;
     height: 48px;
     padding: 0 15px;
     border-radius: 28px;
-  }
-
-  &.extended-mini-fab {
-    height: 40px;
   }
 
   .fas,
