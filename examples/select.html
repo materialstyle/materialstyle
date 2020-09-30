@@ -311,7 +311,7 @@
         <div class="m-3">
             <div class="form-group">
                 <div class="m-select multi-select searchable">
-                    <label class="static-label">Searchable</label>
+                    <label class="floating-label">Searchable</label>
                     <select class="form-control" name="cars[]" multiple>
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
@@ -391,7 +391,7 @@
         <div class="m-3">
             <div class="form-group">
                 <div class="m-select-outline multi-select searchable">
-                    <label class="static-label">Searchable</label>
+                    <label class="floating-label">Searchable</label>
                     <select class="form-control" name="cars[]" multiple>
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
@@ -458,8 +458,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../dist/js/material-style.min.js"></script>
 <script>
+  $(function () {
     $('.m-select').select();
     $('.m-select-outline').select();
+  });
 </script>
 </body>
 </html>

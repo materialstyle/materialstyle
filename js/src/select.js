@@ -202,6 +202,7 @@ class Select {
       dropdownMenu.appendChild(form)
 
       const closeButton = document.createElement('button')
+      closeButton.type = 'button'
       closeButton.className = 'btn btn-text-dark'
       closeButton.innerHTML = 'close'
 
