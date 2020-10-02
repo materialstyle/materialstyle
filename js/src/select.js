@@ -44,7 +44,6 @@ const NOTCH_BETWEEN_PADDING_LEFT = 5
 const NOTCH_BEFORE_WIDTH = 12
 const TO_STRING_BASE = 36
 const SUBSTR_INDEX = 2
-const LABEL_WAITING_TIME = 500
 
 class Select {
   constructor(element) {
@@ -378,10 +377,7 @@ class Select {
 
   initLabel() {
     this.setLabelColor()
-
-    setTimeout(() => {
-      this.setLabelPosition()
-    }, LABEL_WAITING_TIME)
+    this.setLabelPosition()
   }
 
   setLabelColor() {

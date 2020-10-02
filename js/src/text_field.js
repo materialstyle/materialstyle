@@ -33,7 +33,6 @@ const FLOATING_LABEL_SCALE = 0.75
 const NOTCH_BETWEEN_PADDING_SUM = 10
 const NOTCH_BETWEEN_PADDING_LEFT = 5
 const NOTCH_BEFORE_WIDTH = 12
-const LABEL_WAITING_TIME = 500
 
 class TextField {
   constructor(element) {
@@ -177,10 +176,7 @@ class TextField {
 
   initLabel() {
     this.setLabelColor()
-
-    setTimeout(() => {
-      this.setLabelPosition()
-    }, LABEL_WAITING_TIME)
+    this.setLabelPosition()
   }
 
   setLabelColor() {
