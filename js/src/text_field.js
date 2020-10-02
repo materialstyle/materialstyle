@@ -108,6 +108,12 @@ class TextField {
       this._notch.style.height = `${this._textField.offsetHeight}px`
       this._notchBetween.style.width = `${this._label.offsetWidth * FLOATING_LABEL_SCALE + NOTCH_BETWEEN_PADDING_SUM}px`
     }
+
+    if (this._label !== null) {
+      this.initLabel()
+    }
+
+    this.addFontsReadyEvent()
   }
 
   addRipple() {
@@ -271,6 +277,24 @@ class TextField {
     }
   }
 
+  fontsReady() {
+    if (this._label !== null) {
+      if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
+        if (this._inputLength && this._textFieldClass === CLASS_NAME_TEXTFIELD) {
+          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
+        } else if (this._textFieldClass === CLASS_NAME_TEXTFIELD_OUTLINE) {
+          this._label.style.transform = `translate(${this._prepend.offsetWidth - (NOTCH_BEFORE_WIDTH + NOTCH_BETWEEN_PADDING_LEFT)}px, 1.2rem)`
+        } else {
+          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
+        }
+      } else if (this._textFieldClass === CLASS_NAME_TEXTFIELD) {
+        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
+      }
+    }
+
+    this._textField.style.paddingLeft = `${this._prepend.offsetWidth}px`
+  }
+
   addEventListeners() {
     $(this._textField).on('change', () => {
       this._inputLength = this._textField.value.length
@@ -286,6 +310,16 @@ class TextField {
 
     $(this._label).add(this._prepend).add(this._append).on('click', () => {
       this._textField.focus()
+    })
+
+    this.addFontsReadyEvent()
+  }
+
+  addFontsReadyEvent() {
+    document.fonts.ready.then(() => {
+      if (this._prepend !== null) {
+        this.fontsReady()
+      }
     })
   }
 }

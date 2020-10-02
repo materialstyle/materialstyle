@@ -163,22 +163,29 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../dist/js/material-style.min.js"></script>
 <script>
+  $(function () {
     $('.m-file-input').fileinput();
+
+    $('.m-text-field').textfield();
+    $('.m-text-field-outline').textfield();
     $('.m-select').select();
     $('.m-select-outline').select();
+
     $('.nav-tabs').tab();
     $('.nav-tabs .nav-link').ripple();
     $('[data-toggle="snackbar"]').snackbar();
     $('.m-shape-container').shape();
 
     $("#myModal").on('shown.bs.modal', function () {
-        $('.m-text-field').textfield('redraw');
-        $('.m-text-field-outline').textfield('redraw');
-        $('.m-select').select('redraw');
-        $('.m-select-outline').select('redraw');
-        $('.nav-tabs').tab('redraw');
-        $('.btn').ripple();
+      $('.m-text-field').textfield('redraw');
+      $('.m-text-field-outline').textfield('redraw');
+      $('.m-select').select('redraw');
+      $('.m-select-outline').select('redraw');
+
+      $('.nav-tabs').tab('redraw');
+      $('.btn').ripple();
     });
+  })
 </script>
 </body>
 </html>
