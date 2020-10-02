@@ -5,7 +5,6 @@ module.exports = [
     'breadcrumb',
     'button',
     'card',
-    'carousel',
     'checkbox',
     'drawer',
     'drawer-always-visible',
