@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.0): text_field.js
+ * Material Style (v2.0.0): select.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -134,16 +134,12 @@ class Select {
       this.addNotch()
     }
 
-    this.setAddonHeight()
-
     if (this._label !== null) {
       this.initLabel()
     }
   }
 
   redraw() {
-    this.setAddonHeight()
-
     if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
       this._notch.style.height = `${this._selectedItem.offsetHeight}px`
       this._notchBetween.style.width = `${this._label.offsetWidth * FLOATING_LABEL_SCALE + NOTCH_BETWEEN_PADDING_SUM}px`
@@ -324,18 +320,6 @@ class Select {
     this._selectedItem.after(ripple)
   }
 
-  setAddonHeight() {
-    if (this._prepend !== null) {
-      this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
-      this._selectedItem.style.paddingLeft = `${this._prepend.offsetWidth}px`
-    }
-
-    if (this._append !== null) {
-      this._append.style.height = `${this._selectedItem.offsetHeight}px`
-      this._selectedItem.style.paddingRight = `${this._append.offsetWidth}px`
-    }
-  }
-
   addNotch() {
     const notch = document.createElement('div')
     notch.className = 'm-notch'
@@ -379,7 +363,7 @@ class Select {
 
   initLabel() {
     this.setLabelColor()
-    this.setLabelPosition()
+    this.switchLabelClass()
   }
 
   setLabelColor() {
@@ -400,33 +384,45 @@ class Select {
     }
   }
 
-  setLabelPosition() {
+  switchLabelClass() {
     if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
       if (this._selectedItem.innerHTML.length) {
         this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
         this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+      } else {
+        this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
+        this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
+      }
+    }
+  }
 
-        if (this._prepend !== null) {
+  setAddonHeight() {
+    if (this._prepend !== null) {
+      this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
+      this._selectedItem.style.paddingLeft = `${this._prepend.offsetWidth}px`
+    }
+
+    if (this._append !== null) {
+      this._append.style.height = `${this._selectedItem.offsetHeight}px`
+      this._selectedItem.style.paddingRight = `${this._append.offsetWidth}px`
+    }
+  }
+
+  translateLabel() {
+    if (this._prepend !== null && this._label !== null) {
+      if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
+        if (this._selectedItem.innerHTML.length) {
           if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
             this._label.style.transform = `translate(0, -0.5rem) scale(${FLOATING_LABEL_SCALE})`
           } else {
             this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
           }
+        } else if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
+          this._label.style.transform = `translate(${this._prepend.offsetWidth - (NOTCH_BEFORE_WIDTH + NOTCH_BETWEEN_PADDING_LEFT)}px, 1.2rem)`
+        } else {
+          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
         }
-      } else {
-        this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
-        this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
-
-        if (this._prepend !== null) {
-          if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-            this._label.style.transform = `translate(${this._prepend.offsetWidth - (NOTCH_BEFORE_WIDTH + NOTCH_BETWEEN_PADDING_LEFT)}px, 1.2rem)`
-          } else {
-            this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
-          }
-        }
-      }
-    } else if (this._prepend !== null) {
-      if (this._selectClass === CLASS_NAME_SELECT) {
+      } else if (this._selectClass === CLASS_NAME_SELECT) {
         this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
       }
     }
@@ -459,7 +455,8 @@ class Select {
   handleFocusOut() {
     if (this._label !== null) {
       this.setLabelColor()
-      this.setLabelPosition()
+      this.switchLabelClass()
+      this.translateLabel()
     }
 
     if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
@@ -537,24 +534,6 @@ class Select {
     })
   }
 
-  fontsReady() {
-    if (this._label !== null) {
-      if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
-        if (this._selectedItem.innerHTML.length && this._selectClass === CLASS_NAME_SELECT) {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
-        } else if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth - (NOTCH_BEFORE_WIDTH + NOTCH_BETWEEN_PADDING_LEFT)}px, 1.2rem)`
-        } else {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
-        }
-      } else if (this._selectClass === CLASS_NAME_SELECT) {
-        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
-      }
-    }
-
-    this._selectedItem.style.paddingLeft = `${this._prepend.offsetWidth}px`
-  }
-
   addEventListeners() {
     $(this._dropdown).on(EVENT_SHOWN, () => this.handleFocus())
     $(this._dropdown).on(EVENT_HIDDEN, () => this.handleFocusOut())
@@ -606,8 +585,10 @@ class Select {
 
   addFontsReadyEvent() {
     document.fonts.ready.then(() => {
+      this.setAddonHeight()
+
       if (this._prepend !== null) {
-        this.fontsReady()
+        this.translateLabel()
       }
     })
   }
