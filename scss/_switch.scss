@@ -10,7 +10,7 @@
       }
 
       &:focus ~ .custom-control-label::before {
-        box-shadow: 0 0 0 .3rem rgba($value, .25);
+        box-shadow: 0 0 0 .2rem rgba($value, .25);
       }
 
       &:focus:not(:checked) ~ .custom-control-label::before {
@@ -23,7 +23,7 @@
       }
     }
 
-    &.switch-android {
+    &.switch-material {
       .custom-control-input {
         &:checked ~ .custom-control-label::after {
           border: 2px solid $value;
@@ -41,7 +41,7 @@
   }
 }
 
-.custom-switch.switch-android {
+.custom-switch.switch-material {
   .custom-control-label::before {
     top: calc(.25rem + 2px);
     height: calc(1rem - 4px);

@@ -10,7 +10,7 @@
       }
 
       &:focus ~ .custom-control-label::before {
-        box-shadow: 0 0 0 .3rem rgba($value, .25);
+        box-shadow: 0 0 0 .2rem rgba($value, .25);
       }
 
       &:focus:not(:checked) ~ .custom-control-label::before {
