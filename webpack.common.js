@@ -77,27 +77,17 @@ webpackConfig = {
         new MiniCssExtractPlugin({
             moduleFilename: () => {
               return "css/material-style.min.css";
-            },
-
-            // chunkFilename: "[name].css"
+            }
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery",
-            Popper: ["popper.js", "default"],
-            select2: "select2"
+            Popper: ["popper.js", "default"]
         })
     ],
     externals: {
-        jquery: "jQuery",
-        // jquery: {
-        //     commonjs: 'jquery',
-        //     commonjs2: 'jquery',
-        //     amd: 'jquery',
-        //     umd: 'jquery',
-        //     root: '$'
-        // },
+        jquery: "jQuery"
     }
 };
 

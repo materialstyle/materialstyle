@@ -11,11 +11,6 @@ module.exports = merge(common, {
                 test: /\.min\.js/g,
                 parallel: true,
                 chunkFilter: chunk => {
-                    // Exclude uglification for the `vendor` chunk
-                    if (chunk.name === "vendor") {
-                        return false;
-                    }
-
                     return true;
                 }
             }),
