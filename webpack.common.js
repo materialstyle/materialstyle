@@ -21,7 +21,7 @@ webpackConfig = {
         tooltip: "./js/src/tooltip.js",
         utility: "./js/src/utility.js",
         ripple: "./js/src/ripple.js",
-        select: "./js/src/select.js",
+        select_field: "./js/src/select_field.js",
         shape: "./js/src/shape.js",
         snackbar: "./js/src/snackbar.js",
         spinner: "./js/src/spinner.js",

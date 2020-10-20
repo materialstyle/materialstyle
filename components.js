@@ -23,7 +23,7 @@ module.exports = [
     'progress-bar',
     'radio',
     'range-slider',
-    'select',
+    'select-field',
     'shape',
     'snackbar',
     'spinner',

@@ -27,12 +27,12 @@
   }
 
   .list-item,
-  .list-icon,
+  .list-prepend,
   .list-append {
     display: inline-block;
   }
 
-  .list-icon {
+  .list-prepend {
     display: flex;
     padding-right: 15px;
   }

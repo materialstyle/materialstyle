@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.0): select.js
+ * Material Style (v2.0.0): select_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,9 +17,9 @@ import $ from 'jquery'
  * --------------------------------------------------------------------------
  */
 
-const NAME = 'select'
+const NAME = 'selectfield'
 const VERSION = '2.0.0'
-const DATA_KEY = 'ms.select'
+const DATA_KEY = 'ms.selectfield'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const EVENT_HIDDEN = 'hidden.bs.dropdown'
@@ -45,7 +45,7 @@ const NOTCH_BEFORE_WIDTH = 12
 const TO_STRING_BASE = 36
 const SUBSTR_INDEX = 2
 
-class Select {
+class SelectField {
   constructor(element) {
     this._element = element
     this._select = element.querySelector('.form-control')
@@ -86,7 +86,7 @@ class Select {
       if (!data) {
         shouldRedraw = false
 
-        data = new Select(this)
+        data = new SelectField(this)
         $element.data(DATA_KEY, data)
 
         data._element.style.visibility = 'visible'
@@ -600,11 +600,11 @@ class Select {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Select._jQueryInterface
-$.fn[NAME].Constructor = Select
+$.fn[NAME] = SelectField._jQueryInterface
+$.fn[NAME].Constructor = SelectField
 $.fn[NAME].noConflict = () => {
   $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Select._jQueryInterface
+  return SelectField._jQueryInterface
 }
 
-export default Select
+export default SelectField
