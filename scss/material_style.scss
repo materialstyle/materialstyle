@@ -23,11 +23,8 @@
 @import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/input-group";
 
-// custom-forms is imported in Checkbox, Radio, Switch and Slider
-@import "checkbox";
-@import "radio";
-@import "switch";
-@import "range_slider";
+// custom-forms is imported in cutom-input and it implements Checkbox, Radio, Switch and Slider
+@import "custom_input";
 
 @import "node_modules/bootstrap/scss/nav";
 @import "navbar";

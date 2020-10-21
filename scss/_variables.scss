@@ -22,6 +22,7 @@ $card-border-radius: 2px;
 // Checkbox, Radio, Switch
 $custom-control-indicator-border-width: 2px;
 $custom-control-indicator-focus-box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "primary"), .25);
+$custom-control-indicator-checked-disabled-bg: #e9ecef;
 
 // Range Slider
 $custom-range-track-height: .2rem;
