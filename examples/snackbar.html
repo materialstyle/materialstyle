@@ -23,10 +23,16 @@
     <div class="snackbar bg-primary" id="snackbar">This is a Snackbar</div>
 </div>
 
+<div class="snackbar" id="snackbar-click">This Snackbar is triggered via Javascript and has a visible duration of 3000ms.</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../dist/js/material-style.min.js"></script>
 <script>
-    $('[data-toggle="snackbar"]').snackbar();
+    $(function(){
+      $('[data-toggle="snackbar"]').snackbar();
+      $('#snackbar-click').snackbar('show', 3000);
+    })
+
 </script>
 </body>
 </html>

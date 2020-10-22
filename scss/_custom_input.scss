@@ -25,7 +25,7 @@
     // Switch
     &.switch-material {
       .custom-control-input {
-        &:checked ~ .custom-control-label::after {
+        &:checked:not(:disabled) ~ .custom-control-label::after {
           border: 2px solid $value;
         }
       }
@@ -92,6 +92,15 @@
     left: -2.25rem;
     width: 1rem;
     height: 1rem;
+  }
+}
+
+.custom-switch {
+  .custom-control-input {
+    &:checked:disabled ~ .custom-control-label::after {
+      background-color: #adb5bd;
+      border: 2px solid #adb5bd;
+    }
   }
 }
 

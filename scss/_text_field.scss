@@ -165,7 +165,7 @@
     .form-control,
     .form-control-sm,
     .form-control-lg {
-      & + .m-line-ripple {
+      + .m-line-ripple {
         background-image: linear-gradient(theme-color("danger"), theme-color("danger")), linear-gradient(theme-color("danger"), theme-color("danger")) !important; /* stylelint-disable-line declaration-no-important */
       }
     }
