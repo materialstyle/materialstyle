@@ -8,31 +8,46 @@
 <h1 class="m-3">Snackbar</h1>
 
 <div class="m-3">
-    <button type="button" class="btn btn-indigo" data-toggle="snackbar"
-            data-target="#snackbar-left">
-        Show Snackbar
-    </button>
-    <div class="snackbar snackbar-left" id="snackbar-left">This is a Snackbar</div>
+    <button type="button" class="btn btn-indigo" id="show-snackbar">Show Snackbar</button>
 </div>
 
 <div class="m-3">
-    <button type="button" class="btn btn-ms btn-indigo ripple" data-toggle="snackbar"
-            data-target="#snackbar">
-        Show Snackbar
-    </button>
-    <div class="snackbar bg-primary" id="snackbar">This is a Snackbar</div>
+    <button type="button" class="btn btn-indigo" id="show-snackbar-5000">Show Snackbar for 5000ms</button>
 </div>
 
-<div class="snackbar" id="snackbar-click">This Snackbar is triggered via Javascript and has a visible duration of 3000ms.</div>
+<div class="m-3">
+    <button type="button" class="btn btn-indigo" id="show-snackbar-dismissible">Dismissible snackbar</button>
+</div>
+
+<div class="snackbar" id="snackbar">This is a Snackbar.</div>
+<div class="snackbar" id="snackbar-5000">This is a Snackbar with visible duration of 5000ms.</div>
+<div class="snackbar" id="snackbar-close">
+    Close this snackbar
+    <button type="button" class="btn btn-text-lime" data-dismiss="snackbar">
+        Dismiss
+    </button>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../dist/js/material-style.min.js"></script>
 <script>
     $(function(){
-      $('[data-toggle="snackbar"]').snackbar();
-      $('#snackbar-click').snackbar('show', 3000);
-    })
+      $('#show-snackbar').click(function () {
+        $('#snackbar').snackbar();
+      });
 
+      $('#show-snackbar-5000').click(function () {
+        $('#snackbar-5000').snackbar({
+          'visibleDuration': 5000
+        });
+      });
+
+      $('#show-snackbar-dismissible').click(function () {
+        $('#snackbar-close').snackbar({
+          'autoClose': false
+        });
+      });
+    })
 </script>
 </body>
 </html>

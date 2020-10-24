@@ -18,8 +18,15 @@ const VERSION = '2.0.0'
 const DATA_KEY_SNACKBAR = 'ms.snackbar'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
+const SELECTOR_DISMISS = '[data-dismiss="snackbar"]'
+
 const SNACKBAR_VISIBLE_DURATION = 3000
 const SNACKBAR_VISIBLE_DELAY = 200
+
+const Default = {
+  autoClose: true,
+  visibleDuration: SNACKBAR_VISIBLE_DURATION
+}
 
 const waitingQueue = []
 const runningQueue = []
@@ -41,10 +48,12 @@ Object.defineProperty(runningQueue, 'pushToRunningQueue', {
     activeSnackbar.addClass('show')
     runningQueue.push(activeSnackbar)
 
-    setTimeout(() => {
-      activeSnackbar.removeClass('show')
-      runningQueue.removeFromRunningQueue(activeSnackbar)
-    }, activeSnackbar[0].dataset.snackbarVisibleDuration)
+    if (activeSnackbar[0].dataset.autoClose === 'true') {
+      setTimeout(() => {
+        activeSnackbar.removeClass('show')
+        runningQueue.removeFromRunningQueue(activeSnackbar)
+      }, activeSnackbar[0].dataset.visibleDuration)
+    }
   }
 })
 
@@ -62,19 +71,13 @@ Object.defineProperty(runningQueue, 'removeFromRunningQueue', {
 })
 
 class Snackbar {
-  constructor(element, elementIsASnackbar, duration) {
+  constructor(element, config) {
     this._element = element
+    this._element.dataset.visibleDuration = config.visibleDuration
+    this._element.dataset.autoClose = config.autoClose
 
-    if (elementIsASnackbar) {
-      this._snackbar = element
-      this._snackbar.dataset.snackbarVisibleDuration = duration
-    } else {
-      this._snackbar = element.dataset.target
-
-      if (document.querySelector(this._snackbar) !== null) {
-        document.querySelector(this._snackbar).dataset.snackbarVisibleDuration = duration
-        this.addEventListeners()
-      }
+    if (this._element.querySelector(SELECTOR_DISMISS) !== null) {
+      this._element.querySelector(SELECTOR_DISMISS).addEventListener('click', () => this.handleDismiss())
     }
   }
 
@@ -82,40 +85,30 @@ class Snackbar {
     return VERSION
   }
 
-  static _jQueryInterface(config, duration = SNACKBAR_VISIBLE_DURATION) {
+  static _jQueryInterface(config) {
     return this.each(function () {
       const $element = $(this)
       let data = $element.data(DATA_KEY_SNACKBAR)
 
-      if (!data || typeof data !== 'undefined' && data._duration !== duration) {
-        if (typeof config === 'string' && config === 'show') {
-          data = new Snackbar(this, true, duration)
-        } else {
-          data = new Snackbar(this, false, duration)
-        }
+      const _config = Object.assign(
+        {},
+        Default,
+        $element.data(),
+        typeof config === 'object' && config ? config : {}
+      )
 
+      if (!data) {
+        data = new Snackbar(this, _config)
         $element.data(DATA_KEY_SNACKBAR, data)
       }
 
-      if (typeof config === 'string') {
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`)
-        } else {
-          data[config]()
-        }
-      }
+      waitingQueue.pushToWaitingQueue($(data._element))
     })
   }
 
-  show() {
-    waitingQueue.pushToWaitingQueue($(this._snackbar))
-  }
-
-  addEventListeners() {
-    $(this._element).on('click', (event) => {
-      event.stopImmediatePropagation()
-      waitingQueue.pushToWaitingQueue($(this._snackbar))
-    })
+  handleDismiss() {
+    activeSnackbar.removeClass('show')
+    runningQueue.removeFromRunningQueue(activeSnackbar)
   }
 }
 
