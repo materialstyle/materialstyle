@@ -1,5 +1,5 @@
 {
-  "name": "material-style",
+  "name": "materialstyle",
   "version": "1.0.0",
   "description": "Material Style is an easy to use UI wrapper that lets you add Material Design styles and animations to Bootstrap 4 components.",
   "keywords": [
@@ -13,8 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "style": "dist/css/material-style.css",
-  "main": "dist/js/material-style.js",
+  "style": "dist/css/materialstyle.min.css",
+  "main": "dist/js/materialstyle.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/materialstyle/materialstyle.git"
@@ -22,7 +22,9 @@
   "author": "Neeraj Kumar Das (https://github.com/nkdas91)",
   "license": "MIT",
   "homepage": "https://materialstyle.github.io/",
-  "bugs": "https://github.com/materialstyle/materialstyle/issues",
+  "bugs": {
+    "url": "https://github.com/materialstyle/materialstyle/issues"
+  },
   "files": [
     "dist/{css,js}"
   ]
