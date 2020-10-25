@@ -14,7 +14,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "style": "dist/css/material-style.css",
-  "sass": "scss/material-style.scss",
   "main": "dist/js/material-style.js",
   "repository": {
     "type": "git",
