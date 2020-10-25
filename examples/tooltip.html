@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+</head>
+<body>
+<h1 class="m-3">Tooltip</h1>
+
+<div class="m-3">
+    <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/material-style.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+</body>
+</html>

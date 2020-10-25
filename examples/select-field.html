@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select</title>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+    <style>
+        [class*="m-select"] {
+            width: 300px;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+
+<h1 class="m-3">Select</h1>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h3 class="m-3">Filled</h3>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select">
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select">
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select primary-blue accent-pink">
+                    <label class="floating-label">Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select searchable">
+                    <label class="floating-label">Searchable</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3 my-5">
+            <div class="form-group has-error">
+                <div class="m-select primary-blue accent-green">
+                    <label class="floating-label">Label</label>
+                    <select class="form-control">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                    <span class="help-block">Error Message.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="m-3">Outlined</h3>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline">
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline">
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline primary-blue accent-pink">
+                    <label class="floating-label bg-white">Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline searchable">
+                    <label class="floating-label">Searchable</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3 my-5">
+            <div class="form-group has-error">
+                <div class="m-select-outline primary-blue accent-green">
+                    <label class="floating-label bg-white">Label</label>
+                    <select class="form-control">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                    <span class="help-block">Error Message.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select">
+                    <div class="append">
+                        <i class="material-icons">keyboard</i>
+                    </div>
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline">
+                    <div class="append">
+                        <i class="material-icons">keyboard</i>
+                    </div>
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="m-3">Multi Select</h3>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select multi-select">
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select multi-select searchable">
+                    <label class="floating-label">Searchable</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select multi-select">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select multi-select">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select multi-select">
+                    <div class="prepend">
+                        Prepend <i class="material-icons">account_box</i>
+                    </div>
+
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline multi-select">
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline multi-select searchable">
+                    <label class="floating-label">Searchable</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline multi-select">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="static-label">Static Label</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline multi-select">
+                    <div class="prepend">
+                        <i class="material-icons">account_box</i>
+                    </div>
+                    <label class="floating-label">Floating Label</label>
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="form-group">
+                <div class="m-select-outline multi-select">
+                    <div class="prepend">
+                        Prepend <i class="material-icons">account_box</i>
+                    </div>
+
+                    <select class="form-control" name="cars[]" multiple>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/material-style.min.js"></script>
+<script>
+  $(function () {
+    $('.m-select').selectfield();
+    $('.m-select-outline').selectfield();
+  });
+</script>
+</body>
+</html>

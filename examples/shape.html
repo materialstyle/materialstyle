@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shape</title>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+
+</head>
+<body>
+<h1 class="m-3">Shape</h1>
+
+<div class="m-3">
+    <!-- Angle on all sides -->
+    <div class="m-shape-container shape-parent-bg-white">
+        <button type="button" class="btn btn-indigo">
+            Button
+        </button>
+        <div class="angle-top-left"></div>
+        <div class="angle-top-right"></div>
+        <div class="angle-bottom-left"></div>
+        <div class="angle-bottom-right"></div>
+    </div>
+</div>
+
+<div class="m-3">
+    <!-- Angle on top right and bottom left -->
+    <div class="m-shape-container shape-parent-bg-white">
+        <button type="button" class="btn btn-indigo">
+            Button
+        </button>
+        <div class="angle-top-right"></div>
+        <div class="angle-bottom-left"></div>
+    </div>
+</div>
+
+<div class="m-3">
+    <!-- Angle on all sides -->
+    <div class="m-shape-container shape-parent-bg-white">
+        <button type="button" class="btn btn-outline-indigo">
+            Button
+        </button>
+        <div class="angle-top-left"></div>
+        <div class="angle-top-right"></div>
+        <div class="angle-bottom-left"></div>
+        <div class="angle-bottom-right"></div>
+    </div>
+</div>
+
+<div class="m-3">
+    <!-- Angle on top right and bottom left -->
+    <div class="m-shape-container shape-parent-bg-white">
+        <button type="button" class="btn btn-outline-indigo">
+            Button
+        </button>
+        <div class="angle-top-right"></div>
+        <div class="angle-bottom-left"></div>
+    </div>
+</div>
+
+<div class="m-3">
+    <div class="m-shape-container shape-parent-bg-white">
+        <div class="card bg-primary text-white" style="width:400px">
+            <div class="card-body">
+                <h4 class="card-title">Unlimited Music</h4>
+                <p class="card-text">
+                    Listen to your favourite artists and albums whenever wherever online and offline
+                </p>
+            </div>
+            <div class="card-actions">
+                <div class="card-buttons">
+                    <button type="button" class="btn btn-text-white">Listen Now</button>
+                </div>
+                <div class="card-icons">
+                    <button type="button" class="btn btn-fab mini-fab btn-indigo m-1 unelevated">
+                        <i class="material-icons">favorite_border</i>
+                    </button>
+                    <button type="button" class="btn btn-fab mini-fab btn-indigo m-1 unelevated">
+                        <i class="material-icons">share</i>
+                    </button>
+                    <button type="button" class="btn btn-fab mini-fab btn-indigo m-1 unelevated">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="angle-top-right"></div>
+    </div>
+</div>
+
+<div class="m-3">
+    <div class="m-shape-container shape-parent-bg-white">
+        <div class="card card-outline-indigo" style="width:400px">
+            <div class="card-body">
+                <h4 class="card-title text-indigo">Unlimited Music</h4>
+                <p class="card-text">
+                    Listen to your favourite artists and albums whenever wherever online and offline
+                </p>
+            </div>
+            <div class="card-actions">
+                <div class="card-buttons">
+                    <button type="button" class="btn btn-text-indigo">Listen Now</button>
+                </div>
+                <div class="card-icons">
+                    <button type="button" class="btn btn-fab mini-fab btn-light m-1 unelevated">
+                        <i class="material-icons">favorite_border</i>
+                    </button>
+                    <button type="button" class="btn btn-fab mini-fab btn-light m-1 unelevated">
+                        <i class="material-icons">share</i>
+                    </button>
+                    <button type="button" class="btn btn-fab mini-fab btn-light m-1 unelevated">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="angle-top-right size-50"></div>
+    </div>
+</div>
+
+<div class="m-3">
+    <div class="m-shape-container shape-parent-bg-white">
+        <div style="background: #EEEEEE; height: 200px; width: 400px; border: 2px solid #BDBDBD;"></div>
+        <div class="angle-top-left size-80" style="border-bottom: 2px solid #BDBDBD;"></div>
+        <div class="angle-top-right size-80" style="border-bottom: 2px solid #BDBDBD;"></div>
+        <div class="angle-bottom-left size-80" style="border-bottom: 2px solid #BDBDBD;"></div>
+        <div class="angle-bottom-right size-80" style="border-bottom: 2px solid #BDBDBD;"></div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/material-style.min.js"></script>
+<script>
+    $(function(){
+        $('.btn').ripple();
+        $('.m-shape-container').shape();
+    })
+</script>
+</body>
+</html>
