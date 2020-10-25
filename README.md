@@ -18,7 +18,7 @@ Material Style recommends using Material Icons. However, You are free to use Fon
 <!-- Material Icons -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- Material Style CSS -->
-<link rel="stylesheet" href="https://unpkg.com/materialstyle@1.0.0/dist/css/materialstyle.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@materialstyle/materialstyle@1.0.0/dist/css/materialstyle.min.css">
 ```
 ### Scripts
 Full version of JQuery is required!
@@ -38,7 +38,7 @@ Full version of JQuery is required!
 ```
 ```
 <!-- Material Style JS -->
-<script src="https://unpkg.com/materialstyle@1.0.0/dist/js/materialstyle.min.js"></script>
+<script src="https://unpkg.com/@materialstyle/materialstyle@1.0.0/dist/js/materialstyle.min.js"></script>
 ```
 
 That's it! You are now ready to add Material Style components on your site.
