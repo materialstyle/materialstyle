@@ -1,7 +1,7 @@
 {
   "name": "@materialstyle/materialstyle",
   "version": "2.0.0",
-  "description": "Material Style is an easy to use UI wrapper that lets you add Material Design styles and animations to Bootstrap 4 components.",
+  "description": "Material Style is an easy to use UI Library based on Bootstrap 4.5 that lets you add Material Design styles and animations to Bootstrap components.",
   "keywords": [
     "materialstyle",
     "material-style",
