@@ -173,6 +173,7 @@
     $('.nav-tabs').tab();
     $('.nav-tabs .nav-link').ripple();
     $('.m-shape-container').shape();
+    $('.btn').ripple();
 
     $("#myModal").on('shown.bs.modal', function () {
       $('.m-text-field').textfield('redraw');
@@ -181,7 +182,8 @@
       $('.m-select-outline').selectfield('redraw');
 
       $('.nav-tabs').tab('redraw');
-      $('.btn').ripple();
+      $('.btn').ripple('redraw');
+      $('.nav-tabs .nav-link').ripple('redraw');
 
       $('#show-modal-snackbar').on('click', function () {
         $('#modal-snackbar').snackbar();

@@ -31,14 +31,25 @@ class Ripple {
     return VERSION
   }
 
-  static _jQueryInterface() {
+  static _jQueryInterface(config) {
     return this.each(function () {
       const $element = $(this)
       let data = $element.data(DATA_KEY_RIPPLE)
+      let shouldRedraw = true
 
       if (!data) {
+        shouldRedraw = false
+
         data = new Ripple(this)
         $element.data(DATA_KEY_RIPPLE, data)
+      }
+
+      if (typeof config === 'string') {
+        if (typeof data[config] === 'undefined') {
+          throw new TypeError(`No method named "${config}"`)
+        } else if (config === 'redraw' && shouldRedraw) {
+          data[config]()
+        }
       }
     })
   }
@@ -103,6 +114,16 @@ class Ripple {
         animate.classList.remove('animate')
       }
     }
+  }
+
+  redraw() {
+    const maxDimension = Math.max(
+      this._element.offsetWidth,
+      this._element.offsetHeight
+    )
+
+    this._ripple.style.width = `${maxDimension}px`
+    this._ripple.style.height = `${maxDimension}px`
   }
 
   addEventListeners() {
