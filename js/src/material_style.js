@@ -1,26 +1,52 @@
-import './alert'
-import './button'
-import './carousel'
-import './collapse'
-import './dropdown'
-import './modal'
-import './popover'
-import './scrollspy'
-import './tab'
-import './toast'
-import './tooltip'
-import './util'
+import Alert from './alert'
+import Button from './button'
+import Carousel from './carousel'
+import Collapse from './collapse'
+import Dropdown from './dropdown'
+import Modal from './modal'
+import Popover from './popover'
+import Scrollspy from './scrollspy'
+import Tab from './tab'
+import Toast from './toast'
+import Tooltip from './tooltip'
+import Util from './util'
 
-import './utility'
-import './navbar'
-import './drawer'
-import './file_input'
-import './ripple'
-import './select_field'
-import './shape'
-import './snackbar'
-import './spinner'
-import './rainbow'
-import './text_field'
+import Utility from './utility'
+import Navbar from './navbar'
+import Drawer from './drawer'
+import FileInput from './file_input'
+import Ripple from './ripple'
+import SelectField from './select_field'
+import Shape from './shape'
+import Snackbar from './snackbar'
+import Spinner from './spinner'
+import Rainbow from './rainbow'
+import TextField from './text_field'
 
 import '../../scss/material_style.scss'
+
+export {
+  Util,
+  Utility,
+  Alert,
+  Button,
+  Carousel,
+  Collapse,
+  Dropdown,
+  Modal,
+  Popover,
+  Scrollspy,
+  Tab,
+  Toast,
+  Tooltip,
+  Navbar,
+  Drawer,
+  FileInput,
+  Ripple,
+  SelectField,
+  Shape,
+  Snackbar,
+  Spinner,
+  Rainbow,
+  TextField
+}

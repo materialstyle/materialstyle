@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Toast</title>
-    <link rel="stylesheet" href="../dist/css/material-style.min.css"/>
+    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
 </head>
 <body>
 <h1 class="m-3">Toast</h1>
@@ -12,7 +12,7 @@
 </div>
 
 <div class="m-3">
-    <div class="toast toast-right" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
         <div class="toast-header bg-dark">
             <img src="https://cdn.materialstyle.io/images/msicon.png" class="rounded mr-2" alt="Material Style Icon" width="20px">
             <strong class="mr-auto text-white">Material Style</strong>
@@ -28,7 +28,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../dist/js/material-style.min.js"></script>
+<script src="../dist/js/materialstyle.min.js"></script>
 <script>
     $('#show-toast').on('click', function(){
         $('.toast').toast('show');

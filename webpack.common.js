@@ -36,7 +36,7 @@ webpackConfig = {
             let chunkName = chunkData.chunk.name;
 
             if (chunkName === "material_style") {
-                return "js/material-style.min.js";
+                return "js/materialstyle.min.js";
             } else {
                 return "../js/dist/" + chunkName + ".js";
             }
@@ -44,6 +44,7 @@ webpackConfig = {
         publicPath: "dist",
         library: "materialstyle",
         libraryTarget: "umd",
+        globalObject: "this"
     },
     module: {
         rules: [
@@ -76,7 +77,7 @@ webpackConfig = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             moduleFilename: () => {
-              return "css/material-style.min.css";
+              return "css/materialstyle.min.css";
             }
         }),
         new webpack.ProvidePlugin({
