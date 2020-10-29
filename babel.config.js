@@ -1,3 +1,12 @@
 {
-    presets: ['@babel/preset-env']
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        loose: true,
+        modules: false,
+        exclude: ['transform-typeof-symbol']
+      }
+    ]
+  ]
 }
