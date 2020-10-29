@@ -1,1 +1,2 @@
-import 'bootstrap/js/dist/util'
+import Util from 'bootstrap/js/src/util'
+export default Util

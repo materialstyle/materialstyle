@@ -1,3 +1,5 @@
+import '../../scss/material_style.scss'
+
 import Alert from './alert'
 import Button from './button'
 import Carousel from './carousel'
@@ -11,8 +13,8 @@ import Toast from './toast'
 import Tooltip from './tooltip'
 import Util from './util'
 
-import Utility from './utility'
-import Navbar from './navbar'
+import './utility'
+import './navbar'
 import Drawer from './drawer'
 import FileInput from './file_input'
 import Ripple from './ripple'
@@ -23,11 +25,8 @@ import Spinner from './spinner'
 import Rainbow from './rainbow'
 import TextField from './text_field'
 
-import '../../scss/material_style.scss'
-
 export {
   Util,
-  Utility,
   Alert,
   Button,
   Carousel,
@@ -39,7 +38,6 @@ export {
   Tab,
   Toast,
   Tooltip,
-  Navbar,
   Drawer,
   FileInput,
   Ripple,

@@ -1,4 +1,4 @@
-import 'bootstrap/js/dist/tab'
+import 'bootstrap/js/src/tab'
 
 /**
  * --------------------------------------------------------------------------

@@ -1,1 +1,2 @@
-import 'bootstrap/js/dist/carousel'
+import Carousel from 'bootstrap/js/src/carousel'
+export default Carousel

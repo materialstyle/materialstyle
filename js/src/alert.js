@@ -1,1 +1,2 @@
-import 'bootstrap/js/dist/alert'
+import Alert from 'bootstrap/js/src/alert'
+export default Alert

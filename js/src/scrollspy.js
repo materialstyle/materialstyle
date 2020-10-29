@@ -1,1 +1,2 @@
-import 'bootstrap/js/dist/scrollspy'
+import Scrollspy from 'bootstrap/js/src/scrollspy'
+export default Scrollspy

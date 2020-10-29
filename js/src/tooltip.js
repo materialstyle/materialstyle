@@ -1,1 +1,2 @@
-import 'bootstrap/js/dist/tooltip'
+import Tooltip from 'bootstrap/js/src/tooltip'
+export default Tooltip
