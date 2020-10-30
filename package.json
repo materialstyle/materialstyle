@@ -68,6 +68,8 @@
     "popper.js": "^1.16.1"
   },
   "files": [
-    "dist/{css,js}"
+    "dist/{css,js}",
+    "js/{dist,src}",
+    "scss"
   ]
 }

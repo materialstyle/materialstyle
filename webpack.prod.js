@@ -1,10 +1,10 @@
-const merge = require("webpack-merge");
-const common = require("./webpack.common.js");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(common, {
-    mode: "production",
+    mode: 'production',
     optimization: {
         minimizer: [
             new TerserPlugin({
@@ -17,7 +17,7 @@ module.exports = merge(common, {
             new OptimizeCssAssetsPlugin({
                 assetNameRegExp: /\.min\.css$/g,
                 cssProcessorPluginOptions: {
-                    preset: ["default", {discardComments: {removeAll: true}}]
+                    preset: ['default', {discardComments: {removeAll: true}}]
                 }
             })
         ]
