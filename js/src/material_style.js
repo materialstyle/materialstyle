@@ -25,7 +25,7 @@ import Spinner from './spinner'
 import Rainbow from './rainbow'
 import TextField from './text_field'
 
-export {
+export default {
   Util,
   Alert,
   Button,

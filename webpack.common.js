@@ -85,7 +85,7 @@ webpackConfig = {
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery",
-      Popper: ["popper.js", "default"]
+      Popper: "popper.js"
     })
   ],
   externals: {
@@ -94,6 +94,12 @@ webpackConfig = {
       commonjs2: 'jquery',
       amd: 'jquery',
       root: 'jQuery',
+    },
+    'popper.js': {
+      commonjs: 'popper.js',
+      commonjs2: 'popper.js',
+      amd: 'popper.js',
+      root: 'Popper',
     },
   }
 };
