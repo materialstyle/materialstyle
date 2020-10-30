@@ -5,29 +5,29 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 webpackConfig = {
   entry: {
-    alert: './js/src/alert.js',
-    button: './js/src/button.js',
-    carousel: './js/src/carousel.js',
-    collapse: './js/src/collapse.js',
-    drawer: './js/src/drawer.js',
-    dropdown: './js/src/dropdown.js',
-    file_input: './js/src/file_input.js',
-    modal: './js/src/modal.js',
-    navbar: './js/src/navbar.js',
-    popover: './js/src/popover.js',
-    scrollspy: './js/src/scrollspy.js',
-    tab: './js/src/tab.js',
-    toast: './js/src/toast.js',
-    tooltip: './js/src/tooltip.js',
-    utility: './js/src/utility.js',
-    ripple: './js/src/ripple.js',
-    select_field: './js/src/select_field.js',
-    shape: './js/src/shape.js',
-    snackbar: './js/src/snackbar.js',
-    spinner: './js/src/spinner.js',
-    rainbow: './js/src/rainbow.js',
-    text_field: './js/src/text_field.js',
-    material_style: './js/src/material_style.js'
+    Alert: './js/src/alert.js',
+    Button: './js/src/button.js',
+    Carousel: './js/src/carousel.js',
+    Collapse: './js/src/collapse.js',
+    Drawer: './js/src/drawer.js',
+    Dropdown: './js/src/dropdown.js',
+    FileInput: './js/src/file_input.js',
+    Modal: './js/src/modal.js',
+    Navbar: './js/src/navbar.js',
+    Popover: './js/src/popover.js',
+    Scrollspy: './js/src/scrollspy.js',
+    Tab: './js/src/tab.js',
+    Toast: './js/src/toast.js',
+    Tooltip: './js/src/tooltip.js',
+    Utility: './js/src/utility.js',
+    Ripple: './js/src/ripple.js',
+    SelectField: './js/src/select_field.js',
+    Shape: './js/src/shape.js',
+    Snackbar: './js/src/snackbar.js',
+    Spinner: './js/src/spinner.js',
+    Rainbow: './js/src/rainbow.js',
+    TextField: './js/src/text_field.js',
+    materialstyle: './js/src/material_style.js'
   },
   devtool: 'source-map',
   output: {
@@ -35,14 +35,14 @@ webpackConfig = {
     filename: chunkData => {
       let chunkName = chunkData.chunk.name;
 
-      if (chunkName === 'material_style') {
+      if (chunkName === 'materialstyle') {
         return 'js/materialstyle.min.js';
       } else {
-        return '../js/dist/' + chunkName + '.js';
+        return '../js/dist/' + (chunkName.split(/(?=[A-Z])/).join('_').toLowerCase()) + '.js';
       }
     },
     publicPath: 'dist',
-    library: 'materialstyle',
+    library: '[name]',
     libraryTarget: 'umd',
     libraryExport: 'default',
     globalObject: 'this'
