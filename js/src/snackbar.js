@@ -90,12 +90,11 @@ class Snackbar {
       const $element = $(this)
       let data = $element.data(DATA_KEY_SNACKBAR)
 
-      const _config = Object.assign(
-        {},
-        Default,
-        $element.data(),
-        typeof config === 'object' && config ? config : {}
-      )
+      const _config = {
+        ...Default,
+        ...$element.data(),
+        ...typeof config === 'object' && config ? config : {}
+      }
 
       if (!data) {
         data = new Snackbar(this, _config)
