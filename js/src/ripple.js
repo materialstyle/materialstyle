@@ -15,7 +15,7 @@ import $ from 'jquery'
 
 const NAME = 'ripple'
 const VERSION = '2.0.0'
-const DATA_KEY_RIPPLE = 'ms.ripple'
+const DATA_KEY = 'ms.ripple'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const DIVISOR = 2
@@ -34,14 +34,14 @@ class Ripple {
   static _jQueryInterface(config) {
     return this.each(function () {
       const $element = $(this)
-      let data = $element.data(DATA_KEY_RIPPLE)
+      let data = $element.data(DATA_KEY)
       let shouldRedraw = true
 
       if (!data) {
         shouldRedraw = false
 
         data = new Ripple(this)
-        $element.data(DATA_KEY_RIPPLE, data)
+        $element.data(DATA_KEY, data)
       }
 
       if (typeof config === 'string') {

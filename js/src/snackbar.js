@@ -15,7 +15,7 @@ import $ from 'jquery'
 
 const NAME = 'snackbar'
 const VERSION = '2.0.0'
-const DATA_KEY_SNACKBAR = 'ms.snackbar'
+const DATA_KEY = 'ms.snackbar'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const SELECTOR_DISMISS = '[data-dismiss="snackbar"]'
@@ -88,7 +88,7 @@ class Snackbar {
   static _jQueryInterface(config) {
     return this.each(function () {
       const $element = $(this)
-      let data = $element.data(DATA_KEY_SNACKBAR)
+      let data = $element.data(DATA_KEY)
 
       const _config = {
         ...Default,
@@ -98,7 +98,7 @@ class Snackbar {
 
       if (!data) {
         data = new Snackbar(this, _config)
-        $element.data(DATA_KEY_SNACKBAR, data)
+        $element.data(DATA_KEY, data)
       }
 
       waitingQueue.pushToWaitingQueue($(data._element))

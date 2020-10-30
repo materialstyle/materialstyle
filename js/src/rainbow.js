@@ -15,7 +15,7 @@ import $ from 'jquery'
 
 const NAME = 'rainbow'
 const VERSION = '2.0.0'
-const DATA_KEY_RAINBOW = 'ms.rainbow'
+const DATA_KEY = 'ms.rainbow'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 class Rainbow {
@@ -31,11 +31,11 @@ class Rainbow {
   static _jQueryInterface() {
     return this.each(function () {
       const $element = $(this)
-      let data = $element.data(DATA_KEY_RAINBOW)
+      let data = $element.data(DATA_KEY)
 
       if (!data) {
         data = new Rainbow(this)
-        $element.data(DATA_KEY_RAINBOW, data)
+        $element.data(DATA_KEY, data)
       }
     })
   }

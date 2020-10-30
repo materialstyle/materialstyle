@@ -17,7 +17,7 @@ import $ from 'jquery'
 
 const NAME = 'tab'
 const VERSION = '2.0.0'
-const DATA_KEY_TAB = 'ms.tab'
+const DATA_KEY = 'ms.tab'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const INDICATOR_HEIGHT = 2
@@ -35,14 +35,14 @@ class Tab {
   static _jQueryInterface(config) {
     return this.each(function () {
       const $element = $(this)
-      let data = $element.data(DATA_KEY_TAB)
+      let data = $element.data(DATA_KEY)
       let shouldRedraw = true
 
       if (!data) {
         shouldRedraw = false
 
         data = new Tab(this)
-        $element.data(DATA_KEY_TAB, data)
+        $element.data(DATA_KEY, data)
 
         data._element.style.visibility = 'visible'
 

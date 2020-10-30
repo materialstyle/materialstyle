@@ -15,7 +15,7 @@ import $ from 'jquery'
 
 const NAME = 'spinner'
 const VERSION = '2.0.0'
-const DATA_KEY_SPINNER = 'ms.spinner'
+const DATA_KEY = 'ms.spinner'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 class Spinner {
@@ -31,11 +31,11 @@ class Spinner {
   static _jQueryInterface() {
     return this.each(function () {
       const $element = $(this)
-      let data = $element.data(DATA_KEY_SPINNER)
+      let data = $element.data(DATA_KEY)
 
       if (!data) {
         data = new Spinner(this)
-        $element.data(DATA_KEY_SPINNER, data)
+        $element.data(DATA_KEY, data)
       }
     })
   }
