@@ -29,7 +29,7 @@ class Drawer {
     this._element = element
     this._shade = this.createShade()
     this._hamburger = document.querySelector('.drawer-toggle')
-    this._drawerBrand = element.querySelector('.drawer-brand')
+    this._drawerHeader = element.querySelector('.drawer-header')
     this._footer = document.querySelector('footer')
     this._navBar = document.querySelector('.navbar')
 
@@ -79,7 +79,7 @@ class Drawer {
         fixed.appendChild(value)
       }
 
-      this._element.appendChild(this._drawerBrand)
+      this._element.appendChild(this._drawerHeader)
       this._element.appendChild(fixed)
 
       this._fixed = fixed
@@ -90,8 +90,8 @@ class Drawer {
       navbarHeight = this._navBar.offsetHeight
     }
 
-    if (this._drawerBrand !== null) {
-      this._drawerBrand.style.height = `${navbarHeight}px`
+    if (this._drawerHeader !== null) {
+      this._drawerHeader.style.height = `${navbarHeight}px`
     }
 
     if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed !== null) {
@@ -212,8 +212,8 @@ class Drawer {
         navbarHeight = this._navBar.offsetHeight
       }
 
-      if (this._drawerBrand !== null) {
-        this._drawerBrand.style.height = `${navbarHeight}px`
+      if (this._drawerHeader !== null) {
+        this._drawerHeader.style.height = `${navbarHeight}px`
       }
 
       if (this._fixed !== null && this._fixed !== undefined) {
