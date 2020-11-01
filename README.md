@@ -25,8 +25,6 @@ https://materialstyle.github.io/docs/2.0/getting-started/installation/
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-```
-```
 <!-- Material Style JS -->
 <script src="https://unpkg.com/@materialstyle/materialstyle@2.0.0/dist/js/materialstyle.min.js"></script>
 ```
