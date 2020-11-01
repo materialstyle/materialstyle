@@ -27,6 +27,7 @@ webpackConfig = {
     Spinner: './js/src/spinner.js',
     Rainbow: './js/src/rainbow.js',
     TextField: './js/src/text_field.js',
+    Util: './js/src/util.js',
     materialstyle: './js/src/material_style.js'
   },
   devtool: 'source-map',

@@ -2,7 +2,7 @@ import 'bootstrap/js/src/tab'
 
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.1): tab.js
+ * Material Style (v2.0.2): tab.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -16,7 +16,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'tab'
-const VERSION = '2.0.1'
+const VERSION = '2.0.2'
 const DATA_KEY = 'ms.tab'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 

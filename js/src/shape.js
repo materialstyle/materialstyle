@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.1): shape.js
+ * Material Style (v2.0.2): shape.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ import {
  */
 
 const NAME = 'shape'
-const VERSION = '2.0.1'
+const VERSION = '2.0.2'
 const DATA_KEY = 'ms.shape'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 

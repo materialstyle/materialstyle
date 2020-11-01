@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.1): drawer.js
+ * Material Style (v2.0.2): drawer.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'drawer'
-const VERSION = '2.0.1'
+const VERSION = '2.0.2'
 const DATA_KEY = 'ms.drawer'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 

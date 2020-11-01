@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.1): ripple.js
+ * Material Style (v2.0.2): ripple.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'ripple'
-const VERSION = '2.0.1'
+const VERSION = '2.0.2'
 const DATA_KEY = 'ms.ripple'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
