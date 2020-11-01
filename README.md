@@ -1,19 +1,21 @@
 # Material Style
 Material Style is an easy to use UI Library based on Bootstrap 4.5 that lets you add Material Design styles and animations to Bootstrap components.
 
-## Download the latest release
-https://materialstyle.github.io/store/materialstyle-2.0.0.zip
+## Components
+https://materialstyle.github.io/docs/2.0/components/alert/
 
 ## Get Started
-### Styles
-Material Style recommends using Material Icons. However, You are free to use Font Awesome.
+https://materialstyle.github.io/docs/2.0/getting-started/installation/
+
+### 1. CDN
+#### Styles
 ```
 <!-- Material Icons -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- Material Style CSS -->
 <link rel="stylesheet" href="https://unpkg.com/@materialstyle/materialstyle@2.0.0/dist/css/materialstyle.min.css">
 ```
-### Scripts
+#### Scripts
 ```
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -29,7 +31,25 @@ Material Style recommends using Material Icons. However, You are free to use Fon
 <script src="https://unpkg.com/@materialstyle/materialstyle@2.0.0/dist/js/materialstyle.min.js"></script>
 ```
 
-That's it! You are now ready to add Material Style components on your site.
+### 2. NPM
+#### Install
+```
+npm i @materialstyle/materialstyle
+```
+#### Import Material Style
+```
+import '@materialstyle/materialstyle';
+import '@materialstyle/materialstyle/dist/css/materialstyle.min.css';
+```
+#### Alternatively, you may import plugins individually as needed
+```
+import '@materialstyle/materialstyle/js/dist/util';
+import '@materialstyle/materialstyle/js/dist/alert';
+```
+#### Material Style depends on jQuery and Popper, which are specified in the peerDependencies property; this means that you will have to make sure to add both of them to your package.json using:
+```
+npm i jquery popper.js
+```
 
-## Components
-https://materialstyle.github.io/docs/2.0/components/alert/
+### 3. Download the latest release
+https://materialstyle.github.io/store/materialstyle-2.0.0.zip
