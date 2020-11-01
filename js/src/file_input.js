@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.0): file_input.js
+ * Material Style (v2.0.1): file_input.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'fileinput'
-const VERSION = '2.0.0'
+const VERSION = '2.0.1'
 const DATA_KEY = 'ms.fileinput'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 

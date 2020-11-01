@@ -13,7 +13,7 @@ https://materialstyle.github.io/docs/2.0/getting-started/installation/
 <!-- Material Icons -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- Material Style CSS -->
-<link rel="stylesheet" href="https://unpkg.com/@materialstyle/materialstyle@2.0.0/dist/css/materialstyle.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@materialstyle/materialstyle@2.0.1/dist/css/materialstyle.min.css">
 ```
 #### Scripts
 ```
@@ -26,7 +26,7 @@ https://materialstyle.github.io/docs/2.0/getting-started/installation/
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
 <!-- Material Style JS -->
-<script src="https://unpkg.com/@materialstyle/materialstyle@2.0.0/dist/js/materialstyle.min.js"></script>
+<script src="https://unpkg.com/@materialstyle/materialstyle@2.0.1/dist/js/materialstyle.min.js"></script>
 ```
 
 ### 2. NPM
@@ -34,15 +34,18 @@ https://materialstyle.github.io/docs/2.0/getting-started/installation/
 ```
 npm i @materialstyle/materialstyle
 ```
-#### Import Material Style
+#### Import Material Style JS
 ```
 import '@materialstyle/materialstyle';
-import '@materialstyle/materialstyle/dist/css/materialstyle.min.css';
 ```
 #### Alternatively, you may import plugins individually as needed
 ```
 import '@materialstyle/materialstyle/js/dist/util';
 import '@materialstyle/materialstyle/js/dist/alert';
+```
+#### Import Material Style CSS in your SCSS/CSS file
+```
+@import '@materialstyle/materialstyle/dist/css/materialstyle.min.css';
 ```
 #### Material Style depends on jQuery and Popper, which are specified in the peerDependencies property; this means that you will have to make sure to add both of them to your package.json using:
 ```
@@ -50,4 +53,4 @@ npm i jquery popper.js
 ```
 
 ### 3. Download the latest release
-https://materialstyle.github.io/store/materialstyle-2.0.0.zip
+https://materialstyle.github.io/store/materialstyle-2.0.1.zip

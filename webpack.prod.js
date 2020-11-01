@@ -28,7 +28,7 @@ module.exports = merge(common, {
       raw: true,
       banner:
 `/*!
-* Material Style v2.0.0 (https://materialstyle.github.io/)
+* Material Style v2.0.1 (https://materialstyle.github.io/)
 * Copyright 2018-2020 Material Style
 * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
 *

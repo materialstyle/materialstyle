@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.0): select_field.js
+ * Material Style (v2.0.1): select_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'selectfield'
-const VERSION = '2.0.0'
+const VERSION = '2.0.1'
 const DATA_KEY = 'ms.selectfield'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 

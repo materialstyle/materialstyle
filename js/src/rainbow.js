@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.0): rainbow.js
+ * Material Style (v2.0.1): rainbow.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'rainbow'
-const VERSION = '2.0.0'
+const VERSION = '2.0.1'
 const DATA_KEY = 'ms.rainbow'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
