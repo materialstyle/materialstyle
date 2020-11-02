@@ -53,4 +53,4 @@ npm i jquery popper.js
 ```
 
 ### 3. Download the latest release
-https://materialstyle.github.io/store/materialstyle-2.0.2.zip
+https://github.com/materialstyle/materialstyle.github.io/raw/master/store/2.0.2.zip
