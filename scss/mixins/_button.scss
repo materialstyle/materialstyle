@@ -1,19 +1,39 @@
 @mixin button-variant(
-  $background, $border,
-  $hover-background: darken($background, 5%), $hover-border: darken($border, 5%),
-  $active-background: darken($background, 8%), $active-border: darken($border, 8%)
+  $background,
+  $border,
+  $color: color-contrast($background),
+  $hover-background: if($color == $color-contrast-light, darken($background, 7.5%), lighten($background, 7.5%)),
+  $hover-border: if($color == $color-contrast-light, darken($border, 10%), lighten($border, 5%)),
+  $hover-color: color-contrast($hover-background),
+  $active-background: if($color == $color-contrast-light, darken($background, 10%), lighten($background, 10%)),
+  $active-border: if($color == $color-contrast-light, darken($border, 12.5%), lighten($border, 5%)),
+  $active-color: color-contrast($active-background),
+  $disabled-background: $background,
+  $disabled-border: $border,
+  $disabled-color: color-contrast($disabled-background)
 ) {
-  color: color-yiq($background);
+
+  color: $color;
   @include gradient-bg($background);
 
+  &:hover {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
   &:active,
   &.active,
-  &:hover,
-  &:focus,
-  &.focus,
   .show > &.dropdown-toggle {
-    color: color-yiq($hover-background);
-    @include gradient-bg($hover-background);
+    color: $active-color;
+    background-color: $active-background;
   }
 
   .m-ripple {
@@ -21,18 +41,30 @@
   }
 }
 
-@mixin button-outline-variant($color, $color-hover: $color, $active-background: lighten($color, 45%), $active-border: $color) {
+@mixin button-outline-variant(
+  $color,
+  $color-hover: color-contrast($color),
+  $active-background: $color,
+  $active-border: $color,
+  $active-color: color-contrast($active-background)
+) {
   color: $color;
+  border-color: $color;
 
+  &:hover {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
   &:active,
   &.active,
-  &:hover,
-  &:focus,
-  &.focus,
-  .show > &.dropdown-toggle {
-    color: color-yiq($active-background, darken($color, 10%));
+  &.dropdown-toggle.show {
+    color: $active-color;
     background-color: $active-background;
-    border-color: color-yiq($active-background, darken($color, 10%));
+    border-color: $active-border;
   }
 
   .m-ripple {
