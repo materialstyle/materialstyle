@@ -78,7 +78,7 @@ webpackConfig = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      moduleFilename: () => {
+      filename: () => {
         return 'css/materialstyle.min.css';
       }
     }),

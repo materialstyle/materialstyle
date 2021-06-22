@@ -1,7 +1,7 @@
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(common, {
@@ -15,8 +15,9 @@ module.exports = merge(common, {
           return true;
         }
       }),
-      new OptimizeCssAssetsPlugin({
+      new CssMinimizerPlugin({
         assetNameRegExp: /\.min\.css$/g,
+        parallel: true,
         cssProcessorPluginOptions: {
           preset: ['default']
         }
