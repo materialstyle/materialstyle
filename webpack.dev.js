@@ -14,7 +14,8 @@ webpackConfig = merge(common, {
     watchContentBase: true,
     liveReload: true,
     open: true,
-    overlay: true
+    overlay: true,
+    injectClient: false
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

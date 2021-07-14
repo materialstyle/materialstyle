@@ -5,7 +5,13 @@
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin,
+  getElementFromSelector,
+  isDisabled
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -14,42 +20,41 @@ import $ from 'jquery'
  */
 
 const NAME = 'ripple'
-const VERSION = '2.0.2'
 const DATA_KEY = 'ms.ripple'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
+const EVENT_KEY = `.${DATA_KEY}`
+
+const EVENT_MOUSEDOWN = `mousedown${EVENT_KEY}`
+const EVENT_MOUSEUP = `mouseup${EVENT_KEY}`
+const EVENT_MOUSEMOVE = `mousemove${EVENT_KEY}`
 
 const DIVISOR = 2
 
-class Ripple {
+class Ripple extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this.addRipple()
-    this.addEventListeners()
+    this._setListeners()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface(config) {
+  static jQueryInterface(config) {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-      let shouldRedraw = true
-
-      if (!data) {
-        shouldRedraw = false
-
-        data = new Ripple(this)
-        $element.data(DATA_KEY, data)
-      }
+      const data = Ripple.getOrCreateInstance(this)
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
-        } else if (config === 'redraw' && shouldRedraw) {
-          data[config]()
         }
+
+        data[config](this)
       }
     })
   }
@@ -126,18 +131,10 @@ class Ripple {
     this._ripple.style.height = `${maxDimension}px`
   }
 
-  addEventListeners() {
-    $(this._element).on('mousedown', (event) => {
-      this.handleMouseDown(event)
-    })
-
-    $(this._element).on('mouseup', () => {
-      this.handleMouseUpMouseMove()
-    })
-
-    $(this._element).on('mousemove', () => {
-      this.handleMouseUpMouseMove()
-    })
+  _setListeners() {
+    EventHandler.on(this._element, EVENT_MOUSEDOWN, event => this.handleMouseDown(event))
+    EventHandler.on(this._element, EVENT_MOUSEUP, () => this.handleMouseUpMouseMove())
+    EventHandler.on(this._element, EVENT_MOUSEMOVE, () => this.handleMouseUpMouseMove())
   }
 }
 
@@ -147,11 +144,6 @@ class Ripple {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Ripple._jQueryInterface
-$.fn[NAME].Constructor = Ripple
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Ripple._jQueryInterface
-}
+defineJQueryPlugin(Ripple)
 
 export default Ripple

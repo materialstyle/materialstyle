@@ -226,10 +226,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
+    // var btnList = [].slice.call(document.querySelectorAll('.btn'))
+    // var toastList = btnList.map(function (toastEl) {
+    //   return new materialstyle.Ripple(toastEl)
+    // })
     $(function(){
-        $('.m-file-input').fileinput();
-        $('.btn').ripple();
-    })
+      $('.btn').ripple();
+    });
 
 </script>
 </body>
