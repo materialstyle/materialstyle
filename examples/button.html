@@ -223,16 +223,16 @@
     </button>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
-    // var btnList = [].slice.call(document.querySelectorAll('.btn'))
-    // var toastList = btnList.map(function (toastEl) {
-    //   return new materialstyle.Ripple(toastEl)
-    // })
-    $(function(){
-      $('.btn').ripple();
-    });
+    var btnList = [].slice.call(document.querySelectorAll('.btn'))
+    var toastList = btnList.map(function (toastEl) {
+      return new materialstyle.Ripple(toastEl)
+    })
+    // $(function(){
+    //   $('.btn').ripple();
+    // });
 
 </script>
 </body>

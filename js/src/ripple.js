@@ -65,13 +65,18 @@ class Ripple extends BaseComponent {
       this._element.offsetHeight
     )
 
+    const rippleContainer = document.createElement('div')
+    rippleContainer.className = 'm-ripple-container'
+
     const ripple = document.createElement('span')
     ripple.className = 'm-ripple'
     ripple.style.width = `${maxDimension}px`
     ripple.style.height = `${maxDimension}px`
 
+    rippleContainer.appendChild(ripple)
+
     if (this._element.querySelector('.m-ripple') === null) {
-      this._element.appendChild(ripple)
+      this._element.appendChild(rippleContainer)
     }
 
     this._ripple = ripple
