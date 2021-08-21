@@ -227,14 +227,20 @@
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
     // Without jQuery
-    var btnList = [].slice.call(document.querySelectorAll('.btn'))
-    var toastList = btnList.map(function (toastEl) {
-      return new materialstyle.Ripple(toastEl)
+    var buttonList = [].slice.call(document.querySelectorAll('.btn'))
+    var rippleList = buttonList.map(function (button) {
+      return new materialstyle.Ripple(button)
+    })
+
+    var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
+    var fileInputs = fileInputList.map(function (button) {
+      return new materialstyle.FileInput(button)
     })
 
     // With jQuery
     // $(function(){
     //   $('.btn').ripple();
+    //   $('.m-file-input').fileinput();
     // });
 </script>
 </body>

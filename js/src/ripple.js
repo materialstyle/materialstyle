@@ -1,14 +1,12 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): ripple.js
+ * Material Style (v3.0.0): ripple.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import {
-  defineJQueryPlugin,
-  getElementFromSelector,
-  isDisabled
+  defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import BaseComponent from 'bootstrap/js/src/base-component'
@@ -20,6 +18,7 @@ import BaseComponent from 'bootstrap/js/src/base-component'
  */
 
 const NAME = 'ripple'
+const VERSION = '3.0.0'
 const DATA_KEY = 'ms.ripple'
 const EVENT_KEY = `.${DATA_KEY}`
 

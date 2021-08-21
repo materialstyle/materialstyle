@@ -9,7 +9,7 @@ import Carousel from './carousel'
 import Collapse from './collapse'
 // import Drawer from './drawer'
 // import Dropdown from './dropdown'
-// import FileInput from './file_input'
+import FileInput from './file_input'
 // import Modal from './modal'
 // import Popover from './popover'
 // import Rainbow from './rainbow'
@@ -33,7 +33,7 @@ export default {
   Collapse,
   // Drawer,
   // Dropdown,
-  // FileInput,
+  FileInput,
   // Modal,
   // Popover,
   // Rainbow,
