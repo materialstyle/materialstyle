@@ -176,12 +176,19 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
     <script src="../dist/js/materialstyle.min.js"></script>
     <script>
-        $(function(){
-            $('.btn').ripple();
-        })
+      // Without jQuery
+      var buttonList = [].slice.call(document.querySelectorAll('.btn'))
+      var rippleList = buttonList.map(function (button) {
+        return new materialstyle.Ripple(button)
+      })
+
+      // With jQuery
+      // $(function(){
+      //   $('.btn').ripple();
+      // });
     </script>
   </body>
 </html>
