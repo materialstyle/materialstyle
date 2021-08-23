@@ -8,7 +8,7 @@ import Button from './button'
 import Carousel from './carousel'
 import Collapse from './collapse'
 import Drawer from './drawer'
-// import Dropdown from './dropdown'
+import Dropdown from './dropdown'
 import FileInput from './file_input'
 // import Modal from './modal'
 // import Popover from './popover'
@@ -32,7 +32,7 @@ export default {
   Carousel,
   Collapse,
   Drawer,
-  // Dropdown,
+  Dropdown,
   FileInput,
   // Modal,
   // Popover,
