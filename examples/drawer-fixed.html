@@ -101,7 +101,19 @@
     Footer
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 <script src="../dist/js/materialstyle.min.js"></script>
+<script>
+  // Without jQuery
+  var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+  var drawerList = drawers.map(function (drawer) {
+    return new materialstyle.Drawer(drawer)
+  })
+
+  // With jQuery
+  // $(function(){
+  //   $('.drawer').drawer()
+  // })
+</script>
 </body>
 </html>

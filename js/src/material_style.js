@@ -7,7 +7,7 @@ import Alert from './alert'
 import Button from './button'
 import Carousel from './carousel'
 import Collapse from './collapse'
-// import Drawer from './drawer'
+import Drawer from './drawer'
 // import Dropdown from './dropdown'
 import FileInput from './file_input'
 // import Modal from './modal'
@@ -31,7 +31,7 @@ export default {
   Button,
   Carousel,
   Collapse,
-  // Drawer,
+  Drawer,
   // Dropdown,
   FileInput,
   // Modal,
