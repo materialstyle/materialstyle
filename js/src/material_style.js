@@ -11,7 +11,7 @@ import Drawer from './drawer'
 import Dropdown from './dropdown'
 import FileInput from './file_input'
 // import Modal from './modal'
-// import Popover from './popover'
+import Popover from './popover'
 // import Rainbow from './rainbow'
 import Ripple from './ripple'
 // import Scrollspy from './scrollspy'
@@ -35,7 +35,7 @@ export default {
   Dropdown,
   FileInput,
   // Modal,
-  // Popover,
+  Popover,
   // Rainbow,
   Ripple,
   // Scrollspy,

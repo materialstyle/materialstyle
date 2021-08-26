@@ -14,7 +14,7 @@ webpackConfig = {
     FileInput: './js/src/file_input.js',
     Modal: './js/src/modal.js',
     Navbar: './js/src/navbar.js',
-    // Popover: './js/src/popover.js',
+    Popover: './js/src/popover.js',
     // Scrollspy: './js/src/scrollspy.js',
     // Tab: './js/src/tab.js',
     // Toast: './js/src/toast.js',
