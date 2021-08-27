@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const Components = require('./components.js');
 
 webpackConfig = merge(common, {
@@ -17,8 +18,16 @@ webpackConfig = merge(common, {
     overlay: true,
     injectClient: false
   },
+  module: {
+    rules: [
+      { test: /\.hbs$/, loader: "handlebars-loader" },
+    ]
+  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackHarddiskPlugin({
+      outputPath: path.resolve(__dirname, 'examples')
+    })
   ]
 });
 
@@ -27,8 +36,10 @@ Components.forEach(function (component) {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './examples/' + component + '.html',
-      filename: 'examples/' + component + '.html'
+      alwaysWriteToDisk: true,
+      template: './views/' + component + '.hbs',
+      filename: component + '.html',
+      title: component
     })
   );
 });
