@@ -6,6 +6,7 @@
 
 // Helpers
 @import "node_modules/bootstrap/scss/mixins/breakpoints";
+@import "node_modules/bootstrap/scss/mixins/color-scheme";
 @import "node_modules/bootstrap/scss/mixins/image";
 @import "node_modules/bootstrap/scss/mixins/resize";
 @import "node_modules/bootstrap/scss/mixins/visually-hidden";
@@ -17,6 +18,7 @@
 
 // Components
 @import "node_modules/bootstrap/scss/mixins/alert";
+@import "node_modules/bootstrap/scss/mixins/backdrop";
 @import "mixins/button";
 @import "node_modules/bootstrap/scss/mixins/caret";
 @import "node_modules/bootstrap/scss/mixins/pagination";

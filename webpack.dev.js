@@ -9,14 +9,18 @@ const Components = require('./components.js');
 webpackConfig = merge(common, {
   mode: 'development',
   devServer: {
-    contentBase: path.join(__dirname, 'examples'),
+    static: {
+      directory: path.resolve(__dirname, 'examples'),
+      watch: true,
+    },
     port: 3005,
     hot: false,
-    watchContentBase: true,
     liveReload: true,
+    client: {
+      overlay: true,
+      progress: true,
+    },
     open: true,
-    overlay: true,
-    injectClient: false
   },
   module: {
     rules: [
