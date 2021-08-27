@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-deep-purple navbar-dark">
+    <div class="container-fluid">
+        <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+        <a class="navbar-brand" href="javascript:">
+            Material Style Development
+        </a>
+    </div>
+</nav>
+
+<section class="m-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light raised-4dp">
+        <div class="drawer-header bg-dark text-light">
+            <a class="drawer-brand text-light" href="javascript:">
+                Material Style Development
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
+        </div>
+        <ul class="nav flex-column">
+            {{#each htmlWebpackPlugin.options.components}}
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/{{this}}.html">
+                    {{this}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </aside>
+    <div class="m-container">
+
+        {{#> content }}{{/content}}
+
+    </div>
+</section>
+
+<script src="../dist/js/materialstyle.min.js"></script>
+
+{{#> scripts }}{{/scripts}}
+
+</body>
+</html>

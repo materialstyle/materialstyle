@@ -1,90 +1,213 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Material Style 3</title>
-    <style>
-        div {
-            display: inline-flex;
-        }
-
-        h1 {
-            margin-left: 40px;
-        }
-
-        h1, ul {
-            font-family: monospace;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        ul li {
-            padding: 5px;
-            border: 1px solid #efefef;
-        }
-
-        ul li:hover {
-            background-color: #efefef;
-        }
-
-        ul li a {
-            color: blue;
-            text-decoration: none;
-            display: block;
-        }
-    </style>
+    <title>index</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
 </head>
 <body>
-<h1>Material Style 3</h1>
-<div>
-    <ul>
-        <li><a href="/alert.html">Alert</a></li>
-        <li><a href="/badge.html">Badge</a></li>
-        <li><a href="/breadcrumb.html">Breadcrumb</a></li>
-        <li><a href="/button.html">Button</a></li>
-        <li><a href="/card.html">Card</a></li>
-        <li><a href="/checkbox.html">Checkbox</a></li>
-        <li><a href="/drawer.html">Drawer</a></li>
-        <li><a href="/drawer-always-visible.html">Drawer (Always Visible)</a></li>
-        <li><a href="/drawer-fixed.html">Drawer (Fixed)</a></li>
-        <li><a href="/dropdown.html">Dropdown</a></li>
-    </ul>
-</div>
-<div>
-    <ul>
-        <li><a href="/elevation.html">Elevation</a></li>
-        <li><a href="/image-list.html">Image List</a></li>
-        <li><a href="/list.html">List</a></li>
-        <li><a href="/modal.html">Modal</a></li>
-        <li><a href="/nav.html">Nav</a></li>
-        <li><a href="/navbar.html">Navbar</a></li>
-        <li><a href="/navbar-autohide.html">Navbar (Autohide)</a></li>
-        <li><a href="/pagination.html">Pagination</a></li>
-        <li><a href="/popover.html">Popover</a></li>
-        <li><a href="/progress-bar.html">Progress Bar</a></li>
-    </ul>
-</div>
-<div>
-    <ul>
-        <li><a href="/radio.html">Radio</a></li>
-        <li><a href="/range-slider.html">Range Slider</a></li>
-        <li><a href="/select-field.html">Select</a></li>
-        <li><a href="/shape.html">Shape</a></li>
-        <li><a href="/snackbar.html">Snackbar</a></li>
-        <li><a href="/spinner.html">Spinner</a></li>
-        <li><a href="/switch.html">Switch</a></li>
-        <li><a href="/tab.html">Tab</a></li>
-        <li><a href="/table.html">Table</a></li>
-        <li><a href="/text.html">Text</a></li>
-    </ul>
-</div>
-<div>
-    <ul>
-        <li><a href="/text-field.html">Text Field</a></li>
-        <li><a href="/toast.html">Toast</a></li>
-        <li><a href="/tooltip.html">Tooltip</a></li>
-    </ul>
-</div>
+
+<nav class="navbar navbar-expand-sm bg-deep-purple navbar-dark">
+    <div class="container-fluid">
+        <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+        <a class="navbar-brand" href="javascript:">
+            Material Style Development
+        </a>
+    </div>
+</nav>
+
+<section class="m-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light raised-4dp">
+        <div class="drawer-header bg-dark text-light">
+            <a class="drawer-brand text-light" href="javascript:">
+                Material Style Development
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/index.html">
+                    index
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/alert.html">
+                    alert
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/badge.html">
+                    badge
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/breadcrumb.html">
+                    breadcrumb
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/button.html">
+                    button
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/card.html">
+                    card
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/checkbox.html">
+                    checkbox
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer.html">
+                    drawer
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-always-visible.html">
+                    drawer-always-visible
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-fixed.html">
+                    drawer-fixed
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/dropdown.html">
+                    dropdown
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/elevation.html">
+                    elevation
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/image-list.html">
+                    image-list
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/list.html">
+                    list
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/modal.html">
+                    modal
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/nav.html">
+                    nav
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar.html">
+                    navbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar-autohide.html">
+                    navbar-autohide
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/pagination.html">
+                    pagination
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/popover.html">
+                    popover
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/progress-bar.html">
+                    progress-bar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/radio.html">
+                    radio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/range-slider.html">
+                    range-slider
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/select-field.html">
+                    select-field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shape.html">
+                    shape
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/snackbar.html">
+                    snackbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/spinner.html">
+                    spinner
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/switch.html">
+                    switch
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tab.html">
+                    tab
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/table.html">
+                    table
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text.html">
+                    text
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text-field.html">
+                    text-field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/toast.html">
+                    toast
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tooltip.html">
+                    tooltip
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="m-container">
+
+                <h1 class="m-3">Material Style 3</h1>
+
+
+    </div>
+</section>
+
+<script src="../dist/js/materialstyle.min.js"></script>
+
+
+
 </body>
 </html>

@@ -43,7 +43,8 @@ Components.forEach(function (component) {
       alwaysWriteToDisk: true,
       template: './views/' + component + '.hbs',
       filename: component + '.html',
-      title: component
+      title: component,
+      components: Components
     })
   );
 });

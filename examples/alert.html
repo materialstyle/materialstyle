@@ -1,67 +1,274 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Alert</title>
+    <title>alert</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
 </head>
 <body>
-<h1 class="m-3">Alert</h1>
 
-<div class="m-3">
-    <div class="alert alert-primary" role="alert">
-        A simple primary alert.
+<nav class="navbar navbar-expand-sm bg-deep-purple navbar-dark">
+    <div class="container-fluid">
+        <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+        <a class="navbar-brand" href="javascript:">
+            Material Style Development
+        </a>
     </div>
-</div>
+</nav>
 
-<div class="m-3">
-    <div class="alert alert-info" role="alert" role="alert">
-        A simple info alert with <a href="#" class="alert-link">a link</a>.
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-        </svg>
-        <div>
-            An alert with an icon.
+<section class="m-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light raised-4dp">
+        <div class="drawer-header bg-dark text-light">
+            <a class="drawer-brand text-light" href="javascript:">
+                Material Style Development
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
         </div>
-    </div>
-</div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/index.html">
+                    index
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/alert.html">
+                    alert
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/badge.html">
+                    badge
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/breadcrumb.html">
+                    breadcrumb
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/button.html">
+                    button
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/card.html">
+                    card
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/checkbox.html">
+                    checkbox
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer.html">
+                    drawer
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-always-visible.html">
+                    drawer-always-visible
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-fixed.html">
+                    drawer-fixed
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/dropdown.html">
+                    dropdown
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/elevation.html">
+                    elevation
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/image-list.html">
+                    image-list
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/list.html">
+                    list
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/modal.html">
+                    modal
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/nav.html">
+                    nav
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar.html">
+                    navbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar-autohide.html">
+                    navbar-autohide
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/pagination.html">
+                    pagination
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/popover.html">
+                    popover
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/progress-bar.html">
+                    progress-bar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/radio.html">
+                    radio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/range-slider.html">
+                    range-slider
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/select-field.html">
+                    select-field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shape.html">
+                    shape
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/snackbar.html">
+                    snackbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/spinner.html">
+                    spinner
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/switch.html">
+                    switch
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tab.html">
+                    tab
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/table.html">
+                    table
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text.html">
+                    text
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text-field.html">
+                    text-field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/toast.html">
+                    toast
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tooltip.html">
+                    tooltip
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="m-container">
 
-<div class="m-3">
-    <div class="alert alert-pink alert-dismissible" role="alert">
-        Dismissable alert.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-</div>
+                <h1 class="m-3">Alert</h1>
 
-<div class="m-3">
-    <div class="alert alert-deep-purple alert-dismissible fade show" role="alert">
-        Dismissable alert with fade effect.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-</div>
+        <div class="m-3">
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert.
+            </div>
+        </div>
 
-<div class="m-3">
-    <div class="alert alert-warning raised-4dp" role="alert">
-        Raised alert (Alert with a shadow).
-    </div>
-</div>
+        <div class="m-3">
+            <div class="alert alert-info" role="alert" role="alert">
+                A simple info alert with <a href="#" class="alert-link">a link</a>.
+            </div>
+        </div>
 
-<div class="m-3">
-    <div class="alert alert-success" role="alert" role="alert">
-        <h4 class="alert-heading">Alert with heading, paragraph and divider.</h4>
-        <p>
-            Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
-            so that you can see how spacing within an alert works with this kind of content.
-        </p>
-        <hr>
-        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        <div class="m-3">
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <div>
+                    An alert with an icon.
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="alert alert-pink alert-dismissible" role="alert">
+                Dismissable alert.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="alert alert-deep-purple alert-dismissible fade show" role="alert">
+                Dismissable alert with fade effect.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="alert alert-warning raised-4dp" role="alert">
+                Raised alert (Alert with a shadow).
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="alert alert-success" role="alert" role="alert">
+                <h4 class="alert-heading">Alert with heading, paragraph and divider.</h4>
+                <p>
+                    Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
+                    so that you can see how spacing within an alert works with this kind of content.
+                </p>
+                <hr>
+                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </div>
+        </div>
+
+
     </div>
-</div>
+</section>
 
 <script src="../dist/js/materialstyle.min.js"></script>
+
+        <script>
+            var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+            var drawerList = drawers.map(function (drawer) {
+                return new materialstyle.Drawer(drawer)
+            })
+        </script>
+
+
 </body>
 </html>
