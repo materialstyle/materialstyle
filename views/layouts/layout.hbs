@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{htmlWebpackPlugin.options.title}}</title>
+    <title>{{transform htmlWebpackPlugin.options.title}}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
 
@@ -31,7 +31,7 @@
             {{#each htmlWebpackPlugin.options.components}}
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/{{this}}.html">
-                    {{this}}
+                    {{transform this}}
                 </a>
             </li>
             {{/each}}
