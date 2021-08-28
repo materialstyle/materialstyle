@@ -59,13 +59,4 @@
         </div>
     {{/inline}}
 
-    {{#*inline "scripts"}}
-        <script>
-            var drawers = [].slice.call(document.querySelectorAll('.drawer'))
-            var drawerList = drawers.map(function (drawer) {
-                return new materialstyle.Drawer(drawer)
-            })
-        </script>
-    {{/inline}}
-
 {{/"layouts/layout"}}

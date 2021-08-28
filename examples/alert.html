@@ -4,6 +4,9 @@
     <title>alert</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+
+    
+
 </head>
 <body>
 
@@ -260,14 +263,16 @@
     </div>
 </section>
 
-<script src="../dist/js/materialstyle.min.js"></script>
 
-        <script>
-            var drawers = [].slice.call(document.querySelectorAll('.drawer'))
-            var drawerList = drawers.map(function (drawer) {
-                return new materialstyle.Drawer(drawer)
-            })
-        </script>
+
+<script src="../dist/js/materialstyle.min.js"></script>
+<script>
+    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+    var drawerList = drawers.map(function (drawer) {
+        return new materialstyle.Drawer(drawer)
+    })
+</script>
+
 
 
 </body>

@@ -1,43 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dropdown</title>
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
+{{#> "layouts/layout" }}
 
-<h1 class="m-3">Dropdown</h1>
+    {{#*inline "content"}}
+        <h1 class="m-3">Dropdown</h1>
 
-<div class="m-3">
-    <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-            Dropdown button
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Link 1</a>
-            <a class="dropdown-item" href="#">Link 2</a>
-            <a class="dropdown-item" href="#">Link 3</a>
-        </div>
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="btn-group">
-        <button type="button" class="btn btn-red">Canon</button>
-        <button type="button" class="btn btn-red">Nikon</button>
-        <div class="btn-group">
-            <button type="button" class="btn btn-red dropdown-toggle" data-bs-toggle="dropdown">
-                Sony
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Tablet</a>
-                <a class="dropdown-item" href="#">Smartphone</a>
+        <div class="m-3">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../dist/js/materialstyle.min.js"></script>
-</body>
-</html>
+        <div class="m-3">
+            <div class="btn-group">
+                <button type="button" class="btn btn-red">Canon</button>
+                <button type="button" class="btn btn-red">Nikon</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-red dropdown-toggle" data-bs-toggle="dropdown">
+                        Sony
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tablet</a>
+                        <a class="dropdown-item" href="#">Smartphone</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/inline}}
+
+{{/"layouts/layout"}}
+

@@ -1,76 +1,73 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Progress Bar</title>
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
-<h1 class="m-3">Progress Bar</h1>
+{{#> "layouts/layout" }}
 
-<div class="m-3">
-    <div class="progress">
-        <div class="progress-bar bg-pink" style="width:70%"></div>
-    </div>
-</div>
+    {{#*inline "content"}}
+        <h1 class="m-3">Progress Bar</h1>
 
-<div class="m-3">
-    <div class="progress">
-        <div class="progress-bar bg-pink progress-bar-striped" style="width:70%"></div>
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="progress">
-        <div class="progress-bar bg-pink progress-bar-striped progress-bar-animated" style="width:70%"></div>
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="progress" style="height:20px;">
-        <div class="progress-bar bg-pink progress-bar-striped progress-bar-animated"
-             style="width:70%; height:20px;"></div>
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="progress" style="height: 20px;">
-        <div class="progress-bar bg-success" style="width:40%; height: 20px;">
-            Free Space
+        <div class="m-3">
+            <div class="progress">
+                <div class="progress-bar bg-pink" style="width:70%"></div>
+            </div>
         </div>
-        <div class="progress-bar bg-warning" style="width:10%; height: 20px;">
-            Warning
-        </div>
-        <div class="progress-bar bg-danger" style="width:20%; height: 20px;">
-            Danger
-        </div>
-    </div>
-</div>
 
-<div class="m-3">
-    <div class="progress">
-        <div class="progress-bar bg-pink m-progress"></div>
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="progress">
-        <div class="progress-bar m-rainbow">
-            <div class="m-bar bg-red"></div>
-            <div class="m-bar bg-green"></div>
-            <div class="m-bar bg-yellow"></div>
-            <div class="m-bar bg-blue"></div>
+        <div class="m-3">
+            <div class="progress">
+                <div class="progress-bar bg-pink progress-bar-striped" style="width:70%"></div>
+            </div>
         </div>
-    </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../dist/js/materialstyle.min.js"></script>
-<script>
-    $('.m-rainbow').rainbow();
-</script>
-</body>
-</html>
+        <div class="m-3">
+            <div class="progress">
+                <div class="progress-bar bg-pink progress-bar-striped progress-bar-animated" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-pink progress-bar-striped progress-bar-animated"
+                     style="width:70%; height:20px;"></div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="progress" style="height: 20px;">
+                <div class="progress-bar bg-success" style="width:40%; height: 20px;">
+                    Free Space
+                </div>
+                <div class="progress-bar bg-warning" style="width:10%; height: 20px;">
+                    Warning
+                </div>
+                <div class="progress-bar bg-danger" style="width:20%; height: 20px;">
+                    Danger
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="progress">
+                <div class="progress-bar bg-pink m-progress"></div>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <div class="progress">
+                <div class="progress-bar m-rainbow">
+                    <div class="m-bar bg-red"></div>
+                    <div class="m-bar bg-green"></div>
+                    <div class="m-bar bg-yellow"></div>
+                    <div class="m-bar bg-blue"></div>
+                </div>
+            </div>
+        </div>
+    {{/inline}}
+
+    {{#*inline "jQuery"}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {{/inline}}
+
+    {{#*inline "scripts"}}
+        <script>
+            $('.m-rainbow').rainbow();
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}

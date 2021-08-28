@@ -1,196 +1,194 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Modal</title>
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
-<h1 class="m-3">Modal</h1>
+{{#> "layouts/layout" }}
 
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
-                <button type="button" class="close" data-dismiss="modal">×</button>
-            </div>
+    {{#*inline "content"}}
+        <h1 class="m-3">Modal</h1>
 
-            <div class="modal-body">
-                <div class="m-3">
-                    <label class="d-block">File input button</label>
-                    <div class="m-file-input">
-                        <input type="file" name="myfile">
-                        <button type="button" class="btn btn-dark btn-file">
-                            <i class="material-icons">attach_file</i> Browse Single</button>
-                        <label class="files"></label>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
-                </div>
 
-                <div class="m-3">
-                    <div class="custom-control custom-checkbox custom-control-inline input-indigo">
-                        <input type="checkbox" class="custom-control-input" id="customCheckbox" name="example" value="">
-                        <label class="custom-control-label" for="customCheckbox">Inline Checkbox</label>
-                    </div>
-                    <div class="custom-control custom-checkbox custom-control-inline input-indigo">
-                        <input type="checkbox" class="custom-control-input" id="customCheckbox2" name="example" value="">
-                        <label class="custom-control-label" for="customCheckbox2">Inline Checkbox</label>
-                    </div>
-                </div>
-
-                <div class="m-3">
-                    <div class="form-group">
-                        <div class="m-text-field">
-                            <label for="name" class="static-label label">First Name</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="m-3">
-                    <div class="form-group">
-                        <div class="m-text-field-outline">
-                            <div class="prepend">
-                                <i class="material-icons">vpn_key</i>
+                    <div class="modal-body">
+                        <div class="m-3">
+                            <label class="d-block">File input button</label>
+                            <div class="m-file-input">
+                                <input type="file" name="myfile">
+                                <button type="button" class="btn btn-dark btn-file">
+                                    <i class="material-icons">attach_file</i> Browse Single</button>
+                                <label class="files"></label>
                             </div>
-                            <label for="password" class="floating-label">Password</label>
-                            <input type="password" value="" class="form-control" autocomplete="off"/>
                         </div>
-                    </div>
-                </div>
 
-                <div class="m-3">
-                    <div class="form-group">
-                        <div class="m-select">
-                            <div class="prepend">
-                                <i class="material-icons">account_box</i>
+                        <div class="m-3">
+                            <div class="custom-control custom-checkbox custom-control-inline input-indigo">
+                                <input type="checkbox" class="custom-control-input" id="customCheckbox" name="example" value="">
+                                <label class="custom-control-label" for="customCheckbox">Inline Checkbox</label>
                             </div>
-                            <label class="floating-label">Cars</label>
-                            <select class="form-control">
-                                <option value=""></option>
-                                <option value="1">Lamborghini</option>
-                                <option value="2">Buggati</option>
-                                <option value="3">Koenigsegg</option>
-                                <option value="4">Lykan</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="m-3">
-                    <div class="form-group">
-                        <div class="m-select-outline">
-                            <div class="prepend">
-                                <i class="material-icons">account_box</i>
+                            <div class="custom-control custom-checkbox custom-control-inline input-indigo">
+                                <input type="checkbox" class="custom-control-input" id="customCheckbox2" name="example" value="">
+                                <label class="custom-control-label" for="customCheckbox2">Inline Checkbox</label>
                             </div>
-                            <label class="static-label">Cars</label>
-                            <select class="form-control">
-                                <option value=""></option>
-                                <option value="1">Lamborghini</option>
-                                <option value="2">Buggati</option>
-                                <option value="3">Koenigsegg</option>
-                                <option value="4">Lykan</option>
-                            </select>
                         </div>
-                    </div>
-                </div>
 
-                <div class="m-3">
-                    <div class="form-group">
-                        <ul class="nav nav-tabs nav-justified primary-dark accent-indigo">
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#apple">Apple</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#apricot">Apricot</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#avocado">Avocado</a>
-                            </li>
-                        </ul>
-                        <!-- Tab Panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane container-fluid fade" id="apple">Apple</div>
-                            <div class="tab-pane container-fluid active" id="apricot">Apricot</div>
-                            <div class="tab-pane container-fluid fade" id="avocado">Avocado</div>
+                        <div class="m-3">
+                            <div class="form-group">
+                                <div class="m-text-field">
+                                    <label for="name" class="static-label label">First Name</label>
+                                    <input type="text" value="" class="form-control" autocomplete="off"/>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="m-3">
+                            <div class="form-group">
+                                <div class="m-text-field-outline">
+                                    <div class="prepend">
+                                        <i class="material-icons">vpn_key</i>
+                                    </div>
+                                    <label for="password" class="floating-label">Password</label>
+                                    <input type="password" value="" class="form-control" autocomplete="off"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="form-group">
+                                <div class="m-select">
+                                    <div class="prepend">
+                                        <i class="material-icons">account_box</i>
+                                    </div>
+                                    <label class="floating-label">Cars</label>
+                                    <select class="form-control">
+                                        <option value=""></option>
+                                        <option value="1">Lamborghini</option>
+                                        <option value="2">Buggati</option>
+                                        <option value="3">Koenigsegg</option>
+                                        <option value="4">Lykan</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="form-group">
+                                <div class="m-select-outline">
+                                    <div class="prepend">
+                                        <i class="material-icons">account_box</i>
+                                    </div>
+                                    <label class="static-label">Cars</label>
+                                    <select class="form-control">
+                                        <option value=""></option>
+                                        <option value="1">Lamborghini</option>
+                                        <option value="2">Buggati</option>
+                                        <option value="3">Koenigsegg</option>
+                                        <option value="4">Lykan</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="form-group">
+                                <ul class="nav nav-tabs nav-justified primary-dark accent-indigo">
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#apple">Apple</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#apricot">Apricot</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#avocado">Avocado</a>
+                                    </li>
+                                </ul>
+                                <!-- Tab Panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane container-fluid fade" id="apple">Apple</div>
+                                    <div class="tab-pane container-fluid active" id="apricot">Apricot</div>
+                                    <div class="tab-pane container-fluid fade" id="avocado">Avocado</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="progress">
+                                <div class="progress-bar bg-indigo m-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <button type="button" class="btn btn-dark" id="show-modal-snackbar">
+                                Show Snackbar
+                            </button>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="m-shape-container shape-parent-bg-white">
+                                <button type="button" class="btn btn-dark">
+                                    Shaped Button
+                                </button>
+                                <div class="angle-top-right"></div>
+                                <div class="angle-bottom-left"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                     </div>
                 </div>
-
-                <div class="m-3">
-                    <div class="progress">
-                        <div class="progress-bar bg-indigo m-progress"></div>
-                    </div>
-                </div>
-
-                <div class="m-3">
-                    <button type="button" class="btn btn-dark" id="show-modal-snackbar">
-                        Show Snackbar
-                    </button>
-                </div>
-
-                <div class="m-3">
-                    <div class="m-shape-container shape-parent-bg-white">
-                        <button type="button" class="btn btn-dark">
-                            Shaped Button
-                        </button>
-                        <div class="angle-top-right"></div>
-                        <div class="angle-bottom-left"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="m-3">
-    <button type="button" class="btn btn-black" data-toggle="modal" data-target="#myModal">
-        Open modal
-    </button>
-</div>
+        <div class="m-3">
+            <button type="button" class="btn btn-black" data-toggle="modal" data-target="#myModal">
+                Open modal
+            </button>
+        </div>
 
-<div class="snackbar snackbar-left" id="modal-snackbar">This is a Snackbar</div>
+        <div class="snackbar snackbar-left" id="modal-snackbar">This is a Snackbar</div>
+    {{/inline}}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="../dist/js/materialstyle.min.js"></script>
-<script>
-  $(function () {
-    $('.m-file-input').fileinput();
+    {{#*inline "jQuery"}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {{/inline}}
 
-    $('.m-text-field').textfield();
-    $('.m-text-field-outline').textfield();
-    $('.m-select').selectfield();
-    $('.m-select-outline').selectfield();
+    {{#*inline "scripts"}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-    $('.nav-tabs').tab();
-    $('.nav-tabs .nav-link').ripple();
-    $('.m-shape-container').shape();
-    $('.btn').ripple();
+        <script>
+          $(function () {
+            $('.m-file-input').fileinput();
 
-    $("#myModal").on('shown.bs.modal', function () {
-      $('.m-text-field').textfield('redraw');
-      $('.m-text-field-outline').textfield('redraw');
-      $('.m-select').selectfield('redraw');
-      $('.m-select-outline').selectfield('redraw');
+            $('.m-text-field').textfield();
+            $('.m-text-field-outline').textfield();
+            $('.m-select').selectfield();
+            $('.m-select-outline').selectfield();
 
-      $('.nav-tabs').tab('redraw');
-      $('.btn').ripple('redraw');
-      $('.nav-tabs .nav-link').ripple('redraw');
+            $('.nav-tabs').tab();
+            $('.nav-tabs .nav-link').ripple();
+            $('.m-shape-container').shape();
+            $('.btn').ripple();
 
-      $('#show-modal-snackbar').on('click', function () {
-        $('#modal-snackbar').snackbar();
-      });
-    });
-  })
-</script>
-</body>
-</html>
+            $("#myModal").on('shown.bs.modal', function () {
+              $('.m-text-field').textfield('redraw');
+              $('.m-text-field-outline').textfield('redraw');
+              $('.m-select').selectfield('redraw');
+              $('.m-select-outline').selectfield('redraw');
+
+              $('.nav-tabs').tab('redraw');
+              $('.btn').ripple('redraw');
+              $('.nav-tabs .nav-link').ripple('redraw');
+
+              $('#show-modal-snackbar').on('click', function () {
+                $('#modal-snackbar').snackbar();
+              });
+            });
+          })
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}

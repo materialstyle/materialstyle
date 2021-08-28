@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Range Slider</title>
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
-<h1 class="m-3">Range Slider</h1>
+{{#> "layouts/layout" }}
 
-<div class="m-3">
-    <label for="customRange">Range</label>
-    <input type="range" class="custom-range range-green" id="customRange">
-</div>
+    {{#*inline "content"}}
+        <h1 class="m-3">Range Slider</h1>
 
-<div class="m-3">
-    <label for="customRange1">Disabled Range</label>
-    <input type="range" class="custom-range range-green" id="customRange1" disabled>
-</div>
+        <div class="m-3">
+            <label for="customRange">Range</label>
+            <input type="range" class="custom-range range-green" id="customRange">
+        </div>
 
-</body>
-</html>
+        <div class="m-3">
+            <label for="customRange1">Disabled Range</label>
+            <input type="range" class="custom-range range-green" id="customRange1" disabled>
+        </div>
+    {{/inline}}
+
+{{/"layouts/layout"}}

@@ -4,6 +4,9 @@
     <title>{{htmlWebpackPlugin.options.title}}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+
+    {{#> styles }}{{/styles}}
+
 </head>
 <body>
 
@@ -41,7 +44,15 @@
     </div>
 </section>
 
+{{#> jQuery }}{{/jQuery}}
+
 <script src="../dist/js/materialstyle.min.js"></script>
+<script>
+    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+    var drawerList = drawers.map(function (drawer) {
+        return new materialstyle.Drawer(drawer)
+    })
+</script>
 
 {{#> scripts }}{{/scripts}}
 

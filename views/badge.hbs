@@ -1,43 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Badge</title>
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
-<h1 class="m-3">Badge</h1>
+{{#> "layouts/layout" }}
 
-<div class="m-3">
-    <span class="badge bg-primary">Primary</span>
-</div>
+    {{#*inline "content"}}
+        <h1 class="m-3">Badge</h1>
 
-<div class="m-3">
-    <span class="badge rounded-pill bg-success">Success</span>
-</div>
+        <div class="m-3">
+            <span class="badge bg-primary">Primary</span>
+        </div>
 
-<div class="m-3">
-    <button type="button" class="btn btn-pink-600">
-        Notifications <span class="badge bg-yellow text-dark">4</span>
-    </button>
-</div>
+        <div class="m-3">
+            <span class="badge rounded-pill bg-success">Success</span>
+        </div>
 
-<div class="m-3">
-    <button type="button" class="btn btn-deep-purple position-relative">
-        Inbox
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink">
-            99+ <span class="visually-hidden">unread messages</span>
-        </span>
-    </button>
-</div>
+        <div class="m-3">
+            <button type="button" class="btn btn-pink-600">
+                Notifications <span class="badge bg-yellow text-dark">4</span>
+            </button>
+        </div>
 
-<div class="m-3">
-    <button type="button" class="btn btn-blue-100 position-relative">
-        Profile
-        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-pink border border-light rounded-circle">
-            <span class="visually-hidden">New alerts</span>
-        </span>
-    </button>
-</div>
+        <div class="m-3">
+            <button type="button" class="btn btn-deep-purple position-relative">
+                Inbox
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink">
+                    99+ <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+        </div>
 
-</body>
-</html>
+        <div class="m-3">
+            <button type="button" class="btn btn-blue-100 position-relative">
+                Profile
+                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-pink border border-light rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                </span>
+            </button>
+        </div>
+    {{/inline}}
+
+{{/"layouts/layout"}}
