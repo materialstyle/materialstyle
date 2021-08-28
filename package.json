@@ -24,7 +24,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "start": "webpack serve --open --config webpack.dev.js",
+    "start": "webpack serve --config webpack.dev.js",
     "js-lint": "eslint js/src/*",
     "scss-lint": "stylelint scss/*"
   },

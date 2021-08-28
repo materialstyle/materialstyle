@@ -20,7 +20,7 @@ webpackConfig = merge(common, {
       overlay: true,
       progress: true,
     },
-    open: true,
+    open: ['/alert.html'],
   },
   module: {
     rules: [

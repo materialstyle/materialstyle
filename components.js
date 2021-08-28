@@ -1,5 +1,4 @@
 module.exports = [
-    'index',
     'alert',
     'badge',
     'breadcrumb',
