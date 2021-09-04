@@ -22,7 +22,7 @@ import Ripple from './ripple'
 // import Tab from './tab'
 // import TextField from './text_field'
 // import Toast from './toast'
-// import Tooltip from './tooltip'
+import Tooltip from './tooltip'
 // import Util from './util'
 
 export default {
@@ -46,5 +46,5 @@ export default {
   // Tab,
   // TextField,
   // Toast,
-  // Tooltip
+  Tooltip
 }
