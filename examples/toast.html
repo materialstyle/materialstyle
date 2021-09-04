@@ -204,13 +204,12 @@
         </div>
 
         <div class="m-3">
-            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
+            <div id="live-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
                 <div class="toast-header bg-dark">
-                    <img src="https://cdn.materialstyle.io/images/msicon.png" class="rounded mr-2" alt="Material Style Icon" width="20px">
-                    <strong class="mr-auto text-white">Material Style</strong>
+                    <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" class="rounded me-2" alt="Material Style Icon" width="20">
+                    <strong class="me-auto text-white">Material Style</strong>
                     <small class="text-white">5 mins ago</small>
-                    <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close">
                     </button>
                 </div>
                 <div class="toast-body bg-dark text-white">
@@ -236,21 +235,21 @@
 
         <script>
             // Without jQuery
-            var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-            var rippleList = buttonList.map(function (button) {
-                return new materialstyle.Ripple(button)
-            })
+            var toastTrigger = document.getElementById('show-toast')
+            var toastLiveExample = document.getElementById('live-toast')
+            if (toastTrigger) {
+                toastTrigger.addEventListener('click', function () {
+                    var toast = new materialstyle.Toast(toastLiveExample)
 
-            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
-            var fileInputs = fileInputList.map(function (button) {
-                return new materialstyle.FileInput(button)
-            })
+                    toast.show()
+                })
+            }
 
             // With jQuery
-            // $(function(){
-            //   $('#show-toast').on('click', function(){
+            // $(function () {
+            //     $('#show-toast').on('click', function () {
             //         $('.toast').toast('show');
-            //    });
+            //     });
             // });
         </script>
 

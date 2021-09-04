@@ -21,7 +21,7 @@ import Ripple from './ripple'
 // import Spinner from './spinner'
 // import Tab from './tab'
 // import TextField from './text_field'
-// import Toast from './toast'
+import Toast from './toast'
 import Tooltip from './tooltip'
 // import Util from './util'
 
@@ -45,6 +45,6 @@ export default {
   // Spinner,
   // Tab,
   // TextField,
-  // Toast,
+  Toast,
   Tooltip
 }
