@@ -1,306 +1,311 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Text Fields</title>
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-    <style>
-        [class*="m-text-field"] {
-            width: 300px;
-        }
-    </style>
-</head>
-<body class="container-fluid">
+{{#> "layouts/layout" }}
 
-<h1 class="m-3">Text Fields</h1>
+    {{#*inline "content"}}
+        <h1 class="m-3">Text Fields</h1>
 
-<div class="row">
-    <div class="col-sm-6">
-        <h3 class="m-3">Filled</h3>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="m-3">Filled</h3>
 
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <label for="name" class="static-label">Static Label</label>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <label for="age" class="floating-label">Floating Label</label>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <label for="age" class="floating-label">form-control-sm</label>
-                    <input type="text" value="" class="form-control form-control-sm" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <label for="age" class="floating-label">form-control-lg</label>
-                    <input type="text" value="" class="form-control form-control-lg" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field primary-blue accent-pink">
-                    <label for="phone" class="floating-label">Phone</label>
-                    <input
-                            type="text"
-                            value=""
-                            class="form-control"
-                            autocomplete="off"
-                    />
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3 my-5">
-            <div class="form-group has-error">
-                <div class="m-text-field primary-blue accent-green">
-                    <label for="email" class="floating-label">Email</label>
-                    <input
-                            type="email"
-                            value="someone@example.com"
-                            class="form-control"
-                            autocomplete="off"
-                    />
-                    <span class="help-block"
-                    >These credentials do not match our records.</span
-                    >
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="m-text-field">
-                    <label for="password" class="floating-label">Password</label>
-                    <input
-                            type="password"
-                            value="******"
-                            class="form-control"
-                            autocomplete="off"
-                    />
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <label for="comment" class="floating-label">Comments</label>
-                    <textarea class="form-control" rows="3"></textarea>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <div class="prepend">
-                        <i class="material-icons">account_box</i>
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <label for="name" class="static-label">Static Label</label>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
                     </div>
-                    <label for="username" class="static-label">Username</label>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
                 </div>
-            </div>
-        </div>
 
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <div class="prepend">
-                        <i class="material-icons">vpn_key</i>
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <label for="age" class="floating-label">Floating Label</label>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
                     </div>
-                    <label for="password" class="floating-label">Password</label>
-                    <input type="password" value="" class="form-control" autocomplete="off"/>
                 </div>
-            </div>
-        </div>
 
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <div class="append">
-                        <i class="material-icons">keyboard</i>
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <label for="age" class="floating-label">form-control-sm</label>
+                            <input type="text" value="" class="form-control form-control-sm" autocomplete="off"/>
+                        </div>
                     </div>
-                    <label for="pin" class="floating-label">Pin</label>
-                    <input type="password" value="" class="form-control" autocomplete="off"/>
                 </div>
-            </div>
-        </div>
 
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field">
-                    <div class="prepend">
-                        Prepend <i class="material-icons">account_box</i>
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <label for="age" class="floating-label">form-control-lg</label>
+                            <input type="text" value="" class="form-control form-control-lg" autocomplete="off"/>
+                        </div>
                     </div>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
                 </div>
-            </div>
-        </div>
 
-    </div>
-    <div class="col-sm-6">
-        <h3 class="m-3">Outlined</h3>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <label for="name" class="static-label">Static Label</label>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <label for="age" class="floating-label">Floating Label</label>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <label for="age" class="floating-label">form-control-sm</label>
-                    <input type="text" value="" class="form-control form-control-sm" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <label for="age" class="floating-label">form-control-lg</label>
-                    <input type="text" value="" class="form-control form-control-lg" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline primary-blue accent-pink">
-                    <label for="phone" class="floating-label">Phone</label>
-                    <input
-                            type="text"
-                            value=""
-                            class="form-control"
-                            autocomplete="off"
-                    />
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3 my-5">
-            <div class="form-group has-error">
-                <div class="m-text-field-outline primary-blue accent-green">
-                    <label for="email" class="floating-label">Email</label>
-                    <input
-                            type="email"
-                            value="someone@example.com"
-                            class="form-control"
-                            autocomplete="off"
-                    />
-                    <span class="help-block"
-                    >These credentials do not match our records.</span
-                    >
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <label for="password" class="floating-label">Password</label>
-                    <input
-                            type="password"
-                            value="******"
-                            class="form-control"
-                            autocomplete="off"
-                    />
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <label for="comment" class="floating-label">Comments</label>
-                    <textarea class="form-control" rows="3"></textarea>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <div class="prepend">
-                        <i class="material-icons">account_box</i>
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field primary-blue accent-pink">
+                            <label for="phone" class="floating-label">Phone</label>
+                            <input
+                                    type="text"
+                                    value=""
+                                    class="form-control"
+                                    autocomplete="off"
+                            />
+                        </div>
                     </div>
-                    <label for="username" class="static-label">Username</label>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
                 </div>
-            </div>
-        </div>
 
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <div class="prepend">
-                        <i class="material-icons">vpn_key</i>
+                <div class="m-3 my-5">
+                    <div class="form-group has-error">
+                        <div class="m-text-field primary-blue accent-green">
+                            <label for="email" class="floating-label">Email</label>
+                            <input
+                                    type="email"
+                                    value="someone@example.com"
+                                    class="form-control"
+                                    autocomplete="off"
+                            />
+                            <span class="help-block"
+                            >These credentials do not match our records.</span
+                            >
+                        </div>
                     </div>
-                    <label for="password" class="floating-label">Password</label>
-                    <input type="password" value="" class="form-control" autocomplete="off"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <div class="append">
-                        <i class="material-icons">keyboard</i>
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <label for="password" class="floating-label">Password</label>
+                            <input
+                                    type="password"
+                                    value="******"
+                                    class="form-control"
+                                    autocomplete="off"
+                            />
+                        </div>
                     </div>
-                    <label for="pin" class="floating-label">Pin</label>
-                    <input type="password" value="" class="form-control" autocomplete="off"/>
                 </div>
-            </div>
-        </div>
 
-        <div class="m-3">
-            <div class="form-group">
-                <div class="m-text-field-outline">
-                    <div class="prepend">
-                        Prepend <i class="material-icons">account_box</i>
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <label for="comment" class="floating-label">Comments</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
                     </div>
-                    <input type="text" value="" class="form-control" autocomplete="off"/>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <div class="prepend">
+                                <i class="material-icons">account_box</i>
+                            </div>
+                            <label for="username" class="static-label">Username</label>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <div class="prepend">
+                                <i class="material-icons">vpn_key</i>
+                            </div>
+                            <label for="password" class="floating-label">Password</label>
+                            <input type="password" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <div class="append">
+                                <i class="material-icons">keyboard</i>
+                            </div>
+                            <label for="pin" class="floating-label">Pin</label>
+                            <input type="password" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field">
+                            <div class="prepend">
+                                Prepend <i class="material-icons">account_box</i>
+                            </div>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <h3 class="m-3">Outlined</h3>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <label for="name" class="static-label">Static Label</label>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <label for="age" class="floating-label">Floating Label</label>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <label for="age" class="floating-label">form-control-sm</label>
+                            <input type="text" value="" class="form-control form-control-sm" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <label for="age" class="floating-label">form-control-lg</label>
+                            <input type="text" value="" class="form-control form-control-lg" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline primary-blue accent-pink">
+                            <label for="phone" class="floating-label">Phone</label>
+                            <input
+                                    type="text"
+                                    value=""
+                                    class="form-control"
+                                    autocomplete="off"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3 my-5">
+                    <div class="form-group has-error">
+                        <div class="m-text-field-outline primary-blue accent-green">
+                            <label for="email" class="floating-label">Email</label>
+                            <input
+                                    type="email"
+                                    value="someone@example.com"
+                                    class="form-control"
+                                    autocomplete="off"
+                            />
+                            <span class="help-block"
+                            >These credentials do not match our records.</span
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <label for="password" class="floating-label">Password</label>
+                            <input
+                                    type="password"
+                                    value="******"
+                                    class="form-control"
+                                    autocomplete="off"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <label for="comment" class="floating-label">Comments</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <div class="prepend">
+                                <i class="material-icons">account_box</i>
+                            </div>
+                            <label for="username" class="static-label">Username</label>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <div class="prepend">
+                                <i class="material-icons">vpn_key</i>
+                            </div>
+                            <label for="password" class="floating-label">Password</label>
+                            <input type="password" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <div class="append">
+                                <i class="material-icons">keyboard</i>
+                            </div>
+                            <label for="pin" class="floating-label">Pin</label>
+                            <input type="password" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-3">
+                    <div class="form-group">
+                        <div class="m-text-field-outline">
+                            <div class="prepend">
+                                Prepend <i class="material-icons">account_box</i>
+                            </div>
+                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    {{/inline}}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../dist/js/materialstyle.min.js"></script>
-<script>
-    $('.m-text-field').textfield();
-    $('.m-text-field-outline').textfield();
-</script>
-</body>
-</html>
+    {{#*inline "jQuery"}}
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    {{/inline}}
+
+    {{#*inline "scripts"}}
+        <script>
+            // Without jQuery
+            var buttonList = [].slice.call(document.querySelectorAll('.btn'))
+            var rippleList = buttonList.map(function (button) {
+                return new materialstyle.Ripple(button)
+            })
+
+            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
+            var fileInputs = fileInputList.map(function (button) {
+                return new materialstyle.FileInput(button)
+            })
+
+            // With jQuery
+            // $(function(){
+            //    $('.m-text-field').textfield();
+            //    $('.m-text-field-outline').textfield();
+            // });
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}

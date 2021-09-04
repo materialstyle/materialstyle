@@ -1,23 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Tooltip</title>
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
-<h1 class="m-3">Tooltip</h1>
+{{#> "layouts/layout" }}
 
-<div class="m-3">
-    <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
-</div>
+    {{#*inline "content"}}
+        <h1 class="m-3">Tooltip</h1>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="../dist/js/materialstyle.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
-</body>
-</html>
+        <div class="m-3">
+            <a href="#" data-bs-toggle="tooltip" title="Hooray!">Hover over me</a>
+        </div>
+    {{/inline}}
+
+    {{#*inline "jQuery"}}
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    {{/inline}}
+
+    {{#*inline "scripts"}}
+        <script>
+            // Without jQuery
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new materialstyle.Tooltip(tooltipTriggerEl)
+            })
+
+            // With jQuery
+            // $(function(){
+            //   $('[data-toggle="tooltip"]').tooltip();
+            // });
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}

@@ -1,35 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Spinner</title>
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
-<h1 class="m-3">Spinner</h1>
-<div class="m-3">
-    <div class="m-spinner"></div>
-</div>
+{{#> "layouts/layout" }}
 
-<div class="m-3">
-    <div class="m-spinner spinner-blue"></div>
-</div>
+    {{#*inline "content"}}
+        <h1 class="m-3">Spinner</h1>
+        <div class="m-3">
+            <div class="m-spinner"></div>
+        </div>
 
-<div class="m-3">
-    <div class="spinner-border text-teal"></div>
-</div>
+        <div class="m-3">
+            <div class="m-spinner spinner-blue"></div>
+        </div>
 
-<div class="m-3">
-    <div class="spinner-grow text-primary"></div>
-</div>
+        <div class="m-3">
+            <div class="spinner-border text-teal"></div>
+        </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../dist/js/materialstyle.min.js"></script>
-<script>
-    $('.m-spinner').spinner();
-</script>
-</body>
-</html>
+        <div class="m-3">
+            <div class="spinner-grow text-primary"></div>
+        </div>
+    {{/inline}}
+
+    {{#*inline "jQuery"}}
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    {{/inline}}
+
+    {{#*inline "scripts"}}
+        <script>
+            // Without jQuery
+            var buttonList = [].slice.call(document.querySelectorAll('.btn'))
+            var rippleList = buttonList.map(function (button) {
+                return new materialstyle.Ripple(button)
+            })
+
+            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
+            var fileInputs = fileInputList.map(function (button) {
+                return new materialstyle.FileInput(button)
+            })
+
+            // With jQuery
+            // $(function(){
+            //   $('.m-spinner').spinner();
+            // });
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}
