@@ -10,7 +10,6 @@ import {
 } from 'bootstrap/js/src/util/index'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import BaseComponent from 'bootstrap/js/src/base-component'
-import FileInput from "./file_input";
 
 /**
  * --------------------------------------------------------------------------

@@ -61,12 +61,21 @@
     {{/inline}}
 
     {{#*inline "jQuery"}}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
     {{/inline}}
 
     {{#*inline "scripts"}}
         <script>
-            $('.m-rainbow').rainbow();
+            // Without jQuery
+            var rainbowList = [].slice.call(document.querySelectorAll('.m-rainbow'))
+            var progressList = rainbowList.map(function (rainbow) {
+                return new materialstyle.Rainbow(rainbow)
+            })
+
+            // With jQuery
+            // $(function(){
+            //   $('.m-rainbow').rainbow();
+            // });
         </script>
     {{/inline}}
 

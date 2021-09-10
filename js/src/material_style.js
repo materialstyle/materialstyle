@@ -12,7 +12,7 @@ import Dropdown from './dropdown'
 import FileInput from './file_input'
 // import Modal from './modal'
 import Popover from './popover'
-// import Rainbow from './rainbow'
+import Rainbow from './rainbow'
 import Ripple from './ripple'
 // import Scrollspy from './scrollspy'
 // import SelectField from './select_field'
@@ -36,7 +36,7 @@ export default {
   FileInput,
   // Modal,
   Popover,
-  // Rainbow,
+  Rainbow,
   Ripple,
   // Scrollspy,
   // SelectField,
