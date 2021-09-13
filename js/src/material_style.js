@@ -15,12 +15,12 @@ import Popover from './popover'
 import Rainbow from './rainbow'
 import Ripple from './ripple'
 // import Scrollspy from './scrollspy'
-// import SelectField from './select_field'
+import SelectField from './select_field'
 // import Shape from './shape'
 // import Snackbar from './snackbar'
 // import Spinner from './spinner'
 // import Tab from './tab'
-// import TextField from './text_field'
+import TextField from './text_field'
 import Toast from './toast'
 import Tooltip from './tooltip'
 // import Util from './util'
@@ -39,12 +39,12 @@ export default {
   Rainbow,
   Ripple,
   // Scrollspy,
-  // SelectField,
+  SelectField,
   // Shape,
   // Snackbar,
   // Spinner,
   // Tab,
-  // TextField,
+  TextField,
   Toast,
   Tooltip
 }

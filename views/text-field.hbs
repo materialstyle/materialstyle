@@ -290,20 +290,14 @@
     {{#*inline "scripts"}}
         <script>
             // Without jQuery
-            var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-            var rippleList = buttonList.map(function (button) {
-                return new materialstyle.Ripple(button)
-            })
-
-            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
-            var fileInputs = fileInputList.map(function (button) {
-                return new materialstyle.FileInput(button)
+            var textFieldList = [].slice.call(document.querySelectorAll('.m-text-field, .m-text-field-outline'))
+            var textFields = textFieldList.map(function (textField) {
+                return new materialstyle.TextField(textField)
             })
 
             // With jQuery
             // $(function(){
-            //    $('.m-text-field').textfield();
-            //    $('.m-text-field-outline').textfield();
+            //    $('.m-text-field, .m-text-field-outline').textfield();
             // });
         </script>
     {{/inline}}

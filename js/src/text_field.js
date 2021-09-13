@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): text_field.js
+ * Material Style (v3.0.0): text_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -9,7 +9,11 @@ import {
   getAccentColor, getPrimaryColor
 } from '../src/utility.js'
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * --------------------------------------------------------------------------
@@ -18,9 +22,14 @@ import $ from 'jquery'
  */
 
 const NAME = 'textfield'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0'
 const DATA_KEY = 'ms.textfield'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
+const EVENT_KEY = `.${DATA_KEY}`
+
+const EVENT_CHANGE = `change${EVENT_KEY}`
+const EVENT_FOCUS = `focus${EVENT_KEY}`
+const EVENT_FOCUSOUT = `focusout${EVENT_KEY}`
+const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_TEXTFIELD = 'm-text-field'
 const CLASS_NAME_TEXTFIELD_OUTLINE = 'm-text-field-outline'
@@ -34,8 +43,9 @@ const NOTCH_BETWEEN_PADDING_SUM = 10
 const NOTCH_BETWEEN_PADDING_LEFT = 5
 const NOTCH_BEFORE_WIDTH = 12
 
-class TextField {
+class TextField extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this._textField = element.querySelector('.form-control')
     this._textFieldClass = element.className.includes(CLASS_NAME_TEXTFIELD_OUTLINE) ? CLASS_NAME_TEXTFIELD_OUTLINE : CLASS_NAME_TEXTFIELD
@@ -55,34 +65,27 @@ class TextField {
     this._append = element.querySelector('.append')
 
     this.initTextFields()
-    this.addEventListeners()
+    this._setListeners()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface(config) {
+  static jQueryInterface(config) {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-      let shouldRedraw = true
-
-      if (!data) {
-        shouldRedraw = false
-
-        data = new TextField(this)
-        $element.data(DATA_KEY, data)
-
-        data._element.style.visibility = 'visible'
-      }
+      const data = TextField.getOrCreateInstance(this)
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
-        } else if (config === 'redraw' && shouldRedraw) {
-          data[config]()
         }
+
+        data[config](this)
       }
     })
   }
@@ -274,27 +277,31 @@ class TextField {
     }
   }
 
-  addEventListeners() {
-    $(this._textField).on('change', () => {
+  _setListeners() {
+    EventHandler.on(this._textField, EVENT_CHANGE, () => {
       this._inputLength = this._textField.value.length
     })
 
-    $(this._textField).on('focus', () => {
+    EventHandler.on(this._textField, EVENT_FOCUS, () => {
       this.handleFocus()
     })
 
-    $(this._textField).on('focusout', () => {
+    EventHandler.on(this._textField, EVENT_FOCUSOUT, () => {
       this.handleFocusOut()
     })
 
-    $(this._label).add(this._prepend).add(this._append).on('click', () => {
+    EventHandler.on(this._label, EVENT_CLICK, () => {
       this._textField.focus()
     })
 
-    this.addFontsReadyEvent()
-  }
+    EventHandler.on(this._prepend, EVENT_CLICK, () => {
+      this._textField.focus()
+    })
 
-  addFontsReadyEvent() {
+    EventHandler.on(this._append, EVENT_CLICK, () => {
+      this._textField.focus()
+    })
+
     document.fonts.ready.then(() => {
       this.setAddonHeight()
 
@@ -311,11 +318,6 @@ class TextField {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = TextField._jQueryInterface
-$.fn[NAME].Constructor = TextField
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return TextField._jQueryInterface
-}
+defineJQueryPlugin(TextField)
 
 export default TextField
