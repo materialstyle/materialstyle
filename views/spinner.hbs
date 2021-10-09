@@ -26,14 +26,9 @@
     {{#*inline "scripts"}}
         <script>
             // Without jQuery
-            var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-            var rippleList = buttonList.map(function (button) {
-                return new materialstyle.Ripple(button)
-            })
-
-            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
-            var fileInputs = fileInputList.map(function (button) {
-                return new materialstyle.FileInput(button)
+            var spinnerList = [].slice.call(document.querySelectorAll('.m-spinner'))
+            var spinners = spinnerList.map(function (s) {
+                return new materialstyle.Spinner(s)
             })
 
             // With jQuery

@@ -14,11 +14,11 @@ import FileInput from './file_input'
 import Popover from './popover'
 import Rainbow from './rainbow'
 import Ripple from './ripple'
-// import Scrollspy from './scrollspy'
+import Scrollspy from './scrollspy'
 import SelectField from './select_field'
 import Shape from './shape'
 import Snackbar from './snackbar'
-// import Spinner from './spinner'
+import Spinner from './spinner'
 // import Tab from './tab'
 import TextField from './text_field'
 import Toast from './toast'
@@ -38,11 +38,11 @@ export default {
   Popover,
   Rainbow,
   Ripple,
-  // Scrollspy,
+  Scrollspy,
   SelectField,
   Shape,
   Snackbar,
-  // Spinner,
+  Spinner,
   // Tab,
   TextField,
   Toast,
