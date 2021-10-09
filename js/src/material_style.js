@@ -40,7 +40,7 @@ export default {
   Ripple,
   // Scrollspy,
   SelectField,
-  // Shape,
+  Shape,
   // Snackbar,
   // Spinner,
   // Tab,

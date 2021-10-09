@@ -5,10 +5,15 @@
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 import {
   getColor
 } from '../src/utility.js'
+import FileInput from "./file_input";
 
 /**
  * --------------------------------------------------------------------------
@@ -19,12 +24,12 @@ import {
 const NAME = 'shape'
 const VERSION = '3.0.0'
 const DATA_KEY = 'ms.shape'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const DIVISOR = 2
 
-class Shape {
+class Shape extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this._topLeftAngle = element.querySelector('.angle-top-left')
     this._topRightAngle = element.querySelector('.angle-top-right')
@@ -33,21 +38,17 @@ class Shape {
     this.initShape()
   }
 
+  static get NAME() {
+    return NAME
+  }
+
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface() {
+  static jQueryInterface() {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-
-      if (!data) {
-        data = new Shape(this)
-        $element.data(DATA_KEY, data)
-
-        data._element.style.visibility = 'visible'
-      }
+      Shape.getOrCreateInstance(this)
     })
   }
 
@@ -185,11 +186,6 @@ class Shape {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Shape._jQueryInterface
-$.fn[NAME].Constructor = Shape
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Shape._jQueryInterface
-}
+defineJQueryPlugin(Shape)
 
 export default Shape

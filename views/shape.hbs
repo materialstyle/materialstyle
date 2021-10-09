@@ -129,20 +129,20 @@
     {{#*inline "scripts"}}
         <script>
             // Without jQuery
+            var shapeList = [].slice.call(document.querySelectorAll('.m-shape-container'))
+            var shapes = shapeList.map(function (s) {
+                return new materialstyle.Shape(s)
+            })
+
             var buttonList = [].slice.call(document.querySelectorAll('.btn'))
             var rippleList = buttonList.map(function (button) {
                 return new materialstyle.Ripple(button)
             })
 
-            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
-            var fileInputs = fileInputList.map(function (button) {
-                return new materialstyle.FileInput(button)
-            })
-
             // With jQuery
-            // $(function(){
-            //   $('.btn').ripple();
-            //   $('.m-shape-container').shape();
+            // $(function () {
+            //     $('.m-shape-container').shape();
+            //     $('.btn').ripple();
             // });
         </script>
     {{/inline}}
