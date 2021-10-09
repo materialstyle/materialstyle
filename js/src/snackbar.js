@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): snackbar.js
+ * Material Style (v3.0.0): snackbar.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'snackbar'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0'
 const DATA_KEY = 'ms.snackbar'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 

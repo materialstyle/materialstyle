@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): spinner.js
+ * Material Style (v3.0.0): spinner.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'spinner'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0'
 const DATA_KEY = 'ms.spinner'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
