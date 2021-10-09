@@ -13,7 +13,6 @@ import BaseComponent from 'bootstrap/js/src/base-component'
 import {
   getColor
 } from '../src/utility.js'
-import FileInput from "./file_input";
 
 /**
  * --------------------------------------------------------------------------

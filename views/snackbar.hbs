@@ -26,21 +26,21 @@
     {{/inline}}
 
     {{#*inline "jQuery"}}
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     {{/inline}}
 
     {{#*inline "scripts"}}
         <script>
             // Without jQuery
-            var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-            var rippleList = buttonList.map(function (button) {
-                return new materialstyle.Ripple(button)
-            })
-
-            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
-            var fileInputs = fileInputList.map(function (button) {
-                return new materialstyle.FileInput(button)
-            })
+            // var buttonList = [].slice.call(document.querySelectorAll('.btn'))
+            // var rippleList = buttonList.map(function (button) {
+            //     return new materialstyle.Ripple(button)
+            // })
+            //
+            // var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
+            // var fileInputs = fileInputList.map(function (button) {
+            //     return new materialstyle.FileInput(button)
+            // })
 
             // With jQuery
             $(function(){

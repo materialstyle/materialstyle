@@ -17,7 +17,7 @@ import Ripple from './ripple'
 // import Scrollspy from './scrollspy'
 import SelectField from './select_field'
 import Shape from './shape'
-// import Snackbar from './snackbar'
+import Snackbar from './snackbar'
 // import Spinner from './spinner'
 // import Tab from './tab'
 import TextField from './text_field'
@@ -41,7 +41,7 @@ export default {
   // Scrollspy,
   SelectField,
   Shape,
-  // Snackbar,
+  Snackbar,
   // Spinner,
   // Tab,
   TextField,

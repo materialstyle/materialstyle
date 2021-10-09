@@ -5,7 +5,11 @@
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -16,7 +20,6 @@ import $ from 'jquery'
 const NAME = 'snackbar'
 const VERSION = '3.0.0'
 const DATA_KEY = 'ms.snackbar'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const SELECTOR_DISMISS = '[data-dismiss="snackbar"]'
 
@@ -45,14 +48,14 @@ Object.defineProperty(waitingQueue, 'pushToWaitingQueue', {
 Object.defineProperty(runningQueue, 'pushToRunningQueue', {
   value(...args) {
     activeSnackbar = args[0]
-    activeSnackbar.addClass('show')
+    activeSnackbar.classList.add('show')
     runningQueue.push(activeSnackbar)
 
-    if (activeSnackbar[0].dataset.autoClose === 'true') {
+    if (activeSnackbar.dataset.autoClose === 'true') {
       setTimeout(() => {
-        activeSnackbar.removeClass('show')
+        activeSnackbar.classList.remove('show')
         runningQueue.removeFromRunningQueue(activeSnackbar)
-      }, activeSnackbar[0].dataset.visibleDuration)
+      }, activeSnackbar.dataset.visibleDuration)
     }
   }
 })
@@ -70,8 +73,9 @@ Object.defineProperty(runningQueue, 'removeFromRunningQueue', {
   }
 })
 
-class Snackbar {
+class Snackbar extends BaseComponent {
   constructor(element, config) {
+    super(element)
     this._element = element
     this._element.dataset.visibleDuration = config.visibleDuration
     this._element.dataset.autoClose = config.autoClose
@@ -81,32 +85,31 @@ class Snackbar {
     }
   }
 
+  static get NAME() {
+    return NAME
+  }
+
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface(config) {
+  static jQueryInterface(config) {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
 
       const _config = {
         ...Default,
-        ...$element.data(),
+        ...this.dataset,
         ...typeof config === 'object' && config ? config : {}
       }
 
-      if (!data) {
-        data = new Snackbar(this, _config)
-        $element.data(DATA_KEY, data)
-      }
+      let s = Snackbar.getOrCreateInstance(this, _config)
 
-      waitingQueue.pushToWaitingQueue($(data._element))
+      waitingQueue.pushToWaitingQueue(s._element)
     })
   }
 
   handleDismiss() {
-    activeSnackbar.removeClass('show')
+    activeSnackbar.classList.remove('show')
     runningQueue.removeFromRunningQueue(activeSnackbar)
   }
 }
@@ -117,11 +120,6 @@ class Snackbar {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Snackbar._jQueryInterface
-$.fn[NAME].Constructor = Snackbar
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Snackbar._jQueryInterface
-}
+defineJQueryPlugin(Snackbar)
 
 export default Snackbar
