@@ -185,7 +185,6 @@ class SelectField extends BaseComponent {
     const selectedItem = document.createElement('div')
     selectedItem.className = 'selected-item dropdown-toggle'
     selectedItem.dataset.bsToggle = 'dropdown'
-    selectedItem.dataset.bsToggle = 'dropdown'
     selectedItem.dataset.bsAutoClose = 'outside'
 
     const dropdownMenu = document.createElement('div')
@@ -204,6 +203,7 @@ class SelectField extends BaseComponent {
       closeButton.className = 'btn btn-text-dark'
       closeButton.innerHTML = 'close'
 
+      this._closeButton = closeButton
       dropdownMenu.appendChild(closeButton)
     } else {
       dropdownMenu.appendChild(this._selectItems)
@@ -595,6 +595,13 @@ class SelectField extends BaseComponent {
         }
       }
     })
+
+    if (this._closeButton !== undefined) {
+      EventHandler.on(this._closeButton, 'click', () => {
+        let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+        d.toggle()
+      })
+    }
 
     document.fonts.ready.then(() => {
       this.setAddonHeight()
