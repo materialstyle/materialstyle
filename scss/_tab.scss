@@ -17,7 +17,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  visibility: hidden;
+  //visibility: hidden;
 
   &.icon-top {
     .nav-link {
@@ -65,7 +65,7 @@
       box-shadow: none;
 
       &.active {
-        color: theme-color("primary");
+        color: map-get($theme-colors, "primary");
         background: transparent;
         border: 0;
       }
@@ -99,11 +99,11 @@
     z-index: 10;
     display: block;
     height: 2px;
-    background: theme-color("primary");
+    background: map-get($theme-colors, "primary");
     transition: left .2s ease;
   }
 
   .m-ripple {
-    background: theme-color("primary");
+    background: map-get($theme-colors, "primary");
   }
 }

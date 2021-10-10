@@ -19,7 +19,7 @@ import SelectField from './select_field'
 import Shape from './shape'
 import Snackbar from './snackbar'
 import Spinner from './spinner'
-// import Tab from './tab'
+import Tab from './tab'
 import TextField from './text_field'
 import Toast from './toast'
 import Tooltip from './tooltip'
@@ -43,7 +43,7 @@ export default {
   Shape,
   Snackbar,
   Spinner,
-  // Tab,
+  Tab,
   TextField,
   Toast,
   Tooltip
