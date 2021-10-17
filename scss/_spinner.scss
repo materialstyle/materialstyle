@@ -31,17 +31,17 @@
 @keyframes color {
   100%,
   0% {
-    stroke: map-get($theme-colors, "red");
+    stroke: $red;
   }
   40% {
-    stroke: map-get($theme-colors, "yellow");
+    stroke: $yellow;
   }
   66% {
-    stroke: map-get($theme-colors, "green");
+    stroke: $green;
   }
   80%,
   90% {
-    stroke: map-get($theme-colors, "blue");
+    stroke: $blue;
   }
 }
 

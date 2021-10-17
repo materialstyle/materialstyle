@@ -9,13 +9,13 @@
   border-bottom: 0;
 
   &:first-child {
-    border-top: 1px solid map-get($material-colors, "gray-300");
+    border-top: 1px solid $gray-300;
   }
   &:last-child {
-    border-bottom: 1px solid map-get($material-colors, "gray-300");
+    border-bottom: 1px solid $gray-300;
   }
   &:hover {
-    background-color: map-get($material-colors, "gray-100");
+    background-color: $gray-100;
   }
 
   .list-item,
@@ -39,7 +39,7 @@
     height: 0;
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid map-get($material-colors, "gray-300");
+    border-bottom: 1px solid $gray-300;
   }
 
   .primary-text,
