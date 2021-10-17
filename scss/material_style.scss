@@ -1,26 +1,13 @@
 // Configuration
-@import "variables";
 @import "node_modules/bootstrap/scss/functions";
+@import "variables";
 @import "node_modules/bootstrap/scss/variables";
 
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$theme-colors-rgb: map-merge($theme-colors-rgb, $custom-theme-colors-rgb);
 
 @import "mixins";
-@import "node_modules/bootstrap/scss/utilities";
-
-$utilities: map-merge(
-                $utilities,
-                (
-                        "background-color": (
-                                property: background-color,
-                                class: bg,
-                                values: map-merge(
-                                                $theme-colors,
-                                                $material-colors
-                                )
-                        ),
-                )
-);
+@import "utilities";
 
 @import "root";
 @import "node_modules/bootstrap/scss/reboot";

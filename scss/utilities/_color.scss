@@ -583,3 +583,5 @@ $material-colors: (
   "blue-gray-800": $blue-gray-800,
   "blue-gray-900": $blue-gray-900,
 );
+
+$custom-theme-colors-rgb: map-loop($custom-theme-colors, to-rgb, "$value");
