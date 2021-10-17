@@ -1,0 +1,24 @@
+@import "node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values:
+        map-merge(
+          $theme-colors,
+          map-merge(
+            $material-colors,
+            map-merge(
+              $utilities-bg-colors,
+              (
+                "transparent": transparent,
+              )
+            )
+          )
+        ),
+    ),
+  )
+);
