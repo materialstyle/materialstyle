@@ -2,12 +2,29 @@
 @import "variables";
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
 @import "mixins";
 @import "node_modules/bootstrap/scss/utilities";
 
-// Layout & components
-@import "node_modules/bootstrap/scss/root";
+$utilities: map-merge(
+                $utilities,
+                (
+                        "background-color": (
+                                property: background-color,
+                                class: bg,
+                                values: map-merge(
+                                                $theme-colors,
+                                                $material-colors
+                                )
+                        ),
+                )
+);
+
+@import "root";
 @import "node_modules/bootstrap/scss/reboot";
+
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/containers";
@@ -49,7 +66,6 @@
 
 // Utilities
 @import "node_modules/bootstrap/scss/utilities/api";
-
 
 //@import "custom_input";
 @import "utilities/elevation";

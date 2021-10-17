@@ -1,9 +1,5 @@
 @import "node_modules/bootstrap/scss/list-group";
 
-@each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, map-get($theme-colors, "white"), theme-color-level($color));
-}
-
 .list-group-item {
   position: relative;
   display: flex;
@@ -13,17 +9,13 @@
   border-bottom: 0;
 
   &:first-child {
-    border-top: 1px solid map-get($material-colors, "grey-300");
+    border-top: 1px solid map-get($material-colors, "gray-300");
   }
   &:last-child {
-    border-bottom: 1px solid map-get($material-colors, "grey-300");
-  }
-  &.active {
-    color: theme-color("primary");
-    background-color: theme-color("white");
+    border-bottom: 1px solid map-get($material-colors, "gray-300");
   }
   &:hover {
-    background-color: map-get($material-colors, "grey-100");
+    background-color: map-get($material-colors, "gray-100");
   }
 
   .list-item,
@@ -47,7 +39,7 @@
     height: 0;
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid map-get($material-colors, "grey-300");
+    border-bottom: 1px solid map-get($material-colors, "gray-300");
   }
 
   .primary-text,

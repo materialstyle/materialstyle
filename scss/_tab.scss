@@ -57,7 +57,7 @@
       font-size: .875rem;
       font-weight: 500;
       line-height: 2.25rem;
-      color: map-get($material-colors, "grey-900");
+      color: map-get($material-colors, "gray-900");
       text-transform: uppercase;
       letter-spacing: .08929em;
       border: 0;
@@ -72,7 +72,7 @@
 
       &.focus,
       &:focus {
-        background-color: map-get($material-colors, "grey-100");
+        background-color: map-get($material-colors, "gray-100");
       }
 
       .material-icons {
@@ -80,7 +80,7 @@
       }
     }
     &:hover {
-      background-color: map-get($material-colors, "grey-200");
+      background-color: map-get($material-colors, "gray-200");
       border: 0;
       border-radius: 2px;
     }
