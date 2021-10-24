@@ -1,17 +1,24 @@
 // Configuration
+
+// Include functions first (so we can manipulate colors, SVGs, calc, etc)
 @import "node_modules/bootstrap/scss/functions";
+
+// Include any default variable overrides here
 @import "variables";
+
+// Required stylesheets
 @import "node_modules/bootstrap/scss/variables";
 
+// Add custom theme colors
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 $theme-colors-rgb: map-merge($theme-colors-rgb, $custom-theme-colors-rgb);
 
 @import "mixins";
 @import "utilities";
 
+// Layout & components
 @import "root";
 @import "node_modules/bootstrap/scss/reboot";
-
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/containers";
@@ -33,6 +40,7 @@ $theme-colors-rgb: map-merge($theme-colors-rgb, $custom-theme-colors-rgb);
 @import "tab";
 @import "drawer";
 @import "card";
+@import "node_modules/bootstrap/scss/accordion";
 @import "node_modules/bootstrap/scss/breadcrumb";
 @import "pagination";
 @import "node_modules/bootstrap/scss/badge";
@@ -47,19 +55,14 @@ $theme-colors-rgb: map-merge($theme-colors-rgb, $custom-theme-colors-rgb);
 @import "popover";
 @import "node_modules/bootstrap/scss/carousel";
 @import "spinner";
+@import "node_modules/bootstrap/scss/offcanvas";
+@import "shape";
 
 // Helpers
 @import "node_modules/bootstrap/scss/helpers";
 
 // Utilities
 @import "node_modules/bootstrap/scss/utilities/api";
-
-//@import "custom_input";
-@import "utilities/elevation";
-//@import "utilities/text";
-//@import "utilities/background";
-@import "utilities/borders";
-@import "shape";
 
 html,
 body {
