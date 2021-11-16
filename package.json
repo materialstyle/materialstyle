@@ -65,8 +65,7 @@
     "webpack-merge": "^5.8.0"
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.9.2",
-    "jquery": "^3.6.0"
+    "@popperjs/core": "^2.9.2"
   },
   "files": [
     "dist/{css,js}",

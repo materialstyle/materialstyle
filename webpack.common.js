@@ -88,19 +88,10 @@ webpackConfig = {
       filename: 'css/materialstyle.min.css'
     }),
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
       Popper: 'popper.js'
     })
   ],
   externals: {
-    jquery: {
-      commonjs: 'jquery',
-      commonjs2: 'jquery',
-      amd: 'jquery',
-      root: 'jQuery',
-    },
     'popper.js': {
       commonjs: 'popper.js',
       commonjs2: 'popper.js',
