@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0): snackbar.js
+ * Material Style (v3.0.0-alpha1): snackbar.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ import BaseComponent from 'bootstrap/js/src/base-component'
  */
 
 const NAME = 'snackbar'
-const VERSION = '3.0.0'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.snackbar'
 
 const SELECTOR_DISMISS = '[data-dismiss="snackbar"]'

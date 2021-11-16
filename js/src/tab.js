@@ -2,7 +2,7 @@ import 'bootstrap/js/src/tab'
 
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0): tab.js
+ * Material Style (v3.0.0-alpha1): tab.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ import BaseComponent from 'bootstrap/js/src/base-component'
  */
 
 const NAME = 'tab'
-const VERSION = '3.0.0'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.tab'
 
 const INDICATOR_HEIGHT = 2

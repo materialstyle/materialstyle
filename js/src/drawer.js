@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0): drawer.js
+ * Material Style (v3.0.0-alpha1): drawer.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ import BaseComponent from 'bootstrap/js/src/base-component'
  */
 
 const NAME = 'drawer'
-const VERSION = '3.0.0'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.drawer'
 const EVENT_KEY = `.${DATA_KEY}`
 

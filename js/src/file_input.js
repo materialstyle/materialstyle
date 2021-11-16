@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0): file_input.js
+ * Material Style (v3.0.0-alpha1): file_input.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ import BaseComponent from 'bootstrap/js/src/base-component'
  */
 
 const NAME = 'fileinput'
-const VERSION = '3.0.0'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.fileinput'
 const EVENT_KEY = `.${DATA_KEY}`
 

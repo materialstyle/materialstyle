@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0): spinner.js
+ * Material Style (v3.0.0-alpha1): spinner.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ import BaseComponent from 'bootstrap/js/src/base-component'
  */
 
 const NAME = 'spinner'
-const VERSION = '3.0.0'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.spinner'
 
 class Spinner extends BaseComponent {
