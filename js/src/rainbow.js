@@ -1,11 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): rainbow.js
+ * Material Style (v3.0.0-alpha1): rainbow.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -14,29 +17,27 @@ import $ from 'jquery'
  */
 
 const NAME = 'rainbow'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.rainbow'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-class Rainbow {
+class Rainbow extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this.initRainbow()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface() {
+  static jQueryInterface() {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-
-      if (!data) {
-        data = new Rainbow(this)
-        $element.data(DATA_KEY, data)
-      }
+      Rainbow.getOrCreateInstance(this)
     })
   }
 
@@ -56,11 +57,6 @@ class Rainbow {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Rainbow._jQueryInterface
-$.fn[NAME].Constructor = Rainbow
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Rainbow._jQueryInterface
-}
+defineJQueryPlugin(Rainbow)
 
 export default Rainbow

@@ -4,7 +4,7 @@
 .m-text-field-outline {
   position: relative;
   margin-bottom: 0;
-  visibility: hidden;
+  //visibility: hidden;
 
   .prepend,
   .append {
@@ -69,7 +69,7 @@
     position: absolute;
     width: 100%;
     height: 2px;
-    background: linear-gradient(theme-color("primary"), theme-color("primary")) center top/0 2px no-repeat border-box, linear-gradient(theme-color("dark"), theme-color("dark")) center top/ 100% 1px no-repeat border-box transparent;
+    background: linear-gradient($primary, $primary) center top/0 2px no-repeat border-box, linear-gradient($dark, $dark) center top/ 100% 1px no-repeat border-box transparent;
     transition: .3s cubic-bezier(.4, 0, .2, 1);
   }
 
@@ -146,11 +146,11 @@
 
 .static-label,
 .floating-label-active {
-  color: theme-color("dark");
+  color: $dark;
 }
 
 .floating-label {
-  color: theme-color("dark");
+  color: $dark;
   cursor: text;
 }
 
@@ -159,14 +159,14 @@
   .floating-label,
   .floating-label-active,
   .static-label {
-    color: theme-color("danger");
+    color: $danger !important; /* stylelint-disable-line declaration-no-important */
   }
   .m-text-field {
     .form-control,
     .form-control-sm,
     .form-control-lg {
       + .m-line-ripple {
-        background-image: linear-gradient(theme-color("danger"), theme-color("danger")), linear-gradient(theme-color("danger"), theme-color("danger")) !important; /* stylelint-disable-line declaration-no-important */
+        background-image: linear-gradient($danger, $danger), linear-gradient($danger, $danger) !important; /* stylelint-disable-line declaration-no-important */
       }
     }
   }
@@ -174,7 +174,7 @@
     .m-notch-before,
     .m-notch-between,
     .m-notch-after {
-      border-color: theme-color("danger") !important; /* stylelint-disable-line declaration-no-important */
+      border-color: $danger !important; /* stylelint-disable-line declaration-no-important */
     }
   }
 }
@@ -201,7 +201,7 @@
   .m-notch-between,
   .m-notch-after {
     pointer-events: none;
-    border: 1px solid theme-color("dark");
+    border: 1px solid $dark;
     border-radius: 4px;
   }
 

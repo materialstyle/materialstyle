@@ -1,11 +1,15 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): drawer.js
+ * Material Style (v3.0.0-alpha1): drawer.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * --------------------------------------------------------------------------
@@ -14,9 +18,11 @@ import $ from 'jquery'
  */
 
 const NAME = 'drawer'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.drawer'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
+const EVENT_KEY = `.${DATA_KEY}`
+
+const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_VISIBLE = 'drawer-visible'
 const CLASS_NAME_SWITCHED = '--switched'
@@ -24,8 +30,9 @@ const CLASS_NAME_FIXED = 'drawer-fixed'
 const CLASS_SHADE = 'm-shade'
 const TOGGLE_AT_WIDTH = 1280
 
-class Drawer {
+class Drawer extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this._shade = this.createShade()
     this._hamburger = document.querySelector('.drawer-toggle')
@@ -34,22 +41,20 @@ class Drawer {
     this._navBar = document.querySelector('.navbar')
 
     this.initDrawer()
-    this.addEventListeners()
+    this._setListeners()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface() {
+  static jQueryInterface() {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-
-      if (!data) {
-        data = new Drawer(this)
-        $element.data(DATA_KEY, data)
-      }
+      Drawer.getOrCreateInstance(this)
     })
   }
 
@@ -118,7 +123,7 @@ class Drawer {
   }
 
   toggle() {
-    if ($(window).innerWidth() < TOGGLE_AT_WIDTH) {
+    if (window.innerWidth < TOGGLE_AT_WIDTH) {
       if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
         this._element.classList.add(CLASS_NAME_SWITCHED)
         this._element.classList.remove(CLASS_NAME_VISIBLE)
@@ -151,10 +156,10 @@ class Drawer {
     }
   }
 
-  addEventListeners() {
-    this._hamburger.addEventListener('click', () => this.show())
+  _setListeners() {
+    EventHandler.on(this._hamburger, EVENT_CLICK, () => this.show())
 
-    document.addEventListener('click', (event) => {
+    EventHandler.on(document, EVENT_CLICK, (event) => {
       if (event.target !== this._element &&
         event.target !== this._hamburger &&
         !this._element.contains(event.target)
@@ -238,15 +243,6 @@ class Drawer {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Drawer._jQueryInterface
-$.fn[NAME].Constructor = Drawer
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Drawer._jQueryInterface
-}
+defineJQueryPlugin(Drawer)
 
 export default Drawer
-
-$(() => {
-  $('.drawer').drawer()
-})

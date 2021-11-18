@@ -1,208 +1,452 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Button</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+
+    
+
 </head>
 <body>
 
-<h1 class="m-3">Button</h1>
-
-<div class="m-3">
-    <label class="d-block">Button</label>
-    <button type="button" class="btn btn-pink">
-        Raised
-    </button>
-    <button type="button" class="btn btn-pink unelevated">
-        Unelevated
-    </button>
-    <button type="button" class="btn btn-pink">
-        Icon <i class="material-icons">thumb_up</i>
-    </button>
-    <button type="button" class="btn btn-pink btn-lg">
-        Large
-    </button>
-    <button type="button" class="btn btn-pink btn-sm">
-        Small
-    </button>
-    <button type="button" class="btn btn-pink" disabled>
-        Disabled
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Button Link</label>
-    <button type="button" class="btn btn-link">
-        Link
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Outlined button</label>
-    <button type="button" class="btn btn-outline-purple">
-        Icon <i class="material-icons">thumb_up</i>
-    </button>
-    <button type="button" class="btn btn-outline-purple btn-lg">
-        Large
-    </button>
-    <button type="button" class="btn btn-outline-purple btn-sm">
-        Small
-    </button>
-    <button type="button" class="btn btn-outline-purple" disabled>
-        Disabled
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Text button</label>
-    <button type="button" class="btn btn-text-green">
-        Icon <i class="material-icons">thumb_up</i>
-    </button>
-    <button type="button" class="btn btn-text-green btn-lg">
-        Large
-    </button>
-    <button type="button" class="btn btn-text-green btn-sm">
-        Small
-    </button>
-    <button type="button" class="btn btn-text-green" disabled>
-        Disabled
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Horizontal button group</label>
-    <div class="btn-group">
-        <button type="button" class="btn btn-indigo">Raised</button>
-        <button type="button" class="btn btn-indigo">Raised</button>
+<nav class="navbar navbar-expand-sm bg-deep-purple navbar-dark">
+    <div class="container-fluid">
+        <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+        <a class="navbar-brand" href="javascript:">
+            Material Style Development
+        </a>
     </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
-        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-indigo">
-            Icon <i class="material-icons">thumb_up</i>
-        </button>
-        <button type="button" class="btn btn-indigo">
-            Icon <i class="material-icons">thumb_up</i>
-        </button>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-indigo btn-lg">Large</button>
-        <button type="button" class="btn btn-indigo btn-lg">Large</button>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-indigo btn-sm">Small</button>
-        <button type="button" class="btn btn-indigo btn-sm">Small</button>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
-        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
-    </div>
-</div>
+</nav>
 
-<div class="m-3">
-    <label class="d-block">Vertical button group</label>
-    <div class="btn-group-vertical">
-        <button type="button" class="btn btn-indigo">Raised</button>
-        <button type="button" class="btn btn-indigo">Raised</button>
+<section class="m-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light shadow-4dp">
+        <div class="drawer-header bg-dark text-light">
+            <a class="drawer-brand text-light" href="javascript:">
+                Material Style Development
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/alert.html">
+                    Alert
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/badge.html">
+                    Badge
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/breadcrumb.html">
+                    Breadcrumb
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/button.html">
+                    Button
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/card.html">
+                    Card
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/checkbox.html">
+                    Checkbox
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer.html">
+                    Drawer
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-always-visible.html">
+                    Drawer Always Visible
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-fixed.html">
+                    Drawer Fixed
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/dropdown.html">
+                    Dropdown
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/image-list.html">
+                    Image List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/list.html">
+                    List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/modal.html">
+                    Modal
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/nav.html">
+                    Nav
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar.html">
+                    Navbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar-autohide.html">
+                    Navbar Autohide
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/pagination.html">
+                    Pagination
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/popover.html">
+                    Popover
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/progress-bar.html">
+                    Progress Bar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/radio.html">
+                    Radio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/range-slider.html">
+                    Range Slider
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/select-field.html">
+                    Select Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shadow.html">
+                    Shadow
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shape.html">
+                    Shape
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/snackbar.html">
+                    Snackbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/spinner.html">
+                    Spinner
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/switch.html">
+                    Switch
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tab.html">
+                    Tab
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/table.html">
+                    Table
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text.html">
+                    Text
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text-field.html">
+                    Text Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/toast.html">
+                    Toast
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tooltip.html">
+                    Tooltip
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="m-container">
+
+                <h1 class="m-3">Button</h1>
+
+        <div class="m-3">
+            <label class="d-block">Button</label>
+            <button type="button" class="btn btn-deep-purple m-1">
+                Raised
+            </button>
+            <button type="button" class="btn btn-deep-purple unelevated m-1">
+                Unelevated
+            </button>
+            <button type="button" class="btn btn-deep-purple m-1">
+                Icon <i class="material-icons">thumb_up</i>
+            </button>
+            <button type="button" class="btn btn-deep-purple btn-lg m-1">
+                Large
+            </button>
+            <button type="button" class="btn btn-deep-purple btn-sm m-1">
+                Small
+            </button>
+            <button type="button" class="btn btn-deep-purple m-1" disabled>
+                Disabled
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">With Theme Colors</label>
+            <button type="button" class="btn btn-primary m-1">
+                Primary
+            </button>
+            <button type="button" class="btn btn-secondary m-1">
+                Secondary
+            </button>
+            <button type="button" class="btn btn-success m-1">
+                Success
+            </button>
+            <button type="button" class="btn btn-danger m-1">
+                Danger
+            </button>
+            <button type="button" class="btn btn-warning m-1">
+                Warning
+            </button>
+            <button type="button" class="btn btn-info m-1">
+                Info
+            </button>
+            <button type="button" class="btn btn-light m-1">
+                Light
+            </button>
+            <button type="button" class="btn btn-dark m-1">
+                Dark
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Button Link</label>
+            <button type="button" class="btn btn-link m-1">
+                Link
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Outlined button</label>
+            <button type="button" class="btn btn-outline-purple m-1">
+                Icon <i class="material-icons">thumb_up</i>
+            </button>
+            <button type="button" class="btn btn-outline-purple btn-lg m-1">
+                Large
+            </button>
+            <button type="button" class="btn btn-outline-purple btn-sm m-1">
+                Small
+            </button>
+            <button type="button" class="btn btn-outline-purple m-1" disabled>
+                Disabled
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Text button</label>
+            <button type="button" class="btn btn-text-green m-1">
+                Icon <i class="material-icons">thumb_up</i>
+            </button>
+            <button type="button" class="btn btn-text-green btn-lg m-1">
+                Large
+            </button>
+            <button type="button" class="btn btn-text-green btn-sm m-1">
+                Small
+            </button>
+            <button type="button" class="btn btn-text-green m-1" disabled>
+                Disabled
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Horizontal button group</label>
+            <div class="btn-group m-1">
+                <button type="button" class="btn btn-indigo">Raised</button>
+                <button type="button" class="btn btn-indigo">Raised</button>
+            </div>
+            <div class="btn-group m-1">
+                <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+                <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+            </div>
+            <div class="btn-group m-1">
+                <button type="button" class="btn btn-indigo">
+                    Icon <i class="material-icons">thumb_up</i>
+                </button>
+                <button type="button" class="btn btn-indigo">
+                    Icon <i class="material-icons">thumb_up</i>
+                </button>
+            </div>
+            <div class="btn-group m-1">
+                <button type="button" class="btn btn-indigo btn-lg">Large</button>
+                <button type="button" class="btn btn-indigo btn-lg">Large</button>
+            </div>
+            <div class="btn-group m-1">
+                <button type="button" class="btn btn-indigo btn-sm">Small</button>
+                <button type="button" class="btn btn-indigo btn-sm">Small</button>
+            </div>
+            <div class="btn-group m-1">
+                <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+                <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Vertical button group</label>
+            <div class="btn-group-vertical m-1">
+                <button type="button" class="btn btn-indigo">Raised</button>
+                <button type="button" class="btn btn-indigo">Raised</button>
+            </div>
+            <div class="btn-group-vertical m-1">
+                <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+                <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
+            </div>
+            <div class="btn-group-vertical m-1">
+                <button type="button" class="btn btn-indigo">
+                    Icon <i class="material-icons">thumb_up</i>
+                </button>
+                <button type="button" class="btn btn-indigo">
+                    Icon <i class="material-icons">thumb_up</i>
+                </button>
+            </div>
+            <div class="btn-group-vertical m-1">
+                <button type="button" class="btn btn-indigo btn-lg">Large</button>
+                <button type="button" class="btn btn-indigo btn-lg">Large</button>
+            </div>
+            <div class="btn-group-vertical m-1">
+                <button type="button" class="btn btn-indigo btn-sm">Small</button>
+                <button type="button" class="btn btn-indigo btn-sm">Small</button>
+            </div>
+            <div class="btn-group-vertical m-1">
+                <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+                <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+            </div>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">File input button</label>
+            <div class="m-file-input m-1">
+                <input type="file" name="myfile">
+                <button type="button" class="btn btn-dark btn-file">
+                    <i class="material-icons">attach_file</i> Browse Single</button>
+                <label class="files"></label>
+            </div>
+
+            <div class="m-file-input m-1">
+                <input type="file" name="myfiles[]" multiple>
+                <button type="button" class="btn btn-dark btn-file">
+                    <i class="material-icons">attach_file</i> Browse Multiple</button>
+                <label class="files"></label>
+            </div>
+        </div>
+
+        <h1 class="m-3">Floating Action Button (FAB)</h1>
+
+        <div class="m-3">
+            <label class="d-block">Standard</label>
+            <button type="button" class="btn btn-fab btn-purple">
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Disabled</label>
+            <button type="button" class="btn btn-fab btn-purple" disabled>
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Mini</label>
+            <button type="button" class="btn btn-fab mini-fab btn-purple">
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Leaf</label>
+            <button type="button" class="btn btn-fab leaf-fab btn-purple">
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Leaf Inverted</label>
+            <button type="button" class="btn btn-fab leaf-fab-inverted btn-purple">
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+
+        <div class="m-3">
+            <label class="d-block">Extended</label>
+            <button type="button" class="btn btn-fab extended-fab btn-purple">
+                <i class="material-icons">favorite</i> Like
+            </button>
+        </div>
+
+
     </div>
-    <div class="btn-group-vertical">
-        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
-        <button type="button" class="btn btn-indigo unelevated">Unelevated</button>
-    </div>
-    <div class="btn-group-vertical">
-        <button type="button" class="btn btn-indigo">
-            Icon <i class="material-icons">thumb_up</i>
-        </button>
-        <button type="button" class="btn btn-indigo">
-            Icon <i class="material-icons">thumb_up</i>
-        </button>
-    </div>
-    <div class="btn-group-vertical">
-        <button type="button" class="btn btn-indigo btn-lg">Large</button>
-        <button type="button" class="btn btn-indigo btn-lg">Large</button>
-    </div>
-    <div class="btn-group-vertical">
-        <button type="button" class="btn btn-indigo btn-sm">Small</button>
-        <button type="button" class="btn btn-indigo btn-sm">Small</button>
-    </div>
-    <div class="btn-group-vertical">
-        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
-        <button type="button" class="btn btn-indigo" disabled>Disabled</button>
-    </div>
-</div>
+</section>
 
-<div class="m-3">
-    <label class="d-block">File input button</label>
-    <div class="m-file-input">
-        <input type="file" name="myfile">
-        <button type="button" class="btn btn-dark btn-file">
-            <i class="material-icons">attach_file</i> Browse Single</button>
-        <label class="files"></label>
-    </div>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 
-    <div class="m-file-input">
-        <input type="file" name="myfiles[]" multiple>
-        <button type="button" class="btn btn-dark btn-file">
-            <i class="material-icons">attach_file</i> Browse Multiple</button>
-        <label class="files"></label>
-    </div>
-</div>
 
-<h1 class="m-3">Floating Action Button (FAB)</h1>
-
-<div class="m-3">
-    <label class="d-block">Standard</label>
-    <button type="button" class="btn btn-fab btn-teal">
-        <i class="material-icons">favorite</i>
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Disabled</label>
-    <button type="button" class="btn btn-fab btn-teal" disabled>
-        <i class="material-icons">favorite</i>
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Mini</label>
-    <button type="button" class="btn btn-fab mini-fab btn-teal">
-        <i class="material-icons">favorite</i>
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Leaf</label>
-    <button type="button" class="btn btn-fab leaf-fab btn-teal">
-        <i class="material-icons">favorite</i>
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Leaf Inverted</label>
-    <button type="button" class="btn btn-fab leaf-fab-inverted btn-teal">
-        <i class="material-icons">favorite</i>
-    </button>
-</div>
-
-<div class="m-3">
-    <label class="d-block">Extended</label>
-    <button type="button" class="btn btn-fab extended-fab btn-teal">
-        <i class="material-icons">favorite</i> Like
-    </button>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
-    $(function(){
-        $('.m-file-input').fileinput();
-        $('.btn').ripple();
+    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+    var drawerList = drawers.map(function (drawer) {
+        return new materialstyle.Drawer(drawer)
     })
-
 </script>
+
+        <script>
+            // Without jQuery
+            var buttonList = [].slice.call(document.querySelectorAll('.btn'))
+            var rippleList = buttonList.map(function (button) {
+                return new materialstyle.Ripple(button)
+            })
+
+            var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
+            var fileInputs = fileInputList.map(function (button) {
+                return new materialstyle.FileInput(button)
+            })
+
+            // With jQuery
+            // $(function(){
+            //   $('.btn').ripple();
+            //   $('.m-file-input').fileinput();
+            // });
+        </script>
+
+
 </body>
 </html>

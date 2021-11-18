@@ -1,0 +1,99 @@
+@mixin button-variant(
+  $background,
+  $border,
+  $color: color-contrast($background),
+  $hover-background: if($color == $color-contrast-light, shade-color($background, $btn-hover-bg-shade-amount), tint-color($background, $btn-hover-bg-tint-amount)),
+  $hover-border: if($color == $color-contrast-light, shade-color($border, $btn-hover-border-shade-amount), tint-color($border, $btn-hover-border-tint-amount)),
+  $hover-color: color-contrast($hover-background),
+  $active-background: if($color == $color-contrast-light, shade-color($background, $btn-active-bg-shade-amount), tint-color($background, $btn-active-bg-tint-amount)),
+  $active-border: if($color == $color-contrast-light, shade-color($border, $btn-active-border-shade-amount), tint-color($border, $btn-active-border-tint-amount)),
+  $active-color: color-contrast($active-background),
+  $disabled-background: $background,
+  $disabled-border: $border,
+  $disabled-color: color-contrast($disabled-background)
+) {
+
+  color: $color;
+  @include gradient-bg($background);
+
+  &:hover {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $active-color;
+    background-color: $active-background;
+  }
+
+  .m-ripple {
+    background: lighten($background, 20%);
+  }
+}
+
+@mixin button-outline-variant(
+  $color,
+  $color-hover: color-contrast($color),
+  $active-background: $color,
+  $active-border: $color,
+  $active-color: color-contrast($active-background)
+) {
+  color: $color;
+  border-color: $color;
+
+  &:hover {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  &.dropdown-toggle.show {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  .m-ripple {
+    background: lighten($color, 20%);
+  }
+}
+
+@mixin button-text-variant($color) {
+  $active-background: rgba($color, .15);
+  color: $color;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  &.focus,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $active-background;
+  }
+
+  .m-ripple {
+    background: lighten($color, 20%);
+  }
+}
+
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  // Manually declare to provide an override to the browser default
+  @include border-radius($border-radius, 0);
+}

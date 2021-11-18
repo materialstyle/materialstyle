@@ -2,37 +2,257 @@
 <html>
 <head>
     <title>Toast</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+
+    
+
 </head>
 <body>
-<h1 class="m-3">Toast</h1>
 
-<div class="m-3">
-    <button class="btn btn-indigo" id="show-toast">Show Toast</button>
-</div>
-
-<div class="m-3">
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
-        <div class="toast-header bg-dark">
-            <img src="https://cdn.materialstyle.io/images/msicon.png" class="rounded mr-2" alt="Material Style Icon" width="20px">
-            <strong class="mr-auto text-white">Material Style</strong>
-            <small class="text-white">5 mins ago</small>
-            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="toast-body bg-dark text-white">
-            Hello, world! This is a toast message.
-        </div>
+<nav class="navbar navbar-expand-sm bg-deep-purple navbar-dark">
+    <div class="container-fluid">
+        <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+        <a class="navbar-brand" href="javascript:">
+            Material Style Development
+        </a>
     </div>
-</div>
+</nav>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<section class="m-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light shadow-4dp">
+        <div class="drawer-header bg-dark text-light">
+            <a class="drawer-brand text-light" href="javascript:">
+                Material Style Development
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/alert.html">
+                    Alert
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/badge.html">
+                    Badge
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/breadcrumb.html">
+                    Breadcrumb
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/button.html">
+                    Button
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/card.html">
+                    Card
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/checkbox.html">
+                    Checkbox
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer.html">
+                    Drawer
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-always-visible.html">
+                    Drawer Always Visible
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-fixed.html">
+                    Drawer Fixed
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/dropdown.html">
+                    Dropdown
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/image-list.html">
+                    Image List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/list.html">
+                    List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/modal.html">
+                    Modal
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/nav.html">
+                    Nav
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar.html">
+                    Navbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar-autohide.html">
+                    Navbar Autohide
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/pagination.html">
+                    Pagination
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/popover.html">
+                    Popover
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/progress-bar.html">
+                    Progress Bar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/radio.html">
+                    Radio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/range-slider.html">
+                    Range Slider
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/select-field.html">
+                    Select Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shadow.html">
+                    Shadow
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shape.html">
+                    Shape
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/snackbar.html">
+                    Snackbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/spinner.html">
+                    Spinner
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/switch.html">
+                    Switch
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tab.html">
+                    Tab
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/table.html">
+                    Table
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text.html">
+                    Text
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text-field.html">
+                    Text Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/toast.html">
+                    Toast
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tooltip.html">
+                    Tooltip
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="m-container">
+
+                <h1 class="m-3">Toast</h1>
+
+        <div class="m-3">
+            <button class="btn btn-indigo" id="show-toast">Show Toast</button>
+        </div>
+
+        <div class="m-3">
+            <div id="live-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
+                <div class="toast-header bg-dark">
+                    <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" class="rounded me-2" alt="Material Style Icon" width="20">
+                    <strong class="me-auto text-white">Material Style</strong>
+                    <small class="text-white">5 mins ago</small>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close">
+                    </button>
+                </div>
+                <div class="toast-body bg-dark text-white">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
-    $('#show-toast').on('click', function(){
-        $('.toast').toast('show');
-    });
+    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+    var drawerList = drawers.map(function (drawer) {
+        return new materialstyle.Drawer(drawer)
+    })
 </script>
+
+        <script>
+            // Without jQuery
+            var toastTrigger = document.getElementById('show-toast')
+            var toastLiveExample = document.getElementById('live-toast')
+            if (toastTrigger) {
+                toastTrigger.addEventListener('click', function () {
+                    var toast = new materialstyle.Toast(toastLiveExample)
+
+                    toast.show()
+                })
+            }
+
+            // With jQuery
+            // $(function () {
+            //     $('#show-toast').on('click', function () {
+            //         $('.toast').toast('show');
+            //     });
+            // });
+        </script>
+
+
 </body>
 </html>

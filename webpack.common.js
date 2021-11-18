@@ -27,7 +27,6 @@ webpackConfig = {
     Spinner: './js/src/spinner.js',
     Rainbow: './js/src/rainbow.js',
     TextField: './js/src/text_field.js',
-    Util: './js/src/util.js',
     materialstyle: './js/src/material_style.js'
   },
   devtool: 'source-map',
@@ -42,10 +41,12 @@ webpackConfig = {
         return '../js/dist/' + (chunkName.split(/(?=[A-Z])/).join('_').toLowerCase()) + '.js';
       }
     },
-    publicPath: 'dist',
-    library: '[name]',
-    libraryTarget: 'umd',
-    libraryExport: 'default',
+    publicPath: '/dist/',
+    library: {
+      name: '[name]',
+      type: 'umd',
+      export: 'default'
+    },
     globalObject: 'this'
   },
   module: {
@@ -62,7 +63,12 @@ webpackConfig = {
         include: path.resolve(__dirname, 'scss'),
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
+          },
           'css-loader',
           'postcss-loader',
           {
@@ -78,24 +84,13 @@ webpackConfig = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      moduleFilename: () => {
-        return 'css/materialstyle.min.css';
-      }
+      filename: 'css/materialstyle.min.css'
     }),
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
       Popper: 'popper.js'
     })
   ],
   externals: {
-    jquery: {
-      commonjs: 'jquery',
-      commonjs2: 'jquery',
-      amd: 'jquery',
-      root: 'jQuery',
-    },
     'popper.js': {
       commonjs: 'popper.js',
       commonjs2: 'popper.js',

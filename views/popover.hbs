@@ -1,0 +1,64 @@
+{{#> "layouts/layout" }}
+
+    {{#*inline "content"}}
+        <h1 class="m-3">Popover</h1>
+
+        <div class="m-3">
+            <a href="#" data-bs-toggle="popover" title="Popover Header"
+               data-bs-content="Some content inside the Popover">
+                Toggle Popover from a Link
+            </a>
+        </div>
+
+        <div class="m-3">
+            <button type="button" class="btn btn-deep-purple" data-bs-toggle="popover"
+                    title="Popover Header" data-bs-content="Some content inside the Popover">
+                Toggle Popover from a Button
+            </button>
+        </div>
+
+        <div class="m-3">
+            <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                    data-bs-content="Some content inside the Popover" title="Popover Header">
+                This Popover will appear on top
+            </a>
+        </div>
+
+        <div class="m-3">
+            <a href="#" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible Popover"
+               data-bs-content="Click anywhere in the document to close this Popover">
+                Dismissible Popover
+            </a>
+        </div>
+
+        <div class="m-3">
+            <!-- Showing popovers on Hover -->
+            <a href="#" data-bs-toggle="popover" data-bs-trigger="hover" title="Popover on Hover"
+               data-bs-content="Move away from the link to hide this Popover">
+                Toggle Popover on hover
+            </a>
+        </div>
+
+    {{/inline}}
+
+    {{#*inline "jQuery"}}
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    {{/inline}}
+
+    {{#*inline "scripts"}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script>
+          // Without jQuery
+          var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+          var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new materialstyle.Popover(popoverTriggerEl)
+          })
+
+          // With jQuery
+          //   $(function () {
+          //       $('[data-bs-toggle="popover"]').popover();
+          //   });
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}

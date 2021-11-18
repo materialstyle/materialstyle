@@ -1,11 +1,15 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): file_input.js
+ * Material Style (v3.0.0-alpha1): file_input.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -14,33 +18,35 @@ import $ from 'jquery'
  */
 
 const NAME = 'fileinput'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.fileinput'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
+const EVENT_KEY = `.${DATA_KEY}`
 
-class FileInput {
+const EVENT_CLICK = `click${EVENT_KEY}`
+const EVENT_CHANGE = `change${EVENT_KEY}`
+
+class FileInput extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this._fileInput = element.querySelector('input[type=file]')
     this._button = element.querySelector('.btn-file')
     this._fileList = element.querySelector('.files')
     this._multipleSupport = typeof this._fileInput.multiple !== 'undefined'
-    this.addEventListeners()
+    this._setListeners()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface() {
+  static jQueryInterface() {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-
-      if (!data) {
-        data = new FileInput(this)
-        $element.data(DATA_KEY, data)
-      }
+      FileInput.getOrCreateInstance(this)
     })
   }
 
@@ -75,15 +81,9 @@ class FileInput {
     this._fileList.setAttribute('title', filename)
   }
 
-  addEventListeners() {
-    $(this._button).on('click', (event) => {
-      event.stopImmediatePropagation()
-      this.handleButtonClick()
-    })
-
-    $(this._fileInput).on('change', () => {
-      this.handleFileChange()
-    })
+  _setListeners() {
+    EventHandler.on(this._button, EVENT_CLICK, event => this.handleButtonClick(event))
+    EventHandler.on(this._fileInput, EVENT_CHANGE, () => this.handleFileChange())
   }
 }
 
@@ -93,11 +93,6 @@ class FileInput {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = FileInput._jQueryInterface
-$.fn[NAME].Constructor = FileInput
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return FileInput._jQueryInterface
-}
+defineJQueryPlugin(FileInput)
 
 export default FileInput

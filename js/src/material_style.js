@@ -11,6 +11,7 @@ import Drawer from './drawer'
 import Dropdown from './dropdown'
 import FileInput from './file_input'
 import Modal from './modal'
+import Offcanvas from './offcanvas'
 import Popover from './popover'
 import Rainbow from './rainbow'
 import Ripple from './ripple'
@@ -23,10 +24,8 @@ import Tab from './tab'
 import TextField from './text_field'
 import Toast from './toast'
 import Tooltip from './tooltip'
-import Util from './util'
 
 export default {
-  Util,
   Alert,
   Button,
   Carousel,
@@ -35,6 +34,7 @@ export default {
   Dropdown,
   FileInput,
   Modal,
+  Offcanvas,
   Popover,
   Rainbow,
   Ripple,

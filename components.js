@@ -1,5 +1,4 @@
 module.exports = [
-    'index',
     'alert',
     'badge',
     'breadcrumb',
@@ -10,9 +9,7 @@ module.exports = [
     'drawer-always-visible',
     'drawer-fixed',
     'dropdown',
-    'elevation',
     'image-list',
-    'jumbotron',
     'list',
     'modal',
     'nav',
@@ -24,6 +21,7 @@ module.exports = [
     'radio',
     'range-slider',
     'select-field',
+    'shadow',
     'shape',
     'snackbar',
     'spinner',

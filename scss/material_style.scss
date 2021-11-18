@@ -1,46 +1,51 @@
-@import "variables";
+// Configuration
+
+// Include functions first (so we can manipulate colors, SVGs, calc, etc)
 @import "node_modules/bootstrap/scss/functions";
+
+// Include any default variable overrides here
+@import "variables";
+
+// Required stylesheets
 @import "node_modules/bootstrap/scss/variables";
+
+// Add custom theme colors
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$theme-colors-rgb: map-merge($theme-colors-rgb, $custom-theme-colors-rgb);
+
 @import "mixins";
-@import "node_modules/bootstrap/scss/root";
+@import "utilities";
+
+// Layout & components
+@import "root";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
-@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/containers";
 @import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/tables";
 @import "ripple";
 @import "image_list";
-@import "node_modules/bootstrap/scss/tables";
-
 // forms is imported in text_field, select
 @import "text_field";
 @import "select_field";
-
+@import "form_check";
 // buttons and button-group are imported in button
 @import "button";
-
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/dropdown";
-@import "node_modules/bootstrap/scss/input-group";
-
-// custom-forms is imported in cutom-input and it implements Checkbox, Radio, Switch and Slider
-@import "custom_input";
-
+@import "node_modules/bootstrap/scss/button-group";
 @import "node_modules/bootstrap/scss/nav";
 @import "navbar";
 @import "tab";
 @import "drawer";
 @import "card";
+@import "node_modules/bootstrap/scss/accordion";
 @import "node_modules/bootstrap/scss/breadcrumb";
 @import "pagination";
 @import "node_modules/bootstrap/scss/badge";
-@import "node_modules/bootstrap/scss/jumbotron";
 @import "node_modules/bootstrap/scss/alert";
-
 @import "progress_bar";
-@import "spinner";
-
-@import "node_modules/bootstrap/scss/media";
 @import "list";
 @import "node_modules/bootstrap/scss/close";
 @import "node_modules/bootstrap/scss/toasts";
@@ -49,14 +54,15 @@
 @import "node_modules/bootstrap/scss/tooltip";
 @import "popover";
 @import "node_modules/bootstrap/scss/carousel";
-@import "node_modules/bootstrap/scss/utilities";
-@import "utilities/elevation";
-@import "utilities/text";
-@import "utilities/background";
-@import "utilities/borders";
-@import "node_modules/bootstrap/scss/print";
-
+@import "spinner";
+@import "node_modules/bootstrap/scss/offcanvas";
 @import "shape";
+
+// Helpers
+@import "node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "node_modules/bootstrap/scss/utilities/api";
 
 html,
 body {

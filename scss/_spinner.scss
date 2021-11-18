@@ -31,17 +31,17 @@
 @keyframes color {
   100%,
   0% {
-    stroke: theme-color("red");
+    stroke: $red;
   }
   40% {
-    stroke: theme-color("yellow");
+    stroke: $yellow;
   }
   66% {
-    stroke: theme-color("green");
+    stroke: $green;
   }
   80%,
   90% {
-    stroke: theme-color("blue");
+    stroke: $blue;
   }
 }
 

@@ -17,7 +17,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  visibility: hidden;
+  //visibility: hidden;
 
   &.icon-top {
     .nav-link {
@@ -57,7 +57,7 @@
       font-size: .875rem;
       font-weight: 500;
       line-height: 2.25rem;
-      color: map-get($material-colors, "grey-900");
+      color: $gray-900;
       text-transform: uppercase;
       letter-spacing: .08929em;
       border: 0;
@@ -65,14 +65,14 @@
       box-shadow: none;
 
       &.active {
-        color: theme-color("primary");
+        color: $primary;
         background: transparent;
         border: 0;
       }
 
       &.focus,
       &:focus {
-        background-color: map-get($material-colors, "grey-100");
+        background-color: $gray-100;
       }
 
       .material-icons {
@@ -80,7 +80,7 @@
       }
     }
     &:hover {
-      background-color: map-get($material-colors, "grey-200");
+      background-color: $gray-200;
       border: 0;
       border-radius: 2px;
     }
@@ -99,11 +99,11 @@
     z-index: 10;
     display: block;
     height: 2px;
-    background: theme-color("primary");
+    background: $primary;
     transition: left .2s ease;
   }
 
   .m-ripple {
-    background: theme-color("primary");
+    background: $primary;
   }
 }

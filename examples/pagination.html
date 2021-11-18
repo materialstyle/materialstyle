@@ -2,57 +2,265 @@
 <html>
 <head>
     <title>Pagination</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+
+    
+
 </head>
 <body>
-<h1 class="m-3">Pagination</h1>
 
-<div class="m-3">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </nav>
-</div>
+<nav class="navbar navbar-expand-sm bg-deep-purple navbar-dark">
+    <div class="container-fluid">
+        <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+        <a class="navbar-brand" href="javascript:">
+            Material Style Development
+        </a>
+    </div>
+</nav>
 
-<div class="m-3">
-    <nav aria-label="...">
-        <ul class="pagination pagination-lg">
-            <li class="page-item active" aria-current="page">
-      <span class="page-link">
-        1
-        <span class="sr-only">(current)</span>
-      </span>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-        </ul>
-    </nav>
-</div>
-
-<div class="m-3">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
+<section class="m-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light shadow-4dp">
+        <div class="drawer-header bg-dark text-light">
+            <a class="drawer-brand text-light" href="javascript:">
+                Material Style Development
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/alert.html">
+                    Alert
                 </a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/badge.html">
+                    Badge
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/breadcrumb.html">
+                    Breadcrumb
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/button.html">
+                    Button
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/card.html">
+                    Card
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/checkbox.html">
+                    Checkbox
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer.html">
+                    Drawer
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-always-visible.html">
+                    Drawer Always Visible
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-fixed.html">
+                    Drawer Fixed
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/dropdown.html">
+                    Dropdown
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/image-list.html">
+                    Image List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/list.html">
+                    List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/modal.html">
+                    Modal
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/nav.html">
+                    Nav
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar.html">
+                    Navbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar-autohide.html">
+                    Navbar Autohide
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/pagination.html">
+                    Pagination
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/popover.html">
+                    Popover
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/progress-bar.html">
+                    Progress Bar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/radio.html">
+                    Radio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/range-slider.html">
+                    Range Slider
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/select-field.html">
+                    Select Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shadow.html">
+                    Shadow
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shape.html">
+                    Shape
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/snackbar.html">
+                    Snackbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/spinner.html">
+                    Spinner
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/switch.html">
+                    Switch
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tab.html">
+                    Tab
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/table.html">
+                    Table
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text.html">
+                    Text
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text-field.html">
+                    Text Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/toast.html">
+                    Toast
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tooltip.html">
+                    Tooltip
                 </a>
             </li>
         </ul>
-    </nav>
-</div>
+    </aside>
+    <div class="m-container">
+
+                <h1 class="m-3">Pagination</h1>
+
+        <div class="m-3">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="m-3">
+            <nav aria-label="...">
+                <ul class="pagination pagination-lg">
+                    <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                1
+                <span class="sr-only">(current)</span>
+              </span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="m-3">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<script src="../dist/js/materialstyle.min.js"></script>
+<script>
+    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+    var drawerList = drawers.map(function (drawer) {
+        return new materialstyle.Drawer(drawer)
+    })
+</script>
+
+
 
 </body>
 </html>

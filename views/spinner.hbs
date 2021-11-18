@@ -1,0 +1,41 @@
+{{#> "layouts/layout" }}
+
+    {{#*inline "content"}}
+        <h1 class="m-3">Spinner</h1>
+        <div class="m-3">
+            <div class="m-spinner"></div>
+        </div>
+
+        <div class="m-3">
+            <div class="m-spinner spinner-blue"></div>
+        </div>
+
+        <div class="m-3">
+            <div class="spinner-border text-teal"></div>
+        </div>
+
+        <div class="m-3">
+            <div class="spinner-grow text-primary"></div>
+        </div>
+    {{/inline}}
+
+    {{#*inline "jQuery"}}
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    {{/inline}}
+
+    {{#*inline "scripts"}}
+        <script>
+            // Without jQuery
+            var spinnerList = [].slice.call(document.querySelectorAll('.m-spinner'))
+            var spinners = spinnerList.map(function (s) {
+                return new materialstyle.Spinner(s)
+            })
+
+            // With jQuery
+            // $(function(){
+            //   $('.m-spinner').spinner();
+            // });
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}

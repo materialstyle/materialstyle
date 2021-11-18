@@ -1,14 +1,18 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): utility.js
+ * Material Style (v3.0.0-alpha1): utility.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-import $ from 'jquery'
 
 const getColor = (color) => {
-  const label = $(`<label class="text-${color}"></label>`).hide().appendTo('body')
-  color = label.css('color')
+  const label = document.createElement('label')
+  label.className = `text-${color}`
+  label.style.display = 'none'
+  document.querySelector('body').append(label)
+
+  const style = getComputedStyle(label)
+  color = style.color
   label.remove()
 
   return color

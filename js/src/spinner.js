@@ -1,11 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): spinner.js
+ * Material Style (v3.0.0-alpha1): spinner.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -14,29 +17,27 @@ import $ from 'jquery'
  */
 
 const NAME = 'spinner'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.spinner'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-class Spinner {
+class Spinner extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this.initSpinner()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface() {
+  static jQueryInterface() {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-
-      if (!data) {
-        data = new Spinner(this)
-        $element.data(DATA_KEY, data)
-      }
+      Spinner.getOrCreateInstance(this)
     })
   }
 
@@ -55,11 +56,6 @@ class Spinner {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Spinner._jQueryInterface
-$.fn[NAME].Constructor = Spinner
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Spinner._jQueryInterface
-}
+defineJQueryPlugin(Spinner)
 
 export default Spinner

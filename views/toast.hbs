@@ -1,0 +1,52 @@
+{{#> "layouts/layout" }}
+
+    {{#*inline "content"}}
+        <h1 class="m-3">Toast</h1>
+
+        <div class="m-3">
+            <button class="btn btn-indigo" id="show-toast">Show Toast</button>
+        </div>
+
+        <div class="m-3">
+            <div id="live-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="10000">
+                <div class="toast-header bg-dark">
+                    <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" class="rounded me-2" alt="Material Style Icon" width="20">
+                    <strong class="me-auto text-white">Material Style</strong>
+                    <small class="text-white">5 mins ago</small>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close">
+                    </button>
+                </div>
+                <div class="toast-body bg-dark text-white">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+    {{/inline}}
+
+    {{#*inline "jQuery"}}
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    {{/inline}}
+
+    {{#*inline "scripts"}}
+        <script>
+            // Without jQuery
+            var toastTrigger = document.getElementById('show-toast')
+            var toastLiveExample = document.getElementById('live-toast')
+            if (toastTrigger) {
+                toastTrigger.addEventListener('click', function () {
+                    var toast = new materialstyle.Toast(toastLiveExample)
+
+                    toast.show()
+                })
+            }
+
+            // With jQuery
+            // $(function () {
+            //     $('#show-toast').on('click', function () {
+            //         $('.toast').toast('show');
+            //     });
+            // });
+        </script>
+    {{/inline}}
+
+{{/"layouts/layout"}}

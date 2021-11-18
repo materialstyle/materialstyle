@@ -1,23 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Elevation</title>
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
-</head>
-<body>
-<h1 class="m-3">Elevation</h1>
-
-<div class="m-3">
-    <div class="raised-2dp" style="width:160px; height:80px; text-align: center;">
-        <label style="padding:28px; display:block;">Raised 2dp</label>
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="raised-4dp" style="width:160px; height:80px; text-align: center;">
-        <label style="padding:28px; display:block;">Raised 4dp</label>
-    </div>
-</div>
-
-</body>
-</html>
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve '/home/neerajdas/Projects/materialstyle/views/elevation.hbs'   in '/home/neerajdas/Projects/materialstyle'
+  ModuleNotFoundError: Module not found: Error: Can't resolve '/home/neerajdas/Projects/materialstyle/  views/elevation.hbs' in '/home/neerajdas/Projects/materialstyle'
+      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/Compilation.js:2004:28
+      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/NormalModuleFactory.js:795:13      at eval (eval at create (/home/neerajdas/Projects/materialstyle/node_modules/tapable/lib/HookCod  eFactory.js:33:10), <anonymous>:10:1)
+      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/NormalModuleFactory.js:275:22      at eval (eval at create (/home/neerajdas/Projects/materialstyle/node_modules/tapable/lib/HookCod  eFactory.js:33:10), <anonymous>:9:1)
+      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/NormalModuleFactory.js:431:22      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/NormalModuleFactory.js:124:11      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/NormalModuleFactory.js:667:25      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/NormalModuleFactory.js:852:8
+      at /home/neerajdas/Projects/materialstyle/node_modules/webpack/lib/NormalModuleFactory.js:972:5
+  
+  - Compilation.js:2004 
+    [materialstyle]/[webpack]/lib/Compilation.js:2004:28
+  
+  - NormalModuleFactory.js:795 
+    [materialstyle]/[webpack]/lib/NormalModuleFactory.js:795:13
+  
+  
+  - NormalModuleFactory.js:275 
+    [materialstyle]/[webpack]/lib/NormalModuleFactory.js:275:22
+  
+  
+  - NormalModuleFactory.js:431 
+    [materialstyle]/[webpack]/lib/NormalModuleFactory.js:431:22
+  
+  - NormalModuleFactory.js:124 
+    [materialstyle]/[webpack]/lib/NormalModuleFactory.js:124:11
+  
+  - NormalModuleFactory.js:667 
+    [materialstyle]/[webpack]/lib/NormalModuleFactory.js:667:25
+  
+  - NormalModuleFactory.js:852 
+    [materialstyle]/[webpack]/lib/NormalModuleFactory.js:852:8
+  
+  - NormalModuleFactory.js:972 
+    [materialstyle]/[webpack]/lib/NormalModuleFactory.js:972:5
+  
+  - child-compiler.js:169 
+    [materialstyle]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:557 
+    [materialstyle]/[webpack]/lib/Compiler.js:557:11
+  
+  - Compiler.js:1127 
+    [materialstyle]/[webpack]/lib/Compiler.js:1127:17
+  
+  
+  - task_queues.js:93 processTicksAndRejections
+    internal/process/task_queues.js:93:5
+  
+</pre>

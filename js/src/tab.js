@@ -2,12 +2,16 @@ import 'bootstrap/js/src/tab'
 
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): tab.js
+ * Material Style (v3.0.0-alpha1): tab.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -16,51 +20,36 @@ import $ from 'jquery'
  */
 
 const NAME = 'tab'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.tab'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const INDICATOR_HEIGHT = 2
 
-class Tab {
+class Tab extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this.initTab()
+    this._setListeners()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface(config) {
+  static jQueryInterface(config) {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-      let shouldRedraw = true
-
-      if (!data) {
-        shouldRedraw = false
-
-        data = new Tab(this)
-        $element.data(DATA_KEY, data)
-
-        data._element.style.visibility = 'visible'
-
-        $(data._element).find('.nav-item').on('mousedown, mouseup', function () {
-          data.setIndicatorPosition(this)
-        })
-
-        $(window).resize(function () {
-          data.setIndicatorPositionOnResize(this)
-        })
-      }
+      const data = Tab.getOrCreateInstance(this)
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
-        } else if (config === 'redraw' && shouldRedraw) {
-          data[config]()
         }
+        data[config]()
       }
     })
   }
@@ -93,6 +82,8 @@ class Tab {
     this._activeIndicator = activeIndicator
 
     this._element.appendChild(activeIndicator)
+
+    this._element.style.visibility = 'visible'
   }
 
   redraw() {
@@ -128,6 +119,18 @@ class Tab {
     this._activeIndicator.style.top = indicatorTop
     this._activeIndicator.style.width = indicatorWidth
   }
+
+  _setListeners() {
+    const navItems = this._element.querySelectorAll('.nav-item')
+
+    for (const [, value] of Object.entries(navItems)) {
+      EventHandler.on(value, 'mousedown', (event) => {
+        this.setIndicatorPosition(value)
+      })
+    }
+
+    EventHandler.on(window, 'resize', () => this.setIndicatorPositionOnResize())
+  }
 }
 
 /**
@@ -136,11 +139,6 @@ class Tab {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = Tab._jQueryInterface
-$.fn[NAME].Constructor = Tab
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Tab._jQueryInterface
-}
+defineJQueryPlugin(Tab)
 
 export default Tab

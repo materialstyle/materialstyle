@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v2.0.2): select_field.js
+ * Material Style (v3.0.0-alpha1): select_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -9,7 +9,11 @@ import {
   getAccentColor, getPrimaryColor
 } from '../src/utility.js'
 
-import $ from 'jquery'
+import {
+  defineJQueryPlugin
+} from 'bootstrap/js/src/util/index'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * --------------------------------------------------------------------------
@@ -18,9 +22,15 @@ import $ from 'jquery'
  */
 
 const NAME = 'selectfield'
-const VERSION = '2.0.2'
+const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.selectfield'
-const JQUERY_NO_CONFLICT = $.fn[NAME]
+const EVENT_KEY = `.${DATA_KEY}`
+
+const EVENT_CHANGE = `change${EVENT_KEY}`
+const EVENT_FOCUS = `focus${EVENT_KEY}`
+const EVENT_FOCUSOUT = `focusout${EVENT_KEY}`
+const EVENT_CLICK = `click${EVENT_KEY}`
+const EVENT_KEYUP = `keyup${EVENT_KEY}`
 
 const EVENT_HIDDEN = 'hidden.bs.dropdown'
 const EVENT_SHOWN = 'shown.bs.dropdown'
@@ -35,8 +45,8 @@ const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'
 
-const SELECTOR_CHECKBOX = '.select-items .custom-control-input'
-const SELECTOR_SELECT_ALL_CHECKBOX = '.select-all-container .custom-control-input'
+const SELECTOR_CHECKBOX = '.select-items .form-check-input'
+const SELECTOR_SELECT_ALL_CHECKBOX = '.select-all-container .form-check-input'
 
 const FLOATING_LABEL_SCALE = 0.75
 const NOTCH_BETWEEN_PADDING_SUM = 10
@@ -45,8 +55,9 @@ const NOTCH_BEFORE_WIDTH = 12
 const TO_STRING_BASE = 36
 const SUBSTR_INDEX = 2
 
-class SelectField {
+class SelectField extends BaseComponent {
   constructor(element) {
+    super(element)
     this._element = element
     this._select = element.querySelector('.form-control')
     this._selectClass = element.className.includes(CLASS_NAME_SELECT_OUTLINE) ? CLASS_NAME_SELECT_OUTLINE : CLASS_NAME_SELECT
@@ -70,36 +81,27 @@ class SelectField {
     this._options = this.createOptions()
 
     this.initSelect()
-    this.addEventListeners()
+    this._setListeners()
+  }
+
+  static get NAME() {
+    return NAME
   }
 
   static get VERSION() {
     return VERSION
   }
 
-  static _jQueryInterface(config) {
+  static jQueryInterface(config) {
     return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-      let shouldRedraw = true
-
-      if (!data) {
-        shouldRedraw = false
-
-        data = new SelectField(this)
-        $element.data(DATA_KEY, data)
-
-        data._element.style.visibility = 'visible'
-      }
+      const data = SelectField.getOrCreateInstance(this)
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
-        } else if (config === 'redraw' && shouldRedraw) {
-          data[config]()
-        } else if (config === 'rebuild' && shouldRedraw) {
-          data[config]()
         }
+
+        data[config]()
       }
     })
   }
@@ -181,33 +183,29 @@ class SelectField {
 
     const selectedItem = document.createElement('div')
     selectedItem.className = 'selected-item dropdown-toggle'
-    selectedItem.dataset.toggle = 'dropdown'
+    selectedItem.dataset.bsToggle = 'dropdown'
+    selectedItem.dataset.bsAutoClose = 'outside'
 
     const dropdownMenu = document.createElement('div')
     dropdownMenu.className = 'dropdown-menu'
 
-    const form = document.createElement('form')
-
-    dropdownMenu.appendChild(form)
-
     if (this._isSearchable) {
-      form.appendChild(this.createSearchContainer())
+      dropdownMenu.appendChild(this.createSearchContainer())
     }
 
     if (this._multiSelectEnabled) {
-      form.appendChild(this.createSelectAllContainer())
-      form.appendChild(this._selectItems)
-      dropdownMenu.appendChild(form)
+      dropdownMenu.appendChild(this.createSelectAllContainer())
+      dropdownMenu.appendChild(this._selectItems)
 
       const closeButton = document.createElement('button')
       closeButton.type = 'button'
       closeButton.className = 'btn btn-text-dark'
       closeButton.innerHTML = 'close'
 
+      this._closeButton = closeButton
       dropdownMenu.appendChild(closeButton)
     } else {
-      form.appendChild(this._selectItems)
-      dropdownMenu.appendChild(form)
+      dropdownMenu.appendChild(this._selectItems)
     }
 
     dropdown.appendChild(selectedItem)
@@ -254,18 +252,18 @@ class SelectField {
   createCheckbox(text, value, checked) {
     const checkbox = document.createElement('input')
     checkbox.setAttribute('type', 'checkbox')
-    checkbox.className = 'custom-control-input'
+    checkbox.className = 'form-check-input'
     checkbox.id = `check${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).substr(SUBSTR_INDEX)}`
     checkbox.value = value
     checkbox.checked = checked
 
     const label = document.createElement('label')
-    label.className = 'custom-control-label'
+    label.className = 'form-check-label'
     label.innerHTML = text
     label.setAttribute('for', checkbox.id)
 
     const customCheckbox = document.createElement('div')
-    customCheckbox.className = 'custom-control custom-checkbox input-dark dropdown-item'
+    customCheckbox.className = 'form-check dropdown-item'
 
     if (checked && !this._multiSelectEnabled) {
       customCheckbox.classList.add('checked')
@@ -281,7 +279,7 @@ class SelectField {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
-          return `<span class="badge badge-dark">${option.text}<span class="badge-close" aria-hidden="true" data-value="${option.value}">&times;</span></span>`
+          return `<span class="badge bg-dark">${option.text}<span class="badge-close" aria-hidden="true" data-value="${option.value}">&times;</span></span>`
         }
         return ''
       }).join('')
@@ -479,7 +477,7 @@ class SelectField {
 
     this._select.querySelector(`option[value="${value}"]`).selected = checked
 
-    $(this._select).trigger('change')
+    this._select.dispatchEvent(new Event('change', { bubbles: true }))
   }
 
   selectAll(checked) {
@@ -489,7 +487,7 @@ class SelectField {
       options[i].selected = checked
     }
 
-    $(this._select).trigger('change')
+    this._select.dispatchEvent(new Event('change', { bubbles: true }))
   }
 
   setSelectValue(value, checked) {
@@ -499,7 +497,7 @@ class SelectField {
       const checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
       for (let i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = false
-        checkboxes[i].closest('.custom-control').classList.remove('checked')
+        checkboxes[i].closest('.form-check').classList.remove('checked')
       }
 
       index = this._options.findIndex((o) => o.selected === true)
@@ -508,12 +506,12 @@ class SelectField {
       }
     }
 
-    this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).checked = checked
+    this._dropdown.querySelector(`.form-check-input[value="${value}"]`).checked = checked
 
     if (checked) {
-      this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).closest('.custom-control').classList.add('checked')
+      this._dropdown.querySelector(`.form-check-input[value="${value}"]`).closest('.form-check').classList.add('checked')
     } else {
-      this._dropdown.querySelector(`.custom-control-input[value="${value}"]`).closest('.custom-control').classList.remove('checked')
+      this._dropdown.querySelector(`.form-check-input[value="${value}"]`).closest('.form-check').classList.remove('checked')
     }
 
     index = this._options.findIndex((o) => o.value === value)
@@ -525,8 +523,8 @@ class SelectField {
   search(value) {
     value = value.toLowerCase()
 
-    $(this._dropdown.querySelectorAll('.select-items .custom-checkbox')).each(function () {
-      if ($(this).find('.custom-control-label').html().toLowerCase().indexOf(value) === -1) {
+    $(this._dropdown.querySelectorAll('.select-items .form-check')).each(function () {
+      if ($(this).find('.form-check-label').html().toLowerCase().indexOf(value) === -1) {
         $(this).hide()
       } else {
         $(this).show()
@@ -534,31 +532,58 @@ class SelectField {
     })
   }
 
-  addEventListeners() {
-    $(this._dropdown).on(EVENT_SHOWN, () => this.handleFocus())
-    $(this._dropdown).on(EVENT_HIDDEN, () => this.handleFocusOut())
+  _setListeners() {
+    EventHandler.on(this._dropdown, EVENT_SHOWN, () => this.handleFocus())
+    EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
 
-    $(this._label).add(this._prepend).add(this._append).on('click', (event) => {
+    EventHandler.on(this._label, EVENT_CLICK, (event) => {
       event.preventDefault()
       event.stopPropagation()
-      $(this._selectedItem).dropdown('toggle')
+      let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+      d.toggle()
     })
 
-    $(this._dropdown).find(SELECTOR_SELECT_ALL_CHECKBOX).on('change', (event) => {
-      this.selectAll($(event.target).is(':checked'))
+    EventHandler.on(this._prepend, EVENT_CLICK, (event) => {
+      event.preventDefault()
+      event.stopPropagation()
+      let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+      d.toggle()
     })
 
-    $(this._dropdown).find('.search-input').on('keyup', (event) => {
-      this.search($(event.target).val())
+    EventHandler.on(this._append, EVENT_CLICK, (event) => {
+      event.preventDefault()
+      event.stopPropagation()
+      let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+      d.toggle()
     })
 
-    this.addDropdownItemsEventListeners()
+    EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL_CHECKBOX), EVENT_CHANGE, (event) => {
+      this.selectAll(event.target.checked)
+    })
 
-    $(this._select).on('change', (event) => {
+    EventHandler.on(this._dropdown.querySelector('.search-input'), EVENT_KEYUP, (event) => {
+      this.search(event.target.value)
+    })
+
+    const checkBoxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
+
+    for (const [, value] of Object.entries(checkBoxes)) {
+      EventHandler.on(value, 'change', (event) => {
+        this.selectOne(event.target.value, event.target.checked)
+        event.preventDefault()
+        event.stopPropagation()
+        if (!this._multiSelectEnabled) {
+          let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+          d.toggle()
+        }
+      })
+    }
+
+    EventHandler.on(this._select, 'change', (event) => {
       if (!this._multiSelectEnabled) {
-        this.setSelectValue($(event.target).val(), true)
+        this.setSelectValue(event.target.value, true)
       } else {
-        const selectValue = $(event.target).val()
+        const selectValue = [...event.target.options].filter(option => option.selected).map(option => option.value)
 
         for (const [, value] of Object.entries(this._options)) {
           if (selectValue.includes(value.value)) {
@@ -570,20 +595,13 @@ class SelectField {
       }
     })
 
-    this.addFontsReadyEvent()
-  }
+    if (this._closeButton !== undefined) {
+      EventHandler.on(this._closeButton, 'click', () => {
+        let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+        d.toggle()
+      })
+    }
 
-  addDropdownItemsEventListeners() {
-    $(this._dropdown).find(SELECTOR_CHECKBOX).on('change', (event) => {
-      this.selectOne($(event.target).val(), $(event.target).is(':checked'))
-
-      if (!this._multiSelectEnabled) {
-        $(this._selectedItem).dropdown('toggle')
-      }
-    })
-  }
-
-  addFontsReadyEvent() {
     document.fonts.ready.then(() => {
       this.setAddonHeight()
 
@@ -600,11 +618,6 @@ class SelectField {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME] = SelectField._jQueryInterface
-$.fn[NAME].Constructor = SelectField
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return SelectField._jQueryInterface
-}
+defineJQueryPlugin(SelectField)
 
 export default SelectField

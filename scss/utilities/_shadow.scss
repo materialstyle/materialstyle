@@ -1,6 +1,4 @@
-// stylelint-disable declaration-no-important
-
-$elevations: (
+$shadows: (
   1dp: unquote("0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12)"),
   2dp: unquote("0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)"),
   3dp: unquote("0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12)"),
@@ -27,8 +25,7 @@ $elevations: (
   24dp: unquote("0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)")
 );
 
-@each $name, $value in $elevations {
-  .raised-#{$name} {
-    box-shadow: #{$value} !important;
-  }
-}
+$box-shadow: map-get($shadows, 8dp) !default;
+$box-shadow-sm: map-get($shadows, 1dp) !default;
+$box-shadow-lg: map-get($shadows, 18dp) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;

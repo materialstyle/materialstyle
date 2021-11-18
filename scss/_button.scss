@@ -28,7 +28,6 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
 
 .btn {
   position: relative;
-  overflow: hidden;
   text-transform: uppercase;
   letter-spacing: .0892857143em;
   vertical-align: middle;
@@ -152,7 +151,6 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
     max-width: 200px;
     padding: 7px 10px;
     margin-bottom: 0;
-    overflow: hidden;
     white-space: nowrap;
   }
 }

@@ -4,229 +4,449 @@
     <title>Tab</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+
+    
+
 </head>
 <body>
-<h1 class="m-3">Tab</h1>
 
-<div class="m-3">
-    <div class="form-group">
-        <ul class="nav nav-tabs nav-justified">
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#apple">Apple</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#apricot">Apricot</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#avocado">Avocado</a>
-            </li>
-        </ul>
-        <!-- Tab Panes -->
-        <div class="tab-content">
-            <div class="tab-pane container-fluid fade" id="apple">Apple</div>
-            <div class="tab-pane container-fluid active" id="apricot">Apricot</div>
-            <div class="tab-pane container-fluid fade" id="avocado">Avocado</div>
+<nav class="navbar navbar-expand-sm bg-deep-purple navbar-dark">
+    <div class="container-fluid">
+        <i class="drawer-toggle material-icons text-white">&#xE5D2;</i>
+        <a class="navbar-brand" href="javascript:">
+            Material Style Development
+        </a>
+    </div>
+</nav>
+
+<section class="m-root">
+    <aside class="drawer drawer-visible drawer-fixed bg-light shadow-4dp">
+        <div class="drawer-header bg-dark text-light">
+            <a class="drawer-brand text-light" href="javascript:">
+                Material Style Development
+            </a>
+            <i class="drawer-close-btn material-icons">&#xE5CD;</i>
         </div>
-    </div>
-</div>
-
-<div class="m-3">
-    <div class="form-group">
-        <ul class="icon-top nav nav-tabs nav-justified">
+        <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#movies">
-                    <i class="material-icons">movie_creation</i> Movies
+                <a class="nav-link text-dark" href="/alert.html">
+                    Alert
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#music">
-                    <i class="material-icons">music_note</i> Music
+                <a class="nav-link text-dark" href="/badge.html">
+                    Badge
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#pictures">
-                    <i class="material-icons">panorama</i> Pictures
+                <a class="nav-link text-dark" href="/breadcrumb.html">
+                    Breadcrumb
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/button.html">
+                    Button
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/card.html">
+                    Card
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/checkbox.html">
+                    Checkbox
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer.html">
+                    Drawer
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-always-visible.html">
+                    Drawer Always Visible
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/drawer-fixed.html">
+                    Drawer Fixed
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/dropdown.html">
+                    Dropdown
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/image-list.html">
+                    Image List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/list.html">
+                    List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/modal.html">
+                    Modal
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/nav.html">
+                    Nav
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar.html">
+                    Navbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/navbar-autohide.html">
+                    Navbar Autohide
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/pagination.html">
+                    Pagination
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/popover.html">
+                    Popover
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/progress-bar.html">
+                    Progress Bar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/radio.html">
+                    Radio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/range-slider.html">
+                    Range Slider
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/select-field.html">
+                    Select Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shadow.html">
+                    Shadow
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/shape.html">
+                    Shape
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/snackbar.html">
+                    Snackbar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/spinner.html">
+                    Spinner
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/switch.html">
+                    Switch
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tab.html">
+                    Tab
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/table.html">
+                    Table
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text.html">
+                    Text
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/text-field.html">
+                    Text Field
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/toast.html">
+                    Toast
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/tooltip.html">
+                    Tooltip
                 </a>
             </li>
         </ul>
-        <!-- Tab Panes -->
-        <div class="tab-content">
-            <div class="tab-pane container-fluid fade" id="movies">Movies</div>
-            <div class="tab-pane container-fluid active" id="music">Music</div>
-            <div class="tab-pane container-fluid fade" id="pictures">Pictures</div>
+    </aside>
+    <div class="m-container">
+
+                <h1 class="m-3">Tab</h1>
+
+        <div class="m-3">
+            <div class="form-group">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#apple">Apple</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#apricot">Apricot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#avocado">Avocado</a>
+                    </li>
+                </ul>
+                <!-- Tab Panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container-fluid fade" id="apple">Apple</div>
+                    <div class="tab-pane container-fluid active" id="apricot">Apricot</div>
+                    <div class="tab-pane container-fluid fade" id="avocado">Avocado</div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="m-3">
-    <div class="form-group">
-        <ul class="icon-right nav nav-tabs nav-justified">
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#movies2">
-                    <i class="material-icons">movie_creation</i> Movies
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#music2">
-                    <i class="material-icons">music_note</i> Music
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#pictures2">
-                    <i class="material-icons">panorama</i> Pictures
-                </a>
-            </li>
-        </ul>
-        <!-- Tab Panes -->
-        <div class="tab-content">
-            <div class="tab-pane container-fluid fade" id="movies2">Movies</div>
-            <div class="tab-pane container-fluid active" id="music2">Music</div>
-            <div class="tab-pane container-fluid fade" id="pictures2">Pictures</div>
+        <div class="m-3">
+            <div class="form-group">
+                <ul class="icon-top nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#movies">
+                            <i class="material-icons">movie_creation</i> Movies
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#music">
+                            <i class="material-icons">music_note</i> Music
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#pictures">
+                            <i class="material-icons">panorama</i> Pictures
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tab Panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container-fluid fade" id="movies">Movies</div>
+                    <div class="tab-pane container-fluid active" id="music">Music</div>
+                    <div class="tab-pane container-fluid fade" id="pictures">Pictures</div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="m-3">
-    <div class="form-group">
-        <ul class="icon-bottom nav nav-tabs nav-justified">
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#movies3">
-                    <i class="material-icons">movie_creation</i> Movies
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#music3">
-                    <i class="material-icons">music_note</i> Music
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#pictures3">
-                    <i class="material-icons">panorama</i> Pictures
-                </a>
-            </li>
-        </ul>
-        <!-- Tab Panes -->
-        <div class="tab-content">
-            <div class="tab-pane container-fluid fade" id="movies3">Movies</div>
-            <div class="tab-pane container-fluid active" id="music3">Music</div>
-            <div class="tab-pane container-fluid fade" id="pictures3">Pictures</div>
+        <div class="m-3">
+            <div class="form-group">
+                <ul class="icon-right nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#movies2">
+                            <i class="material-icons">movie_creation</i> Movies
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#music2">
+                            <i class="material-icons">music_note</i> Music
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#pictures2">
+                            <i class="material-icons">panorama</i> Pictures
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tab Panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container-fluid fade" id="movies2">Movies</div>
+                    <div class="tab-pane container-fluid active" id="music2">Music</div>
+                    <div class="tab-pane container-fluid fade" id="pictures2">Pictures</div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="m-3">
-    <div class="form-group">
-        <ul class="icon-left nav nav-tabs nav-justified">
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#movies4">
-                    <i class="material-icons">movie_creation</i> Movies
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#music4">
-                    <i class="material-icons">music_note</i> Music
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#pictures4">
-                    <i class="material-icons">panorama</i> Pictures
-                </a>
-            </li>
-        </ul>
-        <!-- Tab Panes -->
-        <div class="tab-content">
-            <div class="tab-pane container-fluid fade" id="movies4">Movies</div>
-            <div class="tab-pane container-fluid active" id="music4">Music</div>
-            <div class="tab-pane container-fluid fade" id="pictures4">Pictures</div>
+        <div class="m-3">
+            <div class="form-group">
+                <ul class="icon-bottom nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#movies3">
+                            <i class="material-icons">movie_creation</i> Movies
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#music3">
+                            <i class="material-icons">music_note</i> Music
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#pictures3">
+                            <i class="material-icons">panorama</i> Pictures
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tab Panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container-fluid fade" id="movies3">Movies</div>
+                    <div class="tab-pane container-fluid active" id="music3">Music</div>
+                    <div class="tab-pane container-fluid fade" id="pictures3">Pictures</div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="m-3">
-    <div class="form-group">
-        <ul class="nav nav-tabs nav-justified accent-pink primary-blue">
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#apple1">Apple</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#apricot1">Apricot</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#avocado1">Avocado</a>
-            </li>
-        </ul>
-        <!-- Tab Panes -->
-        <div class="tab-content">
-            <div class="tab-pane container-fluid fade" id="apple1">Apple</div>
-            <div class="tab-pane container-fluid active" id="apricot1">Apricot</div>
-            <div class="tab-pane container-fluid fade" id="avocado1">Avocado</div>
+        <div class="m-3">
+            <div class="form-group">
+                <ul class="icon-left nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#movies4">
+                            <i class="material-icons">movie_creation</i> Movies
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#music4">
+                            <i class="material-icons">music_note</i> Music
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#pictures4">
+                            <i class="material-icons">panorama</i> Pictures
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tab Panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container-fluid fade" id="movies4">Movies</div>
+                    <div class="tab-pane container-fluid active" id="music4">Music</div>
+                    <div class="tab-pane container-fluid fade" id="pictures4">Pictures</div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="m-3">
-    <div class="form-group">
-        <ul class="nav nav-tabs nav-justified primary-blue accent-pink">
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#apple2">Apple</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#apricot2">Apricot</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#avocado2">Avocado</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#banana2">Banana</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#blackberry2">Blackberry</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#blackcurrant2">Blackcurrant</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#blueberry2">Blueberry</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#boysenberry2">Boysenberry</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#cherry2">Cherry</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#coconut2">Coconut</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#grape2">Grape</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#kiwi2">Kiwi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#lychee2">Lychee</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#mango2">Mango</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#melon2">Melon</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#orange2">Orange</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#peach2">Peach</a>
-            </li>
-        </ul>
-    </div>
-</div>
+        <div class="m-3">
+            <div class="form-group">
+                <ul class="nav nav-tabs nav-justified accent-pink primary-blue">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#apple1">Apple</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#apricot1">Apricot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#avocado1">Avocado</a>
+                    </li>
+                </ul>
+                <!-- Tab Panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container-fluid fade" id="apple1">Apple</div>
+                    <div class="tab-pane container-fluid active" id="apricot1">Apricot</div>
+                    <div class="tab-pane container-fluid fade" id="avocado1">Avocado</div>
+                </div>
+            </div>
+        </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <div class="m-3">
+            <div class="form-group">
+                <ul class="nav nav-tabs nav-justified primary-blue accent-pink">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#apple2">Apple</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#apricot2">Apricot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#avocado2">Avocado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#banana2">Banana</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#blackberry2">Blackberry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#blackcurrant2">Blackcurrant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#blueberry2">Blueberry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#boysenberry2">Boysenberry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#cherry2">Cherry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#coconut2">Coconut</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#grape2">Grape</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#kiwi2">Kiwi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#lychee2">Lychee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#mango2">Mango</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#melon2">Melon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#orange2">Orange</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#peach2">Peach</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
-    $('.nav-tabs').tab();
-    $('.nav-tabs .nav-link').ripple();
+    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+    var drawerList = drawers.map(function (drawer) {
+        return new materialstyle.Drawer(drawer)
+    })
 </script>
+
+        <script>
+            // Without jQuery
+            var navLinks = [].slice.call(document.querySelectorAll('.nav-tabs .nav-link'))
+            var rippleList = navLinks.map(function (navLink) {
+                return new materialstyle.Ripple(navLink)
+            })
+
+            var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))
+            var tabList = tabs.map(function (tab) {
+                return new materialstyle.Tab(tab)
+            })
+
+            // With jQuery
+            // $(function () {
+            //     $('.nav-tabs').tab();
+            //     $('.nav-tabs .nav-link').ripple();
+            // });
+        </script>
+
+
 </body>
 </html>
