@@ -1,7 +1,6 @@
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/button-group";
 
-$raised-2dp: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
 
 // Add buttom-text-variant
@@ -26,14 +25,22 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   }
 }
 
+.btn:not([class*="btn-outline-"], [class*="btn-text-"]) {
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  .show > &.dropdown-toggle {
+    box-shadow: $raised-6dp;
+  }
+}
+
 .btn {
   position: relative;
   text-transform: uppercase;
   letter-spacing: .0892857143em;
   vertical-align: middle;
-  box-shadow: $raised-2dp;
 
-  &.unelevated,
   &.btn-link {
     box-shadow: none !important; /* stylelint-disable-line declaration-no-important */
   }
@@ -75,15 +82,6 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
     vertical-align: middle;
   }
 
-  &:active,
-  &.active,
-  &:hover,
-  &:focus,
-  &.focus,
-  .show > &.dropdown-toggle {
-    box-shadow: $raised-6dp;
-  }
-
   &.disabled,
   &:disabled {
     color: rgba(0, 0, 0, .37);
@@ -95,7 +93,6 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
 [class*="btn-outline-"],
 [class*="btn-text-"] {
   background-color: transparent;
-  box-shadow: none;
 
   &.disabled,
   &:disabled {
@@ -114,8 +111,6 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   }
 }
 
-.btn.unelevated,
-[class*="btn-outline-"],
 [class*="btn-text-"] {
   &:active,
   &.active,
