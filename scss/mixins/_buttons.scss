@@ -37,13 +37,13 @@
   }
 
   .m-ripple {
-    background: lighten($background, 20%);
+    background: if($hover-color == $color-contrast-light, tint-color($hover-background, $btn-active-border-tint-amount), shade-color($hover-background, $btn-active-border-shade-amount));
   }
 }
 
 @mixin button-outline-variant(
   $color,
-  $color-hover: color-contrast($color),
+  $hover-color: color-contrast($color),
   $active-background: $color,
   $active-border: $color,
   $active-color: color-contrast($active-background)
@@ -52,9 +52,14 @@
   border-color: $color;
 
   &:hover {
-    color: $color-hover;
+    color: $hover-color;
     background-color: $active-background;
     border-color: $active-border;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    box-shadow: 0 0 0 2px $color;
   }
 
   .btn-check:checked + &,
@@ -65,10 +70,14 @@
     color: $active-color;
     background-color: $active-background;
     border-color: $active-border;
+
+    &:focus {
+        box-shadow: 0 0 0 2px $color;
+    }
   }
 
   .m-ripple {
-    background: lighten($color, 20%);
+    background: if(color-contrast($color) == $color-contrast-light, tint-color($color, $btn-active-bg-tint-amount), shade-color($color, $btn-active-bg-shade-amount));
   }
 }
 
@@ -87,7 +96,7 @@
   }
 
   .m-ripple {
-    background: lighten($color, 20%);
+    background: if(color-contrast($color) == $color-contrast-light, tint-color($color, $btn-active-bg-tint-amount), shade-color($color, $btn-active-bg-shade-amount));
   }
 }
 
