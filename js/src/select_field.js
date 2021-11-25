@@ -417,21 +417,28 @@ class SelectField extends BaseComponent {
       this._notchBefore.style.borderColor = this._accentColor
       this._notchBetween.style.borderColor = this._accentColor
       this._notchAfter.style.borderColor = this._accentColor
+    } else {
+      this._ripple.style.backgroundSize = '100% 2px, 100% 1px'
     }
   }
 
   handleFocusOut() {
-    if (this._label !== null) {
-      this.setLabelColor()
-      this.switchLabelClass()
-      this.translateLabel()
-    }
+    if (!this._selectedItem.classList.contains('show')) {
+      if (this._label !== null) {
+        this.setLabelColor()
+        this.switchLabelClass()
+        this.translateLabel()
+      }
 
-    if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-      this._notch.classList.remove('notch-active')
-      this._notchBefore.style.borderColor = this._primaryColor
-      this._notchBetween.style.borderColor = this._primaryColor
-      this._notchAfter.style.borderColor = this._primaryColor
+      if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
+        this._notch.classList.remove('notch-active')
+        this._notchBefore.style.borderColor = this._primaryColor
+        this._notchBetween.style.borderColor = this._primaryColor
+        this._notchAfter.style.borderColor = this._primaryColor
+        this._selectedItem.style.border = 0
+      } else {
+        this._ripple.style.backgroundSize = '0px 2px, 100% 1px'
+      }
     }
   }
 
@@ -515,6 +522,8 @@ class SelectField extends BaseComponent {
   }
 
   _setListeners() {
+    EventHandler.on(this._selectedItem, EVENT_FOCUS, () => this.handleFocus())
+    EventHandler.on(this._selectedItem, EVENT_FOCUSOUT, () => this.handleFocusOut())
     EventHandler.on(this._dropdown, EVENT_SHOWN, () => this.handleFocus())
     EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
 
