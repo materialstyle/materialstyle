@@ -45,8 +45,9 @@ const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'
 
-const SELECTOR_CHECKBOX = '.select-items .form-check-input'
-const SELECTOR_SELECT_ALL_CHECKBOX = '.select-all-container .form-check-input'
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dropdown"]'
+const SELECTOR_DROPDOWN_ITEM = '.dropdown-item:not(.select-all):not(.btn-close)'
+const SELECTOR_SELECT_ALL = '.select-all'
 
 const FLOATING_LABEL_SCALE = 0.75
 const NOTCH_BETWEEN_PADDING_SUM = 10
@@ -78,8 +79,6 @@ class SelectField extends BaseComponent {
     this._isSearchable = Boolean(element.className.includes(CLASS_NAME_SEARCHABLE))
     this._multiSelectEnabled = Boolean(element.className.includes(CLASS_NAME_MULTI_SELECT))
 
-    this._options = this.createOptions()
-
     this.initSelect()
     this._setListeners()
   }
@@ -106,27 +105,8 @@ class SelectField extends BaseComponent {
     })
   }
 
-  createOptions() {
-    const optionsArray = []
-    const options = this._select.querySelectorAll('option')
-
-    const selectItems = document.createElement('div')
-    selectItems.className = 'select-items'
-
-    for (const [, value] of Object.entries(options)) {
-      selectItems.appendChild(this.createCheckbox(value.text, value.value, value.selected))
-      optionsArray.push({
-        value: value.value,
-        text: value.innerHTML,
-        selected: value.selected
-      })
-    }
-
-    this._selectItems = selectItems
-    return optionsArray
-  }
-
   initSelect() {
+    this.createDropdownMenu()
     this.createDropdown()
     this.showSelectedItems()
 
@@ -156,140 +136,130 @@ class SelectField extends BaseComponent {
 
   rebuild() {
     this._options = []
-    this._selectItems.innerHTML = ''
+    this._dropdownMenu.innerHTML = '';
 
-    const options = this._select.querySelectorAll('option')
-
-    for (const [, value] of Object.entries(options)) {
-      this._selectItems.appendChild(this.createCheckbox(value.text, value.value, value.selected))
-
-      this._options.push({
-        value: value.value,
-        text: value.innerHTML,
-        selected: value.selected
-      })
-    }
-
+    this.createDropdownMenu()
     this.showSelectedItems()
-
     this.redraw()
-
-    this.addDropdownItemsEventListeners()
+    this._setListeners()
   }
 
-  createDropdown() {
-    const dropdown = document.createElement('div')
-    dropdown.className = 'dropdown'
+  createDropdownMenu() {
+    let dropdownMenu = this._dropdownMenu
 
-    const selectedItem = document.createElement('div')
-    selectedItem.className = 'selected-item dropdown-toggle'
-    selectedItem.dataset.bsToggle = 'dropdown'
-    selectedItem.dataset.bsAutoClose = 'outside'
-
-    const dropdownMenu = document.createElement('div')
-    dropdownMenu.className = 'dropdown-menu'
+    if (dropdownMenu == undefined) {
+      dropdownMenu = document.createElement('div')
+      dropdownMenu.className = 'dropdown-menu'
+    }
 
     if (this._isSearchable) {
       dropdownMenu.appendChild(this.createSearchContainer())
     }
 
     if (this._multiSelectEnabled) {
-      dropdownMenu.appendChild(this.createSelectAllContainer())
-      dropdownMenu.appendChild(this._selectItems)
+      dropdownMenu.appendChild(this.createDropdownItems('Select All', '', false, true))
+    }
 
+    const optionsArray = []
+    const options = this._select.querySelectorAll('option')
+
+    for (const [, value] of Object.entries(options)) {
+      dropdownMenu.appendChild(this.createDropdownItems(value.text, value.value, value.selected))
+      optionsArray.push({
+        value: value.value,
+        text: value.innerHTML,
+        selected: value.selected
+      })
+    }
+    this._options = optionsArray
+
+    if (this._multiSelectEnabled) {
       const closeButton = document.createElement('button')
-      closeButton.type = 'button'
-      closeButton.className = 'btn btn-text-dark'
-      closeButton.innerHTML = 'close'
+      closeButton.className = 'btn-close dropdown-item w-100'
+      closeButton.ariaLabel = 'Close'
 
       this._closeButton = closeButton
       dropdownMenu.appendChild(closeButton)
-    } else {
-      dropdownMenu.appendChild(this._selectItems)
     }
 
+    this._dropdownMenu = dropdownMenu
+  }
+
+  createDropdown() {
+    const dropdown = document.createElement('div')
+    dropdown.className = 'dropdown'
+
+    const selectedItem = document.createElement('button')
+    selectedItem.className = 'btn dropdown-toggle text-start shadow-none'
+    selectedItem.dataset.bsToggle = 'dropdown'
+    selectedItem.dataset.bsAutoClose = 'outside'
+
     dropdown.appendChild(selectedItem)
-    dropdown.appendChild(dropdownMenu)
+    dropdown.appendChild(this._dropdownMenu)
 
     this._dropdown = dropdown
     this._selectedItem = selectedItem
 
     this._element.insertBefore(this._dropdown, this._select)
+
+    this._dropdownInstance = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
   }
 
   createSearchContainer() {
-    let searchContainer = ''
+    const searchInput = document.createElement('input')
+    searchInput.type = 'text'
+    searchInput.placeholder = 'Search'
+    searchInput.className = 'search-input form-control'
+    searchInput.autocomplete = 'off'
 
-    if (this._isSearchable) {
-      searchContainer = document.createElement('div')
-      searchContainer.className = 'search-container m-0 p-0'
-
-      const searchInput = document.createElement('input')
-      searchInput.type = 'text'
-      searchInput.placeholder = 'Search'
-      searchInput.className = 'search-input form-control'
-      searchInput.autocomplete = 'off'
-
-      searchContainer.appendChild(searchInput)
-    }
-
-    return searchContainer
+    return searchInput
   }
 
-  createSelectAllContainer() {
-    let selectAllContainer = ''
+  createDropdownItems(text, value, checked, isSelectAllButton = false) {
+    const dropdownItem = document.createElement('button')
+    dropdownItem.className = 'dropdown-item d-flex align-items-center'
+    dropdownItem.dataset.value = value
+    dropdownItem.dataset.checked = false
+
+    if (isSelectAllButton) {
+      dropdownItem.classList.add('select-all')
+    }
 
     if (this._multiSelectEnabled) {
-      selectAllContainer = document.createElement('div')
-      selectAllContainer.className = 'm-0 p-0 select-all-container'
+      const checkmark = document.createElement('span')
+      checkmark.className = 'checkmark me-1'
 
-      selectAllContainer.appendChild(this.createCheckbox('Select All', ''))
+      const label = document.createElement('span')
+      label.className = 'dropdown-text'
+      label.innerHTML = text
+
+      dropdownItem.appendChild(checkmark)
+      dropdownItem.appendChild(label)
+    } else {
+      dropdownItem.innerHTML = text
+      if (checked) {
+        dropdownItem.classList.add('checked')
+        dropdownItem.dataset.checked = true
+      }
     }
 
-    return selectAllContainer
-  }
-
-  createCheckbox(text, value, checked) {
-    const checkbox = document.createElement('input')
-    checkbox.setAttribute('type', 'checkbox')
-    checkbox.className = 'form-check-input'
-    checkbox.id = `check${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).substr(SUBSTR_INDEX)}`
-    checkbox.value = value
-    checkbox.checked = checked
-
-    const label = document.createElement('label')
-    label.className = 'form-check-label'
-    label.innerHTML = text
-    label.setAttribute('for', checkbox.id)
-
-    const customCheckbox = document.createElement('div')
-    customCheckbox.className = 'form-check dropdown-item'
-
-    if (checked && !this._multiSelectEnabled) {
-      customCheckbox.classList.add('checked')
-    }
-
-    customCheckbox.appendChild(checkbox)
-    customCheckbox.appendChild(label)
-
-    return customCheckbox
+    return dropdownItem
   }
 
   showSelectedItems() {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
-          return `<span class="badge bg-dark">${option.text}<span class="badge-close" aria-hidden="true" data-value="${option.value}">&times;</span></span>`
+          return `<span class="badge rounded-pill bg-dark d-inline-flex align-items-center me-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-value="${option.value}"></button></span>`
         }
         return ''
       }).join('')
 
-      const closeButton = this._selectedItem.querySelectorAll('.badge-close')
+      const closeButton = this._selectedItem.querySelectorAll('.btn-close')
 
       for (const [, value] of Object.entries(closeButton)) {
-        value.addEventListener('click', (event) => {
-          event.preventDefault()
-          event.stopPropagation()
+        EventHandler.on(value, EVENT_CLICK, (event) => {
+          this._dropdownInstance.show()
           this.selectOne(event.target.dataset.value, false)
         })
       }
@@ -328,7 +298,7 @@ class SelectField extends BaseComponent {
     notchBefore.style.borderColor = this._primaryColor
 
     const notchBetween = document.createElement('div')
-    notchBetween.className = 'm-notch-between width-auto'
+    notchBetween.className = 'm-notch-between'
     notchBetween.style.borderColor = this._primaryColor
 
     if (this._label === null) {
@@ -447,21 +417,28 @@ class SelectField extends BaseComponent {
       this._notchBefore.style.borderColor = this._accentColor
       this._notchBetween.style.borderColor = this._accentColor
       this._notchAfter.style.borderColor = this._accentColor
+    } else {
+      this._ripple.style.backgroundSize = '100% 2px, 100% 1px'
     }
   }
 
   handleFocusOut() {
-    if (this._label !== null) {
-      this.setLabelColor()
-      this.switchLabelClass()
-      this.translateLabel()
-    }
+    if (!this._selectedItem.classList.contains('show')) {
+      if (this._label !== null) {
+        this.setLabelColor()
+        this.switchLabelClass()
+        this.translateLabel()
+      }
 
-    if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-      this._notch.classList.remove('notch-active')
-      this._notchBefore.style.borderColor = this._primaryColor
-      this._notchBetween.style.borderColor = this._primaryColor
-      this._notchAfter.style.borderColor = this._primaryColor
+      if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
+        this._notch.classList.remove('notch-active')
+        this._notchBefore.style.borderColor = this._primaryColor
+        this._notchBetween.style.borderColor = this._primaryColor
+        this._notchAfter.style.borderColor = this._primaryColor
+        this._selectedItem.style.border = 0
+      } else {
+        this._ripple.style.backgroundSize = '0px 2px, 100% 1px'
+      }
     }
   }
 
@@ -477,7 +454,7 @@ class SelectField extends BaseComponent {
 
     this._select.querySelector(`option[value="${value}"]`).selected = checked
 
-    this._select.dispatchEvent(new Event('change', { bubbles: true }))
+    this._select.dispatchEvent(new Event('change', {bubbles: true}))
   }
 
   selectAll(checked) {
@@ -487,17 +464,17 @@ class SelectField extends BaseComponent {
       options[i].selected = checked
     }
 
-    this._select.dispatchEvent(new Event('change', { bubbles: true }))
+    this._select.dispatchEvent(new Event('change', {bubbles: true}))
   }
 
   setSelectValue(value, checked) {
     let index
 
     if (!this._multiSelectEnabled) {
-      const checkboxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
-      for (let i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = false
-        checkboxes[i].closest('.form-check').classList.remove('checked')
+      const dropdownItems = this._dropdown.querySelectorAll(SELECTOR_DROPDOWN_ITEM)
+      for (let i = 0; i < dropdownItems.length; i++) {
+        dropdownItems[i].dataset.checked = false
+        dropdownItems[i].classList.remove('checked')
       }
 
       index = this._options.findIndex((o) => o.selected === true)
@@ -506,12 +483,12 @@ class SelectField extends BaseComponent {
       }
     }
 
-    this._dropdown.querySelector(`.form-check-input[value="${value}"]`).checked = checked
+    this._dropdown.querySelector(`.dropdown-item[data-value="${value}"]`).dataset.checked = checked
 
     if (checked) {
-      this._dropdown.querySelector(`.form-check-input[value="${value}"]`).closest('.form-check').classList.add('checked')
+      this._dropdown.querySelector(`.dropdown-item[data-value="${value}"]`).classList.add('checked')
     } else {
-      this._dropdown.querySelector(`.form-check-input[value="${value}"]`).closest('.form-check').classList.remove('checked')
+      this._dropdown.querySelector(`.dropdown-item[data-value="${value}"]`).classList.remove('checked')
     }
 
     index = this._options.findIndex((o) => o.value === value)
@@ -523,85 +500,119 @@ class SelectField extends BaseComponent {
   search(value) {
     value = value.toLowerCase()
 
-    $(this._dropdown.querySelectorAll('.select-items .form-check')).each(function () {
-      if ($(this).find('.form-check-label').html().toLowerCase().indexOf(value) === -1) {
-        $(this).hide()
+    const dropdownItems = this._dropdown.querySelectorAll(SELECTOR_DROPDOWN_ITEM)
+
+    for (const [, item] of Object.entries(dropdownItems)) {
+      let optionText = ''
+
+      if (this._multiSelectEnabled) {
+        optionText = item.querySelector('.dropdown-text').innerHTML
       } else {
-        $(this).show()
+        optionText = item.innerHTML
       }
-    })
+
+      if (optionText.toLowerCase().indexOf(value) === -1) {
+        item.classList.add('d-none')
+        item.classList.remove('d-flex')
+      } else {
+        item.classList.add('d-flex')
+        item.classList.remove('d-none')
+      }
+    }
   }
 
   _setListeners() {
+    EventHandler.on(this._selectedItem, EVENT_FOCUS, () => this.handleFocus())
+    EventHandler.on(this._selectedItem, EVENT_FOCUSOUT, () => this.handleFocusOut())
     EventHandler.on(this._dropdown, EVENT_SHOWN, () => this.handleFocus())
     EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
 
     EventHandler.on(this._label, EVENT_CLICK, (event) => {
       event.preventDefault()
       event.stopPropagation()
-      let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
-      d.toggle()
+      this._dropdownInstance.toggle()
     })
 
     EventHandler.on(this._prepend, EVENT_CLICK, (event) => {
       event.preventDefault()
       event.stopPropagation()
-      let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
-      d.toggle()
+      this._dropdownInstance.toggle()
     })
 
     EventHandler.on(this._append, EVENT_CLICK, (event) => {
       event.preventDefault()
       event.stopPropagation()
-      let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
-      d.toggle()
+      this._dropdownInstance.toggle()
     })
 
-    EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL_CHECKBOX), EVENT_CHANGE, (event) => {
-      this.selectAll(event.target.checked)
+    EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, (event) => {
+      let checked = event.target.dataset.checked === 'true' ? false : true;
+      event.target.dataset.checked = checked
+
+      if (checked) {
+        event.target.classList.add('checked');
+      } else {
+        event.target.classList.remove('checked');
+      }
+
+      this.selectAll(checked)
     })
 
     EventHandler.on(this._dropdown.querySelector('.search-input'), EVENT_KEYUP, (event) => {
       this.search(event.target.value)
     })
 
-    const checkBoxes = this._dropdown.querySelectorAll(SELECTOR_CHECKBOX)
+    const dropdownItems = this._dropdown.querySelectorAll(SELECTOR_DROPDOWN_ITEM)
 
-    for (const [, value] of Object.entries(checkBoxes)) {
-      EventHandler.on(value, 'change', (event) => {
-        this.selectOne(event.target.value, event.target.checked)
-        event.preventDefault()
-        event.stopPropagation()
-        if (!this._multiSelectEnabled) {
-          let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
-          d.toggle()
+    for (const [, value] of Object.entries(dropdownItems)) {
+      EventHandler.on(value, EVENT_CLICK, (event) => {
+        if (this._multiSelectEnabled) {
+          this.selectOne(event.target.dataset.value, event.target.dataset.checked === 'true' ? false : true)
+        } else {
+          this.selectOne(event.target.dataset.value, true)
+
+          this._dropdownInstance.toggle()
         }
       })
     }
 
+    if (this._closeButton !== undefined) {
+      EventHandler.on(this._closeButton, EVENT_CLICK, () => {
+        this._dropdownInstance.toggle()
+      })
+    }
+
     EventHandler.on(this._select, 'change', (event) => {
-      if (!this._multiSelectEnabled) {
-        this.setSelectValue(event.target.value, true)
-      } else {
+      if (this._multiSelectEnabled) {
         const selectValue = [...event.target.options].filter(option => option.selected).map(option => option.value)
+        let allSelected = true;
 
         for (const [, value] of Object.entries(this._options)) {
           if (selectValue.includes(value.value)) {
             this.setSelectValue(value.value, true)
           } else {
             this.setSelectValue(value.value, false)
+            allSelected = false
           }
         }
+
+        let selectAllButton = this._dropdown.querySelector(SELECTOR_SELECT_ALL)
+        if (allSelected) {
+          selectAllButton.classList.add('checked')
+          selectAllButton.dataset.checked = true
+        } else {
+          selectAllButton.classList.remove('checked')
+          selectAllButton.dataset.checked = false
+        }
+      } else {
+        this.setSelectValue(event.target.value, true)
       }
     })
 
-    if (this._closeButton !== undefined) {
-      EventHandler.on(this._closeButton, 'click', () => {
-        let d = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
-        d.toggle()
-      })
-    }
+    this.addFontsReadyEvent()
+  }
 
+  addFontsReadyEvent() {
     document.fonts.ready.then(() => {
       this.setAddonHeight()
 
