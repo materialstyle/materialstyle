@@ -136,7 +136,7 @@ class TextField extends BaseComponent {
     notchBefore.style.borderColor = this._primaryColor
 
     const notchBetween = document.createElement('div')
-    notchBetween.className = 'm-notch-between width-auto'
+    notchBetween.className = 'm-notch-between'
     notchBetween.style.borderColor = this._primaryColor
 
     if (this._label === null) {
