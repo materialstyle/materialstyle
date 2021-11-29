@@ -189,14 +189,16 @@ class Drawer extends BaseComponent {
             show = false
 
             if (event.target.className.includes('sub-menu-link')) {
-              event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_up'
+              event.target.querySelector('.bi').classList.remove('bi-chevron-down')
+              event.target.querySelector('.bi').classList.add('bi-chevron-up')
             }
           } else {
             subMenu.style.marginTop = `-${subMenuHeight}px`
             show = true
 
             if (event.target.className.includes('sub-menu-link')) {
-              event.target.querySelector('.material-icons').innerHTML = 'keyboard_arrow_down'
+              event.target.querySelector('.bi').classList.remove('bi-chevron-up')
+              event.target.querySelector('.bi').classList.add('bi-chevron-down')
             }
           }
         }
