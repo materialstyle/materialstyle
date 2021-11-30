@@ -1,3 +1,6 @@
+@use "@material/ripple";
+@use '@material/ripple/mdc-ripple';
+
 @mixin button-variant(
   $background,
   $border,
@@ -16,15 +19,19 @@
   color: $color;
   @include gradient-bg($background);
 
+  @if color-contrast($background) == $color-contrast-light {
+    --mdc-ripple-color: #fff;
+  } @else {
+    --mdc-ripple-color: #000;
+  }
+
   &:hover {
     color: $hover-color;
-    @include gradient-bg($hover-background);
   }
 
   .btn-check:focus + &,
   &:focus {
     color: $hover-color;
-    @include gradient-bg($hover-background);
   }
 
   .btn-check:checked + &,
@@ -33,11 +40,6 @@
   &.active,
   .show > &.dropdown-toggle {
     color: $active-color;
-    background-color: $active-background;
-  }
-
-  .m-ripple {
-    background: if($hover-color == $color-contrast-light, tint-color($hover-background, $btn-active-border-tint-amount), shade-color($hover-background, $btn-active-border-shade-amount));
   }
 }
 
@@ -48,18 +50,13 @@
   $active-border: $color,
   $active-color: color-contrast($active-background)
 ) {
+  --mdc-ripple-color: #{$color};
   color: $color;
   border-color: $color;
 
   &:hover {
-    color: $hover-color;
-    background-color: $active-background;
+    color: $color;
     border-color: $active-border;
-  }
-
-  .btn-check:focus + &,
-  &:focus {
-    box-shadow: 0 0 0 2px $color;
   }
 
   .btn-check:checked + &,
@@ -67,22 +64,13 @@
   &:active,
   &.active,
   &.dropdown-toggle.show {
-    color: $active-color;
-    background-color: $active-background;
+    color: $color;
     border-color: $active-border;
-
-    &:focus {
-        box-shadow: 0 0 0 2px $color;
-    }
-  }
-
-  .m-ripple {
-    background: if(color-contrast($color) == $color-contrast-light, tint-color($color, $btn-active-bg-tint-amount), shade-color($color, $btn-active-bg-shade-amount));
   }
 }
 
 @mixin button-text-variant($color) {
-  $active-background: rgba($color, .15);
+  --mdc-ripple-color: #{$color};
   color: $color;
 
   &:active,
@@ -92,11 +80,6 @@
   &.focus,
   .show > &.dropdown-toggle {
     color: $color;
-    background-color: $active-background;
-  }
-
-  .m-ripple {
-    background: if(color-contrast($color) == $color-contrast-light, tint-color($color, $btn-active-bg-tint-amount), shade-color($color, $btn-active-bg-shade-amount));
   }
 }
 
