@@ -24,7 +24,6 @@ import Tab from './tab'
 import TextField from './text_field'
 import Toast from './toast'
 import Tooltip from './tooltip'
-import {MDCRipple} from '@material/ripple/index';
 
 export default {
   Alert,
@@ -47,6 +46,5 @@ export default {
   Tab,
   TextField,
   Toast,
-  Tooltip,
-  MDCRipple
+  Tooltip
 }

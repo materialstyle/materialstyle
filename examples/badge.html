@@ -250,12 +250,12 @@
         <script>
             var buttonList = [].slice.call(document.querySelectorAll('.btn:not(.overflow-visible)'))
             buttonList.map(function (button) {
-                new materialstyle.MDCRipple(button)
+                new materialstyle.Ripple(button)
             })
 
             var rippleSurfaces = [].slice.call(document.querySelectorAll('.ripple-surface'))
             rippleSurfaces.map(function (surface) {
-                new materialstyle.MDCRipple(surface)
+                new materialstyle.Ripple(surface)
             })
         </script>
 
