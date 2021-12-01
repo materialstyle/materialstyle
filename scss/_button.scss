@@ -1,7 +1,17 @@
+@use "@material/ripple";
+@use '@material/ripple/mdc-ripple';
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/button-group";
 
 $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+
+.btn:not(.overflow-visible) {
+  overflow: hidden;
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple.states-base-color(#fff);
+  @include ripple.states-opacities((hover: .1, focus: .15, press: .2));
+}
 
 // Add buttom-text-variant
 @each $color, $value in $theme-colors {
@@ -26,6 +36,7 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
 }
 
 .btn:not([class*="btn-outline-"], [class*="btn-text-"]) {
+  &:hover,
   &:active,
   &.active,
   &:focus,
@@ -101,7 +112,7 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   }
 }
 
-[class*="btn-text-"] {
+[class*="btn-text-"], [class*="btn-outline-"] {
   &:active,
   &.active,
   &:hover,

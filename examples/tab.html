@@ -430,9 +430,9 @@
 
         <script>
             // Without jQuery
-            var navLinks = [].slice.call(document.querySelectorAll('.nav-tabs .nav-item'))
-            var rippleList = navLinks.map(function (navLink) {
-                return new materialstyle.Ripple(navLink)
+            var navLinks = [].slice.call(document.querySelectorAll('.nav-tabs .nav-link'))
+            navLinks.map(function (navLink) {
+                new materialstyle.Ripple(navLink)
             })
 
             var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))

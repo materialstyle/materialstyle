@@ -116,22 +116,12 @@
 
   {{/inline}}
 
-  {{#*inline "jQuery"}}
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
-  {{/inline}}
-
   {{#*inline "scripts"}}
     <script>
-      // Without jQuery
       var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-      var rippleList = buttonList.map(function (button) {
-        return new materialstyle.Ripple(button)
+      buttonList.map(function (button) {
+        new materialstyle.Ripple(button)
       })
-
-      // With jQuery
-      // $(function(){
-      //   $('.btn').ripple();
-      // });
     </script>
   {{/inline}}
 

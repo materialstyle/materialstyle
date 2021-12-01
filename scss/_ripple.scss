@@ -1,32 +1,18 @@
-.m-ripple-container {
+@use "@material/ripple";
+@use '@material/ripple/mdc-ripple';
+
+.ripple-surface {
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple.states-base-color(#fff);
+  @include ripple.states-opacities((hover: .1, focus: .15, press: .2));
   position: absolute;
-  display: block;
-  pointer-events: none;
+  box-sizing: content-box;
   overflow: hidden;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 0;
   border-radius: inherit;
-}
-
-.m-ripple {
-  position: absolute;
-  display: block;
-  pointer-events: none;
-  background: #fff;
-  border-radius: 50%;
-  opacity: 1;
-  transform: scale(0);
-}
-
-.m-ripple.animate {
-  animation: ripple .3s linear forwards;
-}
-
-@keyframes ripple {
-  100% {
-    opacity: .25;
-    transform: scale(2);
-  }
 }
