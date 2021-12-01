@@ -214,20 +214,22 @@
         </div>
 
         <div class="m-3">
-            <button type="button" class="btn btn-deep-purple position-relative">
+            <button type="button" class="btn btn-deep-purple overflow-visible">
                 Inbox
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink">
                     99+ <span class="visually-hidden">unread messages</span>
                 </span>
+                <div class="ripple-surface"></div>
             </button>
         </div>
 
         <div class="m-3">
-            <button type="button" class="btn btn-blue-100 position-relative">
+            <button type="button" class="btn btn-blue-100 overflow-visible">
                 Profile
                 <span class="position-absolute top-0 start-100 translate-middle p-2 bg-pink border border-light rounded-circle">
                     <span class="visually-hidden">New alerts</span>
                 </span>
+                <div class="ripple-surface"></div>
             </button>
         </div>
 
@@ -245,6 +247,17 @@
     })
 </script>
 
+        <script>
+            var buttonList = [].slice.call(document.querySelectorAll('.btn:not(.overflow-visible)'))
+            buttonList.map(function (button) {
+                new materialstyle.MDCRipple(button)
+            })
+
+            var rippleSurfaces = [].slice.call(document.querySelectorAll('.ripple-surface'))
+            rippleSurfaces.map(function (surface) {
+                new materialstyle.MDCRipple(surface)
+            })
+        </script>
 
 
 </body>
