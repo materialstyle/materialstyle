@@ -302,6 +302,10 @@ class TextField extends BaseComponent {
       this._textField.focus()
     })
 
+    this.addFontsReadyEvent()
+  }
+
+  addFontsReadyEvent() {
     document.fonts.ready.then(() => {
       this.setAddonHeight()
 
