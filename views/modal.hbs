@@ -8,7 +8,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Modal Heading</h4>
-                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div class="modal-body">
@@ -94,13 +94,13 @@
                             <div class="form-group">
                                 <ul class="nav nav-tabs nav-justified primary-dark accent-indigo">
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#apple">Apple</a>
+                                        <a class="nav-link" data-bs-toggle="tab" href="#apple">Apple</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#apricot">Apricot</a>
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#apricot">Apricot</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#avocado">Avocado</a>
+                                        <a class="nav-link" data-bs-toggle="tab" href="#avocado">Avocado</a>
                                     </li>
                                 </ul>
                                 <!-- Tab Panes -->
@@ -137,14 +137,14 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="m-3">
-            <button type="button" class="btn btn-black" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn btn-black" data-bs-toggle="modal" data-bs-target="#myModal">
                 Open modal
             </button>
         </div>
@@ -169,9 +169,7 @@
             $('.m-select-outline').selectfield();
 
             $('.nav-tabs').tab();
-            $('.nav-tabs .nav-link').ripple();
             $('.m-shape-container').shape();
-            $('.btn').ripple();
 
             $("#myModal").on('shown.bs.modal', function () {
               $('.m-text-field').textfield('redraw');
@@ -180,8 +178,6 @@
               $('.m-select-outline').selectfield('redraw');
 
               $('.nav-tabs').tab('redraw');
-              $('.btn').ripple('redraw');
-              $('.nav-tabs .nav-link').ripple('redraw');
 
               $('#show-modal-snackbar').on('click', function () {
                 $('#modal-snackbar').snackbar();
