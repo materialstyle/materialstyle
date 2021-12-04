@@ -1,24 +1,25 @@
 .drawer {
   position: fixed;
   top: 0;
-  left: -350px;
+  left: 0;
   z-index: 1031;
   width: 250px;
   min-height: 100vh;
   overflow-y: auto;
   background: #fff;
-  transition: left .2s cubic-bezier(.4, 0, .2, 1) .1s;
+  transition: transform .2s cubic-bezier(.4, 0, .2, 1) .1s;
+  transform: translateX(-100%);
 
   &.drawer-visible {
     position: relative;
     top: auto;
-    left: 0;
     z-index: 1029;
     flex: 0 0 250px;
     min-width: 250px;
     height: auto;
+    transform: none;
 
-    ~ .drawer-toggle,
+    ~ .drawer-toggler,
     .drawer-close-btn {
       display: none;
     }
@@ -98,8 +99,8 @@
   }
 }
 
-.drawer-toggle {
-  padding: 0 15px 0 15px;
+.drawer-toggler {
+  margin-right: 0.5rem;
   cursor: pointer;
 }
 
@@ -111,4 +112,36 @@
   left: 0;
   z-index: 1030;
   background-color: rgba(0, 0, 0, .5);
+}
+
+.drawer-toggler {
+  padding: $drawer-toggler-padding-y $drawer-toggler-padding-x;
+  @include font-size($navbar-toggler-font-size);
+  line-height: 1;
+  background-color: transparent; // remove default button style
+  border: $border-width solid transparent; // remove default button style
+  @include border-radius($drawer-toggler-border-radius);
+  @include transition($navbar-toggler-transition);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 $navbar-toggler-focus-width;
+  }
+}
+
+.drawer-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: escape-svg($navbar-dark-drawer-toggler-icon-bg);
+  pointer-events: none;
 }

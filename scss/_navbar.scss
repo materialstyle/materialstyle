@@ -23,3 +23,23 @@
     }
   }
 }
+
+.navbar-light {
+  .drawer-toggler {
+    color: $navbar-light-color;
+    border-color: $navbar-light-toggler-border-color;
+  }
+  .drawer-toggler-icon {
+    background-image: escape-svg($navbar-light-drawer-toggler-icon-bg);
+  }
+}
+
+.navbar-dark {
+  .drawer-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
+  }
+  .drawer-toggler-icon {
+    background-image: escape-svg($navbar-dark-drawer-toggler-icon-bg);
+  }
+}

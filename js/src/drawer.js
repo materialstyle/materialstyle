@@ -35,7 +35,7 @@ class Drawer extends BaseComponent {
     super(element)
     this._element = element
     this._shade = this.createShade()
-    this._hamburger = document.querySelector('.drawer-toggle')
+    this._drawerToggler = document.querySelector('.drawer-toggler')
     this._drawerHeader = element.querySelector('.drawer-header')
     this._footer = document.querySelector('footer')
     this._navBar = document.querySelector('.navbar')
@@ -111,14 +111,14 @@ class Drawer extends BaseComponent {
 
   show() {
     this._shade.style.display = 'block'
-    this._element.style.left = 0
+    this._element.style.transform = 'none'
   }
 
   hide() {
     this._shade.style.display = 'none'
 
     if (!this._element.className.includes(CLASS_NAME_VISIBLE)) {
-      this._element.style.left = '-350px'
+      this._element.style.transform = 'translateX(-100%)'
     }
   }
 
@@ -127,13 +127,13 @@ class Drawer extends BaseComponent {
       if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
         this._element.classList.add(CLASS_NAME_SWITCHED)
         this._element.classList.remove(CLASS_NAME_VISIBLE)
-        this._element.style.left = '-350px'
+        this._element.style.transform = 'translateX(-100%)'
       }
 
       this._shade.style.display = 'none'
 
-      if (this._hamburger !== null) {
-        this._hamburger.style.display = 'block'
+      if (this._drawerToggler !== null) {
+        this._drawerToggler.style.display = 'block'
       }
 
       if (this._footer !== null) {
@@ -143,11 +143,11 @@ class Drawer extends BaseComponent {
       if (this._element.className.includes(CLASS_NAME_SWITCHED)) {
         this._element.classList.remove(CLASS_NAME_SWITCHED)
         this._element.classList.add(CLASS_NAME_VISIBLE)
-        this._element.style.left = 0
+        this._element.style.transform = 'none'
       }
 
-      if (this._hamburger !== null) {
-        this._hamburger.style.display = 'none'
+      if (this._drawerToggler !== null) {
+        this._drawerToggler.style.display = 'none'
       }
 
       if (this._footer !== null && this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
@@ -157,11 +157,11 @@ class Drawer extends BaseComponent {
   }
 
   _setListeners() {
-    EventHandler.on(this._hamburger, EVENT_CLICK, () => this.show())
+    EventHandler.on(this._drawerToggler, EVENT_CLICK, () => this.show())
 
     EventHandler.on(document, EVENT_CLICK, (event) => {
       if (event.target !== this._element &&
-        event.target !== this._hamburger &&
+        event.target !== this._drawerToggler &&
         !this._element.contains(event.target)
       ) {
         this.hide()
