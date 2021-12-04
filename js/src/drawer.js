@@ -29,6 +29,7 @@ const CLASS_NAME_SWITCHED = '--switched'
 const CLASS_NAME_FIXED = 'drawer-fixed'
 const CLASS_SHADE = 'm-shade'
 const TOGGLE_AT_WIDTH = 1280
+const DRAWER_WIDTH = '250px'
 
 class Drawer extends BaseComponent {
   constructor(element) {
@@ -151,7 +152,7 @@ class Drawer extends BaseComponent {
       }
 
       if (this._footer !== null && this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
-        this._footer.style.marginLeft = '250px'
+        this._footer.style.marginLeft = DRAWER_WIDTH
       }
     }
   }
