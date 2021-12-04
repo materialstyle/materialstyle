@@ -124,8 +124,14 @@ class Tab extends BaseComponent {
     const navItems = this._element.querySelectorAll('.nav-item')
 
     for (const [, value] of Object.entries(navItems)) {
-      EventHandler.on(value, 'mousedown', (event) => {
+      EventHandler.on(value, 'mouseup', (event) => {
         this.setIndicatorPosition(value)
+      })
+
+      EventHandler.on(value, 'keyup', (event) => {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+          this.setIndicatorPosition(value)
+        }
       })
     }
 
