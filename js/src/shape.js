@@ -145,13 +145,7 @@ class Shape extends BaseComponent {
   setShapeOutline() {
     let shapeOutline
 
-    const cardOutline = this._element.querySelector('[class*="card-outline-"]')
     const btnOutline = this._element.querySelector('[class*="btn-outline-"]')
-
-    if (cardOutline) {
-      shapeOutline = cardOutline.className.match(/card-outline-[^\s]+/)
-      shapeOutline = shapeOutline[0].replace('card-outline-', '')
-    }
 
     if (btnOutline) {
       shapeOutline = btnOutline.className.match(/btn-outline-[^\s]+/)
