@@ -50,6 +50,16 @@ $list-group-active-border-color: $gray-300;
 // Modal
 $modal-content-border-radius: 0;
 
+// Navbar
+$navbar-toggler-focus-width: 2px !default;
+$navbar-toggler-border-radius: 0 !default;
+$navbar-dark-color: rgba($white, .55) !default;
+$navbar-light-color: rgba($black, .55) !default;
+$navbar-light-toggler-border-color: transparent !default;
+$navbar-dark-toggler-border-color: transparent !default;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-dark-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-light-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
+
 // Pagination
 $pagination-focus-box-shadow: 0 0 0 rgb(0 0 0 / 0);
 
