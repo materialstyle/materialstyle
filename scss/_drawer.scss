@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   z-index: 1031;
-  width: 250px;
+  width: $drawer-width;
   min-height: 100vh;
   overflow-y: auto;
   background: #fff;
@@ -14,8 +14,8 @@
     position: relative;
     top: auto;
     z-index: 1029;
-    flex: 0 0 250px;
-    min-width: 250px;
+    flex: 0 0 $drawer-width;
+    min-width: $drawer-width;
     height: auto;
     transform: none;
 
@@ -36,15 +36,17 @@
     .drawer-brand {
       display: inline-block;
       flex-grow: 1;
-      padding-top: .3125rem;
-      padding-bottom: .3125rem;
-      margin-right: 1rem;
-      font-size: 1rem;
       line-height: inherit;
+      padding-top: $navbar-brand-padding-y;
+      padding-bottom: $navbar-brand-padding-y;
+      margin-right: $navbar-brand-margin-end;
+      @include font-size($navbar-brand-font-size);
+      text-decoration: if($link-decoration == none, null, none);
+      white-space: nowrap;
 
       &:hover,
       &:focus {
-        text-decoration: none;
+        text-decoration: if($link-hover-decoration == underline, none, null);
       }
     }
   }
