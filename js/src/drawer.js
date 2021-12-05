@@ -26,20 +26,17 @@ const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_VISIBLE = 'drawer-visible'
 const CLASS_NAME_SWITCHED = '--switched'
-const CLASS_NAME_FIXED = 'drawer-fixed'
-const CLASS_SHADE = 'm-shade'
+const CLASS_BACKDROP = 'drawer-backdrop'
 const TOGGLE_AT_WIDTH = 1280
-const DRAWER_WIDTH = '250px'
 
 class Drawer extends BaseComponent {
   constructor(element) {
     super(element)
     this._element = element
-    this._shade = this.createShade()
+    this._backDrop = this.createBackDrop()
     this._drawerToggler = document.querySelector('.drawer-toggler')
     this._drawerHeader = element.querySelector('.drawer-header')
-    this._footer = document.querySelector('footer')
-    this._navBar = document.querySelector('.navbar')
+    this._drawerBody = element.querySelector('.drawer-body')
 
     this.initDrawer()
     this._setListeners()
@@ -59,50 +56,27 @@ class Drawer extends BaseComponent {
     })
   }
 
-  createShade() {
-    if (document.querySelector(`.${CLASS_SHADE}`) === null) {
-      const shade = document.createElement('div')
-      shade.className = CLASS_SHADE
-      shade.style.display = 'none'
-      document.querySelector('body').append(shade)
+  createBackDrop() {
+    if (document.querySelector(`.${CLASS_BACKDROP}`) === null) {
+      const backDrop = document.createElement('div')
+      backDrop.className = CLASS_BACKDROP
+      backDrop.style.display = 'none'
+      document.querySelector('body').append(backDrop)
 
-      return shade
+      return backDrop
     }
 
-    return document.querySelector(`.${CLASS_SHADE}`)
+    return document.querySelector(`.${CLASS_BACKDROP}`)
   }
 
   initDrawer() {
-    if (this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
-      const fixedSideNavBg = this._element.className.match(/bg-[^\s]+/)
-
-      const fixed = document.createElement('div')
-      fixed.className = `m-fixed ${fixedSideNavBg}`
-
-      const children = this._element.childNodes
-
-      for (const [, value] of Object.entries(children)) {
-        fixed.appendChild(value)
-      }
-
-      this._element.appendChild(this._drawerHeader)
-      this._element.appendChild(fixed)
-
-      this._fixed = fixed
-    }
-
-    let navbarHeight = '56px'
-    if (this._navBar !== null) {
-      navbarHeight = this._navBar.offsetHeight
-    }
-
+    let drawerHeaderHeight = '100vh'
     if (this._drawerHeader !== null) {
-      this._drawerHeader.style.height = `${navbarHeight}px`
+      drawerHeaderHeight = this._drawerHeader.offsetHeight
     }
 
-    if (this._element.className.includes(CLASS_NAME_FIXED) && this._fixed !== null) {
-      this._fixed.style.top = `${navbarHeight}px`
-      this._fixed.style.height = `calc(100vh - ${navbarHeight}px)`
+    if (this._drawerBody !== null) {
+      this._drawerBody.style.height = `calc(100vh - ${drawerHeaderHeight}px)`
     }
 
     if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
@@ -111,12 +85,12 @@ class Drawer extends BaseComponent {
   }
 
   show() {
-    this._shade.style.display = 'block'
+    this._backDrop.style.display = 'block'
     this._element.style.transform = 'none'
   }
 
   hide() {
-    this._shade.style.display = 'none'
+    this._backDrop.style.display = 'none'
 
     if (!this._element.className.includes(CLASS_NAME_VISIBLE)) {
       this._element.style.transform = 'translateX(-100%)'
@@ -131,14 +105,10 @@ class Drawer extends BaseComponent {
         this._element.style.transform = 'translateX(-100%)'
       }
 
-      this._shade.style.display = 'none'
+      this._backDrop.style.display = 'none'
 
       if (this._drawerToggler !== null) {
         this._drawerToggler.style.display = 'block'
-      }
-
-      if (this._footer !== null) {
-        this._footer.style.marginLeft = 0
       }
     } else {
       if (this._element.className.includes(CLASS_NAME_SWITCHED)) {
@@ -149,10 +119,6 @@ class Drawer extends BaseComponent {
 
       if (this._drawerToggler !== null) {
         this._drawerToggler.style.display = 'none'
-      }
-
-      if (this._footer !== null && this._element.className.includes(CLASS_NAME_VISIBLE) && this._element.className.includes(CLASS_NAME_FIXED)) {
-        this._footer.style.marginLeft = DRAWER_WIDTH
       }
     }
   }
@@ -172,71 +138,22 @@ class Drawer extends BaseComponent {
     const links = this._element.querySelectorAll('.nav-link')
 
     for (const [, value] of Object.entries(links)) {
-      let show = true
-
-      value.addEventListener('click', (event) => {
-        const subMenuContainer = event.target.closest('.nav-item').nextElementSibling
-        let subMenu = null
-
-        if (subMenuContainer !== null) {
-          subMenu = subMenuContainer.querySelector('.sub-menu')
-        }
-
-        if (subMenu !== null) {
-          const subMenuHeight = subMenu.offsetHeight
-
-          if (show) {
-            subMenu.style.marginTop = 0
-            show = false
-
-            if (event.target.className.includes('sub-menu-link')) {
-              event.target.querySelector('.bi').classList.remove('bi-chevron-down')
-              event.target.querySelector('.bi').classList.add('bi-chevron-up')
-            }
-          } else {
-            subMenu.style.marginTop = `-${subMenuHeight}px`
-            show = true
-
-            if (event.target.className.includes('sub-menu-link')) {
-              event.target.querySelector('.bi').classList.remove('bi-chevron-up')
-              event.target.querySelector('.bi').classList.add('bi-chevron-down')
-            }
-          }
-        }
-
-        if (!event.target.className.includes('sub-menu-link')) {
+      if (!value.dataset.bsToggle) {
+        value.addEventListener('click', (event) => {
           this.hide()
-        }
-      })
+        })
+      }
     }
 
     window.addEventListener('resize', () => {
       if (this._element.className.includes(CLASS_NAME_VISIBLE) || this._element.className.includes(CLASS_NAME_SWITCHED)) {
         this.toggle()
       }
-
-      let navbarHeight = '56px'
-      if (this._navBar !== null) {
-        navbarHeight = this._navBar.offsetHeight
-      }
-
-      if (this._drawerHeader !== null) {
-        this._drawerHeader.style.height = `${navbarHeight}px`
-      }
-
-      if (this._fixed !== null && this._fixed !== undefined) {
-        this._fixed.style.top = `${navbarHeight}px`
-        this._fixed.style.height = `calc(100vh - ${navbarHeight}px)`
-      }
     })
 
-    this._element.querySelector('.drawer-close-btn').addEventListener('click', () => {
+    this._element.querySelector('.btn-close').addEventListener('click', () => {
       this.hide()
     })
-
-    if (this._element.querySelector('.nav-link.active') !== null && this._element.querySelector('.nav-link.active').closest('.sub-menu-container') !== null) {
-      this._element.querySelector('.nav-link.active').closest('.sub-menu-container').previousElementSibling.querySelector('.sub-menu-link').click()
-    }
   }
 }
 

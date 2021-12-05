@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="d-flex align-items-center">
             <button class="drawer-toggler">
-                <span class="drawer-toggler-icon"></span>
+                <span class="drawer-toggler-icon me-2"></span>
             </button>
             <a class="navbar-brand d-flex align-items-center" href="javascript:">
                 <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:40px; height:40px;"> MATERIAL STYLE
@@ -23,25 +23,27 @@
     </div>
 </nav>
 
-<section class="m-root">
-    <aside class="drawer drawer-visible drawer-fixed bg-light shadow-4dp">
-        <div class="drawer-header bg-dark text-light">
+<section class="d-flex flex-nowrap">
+    <aside class="drawer drawer-visible bg-deep-purple-50">
+        <div class="drawer-header bg-deep-purple text-light">
             <a class="drawer-brand text-light" href="javascript:">
                 <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:40px; height:40px;">
             </a>
             <button type="button" class="btn-close btn-close-white drawer-close-btn" aria-label="Close"></button>
         </div>
-        <ul class="nav flex-column">
-            {{#each htmlWebpackPlugin.options.components}}
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="/{{this}}.html">
-                    {{transform this}}
-                </a>
-            </li>
-            {{/each}}
-        </ul>
+        <div class="drawer-body">
+            <ul class="nav flex-column">
+                {{#each htmlWebpackPlugin.options.components}}
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/{{this}}.html">
+                        {{transform this}}
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
     </aside>
-    <div class="m-container">
+    <div class="m-container p-2">
 
         {{#> content }}{{/content}}
 
