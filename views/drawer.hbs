@@ -18,105 +18,154 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-blue navbar-dark">
+<nav class="navbar navbar-expand-sm bg-pink-900 navbar-dark">
     <div class="container-fluid">
         <div class="d-flex align-items-center">
-            <button class="drawer-toggler">
+            <button class="drawer-toggler me-2">
                 <span class="drawer-toggler-icon"></span>
             </button>
             <a class="navbar-brand d-flex align-items-center" href="javascript:">
-                <i class="bi bi-star-fill me-2"></i> Brand
+                <i class="bi bi-star-fill me-2"></i>Brand
             </a>
         </div>
     </div>
 </nav>
 
-<section class="m-root">
-    <aside class="drawer bg-light shadow-4dp">
-        <div class="drawer-header bg-dark text-light">
+<div class="d-flex flex-nowrap">
+    <aside class="drawer drawer-light bg-pink-50">
+        <div class="drawer-header bg-pink-900 text-light">
             <a class="drawer-brand text-light" href="javascript:">
-                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill me-2"></i>Brand
             </a>
-            <button type="button" class="btn-close btn-close-white drawer-close-btn" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
         </div>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="javascript:">
-                    Link
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="javascript:">
-                    Link
-                </a>
-            </li>
+        <div class="drawer-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:">
+                        Link
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:">
+                        Link
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link text-dark sub-menu-link" href="javascript:">
-                    Menu A <i class="bi bi-chevron-down"></i>
-                </a>
-            </li>
-            <li class="nav-item sub-menu-container">
-                <ul class=" nav flex-column sub-menu" data-ic-class="sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="javascript:">
-                            Menu Item
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="javascript:">
-                            Menu Item
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark sub-menu-link" href="javascript:">
-                    Menu B <i class="bi bi-chevron-down"></i>
-                </a>
-            </li>
-            <li class="nav-item sub-menu-container">
-                <ul class=" nav flex-column sub-menu" data-ic-class="sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="javascript:">
-                            Menu Item
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="javascript:">
-                            Menu Item
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       data-bs-toggle="collapse"
+                       href="#menuA"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="menuA">
+                        Menu A
+                    </a>
+                    <div class="collapse" id="menuA">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link ps-4" href="javascript:">
+                                    Menu Item
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-4" href="javascript:">
+                                    Menu Item
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       data-bs-toggle="collapse"
+                       href="#menuB"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="menuB">
+                        Menu B
+                    </a>
+                    <div class="collapse" id="menuB">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link ps-4" href="javascript:">
+                                    Menu Item
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-4" href="javascript:">
+                                    Menu Item
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       data-bs-toggle="collapse"
+                       href="#menuC"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="menuC">
+                        Menu C
+                    </a>
+                    <div class="collapse" id="menuC">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link ps-4" href="javascript:">
+                                    Menu Item
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-4" href="javascript:">
+                                    Menu Item
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:">
+                        Link
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:">
+                        Link
+                    </a>
+                </li>
+            </ul>
+        </div>
     </aside>
     <div class="m-container">
-        <label class="sample bg-blue">
-            S<br>O<br>M<br>E<br><br>
-            I<br>N<br>T<br>E<br>R<br>E<br>S<br>T<br>I<br>N<br>G<br><br>
-            S<br>T<br>U<br>F<br>F
-        </label>
-    </div>
-</section>
 
-<footer class="bg-dark text-white">
-    Footer
-</footer>
+        <div class="p-3">
+            <label class="sample bg-pink-900">
+                S<br>O<br>M<br>E<br><br>
+                I<br>N<br>T<br>E<br>R<br>E<br>S<br>T<br>I<br>N<br>G<br><br>
+                S<br>T<br>U<br>F<br>F
+            </label>
+        </div>
+
+        <footer class="bg-dark text-white">
+            Footer
+        </footer>
+    </div>
+</div>
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
-  // Without jQuery
-  var drawers = [].slice.call(document.querySelectorAll('.drawer'))
-  var drawerList = drawers.map(function (drawer) {
-    return new materialstyle.Drawer(drawer)
-  })
+    // Without jQuery
+    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+    var drawerList = drawers.map(function (drawer) {
+        return new materialstyle.Drawer(drawer)
+    })
 
-  // With jQuery
-  // $(function(){
-  //   $('.drawer').drawer()
-  // })
+    // With jQuery
+    // $(function(){
+    //   $('.drawer').drawer()
+    // })
 </script>
 </body>
 </html>

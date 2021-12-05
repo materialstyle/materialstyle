@@ -64,20 +64,6 @@ $theme-colors-rgb: map-merge($theme-colors-rgb, $custom-theme-colors-rgb);
 // Utilities
 @import "node_modules/bootstrap/scss/utilities/api";
 
-html,
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.m-root {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
 .m-container {
   flex: 1 1 auto;
-  min-width: 0;
-  min-height: 0;
-  padding: 15px;
 }
