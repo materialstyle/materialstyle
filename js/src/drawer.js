@@ -24,7 +24,7 @@ const EVENT_KEY = `.${DATA_KEY}`
 
 const EVENT_CLICK = `click${EVENT_KEY}`
 
-const CLASS_NAME_VISIBLE = 'drawer-visible'
+const CLASS_NAME_AUTO_HIDE = 'auto-hide'
 const CLASS_NAME_SWITCHED = '--switched'
 const CLASS_BACKDROP = 'drawer-backdrop'
 const TOGGLE_AT_WIDTH = 1280
@@ -79,7 +79,7 @@ class Drawer extends BaseComponent {
       this._drawerBody.style.height = `calc(100vh - ${drawerHeaderHeight}px)`
     }
 
-    if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
+    if (this._element.className.includes(CLASS_NAME_AUTO_HIDE)) {
       this.toggle()
     }
   }
@@ -92,16 +92,16 @@ class Drawer extends BaseComponent {
   hide() {
     this._backDrop.style.display = 'none'
 
-    if (!this._element.className.includes(CLASS_NAME_VISIBLE)) {
+    if (!this._element.className.includes(CLASS_NAME_AUTO_HIDE)) {
       this._element.style.transform = 'translateX(-100%)'
     }
   }
 
   toggle() {
     if (window.innerWidth < TOGGLE_AT_WIDTH) {
-      if (this._element.className.includes(CLASS_NAME_VISIBLE)) {
+      if (this._element.className.includes(CLASS_NAME_AUTO_HIDE)) {
         this._element.classList.add(CLASS_NAME_SWITCHED)
-        this._element.classList.remove(CLASS_NAME_VISIBLE)
+        this._element.classList.remove(CLASS_NAME_AUTO_HIDE)
         this._element.style.transform = 'translateX(-100%)'
       }
 
@@ -113,7 +113,7 @@ class Drawer extends BaseComponent {
     } else {
       if (this._element.className.includes(CLASS_NAME_SWITCHED)) {
         this._element.classList.remove(CLASS_NAME_SWITCHED)
-        this._element.classList.add(CLASS_NAME_VISIBLE)
+        this._element.classList.add(CLASS_NAME_AUTO_HIDE)
         this._element.style.transform = 'none'
       }
 
@@ -146,7 +146,7 @@ class Drawer extends BaseComponent {
     }
 
     window.addEventListener('resize', () => {
-      if (this._element.className.includes(CLASS_NAME_VISIBLE) || this._element.className.includes(CLASS_NAME_SWITCHED)) {
+      if (this._element.className.includes(CLASS_NAME_AUTO_HIDE) || this._element.className.includes(CLASS_NAME_SWITCHED)) {
         this.toggle()
       }
     })
