@@ -7,11 +7,11 @@ import 'bootstrap/js/src/tab'
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from 'bootstrap/js/src/base-component'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -21,8 +21,8 @@ import BaseComponent from 'bootstrap/js/src/base-component'
 
 const NAME = 'tab'
 const VERSION = '3.0.0-alpha1'
-const DATA_KEY = 'ms.tab'
 
+const ENTER_KEY_CODE = 13
 const INDICATOR_HEIGHT = 2
 
 class Tab extends BaseComponent {
@@ -124,12 +124,12 @@ class Tab extends BaseComponent {
     const navItems = this._element.querySelectorAll('.nav-item')
 
     for (const [, value] of Object.entries(navItems)) {
-      EventHandler.on(value, 'mouseup', (event) => {
+      EventHandler.on(value, 'mouseup', () => {
         this.setIndicatorPosition(value)
       })
 
       EventHandler.on(value, 'keyup', (event) => {
-        if (event.key === 'Enter' || event.keyCode === 13) {
+        if (event.key === 'Enter' || event.keyCode === ENTER_KEY_CODE) {
           this.setIndicatorPosition(value)
         }
       })

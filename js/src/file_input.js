@@ -5,11 +5,11 @@
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from 'bootstrap/js/src/base-component'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -82,7 +82,7 @@ class FileInput extends BaseComponent {
   }
 
   _setListeners() {
-    EventHandler.on(this._button, EVENT_CLICK, event => this.handleButtonClick(event))
+    EventHandler.on(this._button, EVENT_CLICK, (event) => this.handleButtonClick(event))
     EventHandler.on(this._fileInput, EVENT_CHANGE, () => this.handleFileChange())
   }
 }

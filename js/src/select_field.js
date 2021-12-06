@@ -8,12 +8,11 @@
 import {
   getAccentColor, getPrimaryColor
 } from '../src/utility.js'
-
+import BaseComponent from 'bootstrap/js/src/base-component'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * --------------------------------------------------------------------------
@@ -26,7 +25,6 @@ const VERSION = '3.0.0-alpha1'
 const DATA_KEY = 'ms.selectfield'
 const EVENT_KEY = `.${DATA_KEY}`
 
-const EVENT_CHANGE = `change${EVENT_KEY}`
 const EVENT_FOCUS = `focus${EVENT_KEY}`
 const EVENT_FOCUSOUT = `focusout${EVENT_KEY}`
 const EVENT_CLICK = `click${EVENT_KEY}`
@@ -45,7 +43,6 @@ const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'
 
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dropdown"]'
 const SELECTOR_DROPDOWN_ITEM = '.dropdown-item:not(.select-all):not(.btn-close)'
 const SELECTOR_SELECT_ALL = '.select-all'
 
@@ -53,8 +50,6 @@ const FLOATING_LABEL_SCALE = 0.75
 const NOTCH_BETWEEN_PADDING_SUM = 10
 const NOTCH_BETWEEN_PADDING_LEFT = 5
 const NOTCH_BEFORE_WIDTH = 12
-const TO_STRING_BASE = 36
-const SUBSTR_INDEX = 2
 
 class SelectField extends BaseComponent {
   constructor(element) {
@@ -136,7 +131,7 @@ class SelectField extends BaseComponent {
 
   rebuild() {
     this._options = []
-    this._dropdownMenu.innerHTML = '';
+    this._dropdownMenu.innerHTML = ''
 
     this.createDropdownMenu()
     this.showSelectedItems()
@@ -147,7 +142,7 @@ class SelectField extends BaseComponent {
   createDropdownMenu() {
     let dropdownMenu = this._dropdownMenu
 
-    if (dropdownMenu == undefined) {
+    if (dropdownMenu === undefined) {
       dropdownMenu = document.createElement('div')
       dropdownMenu.className = 'dropdown-menu'
     }
@@ -454,7 +449,9 @@ class SelectField extends BaseComponent {
 
     this._select.querySelector(`option[value="${value}"]`).selected = checked
 
-    this._select.dispatchEvent(new Event('change', {bubbles: true}))
+    this._select.dispatchEvent(new Event('change', {
+      bubbles: true
+    }))
   }
 
   selectAll(checked) {
@@ -464,7 +461,9 @@ class SelectField extends BaseComponent {
       options[i].selected = checked
     }
 
-    this._select.dispatchEvent(new Event('change', {bubbles: true}))
+    this._select.dispatchEvent(new Event('change', {
+      bubbles: true
+    }))
   }
 
   setSelectValue(value, checked) {
@@ -546,13 +545,13 @@ class SelectField extends BaseComponent {
     })
 
     EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, (event) => {
-      let checked = event.target.dataset.checked === 'true' ? false : true;
+      const checked = event.target.dataset.checked !== 'true'
       event.target.dataset.checked = checked
 
       if (checked) {
-        event.target.classList.add('checked');
+        event.target.classList.add('checked')
       } else {
-        event.target.classList.remove('checked');
+        event.target.classList.remove('checked')
       }
 
       this.selectAll(checked)
@@ -567,7 +566,7 @@ class SelectField extends BaseComponent {
     for (const [, value] of Object.entries(dropdownItems)) {
       EventHandler.on(value, EVENT_CLICK, (event) => {
         if (this._multiSelectEnabled) {
-          this.selectOne(event.target.dataset.value, event.target.dataset.checked === 'true' ? false : true)
+          this.selectOne(event.target.dataset.value, event.target.dataset.checked !== 'true')
         } else {
           this.selectOne(event.target.dataset.value, true)
 
@@ -584,8 +583,8 @@ class SelectField extends BaseComponent {
 
     EventHandler.on(this._select, 'change', (event) => {
       if (this._multiSelectEnabled) {
-        const selectValue = [...event.target.options].filter(option => option.selected).map(option => option.value)
-        let allSelected = true;
+        const selectValue = [...event.target.options].filter((option) => option.selected).map((option) => option.value)
+        let allSelected = true
 
         for (const [, value] of Object.entries(this._options)) {
           if (selectValue.includes(value.value)) {
@@ -596,7 +595,7 @@ class SelectField extends BaseComponent {
           }
         }
 
-        let selectAllButton = this._dropdown.querySelector(SELECTOR_SELECT_ALL)
+        const selectAllButton = this._dropdown.querySelector(SELECTOR_SELECT_ALL)
         if (allSelected) {
           selectAllButton.classList.add('checked')
           selectAllButton.dataset.checked = true

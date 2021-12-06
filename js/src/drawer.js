@@ -5,11 +5,11 @@
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from 'bootstrap/js/src/base-component'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * --------------------------------------------------------------------------
@@ -139,7 +139,7 @@ class Drawer extends BaseComponent {
 
     for (const [, value] of Object.entries(links)) {
       if (!value.dataset.bsToggle) {
-        value.addEventListener('click', (event) => {
+        value.addEventListener('click', () => {
           this.hide()
         })
       }

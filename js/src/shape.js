@@ -5,11 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from 'bootstrap/js/src/base-component'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import BaseComponent from 'bootstrap/js/src/base-component'
 import {
   getColor
 } from '../src/utility.js'
@@ -22,7 +21,6 @@ import {
 
 const NAME = 'shape'
 const VERSION = '3.0.0-alpha1'
-const DATA_KEY = 'ms.shape'
 
 const DIVISOR = 2
 

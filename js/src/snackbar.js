@@ -5,11 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from 'bootstrap/js/src/base-component'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -19,7 +18,6 @@ import BaseComponent from 'bootstrap/js/src/base-component'
 
 const NAME = 'snackbar'
 const VERSION = '3.0.0-alpha1'
-const DATA_KEY = 'ms.snackbar'
 
 const SELECTOR_DISMISS = '[data-dismiss="snackbar"]'
 
@@ -95,14 +93,13 @@ class Snackbar extends BaseComponent {
 
   static jQueryInterface(config) {
     return this.each(function () {
-
       const _config = {
         ...Default,
         ...this.dataset,
         ...typeof config === 'object' && config ? config : {}
       }
 
-      let s = Snackbar.getOrCreateInstance(this, _config)
+      const s = Snackbar.getOrCreateInstance(this, _config)
 
       waitingQueue.pushToWaitingQueue(s._element)
     })

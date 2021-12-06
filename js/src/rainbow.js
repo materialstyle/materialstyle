@@ -5,10 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from 'bootstrap/js/src/base-component'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import BaseComponent from 'bootstrap/js/src/base-component'
 
 /**
  * ------------------------------------------------------------------------
@@ -18,7 +18,6 @@ import BaseComponent from 'bootstrap/js/src/base-component'
 
 const NAME = 'rainbow'
 const VERSION = '3.0.0-alpha1'
-const DATA_KEY = 'ms.rainbow'
 
 class Rainbow extends BaseComponent {
   constructor(element) {
