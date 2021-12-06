@@ -9,16 +9,13 @@ module.exports = merge(common, {
   optimization: {
     minimizer: [
       new TerserPlugin({
-        test: /\.min\.js/g,
-        parallel: true,
-        chunkFilter: chunk => {
-          return true;
-        }
+        test: /\.min\.js(\?.*)?$/i,
+        parallel: true
       }),
       new CssMinimizerPlugin({
-        assetNameRegExp: /\.min\.css$/g,
+        test: /\.min\.css$/i,
         parallel: true,
-        cssProcessorPluginOptions: {
+        minimizerOptions: {
           preset: ['default']
         }
       })
@@ -29,12 +26,12 @@ module.exports = merge(common, {
       raw: true,
       banner:
 `/*!
-* Material Style v2.0.2 (https://materialstyle.github.io/)
-* Copyright 2018-2020 Material Style
+* Material Style v3.0.0-alpha1 (https://materialstyle.github.io/)
+* Copyright 2018-2021 Material Style
 * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
 *
-* Bootstrap v4.5.0 (https://getbootstrap.com/)
-* Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+* Bootstrap v5.1.3 (https://getbootstrap.com/)
+* Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 */`
     })
