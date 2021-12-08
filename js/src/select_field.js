@@ -170,6 +170,7 @@ class SelectField extends BaseComponent {
 
     if (this._multiSelectEnabled) {
       const closeButton = document.createElement('button')
+      closeButton.type = 'button'
       closeButton.className = 'btn-close dropdown-item w-100'
       closeButton.ariaLabel = 'Close'
 
@@ -185,6 +186,7 @@ class SelectField extends BaseComponent {
     dropdown.className = 'dropdown'
 
     const selectedItem = document.createElement('button')
+    selectedItem.type = 'button'
     selectedItem.className = 'btn dropdown-toggle text-start shadow-none'
     selectedItem.dataset.bsToggle = 'dropdown'
     selectedItem.dataset.bsAutoClose = 'outside'
@@ -212,6 +214,7 @@ class SelectField extends BaseComponent {
 
   createDropdownItems(text, value, checked, isSelectAllButton = false) {
     const dropdownItem = document.createElement('button')
+    dropdownItem.type = 'button'
     dropdownItem.className = 'dropdown-item d-flex align-items-center'
     dropdownItem.dataset.value = value
     dropdownItem.dataset.checked = false
