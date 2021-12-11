@@ -1,191 +1,162 @@
 @import "node_modules/bootstrap/scss/forms";
 
-.m-text-field,
-.m-text-field-outline {
-  position: relative;
-  margin-bottom: 0;
-  //visibility: hidden;
+.form-floating {
+  > .form-control {
+    background-color: #fafafa;
+    border: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
 
-  .prepend,
-  .append {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    padding: 7px;
-  }
+    &.--outline {
+      background-color: transparent;
 
-  .prepend {
-    left: 0;
-  }
+      ~ .m-notch > .m-notch-between > label {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 1rem 0;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transform-origin: 0 0;
+        transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+      }
 
-  .append {
-    right: 0;
+      &:focus, &:not(:placeholder-shown) {
+        padding: 1.125rem 0.75rem;
+
+        ~ .m-notch > .m-notch-between > label {
+          left: 0;
+          transform: scale(.85) translateY(-50%);
+          margin-right: -15px;
+        }
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus, &.active {
+        background-color: transparent;
+
+        ~ .m-notch {
+          > .m-notch-before,
+          > .m-notch-between,
+          > .m-notch-after {
+            border-width: 2px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    &:focus, &.active {
+      background-color: #eee;
+
+      ~ .m-line-ripple {
+        background-size: 100% 2px, 100% 1px;
+      }
+    }
   }
 }
 
-.m-text-field {
-  .form-control {
-    padding-top: 1.675rem;
-    padding-bottom: .575rem;
-  }
-
-  .form-control-sm {
-    padding-top: 1.55rem;
-    padding-bottom: .45rem;
-  }
-
-  .form-control-lg {
-    padding-top: 1.8rem;
-    padding-bottom: .7rem;
-  }
-
-  .form-control,
-  .form-control-sm,
-  .form-control-lg {
-    background-color: #fafafa;
-    border: 0;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-  }
-
-  .static-label,
-  .floating-label,
-  .floating-label-active {
-    position: absolute;
-  }
-
-  .static-label,
-  .floating-label-active {
-    transform: translate(.75rem, .5rem) scale(.75);
-  }
-
-  .floating-label {
-    transform: translate(.75rem, 1.2rem);
-  }
-
+.input-group {
   .m-line-ripple {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient($primary, $primary) center top/0 2px no-repeat border-box, linear-gradient($dark, $dark) center top/ 100% 1px no-repeat border-box transparent;
-    transition: .3s cubic-bezier(.4, 0, .2, 1);
+    margin-left: 0 !important;
   }
 
-  &:hover {
-    .form-control,
-    .form-control-sm,
-    .form-control-lg {
-      background-color: #f5f5f5;
+  > .form-floating {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    > .form-control {
+      border-radius: 0;
     }
   }
 
-  &.active {
-    .form-control,
-    .form-control-sm,
-    .form-control-lg {
-      background-color: #eee;
-    }
+  .input-group-text {
+    border: 0;
+  }
+
+  &:focus-within {
     .m-line-ripple {
       background-size: 100% 2px, 100% 1px;
     }
   }
-}
 
-.m-text-field-outline {
-  .form-control {
-    padding-top: 1.125rem;
-    padding-bottom: 1.125rem;
-  }
+  > .form-floating {
+    > .m-notch {
+      width: auto;
+      max-width: unset;
+      margin-left: -39.2px; /* left icon width calculate this */
+      margin-right: -39.2px; /* right icon width calculate this */
 
-  .form-control-sm {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .form-control-lg {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .form-control,
-  .form-control-sm,
-  .form-control-lg {
-    background: transparent;
-    border: 0;
-    border-radius: 4px;
-  }
-
-  .form-control:focus,
-  .form-control-sm:focus,
-  .form-control-lg:focus {
-    background: transparent;
-  }
-
-  .static-label,
-  .floating-label-active {
-    transform: translate(0, -.5rem) scale(.75);
-  }
-
-  .floating-label {
-    transform: translate(0, 1.2rem);
-  }
-}
-
-.static-label,
-.floating-label,
-.floating-label-active {
-  position: relative;
-  margin: 0;
-  text-overflow: clip;
-  white-space: nowrap;
-  transition: transform 150ms cubic-bezier(.4, 0, .2, 1), color 150ms cubic-bezier(.4, 0, .2, 1);
-  transform-origin: left top;
-}
-
-.static-label,
-.floating-label-active {
-  color: $dark;
-}
-
-.floating-label {
-  color: $dark;
-  cursor: text;
-}
-
-.has-error {
-  .help-block,
-  .floating-label,
-  .floating-label-active,
-  .static-label {
-    color: $danger !important; /* stylelint-disable-line declaration-no-important */
-  }
-  .m-text-field {
-    .form-control,
-    .form-control-sm,
-    .form-control-lg {
-      + .m-line-ripple {
-        background-image: linear-gradient($danger, $danger), linear-gradient($danger, $danger) !important; /* stylelint-disable-line declaration-no-important */
+      > .m-notch-between {
+        > label {
+          transform: translateX(27px); /* calculate this */
+        }
       }
     }
   }
-  .m-text-field-outline {
-    .m-notch-before,
-    .m-notch-between,
-    .m-notch-after {
-      border-color: $danger !important; /* stylelint-disable-line declaration-no-important */
+
+  &.--with-outline {
+    .input-group-text {
+      background-color: transparent;
+    }
+  }
+
+  &:not(.--with-outline) {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+
+    .input-group-text {
+      border-radius: 0;
+
+      &.prepend {
+        border-top-left-radius: 0.25rem;
+      }
+
+      &.append {
+        border-top-right-radius: 0.25rem !important;
+      }
+    }
+
+    &:hover {
+      .input-group-text {
+        background-color: #f5f5f5;
+      }
+    }
+
+    &:focus-within {
+      .input-group-text {
+        background-color: #eee;
+      }
     }
   }
 }
 
-.help-block {
-  display: block;
-  font-size: .8rem;
+.form-floating > .form-control.--outline:focus ~ .m-notch > .m-notch-between,
+.form-floating > .form-control.--outline:not(:placeholder-shown) ~ .m-notch > .m-notch-between {
+  border-top: 0;
+}
+
+.m-line-ripple {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(#2196f3, #2196f3) top/0 2px no-repeat border-box,
+  linear-gradient(#212121, #212121) top/100% 1px no-repeat border-box transparent;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .m-notch {
   position: absolute;
+  top: 0;
   right: 0;
   left: 0;
   box-sizing: border-box;
@@ -201,12 +172,12 @@
   .m-notch-between,
   .m-notch-after {
     pointer-events: none;
-    border: 1px solid $dark;
-    border-radius: 4px;
+    border: 1px solid #212121;
+    border-radius: .25rem;
   }
 
   .m-notch-before {
-    width: .75rem;
+    width: 0.75rem;
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -215,11 +186,12 @@
   .m-notch-between {
     box-sizing: border-box;
     flex: 0 0 auto;
-    width: auto;
     padding: 0 5px;
+    width: auto;
     border-right: 0;
     border-left: 0;
     border-radius: 0;
+    position: relative;
   }
 
   .m-notch-after {
@@ -227,13 +199,5 @@
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-  }
-
-  &.notch-active {
-    .m-notch-before,
-    .m-notch-between,
-    .m-notch-after {
-      border-width: 2px;
-    }
   }
 }
