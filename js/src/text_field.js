@@ -137,10 +137,19 @@ class TextField extends BaseComponent {
     document.fonts.ready.then(() => {
       if (this._inputGroup) {
         if (this._prepend) {
+          this._prepend.style.height = `${this._textField.offsetHeight}px`
           this._element.style.setProperty('--prepend-width', `-${this._prepend.offsetWidth}px`)
           this._element.style.setProperty('--label-translate-x', `calc(${this._prepend.offsetWidth}px - ${NOTCH_BEFORE_WIDTH})`)
+
+          if (this._element.querySelector('.valid-feedback')) {
+            this._element.querySelector('.valid-feedback').style.transform = `translateX(-${this._prepend.offsetWidth}px)`;
+          }
+          if (this._element.querySelector('.invalid-feedback')) {
+            this._element.querySelector('.invalid-feedback').style.transform = `translateX(-${this._prepend.offsetWidth}px)`;
+          }
         }
         if (this._append) {
+          this._append.style.height = `${this._textField.offsetHeight}px`
           this._element.style.setProperty('--append-width', `-${this._append.offsetWidth}px`)
         }
       }
