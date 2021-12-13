@@ -32,7 +32,7 @@ const getAccentColor = (element) => {
 
 const getBaseColor = (element) => {
   let base = element.className.match(/base-[^\s]+/)
-  let baseColor = '#212121'
+  let baseColor = '#757575'
 
   if (base) {
     base = base[0].replace('base-', '')

@@ -23,7 +23,8 @@ const NAME = 'textfield'
 const VERSION = '3.0.0-alpha1'
 
 const CLASS_NAME_TEXTFIELD = 'form-control'
-const CLASS_NAME_TEXTFIELD_OUTLINE = '--outline'
+const CLASS_NAME_TEXTFIELD_OUTLINED = 'form-floating--outlined'
+const CLASS_NAME_INPUTGROUP_OUTLINED = 'input-group--outlined'
 
 const NOTCH_BEFORE_WIDTH = '.75rem'
 const LABEL_SCALE = 0.85
@@ -35,20 +36,6 @@ class TextField extends BaseComponent {
     this._textField = element.querySelector(`.${CLASS_NAME_TEXTFIELD}`)
 
     if (this._textField) {
-      this._isOutlineVariant = this._textField.className.includes(CLASS_NAME_TEXTFIELD_OUTLINE)
-
-      this._element.style.setProperty('--text-field-base-color', getBaseColor(element))
-      this._element.style.setProperty('--text-field-primary-color', getPrimaryColor(element))
-
-      this._label = element.querySelector('label')
-
-      this._inputGroup = element.closest('.input-group')
-
-      if (this._inputGroup) {
-        this._prepend = this._inputGroup.querySelector('.prepend')
-        this._append = this._inputGroup.querySelector('.append')
-      }
-
       this.initTextFields()
       this.addFontsReadyEvent()
     }
@@ -77,7 +64,30 @@ class TextField extends BaseComponent {
   }
 
   initTextFields() {
-    if (this._isOutlineVariant) {
+    this._element.style.setProperty('--text-field-base-color', getBaseColor(this._element))
+    this._element.style.setProperty('--text-field-primary-color', getPrimaryColor(this._element))
+
+    this._label = this._element.querySelector('label')
+    this._inputGroup = this._element.closest('.input-group')
+
+    if (this._inputGroup) {
+      this._prepend = this._inputGroup.querySelector('.prepend')
+      this._append = this._inputGroup.querySelector('.append')
+
+      if (this._prepend) {
+        this._textField.style.paddingLeft = 0;
+        this._label.style.paddingLeft = 0;
+      }
+      if (this._append) {
+        this._textField.style.paddingRight = 0;
+        this._label.style.paddingRight = 0;
+      }
+    }
+
+    if (this._element.className.includes(CLASS_NAME_TEXTFIELD_OUTLINED)) {
+      if (this._inputGroup) {
+        this._inputGroup.classList.add(CLASS_NAME_INPUTGROUP_OUTLINED)
+      }
       this.addNotch()
     } else {
       this.addRipple()
@@ -99,6 +109,7 @@ class TextField extends BaseComponent {
   addNotch() {
     const notch = document.createElement('div')
     notch.className = 'm-notch'
+    notch.style.height = `${this._textField.offsetHeight}px`
 
     const notchBefore = document.createElement('div')
     notchBefore.className = 'm-notch-before'
@@ -109,10 +120,6 @@ class TextField extends BaseComponent {
     const notchAfter = document.createElement('div')
     notchAfter.className = 'm-notch-after'
 
-    if (this._label !== null) {
-      notchBetween.appendChild(this._label)
-    }
-
     notch.appendChild(notchBefore)
     notch.appendChild(notchBetween)
     notch.appendChild(notchAfter)
@@ -121,7 +128,8 @@ class TextField extends BaseComponent {
     this._notch = notch
 
     if (this._label) {
-      this._element.style.setProperty('--label-transformed-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      notchBetween.appendChild(this._label)
+      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
     }
   }
 

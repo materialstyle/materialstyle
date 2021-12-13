@@ -13,7 +13,27 @@
       border: 0;
     }
 
-    &.--outline {
+    &:hover {
+      background-color: $form-control-hover-bg;
+    }
+
+    &:focus, &.active {
+      background-color: $form-control-active-bg;
+
+      ~ .m-line-ripple {
+        background-size: 100% 2px, 100% 1px;
+      }
+    }
+
+    &:focus {
+      ~ label {
+        color: $text-field-primary-color;
+      }
+    }
+  }
+
+  &--outlined {
+    > .form-control {
       background-color: transparent;
 
       ~ .m-notch > .m-notch-between > label {
@@ -31,10 +51,14 @@
       &:focus, &:not(:placeholder-shown) {
         padding: 1.125rem 0.75rem;
 
-        ~ .m-notch > .m-notch-between > label {
-          left: 0;
-          transform: scale(.85) translateY(-1.7rem);
-          margin-right: var(--label-transformed-margin-right, 0);
+        ~ .m-notch > .m-notch-between {
+          border-top: 0;
+
+          > label {
+            left: 0;
+            transform: scale(.85) translateY(-1.75rem);
+            margin-right: var(--label-floating-margin-right, 0);
+          }
         }
       }
 
@@ -61,49 +85,37 @@
         }
       }
     }
-
-    &:hover {
-      background-color: $form-control-hover-bg;
-    }
-
-    &:focus, &.active {
-      background-color: $form-control-active-bg;
-
-      ~ .m-line-ripple {
-        background-size: 100% 2px, 100% 1px;
-      }
-    }
-
-    &:focus {
-      ~ label {
-        color: $text-field-primary-color;
-      }
-    }
   }
 }
 
 .input-group {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+
+  .input-group-text {
+    border: 0;
+    border-radius: 0;
+    background-color: $form-control-bg;
+
+    &.prepend {
+      border-top-left-radius: 0.25rem;
+    }
+
+    &.append {
+      border-top-right-radius: 0.25rem;
+    }
+  }
+
   > .form-floating {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     min-width: 0;
+
     > .form-control {
       border-radius: 0;
     }
-  }
 
-  .input-group-text {
-    border: 0;
-  }
-
-  &:focus-within {
-    .m-line-ripple {
-      background-size: 100% 2px, 100% 1px;
-    }
-  }
-
-  > .form-floating {
     > .m-line-ripple {
       width: auto;
       max-width: unset;
@@ -117,55 +129,42 @@
       margin-left: var(--prepend-width, 0);
       margin-right: var(--append-width, 0);
 
-      > .m-notch-between {
-        > label {
-          transform: translateX(var(--label-translate-x, 0));
-        }
+      > .m-notch-between > label {
+        transform: translateX(var(--label-translate-x, 0));
       }
     }
   }
 
-  &.--with-outline {
+  &:hover {
+    .input-group-text {
+      background-color: $form-control-hover-bg;
+    }
+  }
+
+  &:focus-within {
+    .input-group-text {
+      background-color: $form-control-active-bg;
+    }
+
+    .m-line-ripple {
+      background-size: 100% 2px, 100% 1px;
+    }
+  }
+
+  &--outlined {
     .input-group-text {
       background-color: transparent;
     }
-  }
 
-  &:not(.--with-outline) {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-
-    .input-group-text {
-      border-radius: 0;
-
-      &.prepend {
-        border-top-left-radius: 0.25rem;
-      }
-
-      &.append {
-        border-top-right-radius: 0.25rem !important;
-      }
-    }
-
-    &:hover {
+    &:hover, &:focus-within {
       .input-group-text {
-        background-color: $form-control-hover-bg;
-      }
-    }
-
-    &:focus-within {
-      .input-group-text {
-        background-color: $form-control-active-bg;
+        background-color: transparent;
       }
     }
   }
 }
 
-.form-floating > .form-control.--outline:focus ~ .m-notch > .m-notch-between,
-.form-floating > .form-control.--outline:not(:placeholder-shown) ~ .m-notch > .m-notch-between {
-  border-top: 0;
-}
-
+// Line ripple and Notch
 .m-line-ripple {
   position: relative;
   width: 100%;
@@ -223,59 +222,66 @@
   }
 }
 
+// Validation
 .was-validated {
-  .form-control {
-    &:valid, &.is-valid {
-      &:focus {
-        box-shadow: none;
-      }
+  .form-floating {
+    .form-control {
+      &:valid, &.is-valid {
+        &:focus {
+          box-shadow: none;
+        }
 
-      ~ label {
-        color: $success;
-      }
-
-      ~ .m-line-ripple {
-        background-image: linear-gradient($success, $success), linear-gradient($success, $success);
-      }
-
-      &.--outline {
-        ~ .m-notch > .m-notch-between > label {
+        ~ label {
           color: $success;
         }
 
-        ~ .m-notch {
-          > .m-notch-before,
-          > .m-notch-between,
-          > .m-notch-after {
-            border-color: $success;
-          }
+        ~ .m-line-ripple {
+          background-image: linear-gradient($success, $success), linear-gradient($success, $success);
+        }
+      }
+
+      &:invalid, &.is-invalid {
+        &:focus {
+          box-shadow: none;
+        }
+
+        ~ label {
+          color: $danger;
+        }
+
+        ~ .m-line-ripple {
+          background-image: linear-gradient($danger, $danger), linear-gradient($danger, $danger);
         }
       }
     }
 
-    &:invalid, &.is-invalid {
-      &:focus {
-        box-shadow: none;
-      }
+    &--outlined {
+      .form-control {
+        &:valid, &.is-valid {
+          ~ .m-notch > .m-notch-between > label {
+            color: $success;
+          }
 
-      ~ label {
-        color: $danger;
-      }
-
-      ~ .m-line-ripple {
-        background-image: linear-gradient($danger, $danger), linear-gradient($danger, $danger);
-      }
-
-      &.--outline {
-        ~ .m-notch > .m-notch-between > label {
-          color: $danger;
+          ~ .m-notch {
+            > .m-notch-before,
+            > .m-notch-between,
+            > .m-notch-after {
+              border-color: $success;
+            }
+          }
         }
 
-        ~ .m-notch {
-          > .m-notch-before,
-          > .m-notch-between,
-          > .m-notch-after {
-            border-color: $danger;
+        &:invalid, &.is-invalid {
+          ~ .m-notch > .m-notch-between > label {
+            color: $danger;
+          }
+
+          ~ .m-notch {
+            > .m-notch-before,
+            > .m-notch-between,
+            > .m-notch-after {
+              border-color: $danger;
+            }
           }
         }
       }
