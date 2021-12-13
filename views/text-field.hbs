@@ -4,177 +4,195 @@
         <h1 class="m-3">Text Fields</h1>
 
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h3 class="m-3">Filled</h3>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3 class="m-3">Filled</h3>
 
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <label for="name" class="static-label">Static Label</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        <div class="m-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="firstname"
+                                       placeholder="firstname" autocomplete="off" required>
+                                <label for="firstname">Firstname</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Doesn't look good!
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <label for="age" class="floating-label">Floating Label</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
+                        <h5 class="m-3">Colors</h5>
+
+                        <div class="m-3">
+                            <div class="form-floating base-green primary-deep-purple">
+                                <input type="text" class="form-control" id="lastname"
+                                       placeholder="lastname" autocomplete="off" required>
+                                <label for="lastname">Lastname</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Doesn't look good!
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <label for="age" class="floating-label">form-control-sm</label>
-                            <input type="text" value="" class="form-control form-control-sm" autocomplete="off"/>
-                        </div>
-                    </div>
+                        <h5 class="m-3">Input Group</h5>
 
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <label for="age" class="floating-label">form-control-lg</label>
-                            <input type="text" value="" class="form-control form-control-lg" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field primary-blue accent-pink">
-                            <label for="phone" class="floating-label">Phone</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <label for="comment" class="floating-label">Comments</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <div class="prepend">
+                        <div class="m-3">
+                            <div class="input-group">
+                            <span class="input-group-text prepend">
                                 <i class="bi bi-person-circle"></i>
+                            </span>
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email"
+                                           placeholder="Email" autocomplete="off" required>
+                                    <label for="email">Email</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Doesn't look good!
+                                    </div>
+                                </div>
                             </div>
-                            <label for="username" class="static-label">Username</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
                         </div>
-                    </div>
 
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <div class="prepend">
+                        <div class="m-3">
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" id="password"
+                                           placeholder="Password" autocomplete="off" required>
+                                    <label for="password">Password</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Doesn't look good!
+                                    </div>
+                                </div>
+                                <span class="input-group-text append">
                                 <i class="bi bi-keyboard-fill"></i>
+                            </span>
                             </div>
-                            <label for="password" class="floating-label">Password</label>
-                            <input type="password" value="" class="form-control" autocomplete="off"/>
                         </div>
+
+                        <h5 class="m-3">Text Area</h5>
+
+                        <div class="m-3">
+                            <div class="form-floating">
+                            <textarea class="form-control" placeholder="address"
+                                      id="address" style="height: 100px" required></textarea>
+                                <label for="address">Address</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Doesn't look good!
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <div class="append">
-                                <i class="bi bi-key-fill"></i>
+                    <div class="col-sm-6">
+                        <h3 class="m-3">Outlined</h3>
+
+                        <div class="m-3">
+                            <div class="form-floating form-floating--outlined">
+                                <input type="text" class="form-control" id="firstname-outline"
+                                       placeholder="firstname" autocomplete="off" required>
+                                <label for="firstname-outline">Firstname</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Doesn't look good!
+                                </div>
                             </div>
-                            <label for="pin" class="floating-label">Pin</label>
-                            <input type="password" value="" class="form-control" autocomplete="off"/>
                         </div>
+
+                        <h5 class="m-3">Colors</h5>
+
+                        <div class="m-3">
+                            <div class="form-floating form-floating--outlined base-green primary-deep-purple">
+                                <input type="text" class="form-control" id="lastname-outline"
+                                       placeholder="lastname" autocomplete="off" required>
+                                <label for="lastname-outline">Lastname</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Doesn't look good!
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="m-3">Input Group</h5>
+
+                        <div class="m-3">
+                            <div class="input-group">
+                            <span class="input-group-text prepend">
+                                <i class="bi bi-person-circle"></i>
+                            </span>
+                                <div class="form-floating form-floating--outlined">
+                                    <input type="email" class="form-control" id="email-outline"
+                                           placeholder="Email" autocomplete="off" required>
+                                    <label for="email-outline">Email</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Doesn't look good!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="input-group">
+                                <div class="form-floating form-floating--outlined">
+                                    <input type="password" class="form-control" id="password-outline"
+                                           placeholder="Password" autocomplete="off" required>
+                                    <label for="password-outline">Password</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Doesn't look good!
+                                    </div>
+                                </div>
+                                <span class="input-group-text append">
+                                <i class="bi bi-keyboard-fill"></i>
+                            </span>
+                            </div>
+                        </div>
+
+                        <h5 class="m-3">Text Area</h5>
+
+                        <div class="m-3">
+                            <div class="form-floating form-floating--outlined">
+                            <textarea class="form-control" id="address-outline"
+                                      placeholder="address" style="height: 100px" required></textarea>
+                                <label for="address-outline">Comments</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Doesn't look good!
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="m-3">
-                        <div class="m-text-field">
-                            <div class="prepend">
-                                Prepend <i class="bi bi-person-circle ms-1"></i>
-                            </div>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
+                    <div class="offset-sm-4 col-sm-4 mb-3">
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
                     </div>
                 </div>
-
-                <div class="col-sm-6">
-                    <h3 class="m-3">Outlined</h3>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <label for="name" class="static-label">Static Label</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <label for="age" class="floating-label">Floating Label</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <label for="age" class="floating-label">form-control-sm</label>
-                            <input type="text" value="" class="form-control form-control-sm" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <label for="age" class="floating-label">form-control-lg</label>
-                            <input type="text" value="" class="form-control form-control-lg" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline primary-blue accent-pink">
-                            <label for="phone" class="floating-label">Phone</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <label for="comment" class="floating-label">Comments</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <div class="prepend">
-                                <i class="bi bi-person-circle"></i>
-                            </div>
-                            <label for="username" class="static-label">Username</label>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <div class="prepend">
-                                <i class="bi bi-keyboard-fill"></i>
-                            </div>
-                            <label for="password" class="floating-label">Password</label>
-                            <input type="password" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <div class="append">
-                                <i class="bi bi-key-fill"></i>
-                            </div>
-                            <label for="pin" class="floating-label">Pin</label>
-                            <input type="password" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-
-                    <div class="m-3">
-                        <div class="m-text-field-outline">
-                            <div class="prepend">
-                                Prepend <i class="bi bi-person-circle ms-1"></i>
-                            </div>
-                            <input type="text" value="" class="form-control" autocomplete="off"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     {{/inline}}
 
@@ -184,16 +202,37 @@
 
     {{#*inline "scripts"}}
         <script>
-            // Without jQuery
-            var textFieldList = [].slice.call(document.querySelectorAll('.m-text-field, .m-text-field-outline'))
-            var textFields = textFieldList.map(function (textField) {
-                return new materialstyle.TextField(textField)
-            })
-
             // With jQuery
             // $(function(){
-            //    $('.m-text-field, .m-text-field-outline').textfield();
+            //    $('.form-floating').textfield();
             // });
+
+            (function () {
+                'use strict'
+
+                // Without jQuery
+                var textFieldList = [].slice.call(document.querySelectorAll('.form-floating'))
+                var textFields = textFieldList.map(function (textField) {
+                    return new materialstyle.TextField(textField)
+                })
+
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                }
+
+                                form.classList.add('was-validated')
+                            }, false)
+                        })
+            })()
         </script>
     {{/inline}}
 
