@@ -30,9 +30,21 @@ const getAccentColor = (element) => {
   return accentColor
 }
 
+const getBaseColor = (element) => {
+  let base = element.className.match(/base-[^\s]+/)
+  let baseColor = '#212121'
+
+  if (base) {
+    base = base[0].replace('base-', '')
+    baseColor = getColor(base)
+  }
+
+  return baseColor
+}
+
 const getPrimaryColor = (element) => {
   let primary = element.className.match(/primary-[^\s]+/)
-  let primaryColor = '#212121'
+  let primaryColor = '#2196F3'
 
   if (primary) {
     primary = primary[0].replace('primary-', '')
@@ -45,5 +57,6 @@ const getPrimaryColor = (element) => {
 export {
   getColor,
   getAccentColor,
+  getBaseColor,
   getPrimaryColor
 }

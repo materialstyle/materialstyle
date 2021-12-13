@@ -9,6 +9,7 @@
     box-shadow: none;
 
     ~ label {
+      color: $text-field-base-color;
       border: 0;
     }
 
@@ -16,6 +17,7 @@
       background-color: transparent;
 
       ~ .m-notch > .m-notch-between > label {
+        color: $text-field-base-color;
         position: relative;
         top: 0;
         left: 0;
@@ -31,14 +33,14 @@
 
         ~ .m-notch > .m-notch-between > label {
           left: 0;
-          transform: scale(.85) translateY(-50%);
-          margin-right: -15px;
+          transform: scale(.85) translateY(-1.7rem);
+          margin-right: var(--label-transformed-margin-right, 0);
         }
       }
 
       &:focus {
         ~ .m-notch > .m-notch-between > label {
-          color: $primary;
+          color: $text-field-primary-color;
         }
       }
 
@@ -54,7 +56,7 @@
           > .m-notch-between,
           > .m-notch-after {
             border-width: 2px;
-            border-color: $primary;
+            border-color: $text-field-primary-color;
           }
         }
       }
@@ -74,7 +76,7 @@
 
     &:focus {
       ~ label {
-        color: $primary;
+        color: $text-field-primary-color;
       }
     }
   }
@@ -105,19 +107,19 @@
     > .m-line-ripple {
       width: auto;
       max-width: unset;
-      margin-left: -39.2px; /* left icon width calculate this */
-      margin-right: -39.2px; /* right icon width calculate this */
+      margin-left: var(--prepend-width, 0);
+      margin-right: var(--append-width, 0);
     }
 
     > .m-notch {
       width: auto;
       max-width: unset;
-      margin-left: -39.2px; /* left icon width calculate this */
-      margin-right: -39.2px; /* right icon width calculate this */
+      margin-left: var(--prepend-width, 0);
+      margin-right: var(--append-width, 0);
 
       > .m-notch-between {
         > label {
-          transform: translateX(27px); /* calculate this */
+          transform: translateX(var(--label-translate-x, 0));
         }
       }
     }
@@ -168,8 +170,8 @@
   position: relative;
   width: 100%;
   height: 2px;
-  background: linear-gradient($primary, $primary) top/0 2px no-repeat border-box,
-  linear-gradient($dark, $dark) top/100% 1px no-repeat border-box transparent;
+  background: linear-gradient($text-field-primary-color, $text-field-primary-color) top/0 2px no-repeat border-box,
+  linear-gradient($text-field-base-color, $text-field-base-color) top/100% 1px no-repeat border-box transparent;
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -191,7 +193,7 @@
   .m-notch-between,
   .m-notch-after {
     pointer-events: none;
-    border: 1px solid $dark;
+    border: 1px solid $text-field-base-color;
     border-radius: .25rem;
   }
 
