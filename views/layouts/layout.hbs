@@ -77,7 +77,6 @@
     }
 
     window.addEventListener("beforeunload", () => {
-      console.log(sidebar.scrollTop);
         localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
     });
 </script>
