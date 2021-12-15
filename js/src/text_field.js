@@ -82,6 +82,8 @@ class TextField extends BaseComponent {
         this._textField.style.paddingRight = 0;
         this._label.style.paddingRight = 0;
       }
+
+      this._inputGroup.addEventListener('click', () => this._textField.focus())
     }
 
     if (this._element.className.includes(CLASS_NAME_TEXTFIELD_OUTLINED)) {
