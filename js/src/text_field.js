@@ -75,12 +75,19 @@ class TextField extends BaseComponent {
       this._append = this._inputGroup.querySelector('.append')
 
       if (this._prepend) {
-        this._textField.style.paddingLeft = 0;
-        this._label.style.paddingLeft = 0;
+        this._textField.style.paddingLeft = 0
+        this._label.style.paddingLeft = 0
+        this._textField.style.borderTopLeftRadius = 0
+      } else {
+        this._textField.style.borderTopLeftRadius = '.25rem'
       }
+
       if (this._append) {
-        this._textField.style.paddingRight = 0;
-        this._label.style.paddingRight = 0;
+        this._textField.style.paddingRight = 0
+        this._label.style.paddingRight = 0
+        this._textField.style.borderTopRightRadius = 0
+      } else {
+        this._textField.style.borderTopRightRadius = '.25rem'
       }
 
       this._inputGroup.addEventListener('click', () => this._textField.focus())
@@ -143,10 +150,10 @@ class TextField extends BaseComponent {
           this._element.style.setProperty('--label-translate-x', `calc(${this._prepend.offsetWidth}px - ${NOTCH_BEFORE_WIDTH})`)
 
           if (this._element.querySelector('.valid-feedback')) {
-            this._element.querySelector('.valid-feedback').style.transform = `translateX(-${this._prepend.offsetWidth}px)`;
+            this._element.querySelector('.valid-feedback').style.transform = `translateX(-${this._prepend.offsetWidth}px)`
           }
           if (this._element.querySelector('.invalid-feedback')) {
-            this._element.querySelector('.invalid-feedback').style.transform = `translateX(-${this._prepend.offsetWidth}px)`;
+            this._element.querySelector('.invalid-feedback').style.transform = `translateX(-${this._prepend.offsetWidth}px)`
           }
         }
         if (this._append) {
