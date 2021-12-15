@@ -98,25 +98,11 @@
     background-color: $form-control-bg;
 
     &.prepend {
-      border-top-left-radius: 0.25rem;
+      border-top-left-radius: 0.25rem !important;
     }
 
     &.append {
-      border-top-right-radius: 0.25rem;
-    }
-  }
-
-  > .form-floating:not(:first-child) {
-    > .form-control {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-
-  > .form-floating:not(:last-child) {
-    > .form-control {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-top-right-radius: 0.25rem !important;
     }
   }
 
