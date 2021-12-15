@@ -103,6 +103,7 @@
 
     &.append {
       border-top-right-radius: 0.25rem !important;
+      margin-left: 0 !important;
     }
   }
 
@@ -111,6 +112,7 @@
     flex: 1 1 auto;
     width: 1%;
     min-width: 0;
+    margin-left: 0 !important;
 
     > .m-line-ripple {
       width: auto;
