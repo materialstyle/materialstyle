@@ -109,7 +109,6 @@ class TextField extends BaseComponent {
   addNotch() {
     const notch = document.createElement('div')
     notch.className = 'm-notch'
-    notch.style.height = `${this._textField.offsetHeight}px`
 
     const notchBefore = document.createElement('div')
     notchBefore.className = 'm-notch-before'
