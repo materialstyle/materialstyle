@@ -3,52 +3,6 @@
 $utilities: map-merge(
   $utilities,
   (
-    "background-color": (
-      property: background-color,
-      class: bg,
-      local-vars: (
-        "bg-opacity": 1,
-      ),
-      values:
-        map-merge(
-          $theme-colors,
-          map-merge(
-            $material-colors,
-            map-merge(
-              $utilities-bg-colors,
-              (
-                "transparent": transparent,
-              )
-            )
-          )
-        ),
-    ),
-  )
-);
-
-$utilities: map-merge(
-  $utilities,
-  (
-    "border-color": (
-      property: border-color,
-      class: border,
-      values:
-        map-merge(
-          $theme-colors,
-          map-merge(
-            $material-colors,
-            (
-              "white": $white,
-            )
-          )
-        ),
-    ),
-  )
-);
-
-$utilities: map-merge(
-  $utilities,
-  (
     "shadow": (
       property: box-shadow,
       class: shadow,
@@ -60,37 +14,6 @@ $utilities: map-merge(
             sm: $box-shadow-sm,
             lg: $box-shadow-lg,
             none: none,
-          )
-        ),
-    ),
-  )
-);
-
-$utilities: map-merge(
-  $utilities,
-  (
-    "color": (
-      property: color,
-      class: text,
-      local-vars: (
-        "text-opacity": 1,
-      ),
-      values:
-        map-merge(
-          $theme-colors,
-          map-merge(
-            $material-colors,
-            map-merge(
-              $utilities-text-colors,
-              (
-                "muted": $text-muted,
-                "black-50": rgba($black, 0.5),
-                // deprecated
-                "white-50": rgba($white, 0.5),
-                // deprecated
-                "reset": inherit,
-              )
-            )
           )
         ),
     ),
