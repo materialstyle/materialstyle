@@ -88,75 +88,37 @@
   }
 }
 
+// Input Group
 .input-group {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  display: block;
 
   .input-group-text {
-    border: 0;
-    border-radius: 0;
-    background-color: $form-control-bg;
+    top: 0;
+    position: absolute;
+    pointer-events: none;
 
     &.prepend {
-      border-top-left-radius: 0.25rem !important;
+      left: 0;
     }
 
     &.append {
-      border-top-right-radius: 0.25rem !important;
-      margin-left: 0 !important;
+      right: 0;
     }
   }
 
   > .form-floating {
-    position: relative;
-    flex: 1 1 auto;
-    width: 1%;
-    min-width: 0;
-    margin-left: 0 !important;
+    .form-control {
+      padding-left: var(--prepend-width, 0.75rem);
+      padding-right: var(--append-width, 0.75rem);
 
-    > .m-line-ripple {
-      width: auto;
-      max-width: unset;
-      margin-left: var(--prepend-width, 0);
-      margin-right: var(--append-width, 0);
+      ~ label {
+        left: var(--prepend-width, 0);
+      }
     }
 
     > .m-notch {
-      width: auto;
-      max-width: unset;
-      margin-left: var(--prepend-width, 0);
-      margin-right: var(--append-width, 0);
-
       > .m-notch-between > label {
-        transform: translateX(var(--label-translate-x, 0));
-      }
-    }
-  }
-
-  &:hover {
-    .input-group-text {
-      background-color: $form-control-hover-bg;
-    }
-  }
-
-  &:focus-within {
-    .input-group-text {
-      background-color: $form-control-active-bg;
-    }
-
-    .m-line-ripple {
-      background-size: 100% 2px, 100% 1px;
-    }
-  }
-
-  &--outlined {
-    .input-group-text {
-      background-color: transparent;
-    }
-
-    &:hover, &:focus-within {
-      .input-group-text {
-        background-color: transparent;
+        transform: translateX(calc(var(--prepend-width, calc(0.75rem + 5px)) - (0.75rem + 5px)));
       }
     }
   }
@@ -226,6 +188,9 @@
   .form-floating {
     .form-control {
       &:valid, &.is-valid {
+        background-position: right var(--append-width, 0.75rem) center;
+        padding-right: calc(calc(1.5em + 0.75rem) + var(--append-width, 0px));
+
         &:focus {
           box-shadow: none;
         }
@@ -240,6 +205,9 @@
       }
 
       &:invalid, &.is-invalid {
+        background-position: right var(--append-width, 0.75rem) center;
+        padding-right: calc(calc(1.5em + 0.75rem) + var(--append-width, 0px));
+
         &:focus {
           box-shadow: none;
         }
