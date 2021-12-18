@@ -1,5 +1,3 @@
 module.exports = {
-  "extends": [
-    "stylelint-config-twbs-bootstrap/scss"
-  ]
+  "extends": "stylelint-config-twbs-bootstrap"
 }
