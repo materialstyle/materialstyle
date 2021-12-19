@@ -1,8 +1,32 @@
 @import "node_modules/bootstrap/scss/forms";
 
 .form-floating {
-  > .form-control {
+
+  &:not(.form-floating--outlined) {
+    border-top-left-radius: 0.25rem !important;
+    border-top-right-radius: 0.25rem !important;
     background-color: $form-control-bg;
+
+    &:hover {
+      background-color: $form-control-hover-bg;
+    }
+
+    &:focus-within {
+      background-color: $form-control-active-bg;
+    }
+  }
+
+  > textarea.form-control {
+    margin: 1.625rem 0 0.2rem 0;
+    padding: 0 0.75rem;
+
+    &:focus, &:not(:placeholder-shown) {
+      padding: 0 0.75rem;
+    }
+  }
+
+  > .form-control {
+    background-color: transparent;
     border: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -13,13 +37,7 @@
       border: 0;
     }
 
-    &:hover {
-      background-color: $form-control-hover-bg;
-    }
-
     &:focus, &.active {
-      background-color: $form-control-active-bg;
-
       ~ .m-line-ripple {
         background-size: 100% 2px, 100% 1px;
       }
@@ -33,9 +51,17 @@
   }
 
   &--outlined {
-    > .form-control {
-      background-color: transparent;
 
+    > textarea.form-control {
+      margin: 0.9125rem 0;
+      padding: 0 0.75rem;
+
+      &:focus, &:not(:placeholder-shown) {
+        padding: 0 0.75rem;
+      }
+    }
+
+    > .form-control {
       ~ .m-notch > .m-notch-between > label {
         color: $text-field-base-color;
         position: relative;
@@ -68,13 +94,7 @@
         }
       }
 
-      &:hover {
-        background-color: transparent;
-      }
-
       &:focus, &.active {
-        background-color: transparent;
-
         ~ .m-notch {
           > .m-notch-before,
           > .m-notch-between,
