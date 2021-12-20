@@ -18,21 +18,7 @@
   }
 
   > .form-floating {
-    .form-control {
-      padding-left: var(--prepend-width, 0.75rem);
-      padding-right: var(--append-width, 0.75rem);
-
-      ~ label {
-        left: var(--prepend-width, 0);
-      }
-    }
-
-    .dropdown {
-      .dropdown-toggle {
-        padding-left: var(--prepend-width, 0.75rem) !important;
-        padding-right: var(--append-width, 0.75rem)!important;
-      }
-
+    .form-control, .dropdown {
       ~ label {
         left: var(--prepend-width, 0);
       }

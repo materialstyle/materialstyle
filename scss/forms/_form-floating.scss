@@ -26,10 +26,10 @@
 
   > textarea.form-control {
     margin: 1.625rem 0 0.2rem 0;
-    padding: 0 0.75rem;
+    padding: 0 var(--prepend-width, $input-padding-x);
 
     &:focus, &:not(:placeholder-shown) {
-      padding: 0 0.75rem;
+      padding: 0 var(--prepend-width, $input-padding-x);
     }
   }
 
@@ -40,7 +40,7 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: none;
-    padding: $form-floating-padding-y $form-floating-padding-x;
+    padding: $form-floating-padding-y var(--append-width, $form-floating-padding-x) $form-floating-padding-y var(--prepend-width, $form-floating-padding-x);
 
     &::placeholder {
       color: transparent;
@@ -67,21 +67,18 @@
 
   > .dropdown  {
     > .dropdown-toggle {
-      padding: $form-floating-padding-y $form-floating-padding-x;
+      padding: $form-select-padding-y calc(var(--append-width, 0px) + $form-select-indicator-padding) $form-select-padding-y var(--prepend-width, $form-select-padding-x);
       display: block;
       width: 100%;
       min-height: 60px;
-      border-radius: 4px 4px 0 0;
+      border-radius: $border-radius $border-radius 0 0;
+      background-image: escape-svg($form-select-indicator);
+      background-repeat: no-repeat;
+      background-position: right var(--append-width, $form-select-padding-x) center;
+      background-size: $form-select-bg-size;
 
       &::after {
-        position: absolute;
-        right: 10px;
-        bottom: 1.5rem;
-        width: 0;
-        height: 0;
-        content: "";
-        border: 4px solid transparent;
-        border-top-color: #424242;
+       display: none;
       }
 
       .badge {
@@ -249,8 +246,8 @@
   }
 
   &:not(.form-floating--outlined) {
-    border-top-left-radius: 0.25rem !important;
-    border-top-right-radius: 0.25rem !important;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
     background-color: $form-control-bg;
 
     &:hover {
