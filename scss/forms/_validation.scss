@@ -1,0 +1,73 @@
+@import "node_modules/bootstrap/scss/forms/validation";
+
+.was-validated {
+  .form-floating {
+    .form-control {
+      &:valid, &.is-valid {
+        background-position: right var(--append-width, 0.75rem) center;
+        padding-right: calc(calc(1.5em + 0.75rem) + var(--append-width, 0px));
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        ~ label {
+          color: $success;
+        }
+
+        ~ .m-line-ripple {
+          background-image: linear-gradient($success, $success), linear-gradient($success, $success);
+        }
+      }
+
+      &:invalid, &.is-invalid {
+        background-position: right var(--append-width, 0.75rem) center;
+        padding-right: calc(calc(1.5em + 0.75rem) + var(--append-width, 0px));
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        ~ label {
+          color: $danger;
+        }
+
+        ~ .m-line-ripple {
+          background-image: linear-gradient($danger, $danger), linear-gradient($danger, $danger);
+        }
+      }
+    }
+
+    &--outlined {
+      .form-control {
+        &:valid, &.is-valid {
+          ~ .m-notch > .m-notch-between > label {
+            color: $success;
+          }
+
+          ~ .m-notch {
+            > .m-notch-before,
+            > .m-notch-between,
+            > .m-notch-after {
+              border-color: $success;
+            }
+          }
+        }
+
+        &:invalid, &.is-invalid {
+          ~ .m-notch > .m-notch-between > label {
+            color: $danger;
+          }
+
+          ~ .m-notch {
+            > .m-notch-before,
+            > .m-notch-between,
+            > .m-notch-after {
+              border-color: $danger;
+            }
+          }
+        }
+      }
+    }
+  }
+}

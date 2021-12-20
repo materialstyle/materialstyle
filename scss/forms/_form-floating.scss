@@ -1,0 +1,323 @@
+.form-floating {
+  position: relative;
+
+  > label {
+    color: $form-field-base-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: $form-floating-padding-y $form-floating-padding-x;
+    pointer-events: none;
+    transform-origin: 0 0;
+    @include transition($form-floating-transition);
+  }
+
+  > select.form-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  > textarea.form-control {
+    margin: 1.625rem 0 0.2rem 0;
+    padding: 0 0.75rem;
+
+    &:focus, &:not(:placeholder-shown) {
+      padding: 0 0.75rem;
+    }
+  }
+
+  // stylelint-disable no-duplicate-selectors
+  > .form-control {
+    background-color: transparent;
+    border: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+    padding: $form-floating-padding-y $form-floating-padding-x;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      padding-top: $form-floating-input-padding-t;
+      padding-bottom: $form-floating-input-padding-b;
+    }
+
+    // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
+    &:-webkit-autofill {
+      padding-top: $form-floating-input-padding-t;
+      padding-bottom: $form-floating-input-padding-b;
+    }
+  }
+
+  > .form-control,
+  > .dropdown > .dropdown-toggle {
+    height: $form-floating-height;
+    line-height: $form-floating-line-height;
+  }
+
+  > .dropdown  {
+    > .dropdown-toggle {
+      padding: $form-floating-padding-y $form-floating-padding-x;
+      display: block;
+      width: 100%;
+      min-height: 60px;
+      border-radius: 4px 4px 0 0;
+
+      &::after {
+        position: absolute;
+        right: 10px;
+        bottom: 1.5rem;
+        width: 0;
+        height: 0;
+        content: "";
+        border: 4px solid transparent;
+        border-top-color: #424242;
+      }
+
+      .badge {
+        .btn-close {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .dropdown-item {
+      min-height: 40px;
+      & > * {
+        pointer-events: none;
+      }
+    }
+
+    .btn-close {
+      box-sizing: border-box;
+    }
+
+    &.float {
+      > .dropdown-toggle {
+        padding-top: $form-floating-input-padding-t;
+        padding-bottom: $form-floating-input-padding-b;
+      }
+    }
+  }
+
+  > .form-control:focus, > .dropdown:focus-within  {
+    ~ label {
+      color: $form-field-primary-color;
+    }
+
+    ~ .m-line-ripple {
+      background-size: 100% 2px, 100% 1px;
+    }
+  }
+
+  > .dropdown.float,
+  > .form-control:focus,
+  > .form-control:not(:placeholder-shown) {
+    ~ label {
+      opacity: $form-floating-label-opacity;
+      transform: $form-floating-label-transform;
+    }
+  }
+  // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
+  > .form-control:-webkit-autofill {
+    ~ label {
+      opacity: $form-floating-label-opacity;
+      transform: $form-floating-label-transform;
+    }
+  }
+  // stylelint-enable no-duplicate-selectors
+
+  .search-input {
+    padding: .5rem .75rem;
+    background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9e9e9e, #9e9e9e) center bottom/ 100% 1px no-repeat border-box transparent;
+    border: 0;
+    border-radius: 0;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
+
+    &:focus {
+      background-color: transparent;
+      background-size: 100% 2px, 100% 1px;
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    max-height: 40vh;
+    overflow-y: auto;
+    padding: 0;
+    user-select: none;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+
+    .checked {
+      background: #f5f5f5;
+    }
+  }
+
+  &.multi-select {
+    .dropdown-toggle {
+      white-space: normal;
+    }
+
+    .checkmark {
+      width: 20px;
+      height: 20px;
+      visibility: hidden;
+      background-image: none;
+    }
+
+    .checked > .checkmark {
+      visibility: visible;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+    }
+  }
+
+  &--outlined {
+
+    > textarea.form-control {
+      margin: 0.9125rem 0;
+      padding: 0 0.75rem;
+
+      &:focus, &:not(:placeholder-shown) {
+        padding: 0 0.75rem;
+      }
+    }
+
+    > .form-control, > .dropdown {
+      ~ .m-notch > .m-notch-between > label {
+        color: $form-field-base-color;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 1rem 0;
+        pointer-events: none;
+        transform-origin: 0 0;
+        transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+      }
+    }
+
+    > .form-control {
+      &:focus, &:not(:placeholder-shown) {
+        padding: 1.125rem 0.75rem;
+      }
+    }
+
+    > .dropdown.float {
+      > .dropdown-toggle {
+        padding: 1.125rem 0.75rem;
+      }
+    }
+
+    > .form-control:focus, > .form-control:not(:placeholder-shown), > .dropdown.float {
+      ~ .m-notch > .m-notch-between {
+        border-top: 0;
+
+        > label {
+          left: 0;
+          transform: scale(.85) translateY(-1.75rem);
+          margin-right: var(--label-floating-margin-right, 0);
+        }
+      }
+    }
+
+    > .form-control:focus, > .dropdown:focus-within {
+      ~ .m-notch > .m-notch-between > label {
+        color: $form-field-primary-color;
+      }
+
+      ~ .m-notch {
+        > .m-notch-before,
+        > .m-notch-between,
+        > .m-notch-after {
+          border-width: 2px;
+          border-color: $form-field-primary-color;
+        }
+      }
+    }
+  }
+
+  &:not(.form-floating--outlined) {
+    border-top-left-radius: 0.25rem !important;
+    border-top-right-radius: 0.25rem !important;
+    background-color: $form-control-bg;
+
+    &:hover {
+      background-color: $form-control-hover-bg;
+    }
+
+    &:focus-within {
+      background-color: $form-control-active-bg;
+    }
+  }
+}
+
+// Line ripple and Notch
+.m-line-ripple {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  margin-bottom: -2px;
+  background: linear-gradient($form-field-primary-color, $form-field-primary-color) top/0 2px no-repeat border-box,
+  linear-gradient($form-field-base-color, $form-field-base-color) top/100% 1px no-repeat border-box transparent;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.m-notch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  pointer-events: none;
+  background: transparent;
+
+  .m-notch-before,
+  .m-notch-between,
+  .m-notch-after {
+    pointer-events: none;
+    border: 1px solid $form-field-base-color;
+    border-radius: .25rem;
+  }
+
+  .m-notch-before {
+    width: 0.75rem;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .m-notch-between {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding: 0 5px;
+    width: auto;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .m-notch-after {
+    flex: 1;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
