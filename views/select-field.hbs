@@ -407,6 +407,25 @@
                     </div>
                 </div>
             </form>
+
+            <div class="row">
+                <div class="offset-sm-4 col-sm-4 mb-3">
+                    <h3 class="m-3">Adding new options</h3>
+                    <div class="m-3">
+                        <div class="form-floating" id="cars-container">
+                            <select class="form-select" id="cars" required>
+                                <option value="Audi">Audi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Buggati">Buggati</option>
+                                <option value="Koenigsegg">Koenigsegg</option>
+                            </select>
+                            <label for="cars">Cars</label>
+                        </div>
+                    </div>
+
+                    <button onclick="addOption()" type="button" class="btn btn-dark w-100">Add option "Lamborghini"</button>
+                </div>
+            </div>
         </div>
     {{/inline}}
 
@@ -416,6 +435,18 @@
 
     {{#*inline "scripts"}}
         <script>
+            function addOption() {
+                var select = document.getElementById("cars");
+                var option = document.createElement("option");
+                option.text = "Lamborghini";
+                option.value = "Lamborghini";
+                select.add(option);
+
+                var selectField = document.querySelector('#cars-container');
+                var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(selectField)
+                selectFieldInstance.rebuild();
+            }
+
             (function () {
                 'use strict'
 
