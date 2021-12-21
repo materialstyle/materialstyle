@@ -6,7 +6,7 @@
  */
 
 import {
-  getAccentColor, getPrimaryColor
+  getBaseColor, getPrimaryColor
 } from '../src/utility.js'
 import BaseComponent from 'bootstrap/js/src/base-component'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
@@ -33,12 +33,8 @@ const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_HIDDEN = 'hidden.bs.dropdown'
 const EVENT_SHOWN = 'shown.bs.dropdown'
 
-const CLASS_NAME_SELECT = 'm-select'
-const CLASS_NAME_SELECT_OUTLINE = 'm-select-outline'
-
-const CLASS_NAME_STATIC_LABEL = 'static-label'
-const CLASS_NAME_FLOATING_LABEL = 'floating-label'
-const CLASS_NAME_FLOATING_LABEL_ACTIVE = 'floating-label-active'
+const CLASS_NAME_SELECT = 'form-select'
+const CLASS_NAME_OUTLINED = 'form-floating--outlined'
 
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'
@@ -46,36 +42,18 @@ const CLASS_NAME_MULTI_SELECT = 'multi-select'
 const SELECTOR_DROPDOWN_ITEM = '.dropdown-item:not(.select-all):not(.btn-close)'
 const SELECTOR_SELECT_ALL = '.select-all'
 
-const FLOATING_LABEL_SCALE = 0.75
-const NOTCH_BETWEEN_PADDING_SUM = 10
-const NOTCH_BETWEEN_PADDING_LEFT = 5
-const NOTCH_BEFORE_WIDTH = 12
+const LABEL_SCALE = 0.85
 
 class SelectField extends BaseComponent {
   constructor(element) {
     super(element)
     this._element = element
-    this._select = element.querySelector('.form-control')
-    this._selectClass = element.className.includes(CLASS_NAME_SELECT_OUTLINE) ? CLASS_NAME_SELECT_OUTLINE : CLASS_NAME_SELECT
+    this._select = element.querySelector(`.${CLASS_NAME_SELECT}`)
 
-    this._primaryColor = getPrimaryColor(element)
-    this._accentColor = getAccentColor(element)
-
-    this._label = element.querySelector('label')
-    this._labelClass = ''
-
-    if (this._label !== null) {
-      this._labelClass = this._label.className.includes(CLASS_NAME_FLOATING_LABEL) ? CLASS_NAME_FLOATING_LABEL : CLASS_NAME_STATIC_LABEL
+    if (this._select) {
+      this.initSelect()
+      this._setListeners()
     }
-
-    this._prepend = element.querySelector('.prepend')
-    this._append = element.querySelector('.append')
-
-    this._isSearchable = Boolean(element.className.includes(CLASS_NAME_SEARCHABLE))
-    this._multiSelectEnabled = Boolean(element.className.includes(CLASS_NAME_MULTI_SELECT))
-
-    this.initSelect()
-    this._setListeners()
   }
 
   static get NAME() {
@@ -101,29 +79,45 @@ class SelectField extends BaseComponent {
   }
 
   initSelect() {
+    this._select.tabIndex = -1
+
+    this._isSearchable = Boolean(this._element.className.includes(CLASS_NAME_SEARCHABLE))
+    this._multiSelectEnabled = Boolean(this._element.className.includes(CLASS_NAME_MULTI_SELECT))
+
+    this._element.style.setProperty('--form-field-base-color', getBaseColor(this._element))
+    this._element.style.setProperty('--form-field-primary-color', getPrimaryColor(this._element))
+
+    this._label = this._element.querySelector('label')
+    this._inputGroup = this._element.closest('.input-group')
+
+    if (this._inputGroup) {
+      this._prepend = this._inputGroup.querySelector('.prepend')
+      this._append = this._inputGroup.querySelector('.append')
+    }
+
+    if (this._prepend) {
+      this._label.style.paddingLeft = 0
+    }
+
     this.createDropdownMenu()
     this.createDropdown()
     this.showSelectedItems()
 
-    if (this._selectClass === CLASS_NAME_SELECT) {
-      this.addRipple()
-    } else {
+    if (this._element.className.includes(CLASS_NAME_OUTLINED)) {
       this.addNotch()
+    } else {
+      this.addRipple()
     }
 
-    if (this._label !== null) {
-      this.initLabel()
+    if (this._label) {
+      this.toggleLabelState()
     }
   }
 
   redraw() {
-    if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-      this._notch.style.height = `${this._selectedItem.offsetHeight}px`
-      this._notchBetween.style.width = `${this._label.offsetWidth * FLOATING_LABEL_SCALE + NOTCH_BETWEEN_PADDING_SUM}px`
-    }
-
-    if (this._label !== null) {
-      this.initLabel()
+    if (this._label) {
+      this.toggleLabelState()
+      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
     }
 
     this.addFontsReadyEvent()
@@ -187,7 +181,7 @@ class SelectField extends BaseComponent {
 
     const selectedItem = document.createElement('button')
     selectedItem.type = 'button'
-    selectedItem.className = 'btn dropdown-toggle text-start shadow-none'
+    selectedItem.className = 'btn btn-select dropdown-toggle text-start shadow-none'
     selectedItem.dataset.bsToggle = 'dropdown'
     selectedItem.dataset.bsAutoClose = 'outside'
 
@@ -197,7 +191,7 @@ class SelectField extends BaseComponent {
     this._dropdown = dropdown
     this._selectedItem = selectedItem
 
-    this._element.insertBefore(this._dropdown, this._select)
+    this._select.after(this._dropdown)
 
     this._dropdownInstance = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
   }
@@ -261,10 +255,6 @@ class SelectField extends BaseComponent {
           this.selectOne(event.target.dataset.value, false)
         })
       }
-
-      if (this._notch !== null && this._notch) {
-        this._notch.style.height = `${this._selectedItem.offsetHeight}px`
-      }
     } else {
       this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
@@ -278,165 +268,48 @@ class SelectField extends BaseComponent {
   addRipple() {
     const ripple = document.createElement('div')
     ripple.className = 'm-line-ripple'
-    ripple.style.backgroundImage =
-      `linear-gradient(${this._accentColor}, ${this._accentColor}), ` +
-      `linear-gradient(${this._primaryColor}, ${this._primaryColor})`
 
     this._ripple = ripple
-    this._selectedItem.after(ripple)
+    this._dropdown.after(ripple)
   }
 
   addNotch() {
     const notch = document.createElement('div')
     notch.className = 'm-notch'
-    notch.style.height = `${this._selectedItem.offsetHeight}px`
 
     const notchBefore = document.createElement('div')
     notchBefore.className = 'm-notch-before'
-    notchBefore.style.borderColor = this._primaryColor
 
     const notchBetween = document.createElement('div')
     notchBetween.className = 'm-notch-between'
-    notchBetween.style.borderColor = this._primaryColor
-
-    if (this._label === null) {
-      notchBetween.style.padding = 0
-    } else {
-      notchBetween.style.width = `${this._label.offsetWidth * FLOATING_LABEL_SCALE + NOTCH_BETWEEN_PADDING_SUM}px`
-
-      if (this._labelClass === CLASS_NAME_STATIC_LABEL) {
-        notchBetween.style.borderTopWidth = 0
-      }
-
-      notchBetween.appendChild(this._label)
-    }
 
     const notchAfter = document.createElement('div')
     notchAfter.className = 'm-notch-after'
-    notchAfter.style.borderColor = this._primaryColor
 
     notch.appendChild(notchBefore)
     notch.appendChild(notchBetween)
     notch.appendChild(notchAfter)
 
-    this._element.insertBefore(notch, this._dropdown)
-
+    this._dropdown.after(notch)
     this._notch = notch
-    this._notchBefore = notchBefore
-    this._notchBetween = notchBetween
-    this._notchAfter = notchAfter
+
+    if (this._label) {
+      notchBetween.appendChild(this._label)
+      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+    }
   }
 
-  initLabel() {
-    this.setLabelColor()
-    this.switchLabelClass()
-  }
-
-  setLabelColor() {
+  toggleLabelState() {
     if (this._selectedItem.innerHTML.length) {
-      this._label.style.color = this._accentColor
-
-      if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-        this._notchBetween.style.borderTopWidth = 0
-      }
+      this._dropdown.classList.add('float')
     } else {
-      this._label.style.color = this._primaryColor
-
-      if (this._selectClass === CLASS_NAME_SELECT_OUTLINE &&
-        this._labelClass === CLASS_NAME_FLOATING_LABEL
-      ) {
-        this._notchBetween.style.borderTopWidth = '1px'
-      }
-    }
-  }
-
-  switchLabelClass() {
-    if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
-      if (this._selectedItem.innerHTML.length) {
-        this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
-        this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
-      } else {
-        this._label.classList.remove(CLASS_NAME_FLOATING_LABEL_ACTIVE)
-        this._label.classList.add(CLASS_NAME_FLOATING_LABEL)
-      }
-    }
-  }
-
-  setAddonHeight() {
-    if (this._prepend !== null) {
-      this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
-      this._selectedItem.style.paddingLeft = `${this._prepend.offsetWidth}px`
-    }
-
-    if (this._append !== null) {
-      this._append.style.height = `${this._selectedItem.offsetHeight}px`
-      this._selectedItem.style.paddingRight = `${this._append.offsetWidth}px`
-    }
-  }
-
-  translateLabel() {
-    if (this._prepend !== null && this._label !== null) {
-      if (this._labelClass === CLASS_NAME_FLOATING_LABEL) {
-        if (this._selectedItem.innerHTML.length) {
-          if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-            this._label.style.transform = `translate(0, -0.5rem) scale(${FLOATING_LABEL_SCALE})`
-          } else {
-            this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
-          }
-        } else if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth - (NOTCH_BEFORE_WIDTH + NOTCH_BETWEEN_PADDING_LEFT)}px, 1.2rem)`
-        } else {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 1.2rem)`
-        }
-      } else if (this._selectClass === CLASS_NAME_SELECT) {
-        this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
-      }
-    }
-  }
-
-  handleFocus() {
-    if (this._label !== null) {
-      this._label.style.color = this._accentColor
-      this._label.classList.remove(CLASS_NAME_FLOATING_LABEL)
-      this._label.classList.add(CLASS_NAME_FLOATING_LABEL_ACTIVE)
-
-      if (this._prepend !== null) {
-        if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-          this._label.style.transform = `translate(0, -0.5rem) scale(${FLOATING_LABEL_SCALE})`
-        } else {
-          this._label.style.transform = `translate(${this._prepend.offsetWidth}px, 0.5rem) scale(${FLOATING_LABEL_SCALE})`
-        }
-      }
-    }
-
-    if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-      this._notchBetween.style.borderTopWidth = 0
-      this._notch.classList.add('notch-active')
-      this._notchBefore.style.borderColor = this._accentColor
-      this._notchBetween.style.borderColor = this._accentColor
-      this._notchAfter.style.borderColor = this._accentColor
-    } else {
-      this._ripple.style.backgroundSize = '100% 2px, 100% 1px'
+      this._dropdown.classList.remove('float')
     }
   }
 
   handleFocusOut() {
     if (!this._selectedItem.classList.contains('show')) {
-      if (this._label !== null) {
-        this.setLabelColor()
-        this.switchLabelClass()
-        this.translateLabel()
-      }
-
-      if (this._selectClass === CLASS_NAME_SELECT_OUTLINE) {
-        this._notch.classList.remove('notch-active')
-        this._notchBefore.style.borderColor = this._primaryColor
-        this._notchBetween.style.borderColor = this._primaryColor
-        this._notchAfter.style.borderColor = this._primaryColor
-        this._selectedItem.style.border = 0
-      } else {
-        this._ripple.style.backgroundSize = '0px 2px, 100% 1px'
-      }
+      this.toggleLabelState()
     }
   }
 
@@ -524,28 +397,10 @@ class SelectField extends BaseComponent {
   }
 
   _setListeners() {
-    EventHandler.on(this._selectedItem, EVENT_FOCUS, () => this.handleFocus())
+    EventHandler.on(this._selectedItem, EVENT_FOCUS, () => this._dropdown.classList.add('float'))
     EventHandler.on(this._selectedItem, EVENT_FOCUSOUT, () => this.handleFocusOut())
-    EventHandler.on(this._dropdown, EVENT_SHOWN, () => this.handleFocus())
+    EventHandler.on(this._dropdown, EVENT_SHOWN, () => this._dropdown.classList.add('float'))
     EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
-
-    EventHandler.on(this._label, EVENT_CLICK, (event) => {
-      event.preventDefault()
-      event.stopPropagation()
-      this._dropdownInstance.toggle()
-    })
-
-    EventHandler.on(this._prepend, EVENT_CLICK, (event) => {
-      event.preventDefault()
-      event.stopPropagation()
-      this._dropdownInstance.toggle()
-    })
-
-    EventHandler.on(this._append, EVENT_CLICK, (event) => {
-      event.preventDefault()
-      event.stopPropagation()
-      this._dropdownInstance.toggle()
-    })
 
     EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, (event) => {
       const checked = event.target.dataset.checked !== 'true'
@@ -616,10 +471,15 @@ class SelectField extends BaseComponent {
 
   addFontsReadyEvent() {
     document.fonts.ready.then(() => {
-      this.setAddonHeight()
-
-      if (this._prepend !== null) {
-        this.translateLabel()
+      if (this._inputGroup) {
+        if (this._prepend) {
+          this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
+          this._element.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
+        }
+        if (this._append) {
+          this._append.style.height = `${this._selectedItem.offsetHeight}px`
+          this._element.style.setProperty('--append-width', `${this._append.offsetWidth}px`)
+        }
       }
     })
   }

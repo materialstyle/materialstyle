@@ -31,10 +31,7 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
 @import "node_modules/bootstrap/scss/tables";
 @import "ripple";
 @import "image_list";
-// forms is imported in text_field, select
-@import "text_field";
-@import "select_field";
-@import "form_check";
+@import "forms";
 // buttons and button-group are imported in button
 @import "button";
 @import "node_modules/bootstrap/scss/transitions";
