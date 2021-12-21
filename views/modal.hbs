@@ -37,51 +37,64 @@
                         </div>
 
                         <div class="m-3">
-                            <div class="m-text-field">
-                                <label for="name" class="static-label label">First Name</label>
-                                <input type="text" value="" class="form-control" autocomplete="off"/>
-                            </div>
-                        </div>
-
-                        <div class="m-3">
-                            <div class="m-text-field-outline">
-                                <div class="prepend">
-                                    <i class="bi bi-key-fill"></i>
+                            <div class="input-group">
+                                <div class="form-floating m-text-field">
+                                    <input type="text" class="form-control" id="firstname"
+                                           placeholder="firstname" autocomplete="off">
+                                    <label for="firstname">Firstname</label>
                                 </div>
-                                <label for="password" class="floating-label">Password</label>
-                                <input type="password" value="" class="form-control" autocomplete="off"/>
-                            </div>
-                        </div>
-
-                        <div class="m-3">
-                            <div class="m-select">
-                                <div class="prepend">
+                                <span class="input-group-text prepend">
                                     <i class="bi bi-person-circle"></i>
-                                </div>
-                                <label class="floating-label">Cars</label>
-                                <select class="form-control">
-                                    <option value=""></option>
-                                    <option value="1">Lamborghini</option>
-                                    <option value="2">Buggati</option>
-                                    <option value="3">Koenigsegg</option>
-                                    <option value="4">Lykan</option>
-                                </select>
+                                </span>
                             </div>
                         </div>
 
                         <div class="m-3">
-                            <div class="m-select-outline">
-                                <div class="prepend">
-                                    <i class="bi bi-person-circle"></i>
+                            <div class="input-group">
+                                <div class="form-floating form-floating--outlined m-text-field">
+                                    <input type="email" class="form-control" id="email"
+                                           placeholder="Email" autocomplete="off">
+                                    <label for="email">Email</label>
                                 </div>
-                                <label class="static-label">Cars</label>
-                                <select class="form-control">
-                                    <option value=""></option>
-                                    <option value="1">Lamborghini</option>
-                                    <option value="2">Buggati</option>
-                                    <option value="3">Koenigsegg</option>
-                                    <option value="4">Lykan</option>
-                                </select>
+                                <span class="input-group-text prepend">
+                                    <i class="bi bi-person-circle"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="input-group">
+                                <fieldset class="form-floating m-select">
+                                    <select class="form-select">
+                                        <option value=""></option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </select>
+                                    <label>Select One</label>
+                                </fieldset>
+                                <div class="input-group-text prepend">
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <div class="input-group">
+                                <fieldset class="form-floating form-floating--outlined m-select">
+                                    <select class="form-select">
+                                        <option value=""></option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </select>
+                                    <label>Select One</label>
+                                </fieldset>
+                                <div class="input-group-text prepend">
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
                             </div>
                         </div>
 
@@ -159,18 +172,14 @@
                 $('.m-file-input').fileinput();
 
                 $('.m-text-field').textfield();
-                $('.m-text-field-outline').textfield();
                 $('.m-select').selectfield();
-                $('.m-select-outline').selectfield();
 
                 $('.nav-tabs').tab();
                 $('.m-shape-container').shape();
 
                 $("#myModal").on('shown.bs.modal', function () {
                     $('.m-text-field').textfield('redraw');
-                    $('.m-text-field-outline').textfield('redraw');
                     $('.m-select').selectfield('redraw');
-                    $('.m-select-outline').selectfield('redraw');
 
                     $('.nav-tabs').tab('redraw');
 

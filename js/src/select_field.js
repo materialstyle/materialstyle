@@ -117,6 +117,7 @@ class SelectField extends BaseComponent {
   redraw() {
     if (this._label) {
       this.toggleLabelState()
+      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
     }
 
     this.addFontsReadyEvent()

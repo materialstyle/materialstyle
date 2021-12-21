@@ -215,13 +215,13 @@
 
     > .form-control {
       &:focus, &:not(:placeholder-shown) {
-        padding: 1.125rem 0.75rem;
+        padding: $input-padding-y var(--append-width, $input-padding-x) $input-padding-y var(--prepend-width, $input-padding-x)
       }
     }
 
     > .dropdown.float {
       > .dropdown-toggle {
-        padding: 1.125rem 0.75rem;
+        padding: $input-padding-y var(--append-width, $input-padding-x) $input-padding-y var(--prepend-width, $input-padding-x)
       }
     }
 
