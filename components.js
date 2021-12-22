@@ -9,7 +9,7 @@ module.exports = [
     'drawer-auto-hide',
     'dropdown',
     'image-list',
-    'list',
+    'list-group',
     'modal',
     'nav',
     'navbar',
