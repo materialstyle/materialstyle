@@ -18,9 +18,6 @@
 
   @if color-contrast($background) == $color-contrast-light {
     --mdc-ripple-color: #fff;
-    --mdc-ripple-hover-opacity: 0.1;
-    --mdc-ripple-focus-opacity: 0.13;
-    --mdc-ripple-press-opacity: 0.15;
   } @else {
     --mdc-ripple-color: #000;
     --mdc-ripple-hover-opacity: 0.1;
