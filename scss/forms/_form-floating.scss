@@ -93,6 +93,13 @@
       & > * {
         pointer-events: none;
       }
+
+      &.active,
+      &.checked,
+      &:active {
+        color: $dark;
+        background-color: $gray-200;
+      }
     }
 
     .btn-close {
@@ -155,12 +162,6 @@
     padding: 0;
     user-select: none;
     border: none;
-
-    .checked {
-      color: $dropdown-link-active-color;
-      text-decoration: none;
-      @include gradient-bg($dropdown-link-active-bg);
-    }
   }
 
   &.multi-select {
