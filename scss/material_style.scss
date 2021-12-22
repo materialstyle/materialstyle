@@ -48,7 +48,7 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
 @import "node_modules/bootstrap/scss/badge";
 @import "node_modules/bootstrap/scss/alert";
 @import "progress_bar";
-@import "list";
+@import "list-group";
 @import "node_modules/bootstrap/scss/close";
 @import "node_modules/bootstrap/scss/toasts";
 @import "snackbar";
