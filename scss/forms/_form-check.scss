@@ -4,7 +4,7 @@
   background-color: #fff;
 }
 
-.form-switch.switch-square {
+.form-switch.form-switch--square {
   .form-check-input {
     border-radius: 0;
     background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'><rect width='6' height='6' fill='#{$form-switch-color}'/></svg>"));
@@ -23,7 +23,7 @@
   }
 }
 
-.form-switch.switch-material {
+.form-switch.form-switch--material {
   .form-check-input {
     height: 0.8em;
     margin-top: 0.35em;
