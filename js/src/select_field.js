@@ -198,7 +198,7 @@ class SelectField extends BaseComponent {
 
   createSearchContainer() {
     const searchInput = document.createElement('input')
-    searchInput.type = 'text'
+    searchInput.type = 'search'
     searchInput.placeholder = 'Search'
     searchInput.className = 'search-input form-control'
     searchInput.autocomplete = 'off'
@@ -416,6 +416,10 @@ class SelectField extends BaseComponent {
     })
 
     EventHandler.on(this._dropdown.querySelector('.search-input'), EVENT_KEYUP, (event) => {
+      this.search(event.target.value)
+    })
+
+    EventHandler.on(this._dropdown.querySelector('.search-input'), 'search', (event) => {
       this.search(event.target.value)
     })
 
