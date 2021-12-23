@@ -1,11 +1,8 @@
 // Configuration
-
 // Include functions first (so we can manipulate colors, SVGs, calc, etc)
 @import "node_modules/bootstrap/scss/functions";
-
 // Include any default variable overrides here
 @import "variables";
-
 // Required stylesheets
 @import "node_modules/bootstrap/scss/variables";
 

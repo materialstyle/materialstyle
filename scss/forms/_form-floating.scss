@@ -65,7 +65,7 @@
     line-height: $form-floating-line-height;
   }
 
-  > .dropdown  {
+  > .dropdown {
     > .dropdown-toggle {
       padding: $form-select-padding-y calc(var(--append-width, 0px) + $form-select-indicator-padding) $form-select-padding-y var(--prepend-width, $form-select-padding-x);
       display: block;
@@ -78,7 +78,7 @@
       background-size: $form-select-bg-size;
 
       &::after {
-       display: none;
+        display: none;
       }
 
       .badge {
@@ -115,7 +115,7 @@
     }
   }
 
-  > .form-control:focus, > .dropdown:focus-within  {
+  > .form-control:focus, > .dropdown:focus-within {
     ~ label {
       color: $form-field-primary-color;
     }

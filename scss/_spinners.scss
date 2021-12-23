@@ -10,24 +10,26 @@
 }
 
 @keyframes rotate {
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes dash {
-  0%{
+  0% {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
   }
-  50%{
+  50% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -35;
   }
-  100%{
+  100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -124;
   }
 }
+
 @keyframes color {
   100%,
   0% {

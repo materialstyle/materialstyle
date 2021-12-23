@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const { merge } = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
@@ -24,7 +24,7 @@ webpackConfig = merge(common, {
   },
   module: {
     rules: [
-      { test: /\.hbs$/, loader: "handlebars-loader" },
+      {test: /\.hbs$/, loader: "handlebars-loader"},
     ]
   },
   plugins: [

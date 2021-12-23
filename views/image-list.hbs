@@ -1,132 +1,132 @@
 {{#> "layouts/layout" }}
 
-    {{#*inline "styles"}}
-        <style>
-            #image-list-standard {
-                max-width: 900px;
-            }
+  {{#*inline "styles"}}
+    <style>
+      #image-list-standard {
+        max-width: 900px;
+      }
 
-            #image-list-standard > .image-list-item {
-                --image-list-item-width: 150px;
-            }
-        </style>
-    {{/inline}}
+      #image-list-standard > .image-list-item {
+        --image-list-item-width: 150px;
+      }
+    </style>
+  {{/inline}}
 
-    {{#*inline "content"}}
-        <h1 class="m-3">Image List</h1>
+  {{#*inline "content"}}
+    <h1 class="m-3">Image List</h1>
 
-        <div class="m-3">
-            <label>Variables</label>
-            <code>
-                <pre>
+    <div class="m-3">
+      <label>Variables</label>
+      <code>
+        <pre>
 $image-list-padding: 5px !default;
 $image-list-item-margin: 5px !default;
 $image-list-masonry-column-gap: 5px !default;
 $image-list-item-width: 300px !default;
-                </pre>
-            </code>
-            <label>Custom properties</label>
-            <code>
-                <pre>
+        </pre>
+      </code>
+      <label>Custom properties</label>
+      <code>
+        <pre>
 --image-list-padding: #{$image-list-padding};
 --image-list-item-margin: #{$image-list-item-margin};
 --image-list-masonry-column-gap: #{$image-list-masonry-column-gap};
 --image-list-item-width: #{$image-list-item-width};
-                </pre>
-            </code>
-        </div>
+        </pre>
+      </code>
+    </div>
 
-        <div class="m-3">
-          <ul class="image-list" id="image-list-standard">
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="bg-dark text-center text-white p-1">Label</div>
-            </li>
-          </ul>
-        </div>
+    <div class="m-3">
+      <ul class="image-list" id="image-list-standard">
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="bg-dark text-center text-white p-1">Label</div>
+        </li>
+      </ul>
+    </div>
 
-        <h1 class="m-3">Masonry</h1>
+    <h1 class="m-3">Masonry</h1>
 
-        <div class="m-3">
-          <ul id="image-list-masonry" class="image-list masonry">
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-            <li class="image-list-item">
-              <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
-              <div class="py-1 px-0">Label</div>
-            </li>
-          </ul>
-        </div>
-    {{/inline}}
+    <div class="m-3">
+      <ul id="image-list-masonry" class="image-list masonry">
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/flower_600x400.jpeg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+        <li class="image-list-item">
+          <img src="https://materialstyle.github.io/assets/images/butterfly.jpg">
+          <div class="py-1 px-0">Label</div>
+        </li>
+      </ul>
+    </div>
+  {{/inline}}
 
 {{/"layouts/layout"}}

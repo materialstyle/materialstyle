@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const { merge } = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const common = require('./webpack.common.js');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -25,7 +25,7 @@ module.exports = merge(common, {
     new webpack.BannerPlugin({
       raw: true,
       banner:
-`/*!
+        `/*!
 * Material Style v3.0.0-alpha1 (https://materialstyle.github.io/)
 * Copyright 2018-2021 Material Style
 * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)

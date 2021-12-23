@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{transform htmlWebpackPlugin.options.title}}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
+  <title>{{transform htmlWebpackPlugin.options.title}}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../dist/css/materialstyle.min.css"/>
 
-    {{#> styles }}{{/styles}}
+  {{#> styles }}{{/styles}}
 
-    <style>
-        .site-drawer .nav-link.active {
-            background-color: #D1C4E9;
-        }
-    </style>
+  <style>
+    .site-drawer .nav-link.active {
+      background-color: #D1C4E9;
+    }
+  </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
-    <div class="container-fluid">
-        <div class="d-flex align-items-center">
-            <button class="drawer-toggler">
-                <span class="drawer-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand d-flex align-items-center" href="javascript:">
-                <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:40px; height:40px;"> MATERIAL STYLE
-            </a>
-        </div>
+  <div class="container-fluid">
+    <div class="d-flex align-items-center">
+      <button class="drawer-toggler">
+        <span class="drawer-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand d-flex align-items-center" href="javascript:">
+        <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Logo"
+             style="width:40px; height:40px;"> MATERIAL STYLE
+      </a>
     </div>
+  </div>
 </nav>
 
 <section class="d-flex flex-nowrap">
-    <aside class="drawer auto-hide drawer-light site-drawer" style="">
-        <div class="drawer-header bg-purple text-light">
-            <a class="drawer-brand text-light d-flex align-items-center" href="javascript:">
-                <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:40px; height:40px;">
-                MATERIAL STYLE
-            </a>
-            <button type="button" class="btn-close btn-close-white drawer-close-btn" aria-label="Close"></button>
-        </div>
-        <div class="drawer-body bg-purple bg-opacity-10">
-            <ul class="nav flex-column">
-                {{#each htmlWebpackPlugin.options.components}}
-                <li class="nav-item">
-                    <a class="nav-link" href="/{{this}}.html" data-title="{{transform this}}">
-                        {{transform this}}
-                    </a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-    </aside>
-    <div class="m-container p-2">
-
-        {{#> content }}{{/content}}
-
+  <aside class="drawer auto-hide drawer-light site-drawer" style="">
+    <div class="drawer-header bg-purple text-light">
+      <a class="drawer-brand text-light d-flex align-items-center" href="javascript:">
+        <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Logo"
+             style="width:40px; height:40px;">
+        MATERIAL STYLE
+      </a>
+      <button type="button" class="btn-close btn-close-white drawer-close-btn" aria-label="Close"></button>
     </div>
+    <div class="drawer-body bg-purple bg-opacity-10">
+      <ul class="nav flex-column">
+        {{#each htmlWebpackPlugin.options.components}}
+          <li class="nav-item">
+            <a class="nav-link" href="/{{this}}.html" data-title="{{transform this}}">
+              {{transform this}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </aside>
+  <div class="m-container p-2">
+
+    {{#> content }}{{/content}}
+
+  </div>
 </section>
 
 {{#> jQuery }}{{/jQuery}}
 
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
-    var drawers = [].slice.call(document.querySelectorAll('.drawer'))
-    var drawerList = drawers.map(function (drawer) {
-        return new materialstyle.Drawer(drawer)
-    })
+  var drawers = [].slice.call(document.querySelectorAll('.drawer'))
+  var drawerList = drawers.map(function (drawer) {
+    return new materialstyle.Drawer(drawer)
+  })
 
-    // Add active class to the link pointing to current page
-    document.querySelector('a[data-title="' + document.title + '"]').classList.add('active');
+  // Add active class to the link pointing to current page
+  document.querySelector('a[data-title="' + document.title + '"]').classList.add('active');
 
-    // Remember sidebar scroll position
-    let sidebar = document.querySelector(".site-drawer .drawer-body");
+  // Remember sidebar scroll position
+  let sidebar = document.querySelector(".site-drawer .drawer-body");
 
-    let positionTop = localStorage.getItem("sidebar-scroll");
-    if (positionTop !== null) {
-        sidebar.scrollTop = parseInt(positionTop, 10);
-    }
+  let positionTop = localStorage.getItem("sidebar-scroll");
+  if (positionTop !== null) {
+    sidebar.scrollTop = parseInt(positionTop, 10);
+  }
 
-    window.addEventListener("beforeunload", () => {
-        localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
-    });
+  window.addEventListener("beforeunload", () => {
+    localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
+  });
 </script>
 
 {{#> scripts }}{{/scripts}}
