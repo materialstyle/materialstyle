@@ -17,6 +17,8 @@
     --#{$variable-prefix}#{$color}-rgb: #{$value};
   }
 
+  --#{$variable-prefix}white-rgb: #{to-rgb($white)};
+  --#{$variable-prefix}black-rgb: #{to-rgb($black)};
   --#{$variable-prefix}body-color-rgb: #{to-rgb($body-color)};
   --#{$variable-prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
@@ -35,7 +37,7 @@
     --#{$variable-prefix}root-font-size: #{$font-size-root};
   }
   --#{$variable-prefix}body-font-family: #{$font-family-base};
-  --#{$variable-prefix}body-font-size: #{$font-size-base};
+  @include rfs($font-size-base, --#{$variable-prefix}body-font-size);
   --#{$variable-prefix}body-font-weight: #{$font-weight-base};
   --#{$variable-prefix}body-line-height: #{$line-height-base};
   --#{$variable-prefix}body-color: #{$body-color};

@@ -11,7 +11,7 @@ webpackConfig = {
     Collapse: './js/src/collapse.js',
     Drawer: './js/src/drawer.js',
     Dropdown: './js/src/dropdown.js',
-    FileInput: './js/src/file_input.js',
+    FileInput: './js/src/file-input.js',
     Modal: './js/src/modal.js',
     Navbar: './js/src/navbar.js',
     Popover: './js/src/popover.js',
@@ -21,13 +21,13 @@ webpackConfig = {
     Tooltip: './js/src/tooltip.js',
     Utility: './js/src/utility.js',
     Ripple: './js/src/ripple.js',
-    SelectField: './js/src/select_field.js',
+    SelectField: './js/src/select-field.js',
     Shape: './js/src/shape.js',
     Snackbar: './js/src/snackbar.js',
     Spinner: './js/src/spinner.js',
     Rainbow: './js/src/rainbow.js',
-    TextField: './js/src/text_field.js',
-    materialstyle: './js/src/material_style.js'
+    TextField: './js/src/text-field.js',
+    materialstyle: './js/material-style.js'
   },
   devtool: 'source-map',
   output: {
@@ -38,7 +38,7 @@ webpackConfig = {
       if (chunkName === 'materialstyle') {
         return 'js/materialstyle.min.js';
       } else {
-        return '../js/dist/' + (chunkName.split(/(?=[A-Z])/).join('_').toLowerCase()) + '.js';
+        return '../js/dist/' + (chunkName.split(/(?=[A-Z])/).join('-').toLowerCase()) + '.js';
       }
     },
     publicPath: '/dist/',
