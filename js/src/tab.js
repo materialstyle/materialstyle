@@ -1,4 +1,4 @@
-import 'bootstrap/js/src/tab'
+import BootstrapTab from 'bootstrap/js/src/tab'
 
 /**
  * --------------------------------------------------------------------------
@@ -7,7 +7,6 @@ import 'bootstrap/js/src/tab'
  * --------------------------------------------------------------------------
  */
 
-import BaseComponent from 'bootstrap/js/src/base-component'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import {
   defineJQueryPlugin
@@ -25,7 +24,7 @@ const VERSION = '3.0.0-alpha1'
 const ENTER_KEY_CODE = 13
 const INDICATOR_HEIGHT = 2
 
-class Tab extends BaseComponent {
+class Tab extends BootstrapTab {
   constructor(element) {
     super(element)
     this._element = element

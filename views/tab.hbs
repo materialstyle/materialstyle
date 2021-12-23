@@ -226,8 +226,14 @@
             })
 
             var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))
-            var tabList = tabs.map(function (tab) {
-                return new materialstyle.Tab(tab)
+            tabs.map(function (tab) {
+
+                tab.addEventListener('shown.bs.tab', function (event) {
+                    console.log('Current Tab: ' + event.target.dataset.bsTarget);
+                    console.log('Previous Tab: ' + event.relatedTarget.dataset.bsTarget);
+                })
+
+                new materialstyle.Tab(tab)
             })
 
             // With jQuery
