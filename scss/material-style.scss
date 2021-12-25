@@ -63,6 +63,12 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
 // Utilities
 @import "node_modules/bootstrap/scss/utilities/api";
 
+.m-root {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-top: var(--navbar-fixed-top-height, 0);
+}
+
 .m-container {
   flex: 1 1 auto;
 }
