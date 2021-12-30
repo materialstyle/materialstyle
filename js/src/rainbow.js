@@ -41,7 +41,7 @@ class Rainbow extends BaseComponent {
   }
 
   initRainbow() {
-    const colorBars = this._element.querySelectorAll('.m-bar')
+    const colorBars = this._element.querySelectorAll('.color-bar')
     const barCount = colorBars.length
 
     for (let i = 0; i < barCount; i++) {
