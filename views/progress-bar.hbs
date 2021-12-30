@@ -31,7 +31,7 @@
     <div class="m-3">
       <div class="progress" style="height: 20px;">
         <div class="progress-bar bg-success" style="width:40%; height: 20px;">
-          Free Space
+          Success
         </div>
         <div class="progress-bar bg-warning" style="width:10%; height: 20px;">
           Warning
@@ -44,17 +44,17 @@
 
     <div class="m-3">
       <div class="progress">
-        <div class="progress-bar bg-pink m-progress"></div>
+        <div class="progress-bar bg-pink progress-bar-indeterminate"></div>
       </div>
     </div>
 
     <div class="m-3">
       <div class="progress">
-        <div class="progress-bar m-rainbow">
-          <div class="m-bar bg-red"></div>
-          <div class="m-bar bg-green"></div>
-          <div class="m-bar bg-yellow"></div>
-          <div class="m-bar bg-blue"></div>
+        <div class="progress-bar progress-bar-rainbow">
+          <div class="color-bar bg-red"></div>
+          <div class="color-bar bg-green"></div>
+          <div class="color-bar bg-yellow"></div>
+          <div class="color-bar bg-blue"></div>
         </div>
       </div>
     </div>
@@ -67,7 +67,7 @@
   {{#*inline "scripts"}}
     <script>
       // Without jQuery
-      var rainbowList = [].slice.call(document.querySelectorAll('.m-rainbow'))
+      var rainbowList = [].slice.call(document.querySelectorAll('.progress-bar-rainbow'))
       var progressList = rainbowList.map(function (rainbow) {
         return new materialstyle.Rainbow(rainbow)
       })
