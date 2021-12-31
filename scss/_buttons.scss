@@ -119,20 +119,3 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
     }
   }
 }
-
-.m-file-input {
-  position: relative;
-  display: inline-block;
-
-  input[type="file"] { /* stylelint-disable-line selector-no-qualifying-type */
-    display: none;
-  }
-
-  .files {
-    display: inline-flex;
-    max-width: 200px;
-    padding: 7px 10px;
-    margin-bottom: 0;
-    white-space: nowrap;
-  }
-}
