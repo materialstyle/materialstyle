@@ -95,3 +95,18 @@ $toast-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .
 
 // Progress Bar
 $progress-border-radius: 0 !default;
+
+// Snackbar
+$snackbar-bg: #212121 !default;
+$snackbar-color: #fff !default;
+$snackbar-padding: 16px !default;
+$snackbar-min-width: 250px !default;
+$snackbar-border-radius: 2px !default;
+$snackbar-left: 50% !default;
+$snackbar-bottom: -20px !default;
+$snackbar-show-bottom: 20px !default;
+$snackbar-left-left: 20px !default;
+$snackbar-right-right: 20px !default;
+
+// z-index
+$zindex-snackbar: 1085 !default;

@@ -19,47 +19,53 @@
     <div class="snackbar" id="snackbar-5000">This is a Snackbar with visible duration of 5000ms.</div>
     <div class="snackbar" id="snackbar-close">
       Close this snackbar
-      <button type="button" class="btn btn-text-yellow" data-dismiss="snackbar">
+      <button type="button" class="btn btn-text-yellow ms-2" data-bs-dismiss="snackbar">
         Dismiss
       </button>
     </div>
   {{/inline}}
 
   {{#*inline "jQuery"}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
   {{/inline}}
 
   {{#*inline "scripts"}}
     <script>
       // Without jQuery
-      // var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-      // var rippleList = buttonList.map(function (button) {
-      //     return new materialstyle.Ripple(button)
-      // })
-      //
-      // var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
-      // var fileInputs = fileInputList.map(function (button) {
-      //     return new materialstyle.FileInput(button)
-      // })
+      document.querySelector('#show-snackbar').addEventListener('click', function () {
+        new materialstyle.Snackbar(document.querySelector('#snackbar'));
+      });
+
+      document.querySelector('#show-snackbar-5000').addEventListener('click', function () {
+        new materialstyle.Snackbar(document.querySelector('#snackbar-5000'), {
+          'visibleDuration': 5000
+        });
+      });
+
+      document.querySelector('#show-snackbar-dismissible').addEventListener('click', function () {
+        new materialstyle.Snackbar(document.querySelector('#snackbar-close'), {
+          'autoClose': false
+        });
+      });
 
       // With jQuery
-      $(function () {
-        $('#show-snackbar').click(function () {
-          $('#snackbar').snackbar();
-        });
+      // $(function () {
+        // $('#show-snackbar').click(function () {
+        //   $('#snackbar').snackbar();
+        // });
 
-        $('#show-snackbar-5000').click(function () {
-          $('#snackbar-5000').snackbar({
-            'visibleDuration': 5000
-          });
-        });
+        // $('#show-snackbar-5000').click(function () {
+        //   $('#snackbar-5000').snackbar({
+        //     'visibleDuration': 5000
+        //   });
+        // });
 
-        $('#show-snackbar-dismissible').click(function () {
-          $('#snackbar-close').snackbar({
-            'autoClose': false
-          });
-        });
-      })
+        // $('#show-snackbar-dismissible').click(function () {
+        //   $('#snackbar-close').snackbar({
+        //     'autoClose': false
+        //   });
+        // });
+      // })
     </script>
   {{/inline}}
 
