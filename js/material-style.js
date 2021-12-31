@@ -9,7 +9,6 @@ import Carousel from './src/carousel'
 import Collapse from './src/collapse'
 import Drawer from './src/drawer'
 import Dropdown from './src/dropdown'
-import FileInput from './src/file-input'
 import Modal from './src/modal'
 import Offcanvas from './src/offcanvas'
 import Popover from './src/popover'
@@ -32,7 +31,6 @@ export default {
   Collapse,
   Drawer,
   Dropdown,
-  FileInput,
   Modal,
   Offcanvas,
   Popover,

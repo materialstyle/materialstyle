@@ -11,7 +11,6 @@ webpackConfig = {
     Collapse: './js/src/collapse.js',
     Drawer: './js/src/drawer.js',
     Dropdown: './js/src/dropdown.js',
-    FileInput: './js/src/file-input.js',
     Modal: './js/src/modal.js',
     Navbar: './js/src/navbar.js',
     Popover: './js/src/popover.js',

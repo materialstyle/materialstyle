@@ -160,25 +160,6 @@
       </div>
     </div>
 
-    <div class="m-3">
-      <label class="d-block">File input button</label>
-      <div class="m-file-input m-1">
-        <input type="file" name="myfile">
-        <button type="button" class="btn btn-dark btn-file">
-          <i class="bi bi-paperclip"></i> Browse Single
-        </button>
-        <label class="files"></label>
-      </div>
-
-      <div class="m-file-input m-1">
-        <input type="file" name="myfiles[]" multiple>
-        <button type="button" class="btn btn-dark btn-file">
-          <i class="bi bi-paperclip"></i> Browse Multiple
-        </button>
-        <label class="files"></label>
-      </div>
-    </div>
-
     <h1 class="mt-4 mx-3">Floating Action Button (FAB)</h1>
 
     <div class="d-flex align-items-center flex-wrap">
@@ -238,15 +219,9 @@
         new materialstyle.Ripple(button)
       })
 
-      var fileInputList = [].slice.call(document.querySelectorAll('.m-file-input'))
-      var fileInputs = fileInputList.map(function (button) {
-        return new materialstyle.FileInput(button)
-      })
-
       // With jQuery
       // $(function(){
       //   $('.btn').ripple();
-      //   $('.m-file-input').fileinput();
       // });
     </script>
   {{/inline}}
