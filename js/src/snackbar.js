@@ -5,21 +5,21 @@
  * --------------------------------------------------------------------------
  */
 
-import BaseComponent from 'bootstrap/js/src/base-component'
 import {
-  defineJQueryPlugin
+  defineJQueryPlugin,
+  typeCheckConfig
 } from 'bootstrap/js/src/util/index'
+import BaseComponent from 'bootstrap/js/src/base-component'
+import Manipulator from 'bootstrap/js/src/dom/manipulator'
+import {
+  enableDismissTrigger
+} from 'bootstrap/js/src/util/component-functions'
 
 /**
- * ------------------------------------------------------------------------
  * Constants
- * ------------------------------------------------------------------------
  */
 
 const NAME = 'snackbar'
-const VERSION = '3.0.0-alpha1'
-
-const SELECTOR_DISMISS = '[data-dismiss="snackbar"]'
 
 const SNACKBAR_VISIBLE_DURATION = 3000
 const SNACKBAR_VISIBLE_DELAY = 200
@@ -28,6 +28,15 @@ const Default = {
   autoClose: true,
   visibleDuration: SNACKBAR_VISIBLE_DURATION
 }
+
+const DefaultType = {
+  autoClose: 'boolean',
+  visibleDuration: 'number'
+}
+
+/**
+ * Queue implementation
+ */
 
 const waitingQueue = []
 const runningQueue = []
@@ -71,50 +80,55 @@ Object.defineProperty(runningQueue, 'removeFromRunningQueue', {
   }
 })
 
+/**
+ * Class definition
+ */
+
 class Snackbar extends BaseComponent {
   constructor(element, config) {
     super(element)
-    this._element = element
-    this._element.dataset.visibleDuration = config.visibleDuration
-    this._element.dataset.autoClose = config.autoClose
 
-    if (this._element.querySelector(SELECTOR_DISMISS) !== null) {
-      this._element.querySelector(SELECTOR_DISMISS).addEventListener('click', () => this.handleDismiss())
-    }
+    this._config = this._getConfig(config)
+    this._element.dataset.visibleDuration = this._config.visibleDuration
+    this._element.dataset.autoClose = this._config.autoClose
+
+    waitingQueue.pushToWaitingQueue(this._element)
   }
 
   static get NAME() {
     return NAME
   }
 
-  static get VERSION() {
-    return VERSION
-  }
-
   static jQueryInterface(config) {
     return this.each(function () {
-      const _config = {
-        ...Default,
-        ...this.dataset,
-        ...typeof config === 'object' && config ? config : {}
-      }
-
-      const s = Snackbar.getOrCreateInstance(this, _config)
-
-      waitingQueue.pushToWaitingQueue(s._element)
+      Snackbar.getOrCreateInstance(this, config)
     })
   }
 
-  handleDismiss() {
+  _getConfig(config) {
+    config = {
+      ...Default,
+      ...Manipulator.getDataAttributes(this._element),
+      ...typeof config === 'object' ? config : {}
+    }
+    typeCheckConfig(NAME, config, DefaultType)
+    return config
+  }
+
+  close() {
     activeSnackbar.classList.remove('show')
     runningQueue.removeFromRunningQueue(activeSnackbar)
   }
 }
 
 /**
- * ------------------------------------------------------------------------
+ * Data API implementation
+ */
+
+enableDismissTrigger(Snackbar, 'close')
+
+/**
  * jQuery
- * ------------------------------------------------------------------------
  */
 
 defineJQueryPlugin(Snackbar)
