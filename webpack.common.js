@@ -9,7 +9,6 @@ webpackConfig = {
     Button: './js/src/button.js',
     Carousel: './js/src/carousel.js',
     Collapse: './js/src/collapse.js',
-    Drawer: './js/src/drawer.js',
     Dropdown: './js/src/dropdown.js',
     FileInput: './js/src/file-input.js',
     Modal: './js/src/modal.js',
