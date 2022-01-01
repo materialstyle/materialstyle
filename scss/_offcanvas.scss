@@ -1,7 +1,7 @@
 @import "node_modules/bootstrap/scss/offcanvas";
 
 :root {
-  --offcanvas-auto-hide-width: #{$offcanvas-horizontal-width};
+  --offcanvas-expand-width: #{$offcanvas-horizontal-width};
 }
 
 .offcanvas {
@@ -39,18 +39,18 @@
 }
 
 .offcanvas[class*="offcanvas-expand"] {
-  width: var(--offcanvas-auto-hide-width);
+  width: var(--offcanvas-expand-width);
   border: 0;
 
   &.oncanvas {
     z-index: $zindex-oncanvas;
 
     &.show.offcanvas-start ~ .offcanvas-pushed-content {
-      margin-left: var(--offcanvas-auto-hide-width);
+      margin-left: var(--offcanvas-expand-width);
     }
 
     &.show.offcanvas-end ~ .offcanvas-pushed-content {
-      margin-right: var(--offcanvas-auto-hide-width);
+      margin-right: var(--offcanvas-expand-width);
     }
 
     ~ .offcanvas-backdrop {
