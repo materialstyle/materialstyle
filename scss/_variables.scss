@@ -52,18 +52,6 @@ $navbar-dark-toggler-border-color: transparent !default;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-dark-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
 $navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-light-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
 
-// Drawer
-$drawer-width: 250px !default;
-$drawer-toggler-padding-y: .25rem !default;
-$drawer-toggler-padding-x: .25rem !default;
-$navbar-dark-drawer-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-dark-color}'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>") !default;
-$navbar-light-drawer-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-light-color}'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>") !default;
-$drawer-toggler-border-radius: 50% !default;
-
-$drawer-link-hover-bg-factor: .075 !default;
-$drawer-light-link-hover-bg: rgba($black, $drawer-link-hover-bg-factor) !default;
-$drawer-dark-link-hover-bg: rgba($white, $drawer-link-hover-bg-factor) !default;
-
 // Pagination
 $pagination-focus-box-shadow: 0 0 0 rgb(0 0 0 / 0);
 
@@ -110,3 +98,17 @@ $snackbar-right-right: 20px !default;
 
 // z-index
 $zindex-snackbar: 1085 !default;
+$zindex-oncanvas: 1029 !default;
+
+// Offcanvas
+$offcanvas-padding-y: 1rem * .5 !default;
+
+$drawer-toggler-padding-y: .25rem !default;
+$drawer-toggler-padding-x: .25rem !default;
+$navbar-dark-drawer-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-dark-color}'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>") !default;
+$navbar-light-drawer-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-light-color}'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>") !default;
+$drawer-toggler-border-radius: 50% !default;
+
+$drawer-link-hover-bg-factor: .075 !default;
+$drawer-light-link-hover-bg: rgba($black, $drawer-link-hover-bg-factor) !default;
+$drawer-dark-link-hover-bg: rgba($white, $drawer-link-hover-bg-factor) !default;
