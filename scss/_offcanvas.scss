@@ -45,16 +45,12 @@
   &.oncanvas {
     z-index: $zindex-oncanvas;
 
-    &.show.offcanvas-start {
-      ~ .offcanvas-pushed-content {
-        margin-left: var(--offcanvas-auto-hide-width);
-      }
+    &.show.offcanvas-start ~ .offcanvas-pushed-content {
+      margin-left: var(--offcanvas-auto-hide-width);
     }
 
-    &.show.offcanvas-end {
-      ~ .offcanvas-pushed-content {
-        margin-right: var(--offcanvas-auto-hide-width);
-      }
+    &.show.offcanvas-end ~ .offcanvas-pushed-content {
+      margin-right: var(--offcanvas-auto-hide-width);
     }
 
     ~ .offcanvas-backdrop {
