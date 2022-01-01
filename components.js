@@ -7,6 +7,7 @@ module.exports = [
   'checkbox-radio-&-switch',
   'drawer',
   'drawer-auto-hide',
+  'drawer-auto-hide-end',
   'dropdown',
   'image-list',
   'list-group',

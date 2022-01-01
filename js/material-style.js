@@ -7,7 +7,6 @@ import Alert from './src/alert'
 import Button from './src/button'
 import Carousel from './src/carousel'
 import Collapse from './src/collapse'
-import Drawer from './src/drawer'
 import Dropdown from './src/dropdown'
 import Modal from './src/modal'
 import Offcanvas from './src/offcanvas'
@@ -29,7 +28,6 @@ export default {
   Button,
   Carousel,
   Collapse,
-  Drawer,
   Dropdown,
   Modal,
   Offcanvas,
