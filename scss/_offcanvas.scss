@@ -45,14 +45,20 @@
   &.oncanvas {
     z-index: $zindex-oncanvas;
 
-    &.show {
+    &.show.offcanvas-start {
       ~ .offcanvas-pushed-content {
         margin-left: var(--offcanvas-auto-hide-width);
       }
+    }
 
-      ~ .offcanvas-backdrop {
-        display: none;
+    &.show.offcanvas-end {
+      ~ .offcanvas-pushed-content {
+        margin-right: var(--offcanvas-auto-hide-width);
       }
+    }
+
+    ~ .offcanvas-backdrop {
+      display: none;
     }
 
     .btn-close {
@@ -62,7 +68,7 @@
 }
 
 .offcanvas-pushed-content {
-  @include transition(margin-left $offcanvas-transition-duration ease-in-out);
+  @include transition(margin $offcanvas-transition-duration ease-in-out);
 }
 
 .offcanvas-light {
