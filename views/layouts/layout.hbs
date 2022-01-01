@@ -8,8 +8,13 @@
   {{#> styles }}{{/styles}}
 
   <style>
-    .site-drawer .nav-link.active {
-      background-color: #D1C4E9;
+    body {
+      --offcanvas-auto-hide-width: 300px;
+    }
+
+    #siteOffcanvas .nav-link.active {
+      background-color: #6f42c1;
+      color: white;
     }
   </style>
 </head>
@@ -18,7 +23,10 @@
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
-      <button class="drawer-toggler">
+      <button class="drawer-toggler me-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#siteOffcanvas">
         <span class="drawer-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
@@ -29,21 +37,20 @@
   </div>
 </nav>
 
-<section class="m-root">
-  <aside class="drawer auto-hide drawer-light site-drawer" style="">
-    <div class="drawer-header bg-purple text-light">
-      <a class="drawer-brand text-light d-flex align-items-center" href="javascript:">
+<aside class="offcanvas offcanvas-start offcanvas-expand-md offcanvas-light" tabindex="-1" id="siteOffcanvas">
+  <div class="offcanvas-header bg-purple">
+    <a class="offcanvas-title text-white" href="javascript:">
         <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Logo"
              style="width:40px; height:40px;">
         MATERIAL STYLE
       </a>
-      <button type="button" class="btn-close btn-close-white drawer-close-btn" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="drawer-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-purple bg-opacity-10">
       <ul class="nav flex-column">
         {{#each htmlWebpackPlugin.options.components}}
           <li class="nav-item">
-            <a class="nav-link" href="/{{this}}.html" data-title="{{transform this}}">
+            <a class="nav-link rounded-pill" href="/{{this}}.html" data-title="{{transform this}}">
               {{transform this}}
             </a>
           </li>
@@ -51,35 +58,29 @@
       </ul>
     </div>
   </aside>
-  <div class="m-container p-2">
+  <div class="offcanvas-pushed-content p-2">
 
     {{#> content }}{{/content}}
 
   </div>
-</section>
 
 {{#> jQuery }}{{/jQuery}}
 
 <script src="../dist/js/materialstyle.min.js"></script>
 <script>
-  var drawers = [].slice.call(document.querySelectorAll('.drawer'))
-  var drawerList = drawers.map(function (drawer) {
-    return new materialstyle.Drawer(drawer)
-  })
-
   // Add active class to the link pointing to current page
   document.querySelector('a[data-title="' + document.title + '"]').classList.add('active');
 
-  // Remember sidebar scroll position
-  let sidebar = document.querySelector(".site-drawer .drawer-body");
+  // Remember offcanvas scroll position
+  let offcanvas = document.querySelector("#siteOffcanvas .offcanvas-body");
 
-  let positionTop = localStorage.getItem("sidebar-scroll");
+  let positionTop = localStorage.getItem("offcanvas-scroll");
   if (positionTop !== null) {
-    sidebar.scrollTop = parseInt(positionTop, 10);
+    offcanvas.scrollTop = parseInt(positionTop, 10);
   }
 
   window.addEventListener("beforeunload", () => {
-    localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
+    localStorage.setItem("offcanvas-scroll", offcanvas.scrollTop);
   });
 </script>
 
