@@ -64,7 +64,7 @@
 }
 
 .offcanvas-pushed-content {
-  @include transition(margin $offcanvas-transition-duration ease-in-out);
+  @include transition(margin-left $offcanvas-transition-duration ease-in-out, margin-right $offcanvas-transition-duration ease-in-out);
 }
 
 .offcanvas-light {
