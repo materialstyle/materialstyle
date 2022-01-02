@@ -57,4 +57,4 @@ class OffCanvasExpand {
   }
 }
 
-new OffCanvasExpand()
+(() => new OffCanvasExpand())()
