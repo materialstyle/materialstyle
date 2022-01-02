@@ -97,8 +97,9 @@ $snackbar-left-left: 20px !default;
 $snackbar-right-right: 20px !default;
 
 // z-index
+$zindex-oncanvas: 990 !default;
+$zindex-navbar: 995 !default;
 $zindex-snackbar: 1085 !default;
-$zindex-oncanvas: 1029 !default;
 
 // Offcanvas
 $offcanvas-padding-y: 1rem * .5 !default;
