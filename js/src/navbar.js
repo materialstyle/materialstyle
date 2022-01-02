@@ -5,7 +5,7 @@
  * --------------------------------------------------------------------------
  */
 
-class NavbarFixed {
+class Navbar {
   constructor() {
     this.addEventListeners()
   }
@@ -48,4 +48,4 @@ class NavbarFixed {
   }
 }
 
-(() => new NavbarFixed())()
+(() => new Navbar())()
