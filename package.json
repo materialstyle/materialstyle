@@ -26,7 +26,9 @@
     "dev": "webpack --config webpack.dev.js",
     "start": "webpack serve --config webpack.dev.js",
     "js-lint": "eslint js/src/*",
-    "scss-lint": "stylelint scss/*"
+    "scss-lint": "stylelint scss/*",
+    "docs-build": "hugo --cleanDestinationDir",
+    "docs-serve": "hugo server --port 9001 --disableFastRender"
   },
   "author": "Neeraj Kumar Das (https://github.com/nkdas91)",
   "license": "MIT",
@@ -52,6 +54,7 @@
     "handlebars-loader": "^1.7.1",
     "html-webpack-harddisk-plugin": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "hugo-bin": "^0.79.2",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss-loader": "^6.2.1",
     "sass": "^1.45.0",
@@ -72,5 +75,8 @@
     "dist/{css,js}",
     "js/{dist,src}",
     "scss"
-  ]
+  ],
+  "hugo-bin": {
+    "buildTags": "extended"
+  }
 }
