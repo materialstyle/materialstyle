@@ -41,24 +41,33 @@
 .offcanvas[class*="offcanvas-expand"] {
   width: var(--offcanvas-expand-width);
   border: 0;
+}
 
-  &.oncanvas {
-    z-index: $zindex-oncanvas;
+.offcanvas-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
 
-    &.show.offcanvas-start ~ .offcanvas-pushed-content {
-      margin-left: var(--offcanvas-expand-width);
-    }
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        z-index: auto;
 
-    &.show.offcanvas-end ~ .offcanvas-pushed-content {
-      margin-right: var(--offcanvas-expand-width);
-    }
+        &.show.offcanvas-start ~ .offcanvas-pushed-content {
+          margin-left: var(--offcanvas-expand-width);
+        }
 
-    ~ .offcanvas-backdrop {
-      display: none;
-    }
+        &.show.offcanvas-end ~ .offcanvas-pushed-content {
+          margin-right: var(--offcanvas-expand-width);
+        }
 
-    .btn-close {
-      display: none;
+        ~ .offcanvas-backdrop {
+          display: none;
+        }
+
+        .btn-close {
+          display: none;
+        }
+      }
     }
   }
 }
