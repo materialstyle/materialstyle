@@ -38,3 +38,6 @@ module:
       target: i18n
     - source: site/archetypes
       target: archetypes
+
+- name: Hugo setup
+  uses: peaceiris/actions-hugo@v2.4.13
