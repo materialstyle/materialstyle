@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/docs/5.1/components/alert/</loc>
+    <loc>http://materialstyle.github.io/materialstyle/docs/5.1/components/alert/</loc>
   </url><url>
-    <loc>http://example.org/docs/</loc>
+    <loc>http://materialstyle.github.io/materialstyle/docs/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>http://materialstyle.github.io/materialstyle/</loc>
   </url>
 </urlset>
