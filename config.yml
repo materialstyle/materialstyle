@@ -1,0 +1,22 @@
+baseURL: 'http://materialstyle.github.io/materialstyle'
+languageCode: 'en'
+title: 'Material Style'
+
+publishDir: "_site"
+
+module:
+  mounts:
+  - source: site/content
+    target: content
+  - source: site/static
+    target: static
+  - source: site/layouts
+    target: layouts
+  - source: site/data
+    target: data
+  - source: site/assets
+    target: assets
+  - source: site/i18n
+    target: i18n
+  - source: site/archetypes
+    target: archetypes
