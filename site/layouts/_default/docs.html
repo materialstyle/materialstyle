@@ -1,5 +1,30 @@
 {{ define "main" }}
+  <div class="component-page">
 
-        {{ .Content }}
+    <div class="component-showcase">
+      {{ .Content }}
+    </div>
 
+    <div class="component-map">
+      <div class="row">
+        <div class="col">
+          <div class="adspace bg-gray-100">
+
+          </div>
+        </div>
+      </div>
+
+      {{ if (eq .Page.Params.toc true) }}
+        <div class="row">
+          <div class="col">
+            <div class="pt-1 ms-toc">
+              <h4>On this page</h4>
+              {{ .TableOfContents }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+
+  </div>
 {{ end }}
