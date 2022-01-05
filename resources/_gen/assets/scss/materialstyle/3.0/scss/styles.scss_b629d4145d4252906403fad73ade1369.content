@@ -1,0 +1,868 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:500");
+html {
+  min-height: 100vh;
+}
+
+html, body {
+  background: #f8f9fa;
+}
+
+body {
+  --offcanvas-expand-width: 300px;
+}
+
+.ms-toc nav ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.ms-toc nav a {
+  color: #6c757d;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.ms-toc nav a:not(:hover) {
+  text-decoration: none;
+}
+
+.version-selector .selected-item {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.version-selector .selected-item::after {
+  bottom: 37px;
+  border-color: #2196F3 transparent transparent transparent;
+}
+
+.color-box {
+  width: 250px;
+  padding: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#site-home-top-nav {
+  transform: translateY(0);
+  transition: transform 300ms 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms 300ms;
+  opacity: 1;
+  flex-wrap: wrap;
+}
+
+.navbar-brand, #siteOffcanvas .offcanvas-title, .footer-brand {
+  font-size: 1rem !important;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+}
+
+#site-home-top-nav.hide {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+#siteOffcanvas .nav-link.active {
+  background-color: #6f50c1;
+  color: #fff !important;
+}
+
+#siteOffcanvas .list-heading {
+  padding: .5rem 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+}
+
+.home-container {
+  padding: 0;
+}
+
+.home-container p {
+  font-size: 20px;
+}
+
+.home-container .home-odd, .home-container .home-even {
+  padding: 50px 10% 50px 10%;
+  margin: -15px 0 0 0;
+}
+
+.home-container .ms-shape-container {
+  display: block;
+}
+
+.get-started-container {
+  padding: 50px 10% 50px 10%;
+}
+
+.get-started-container h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.get-started-container h3 {
+  font-weight: 300;
+}
+
+.color-syntax {
+  font-family: monospace;
+  padding: 10px;
+}
+
+.color-syntax label {
+  margin: 0;
+}
+
+#collapseFeedback .form-group {
+  max-width: 400px;
+}
+
+.button-container, .tab-container, .card-container, .text-box-container, .list-container,
+.checkbox-container, .radio-container, .nav-container {
+  padding: 30px 0 20px 0;
+}
+
+.text-box-container .ms-text-field-wrapper,
+.text-box-container .m-text-field,
+.text-box-container .m-text-field-outline,
+.text-box-container .m-select,
+.text-box-container .m-select-outline {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-container, .description-container, .multi-col-description-container,
+.nav-container, .checkbox-container, .radio-container {
+  text-align: center;
+}
+
+.button-container .toast, .description-container .toast, .multi-col-description-container .toast,
+.nav-container .toast, .checkbox-container .toast, .radio-container .toast {
+  text-align: left;
+}
+
+.description-container, .multi-col-description-container {
+  padding: 15px;
+}
+
+.description-container label, .multi-col-description-container label {
+  margin: 0;
+}
+
+.highlight {
+  background: #F5F5F5;
+  color: #424242;
+  padding: 1.5rem 1rem;
+  font-family: monospace;
+  word-break: break-word;
+  position: relative;
+}
+
+.component-wrapper {
+  background: #FFFFFF;
+  padding: 2px 0 0 0;
+  border: 1px solid #dee2e6;
+  margin-bottom: 15px;
+}
+
+.highlight .highlight pre {
+  margin: 0;
+}
+
+.highlight:hover .hljs, .highlight:hover {
+  background: #ededed;
+}
+
+.highlight:hover .copy-btn {
+  visibility: visible;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  pointer-events: none;
+  font-size: 12px;
+}
+
+.card-container .card, .card-container .elevation-div, .card-container .ms-shape-container {
+  margin: 0 auto !important;
+}
+
+.card-container .elevation-div {
+  width: 160px;
+  height: 80px;
+  text-align: center;
+}
+
+.card-container .elevation-div label {
+  padding: 28px;
+}
+
+.component-page {
+  display: flex;
+  flex-wrap: no-wrap;
+  gap: 2rem;
+}
+
+.component-page .component-showcase {
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -o-flex: 1 1 auto;
+  min-width: 245px;
+}
+
+.component-page .component-showcase h1, .component-page .component-showcase h2, .component-page .component-showcase h3 {
+  font-weight: 300;
+}
+
+.component-page .component-showcase h3, .component-page .component-showcase p {
+  margin: 10px 10px 10px 11px;
+}
+
+.component-page .component-map {
+  -webkit-flex: 1 0 220px;
+  -moz-flex: 1 0 220px;
+  -ms-flex: 1 0 220px;
+  -o-flex: 1 0 220px;
+  max-width: 220px;
+}
+
+.component-page .component-map h4 {
+  font-weight: 300;
+}
+
+.component-page h1, .component-page h5 {
+  color: #424242;
+}
+
+.component-page h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.component-page h5 {
+  font-weight: 400;
+  margin: 10px;
+}
+
+.iframe {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #9E9E9E;
+  padding: 1px;
+}
+
+.theme-colors-container .ms-card, .theme-colors-container .color-group {
+  width: 250px;
+}
+
+.theme-colors-container label {
+  margin: 0;
+}
+
+.color-palette-container .card-body {
+  padding: 10px 15px 0;
+}
+
+.color-palette-container .color-main-header {
+  height: 80px;
+}
+
+.align-right {
+  float: right;
+}
+
+.color-palette-container .ms-card .card-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.nav-prev:hover {
+  background-color: #F8BBD0 !important;
+}
+
+.nav-next:hover {
+  background-color: #BBDEFB !important;
+}
+
+.adspace {
+  padding: 10px;
+  border-bottom: 5px solid #fafafa;
+}
+
+.adspace .ad {
+  height: 200px;
+  width: 200px;
+  color: white;
+}
+
+#top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1030;
+  display: none;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #F5F5F5;
+}
+
+.hljs-comment, .hljs-quote {
+  color: #424242;
+  font-style: italic;
+}
+
+.hljs-keyword, .hljs-selector-tag, .hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number, .hljs-literal, .hljs-variable, .hljs-template-variable, .hljs-tag .hljs-attr {
+  color: #e93d62;
+}
+
+.hljs-string, .hljs-doctag {
+  color: #009688;
+}
+
+.hljs-title, .hljs-section, .hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type, .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag, .hljs-name, .hljs-attribute {
+  color: #3f50b4;
+  font-weight: normal;
+}
+
+.hljs-regexp, .hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol, .hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in, .hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .component-page {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media (min-width: 0) {
+  .navbar-expand-sm .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
+
+@media (max-width: 514px) {
+  .navbar-expand-sm .navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  background-color: #efefef;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 10px;
+}
+
+/* Container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  top: 19px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the timeline-container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the timeline-container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left timeline-container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #f8bbd0;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f8bbd0;
+}
+
+/* Add arrows to the right timeline-container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #bbdefb;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #bbdefb transparent transparent;
+}
+
+/* Fix the circle for timeline-containers on the right side */
+.right::after {
+  left: -12px;
+  border: 6px solid #bbdefb;
+}
+
+.left::after {
+  right: -13px;
+  border: 6px solid #f8bbd0;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 2px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Full-width timeline-containers */
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  /* Make sure that all arrows are pointing leftwards */
+  .left::before {
+    left: 60px;
+    border: medium solid #f8bbd0;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f8bbd0 transparent transparent;
+  }
+  .right::before {
+    left: 60px;
+    border: medium solid #bbdefb;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #bbdefb transparent transparent;
+  }
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 19px;
+  }
+  /* Make all right timeline-containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.highlight .hll {
+  background-color: #ffffcc;
+}
+
+.highlight .c {
+  color: #008000;
+}
+
+/* Comment */
+.highlight .err {
+  border: 1px solid #FF0000;
+}
+
+/* Error */
+.highlight .k {
+  color: #0000ff;
+}
+
+/* Keyword */
+.highlight .cm {
+  color: #008000;
+}
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #0000ff;
+}
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #008000;
+}
+
+/* Comment.Single */
+.highlight .cs {
+  color: #008000;
+}
+
+/* Comment.Special */
+.highlight .ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.highlight .gh {
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+.highlight .gp {
+  font-weight: bold;
+}
+
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.highlight .gu {
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+.highlight .kc {
+  color: #0000ff;
+}
+
+/* Keyword.Constant */
+.highlight .kd {
+  color: #0000ff;
+}
+
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #0000ff;
+}
+
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #0000ff;
+}
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #0000ff;
+}
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #2b91af;
+}
+
+/* Keyword.Type */
+.highlight .s {
+  color: #a31515;
+}
+
+/* Literal.String */
+.highlight .nc {
+  color: #2b91af;
+}
+
+/* Name.Class */
+.highlight .ow {
+  color: #0000ff;
+}
+
+/* Operator.Word */
+.highlight .sb {
+  color: #a31515;
+}
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #a31515;
+}
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #a31515;
+}
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #a31515;
+}
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #a31515;
+}
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #a31515;
+}
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #a31515;
+}
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #a31515;
+}
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #a31515;
+}
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #a31515;
+}
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #a31515;
+}
+
+/* Literal.String.Symbol */
+.highlight .nt {
+  color: #1a237e;
+}
+
+.highlight .na {
+  color: #00695c;
+}
+
+.inline-code {
+  display: inline-block;
+}
+
+.inline-code .highlight {
+  display: inline-block;
+}
+
+pre, .highlight {
+  margin: 0;
+}
+
+/* Algolia Doc Search */
+.algolia-autocomplete {
+  width: 100%;
+}
+
+.algolia-autocomplete .ds-dropdown-menu {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  box-shadow: none;
+  position: relative !important;
+}
+
+.algolia-autocomplete .ds-dropdown-menu:before {
+  display: none;
+}
+
+.algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
+  border: 0;
+  box-shadow: none;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  padding: .4rem 1rem;
+  font-weight: 600;
+  color: #AD1457;
+  border: 0;
+  background: #FFEBEE;
+  border-radius: 4px;
+}
+
+:not(.algolia-docsearch-suggestion__main) > .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  display: none;
+}
+
+.ds-suggestion:not(:first-child) .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  padding-top: .75rem;
+  margin-top: .75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
+  box-shadow: none !important;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--content {
+  padding: .25rem 1rem;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--content:before {
+  display: none;
+}
+
+.ds-cursor .algolia-autocomplete .algolia-docsearch-suggestion--content {
+  background-color: rgba(173, 20, 87, 0.2);
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion {
+  display: block;
+  text-decoration: none;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion .algolia-docsearch-suggestion--subcategory-column {
+  display: none !important;
+  width: 0;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-inline {
+  display: inline;
+  color: #616161;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-inline::after {
+  padding: 0 .25rem;
+  content: "/";
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  display: inline;
+  font-weight: 500;
+  color: #424242;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--text {
+  color: #424242;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  color: #AD1457 !important;
+  background-color: #FFEBEE !important;
+  box-shadow: none !important;
+}
+
+.algolia-autocomplete .ds-suggestions {
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+  margin: 10px 0;
+  padding: 15px 0;
+}
+
+.algolia-autocomplete .algolia-docsearch-footer {
+  float: left;
+}
+
+#searchBox {
+  border: 0;
+  width: 100%;
+  outline: none;
+}
+
+@media (max-width: 804px) {
+  #searchContainer {
+    width: 100%;
+  }
+  .algolia-autocomplete .ds-dropdown-menu {
+    min-width: 100%;
+  }
+}
+
+#searchContainer .modal-header .close {
+  margin: -1rem auto;
+}
+
+#searchContainer .modal-content {
+  border-radius: 0;
+}
