@@ -1,17 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
+  {{ partial "header" . }}
+</head>
+<body>
+  {{ partial "navbar" . }}
 
-  </head>
-  {{ block "body_override" . }}<body>{{ end }}
+  {{ partial "drawer" . }}
 
+  <div class="offcanvas-pushed-content pt-4 bg-white"
+       style="margin-top: var(--navbar-fixed-height);">
+    <div class="container">
+      {{ block "main" . }}
+      {{ end }}
 
-    {{ block "main" . }}
-    {{ end }}
+      {{ partial "footer" . }}
+    </div>
+  </div>
 
-
-
-    {{ block "footer" . }}
-    {{ end }}
-  </body>
+  {{ partial "scripts" . }}
+</body>
 </html>
