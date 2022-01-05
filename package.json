@@ -24,7 +24,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "start": "webpack serve --config webpack.dev.js",
+    "start": "webpack --config webpack.common.js --mode=development --watch",
     "js-lint": "eslint js/src/*",
     "scss-lint": "stylelint scss/*",
     "docs-build": "hugo --cleanDestinationDir",
@@ -56,6 +56,9 @@
     "html-webpack-plugin": "^5.5.0",
     "hugo-bin": "^0.79.2",
     "mini-css-extract-plugin": "^2.4.5",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
     "postcss-loader": "^6.2.1",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
