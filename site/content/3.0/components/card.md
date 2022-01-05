@@ -112,8 +112,7 @@ toc: true
   <div class="card-img-overlay">
     <h4 class="card-title text-white">Butterfly</h4>
     <p class="card-text text-white">
-      There is nothing in a caterpillar that tells you it's going to be a
-      butterfly.
+      Just when the caterpillar thought the world was over, it became a Butterfly.
     </p>
   </div>
   <div class="d-flex justify-content-between align-items-center flex-wrap p-2 bg-yellow bg-opacity-10">
