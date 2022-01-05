@@ -200,7 +200,7 @@ function populateColors() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  anchors.add('h2');
+  anchors.add('h2, h3');
 
   // Hide AdSpace
   let ad = document.querySelector('.adspace');

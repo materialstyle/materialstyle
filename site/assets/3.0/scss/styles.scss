@@ -23,21 +23,22 @@ body {
   nav ul {
     padding-left: 0;
     list-style: none;
+    ul {
+      padding-left: 1rem;
+    }
   }
 }
 
 .ms-toc nav a {
   color: #6c757d;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
   display: block;
+  font-size: 0.875rem;
 }
 
 .ms-toc nav a:not(:hover) {
   text-decoration: none;
 }
-
-
-
 
 .version-selector .selected-item {
   font-size: 3rem;
