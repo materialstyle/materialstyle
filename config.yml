@@ -2,10 +2,29 @@ baseURL: 'http://materialstyle.github.io/materialstyle'
 languageCode: 'en'
 title: 'Material Style'
 
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+  tableOfContents:
+    startLevel:         2
+    endLevel:           6
+
+buildDrafts:            true
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "term", "RSS", "section"]
+
 publishDir: "_site"
 
 module:
   mounts:
+  - source: dist
+    target: static/3.0/dist
   - source: site/content
     target: content
   - source: site/static
@@ -16,7 +35,10 @@ module:
     target: data
   - source: site/assets
     target: assets
-  - source: site/i18n
-    target: i18n
-  - source: site/archetypes
-    target: archetypes
+
+params:
+  description:          "A Material Design UI Library based on Bootstrap"
+  authors:              "Neeraj Kumar Das"
+
+  current_version:      "3.0.0"
+  docs_version:         "3.0"
