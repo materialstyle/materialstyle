@@ -123,6 +123,17 @@ function initComponents() {
     return new materialstyle.Spinner(s)
   })
 
+  // Toast
+  var toastTrigger = document.getElementById('show-toast')
+  var toastLiveExample = document.getElementById('live-toast')
+  if (toastTrigger && toastLiveExample) {
+    toastTrigger.addEventListener('click', function () {
+      var toast = new materialstyle.Toast(toastLiveExample)
+
+      toast.show()
+    })
+  }
+
   // Modal
   var myModal = document.getElementById('myModal')
   if (myModal) {
