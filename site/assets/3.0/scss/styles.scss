@@ -29,9 +29,15 @@ body {
   }
 }
 
-.component-showcase .list-group {
-  max-width: 300px;
-  flex-grow: 1;
+.component-showcase {
+  .list-group {
+    max-width: 300px;
+    flex-grow: 1;
+  }
+
+  .form-floating, .input-group {
+    width: 300px;
+  }
 }
 
 .ms-toc nav a {
@@ -143,22 +149,6 @@ h1, h2, h3, h4, h5 {
   padding: 30px 0 20px 0;
 }
 
-.text-box-container .ms-text-field-wrapper,
-.text-box-container .m-text-field,
-.text-box-container .m-text-field-outline,
-.text-box-container .m-select,
-.text-box-container .m-select-outline {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.input-group {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .button-container, .description-container, .multi-col-description-container,
 .nav-container, .checkbox-container, .radio-container {
   text-align: center;
@@ -243,7 +233,7 @@ h1, h2, h3, h4, h5 {
     h1, h2, h3 {
       font-weight: 300;
     }
-    h3, p {
+    p {
       margin: 10px 10px 10px 11px;
     }
   }

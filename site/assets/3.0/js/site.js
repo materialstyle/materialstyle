@@ -83,9 +83,11 @@ function initComponents() {
   })
 
   // Text Field
-  var textFieldList = [].slice.call(document.querySelectorAll('.m-text-field'))
+  var textFieldList = [].slice.call(document.querySelectorAll('.form-floating'))
   var textFields = textFieldList.map(function (textField) {
-    return new materialstyle.TextField(textField)
+    if (textField.querySelector('.form-control')) {
+      return new materialstyle.TextField(textField)
+    }
   })
 
   // Select Field
