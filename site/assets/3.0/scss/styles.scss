@@ -29,6 +29,11 @@ body {
   }
 }
 
+.component-showcase .list-group {
+  max-width: 300px;
+  flex-grow: 1;
+}
+
 .ms-toc nav a {
   color: #6c757d;
   padding: 0.25rem 0;
