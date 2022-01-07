@@ -1,7 +1,10 @@
 ---
 layout: docs
 title: Text Field
-group: components
+group: forms
+aliases:
+  - "/3.0/forms/"
+  - "/forms/"
 toc: true
 ---
 

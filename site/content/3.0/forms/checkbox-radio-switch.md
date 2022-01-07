@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Checkbox, Radio & Switch
-group: components
+group: forms
 toc: true
 ---
 

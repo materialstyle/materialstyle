@@ -11,12 +11,17 @@
     - title: Color
     - title: Elevation
 
+- title: Forms
+  pages:
+    - title: Text Field
+    - title: Select Field
+    - title: Checkbox, Radio & Switch
+
 - title: Components
   pages:
     - title: Alert
     - title: Button
     - title: Card
-    - title: Checkbox, Radio & Switch
     - title: Drawer
     - title: Floating Action Button
     - title: Image List
@@ -26,10 +31,8 @@
     - title: Popover
     - title: Progress Bar
     - title: Range Slider
-    - title: Select Field
     - title: Shape
     - title: Snackbar
     - title: Spinner
     - title: Tab
-    - title: Text Field
     - title: Toast
