@@ -112,7 +112,7 @@ function initComponents() {
   })
 
   // Progress Bar
-  var rainbowList = [].slice.call(document.querySelectorAll('.m-rainbow'))
+  var rainbowList = [].slice.call(document.querySelectorAll('.progress-bar-rainbow'))
   var progressList = rainbowList.map(function (rainbow) {
     return new materialstyle.Rainbow(rainbow)
   })
