@@ -36,6 +36,16 @@ module:
   - source: site/assets
     target: assets
 
+related:
+  includeNewer: false
+  indices:
+    - name: keywords
+      weight: 100
+    - name: date
+      weight: 10
+  threshold: 80
+  toLower: false
+
 params:
   description:          "A Material Design UI Library based on Bootstrap"
   authors:              "Neeraj Kumar Das"

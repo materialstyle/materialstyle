@@ -3,6 +3,7 @@ layout: docs
 title: Starter Template
 group: getting-started
 toc: true
+keywords: getting-started, starter-template
 ---
 
 # Starter Template
