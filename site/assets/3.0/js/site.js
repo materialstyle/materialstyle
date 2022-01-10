@@ -177,20 +177,20 @@ function populateColors() {
   let colorContainer = document.getElementById('defaultColorOptions');
   if (colorContainer) {
     let bgToColorMap = {
-      "blue,primary": "#0d6efd,white",
-      "indigo": "#6610f2,white",
-      "purple": "#6f42c1,white",
-      "pink": "#d63384,white",
       "red,danger": "#dc3545,white",
-      "orange": "#fd7e14,black",
-      "yellow,warning": "#ffc107,black",
-      "green,success": "#198754,white",
-      "teal": "#20c997,black",
+      "pink": "#d63384,white",
+      "purple": "#6f42c1,white",
+      "indigo": "#6610f2,white",
+      "blue,primary": "#0d6efd,white",
       "cyan,info": "#0dcaf0,black",
-      "gray,secondary": "#6c757d,white",
+      "teal": "#20c997,black",
+      "green,success": "#198754,white",
+      "yellow,warning": "#ffc107,black",
+      "orange": "#fd7e14,black",
       "gray-dark,dark": "#343a40,white",
-      "white": "#fff,black",
-      "black": "#000,white"
+      "gray,secondary": "#6c757d,white",
+      "black": "#000,white",
+      "white": "#fff,black"
     };
 
     for (const [key, value] of Object.entries(bgToColorMap)) {
