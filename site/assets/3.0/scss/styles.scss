@@ -69,6 +69,15 @@ body {
   justify-content: space-between;
 }
 
+.shadows {
+  width: 250px;
+  padding: 2rem;
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px
+}
+
 #site-home-top-nav {
   //justify-content: space-between;
   transform: translateY(0);

@@ -173,6 +173,19 @@ function initComponents() {
   }
 }
 
+function populateShadows() {
+  let shadowsContainer = document.getElementById('shadows-container');
+
+  if (shadowsContainer) {
+    for (i = 1; i <= 24; i++) {
+      let shadowBox = document.createElement('div');
+      shadowBox.className = 'shadows shadow-' + i + 'dp';
+      shadowBox.innerHTML = 'class="shadow-' + i + 'dp"';
+      shadowsContainer.append(shadowBox);
+    }
+  }
+}
+
 function populateColors() {
   let colorContainer = document.getElementById('defaultColorOptions');
   if (colorContainer) {
@@ -238,6 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initComponents()
 
   populateColors()
+  populateShadows()
 });
 
 $(function () {

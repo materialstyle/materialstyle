@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Colors
-group: components
+group: utilities
 aliases:
   - "/3.0/utilities/"
   - "/utilities/"
