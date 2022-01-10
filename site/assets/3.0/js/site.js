@@ -84,16 +84,18 @@ function initComponents() {
 
   // Text Field
   var textFieldList = [].slice.call(document.querySelectorAll('.form-floating'))
-  var textFields = textFieldList.map(function (textField) {
+  textFieldList.map(function (textField) {
     if (textField.querySelector('.form-control')) {
-      return new materialstyle.TextField(textField)
+      new materialstyle.TextField(textField)
     }
   })
 
   // Select Field
-  var selectList = [].slice.call(document.querySelectorAll('.m-select'))
-  var selects = selectList.map(function (select) {
-    return new materialstyle.SelectField(select)
+  var selectList = [].slice.call(document.querySelectorAll('.form-floating'))
+  selectList.map(function (select) {
+    if (select.querySelector('.form-select')) {
+      new materialstyle.SelectField(select)
+    }
   })
 
   // Tab
@@ -213,7 +215,7 @@ function populateColors() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  anchors.add('h2, h3');
+  anchors.add('h2, h3, h4');
 
   // Hide AdSpace
   let ad = document.querySelector('.adspace');
