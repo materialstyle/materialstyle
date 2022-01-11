@@ -8,8 +8,8 @@
 import {
   getBaseColor, getPrimaryColor
 } from '../src/utility.js'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import BaseComponent from 'bootstrap/js/src/base-component'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import {
   defineJQueryPlugin

@@ -8,8 +8,8 @@
 import {
   getBaseColor, getPrimaryColor
 } from '../src/utility.js'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import BaseComponent from 'bootstrap/js/src/base-component'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import {
   defineJQueryPlugin
@@ -245,7 +245,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
-          return `<span class="badge rounded-pill bg-dark d-inline-flex align-items-center me-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-value="${option.value}"></button></span>`
+          return `<span class="badge bg-dark d-inline-flex align-items-center p-1 m-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-value="${option.value}"></button></span>`
         }
         return ''
       }).join('')

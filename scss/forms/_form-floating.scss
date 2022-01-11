@@ -66,11 +66,16 @@
   }
 
   > .dropdown {
+    border: 2px solid transparent;
+
     > .dropdown-toggle {
       padding: $form-select-padding-y calc(var(--append-width, 0px) + $form-select-indicator-padding) $form-select-padding-y var(--prepend-width, $form-select-padding-x);
       display: block;
       width: 100%;
+      height: auto;
       min-height: 60px;
+      max-height: 300px;
+      overflow: auto;
       border-radius: $border-radius $border-radius 0 0;
       background-image: escape-svg($form-select-indicator);
       background-repeat: no-repeat;
@@ -212,13 +217,13 @@
 
     > .form-control {
       &:focus, &:not(:placeholder-shown) {
-        padding: $input-padding-y var(--append-width, $input-padding-x) $input-padding-y var(--prepend-width, $input-padding-x)
+        padding: $input-padding-y var(--append-width, $input-padding-x) $input-padding-y var(--prepend-width, $input-padding-x);
       }
     }
 
     > .dropdown.float {
       > .dropdown-toggle {
-        padding: $input-padding-y var(--append-width, $input-padding-x) $input-padding-y var(--prepend-width, $input-padding-x)
+        padding: 1.125rem calc(var(--append-width, 0px) + $form-select-indicator-padding) 1.125rem var(--prepend-width, $form-select-padding-x);
       }
     }
 
