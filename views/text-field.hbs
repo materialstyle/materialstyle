@@ -196,25 +196,10 @@
     </div>
   {{/inline}}
 
-  {{#*inline "jQuery"}}
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
-  {{/inline}}
-
   {{#*inline "scripts"}}
     <script>
-      // With jQuery
-      // $(function(){
-      //    $('.form-floating').textfield();
-      // });
-
       (function () {
         'use strict'
-
-        // Without jQuery
-        var textFieldList = [].slice.call(document.querySelectorAll('.form-floating'))
-        var textFields = textFieldList.map(function (textField) {
-          return new materialstyle.TextField(textField)
-        })
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         // Fetch all the forms we want to apply custom Bootstrap validation styles to

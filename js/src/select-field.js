@@ -10,6 +10,7 @@ import {
 } from '../src/utility.js'
 import BaseComponent from 'bootstrap/js/src/base-component'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
@@ -22,8 +23,10 @@ import {
 
 const NAME = 'selectfield'
 const VERSION = '3.0.0-alpha1'
-const DATA_KEY = 'ms.selectfield'
+const DATA_KEY = 'bs.selectfield'
 const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
+const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 
 const EVENT_FOCUS = `focus${EVENT_KEY}`
 const EVENT_FOCUSOUT = `focusout${EVENT_KEY}`
@@ -33,8 +36,8 @@ const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_HIDDEN = 'hidden.bs.dropdown'
 const EVENT_SHOWN = 'shown.bs.dropdown'
 
-const CLASS_NAME_SELECT = 'form-select'
-const CLASS_NAME_OUTLINED = 'form-floating--outlined'
+const CLASS_NAME_FLOATING = 'form-floating'
+const CLASS_NAME_FLOATING_OUTLINED = 'form-floating--outlined'
 
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'
@@ -47,10 +50,10 @@ const LABEL_SCALE = 0.85
 class SelectField extends BaseComponent {
   constructor(element) {
     super(element)
-    this._element = element
-    this._select = element.querySelector(`.${CLASS_NAME_SELECT}`)
+    this._select = element
+    this._formFloating = element.closest(`.${CLASS_NAME_FLOATING}`)
 
-    if (this._select) {
+    if (this._select && this._formFloating) {
       this.initSelect()
       this._setListeners()
     }
@@ -81,14 +84,14 @@ class SelectField extends BaseComponent {
   initSelect() {
     this._select.tabIndex = -1
 
-    this._isSearchable = Boolean(this._element.className.includes(CLASS_NAME_SEARCHABLE))
-    this._multiSelectEnabled = Boolean(this._element.className.includes(CLASS_NAME_MULTI_SELECT))
+    this._isSearchable = Boolean(this._formFloating.className.includes(CLASS_NAME_SEARCHABLE))
+    this._multiSelectEnabled = Boolean(this._formFloating.className.includes(CLASS_NAME_MULTI_SELECT))
 
-    this._element.style.setProperty('--form-field-base-color', getBaseColor(this._element))
-    this._element.style.setProperty('--form-field-primary-color', getPrimaryColor(this._element))
+    this._formFloating.style.setProperty('--form-field-base-color', getBaseColor(this._formFloating))
+    this._formFloating.style.setProperty('--form-field-primary-color', getPrimaryColor(this._formFloating))
 
-    this._label = this._element.querySelector('label')
-    this._inputGroup = this._element.closest('.input-group')
+    this._label = this._formFloating.querySelector('label')
+    this._inputGroup = this._formFloating.closest('.input-group')
 
     if (this._inputGroup) {
       this._prepend = this._inputGroup.querySelector('.prepend')
@@ -103,7 +106,7 @@ class SelectField extends BaseComponent {
     this.createDropdown()
     this.showSelectedItems()
 
-    if (this._element.className.includes(CLASS_NAME_OUTLINED)) {
+    if (this._formFloating.className.includes(CLASS_NAME_FLOATING_OUTLINED)) {
       this.addNotch()
     } else {
       this.addRipple()
@@ -117,7 +120,7 @@ class SelectField extends BaseComponent {
   redraw() {
     if (this._label) {
       this.toggleLabelState()
-      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
     }
 
     this.addFontsReadyEvent()
@@ -200,7 +203,7 @@ class SelectField extends BaseComponent {
     const searchInput = document.createElement('input')
     searchInput.type = 'search'
     searchInput.placeholder = 'Search'
-    searchInput.className = 'search-input form-control'
+    searchInput.className = 'search-input'
     searchInput.autocomplete = 'off'
 
     return searchInput
@@ -242,7 +245,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
-          return `<span class="badge rounded-pill bg-dark d-inline-flex align-items-center me-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-value="${option.value}"></button></span>`
+          return `<span class="badge bg-dark d-inline-flex align-items-center p-1 m-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-value="${option.value}"></button></span>`
         }
         return ''
       }).join('')
@@ -295,7 +298,7 @@ class SelectField extends BaseComponent {
 
     if (this._label) {
       notchBetween.appendChild(this._label)
-      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
     }
   }
 
@@ -478,16 +481,22 @@ class SelectField extends BaseComponent {
       if (this._inputGroup) {
         if (this._prepend) {
           this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
-          this._element.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
+          this._formFloating.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
         }
         if (this._append) {
           this._append.style.height = `${this._selectedItem.offsetHeight}px`
-          this._element.style.setProperty('--append-width', `${this._append.offsetWidth}px`)
+          this._formFloating.style.setProperty('--append-width', `${this._append.offsetWidth}px`)
         }
       }
     })
   }
 }
+
+EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+  for (const el of SelectorEngine.find('.form-select')) {
+    SelectField.getOrCreateInstance(el)
+  }
+})
 
 /**
  * ------------------------------------------------------------------------

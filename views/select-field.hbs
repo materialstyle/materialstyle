@@ -429,10 +429,6 @@
     </div>
   {{/inline}}
 
-  {{#*inline "jQuery"}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  {{/inline}}
-
   {{#*inline "scripts"}}
     <script>
       function addOption() {
@@ -442,19 +438,12 @@
         option.value = "Lamborghini";
         select.add(option);
 
-        var selectField = document.querySelector('#cars-container');
-        var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(selectField)
+        var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(select)
         selectFieldInstance.rebuild();
       }
 
       (function () {
         'use strict'
-
-        // Without jQuery
-        var selectList = [].slice.call(document.querySelectorAll('.form-floating'))
-        var selects = selectList.map(function (select) {
-          return new materialstyle.SelectField(select)
-        })
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -473,11 +462,6 @@
             }, false)
           })
       })()
-
-      // With jQuery
-      // $(function () {
-      //     $('.form-floating').selectfield();
-      // });
     </script>
   {{/inline}}
 
