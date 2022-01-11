@@ -143,15 +143,18 @@
   // stylelint-enable no-duplicate-selectors
 
   .search-input {
-    padding: .5rem .75rem;
+    padding: $input-padding-x;
     background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9e9e9e, #9e9e9e) center bottom/ 100% 1px no-repeat border-box transparent;
     border: 0;
     border-radius: 0;
     transition: .3s cubic-bezier(.4, 0, .2, 1);
+    display: block;
+    width: 100%;
 
     &:focus {
       background-color: transparent;
       background-size: 100% 2px, 100% 1px;
+      outline: 0;
     }
   }
 
