@@ -7,6 +7,10 @@ toc: true
 
 # Tab
 
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
+
 {{< example codeId="code1" >}}
 
 <ul class="nav nav-tabs nav-justified" role="tablist">

@@ -11,7 +11,7 @@ keywords: getting-started, installation
 
 # Installation
 
-## Quick start
+## CDN
 
 Styles
 

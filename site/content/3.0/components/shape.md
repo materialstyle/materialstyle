@@ -7,6 +7,10 @@ toc: true
 
 # Shape
 
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
+
 ## Button
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 

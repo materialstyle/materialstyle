@@ -7,6 +7,10 @@ toc: true
 
 # Floating Action Button (FAB)
 
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
+
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-fab btn-purple">

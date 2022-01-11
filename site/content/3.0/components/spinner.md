@@ -7,6 +7,10 @@ toc: true
 
 # Spinner
 
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
+
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="m-spinner"></div>

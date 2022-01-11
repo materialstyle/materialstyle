@@ -7,14 +7,9 @@ toc: true
 
 # Popover
 
-<div class="d-flex align-items-center bg-info bg-opacity-25 mb-4">
-  <div class="flex-shrink-0 bg-info p-3">
-    <i class="bi bi-info-circle-fill"></i>
-  </div>
-  <div class="flex-grow-1 p-3">
-    Required Javascript for this component is at the end of this page.
-  </div>
-</div>
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
 
 {{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-1">}}
 

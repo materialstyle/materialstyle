@@ -10,6 +10,10 @@ toc: true
 
 # Text Field
 
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
+
 ## Filled
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

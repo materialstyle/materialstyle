@@ -6,7 +6,11 @@ toc: true
 ---
 
 # Progress Bar
-    
+
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
+
 {{< example codeId="code1" >}}
 
 <div class="progress">
