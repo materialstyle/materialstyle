@@ -66,7 +66,8 @@
   }
 
   > .dropdown {
-    border: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
 
     > .dropdown-toggle {
       padding: $form-select-padding-y calc(var(--append-width, 0px) + $form-select-indicator-padding) $form-select-padding-y var(--prepend-width, $form-select-padding-x);
