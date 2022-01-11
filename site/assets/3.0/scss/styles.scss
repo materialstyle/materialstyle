@@ -11,10 +11,6 @@ html {
   min-height: 100vh;
 }
 
-html, body {
-  background: #f8f9fa;
-}
-
 body {
   --offcanvas-expand-width: 300px;
 }
@@ -88,6 +84,10 @@ body {
   transition: transform 300ms 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms 300ms;
   opacity: 1;
   flex-wrap: wrap;
+}
+
+.rounded-4rem {
+  border-radius: 4rem;
 }
 
 .navbar-brand, #siteOffcanvas .offcanvas-title, .footer-brand {
@@ -186,6 +186,7 @@ h1, h2, h3, h4, h5 {
   font-family: monospace;
   word-break: break-word;
   position: relative;
+  border-radius: 0.3rem;
 }
 
 .component-wrapper {
