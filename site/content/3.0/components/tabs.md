@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Tab
+title: Tabs
 group: components
 toc: true
 ---
 
-# Tab
+# Tabs
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Toast
+title: Toasts
 group: components
 toc: true
 ---
 
-# Toast
+# Toasts
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

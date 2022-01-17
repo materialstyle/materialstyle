@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Shape
+title: Shapes
 group: components
 toc: true
 ---
 
-# Shape
+# Shapes
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

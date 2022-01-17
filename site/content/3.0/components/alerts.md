@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Alert
+title: Alerts
 group: components
 aliases:
   - "/3.0/components/"
@@ -8,7 +8,7 @@ aliases:
 toc: true
 ---
 
-# Alert
+# Alerts
 
 {{< example codeId="code1" >}}
 

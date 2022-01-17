@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Card
+title: Cards
 group: components
 toc: true
 ---
 
-# Card
+# Cards
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 

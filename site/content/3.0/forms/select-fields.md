@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Select Field
+title: Select Fields
 group: forms
 toc: true
 ---
 
-# Select Field
+# Select Fields
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

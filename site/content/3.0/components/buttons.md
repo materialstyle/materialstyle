@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Button
+title: Buttons
 group: components
 toc: true
 ---
 
-# Button
+# Buttons
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

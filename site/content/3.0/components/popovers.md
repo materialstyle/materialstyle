@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Popover
+title: Popovers
 group: components
 toc: true
 ---
 
-# Popover
+# Popovers
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

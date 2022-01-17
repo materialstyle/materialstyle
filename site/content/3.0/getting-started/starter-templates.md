@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Starter Template
+title: Starter Templates
 group: getting-started
 toc: true
 keywords: getting-started, starter-template
 ---
 
-# Starter Template
+# Starter Templates
 
 ## Without Sidebar/Drawer
 

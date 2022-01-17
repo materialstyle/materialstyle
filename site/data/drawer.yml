@@ -4,7 +4,7 @@
 - title: Getting started
   pages:
     - title: Installation
-    - title: Starter Template
+    - title: Starter Templates
 
 - title: Utilities
   pages:
@@ -13,24 +13,24 @@
 
 - title: Forms
   pages:
-    - title: Text Field
-    - title: Select Field
+    - title: Text Fields
+    - title: Select Fields
     - title: Checkbox, Radio & Switch
 
 - title: Components
   pages:
-    - title: Alert
-    - title: Button
-    - title: Card
-    - title: Drawer
-    - title: Floating Action Button
-    - title: List
+    - title: Alerts
+    - title: Buttons
+    - title: Cards
+    - title: Drawers
+    - title: Floating Action Buttons
+    - title: Lists
     - title: Modal
     - title: Navbar
-    - title: Popover
-    - title: Progress Bar
-    - title: Shape
-    - title: Snackbar
-    - title: Spinner
-    - title: Tab
-    - title: Toast
+    - title: Popovers
+    - title: Progress Bars
+    - title: Shapes
+    - title: Snackbars
+    - title: Spinners
+    - title: Tabs
+    - title: Toasts

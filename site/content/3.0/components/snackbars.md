@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Snackbar
+title: Snackbars
 group: components
 toc: true
 ---
 
-# Snackbar
+# Snackbars
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

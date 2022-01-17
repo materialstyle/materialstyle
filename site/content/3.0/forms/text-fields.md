@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Text Field
+title: Text Fields
 group: forms
 aliases:
   - "/3.0/forms/"
@@ -8,7 +8,7 @@ aliases:
 toc: true
 ---
 
-# Text Field
+# Text Fields
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

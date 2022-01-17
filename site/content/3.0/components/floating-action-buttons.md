@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Floating Action Button
+title: Floating Action Buttons
 group: components
 toc: true
 ---
 
-# Floating Action Button (FAB)
+# Floating Action Buttons (FAB)
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

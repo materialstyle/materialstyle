@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: List
+title: Lists
 group: components
 toc: true
 ---
 
-# List
+# Lists
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

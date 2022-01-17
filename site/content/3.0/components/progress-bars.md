@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Progress Bar
+title: Progress Bars
 group: components
 toc: true
 ---
 
-# Progress Bar
+# Progress Bars
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}

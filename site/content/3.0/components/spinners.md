@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Spinner
+title: Spinners
 group: components
 toc: true
 ---
 
-# Spinner
+# Spinners
 
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}
