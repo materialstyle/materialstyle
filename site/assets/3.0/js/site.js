@@ -82,22 +82,6 @@ function initComponents() {
     new materialstyle.Ripple(button)
   })
 
-  // Text Field
-  var textFieldList = [].slice.call(document.querySelectorAll('.form-floating'))
-  textFieldList.map(function (textField) {
-    if (textField.querySelector('.form-control')) {
-      new materialstyle.TextField(textField)
-    }
-  })
-
-  // Select Field
-  var selectList = [].slice.call(document.querySelectorAll('.form-floating'))
-  selectList.map(function (select) {
-    if (select.querySelector('.form-select')) {
-      new materialstyle.SelectField(select)
-    }
-  })
-
   // Tab
   var navLinks = [].slice.call(document.querySelectorAll('.nav-tabs .nav-link'))
   navLinks.map(function (navLink) {
