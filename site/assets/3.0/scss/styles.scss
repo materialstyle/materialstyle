@@ -16,11 +16,39 @@ body {
 }
 
 .ms-toc {
-  nav ul {
+  .nav-pills .nav-link {
+    color: #6c757d;
+    font-size: 0.875rem;
+    border-radius: 0 !important;
+    border-left: 2px solid rgba(0, 0, 0, 0.12) !important;
+
+    &.active {
+      background-color: unset;
+      color: #212121;
+      border-left: 2px solid #212121 !important;
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: #212121;
+    }
+  }
+}
+
+.ms-see-also {
+  .nav-pills .nav-link {
+    color: #6c757d;
+    font-size: 0.875rem;
     padding-left: 0;
-    list-style: none;
-    ul {
-      padding-left: 1rem;
+
+    &.active {
+      background-color: unset;
+      color: #212121;
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: #212121;
     }
   }
 }
@@ -34,17 +62,6 @@ body {
   .form-floating, .input-group {
     width: 300px;
   }
-}
-
-.ms-toc nav a {
-  color: #6c757d;
-  padding: 0.25rem 0;
-  display: block;
-  font-size: 0.875rem;
-}
-
-.ms-toc nav a:not(:hover) {
-  text-decoration: none;
 }
 
 .version-selector .selected-item {
@@ -63,6 +80,7 @@ body {
   margin: 0.5rem;
   display: flex;
   justify-content: space-between;
+  border-radius: 0.25rem;
 }
 
 .shadows {
@@ -71,7 +89,10 @@ body {
   margin: 1.5rem;
   display: flex;
   justify-content: center;
-  border-radius: 4px
+  border-radius: 0.25rem;
+  background-color: #009688;
+  color: #FFF;
+  font-weight: bold;
 }
 
 #download + p {

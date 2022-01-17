@@ -14,13 +14,13 @@
         </div>
       </div>
 
+      <div class="sticky-md-top" style="top: 3rem;">
       {{ if (eq .Page.Params.toc true) }}
         <div class="row">
           <div class="col">
-            <div class="pt-1 ms-toc">
-              <h4>On this page</h4>
-              <hr>
-              {{ .TableOfContents }}
+            <div class="ms-toc my-2">
+              <label class="text-secondary mb-2">CONTENTS</label>
+              {{ .Page.TableOfContents | replaceRE "(<li>)" "<li class=\"nav-item\">" | replaceRE "(<ul>)" "<ul class=\"nav nav-pills flex-column\">" | replaceRE "(?s:href)" "class=\"nav-link\" href" | safeHTML }}
             </div>
           </div>
         </div>
@@ -30,13 +30,12 @@
       {{ with $related }}
         <div class="row">
           <div class="col">
-            <div class="pt-1 ms-toc">
-              <h4>See Also</h4>
-              <hr>
+            <div class="ms-see-also mt-4 mb-2">
+              <label class="text-secondary mb-2">SEE ALSO</label>
               <nav>
-                <ul>
+                <ul class="nav nav-pills flex-column">
                   {{ range . }}
-                  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                   {{ end }}
                 </ul>
               </nav>
@@ -44,6 +43,7 @@
           </div>
         </div>
       {{ end }}
+      </div>
     </div>
 
   </div>

@@ -112,7 +112,7 @@ keywords: getting-started, starter-template
   </div>
 </nav>
 
-<!-- Drawer -->
+<!-- Sidebar / Drawer -->
 <aside class="offcanvas offcanvas-start offcanvas-expand-md offcanvas-light" tabindex="-1"
        id="drawerAutoHide">
   <div class="offcanvas-header bg-purple">

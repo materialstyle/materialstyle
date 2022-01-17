@@ -5,7 +5,8 @@ group: utilities
 aliases:
   - "/3.0/utilities/"
   - "/utilities/"
-toc: false
+toc: true
+keywords: utilities, colors
 ---
 
 # Colors
@@ -15,47 +16,24 @@ toc: false
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <p class="text-grey-800 m-0"><b>Class syntax:</b></p>
-    <div class="border mb-2 mt-3" style="max-width: 300px;">
-      <div class="bg-white color-syntax">
-        <span class="text-indigo">[ property ]</span>-<span class="text-pink">[ theme color ]</span>
-      </div>
-      <div class="bg-grey-50 color-syntax">
-        <span class="text-indigo">bg</span>-<span class="text-pink">danger</span><br>
-        <span class="text-indigo">list-group-item</span>-<span class="text-pink">success</span><br>
-        <span class="text-indigo">btn</span>-<span class="text-pink">primary</span>
-      </div>
-    </div>
-  </div>
+## Supported properties
 
-  <div class="col-md-8">
-    <p class="text-grey-800 m-0">
-      <b>Supported properties:</b>
-    </p>
-    <div class="row">
-      <div class="col-md-6">
-        <p class="text-grey-800 ml-0">
-          Background Color <span class="text-blue">(bg-)</span><br>
-          Text Color <span class="text-blue">(text-)</span><br>
-          Border Color <span class="text-blue">(border-)</span><br>
-          Button <span class="text-blue">(btn-, btn-outline-, btn-text-)</span><br>
-          Alert <span class="text-blue">(alert-)</span><br>
-          Badge <span class="text-blue">(bg-)</span><br>
-          List Group Item <span class="text-blue">(list-group-item-)</span><br>
-          Card <span class="text-blue">(border-)</span><br>
-        </p>
-      </div>
-      <div class="col-md-6">
-        <p class="text-grey-800 ml-0">
-          Spinner <span class="text-blue">(spinner-)</span><br>
-          Table <span class="text-blue">(table-) (Partial support *)</span><br>
-          Tab <span class="text-blue">(base-, primary-)</span><br>
-          Select <span class="text-blue">(base-, primary-)</span><br>
-          Text Field <span class="text-blue">(base-, primary-)</span><br>
-        </p>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item border-0">Background Color <span class="text-purple">(bg-)</span></li>
+      <li class="list-group-item border-0">Text Color <span class="text-purple">(text-)</span></li>
+      <li class="list-group-item border-0">Border Color <span class="text-purple">(border-)</span></li>
+      <li class="list-group-item border-0">Button <span class="text-purple">(btn-, btn-outline-, btn-text-)</span></li>
+      <li class="list-group-item border-0">Alert <span class="text-purple">(alert-)</span></li>
+      <li class="list-group-item border-0">Badge <span class="text-purple">(bg-)</span></li>
+      <li class="list-group-item border-0">List Group Item <span class="text-purple">(list-group-item-)</span></li>
+      <li class="list-group-item border-0">Card <span class="text-purple">(border-)</span></li>
+      <li class="list-group-item border-0">Spinner <span class="text-purple">(spinner-)</span></li>
+      <li class="list-group-item border-0">Table <span class="text-purple">(table-) (Partial support *)</span></li>
+      <li class="list-group-item border-0">Tab <span class="text-purple">(base-, primary-)</span></li>
+      <li class="list-group-item border-0">Select <span class="text-purple">(base-, primary-)</span></li>
+      <li class="list-group-item border-0">Text Field <span class="text-purple">(base-, primary-)</span></li>
+    </ul>
   </div>
 </div>

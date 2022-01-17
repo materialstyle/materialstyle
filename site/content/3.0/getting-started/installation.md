@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Get Started
+title: Getting Started
 group: getting-started
 aliases:
   - "/3.0/getting-started/"

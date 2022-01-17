@@ -3,6 +3,7 @@ layout: docs
 title: Checkbox, Radio & Switch
 group: forms
 toc: true
+keywords: forms, checkbox, radio, switch
 ---
 
 # Checkbox, Radio & Switch
