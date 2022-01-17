@@ -35,24 +35,6 @@ body {
   }
 }
 
-.ms-see-also {
-  .nav-pills .nav-link {
-    color: #6c757d;
-    font-size: 0.875rem;
-    padding-left: 0;
-
-    &.active {
-      background-color: unset;
-      color: #212121;
-      font-weight: 700;
-    }
-
-    &:hover {
-      color: #212121;
-    }
-  }
-}
-
 .component-showcase {
   .list-group {
     max-width: 300px;
