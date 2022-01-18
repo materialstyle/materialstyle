@@ -1,0 +1,36 @@
+# This file holds all drawers's entries.
+# The logic for the drawer generation is in "site/layouts/partials/drawer.html".
+
+- title: Getting started
+  pages:
+    - title: Installation
+    - title: Starter Templates
+
+- title: Utilities
+  pages:
+    - title: Colors
+    - title: Shadows
+
+- title: Forms
+  pages:
+    - title: Text Fields
+    - title: Select Fields
+    - title: Checkbox, Radio & Switch
+
+- title: Components
+  pages:
+    - title: Alerts
+    - title: Buttons
+    - title: Cards
+    - title: Drawers
+    - title: Floating Action Buttons
+    - title: Lists
+    - title: Modal
+    - title: Navbar
+    - title: Popovers
+    - title: Progress Bars
+    - title: Shapes
+    - title: Snackbars
+    - title: Spinners
+    - title: Tabs
+    - title: Toasts

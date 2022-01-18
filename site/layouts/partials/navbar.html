@@ -1,0 +1,64 @@
+<nav id="site-home-top-nav" class="navbar navbar-expand-sm fixed-top auto-hide bg-purple navbar-dark">
+  <div class="container-fluid">
+    <div class="d-flex flex-grow-1 align-items-center" style="flex-grow:1;">
+      <div class="d-flex align-items-center">
+        <button class="drawer-toggler me-2"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#siteOffcanvas">
+          <span class="drawer-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand d-flex align-items-center py-0" href="/">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:40px; height:40px;">
+          <span class="text-white ml-1">Material Style</span>
+        </a>
+      </div>
+
+      <div class="dropdown ms-auto">
+        <button class="btn btn-text-white dropdown-toggle px-1 overflow-visible" data-bs-toggle="dropdown" aria-expanded="false" data-display="static" style="text-transform:none;">
+          v{{ .Site.Params.docs_version }}
+        </button>
+        <ul class="dropdown-menu bg-light" style="min-width: auto; position: absolute;">
+          <li><a class="dropdown-item px-3 text-pink bg-light" href="/materialstyle/3.0/" style="cursor: pointer; pointer-events: none;"><b>3.0</b></a></li>
+          <div class="dropdown-divider"></div>
+          <li><a class="dropdown-item px-3 text-dark bg-light" href="/docs/2.0/">2.0</a></li>
+          <div class="dropdown-divider"></div>
+          <li><a class="dropdown-item px-3 text-dark bg-light" href="/docs/1.2/">1.2</a></li>
+          <li><a class="dropdown-item px-3 text-dark bg-light" href="/docs/1.1/">1.1</a></li>
+          <li><a class="dropdown-item px-3 text-dark bg-light" href="/docs/1.0/">1.0</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="navbar-nav d-flex align-items-center">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/materialstyle/{{ .Site.Params.docs_version }}/getting-started/installation">Get Started</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/materialstyle/{{ .Site.Params.docs_version }}/components/alerts">Components</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white py-0 fs-4" href="https://github.com/materialstyle/materialstyle">
+          <i class="bi bi-github"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white py-0 fs-4" data-toggle="modal" data-target="#searchContainer" role="button">
+          <i class="bi bi-search"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="modal fade" id="searchContainer">
+  <div class="modal-dialog m-0">
+    <div class="modal-content border-0" style="width:100vw;">
+      <div class="modal-header" style="width:100vw;">
+        <input id="searchBox" type="text" class="modal-title text-dark ml-4" placeholder="Search">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+    </div>
+  </div>
+</div>
