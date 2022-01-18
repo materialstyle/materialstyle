@@ -75,7 +75,13 @@ function initComponents() {
   var textFields = textFieldList.map(function (textField) {
     return new materialstyle.TextField(textField)
   })
-  
+
+  // SelectField
+  var selectList = [].slice.call(document.querySelectorAll('.form-select'))
+  var selectFields = selectList.map(function (select) {
+    return new materialstyle.SelectField(select)
+  })
+
   // Shape
   var shapeList = [].slice.call(document.querySelectorAll('.m-shape-container'))
   var shapes = shapeList.map(function (s) {
@@ -140,7 +146,7 @@ function initComponents() {
       }
 
       // Redraw Select Field
-      var selectFields = document.querySelectorAll('.m-select');
+      var selectFields = document.querySelectorAll('.form-select');
       for (const [, value] of Object.entries(selectFields)) {
         var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(value)
         selectFieldInstance.redraw();

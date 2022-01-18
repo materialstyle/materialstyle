@@ -52,6 +52,7 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 
 ## Color options
 Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
+
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <fieldset class="form-floating base-purple primary-pink">

@@ -53,7 +53,8 @@ toc: true
       <div class="modal-body">
         <div class="row">
 
-          <div class="col-sm-6">
+          <!-- Text field -->
+          <div class="col-sm-6 my-2">
             <div class="input-group">
               <fieldset class="form-floating">
                 <input type="email" class="form-control" id="email"
@@ -66,7 +67,8 @@ toc: true
             </div>
           </div>
           
-          <div class="col-sm-6">
+          <!-- Text field outlined -->
+          <div class="col-sm-6 my-2">
             <div class="input-group">
               <fieldset class="form-floating form-floating--outlined">
                 <input type="email" class="form-control" id="email-outline"
@@ -76,6 +78,44 @@ toc: true
               <span class="input-group-text prepend">
                   <i class="bi bi-person-circle"></i>
               </span>
+            </div>
+          </div>
+          
+          <!-- Select field -->
+          <div class="col-sm-6 my-2">
+            <div class="input-group">
+              <fieldset class="form-floating">
+                <select class="form-select">
+                  <option value=""></option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                </select>
+                <label>Select One</label>
+              </fieldset>
+              <div class="input-group-text append">
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Select field outlined -->
+          <div class="col-sm-6 my-2">
+            <div class="input-group">
+              <fieldset class="form-floating form-floating--outlined">
+                <select class="form-select">
+                  <option value=""></option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                </select>
+                <label>Select One</label>
+              </fieldset>
+              <div class="input-group-text append">
+                <i class="bi bi-star-fill"></i>
+              </div>
             </div>
           </div>
         

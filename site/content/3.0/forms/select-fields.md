@@ -8,6 +8,17 @@ keywords: forms, select-field
 
 # Select Fields
 
+Selects allow users to select from a menu. It functions as a wrapper around the browser's native ```<select>``` element.
+They come in two types:
+- Filled select fields
+- Outlined select fields
+
+We have used Bootstrap's ```Dropdown``` component and ```.form-floating``` to create the Select fields.
+
+Note that the ```<select>``` must come first so we can utilize a sibling selector (e.g., ~).
+
+<br>
+
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}
 {{< /callout >}}
@@ -46,6 +57,8 @@ keywords: forms, select-field
 {{< /example >}}
 
 ## Color options
+Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
+
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <fieldset class="form-floating base-purple primary-pink">
@@ -73,6 +86,8 @@ keywords: forms, select-field
 {{< /example >}}
 
 ## Searchable
+Add class ```searchable``` on ```.form-floating``` to add a search box to the menu.
+
 {{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <fieldset class="form-floating searchable">
@@ -99,8 +114,7 @@ keywords: forms, select-field
         
 {{< /example >}}
 
-## Input Group
-### Prepend
+## Input Group Prepend
 {{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
@@ -137,7 +151,7 @@ keywords: forms, select-field
         
 {{< /example >}}
 
-### Append
+## Input Group Append
 {{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
@@ -175,6 +189,8 @@ keywords: forms, select-field
 {{< /example >}}
 
 ## Multi Select
+Add class ```multi-select``` on ```.form-floating``` to enable multi select.
+
 {{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <fieldset class="form-floating multi-select">
@@ -199,7 +215,7 @@ keywords: forms, select-field
 
 {{< /example >}}
 
-### Searchable
+## Multi Select Searchable
 {{< example codeId="code8" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <fieldset class="form-floating multi-select searchable">
@@ -224,8 +240,7 @@ keywords: forms, select-field
 
 {{< /example >}}
 
-### Input Group
-#### Prepend
+## Multi Select Input Group Prepend
 {{< example codeId="code9" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
@@ -260,7 +275,7 @@ keywords: forms, select-field
 
 {{< /example >}}
 
-#### Append
+## Multi Select Input Group Append
 {{< example codeId="code10" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
@@ -297,7 +312,7 @@ keywords: forms, select-field
 
 ## Javascript
 ```javascript
-var selectList = [].slice.call(document.querySelectorAll('.form-floating'))
+var selectList = [].slice.call(document.querySelectorAll('.form-select'))
 var selectFields = selectList.map(function (select) {
   return new materialstyle.SelectField(select)
 })
@@ -305,7 +320,32 @@ var selectFields = selectList.map(function (select) {
 
 <br>
 
+### Redraw
+If a Select field is not visible at the time of initialization OR if it is within a container that is not visible by default, 
+for example, ```Modal```, ```Collapse```, ```Offcanvas```, you need to call the ```redraw()``` function on the instance when it becomes visible.
+
+```javascript
+var myModal = document.getElementById('myModal')
+myModal.addEventListener('shown.bs.modal', function (event) {
+  // Redraw Select Field
+  var selectFields = this.querySelectorAll('.form-select');
+  for (const [, value] of Object.entries(selectFields)) {
+    var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(value)
+    selectFieldInstance.redraw();
+  }
+});
+```
+
+<br>
+
 ### With jQuery
 ```javascript
-$('.form-floating').selectfield();
+$('.form-select').selectfield();
+```
+
+<br>
+
+```javascript
+// Redraw Select fields
+$('.form-select').selectfield('redraw');
 ```
