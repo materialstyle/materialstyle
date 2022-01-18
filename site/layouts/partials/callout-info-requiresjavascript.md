@@ -1,1 +1,1 @@
-Required Javascript for this component is at the end of this page.
+This component requires Javascript for initialization. View Javascript.
