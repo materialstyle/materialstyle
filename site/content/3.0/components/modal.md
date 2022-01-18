@@ -118,6 +118,28 @@ toc: true
               </div>
             </div>
           </div>
+          
+          <!-- Tab -->
+          <div class="col-sm-12 my-2">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple">Apple</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#apricot">Apricot
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#avocado">Avocado</button>
+              </li>
+            </ul>
+            <!-- Tab Panes -->
+            <div class="tab-content">
+              <div class="tab-pane container-fluid fade" role="tabpanel" id="apple">Apple</div>
+              <div class="tab-pane container-fluid active" role="tabpanel" id="apricot">Apricot</div>
+              <div class="tab-pane container-fluid fade" role="tabpanel" id="avocado">Avocado</div>
+            </div>
+          </div>
         
         </div>
       </div>

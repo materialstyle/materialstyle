@@ -8,7 +8,6 @@ import BootstrapTab from 'bootstrap/js/src/tab'
  */
 
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
@@ -21,10 +20,6 @@ import {
 
 const NAME = 'tab'
 const VERSION = '3.0.0-alpha1'
-const DATA_KEY = 'bs.tab'
-const EVENT_KEY = `.${DATA_KEY}`
-const DATA_API_KEY = '.data-api'
-const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 
 const ENTER_KEY_CODE = 13
 const INDICATOR_HEIGHT = 2
@@ -142,12 +137,6 @@ class Tab extends BootstrapTab {
     EventHandler.on(window, 'resize', () => this.setIndicatorPositionOnResize())
   }
 }
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  for (const el of SelectorEngine.find('.nav-tabs')) {
-    Tab.getOrCreateInstance(el)
-  }
-})
 
 /**
  * ------------------------------------------------------------------------

@@ -7,8 +7,10 @@ toc: true
 
 # Floating Action Buttons (FAB)
 
+The FAB represents the most important action on a screen. It puts key actions within reach.
+
 {{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< partial "callout-info-requiresjavascriptforripple.md" >}}
 {{< /callout >}}
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}

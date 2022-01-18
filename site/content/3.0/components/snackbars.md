@@ -7,6 +7,12 @@ toc: true
 
 # Snackbars
 
+Snackbars provide brief messages at the bottom of the screen.
+They appear temporarily and shouldn’t interrupt the user experience.
+Only one snackbar may be displayed at a time.
+
+<br>
+
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <!-- Snackbar -->

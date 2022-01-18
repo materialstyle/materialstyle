@@ -21,8 +21,6 @@ A placeholder is required on each ```<input>``` as a floating label uses the ```
 
 Also note that the ```<input>``` must come first so we can utilize a sibling selector (e.g., ~).
 
-<br>
-
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}
 {{< /callout >}}

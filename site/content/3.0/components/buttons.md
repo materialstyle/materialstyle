@@ -7,8 +7,10 @@ toc: true
 
 # Buttons
 
+Buttons allow users to take actions, and make choices, with a single tap.
+
 {{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< partial "callout-info-requiresjavascriptforripple.md" >}}
 {{< /callout >}}
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}

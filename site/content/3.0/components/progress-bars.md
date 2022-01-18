@@ -5,11 +5,11 @@ group: components
 toc: true
 ---
 
-# Progress Bars
+# Progress bars
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
-{{< /callout >}}
+Progress bars express an unspecified wait time or display the length of a process.
+
+<br>
 
 {{< example codeId="code1" >}}
 
@@ -67,6 +67,11 @@ toc: true
 {{< /example >}}
 
 ## Indeterminate rainbow
+
+{{< callout info >}}
+{{< partial "callout-info-requiresjavascript.md" >}}
+{{< /callout >}}
+
 {{< example codeId="code7" >}}
 
 <div class="progress">

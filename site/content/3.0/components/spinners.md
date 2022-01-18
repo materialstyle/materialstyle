@@ -11,13 +11,14 @@ toc: true
 {{< partial "callout-info-requiresjavascript.md" >}}
 {{< /callout >}}
 
+## Material Design Spinners
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="m-spinner"></div>
 
 {{< /example >}}
 
-## Colored
+## Single color Material Design Spinners
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="m-spinner spinner-blue"></div>
@@ -39,6 +40,7 @@ toc: true
 {{< /example >}}
 
 ## Javascript
+Only required for ```.m-spinner``` variant (Material Design Spinners).
 ```javascript
 var spinnerList = [].slice.call(document.querySelectorAll('.m-spinner'))
 var spinners = spinnerList.map(function (s) {

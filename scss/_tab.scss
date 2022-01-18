@@ -59,6 +59,7 @@
 
       &.active {
         border: 0;
+        color: $primary;
       }
     }
 
@@ -87,13 +88,13 @@
 }
 
 @each $color, $value in $theme-colors {
-  .nav-tabs.accent-#{$color} .nav-link.active,
-  .nav-tabs.primary-#{$color} .nav-link:not(.active) {
+  .nav-tabs.primary-#{$color} .nav-link.active,
+  .nav-tabs.base-#{$color} .nav-link:not(.active) {
     color: $value !important; /* stylelint-disable-line declaration-no-important */
     @include ripple.states-base-color($value);
   }
 
-  .nav-tabs.accent-#{$color} {
+  .nav-tabs.primary-#{$color} {
     .active-indicator {
       background: $value;
     }

@@ -152,6 +152,13 @@ function initComponents() {
         selectFieldInstance.redraw();
       }
 
+      // Redraw Tabs
+      var tabs = this.querySelectorAll('.nav-tabs');
+      for (const [, value] of Object.entries(tabs)) {
+        var tabInstance = materialstyle.Tab.getOrCreateInstance(value)
+        tabInstance.redraw();
+      }
+
     })
   }
 }

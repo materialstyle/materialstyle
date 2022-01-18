@@ -7,6 +7,8 @@ toc: true
 
 # Tabs
 
+Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
+
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}
 {{< /callout >}}
@@ -153,7 +155,7 @@ toc: true
 ## Color options
 {{< example codeId="code6" >}}
 
-<ul class="nav nav-tabs nav-justified accent-pink primary-purple" role="tablist">
+<ul class="nav nav-tabs nav-justified primary-pink base-purple" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple1">Apple</button>
   </li>
@@ -177,7 +179,7 @@ toc: true
 ## Tabs split to multiple rows when there are too many to fit on a row
 {{< example codeId="code7" >}}
 
-<ul class="nav nav-tabs nav-justified primary-purple accent-pink" role="tablist">
+<ul class="nav nav-tabs nav-justified base-purple primary-pink" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple2">Apple</button>
   </li>
@@ -257,6 +259,24 @@ tabs.map(function (tab) {
 
 <br>
 
+### Redraw
+If a Tab is not visible at the time of initialization OR if it is within a container that is not visible by default, 
+for example, ```Modal```, ```Collapse```, ```Offcanvas```, you need to call the ```redraw()``` function on the instance when it becomes visible.
+
+```javascript
+var myModal = document.getElementById('myModal')
+myModal.addEventListener('shown.bs.modal', function (event) {
+  // Redraw Tabs
+  var tabs = this.querySelectorAll('.nav-tabs');
+  for (const [, value] of Object.entries(tabs)) {
+    var tabInstance = materialstyle.Tab.getOrCreateInstance(value)
+    tabInstance.redraw();
+  }
+});
+```
+
+<br>
+
 ### With jQuery
 ```javascript
 // Add Ripple to tabs
@@ -264,4 +284,11 @@ $('.nav-tabs .nav-link').ripple();
 
 // Initialize tabs
 $('.nav-tabs').tab();
+```
+
+<br>
+
+```javascript
+// Redraw Tab
+$('.nav-tabs').tab('redraw');
 ```

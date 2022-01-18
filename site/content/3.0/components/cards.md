@@ -7,6 +7,10 @@ toc: true
 
 # Cards
 
+Cards contain content and actions that relate information about a subject.
+
+<br>
+
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 
 <div class="card bg-purple bg-opacity-10" style="max-width:400px">
