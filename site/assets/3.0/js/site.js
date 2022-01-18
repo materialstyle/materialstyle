@@ -70,6 +70,12 @@ function getHighlightedText() {
 }
 
 function initComponents() {
+  // TextField
+  var textFieldList = [].slice.call(document.querySelectorAll('.form-control'))
+  var textFields = textFieldList.map(function (textField) {
+    return new materialstyle.TextField(textField)
+  })
+  
   // Shape
   var shapeList = [].slice.call(document.querySelectorAll('.m-shape-container'))
   var shapes = shapeList.map(function (s) {
@@ -123,11 +129,11 @@ function initComponents() {
   }
 
   // Modal
-  var myModal = document.getElementById('myModal')
+  var myModal = document.getElementById('myModal2')
   if (myModal) {
     myModal.addEventListener('shown.bs.modal', function (event) {
       // Redraw Text Field
-      var textFields = document.querySelectorAll('.m-text-field');
+      var textFields = this.querySelectorAll('.form-control');
       for (const [, value] of Object.entries(textFields)) {
         var textFieldInstance = materialstyle.TextField.getOrCreateInstance(value)
         textFieldInstance.redraw();
@@ -139,19 +145,6 @@ function initComponents() {
         var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(value)
         selectFieldInstance.redraw();
       }
-
-      // Redraw Tabs
-      var tabs = document.querySelector('.nav-tabs');
-      var tabInstance = materialstyle.Tab.getOrCreateInstance(tabs)
-      tabInstance.redraw();
-
-      // Snackbar
-      var snackbarButton = document.querySelector('#show-modal-snackbar');
-      snackbarButton.addEventListener('click', function () {
-        new materialstyle.Snackbar(document.querySelector('#modal-snackbar'), {
-          'visibleDuration': 3000
-        });
-      });
 
     })
   }

@@ -11,6 +11,18 @@ keywords: forms, text-field
 
 # Text Fields
 
+Text fields allow users to enter text into a UI. They come in two types:
+- Filled text fields
+- Outlined text fields
+
+We have used Bootstrap's ```.form-floating``` to create the Text fields.
+
+A placeholder is required on each ```<input>``` as a floating label uses the ```:placeholder-shown``` pseudo-element to determine its position.
+
+Also note that the ```<input>``` must come first so we can utilize a sibling selector (e.g., ~).
+
+<br>
+
 {{< callout info >}}
 {{< partial "callout-info-requiresjavascript.md" >}}
 {{< /callout >}}
@@ -39,6 +51,7 @@ keywords: forms, text-field
 {{< /example >}}
 
 ## Color options
+Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <fieldset class="form-floating base-purple primary-pink">
@@ -55,8 +68,7 @@ keywords: forms, text-field
         
 {{< /example >}}
 
-## Input Group
-### Prepend
+## Input Group Prepend
 {{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
@@ -83,7 +95,7 @@ keywords: forms, text-field
         
 {{< /example >}}
 
-### Append
+## Input Group Append
 {{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
@@ -111,6 +123,8 @@ keywords: forms, text-field
 {{< /example >}}
 
 ## Text Area
+To set a custom height on your ```<textarea>```, do not use the rows attribute. Instead, set an explicit height (either inline or via custom CSS).
+
 {{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <fieldset class="form-floating">
@@ -129,7 +143,8 @@ keywords: forms, text-field
 
 ## Javascript
 ```javascript
-var textFieldList = [].slice.call(document.querySelectorAll('.form-floating'))
+// Initialize Text fields
+var textFieldList = [].slice.call(document.querySelectorAll('.form-control'))
 var textFields = textFieldList.map(function (textField) {
   return new materialstyle.TextField(textField)
 })
@@ -137,7 +152,33 @@ var textFields = textFieldList.map(function (textField) {
 
 <br>
 
+### Redraw
+If a Text field is not visible at the time of initialization OR if it is within a container that is not visible by default, 
+for example, ```Modal```, ```Collapse```, ```Offcanvas```, you need to call the ```redraw()``` function on the instance when it becomes visible.
+
+```javascript
+var myModal = document.getElementById('myModal')
+myModal.addEventListener('shown.bs.modal', function (event) {
+  // Redraw Text Field
+  var textFields = this.querySelectorAll('.form-control');
+  for (const [, value] of Object.entries(textFields)) {
+    var textFieldInstance = materialstyle.TextField.getOrCreateInstance(value)
+    textFieldInstance.redraw();
+  }
+});
+```
+
+<br>
+
 ### With jQuery
 ```javascript
-$('.form-floating').textfield();
+// Initialize Text fields
+$('.form-control').textfield();
+```
+
+<br>
+
+```javascript
+// Redraw Text fields
+$('.form-control').textfield('redraw');
 ```
