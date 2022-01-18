@@ -1,7 +1,10 @@
 {
   "name": "@materialstyle/materialstyle",
+  "description": "Material Style is a Material Design UI library based on Bootstrap.",
   "version": "3.0.0-alpha1",
-  "description": "Material Style is an easy to use UI Library based on Bootstrap 4.5 that lets you add Material Design styles and animations to Bootstrap components.",
+  "config": {
+    "version_short": "3.0"
+  },
   "keywords": [
     "materialstyle",
     "material-style",
@@ -14,31 +17,38 @@
     "front-end",
     "framework",
     "web",
-    "bootstrap-4",
+    "bootstrap",
     "bootstrap-material-design",
     "bootstrap-theme",
     "google-material-design"
   ],
-  "style": "dist/css/materialstyle.min.css",
-  "main": "dist/js/materialstyle.min.js",
-  "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "dev": "webpack --config webpack.dev.js",
-    "start": "webpack --config webpack.common.js --mode=development --watch",
-    "js-lint": "eslint js/src/*",
-    "scss-lint": "stylelint scss/*",
-    "docs-build": "hugo --cleanDestinationDir",
-    "docs-serve": "hugo server --port 9001 --disableFastRender"
-  },
-  "author": "Neeraj Kumar Das (https://github.com/nkdas91)",
-  "license": "MIT",
   "homepage": "https://materialstyle.github.io/",
-  "bugs": {
-    "url": "https://github.com/materialstyle/materialstyle/issues"
+  "author": "Neeraj Kumar Das (https://github.com/nkdas91)",
+  "contributors": [
+    "Material Style contributors (https://github.com/materialstyle/materialstyle/graphs/contributors)"
+  ],
+  "scripts": {
+    "start": "npm-run-all --parallel watch docs-serve",
+    "build": "webpack --config webpack.prod.js",
+    "watch": "webpack --config webpack.common.js --mode=development --watch",
+    "docs-build": "hugo --cleanDestinationDir",
+    "docs-serve": "hugo server --port 9001 --disableFastRender",
+    "js-lint": "eslint js/src/*",
+    "scss-lint": "stylelint scss/*"
   },
+  "style": "dist/css/materialstyle.min.css",
+  "sass": "scss/material-style.scss",
+  "main": "dist/js/materialstyle.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/materialstyle/materialstyle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/materialstyle/materialstyle/issues"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@popperjs/core": "^2.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -71,13 +81,10 @@
     "webpack-dev-server": "^4.6.0",
     "webpack-merge": "^5.8.0"
   },
-  "peerDependencies": {
-    "@popperjs/core": "^2.11.0"
-  },
   "files": [
-    "dist/{css,js}",
-    "js/{dist,src}",
-    "scss"
+    "dist/{css,js}/*.{css,js,map}",
+    "js/{src,dist}/**/*.{js,map}",
+    "scss/**/*.scss"
   ],
   "hugo-bin": {
     "buildTags": "extended"
