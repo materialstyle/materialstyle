@@ -10,6 +10,7 @@
   pages:
     - title: Colors
     - title: Shadows
+    - title: Shapes
 
 - title: Forms
   pages:
@@ -29,7 +30,6 @@
     - title: Navbar
     - title: Popovers
     - title: Progress Bars
-    - title: Shapes
     - title: Snackbars
     - title: Spinners
     - title: Tabs

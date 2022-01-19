@@ -83,9 +83,9 @@ function initComponents() {
   })
 
   // Shape
-  var shapeList = [].slice.call(document.querySelectorAll('.m-shape-container'))
-  var shapes = shapeList.map(function (s) {
-    return new materialstyle.Shape(s)
+  var shapes = [].slice.call(document.querySelectorAll('.m-shape-container'))
+  shapes.map(function (s) {
+    new materialstyle.Shape(s)
   })
 
   // Button Ripple

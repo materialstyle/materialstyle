@@ -12,6 +12,7 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   @include ripple.radius-bounded;
   @include ripple.states-base-color(#fff);
   @include ripple.states-opacities((hover: .1, focus: .15, press: .2));
+  will-change: unset;
 }
 
 // Add buttom-text-variant

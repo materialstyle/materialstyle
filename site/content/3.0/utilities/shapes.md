@@ -1,8 +1,9 @@
 ---
 layout: docs
 title: Shapes
-group: components
+group: utilities
 toc: true
+keywords: utilities, shapes
 ---
 
 # Shapes
@@ -126,3 +127,20 @@ Shapes direct attention, identify components, communicate state, and express bra
 </div>
 
 {{< /example >}}
+
+## Javascript
+```javascript
+// Initialize Shapes
+var shapes = [].slice.call(document.querySelectorAll('.m-shape-container'))
+shapes.map(function (s) {
+  new materialstyle.Shape(s)
+})
+```
+
+<br>
+
+### With jQuery
+```javascript
+// Initialize Shapes
+$('.m-shape-container').shape();
+```
