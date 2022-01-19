@@ -35,7 +35,7 @@
     "docs-serve": "hugo server --port 9001 --disableFastRender",
     "js-lint": "eslint js/src/*",
     "scss-lint": "stylelint scss/*",
-    "js-test": "karma start karma.conf.js"
+    "js-test-karma": "karma start karma.conf.js"
   },
   "style": "dist/css/materialstyle.min.css",
   "sass": "scss/material-style.scss",
