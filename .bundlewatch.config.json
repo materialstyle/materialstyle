@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "path": "./dist/css/materialstyle.min.css",
+      "maxSize": "33 kB"
+    },
+    {
+      "path": "./dist/js/materialstyle.min.js",
+      "maxSize": "35 kB"
+    }
+  ],
+  "ci": {
+    "trackBranches": [
+      "main"
+    ]
+  }
+}
