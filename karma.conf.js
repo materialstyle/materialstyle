@@ -1,6 +1,34 @@
 'use strict'
 
 const path = require('path')
+const { browsers } = require('./browsers')
+
+const ENV = process.env
+const DEBUG = Boolean(ENV.DEBUG)
+
+const detectBrowsers = {
+  usePhantomJS: false,
+  postDetection(availableBrowser) {
+    // On CI just use Chrome
+    if (ENV.CI === true) {
+      return ['ChromeHeadless']
+    }
+
+    if (availableBrowser.includes('Chrome')) {
+      return DEBUG ? ['Chrome'] : ['ChromeHeadless']
+    }
+
+    if (availableBrowser.includes('Chromium')) {
+      return DEBUG ? ['Chromium'] : ['ChromiumHeadless']
+    }
+
+    if (availableBrowser.includes('Firefox')) {
+      return DEBUG ? ['Firefox'] : ['FirefoxHeadless']
+    }
+
+    throw new Error('Please install Chrome, Chromium or Firefox')
+  }
+}
 
 module.exports = function(config) {
   config.set({
@@ -22,11 +50,13 @@ module.exports = function(config) {
     preprocessors: {
       'js/tests/unit/**/*.spec.js': ['webpack']
     },
-    frameworks: ['jasmine', 'webpack'],
+    frameworks: ['jasmine', 'webpack', 'detectBrowsers'],
     plugins: [
       'karma-webpack',
       'karma-jasmine',
       'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-detect-browsers',
       'karma-coverage-istanbul-reporter'
     ],
     exclude: [
@@ -46,6 +76,8 @@ module.exports = function(config) {
         }
       }
     },
+    detectBrowsers: detectBrowsers,
+    customLaunchers: browsers,
     browsers: ['Chrome'],
     webpack: {
       cache: true,
