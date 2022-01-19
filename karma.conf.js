@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-const { browsers } = require('./browsers')
+const {browsers} = require('./browsers')
 
 const ENV = process.env
 const DEBUG = Boolean(ENV.DEBUG)
@@ -30,7 +30,7 @@ const detectBrowsers = {
   }
 }
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
     port: 9876,
@@ -48,7 +48,7 @@ module.exports = function(config) {
       }
     ],
     preprocessors: {
-      'js/tests/unit/**/*.spec.js': ['webpack']
+      'js/tests/unit/**/*.spec.js': ['webpack', 'sourcemap']
     },
     frameworks: ['jasmine', 'webpack', 'detectBrowsers'],
     plugins: [
@@ -57,56 +57,41 @@ module.exports = function(config) {
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       'karma-detect-browsers',
-      'karma-coverage-istanbul-reporter'
+      'karma-coverage',
+      'karma-sourcemap-loader'
     ],
-    exclude: [
-
-    ],
-    reporters: ['progress', 'coverage-istanbul'],
-    coverageIstanbulReporter: {
+    exclude: [],
+    reporters: ['progress', 'coverage'],
+    coverageReporter: {
       dir: path.resolve(__dirname, 'js/coverage/'),
-      reports: ['lcov', 'text-summary'],
-      thresholds: {
-        emitWarning: false,
-        global: {
-          statements: 90,
-          branches: 89,
-          functions: 90,
-          lines: 90
-        }
-      }
+      reporters: [
+        {type: 'lcov', subdir: 'report-lcov'},
+        {type: 'text-summary'}
+      ]
     },
     detectBrowsers: detectBrowsers,
     customLaunchers: browsers,
     browsers: ['Chrome'],
     webpack: {
+      mode: 'development',
       cache: true,
       devtool: 'inline-source-map',
       module: {
         rules: [
           {
             enforce: 'pre',
-            test: /.spec\.js$/,
-            include: path.resolve(__dirname, 'js/tests/'),
-            exclude: /node_modules/,
-            use: { loader: 'babel-loader' }
-          },
-          {
-            enforce: 'pre',
             test: /\.js$/,
             include: path.resolve(__dirname, 'js/src/'),
             exclude: /node_modules/,
-            use: { loader: 'istanbul-instrumenter-loader', options: { esModules: true } },
-          },
-          {
-            test: /\.js$/,
-            include: /src/,
-            exclude: /node_modules|tests/,
-            use: { loader: 'babel-loader' }
+            use: {
+              loader: 'babel-loader',
+              options: {
+                "plugins": ["istanbul"]
+              }
+            }
           },
         ],
       },
-
     },
   })
 }
