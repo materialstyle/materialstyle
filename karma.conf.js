@@ -1,6 +1,7 @@
 'use strict'
 
 const path = require('path')
+const ip = require('ip')
 const {browsers} = require('./browsers')
 
 const ENV = process.env
@@ -18,7 +19,7 @@ const plugins = [
   'karma-sourcemap-loader'
 ]
 
-const reporters = ['progress']
+const reporters = ['dots']
 
 const detectBrowsers = {
   usePhantomJS: false,
@@ -89,10 +90,10 @@ const conf = {
 if (BROWSERSTACK) {
   conf.hostname = ip.address()
   conf.browserStack = {
-    username: ENV.BROWSER_STACK_USERNAME,
-    accessKey: ENV.BROWSER_STACK_ACCESS_KEY,
+    username: ENV.BROWSERSTACK_USERNAME,
+    accessKey: ENV.BROWSERSTACK_ACCESS_KEY,
     build: `materialstyle-${ENV.GITHUB_SHA ? ENV.GITHUB_SHA.slice(0, 7) + '-' : ''}${new Date().toISOString()}`,
-    project: 'Material Style',
+    project: 'materialstyle',
     retryLimit: 2
   }
   plugins.push('karma-browserstack-launcher', 'karma-jasmine-html-reporter')

@@ -33,6 +33,6 @@ jobs:
       - name: Run BrowserStack tests
         run: npm run js-test-cloud
         env:
-          BROWSER_STACK_ACCESS_KEY: "${{ secrets.BROWSERSTACK_ACCESS_KEY }}"
-          BROWSER_STACK_USERNAME: "${{ secrets.BROWSERSTACK_USERNAME }}"
+          BROWSERSTACK_ACCESS_KEY: "${{ secrets.BROWSERSTACK_ACCESS_KEY }}"
+          BROWSERSTACK_USERNAME: "${{ secrets.BROWSERSTACK_USERNAME }}"
           GITHUB_SHA: "${{ github.sha }}"
