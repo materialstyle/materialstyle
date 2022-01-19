@@ -2,6 +2,7 @@
 /dist
 /examples
 /js/dist/*
+/js/coverage/
 .idea
 
 # Docs
