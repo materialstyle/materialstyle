@@ -9,7 +9,7 @@ keywords: forms, checkbox, radio, switch
 # Checkbox, Radio & Switch
 
 ## Checkbox
-{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap">}}
+{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div>
   <div class="form-check">
@@ -36,7 +36,7 @@ keywords: forms, checkbox, radio, switch
 {{< /example >}}
 
 ## Radio
-{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap">}}
+{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div>
   <div class="form-check">
@@ -63,7 +63,7 @@ keywords: forms, checkbox, radio, switch
 {{< /example >}}
 
 ## Switch
-{{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap">}}
+{{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div>
   <div class="form-check form-switch">
@@ -90,25 +90,25 @@ keywords: forms, checkbox, radio, switch
 {{< /example >}}
 
 ### Square Switch
-{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap">}}
+{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div>
-  <div class="form-check form-switch form-switch--square">
+  <div class="form-check form-switch form-switch-square">
     <input class="form-check-input" type="checkbox" id="switch5">
     <label class="form-check-label" for="switch5">Switch</label>
   </div>
-  <div class="form-check form-switch form-switch--square">
+  <div class="form-check form-switch form-switch-square">
     <input class="form-check-input" type="checkbox" id="switch6" checked>
     <label class="form-check-label" for="switch6">Switch</label>
   </div>
 </div>
 ##split##
 <div>
-  <div class="form-check form-switch form-switch--square">
+  <div class="form-check form-switch form-switch-square">
     <input class="form-check-input" type="checkbox" id="switch7" disabled>
     <label class="form-check-label" for="switch7">Switch</label>
   </div>
-  <div class="form-check form-switch form-switch--square">
+  <div class="form-check form-switch form-switch-square">
     <input class="form-check-input" type="checkbox" id="switch8" checked disabled>
     <label class="form-check-label" for="switch8">Switch</label>
   </div>
@@ -117,25 +117,25 @@ keywords: forms, checkbox, radio, switch
 {{< /example >}}
 
 ### Material Switch
-{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap">}}
+{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div>
-  <div class="form-check form-switch form-switch--material">
+  <div class="form-check form-switch form-switch-material">
     <input class="form-check-input" type="checkbox" id="switch9">
     <label class="form-check-label" for="switch9">Switch</label>
   </div>
-  <div class="form-check form-switch form-switch--material">
+  <div class="form-check form-switch form-switch-material">
     <input class="form-check-input" type="checkbox" id="switch10" checked>
     <label class="form-check-label" for="switch10">Switch</label>
   </div>
 </div>
 ##split##
 <div>
-  <div class="form-check form-switch form-switch--material">
+  <div class="form-check form-switch form-switch-material">
     <input class="form-check-input" type="checkbox" id="switch11" disabled>
     <label class="form-check-label" for="switch11">Switch</label>
   </div>
-  <div class="form-check form-switch form-switch--material">
+  <div class="form-check form-switch form-switch-material">
     <input class="form-check-input" type="checkbox" id="switch12" checked disabled>
     <label class="form-check-label" for="switch12">Switch</label>
   </div>

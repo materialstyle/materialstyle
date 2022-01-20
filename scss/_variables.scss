@@ -14,12 +14,24 @@ $btn-active-box-shadow: 0 0 0 rgb(0 0 0 / 0);
 // Card
 $card-border-width: 0;
 
-// Checkbox, Radio, Switch
-$form-check-input-border: 2px solid rgba(0, 0, 0, .25);
-$form-check-input-border-radius: 2px;
-$form-check-input-focus-box-shadow: 0 0 0 .25rem rgba($primary, .25);
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='none' stroke='#fff' stroke-width='3.5' d='M1.73,12.91 8.1,19.28 22.79,4.59'/></svg>");
-$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$primary}'/></svg>");
+// Checkbox, Radio
+$form-check-input-border: 2px solid rgba($black, .25) !default;
+$form-check-input-border-radius: 2px !default;
+$form-check-input-focus-box-shadow: 0 0 0 .25rem rgba($primary, .25) !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='none' stroke='#fff' stroke-width='3.5' d='M1.73,12.91 8.1,19.28 22.79,4.59'/></svg>") !default;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$primary}'/></svg>") !default;
+
+// Switch
+$component-active-color: $white !default;
+$component-active-bg: $primary !default;
+$input-focus-border-color: tint-color($component-active-bg, 50%) !default;
+
+$form-switch-color: rgba($black, .25) !default;
+$form-switch-focus-color: $input-focus-border-color !default;
+$form-switch-checked-color: $component-active-color !default;
+$form-switch-square-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'><rect width='6' height='6' fill='#{$form-switch-color}'/></svg>") !default;
+$form-switch-square-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'><rect width='6' height='6' fill='#{$form-switch-focus-color}'/></svg>") !default;
+$form-switch-square-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'><rect width='6' height='6' fill='#{$form-switch-checked-color}'/></svg>") !default;
 
 // Dropdown
 $dropdown-border-width: 0;
@@ -73,9 +85,9 @@ $form-field-primary-color: var(--form-field-primary-color, $primary);
 $form-floating-label-opacity: 1;
 $input-group-addon-bg: transparent;
 $input-group-addon-border-color: transparent;
-$form-control-bg: #F5F5F5;
+$form-control-bg: #f5f5f5;
 $form-control-hover-bg: #eee;
-$form-control-active-bg: #E0E0E0;
+$form-control-active-bg: #e0e0e0;
 
 // Toast
 $toast-border-width: 0;
