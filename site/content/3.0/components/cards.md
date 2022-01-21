@@ -22,7 +22,7 @@ Cards contain content and actions that relate information about a subject.
     </p>
   </div>
   <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-    <button type="button" class="btn btn-text-purple">
+    <button type="button" class="btn btn-outline-purple border-0">
       Listen Now
     </button>
 
@@ -54,7 +54,7 @@ Cards contain content and actions that relate information about a subject.
     </p>
   </div>
   <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-    <button type="button" class="btn btn-text-purple">
+    <button type="button" class="btn btn-outline-purple border-0">
       Listen Now
     </button>
 
@@ -89,17 +89,17 @@ Cards contain content and actions that relate information about a subject.
   </div>
   <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
     <div>
-      <button type="button" class="btn btn-text-indigo">Read</button>
-      <button type="button" class="btn btn-text-indigo">Bookmark</button>
+      <button type="button" class="btn btn-outline-indigo border-0">Read</button>
+      <button type="button" class="btn btn-outline-indigo border-0">Bookmark</button>
     </div>
     <div>
-      <button type="button" class="btn btn-fab mini-fab btn-text-dark m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-outline-dark border-0 m-1">
         <i class="bi bi-heart-fill"></i>
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-text-dark m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-outline-dark border-0 m-1">
         <i class="bi bi-share-fill"></i>
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-text-dark m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-outline-dark border-0 m-1">
         <i class="bi bi-three-dots-vertical"></i>
       </button>
     </div>
@@ -121,17 +121,17 @@ Cards contain content and actions that relate information about a subject.
   </div>
   <div class="d-flex justify-content-between align-items-center flex-wrap p-2 bg-yellow bg-opacity-10">
     <div>
-      <button type="button" class="btn btn-text-red">Read</button>
-      <button type="button" class="btn btn-text-red">Bookmark</button>
+      <button type="button" class="btn btn-outline-red border-0">Read</button>
+      <button type="button" class="btn btn-outline-red border-0">Bookmark</button>
     </div>
     <div>
-      <button type="button" class="btn btn-fab mini-fab btn-text-dark m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-outline-dark border-0 m-1">
         <i class="bi bi-heart-fill"></i>
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-text-dark m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-outline-dark border-0 m-1">
         <i class="bi bi-share-fill"></i>
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-text-dark m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-outline-dark border-0 m-1">
         <i class="bi bi-three-dots-vertical"></i>
       </button>
     </div>
