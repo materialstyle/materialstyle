@@ -117,7 +117,7 @@ Use the custom properties:
 
 ## Javascript
 ```javascript
-// Initialize Ripple effect
+// Initialize Ripple
 var rippleSurface = [].slice.call(document.querySelectorAll('.ripple-surface'))
 rippleSurface.map(function (s) {
   new materialstyle.Ripple(s)
@@ -128,6 +128,6 @@ rippleSurface.map(function (s) {
 
 ### With jQuery
 ```javascript
-// Initialize Ripple effect
+// Initialize Ripple
 $('.ripple-surface').ripple();
 ```

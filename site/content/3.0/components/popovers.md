@@ -7,8 +7,8 @@ toc: true
 
 # Popovers
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< callout >}}
+{{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}
 
 {{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-1">}}

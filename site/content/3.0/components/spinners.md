@@ -7,8 +7,8 @@ toc: true
 
 # Spinners
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< callout >}}
+{{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}
 
 ## Material Design Spinners

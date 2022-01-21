@@ -9,8 +9,8 @@ toc: true
 
 Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< callout >}}
+{{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}
 
 {{< example codeId="code1" >}}
@@ -244,12 +244,6 @@ Tabs organize and allow navigation between groups of content that are related an
 
 ## Javascript
 ```javascript
-// Add Ripple to tabs
-var navLinks = [].slice.call(document.querySelectorAll('.nav-tabs .nav-link'))
-navLinks.map(function (navLink) {
-  new materialstyle.Ripple(navLink)
-})
-
 // Initialize tabs
 var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))
 tabs.map(function (tab) {
@@ -279,9 +273,6 @@ myModal.addEventListener('shown.bs.modal', function (event) {
 
 ### With jQuery
 ```javascript
-// Add Ripple to tabs
-$('.nav-tabs .nav-link').ripple();
-
 // Initialize tabs
 $('.nav-tabs').tab();
 ```
@@ -291,4 +282,97 @@ $('.nav-tabs').tab();
 ```javascript
 // Redraw Tab
 $('.nav-tabs').tab('redraw');
+```
+
+<br>
+
+## Ripple effect
+
+{{< callout javascript-ripple >}}
+{{< partial "callout-ripplerequiresjavascript.md" >}}
+{{< /callout >}}
+
+{{< callout ripple >}}
+{{< partial "callout-rippledocs.md" >}}
+{{< /callout >}}
+
+{{< example codeId="code8" >}}
+
+<ul class="nav nav-tabs nav-justified" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple">
+      Apple
+      <span class="ripple-surface"></span>
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#apricot">
+      Apricot
+      <span class="ripple-surface"></span>
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#avocado">
+      Avocado
+      <span class="ripple-surface"></span>
+    </button>
+  </li>
+</ul>
+<!-- Tab Panes -->
+<div class="tab-content">
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="apple">Apple</div>
+  <div class="tab-pane container-fluid active" role="tabpanel" id="apricot">Apricot</div>
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="avocado">Avocado</div>
+</div>
+
+{{< /example >}}
+
+## Ripple effect on tabs with custom color
+
+{{< example codeId="code9" >}}
+
+<ul class="nav nav-tabs nav-justified primary-red base-indigo" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple">
+      Apple
+      <span class="ripple-surface"></span>
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#apricot">
+      Apricot
+      <span class="ripple-surface"></span>
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#avocado">
+      Avocado
+      <span class="ripple-surface"></span>
+    </button>
+  </li>
+</ul>
+<!-- Tab Panes -->
+<div class="tab-content">
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="apple">Apple</div>
+  <div class="tab-pane container-fluid active" role="tabpanel" id="apricot">Apricot</div>
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="avocado">Avocado</div>
+</div>
+
+{{< /example >}}
+
+## Javascript for ripple
+```javascript
+// Initialize Ripple
+var rippleSurface = [].slice.call(document.querySelectorAll('.ripple-surface'))
+rippleSurface.map(function (s) {
+  new materialstyle.Ripple(s)
+})
+```
+
+<br>
+
+### jQuery
+```javascript
+// Initialize Ripple
+$('.ripple-surface').ripple();
 ```

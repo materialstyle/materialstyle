@@ -68,8 +68,8 @@ Progress bars express an unspecified wait time or display the length of a proces
 
 ## Indeterminate rainbow
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< callout >}}
+{{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}
 
 {{< example codeId="code7" >}}

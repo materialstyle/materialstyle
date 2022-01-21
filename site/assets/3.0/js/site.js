@@ -88,16 +88,10 @@ function initComponents() {
     new materialstyle.Shape(s)
   })
 
-  // Button Ripple
-  var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-  buttonList.map(function (button) {
-    new materialstyle.Ripple(button)
-  })
-
-  // Tab
-  var navLinks = [].slice.call(document.querySelectorAll('.nav-tabs .nav-link'))
-  navLinks.map(function (navLink) {
-    new materialstyle.Ripple(navLink)
+  // Initialize Ripple
+  var rippleSurface = [].slice.call(document.querySelectorAll('.ripple-surface'))
+  rippleSurface.map(function (s) {
+    new materialstyle.Ripple(s)
   })
 
   var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))

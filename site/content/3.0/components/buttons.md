@@ -9,9 +9,7 @@ toc: true
 
 Buttons allow users to take actions, and make choices, with a single tap.
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascriptforripple.md" >}}
-{{< /callout >}}
+<br>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
@@ -105,6 +103,8 @@ Buttons allow users to take actions, and make choices, with a single tap.
 {{< /example >}}
 
 ## Outlined Buttons
+Add ```.btn-outline-[color]``` to create Outlined buttons.
+
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-outline-pink m-1">
@@ -126,28 +126,83 @@ Buttons allow users to take actions, and make choices, with a single tap.
 {{< /example >}}
 
 ## Text Buttons
+Add ```.border-0``` to Outlined buttons to create Text buttons.
+
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-text-green m-1">
+<button type="button" class="btn btn-outline-green border-0 m-1">
   Icon <i class="bi bi-star-fill"></i>
 </button>
 ##split##
-<button type="button" class="btn btn-text-green btn-lg m-1">
+<button type="button" class="btn btn-outline-green border-0 btn-lg m-1">
   Large
 </button>
 ##split##
-<button type="button" class="btn btn-text-green btn-sm m-1">
+<button type="button" class="btn btn-outline-green border-0 btn-sm m-1">
   Small
 </button>
 ##split##
-<button type="button" class="btn btn-text-green m-1" disabled>
+<button type="button" class="btn btn-outline-green border-0 m-1" disabled>
   Disabled
 </button>
         
 {{< /example >}}
 
-## Horizontal Button group
+## Ripple effect
+
+{{< callout javascript-ripple >}}
+{{< partial "callout-ripplerequiresjavascript.md" >}}
+{{< /callout >}}
+
+{{< callout ripple >}}
+{{< partial "callout-rippledocs.md" >}}
+{{< /callout >}}
+
 {{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
+
+<button type="button" class="btn btn-success m-1">
+  Success | Green
+  <span class="ripple-surface"></span>
+</button>
+##split##
+<button type="button" class="btn btn-warning m-1">
+  Warning | Yellow
+  <span class="ripple-surface"></span>
+</button>
+##split##
+<button type="button" class="btn btn-outline-purple m-1">
+  Outlined Button
+  <span class="ripple-surface"></span>
+</button>
+##split##
+<button type="button" class="btn btn-outline-pink border-0 m-1">
+  Text Button
+  <span class="ripple-surface"></span>
+</button>
+
+{{< /example >}}
+
+## Javascript for ripple
+```javascript
+// Initialize Ripple
+var rippleSurface = [].slice.call(document.querySelectorAll('.ripple-surface'))
+rippleSurface.map(function (s) {
+  new materialstyle.Ripple(s)
+})
+```
+
+<br>
+
+### jQuery
+```javascript
+// Initialize Ripple
+$('.ripple-surface').ripple();
+```
+
+<br>
+
+## Horizontal Button group
+{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="btn-group m-1">
   <button type="button" class="btn btn-indigo">Button</button>
@@ -181,7 +236,7 @@ Buttons allow users to take actions, and make choices, with a single tap.
 {{< /example >}}
 
 ## Vertical Button group
-{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="btn-group-vertical m-1">
   <button type="button" class="btn btn-indigo">Button</button>
@@ -213,20 +268,3 @@ Buttons allow users to take actions, and make choices, with a single tap.
 </div>
         
 {{< /example >}}
-
-## Javascript
-```javascript
-// Add Ripple to buttons
-var buttonList = [].slice.call(document.querySelectorAll('.btn'))
-buttonList.map(function (button) {
-  new materialstyle.Ripple(button)
-})
-```
-
-<br>
-
-### With jQuery
-```javascript
-// Add Ripple to buttons
-$('.btn').ripple();
-```
