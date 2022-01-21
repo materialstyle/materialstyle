@@ -10,8 +10,8 @@ keywords: utilities, shapes
 
 Shapes direct attention, identify components, communicate state, and express brand.
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< callout >}}
+{{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}
 
 ## Button

@@ -16,8 +16,8 @@ To add Ripple to your component:
 (In other words, anything except ```static```), since a Ripple surface is ```absolute``` positioned.
 3. Initialize the Ripple surface with Javascript to get the Ripple effect.
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< callout >}}
+{{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}
 
 ## On Buttons
