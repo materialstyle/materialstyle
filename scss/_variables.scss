@@ -2,6 +2,8 @@
 @import "utilities/color";
 @import "utilities/shadow";
 
+$enable-shadows: true !default;
+
 // Alert
 $alert-border-width: 0 !default;
 
@@ -13,6 +15,9 @@ $btn-active-box-shadow:  $btn-hover-box-shadow !default;
 
 // Pagination
 $pagination-focus-box-shadow: 0 0 0 rgb(0 0 0 / 0) !default;
+
+// Dropdown
+$dropdown-border-width: 0 !default;
 
 // Card
 $card-border-width: 0;
@@ -30,11 +35,6 @@ $form-switch-checked-color: $white !default;
 $form-switch-square-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'><rect width='6' height='6' fill='#{$form-switch-color}'/></svg>") !default;
 $form-switch-square-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'><rect width='6' height='6' fill='#{$form-switch-focus-color}'/></svg>") !default;
 $form-switch-square-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'><rect width='6' height='6' fill='#{$form-switch-checked-color}'/></svg>") !default;
-
-// Dropdown
-$dropdown-border-width: 0;
-$enable-shadows: true;
-$dropdown-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
 
 // List
 $list-group-border-radius: 0;
@@ -62,10 +62,8 @@ $navbar-dark-toggler-border-color: transparent !default;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-dark-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
 $navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-light-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
 
-
-
 // Tab
-$nav-tabs-border-color: $gray-200;
+$nav-tabs-border-radius: 0;
 
 // Text Field
 $input-height: auto;

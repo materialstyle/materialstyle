@@ -12,26 +12,20 @@
   $disabled-border: $border,
   $disabled-color: color-contrast($disabled-background)
 ) {
+  --mdc-ripple-color: #{$color};
 
   color: $color;
   @include gradient-bg($background);
 
-  @if color-contrast($background) == $color-contrast-light {
-    --mdc-ripple-color: #fff;
-  } @else {
-    --mdc-ripple-color: #000;
-    --mdc-ripple-hover-opacity: 0.1;
-    --mdc-ripple-focus-opacity: 0.12;
-    --mdc-ripple-press-opacity: 0.13;
-  }
-
   &:hover {
     color: $hover-color;
+    @include gradient-bg($hover-background);
   }
 
   .btn-check:focus + &,
   &:focus {
     color: $hover-color;
+    @include gradient-bg($hover-background);
   }
 
   .btn-check:checked + &,
@@ -40,23 +34,30 @@
   &.active,
   .show > &.dropdown-toggle {
     color: $active-color;
+    background-color: $active-background;
   }
 }
 
 @mixin button-outline-variant(
   $color,
-  $hover-color: color-contrast($color),
-  $active-background: $color,
-  $active-border: $color,
-  $active-color: color-contrast($active-background)
+  $hover-background: rgba($color, .15),
+  $active-background: rgba($color, .2),
 ) {
   --mdc-ripple-color: #{$color};
+
   color: $color;
   border-color: $color;
 
   &:hover {
     color: $color;
-    border-color: $active-border;
+    @include gradient-bg($hover-background);
+    border-color: $color;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $color;
+    @include gradient-bg($hover-background);
   }
 
   .btn-check:checked + &,
@@ -65,21 +66,8 @@
   &.active,
   &.dropdown-toggle.show {
     color: $color;
-    border-color: $active-border;
-  }
-}
-
-@mixin button-text-variant($color) {
-  --mdc-ripple-color: #{$color};
-  color: $color;
-
-  &:active,
-  &.active,
-  &:hover,
-  &:focus,
-  &.focus,
-  .show > &.dropdown-toggle {
-    color: $color;
+    @include gradient-bg($active-background);
+    border-color: $color;
   }
 }
 

@@ -1,32 +1,22 @@
-@use "@material/ripple";
-@use '@material/ripple/mdc-ripple';
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/button-group";
 
-.btn:not(.overflow-visible):not(.btn-select) {
-  min-width: fit-content;
-  overflow: hidden;
-  @include ripple.surface;
-  @include ripple.radius-bounded;
-  @include ripple.states-base-color(#fff);
-  @include ripple.states-opacities((hover: .1, focus: .15, press: .2));
-  will-change: unset;
-}
-
-// Add buttom-text-variant
-@each $color, $value in $theme-colors {
-  .btn-text-#{$color} {
-    @include button-text-variant($value);
-  }
-}
-
-.btn:not([class*="btn-outline-"], [class*="btn-text-"]) {
+.btn:not([class*="btn-outline-"]) {
   &:hover {
     @include box-shadow($btn-hover-box-shadow);
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: rgba(0, 0, 0, .12);
   }
 }
 
 .btn {
+  --mdc-ripple-hover-opacity: 0;
+  --mdc-ripple-focus-opacity: 0;
+  --mdc-ripple-press-opacity: 0.2;
+
   position: relative;
   vertical-align: middle;
 
@@ -62,50 +52,13 @@
   &.disabled,
   &:disabled {
     color: rgba(0, 0, 0, .37);
-    background-color: rgba(0, 0, 0, .12);
     @include box-shadow(none);
-  }
-}
-
-[class*="btn-outline-"],
-[class*="btn-text-"] {
-  background-color: transparent;
-
-  &.disabled,
-  &:disabled {
-    color: rgba(0, 0, 0, .37);
-    background-color: transparent;
   }
 }
 
 [class*="btn-outline-"] {
+  background-color: transparent;
   padding: 5px 14px;
   border: 1px solid;
-
-  &.disabled,
-  &:disabled {
-    border-color: rgba(0, 0, 0, .37);
-  }
-}
-
-[class*="btn-text-"], [class*="btn-outline-"] {
-  &:active,
-  &.active,
-  &:hover,
-  &:focus,
-  &.focus,
-  .show > &.dropdown-toggle {
-    @include box-shadow(none);
-  }
-
-  &:not(:disabled):not(.disabled) {
-    &:active,
-    &.active {
-      @include box-shadow(none);
-
-      &:focus {
-        @include box-shadow(none);
-      }
-    }
-  }
+  @include box-shadow(none !important);
 }
