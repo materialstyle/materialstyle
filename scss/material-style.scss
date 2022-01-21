@@ -27,7 +27,6 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/tables";
 @import "ripple";
-@import "image-list";
 @import "forms";
 // buttons and button-group are imported in button
 @import "buttons";
