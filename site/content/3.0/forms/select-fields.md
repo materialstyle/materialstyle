@@ -17,8 +17,8 @@ We have used Bootstrap's ```Dropdown``` component and ```.form-floating``` to cr
 
 Note that the ```<select>``` must come first so we can utilize a sibling selector (e.g., ~).
 
-{{< callout info >}}
-{{< partial "callout-info-requiresjavascript.md" >}}
+{{< callout >}}
+{{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}
 
 ## Filled
