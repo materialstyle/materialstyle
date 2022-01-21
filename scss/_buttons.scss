@@ -3,8 +3,6 @@
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/button-group";
 
-$raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
-
 .btn:not(.overflow-visible):not(.btn-select) {
   min-width: fit-content;
   overflow: hidden;
@@ -23,23 +21,14 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
 }
 
 .btn:not([class*="btn-outline-"], [class*="btn-text-"]) {
-  &:hover,
-  &:active,
-  &.active,
-  &:focus,
-  &.focus,
-  .show > &.dropdown-toggle {
-    box-shadow: $raised-6dp;
+  &:hover {
+    @include box-shadow($btn-hover-box-shadow);
   }
 }
 
 .btn {
   position: relative;
   vertical-align: middle;
-
-  &.btn-link {
-    box-shadow: none !important; /* stylelint-disable-line declaration-no-important */
-  }
 
   &.btn-fab {
     width: 56px;
@@ -74,7 +63,7 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   &:disabled {
     color: rgba(0, 0, 0, .37);
     background-color: rgba(0, 0, 0, .12);
-    box-shadow: none;
+    @include box-shadow(none);
   }
 }
 
@@ -106,16 +95,16 @@ $raised-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 
   &:focus,
   &.focus,
   .show > &.dropdown-toggle {
-    box-shadow: none;
+    @include box-shadow(none);
   }
 
   &:not(:disabled):not(.disabled) {
     &:active,
     &.active {
-      box-shadow: none;
+      @include box-shadow(none);
 
       &:focus {
-        box-shadow: none;
+        @include box-shadow(none);
       }
     }
   }

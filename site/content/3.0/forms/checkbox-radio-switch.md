@@ -116,7 +116,7 @@ keywords: forms, checkbox, radio, switch
 
 {{< /example >}}
 
-### Material Switch
+### Material Design Switch
 {{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div>
