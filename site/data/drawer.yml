@@ -9,6 +9,7 @@
 - title: Utilities
   pages:
     - title: Colors
+    - title: Ripple
     - title: Shadows
     - title: Shapes
 
@@ -24,6 +25,7 @@
     - title: Buttons
     - title: Cards
     - title: Drawers
+    - title: Dropdowns
     - title: Floating Action Buttons
     - title: Lists
     - title: Modal
