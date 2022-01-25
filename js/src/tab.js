@@ -22,6 +22,7 @@ const NAME = 'tab'
 const VERSION = '3.0.0-alpha1'
 
 const ENTER_KEY_CODE = 13
+const SPACE_KEY_CODE = 32
 const INDICATOR_HEIGHT = 2
 
 class Tab extends BootstrapTab {
@@ -128,7 +129,9 @@ class Tab extends BootstrapTab {
       })
 
       EventHandler.on(value, 'keyup', (event) => {
-        if (event.key === 'Enter' || event.keyCode === ENTER_KEY_CODE) {
+        if (event.code === 'Enter' || event.keyCode === ENTER_KEY_CODE
+          || event.code === 'Space' || event.keyCode === SPACE_KEY_CODE
+        ) {
           this.setIndicatorPosition(value)
         }
       })
