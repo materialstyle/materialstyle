@@ -8,11 +8,11 @@ keywords: snackbar, toast
 
 # Snackbars
 
-Snackbars provide brief messages at the bottom of the screen.
-They appear temporarily and shouldn’t interrupt the user experience.
-Only one snackbar may be displayed at a time.
-
-<br>
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  Snackbars provide brief messages at the bottom of the screen.<br>
+  They appear temporarily and shouldn’t interrupt the user experience.<br>
+  Only one snackbar may be displayed at a time.
+</p>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

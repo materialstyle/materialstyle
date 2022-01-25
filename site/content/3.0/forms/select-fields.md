@@ -8,7 +8,10 @@ keywords: forms, select-field
 
 # Select Fields
 
-Selects allow users to select from a menu. It functions as a wrapper around the browser's native ```<select>``` element.
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  Selects allow users to select from a menu. It functions as a wrapper around the browser's native select element.
+</p>
+
 They come in two types:
 - Filled select fields
 - Outlined select fields

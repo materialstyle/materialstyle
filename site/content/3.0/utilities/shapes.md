@@ -8,7 +8,9 @@ keywords: utilities, shapes
 
 # Shapes
 
-Shapes direct attention, identify components, communicate state, and express brand.
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  Shapes direct attention, identify components, communicate state, and express brand.
+</p>
 
 {{< callout >}}
 {{< partial "callout-requiresjavascript.md" >}}

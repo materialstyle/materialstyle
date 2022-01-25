@@ -8,9 +8,9 @@ keywords: buttons, floating action buttons
 
 # Floating Action Buttons (FAB)
 
-The FAB represents the most important action on a screen. It puts key actions within reach.
-
-<br>
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  The FAB represents the most important action on a screen. It puts key actions within reach.
+</p>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

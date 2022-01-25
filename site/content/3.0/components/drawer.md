@@ -8,6 +8,16 @@ keywords: layout, drawer
 
 # Drawer / Sidebar
 
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  Drawers provide access to destinations and app functionality, such as switching accounts.
+</p>
+
+We use Bootstrap's Offcanvas component for Drawers which come in two types:
+1. Drawer - Hidden by default and can be toggled using the drawer toggler.
+2. Drawer Responsive - Visible by default on large screens, transforms automatically into a standard Drawer on small screens.
+
+<br>
+
 ## Drawer
 
 <div class="border rounded-3">
@@ -47,6 +57,8 @@ keywords: layout, drawer
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
+    
+      <!-- Drawer toggler -->
       <button class="drawer-toggler me-2"
               type="button"
               data-bs-toggle="offcanvas"
@@ -139,7 +151,7 @@ keywords: layout, drawer
 
 <br>
 
-## Drawer End
+### Drawer End
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
@@ -182,6 +194,8 @@ keywords: layout, drawer
         <i class="bi bi-star-fill me-2"></i>Brand
       </a>
     </div>
+    
+    <!-- Drawer toggler -->
     <button class="drawer-toggler ms-2"
             type="button"
             data-bs-toggle="offcanvas"
@@ -272,6 +286,8 @@ keywords: layout, drawer
 
 ## Drawer Responsive
 
+Use Breakpoints ```.offcanvas-expand{-sm|-md|-lg|-xl|-xxl}``` to create a responsive drawer.
+
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
     <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demo/drawer-responsive">
@@ -309,6 +325,8 @@ keywords: layout, drawer
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
+    
+      <!-- Drawer toggler -->
       <button class="drawer-toggler me-2"
               type="button"
               data-bs-toggle="offcanvas"
@@ -401,7 +419,7 @@ keywords: layout, drawer
 
 <br>
 
-## Drawer Responsive End
+### Drawer Responsive End
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
@@ -444,6 +462,8 @@ keywords: layout, drawer
         <i class="bi bi-star-fill me-2"></i>Brand
       </a>
     </div>
+    
+    <!-- Drawer toggler -->
     <button class="drawer-toggler ms-2"
             type="button"
             data-bs-toggle="offcanvas"

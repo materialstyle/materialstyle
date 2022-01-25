@@ -11,7 +11,9 @@ keywords: forms, text-field
 
 # Text Fields
 
-Text fields allow users to enter text into a UI. They come in two types:
+<p class="fs-4 ms-0 mb-4 text-secondary">Text fields allow users to enter text into a UI.</p> 
+
+They come in two types:
 - Filled text fields
 - Outlined text fields
 

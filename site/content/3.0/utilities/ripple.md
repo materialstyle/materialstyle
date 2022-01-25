@@ -8,7 +8,9 @@ keywords: utilities, ripple
 
 # Ripple
 
-Ripples are visual representations used to communicate the status of a component or interactive element.
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  Ripples are visual representations used to communicate the status of a component or interactive element.
+</p>
 
 To add Ripple to your component:
 1. Add Ripple surface (```<span class="ripple-surface"></span>```) to your component.

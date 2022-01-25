@@ -8,6 +8,10 @@ keywords: layout, navbar
 
 # Navbar
 
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  Navigation bars offer a persistent and convenient way to switch between primary destinations in an app.
+</p>
+
 {{< example codeId="code1" >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-green">
   <div class="container-fluid">
