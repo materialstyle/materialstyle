@@ -36,3 +36,11 @@
     - title: Spinners
     - title: Tabs
     - title: Toasts
+
+- title: Demo
+  pages:
+  - title: Drawer
+  - title: Drawer End
+  - title: Drawer Responsive
+  - title: Drawer Responsive End
+  - title: Navbar Auto Hide
