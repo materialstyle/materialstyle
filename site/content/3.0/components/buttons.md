@@ -3,6 +3,7 @@ layout: docs
 title: Buttons
 group: components
 toc: true
+keywords: buttons
 ---
 
 # Buttons

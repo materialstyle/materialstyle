@@ -3,6 +3,7 @@ layout: docs
 title: Snackbars
 group: components
 toc: true
+keywords: snackbar, toast
 ---
 
 # Snackbars

@@ -3,6 +3,7 @@ layout: docs
 title: Progress Bars
 group: components
 toc: true
+keywords: progress, progress bars
 ---
 
 # Progress bars

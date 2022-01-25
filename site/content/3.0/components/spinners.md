@@ -3,6 +3,7 @@ layout: docs
 title: Spinners
 group: components
 toc: true
+keywords: progress, spinners
 ---
 
 # Spinners

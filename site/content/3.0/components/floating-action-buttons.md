@@ -3,6 +3,7 @@ layout: docs
 title: Floating Action Buttons
 group: components
 toc: true
+keywords: buttons, floating action buttons
 ---
 
 # Floating Action Buttons (FAB)
