@@ -129,8 +129,8 @@ class Tab extends BootstrapTab {
       })
 
       EventHandler.on(value, 'keyup', (event) => {
-        if (event.code === 'Enter' || event.keyCode === ENTER_KEY_CODE
-          || event.code === 'Space' || event.keyCode === SPACE_KEY_CODE
+        if (event.code === 'Enter' || event.keyCode === ENTER_KEY_CODE ||
+          event.code === 'Space' || event.keyCode === SPACE_KEY_CODE
         ) {
           this.setIndicatorPosition(value)
         }
