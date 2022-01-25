@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Getting Started
+title: Installation
 group: getting-started
 aliases:
   - "/3.0/getting-started/"
