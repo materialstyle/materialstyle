@@ -12,7 +12,7 @@ toc: true
 <button class="btn btn-pink" id="show-toast">Show Toast</button>
 ##split##
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-  <div id="live-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div id="live-toast" class="toast bg-dark text-white" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header bg-dark">
       <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" class="rounded me-2"
            alt="Material Style Icon" width="20">
@@ -21,7 +21,7 @@ toc: true
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close">
       </button>
     </div>
-    <div class="toast-body bg-dark text-white">
+    <div class="toast-body">
       Hello, world! This is a toast message.
     </div>
   </div>
