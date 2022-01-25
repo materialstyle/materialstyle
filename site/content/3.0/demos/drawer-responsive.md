@@ -1,6 +1,6 @@
 ---
 layout: demo
-title: Drawer - Responsive
+title: Drawer Responsive
 ---
 
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
@@ -9,7 +9,7 @@ title: Drawer - Responsive
       <button class="drawer-toggler me-2"
               type="button"
               data-bs-toggle="offcanvas"
-              data-bs-target="#drawer">
+              data-bs-target="#drawer-responsive">
         <span class="drawer-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
@@ -19,7 +19,7 @@ title: Drawer - Responsive
   </div>
 </nav>
 
-<aside class="offcanvas offcanvas-start offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
+<aside class="offcanvas offcanvas-start show offcanvas-expand-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer-responsive">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand

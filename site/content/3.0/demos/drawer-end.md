@@ -1,6 +1,6 @@
 ---
 layout: demo
-title: Drawer - Responsive
+title: Drawer End
 ---
 
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
