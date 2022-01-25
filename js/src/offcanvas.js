@@ -1,4 +1,5 @@
 import Offcanvas from 'bootstrap/js/src/offcanvas'
+
 export default Offcanvas
 
 /**
@@ -41,10 +42,14 @@ class OffCanvasExpand {
   addEventListeners() {
     window.addEventListener('resize', () => {
       this.handleSidebarVisibility()
+    }, {
+      passive: true
     })
 
     window.addEventListener('load', () => {
       this.handleSidebarVisibility()
+    }, {
+      passive: true
     })
   }
 }
