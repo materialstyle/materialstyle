@@ -93,7 +93,7 @@ body {
   border-radius: 4rem;
 }
 
-.navbar-brand, #siteOffcanvas .offcanvas-title, .footer-brand {
+#site-home-top-nav .navbar-brand, #siteOffcanvas .offcanvas-title, .footer-brand {
   font-size: 1rem !important;
   text-transform: uppercase;
   font-family: "Roboto Mono", monospace;
@@ -190,6 +190,10 @@ h1, h2, h3, h4, h5 {
   word-break: break-word;
   position: relative;
   border-radius: 0.3rem;
+}
+
+.collapse .highlight {
+  border-radius: 0;
 }
 
 .component-wrapper {

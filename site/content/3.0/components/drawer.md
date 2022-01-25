@@ -12,6 +12,14 @@ keywords: layout, drawer
   Drawers provide access to destinations and app functionality, such as switching accounts.
 </p>
 
+<div class="d-flex align-items-center justify-content-center my-4">
+  <img class="lazy border" width="100%" style="max-width:800px;"
+       src="/materialstyle/assets/images/default.jpg"
+       data-src="/materialstyle/assets/images/with_drawer.jpg"
+       data-srcset="/materialstyle/assets/images/with_drawer.jpg"
+       alt="with drawer">
+</div>
+
 We use Bootstrap's Offcanvas component for Drawers which come in two types:
 1. Drawer - Hidden by default and can be toggled using the drawer toggler.
 2. Drawer Responsive - Visible by default on large screens, transforms automatically into a standard Drawer on small screens.

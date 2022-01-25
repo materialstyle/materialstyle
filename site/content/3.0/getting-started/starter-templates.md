@@ -8,74 +8,13 @@ keywords: layout, starter-template
 
 # Starter Templates
 
-## Without Sidebar/Drawer
-
-<div class="d-flex align-items-center justify-content-center my-4">
-  <img class="lazy border" width="100%" style="max-width:800px;"
-       src="/materialstyle/assets/images/default.jpg"
-       data-src="/materialstyle/assets/images/without_drawer.png"
-       data-srcset="/materialstyle/assets/images/without_drawer.png"
-       alt="without drawer">
-</div>
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Material Style CSS -->
-  <link rel="stylesheet"
-        href="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css">
-
-  <title>Material Style</title>
-</head>
-<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
-  <div class="container-fluid">
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand d-flex align-items-center" href="javascript:">
-        <i class="bi bi-star-fill me-2"></i>Brand
-      </a>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-
-  <!-- Your content here -->
-
-</div>
-
-<footer class="bg-dark text-white p-3">
-  Footer
-</footer>
-
-<!-- Popper JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-
-<!-- Material Style JS -->
-<script src="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js"></script>
-
-</body>
-</html>
-```
-
-<br>
-
 ## With Sidebar/Drawer
 
 <div class="d-flex align-items-center justify-content-center my-4">
   <img class="lazy border" width="100%" style="max-width:800px;"
        src="/materialstyle/assets/images/default.jpg"
-       data-src="/materialstyle/assets/images/with_drawer.png"
-       data-srcset="/materialstyle/assets/images/with_drawer.png"
+       data-src="/materialstyle/assets/images/with_drawer.jpg"
+       data-srcset="/materialstyle/assets/images/with_drawer.jpg"
        alt="with drawer">
 </div>
 
@@ -188,3 +127,62 @@ keywords: layout, starter-template
 ```
 
 <br>
+
+## Without Sidebar/Drawer
+
+<div class="d-flex align-items-center justify-content-center my-4">
+  <img class="lazy border" width="100%" style="max-width:800px;"
+       src="/materialstyle/assets/images/default.jpg"
+       data-src="/materialstyle/assets/images/without_drawer.jpg"
+       data-srcset="/materialstyle/assets/images/without_drawer.jpg"
+       alt="without drawer">
+</div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Material Style CSS -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css">
+
+  <title>Material Style</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="javascript:">
+        <i class="bi bi-star-fill me-2"></i>Brand
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- Your content here -->
+
+</div>
+
+<footer class="bg-dark text-white p-3">
+  Footer
+</footer>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+
+<!-- Material Style JS -->
+<script src="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js"></script>
+
+</body>
+</html>
+```
