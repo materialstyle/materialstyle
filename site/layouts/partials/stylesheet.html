@@ -9,7 +9,7 @@
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
 {{- end -}}
 
-{{- $style := resources.Get "3.0/scss/styles.scss" | toCSS $sassOptions | postCSS $postcssOptions }}
+{{- $style := resources.Get "3.0/scss/site.scss" | toCSS $sassOptions | postCSS $postcssOptions }}
 
 <link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
 

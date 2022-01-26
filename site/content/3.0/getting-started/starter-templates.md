@@ -11,7 +11,7 @@ keywords: layout, starter-template
 ## With Sidebar/Drawer
 
 <div class="d-flex align-items-center justify-content-center my-4">
-  <img class="lazy border" width="100%" style="max-width:800px;"
+  <img class="lazy border border-purple" width="100%" style="max-width:800px;"
        src="/materialstyle/assets/images/default.jpg"
        data-src="/materialstyle/assets/images/with_drawer.jpg"
        data-srcset="/materialstyle/assets/images/with_drawer.jpg"
@@ -131,7 +131,7 @@ keywords: layout, starter-template
 ## Without Sidebar/Drawer
 
 <div class="d-flex align-items-center justify-content-center my-4">
-  <img class="lazy border" width="100%" style="max-width:800px;"
+  <img class="lazy border border-purple" width="100%" style="max-width:800px;"
        src="/materialstyle/assets/images/default.jpg"
        data-src="/materialstyle/assets/images/without_drawer.jpg"
        data-srcset="/materialstyle/assets/images/without_drawer.jpg"

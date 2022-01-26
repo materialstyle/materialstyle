@@ -1,6 +1,6 @@
-<nav id="site-home-top-nav" class="navbar navbar-expand-sm fixed-top auto-hide bg-purple navbar-dark">
-  <div class="container-fluid">
-    <div class="d-flex flex-grow-1 align-items-center" style="flex-grow:1;">
+<nav id="site-home-top-nav" class="navbar bg-purple navbar-dark">
+  <div class="container-fluid gap-3">
+    <div class="d-flex flex-grow-1 align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <button class="drawer-toggler"
                 type="button"
@@ -15,8 +15,8 @@
         </a>
       </div>
 
-      <div class="dropdown ms-auto">
-        <button class="btn btn-outline-white border-0 dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" data-display="static" style="text-transform:none;">
+      <div class="dropdown">
+        <button class="btn btn-outline-white border-0 dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" data-display="static" style="text-transform: none;">
           v{{ .Site.Params.docs_version }}
           <span class="ripple-surface"></span>
         </button>
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <ul class="navbar-nav d-flex align-items-center">
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-3">
       <li class="nav-item">
         <a class="nav-link text-white" href="/materialstyle/{{ .Site.Params.docs_version }}/getting-started/installation">Get Started</a>
       </li>
@@ -44,22 +44,22 @@
           <i class="bi bi-github"></i>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white py-0 fs-4" data-toggle="modal" data-target="#searchContainer" role="button">
-          <i class="bi bi-search"></i>
-        </a>
-      </li>
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link text-white py-0 fs-4" data-toggle="modal" data-target="#searchContainer" role="button">-->
+          <!--<i class="bi bi-search"></i>-->
+        <!--</a>-->
+      <!--</li>-->
     </ul>
   </div>
 </nav>
 
-<div class="modal fade" id="searchContainer">
-  <div class="modal-dialog m-0">
-    <div class="modal-content border-0" style="width:100vw;">
-      <div class="modal-header" style="width:100vw;">
-        <input id="searchBox" type="text" class="modal-title text-dark ml-4" placeholder="Search">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-    </div>
-  </div>
-</div>
+<!--<div class="modal fade" id="searchContainer">-->
+  <!--<div class="modal-dialog m-0">-->
+    <!--<div class="modal-content border-0" style="width:100vw;">-->
+      <!--<div class="modal-header" style="width:100vw;">-->
+        <!--<input id="searchBox" type="text" class="modal-title text-dark ml-4" placeholder="Search">-->
+        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
