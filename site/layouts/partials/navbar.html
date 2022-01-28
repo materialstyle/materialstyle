@@ -1,7 +1,6 @@
 <nav id="site-home-top-nav" class="navbar bg-purple navbar-dark">
   <div class="container-fluid gap-3">
-    <div class="d-flex flex-grow-1 align-items-center justify-content-between">
-      <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center">
         <button class="drawer-toggler"
                 type="button"
                 data-bs-toggle="offcanvas"
@@ -9,46 +8,36 @@
           <span class="drawer-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand d-flex align-items-center py-0" href="/">
+        <a class="navbar-brand d-flex align-items-center py-0 me-0" href="/">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:40px; height:40px;">
           <span class="text-white ml-1">Material Style</span>
         </a>
-      </div>
+    </div>
 
-      <div class="dropdown">
-        <button class="btn btn-outline-white border-0 dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" data-display="static" style="text-transform: none;">
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-3">
+      <li class="nav-item dropdown">
+        <a class="nav-link text-white dropdown-toggle rounded px-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           v{{ .Site.Params.docs_version }}
           <span class="ripple-surface"></span>
-        </button>
-        <ul class="dropdown-menu bg-light" style="min-width: auto;">
-          <li><a class="dropdown-item text-pink" href="/materialstyle/3.0/" style="cursor: pointer; pointer-events: none;"><b>3.0</b></a></li>
-          <div class="dropdown-divider"></div>
+        </a>
+        <ul class="dropdown-menu bg-light position-absolute" style="min-width: auto;">
           <li><a class="dropdown-item" href="/docs/2.0/">2.0</a></li>
           <div class="dropdown-divider"></div>
           <li><a class="dropdown-item" href="/docs/1.2/">1.2</a></li>
           <li><a class="dropdown-item" href="/docs/1.1/">1.1</a></li>
           <li><a class="dropdown-item" href="/docs/1.0/">1.0</a></li>
         </ul>
-      </div>
-    </div>
-
-    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-3">
-      <li class="nav-item">
-        <a class="nav-link text-white" href="/materialstyle/{{ .Site.Params.docs_version }}/getting-started/installation">Get Started</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/materialstyle/{{ .Site.Params.docs_version }}/components/alerts">Components</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white py-0 fs-4" href="https://github.com/materialstyle/materialstyle">
+        <a class="nav-link text-white px-1 py-0 fs-4" href="https://github.com/materialstyle/materialstyle">
           <i class="bi bi-github"></i>
         </a>
       </li>
-      <!--<li class="nav-item">-->
-        <!--<a class="nav-link text-white py-0 fs-4" data-toggle="modal" data-target="#searchContainer" role="button">-->
-          <!--<i class="bi bi-search"></i>-->
-        <!--</a>-->
-      <!--</li>-->
+      <li class="nav-item">
+        <a class="nav-link text-white px-1 py-0 fs-4" data-toggle="modal" data-target="#searchContainer" role="button">
+          <i class="bi bi-search"></i>
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
