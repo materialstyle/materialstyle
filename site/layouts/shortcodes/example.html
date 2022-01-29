@@ -21,7 +21,7 @@
 
 <div class="border mb-4 rounded-3">
   {{- if eq $show_preview true -}}
-    <div{{ with $id }} id="{{ . }}"{{ end }} class="p-4 overflow-auto {{ with $class }} {{ . }}{{ end }}">
+    <div{{ with $id }} id="{{ . }}"{{ end }} class="p-4 {{ with $class }} {{ . }}{{ end }}">
       {{- range $input }}
         {{- . | safeHTML -}}
       {{- end -}}

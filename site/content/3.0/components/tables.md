@@ -7,7 +7,7 @@ toc: true
 
 # Tables
 
-{{< example codeId="code1" >}}
+{{< example codeId="code1" class="overflow-auto" >}}
 
 <table class="table">
   <thead>
@@ -45,7 +45,7 @@ toc: true
 
 Add ```table-[color]``` class to ```<table>``` to color tables.
 
-{{< example codeId="code2" >}}
+{{< example codeId="code2" class="overflow-auto" >}}
 
 <!-- Primary -->
 <table class="table table-primary">
@@ -115,7 +115,7 @@ Add ```table-[color]``` class to ```<table>``` to color tables.
 
 Add ```table-[color]``` class to ```<tr>``` to color rows.
 
-{{< example codeId="code3" >}}
+{{< example codeId="code3" class="overflow-auto" >}}
 
 <table class="table">
   <thead>
@@ -153,7 +153,7 @@ Add ```table-[color]``` class to ```<tr>``` to color rows.
 
 Add ```table-[color]``` class to ```<th>``` or ```<td>``` to color cells.
 
-{{< example codeId="code4" >}}
+{{< example codeId="code4" class="overflow-auto" >}}
 
 <table class="table">
   <thead>
@@ -191,7 +191,7 @@ Add ```table-[color]``` class to ```<th>``` or ```<td>``` to color cells.
 
 Add ```table-striped``` class to ```<table>``` to add zebra-striping table rows within the ```<tbody>```.
 
-{{< example codeId="code5" >}}
+{{< example codeId="code5" class="overflow-auto" >}}
 
 <table class="table table-striped">
   <thead>
@@ -291,7 +291,7 @@ Add ```table-striped``` class to ```<table>``` to add zebra-striping table rows 
 
 Add ```table-hover``` class to ```<table>``` to enable a hover state on table rows within a ```<tbody>```.
 
-{{< example codeId="code6" >}}
+{{< example codeId="code6" class="overflow-auto" >}}
 
 <table class="table table-hover">
   <thead>
@@ -391,7 +391,7 @@ Add ```table-hover``` class to ```<table>``` to enable a hover state on table ro
 
 Highlight a table row or cell by adding a ```table-active``` class.
 
-{{< example codeId="code7" >}}
+{{< example codeId="code7" class="overflow-auto" >}}
 
 <table class="table table-red">
   <thead>
@@ -429,7 +429,7 @@ Highlight a table row or cell by adding a ```table-active``` class.
 
 Add ```table-bordered``` class to ```<table>``` for borders on all sides of the table and cells.
 
-{{< example codeId="code8" >}}
+{{< example codeId="code8" class="overflow-auto" >}}
 
 <table class="table table-bordered">
   <thead>
@@ -467,7 +467,7 @@ Add ```table-bordered``` class to ```<table>``` for borders on all sides of the 
 
 Add ```border-[color]``` class to ```<table>``` to change border colors.
 
-{{< example codeId="code9" >}}
+{{< example codeId="code9" class="overflow-auto" >}}
 
 <table class="table table-bordered border-green">
   <thead>
@@ -505,7 +505,7 @@ Add ```border-[color]``` class to ```<table>``` to change border colors.
 
 Add ```table-borderless``` class to ```<table>``` for a table without borders.
 
-{{< example codeId="code10" >}}
+{{< example codeId="code10" class="overflow-auto" >}}
 
 <table class="table table-borderless">
   <thead>
@@ -543,7 +543,7 @@ Add ```table-borderless``` class to ```<table>``` for a table without borders.
 
 Add ```table-sm``` to ```<table>```  to make it more compact by cutting all cell ```padding``` in half.
 
-{{< example codeId="code11" >}}
+{{< example codeId="code11" class="overflow-auto" >}}
 
 <table class="table table-sm">
   <thead>
@@ -586,7 +586,7 @@ Table cells in ```<tbody>``` inherit their alignment from ```<table>``` and are 
 Use the vertical align classes to re-align where needed: 
 ```align-baseline```, ```align-top```, ```align-middle```, ```align-bottom```
 
-{{< example codeId="code12" >}}
+{{< example codeId="code12" class="overflow-auto" >}}
 
 <table class="table align-middle">
   <thead>
@@ -625,7 +625,7 @@ Use the vertical align classes to re-align where needed:
 
 A ```<caption>``` functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.
 
-{{< example codeId="code13" >}}
+{{< example codeId="code13" class="overflow-auto" >}}
 
 <table class="table">
   <caption>List of users</caption>
@@ -662,7 +662,7 @@ A ```<caption>``` functions like a heading for a table. It helps users with scre
 
 You can also put the ```<caption>``` on the top of the table with class ```caption-top``` on ```<table>```.
 
-{{< example codeId="code14" >}}
+{{< example codeId="code14" class="overflow-auto" >}}
 
 <table class="table caption-top">
   <caption>List of users</caption>
