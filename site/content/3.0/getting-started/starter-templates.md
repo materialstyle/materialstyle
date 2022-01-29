@@ -3,12 +3,49 @@ layout: docs
 title: Starter Templates
 group: getting-started
 toc: true
-keywords: layout, starter-template
+keywords: getting-started, layout, starter-template
 ---
 
 # Starter Templates
 
-## With Sidebar/Drawer
+<p class="fs-4 ms-0 mb-4 text-secondary">
+  Be sure to have your pages set up with the latest design and development standards. 
+  That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.
+</p>
+
+## HTML5 doctype
+Bootstrap requires the use of the HTML5 doctype. 
+Without it, you’ll see some funky incomplete styling, 
+but including it shouldn’t cause any considerable hiccups.
+
+```html
+<!doctype html>
+<html lang="en">
+
+</html>
+```
+
+<br>
+
+## Responsive meta tag
+Bootstrap is developed mobile first, a strategy in which it optimizes code for mobile devices first 
+and then scales up components as necessary using CSS media queries. 
+To ensure proper rendering and touch zooming for all devices, 
+add the responsive viewport meta tag to your ```<head>```.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+<br>
+
+For your convenience, we have created two starter templates:
+1. With Sidebar/Drawer
+2. Without Sidebar/Drawer
+
+<br>
+
+## Template with Sidebar/Drawer
 
 <div class="d-flex align-items-center justify-content-center my-4">
   <img class="lazy border border-purple" width="100%" style="max-width:800px;"
@@ -128,7 +165,7 @@ keywords: layout, starter-template
 
 <br>
 
-## Without Sidebar/Drawer
+## Template without Sidebar/Drawer
 
 <div class="d-flex align-items-center justify-content-center my-4">
   <img class="lazy border border-purple" width="100%" style="max-width:800px;"

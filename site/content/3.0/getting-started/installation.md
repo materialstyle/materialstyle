@@ -77,13 +77,8 @@ npm i popper.js
    href="https://github.com/materialstyle/materialstyle.github.io/raw/main/store/3.0.0.zip" download>
   Download v3.0.0
 </a>
-        
 
-
-
-
-
-
-
-
-
+<br>
+    
+## Next steps
+For the next steps, check our <a class="link-purple text-decoration-none" href="/materialstyle/3.0/getting-started/starter-templates/">Starter Templates</a> to start laying out your site’s content and components.

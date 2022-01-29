@@ -67,10 +67,6 @@ body {
   font-weight: bold;
 }
 
-#download + p {
-  margin-left: 0;
-}
-
 .rounded-4rem {
   border-radius: 4rem;
 }
@@ -160,7 +156,7 @@ h1, h2, h3, h4, h5 {
       font-weight: 300;
     }
     p {
-      margin: 10px 10px 10px 11px;
+      margin: 10px 0;
     }
   }
 
