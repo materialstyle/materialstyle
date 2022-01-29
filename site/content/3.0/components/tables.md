@@ -111,7 +111,7 @@ Add ```table-[color]``` class to ```<table>``` to color tables.
 
 {{< /example >}}
 
-### Colored Rows
+### Colored rows
 
 Add ```table-[color]``` class to ```<tr>``` to color rows.
 
@@ -149,7 +149,7 @@ Add ```table-[color]``` class to ```<tr>``` to color rows.
 
 {{< /example >}}
 
-### Colored Cells
+### Colored cells
 
 Add ```table-[color]``` class to ```<th>``` or ```<td>``` to color cells.
 
@@ -187,7 +187,7 @@ Add ```table-[color]``` class to ```<th>``` or ```<td>``` to color cells.
 
 {{< /example >}}
 
-## Striped Rows
+## Striped rows
 
 Add ```table-striped``` class to ```<table>``` to add zebra-striping table rows within the ```<tbody>```.
 
