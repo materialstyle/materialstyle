@@ -18,7 +18,7 @@
 <title>{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}</title>
 
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/materialstyle/assets/images/favicon.ico" type="image/x-icon">
 
 {{ with .Params.robots -}}
 <meta name="robots" content="{{ . }}">
