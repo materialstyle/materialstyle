@@ -30,7 +30,7 @@ keywords: utilities, colors
       <li class="list-group-item border-0">List Group Item <span class="text-purple">(list-group-item-)</span></li>
       <li class="list-group-item border-0">Card <span class="text-purple">(border-)</span></li>
       <li class="list-group-item border-0">Spinner <span class="text-purple">(spinner-)</span></li>
-      <li class="list-group-item border-0">Table <span class="text-purple">(table-) (Partial support *)</span></li>
+      <li class="list-group-item border-0">Table <span class="text-purple">(table-)</span></li>
       <li class="list-group-item border-0">Tab <span class="text-purple">(base-, primary-)</span></li>
       <li class="list-group-item border-0">Select <span class="text-purple">(base-, primary-)</span></li>
       <li class="list-group-item border-0">Text Field <span class="text-purple">(base-, primary-)</span></li>

@@ -14,6 +14,7 @@ $utilities-text: map-merge($utilities-text, $utilities-colors);
 $utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");
 $utilities-bg: map-merge($utilities-bg, $utilities-colors);
 $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+$table-variants: map-merge($table-variants, map-loop($custom-theme-colors, shift-color, "$value", $table-bg-scale));
 
 @import "mixins";
 @import "utilities";
