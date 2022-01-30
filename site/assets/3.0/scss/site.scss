@@ -88,7 +88,11 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5 {
+h1:not(.badge-example-headings h1),
+h2:not(.badge-example-headings h2),
+h3:not(.badge-example-headings h3),
+h4:not(.badge-example-headings h4),
+h5:not(.badge-example-headings h5) {
   font-weight: 300;
 }
 
@@ -152,9 +156,6 @@ h1, h2, h3, h4, h5 {
     @include flex(1 1 auto);
     min-width: 245px;
 
-    h1, h2, h3 {
-      font-weight: 300;
-    }
     p {
       margin: 10px 0;
     }
@@ -164,28 +165,14 @@ h1, h2, h3, h4, h5 {
     @include flex(1 0 220px);
     max-width: 220px;
 
-    h4 {
-      font-weight: 300;
-    }
-
     .sticky-md-top {
       z-index: auto;
     }
   }
 
-  h1, h5 {
-    color: #424242;
-  }
-
-  h1 {
-    font-weight: 300;
+  h1:not(.badge-example-headings h1) {
     font-size: 3rem;
     margin-bottom: 20px;
-  }
-
-  h5 {
-    font-weight: 400;
-    margin: 10px;
   }
 }
 

@@ -24,6 +24,7 @@
   pages:
     - title: Accordion
     - title: Alerts
+    - title: Badges
     - title: Buttons
     - title: Cards
     - title: Drawer

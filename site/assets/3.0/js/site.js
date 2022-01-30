@@ -212,7 +212,7 @@ function populateColors() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  anchors.add('h2:not(.accordion-header), h3, h4');
+  anchors.add('h2:not(.accordion-header):not(.badge-example-headings h2), h3:not(.badge-example-headings h3), h4:not(.badge-example-headings h4)');
 
   // Hide AdSpace
   let ad = document.querySelector('.adspace');
