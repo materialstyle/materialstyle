@@ -2,9 +2,6 @@
 layout: docs
 title: Alerts
 group: components
-aliases:
-  - "/3.0/components/"
-  - "/components/"
 toc: true
 ---
 
