@@ -42,7 +42,7 @@
             {{- $href := printf "/materialstyle/%s/%s/%s/" $.Site.Params.docs_version $group_slug $doc_slug }}
 
             <li class="nav-item mb-1">
-              <a class="nav-link rounded-pill text-dark single-page-link {{ if $is_active }} active{{ end }}"
+              <a class="nav-link rounded-pill text-dark {{ if $is_active }} active{{ end }}"
                  href="{{ $href }}">{{ $doc.title }}</a>
             </li>
           {{- end }}
