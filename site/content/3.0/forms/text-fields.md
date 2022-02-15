@@ -30,11 +30,11 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 ## Filled
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<fieldset class="form-floating">
+<div class="form-floating">
   <input type="text" class="form-control" id="firstname"
          placeholder="firstname" autocomplete="off">
   <label for="firstname">Firstname</label>
-</fieldset>
+</div>
 
 {{< /example >}}
 
@@ -42,11 +42,11 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<fieldset class="form-floating form-floating--outlined">
+<div class="form-floating form-floating--outlined">
   <input type="text" class="form-control" id="firstname-outline"
          placeholder="firstname" autocomplete="off">
   <label for="firstname-outline">Firstname</label>
-</fieldset>
+</div>
 
 {{< /example >}}
 
@@ -55,17 +55,17 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<fieldset class="form-floating base-purple primary-pink">
+<div class="form-floating base-purple primary-pink">
   <input type="text" class="form-control" id="lastname"
          placeholder="lastname" autocomplete="off">
   <label for="lastname">Lastname</label>
-</fieldset>
+</div>
 ##split##
-<fieldset class="form-floating form-floating--outlined base-purple primary-pink">
+<div class="form-floating form-floating--outlined base-purple primary-pink">
   <input type="text" class="form-control" id="lastname-outline"
          placeholder="lastname" autocomplete="off">
   <label for="lastname-outline">Lastname</label>
-</fieldset>
+</div>
         
 {{< /example >}}
 
@@ -73,22 +73,22 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 {{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
-  <fieldset class="form-floating">
+  <div class="form-floating">
     <input type="email" class="form-control" id="email"
            placeholder="Email" autocomplete="off">
     <label for="email">Email</label>
-  </fieldset>
+  </div>
   <span class="input-group-text prepend">
       <i class="bi bi-person-circle"></i>
   </span>
 </div>
 ##split##
 <div class="input-group">
-  <fieldset class="form-floating form-floating--outlined">
+  <div class="form-floating form-floating--outlined">
     <input type="email" class="form-control" id="email-outline"
            placeholder="Email" autocomplete="off">
     <label for="email-outline">Email</label>
-  </fieldset>
+  </div>
   <span class="input-group-text prepend">
       <i class="bi bi-person-circle"></i>
   </span>
@@ -100,22 +100,22 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 {{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group">
-  <fieldset class="form-floating">
+  <div class="form-floating">
     <input type="password" class="form-control" id="password"
            placeholder="Password" autocomplete="off">
     <label for="password">Password</label>
-  </fieldset>
+  </div>
   <span class="input-group-text append">
       <i class="bi bi-keyboard-fill"></i>
   </span>
 </div>
 ##split##
 <div class="input-group">
-  <fieldset class="form-floating form-floating--outlined">
+  <div class="form-floating form-floating--outlined">
     <input type="password" class="form-control" id="password-outline"
            placeholder="Password" autocomplete="off">
     <label for="password-outline">Password</label>
-  </fieldset>
+  </div>
   <span class="input-group-text append">
       <i class="bi bi-keyboard-fill"></i>
   </span>
@@ -128,17 +128,17 @@ To set a custom height on your ```<textarea>```, do not use the rows attribute. 
 
 {{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<fieldset class="form-floating">
+<div class="form-floating">
   <textarea class="form-control" placeholder="address"
             id="address" style="height: 100px"></textarea>
   <label for="address">Address</label>
-</fieldset>
+</div>
 ##split##
-<fieldset class="form-floating form-floating--outlined">
+<div class="form-floating form-floating--outlined">
   <textarea class="form-control" id="address-outline"
             placeholder="address" style="height: 100px"></textarea>
   <label for="address-outline">Address</label>
-</fieldset>
+</div>
 
 {{< /example >}}
 
