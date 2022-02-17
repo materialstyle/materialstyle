@@ -22,8 +22,9 @@ AJAX), remove the ```.was-validated``` class from the ```<form>``` again after s
 pseudo-classes for server-side validation. They do not require a ```.was-validated``` parent class.
 - Due to constraints in how CSS works, Bootstrap cannot (at present) apply styles to a ```<label>``` 
 that comes before a form control in the DOM without the help of custom JavaScript.
-- All modern browsers support the constraint validation API, a series of JavaScript methods for 
-validating form controls.
+- All modern browsers support the 
+[constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), 
+a series of JavaScript methods for validating form controls.
 - Feedback messages may utilize the browser defaults (different for each browser, and unstylable 
 via CSS) or our custom feedback styles with additional HTML and CSS.
 - You may provide custom validity messages with ```setCustomValidity``` in JavaScript.
