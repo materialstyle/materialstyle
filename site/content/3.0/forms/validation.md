@@ -8,6 +8,50 @@ keywords: forms, validation
 
 # Validation
 
+## How it works in Bootstrap
+
+- HTML form validation is applied via CSS’s two pseudo-classes, ```:invalid``` and ```:valid```. 
+It applies to ```<input>```, ```<select>```, and ```<textarea>``` elements.
+- Bootstrap scopes the ```:invalid``` and ```:valid``` styles to parent ```.was-validated``` class, 
+usually applied to the ```<form>```. Otherwise, any required field without a value shows up as 
+invalid on page load. This way, you may choose when to activate them (typically after 
+form submission is attempted).
+- To reset the appearance of the form (for instance, in the case of dynamic form submissions using 
+AJAX), remove the ```.was-validated``` class from the ```<form>``` again after submission.
+- As a fallback, ```.is-invalid``` and ```.is-valid``` classes may be used instead of the 
+pseudo-classes for server-side validation. They do not require a ```.was-validated``` parent class.
+- Due to constraints in how CSS works, Bootstrap cannot (at present) apply styles to a ```<label>``` 
+that comes before a form control in the DOM without the help of custom JavaScript.
+- All modern browsers support the constraint validation API, a series of JavaScript methods for 
+validating form controls.
+- Feedback messages may utilize the browser defaults (different for each browser, and unstylable 
+via CSS) or our custom feedback styles with additional HTML and CSS.
+- You may provide custom validity messages with ```setCustomValidity``` in JavaScript.
+
+## What's changed in Material Style
+
+- Since we use ```.form-floating``` for our Text and Select fields, feedback messages 
+```.valid-feedback``` and ```.invalid-feedback``` must be kept outside the ```.form-floating``` block.
+- To apply the styles on feeback messages, we apply the ```.is-invalid``` and ```.is-valid``` 
+classes on ```.form-floating``` and ```.was-validated``` class is also required.
+- To reset the appearance of the form, classes ```.is-valid``` and ```.is-invalid``` have to be removed
+as well, along with ```.was-validated```.
+- As the ```<label>``` comes after a form control in ```.form-floating```, styling the 
+```<label>``` is no longer a constraint.
+
+## Validation styles
+
+For custom form validation messages, you’ll need to add the ```novalidate``` boolean attribute to your 
+```<form>```. This disables the browser default feedback tooltips, but still provides access to 
+the form validation APIs in JavaScript. 
+
+Try to submit the form below; our JavaScript (provided after the demo) will intercept the 
+submit button and relay feedback to you. When attempting to submit, you’ll see the 
+```:invalid``` and ```:valid``` styles applied to your form controls.
+
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to 
+better communicate feedback.
+
 {{< example codeId="code1">}}
 
 <form class="needs-validation d-flex flex-wrap gap-2" novalidate>
@@ -105,7 +149,10 @@ keywords: forms, validation
 
 {{< /example >}}
 
-## Example starter JavaScript for disabling form submissions if there are invalid fields
+## Javascript
+
+Example starter Javascript to disable form submission if there are invalid fields and 
+to add the required classes ```.was-validated```, ```.is-valid``` and ```.is-invalid```.
 
 ```javascript
 function toggleValidityClasses(input, formFloating) {
