@@ -1,3 +1,7 @@
+.list-group-item {
+  --mdc-ripple-color: #{$list-group-color};
+}
+
 @import "node_modules/bootstrap/scss/list-group";
 
 .list-group-item {
