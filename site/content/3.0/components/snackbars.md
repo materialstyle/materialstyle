@@ -30,35 +30,35 @@ document.querySelector('#show-snackbar').addEventListener('click', function () {
 
 {{< /example >}}
 
-## Snackbar Left
+## Snackbar Start
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <!-- Snackbar -->
-<div class="snackbar snackbar-left" id="snackbar-left-example">This is a Snackbar</div>
+<div class="snackbar snackbar-start" id="snackbar-start-example">This is a Snackbar</div>
 ##split##
 <!-- Button to trigger a Snackbar -->
-<button type="button" class="btn btn-indigo" id="show-snackbar-left">Show snackbar to the Left</button>
+<button type="button" class="btn btn-indigo" id="show-snackbar-start">Show snackbar to the Start</button>
 ##split##
 <script>
-document.querySelector('#show-snackbar-left').addEventListener('click', function () {
-  new materialstyle.Snackbar(document.querySelector('#snackbar-left-example'));
+document.querySelector('#show-snackbar-start').addEventListener('click', function () {
+  new materialstyle.Snackbar(document.querySelector('#snackbar-start-example'));
 });
 </script>
 
 {{< /example >}}
 
-## Snackbar Right
+## Snackbar End
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <!-- Snackbar -->
-<div class="snackbar snackbar-right" id="snackbar-right-example">This is a Snackbar</div>
+<div class="snackbar snackbar-end" id="snackbar-end-example">This is a Snackbar</div>
 ##split##
 <!-- Button to trigger a Snackbar -->
-<button type="button" class="btn btn-indigo" id="show-snackbar-right">Show snackbar to the Right</button>
+<button type="button" class="btn btn-indigo" id="show-snackbar-end">Show snackbar to the End</button>
 ##split##
 <script>
-document.querySelector('#show-snackbar-right').addEventListener('click', function () {
-  new materialstyle.Snackbar(document.querySelector('#snackbar-right-example'));
+document.querySelector('#show-snackbar-end').addEventListener('click', function () {
+  new materialstyle.Snackbar(document.querySelector('#snackbar-end-example'));
 });
 </script>
         
