@@ -210,8 +210,8 @@ class SelectField extends BaseComponent {
     const dropdownItem = document.createElement('button')
     dropdownItem.type = 'button'
     dropdownItem.className = 'dropdown-item d-flex align-items-center'
-    dropdownItem.dataset.value = value
-    dropdownItem.dataset.checked = false
+    dropdownItem.dataset.bsValue = value
+    dropdownItem.dataset.bsChecked = false
 
     if (isSelectAllButton) {
       dropdownItem.classList.add('select-all')
@@ -231,7 +231,7 @@ class SelectField extends BaseComponent {
       dropdownItem.innerHTML = text
       if (checked) {
         dropdownItem.classList.add('checked')
-        dropdownItem.dataset.checked = true
+        dropdownItem.dataset.bsChecked = true
       }
     }
 
@@ -242,7 +242,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map((option) => {
         if (option.selected) {
-          return `<span class="badge bg-dark d-inline-flex align-items-center p-1 m-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-value="${option.value}"></button></span>`
+          return `<span class="badge bg-dark d-inline-flex align-items-center p-1 m-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-bs-value="${option.value}"></button></span>`
         }
         return ''
       }).join('')
@@ -252,7 +252,7 @@ class SelectField extends BaseComponent {
       for (const [, value] of Object.entries(closeButton)) {
         EventHandler.on(value, EVENT_CLICK, (event) => {
           this._dropdownInstance.show()
-          this.selectOne(event.target.dataset.value, false)
+          this.selectOne(event.target.dataset.bsValue, false)
         })
       }
     } else {
@@ -348,7 +348,7 @@ class SelectField extends BaseComponent {
     if (!this._multiSelectEnabled) {
       const dropdownItems = this._dropdown.querySelectorAll(SELECTOR_DROPDOWN_ITEM)
       for (let i = 0; i < dropdownItems.length; i++) {
-        dropdownItems[i].dataset.checked = false
+        dropdownItems[i].dataset.bsChecked = false
         dropdownItems[i].classList.remove('checked')
       }
 
@@ -358,12 +358,12 @@ class SelectField extends BaseComponent {
       }
     }
 
-    this._dropdown.querySelector(`.dropdown-item[data-value="${value}"]`).dataset.checked = checked
+    this._dropdown.querySelector(`.dropdown-item[data-bs-value="${value}"]`).dataset.bsChecked = checked
 
     if (checked) {
-      this._dropdown.querySelector(`.dropdown-item[data-value="${value}"]`).classList.add('checked')
+      this._dropdown.querySelector(`.dropdown-item[data-bs-value="${value}"]`).classList.add('checked')
     } else {
-      this._dropdown.querySelector(`.dropdown-item[data-value="${value}"]`).classList.remove('checked')
+      this._dropdown.querySelector(`.dropdown-item[data-bs-value="${value}"]`).classList.remove('checked')
     }
 
     index = this._options.findIndex((o) => o.value === value)
@@ -403,8 +403,8 @@ class SelectField extends BaseComponent {
     EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
 
     EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, (event) => {
-      const checked = event.target.dataset.checked !== 'true'
-      event.target.dataset.checked = checked
+      const checked = event.target.dataset.bsChecked !== 'true'
+      event.target.dataset.bsChecked = checked
 
       if (checked) {
         event.target.classList.add('checked')
@@ -428,9 +428,9 @@ class SelectField extends BaseComponent {
     for (const [, value] of Object.entries(dropdownItems)) {
       EventHandler.on(value, EVENT_CLICK, (event) => {
         if (this._multiSelectEnabled) {
-          this.selectOne(event.target.dataset.value, event.target.dataset.checked !== 'true')
+          this.selectOne(event.target.dataset.bsValue, event.target.dataset.bsChecked !== 'true')
         } else {
-          this.selectOne(event.target.dataset.value, true)
+          this.selectOne(event.target.dataset.bsValue, true)
 
           this._dropdownInstance.toggle()
         }
@@ -460,10 +460,10 @@ class SelectField extends BaseComponent {
         const selectAllButton = this._dropdown.querySelector(SELECTOR_SELECT_ALL)
         if (allSelected) {
           selectAllButton.classList.add('checked')
-          selectAllButton.dataset.checked = true
+          selectAllButton.dataset.bsChecked = true
         } else {
           selectAllButton.classList.remove('checked')
-          selectAllButton.dataset.checked = false
+          selectAllButton.dataset.bsChecked = false
         }
       } else {
         this.setSelectValue(event.target.value, true)
