@@ -58,11 +58,11 @@ Object.defineProperty(runningQueue, 'pushToRunningQueue', {
     activeSnackbar.classList.add('show')
     runningQueue.push(activeSnackbar)
 
-    if (activeSnackbar.dataset.autoClose === 'true') {
+    if (activeSnackbar.dataset.bsAutoClose === 'true') {
       setTimeout(() => {
         activeSnackbar.classList.remove('show')
         runningQueue.removeFromRunningQueue(activeSnackbar)
-      }, activeSnackbar.dataset.visibleDuration)
+      }, activeSnackbar.dataset.bsVisibleDuration)
     }
   }
 })
@@ -89,8 +89,8 @@ class Snackbar extends BaseComponent {
     super(element)
 
     this._config = this._getConfig(config)
-    this._element.dataset.visibleDuration = this._config.visibleDuration
-    this._element.dataset.autoClose = this._config.autoClose
+    this._element.dataset.bsVisibleDuration = this._config.visibleDuration
+    this._element.dataset.bsAutoClose = this._config.autoClose
 
     waitingQueue.pushToWaitingQueue(this._element)
   }
