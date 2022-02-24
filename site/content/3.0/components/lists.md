@@ -39,6 +39,44 @@ toc: true
 
 {{< /example >}}
 
+## With Ripple
+
+{{< callout javascript-ripple >}}
+{{< partial "callout-ripplerequiresjavascript.md" >}}
+{{< /callout >}}
+
+{{< callout ripple >}}
+{{< partial "callout-rippledocs.md" >}}
+{{< /callout >}}
+
+{{< example codeId="code10" class="d-flex justify-content-center align-items-center flex-wrap gap-2">}}
+
+<div class="list-group">
+  <a href="javascript:" class="list-group-item list-group-item-action">
+    <span class="ripple-surface"></span>First item
+  </a>
+  <a href="javascript:" class="list-group-item list-group-item-action">
+    <span class="ripple-surface"></span>Second item
+  </a>
+  <a href="javascript:" class="list-group-item list-group-item-action">
+    <span class="ripple-surface"></span>Third item
+  </a>
+</div>
+##split##
+<ul class="list-group">
+  <li class="list-group-item list-group-item-pink">
+    <span class="ripple-surface"></span>Pink
+  </li>  
+  <li class="list-group-item list-group-item-yellow">
+    <span class="ripple-surface"></span>Yellow
+  </li>
+  <li class="list-group-item list-group-item-green">
+    <span class="ripple-surface"></span>Green
+  </li>
+</ul>
+
+{{< /example >}}
+
 ## With Checkbox
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
@@ -201,3 +239,20 @@ toc: true
 </ul>
 
 {{< /example >}}
+
+## Javascript for ripple
+```javascript
+// Initialize Ripple
+var rippleSurface = [].slice.call(document.querySelectorAll('.ripple-surface'))
+rippleSurface.map(function (s) {
+  new materialstyle.Ripple(s)
+})
+```
+
+<br>
+
+### jQuery
+```javascript
+// Initialize Ripple
+$('.ripple-surface').ripple();
+```
