@@ -9,9 +9,6 @@ import BaseComponent from 'bootstrap/js/src/base-component'
 import {
   defineJQueryPlugin
 } from 'bootstrap/js/src/util/index'
-import {
-  getColor
-} from '../src/utility.js'
 
 /**
  * --------------------------------------------------------------------------
@@ -52,7 +49,6 @@ class Shape extends BaseComponent {
   initShape() {
     this.setShapeColor()
     this.setShapeSize()
-    this.setShapeOutline()
   }
 
   setShapeColor() {
@@ -137,36 +133,6 @@ class Shape extends BaseComponent {
       this._bottomRightAngle.style.right = `${-(bottomRightWidth / DIVISOR)}px`
       this._bottomRightAngle.style.width = `${bottomRightWidth}px`
       this._bottomRightAngle.style.height = `${bottomRightWidth}px`
-    }
-  }
-
-  setShapeOutline() {
-    let shapeOutline
-
-    const btnOutline = this._element.querySelector('[class*="btn-outline-"]')
-
-    if (btnOutline) {
-      shapeOutline = btnOutline.className.match(/btn-outline-[^\s]+/)
-      shapeOutline = shapeOutline[0].replace('btn-outline-', '')
-    }
-
-    if (shapeOutline) {
-      shapeOutline = getColor(shapeOutline)
-
-      const borderBottom = `1px solid ${shapeOutline}`
-
-      if (this._topLeftAngle) {
-        this._topLeftAngle.style.borderBottom = borderBottom
-      }
-      if (this._topRightAngle) {
-        this._topRightAngle.style.borderBottom = borderBottom
-      }
-      if (this._bottomLeftAngle) {
-        this._bottomLeftAngle.style.borderBottom = borderBottom
-      }
-      if (this._bottomRightAngle) {
-        this._bottomRightAngle.style.borderBottom = borderBottom
-      }
     }
   }
 }

@@ -38,10 +38,10 @@ keywords: utilities, shapes
   <button type="button" class="btn btn-outline-purple">
     Button
   </button>
-  <div class="angle-top-left"></div>
-  <div class="angle-top-right"></div>
-  <div class="angle-bottom-left"></div>
-  <div class="angle-bottom-right"></div>
+  <div class="angle-top-left border border-bottom border-purple"></div>
+  <div class="angle-top-right border border-bottom border-purple"></div>
+  <div class="angle-bottom-left border border-bottom border-purple"></div>
+  <div class="angle-bottom-right border border-bottom border-purple"></div>
 </div>
 
 {{< /example >}}
@@ -59,7 +59,7 @@ keywords: utilities, shapes
       </p>
     </div>
     <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-      <button type="button" class="btn btn-text-purple">
+      <button type="button" class="btn btn-outline-purple border-0">
         Listen Now
       </button>
 
@@ -94,7 +94,7 @@ keywords: utilities, shapes
       </p>
     </div>
     <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-      <button type="button" class="btn btn-text-purple">
+      <button type="button" class="btn btn-outline-purple border-0">
         Listen Now
       </button>
 
