@@ -10,7 +10,7 @@ toc: true
 {{< example codeId="code1" >}}
 
 <div class="alert alert-success">
-    <strong>Success!</strong> Indicates a successful action.
+  <strong>Success!</strong> Indicates a successful action.
 </div>
 
 {{< /example >}}
@@ -18,7 +18,7 @@ toc: true
 ## With a link
 {{< example codeId="code2" >}}
 
- <div class="alert alert-info" role="alert" role="alert">
+<div class="alert alert-info" role="alert" role="alert">
   A simple info alert with <a href="#" class="alert-link">a link</a>.
 </div>
 
