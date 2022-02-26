@@ -38,7 +38,7 @@
   <div class="collapse" {{ with $codeId }} id="{{ . }}" {{ end }}>
     {{- if eq $show_markup true -}}
       {{- range $input }}
-        {{- $content := replaceRE `<svg class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` . | safeHTML -}}
+        {{- $content := replaceRE `<svg class="ms-placeholder-img(?:-lg)?(?: *?ms-placeholder-img-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` . | safeHTML -}}
         {{- $content = replaceRE ` (class=" *?")` "" $content -}}
         {{- highlight (trim $content "\n") $lang "" -}}
       {{- end -}}

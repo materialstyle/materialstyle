@@ -590,3 +590,14 @@ pre, .highlight {
     border-radius: 0;
   }
 }
+
+.ms-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.ms-placeholder-img-lg {
+  font-size: calc(1.475rem + 2.7vw);
+}
