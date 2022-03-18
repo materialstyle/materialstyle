@@ -3,6 +3,7 @@ layout: docs
 title: Popovers
 group: components
 toc: true
+keywords: tooltips, popovers
 ---
 
 # Popovers

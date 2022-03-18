@@ -128,6 +128,12 @@ function initComponents() {
     })
   }
 
+  // Tooltip
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new materialstyle.Tooltip(tooltipTriggerEl)
+  })
+
   // Modal
   var myModal = document.getElementById('myModal2')
   if (myModal) {
