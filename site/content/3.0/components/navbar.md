@@ -62,7 +62,7 @@ keywords: layout, navbar
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demo/navbar-auto-hide">
+    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/navbar-auto-hide">
       View Demo <i class="bi bi-box-arrow-up-right"></i>
       <span class="ripple-surface"></span>
     </a>

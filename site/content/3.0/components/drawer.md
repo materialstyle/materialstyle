@@ -30,7 +30,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demo/drawer">
+    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer">
       View Demo <i class="bi bi-box-arrow-up-right"></i>
       <span class="ripple-surface"></span>
     </a>
@@ -163,7 +163,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demo/drawer-end">
+    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer-end">
       View Demo <i class="bi bi-box-arrow-up-right"></i>
       <span class="ripple-surface"></span>
     </a>
@@ -298,7 +298,7 @@ Use Breakpoints ```.offcanvas-expand{-sm|-md|-lg|-xl|-xxl}``` to create a respon
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demo/drawer-responsive">
+    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer-responsive">
       View Demo <i class="bi bi-box-arrow-up-right"></i>
       <span class="ripple-surface"></span>
     </a>
@@ -431,7 +431,7 @@ Use Breakpoints ```.offcanvas-expand{-sm|-md|-lg|-xl|-xxl}``` to create a respon
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demo/drawer-responsive-end">
+    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer-responsive-end">
       View Demo <i class="bi bi-box-arrow-up-right"></i>
       <span class="ripple-surface"></span>
     </a>
