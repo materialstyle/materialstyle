@@ -42,7 +42,7 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<div class="form-floating form-floating--outlined">
+<div class="form-floating form-floating-outlined">
   <input type="text" class="form-control" id="firstname-outline"
          placeholder="firstname" autocomplete="off">
   <label for="firstname-outline">Firstname</label>
@@ -61,7 +61,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
   <label for="lastname">Lastname</label>
 </div>
 ##split##
-<div class="form-floating form-floating--outlined base-purple primary-pink">
+<div class="form-floating form-floating-outlined base-purple primary-pink">
   <input type="text" class="form-control" id="lastname-outline"
          placeholder="lastname" autocomplete="off">
   <label for="lastname-outline">Lastname</label>
@@ -84,7 +84,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 </div>
 ##split##
 <div class="input-group">
-  <div class="form-floating form-floating--outlined">
+  <div class="form-floating form-floating-outlined">
     <input type="email" class="form-control" id="email-outline"
            placeholder="Email" autocomplete="off">
     <label for="email-outline">Email</label>
@@ -111,7 +111,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 </div>
 ##split##
 <div class="input-group">
-  <div class="form-floating form-floating--outlined">
+  <div class="form-floating form-floating-outlined">
     <input type="password" class="form-control" id="password-outline"
            placeholder="Password" autocomplete="off">
     <label for="password-outline">Password</label>
@@ -134,7 +134,7 @@ To set a custom height on your ```<textarea>```, do not use the rows attribute. 
   <label for="address">Address</label>
 </div>
 ##split##
-<div class="form-floating form-floating--outlined">
+<div class="form-floating form-floating-outlined">
   <textarea class="form-control" id="address-outline"
             placeholder="address" style="height: 100px"></textarea>
   <label for="address-outline">Address</label>

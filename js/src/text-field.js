@@ -23,7 +23,7 @@ const NAME = 'textfield'
 const VERSION = '3.0.0-alpha1'
 
 const CLASS_NAME_FLOATING = 'form-floating'
-const CLASS_NAME_FLOATING_OUTLINED = 'form-floating--outlined'
+const CLASS_NAME_FLOATING_OUTLINED = 'form-floating-outlined'
 
 const LABEL_SCALE = 0.85
 

@@ -44,7 +44,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<div class="form-floating form-floating--outlined">
+<div class="form-floating form-floating-outlined">
   <select class="form-select">
     <option value=""></option>
     <option value="1">Option 1</option>
@@ -73,7 +73,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
   <label>Select One</label>
 </div>
 ##split##
-<div class="form-floating form-floating--outlined base-purple primary-pink">
+<div class="form-floating form-floating-outlined base-purple primary-pink">
   <select class="form-select">
     <option value=""></option>
     <option value="1">Option 1</option>
@@ -102,7 +102,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
   <label>Searchable</label>
 </div>
 ##split##
-<div class="form-floating form-floating--outlined searchable">
+<div class="form-floating form-floating-outlined searchable">
   <select class="form-select">
     <option value=""></option>
     <option value="1">Option 1</option>
@@ -135,7 +135,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 </div>
 ##split##
 <div class="input-group">
-  <div class="form-floating form-floating--outlined">
+  <div class="form-floating form-floating-outlined">
     <select class="form-select">
       <option value=""></option>
       <option value="1">Option 1</option>
@@ -172,7 +172,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 </div>
 ##split##
 <div class="input-group">
-  <div class="form-floating form-floating--outlined">
+  <div class="form-floating form-floating-outlined">
     <select class="form-select">
       <option value=""></option>
       <option value="1">Option 1</option>
@@ -204,7 +204,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
   <label>Select</label>
 </div>
 ##split##
-<div class="form-floating form-floating--outlined multi-select">
+<div class="form-floating form-floating-outlined multi-select">
   <select class="form-select" name="cars[]" multiple>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
@@ -229,7 +229,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
   <label>Searchable</label>
 </div>
 ##split##
-<div class="form-floating form-floating--outlined multi-select searchable">
+<div class="form-floating form-floating-outlined multi-select searchable">
   <select class="form-select" name="cars[]" multiple>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
@@ -260,7 +260,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
 </div>
 ##split##
 <div class="input-group">
-  <div class="form-floating form-floating--outlined multi-select">
+  <div class="form-floating form-floating-outlined multi-select">
     <select class="form-select" name="cars[]" multiple>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
@@ -295,7 +295,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
 </div>
 ##split##
 <div class="input-group">
-  <div class="form-floating form-floating--outlined multi-select">
+  <div class="form-floating form-floating-outlined multi-select">
     <select class="form-select" name="cars[]" multiple>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>

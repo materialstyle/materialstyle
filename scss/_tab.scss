@@ -45,10 +45,11 @@
         color: $primary;
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         --mdc-ripple-hover-opacity: 0;
         --mdc-ripple-focus-opacity: 0;
-        --mdc-ripple-press-opacity: 0.2;
+        --mdc-ripple-press-opacity: .2;
         --mdc-ripple-color: #{$primary};
 
         background-color: rgba($primary, .15);
@@ -79,7 +80,8 @@
   .nav-tabs.base-#{$color} .nav-link:not(.active) {
     color: $value !important; /* stylelint-disable-line declaration-no-important */
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       --mdc-ripple-color: #{$value};
       background-color: rgba($value, .15);
     }

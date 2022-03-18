@@ -70,7 +70,7 @@ toc: true
           <!-- Text field outlined -->
           <div class="col-sm-6 my-2">
             <div class="input-group">
-              <fieldset class="form-floating form-floating--outlined">
+              <fieldset class="form-floating form-floating-outlined">
                 <input type="email" class="form-control" id="email-outline"
                        placeholder="Email" autocomplete="off">
                 <label for="email-outline">Email</label>
@@ -103,7 +103,7 @@ toc: true
           <!-- Select field outlined -->
           <div class="col-sm-6 my-2">
             <div class="input-group">
-              <fieldset class="form-floating form-floating--outlined">
+              <fieldset class="form-floating form-floating-outlined">
                 <select class="form-select">
                   <option value=""></option>
                   <option value="1">Option 1</option>

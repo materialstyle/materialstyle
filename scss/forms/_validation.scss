@@ -1,11 +1,14 @@
 @import "node_modules/bootstrap/scss/forms/validation";
 
+// stylelint-disable selector-max-class, selector-max-compound-selectors, selector-max-combinators
 .was-validated {
   .form-floating {
-    .form-control, .form-select {
-      &:valid, &.is-valid {
-        background-position: right var(--append-width, $input-height-inner-quarter) center;
+    .form-control,
+    .form-select {
+      &:valid,
+      &.is-valid {
         padding-right: calc($input-height-inner + var(--append-width, 0px));
+        background-position: right var(--append-width, $input-height-inner-quarter) center;
 
         &:focus {
           box-shadow: none;
@@ -22,15 +25,16 @@
         ~ .dropdown .dropdown-toggle {
           padding-right: calc($form-select-feedback-icon-padding-end + var(--append-width, 0px));
           background-image: escape-svg($form-select-indicator), escape-svg($form-feedback-icon-valid);
+          background-repeat: no-repeat;
           background-position: right var(--append-width, $form-select-padding-x) center, center right calc(var(--append-width, $form-select-padding-x) + $form-select-indicator-padding - 16px);
           background-size: $form-select-bg-size, $form-select-feedback-icon-size;
-          background-repeat: no-repeat;
         }
       }
 
-      &:invalid, &.is-invalid {
-        background-position: right var(--append-width, $input-height-inner-quarter) center;
+      &:invalid,
+      &.is-invalid {
         padding-right: calc($input-height-inner + var(--append-width, 0px));
+        background-position: right var(--append-width, $input-height-inner-quarter) center;
 
         &:focus {
           box-shadow: none;
@@ -47,16 +51,18 @@
         ~ .dropdown .dropdown-toggle {
           padding-right: calc($form-select-feedback-icon-padding-end + var(--append-width, 0px));
           background-image: escape-svg($form-select-indicator), escape-svg($form-feedback-icon-invalid);
+          background-repeat: no-repeat;
           background-position: right var(--append-width, $form-select-padding-x) center, center right calc(var(--append-width, $form-select-padding-x) + $form-select-indicator-padding - 16px);
           background-size: $form-select-bg-size, $form-select-feedback-icon-size;
-          background-repeat: no-repeat;
         }
       }
     }
 
-    &--outlined {
-      .form-control, .form-select {
-        &:valid, &.is-valid {
+    &.form-floating-outlined {
+      .form-control,
+      .form-select {
+        &:valid,
+        &.is-valid {
           ~ .m-notch > .m-notch-between > label {
             color: $success;
           }
@@ -70,7 +76,8 @@
           }
         }
 
-        &:invalid, &.is-invalid {
+        &:invalid,
+        &.is-invalid {
           ~ .m-notch > .m-notch-between > label {
             color: $danger;
           }
@@ -87,3 +94,4 @@
     }
   }
 }
+// stylelint-enable selector-max-class, selector-max-compound-selectors, selector-max-combinators

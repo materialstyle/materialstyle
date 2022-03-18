@@ -34,7 +34,7 @@ const EVENT_HIDDEN = 'hidden.bs.dropdown'
 const EVENT_SHOWN = 'shown.bs.dropdown'
 
 const CLASS_NAME_FLOATING = 'form-floating'
-const CLASS_NAME_FLOATING_OUTLINED = 'form-floating--outlined'
+const CLASS_NAME_FLOATING_OUTLINED = 'form-floating-outlined'
 
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'

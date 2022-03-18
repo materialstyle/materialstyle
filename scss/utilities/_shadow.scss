@@ -28,4 +28,4 @@ $shadows: (
 $box-shadow: map-get($shadows, 8dp) !default;
 $box-shadow-sm: map-get($shadows, 1dp) !default;
 $box-shadow-lg: map-get($shadows, 18dp) !default;
-$box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075) !default;

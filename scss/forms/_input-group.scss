@@ -1,13 +1,14 @@
 @import "node_modules/bootstrap/scss/forms/input-group";
 
+// stylelint-disable selector-max-compound-selectors
 .input-group {
   display: block;
 
   .input-group-text {
-    top: 0;
     position: absolute;
-    pointer-events: none;
+    top: 0;
     padding: 1rem .75rem;
+    pointer-events: none;
 
     &.prepend {
       left: 0;
@@ -19,7 +20,8 @@
   }
 
   > .form-floating {
-    .form-control, .dropdown {
+    .form-control,
+    .dropdown {
       ~ label {
         left: var(--prepend-width, 0);
       }
@@ -27,8 +29,9 @@
 
     > .m-notch {
       > .m-notch-between > label {
-        transform: translateX(calc(var(--prepend-width, calc(0.75rem + 5px)) - (0.75rem + 5px)));
+        transform: translateX(calc(var(--prepend-width, calc(.75rem + 5px)) - (.75rem + 5px)));
       }
     }
   }
 }
+// stylelint-enable selector-max-compound-selectors

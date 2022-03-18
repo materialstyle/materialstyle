@@ -15,7 +15,7 @@
 .btn {
   --mdc-ripple-hover-opacity: 0;
   --mdc-ripple-focus-opacity: 0;
-  --mdc-ripple-press-opacity: 0.2;
+  --mdc-ripple-press-opacity: .2;
 
   position: relative;
   vertical-align: middle;
@@ -57,8 +57,8 @@
 }
 
 [class*="btn-outline-"] {
-  background-color: transparent;
   padding: 5px 14px;
+  background-color: transparent;
   border: 1px solid;
   @include box-shadow(none !important);
 }

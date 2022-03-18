@@ -67,7 +67,7 @@ better communicate feedback.
   </div>
 
   <div>
-    <div class="form-floating form-floating--outlined">
+    <div class="form-floating form-floating-outlined">
       <input type="text" class="form-control" id="textfield-outlined" placeholder="textfield" autocomplete="off" required>
       <label for="textfield-outlined">Outlined Text Field</label>
     </div>
@@ -103,7 +103,7 @@ better communicate feedback.
   </div>
 
   <div>
-    <div class="form-floating form-floating--outlined">
+    <div class="form-floating form-floating-outlined">
       <select class="form-select" required>
         <option value=""></option>
         <option value="1">Option 1</option>
