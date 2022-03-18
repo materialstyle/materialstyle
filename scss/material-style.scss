@@ -44,7 +44,7 @@ $table-variants: map-merge($table-variants, map-loop($custom-theme-colors, shift
 @import "node_modules/bootstrap/scss/alert";
 @import "progress";
 @import "list-group";
-@import "node_modules/bootstrap/scss/close";
+@import "close";
 @import "node_modules/bootstrap/scss/toasts";
 @import "snackbar";
 @import "node_modules/bootstrap/scss/modal";

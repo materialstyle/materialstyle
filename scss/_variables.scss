@@ -16,6 +16,10 @@ $btn-hover-box-shadow: map-get($shadows, 4dp) !default;
 $btn-focus-box-shadow: $btn-hover-box-shadow !default;
 $btn-active-box-shadow:  $btn-hover-box-shadow !default;
 
+// Button close
+$btn-close-padding-x: .5em !default;
+$btn-close-focus-shadow: 0 0 0 0.15rem rgb(0 0 0 / 20%) !default;
+
 // Pagination
 $pagination-focus-box-shadow: 0 0 0 rgb(0 0 0 / 0) !default;
 
@@ -50,7 +54,7 @@ $list-group-active-border-color: $list-group-border-color !default;
 $popover-border-width: 0 !default;
 
 // Navbar
-$navbar-toggler-focus-width: 2px !default;
+$navbar-toggler-focus-width: 0.2rem !default;
 $navbar-toggler-border-radius: 0 !default;
 $navbar-dark-color: rgba($white, .55) !default;
 $navbar-light-color: rgba($black, .55) !default;

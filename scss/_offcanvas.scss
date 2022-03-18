@@ -5,6 +5,12 @@
 }
 
 .offcanvas {
+  .offcanvas-header {
+    .btn-close {
+      padding: $btn-close-padding-y $btn-close-padding-x;
+    }
+  }
+
   .offcanvas-title {
     padding-top: $navbar-brand-padding-y;
     padding-bottom: $navbar-brand-padding-y;
