@@ -10,6 +10,8 @@ toc: true
 
 # Accordion
 
+<p class="fs-4 ms-0 mb-4 text-secondary">The accordion component allows the user to show and hide sections of related content on a page.</p>
+
 The accordion uses collapse internally to make it collapsible. 
 To render an accordion that’s expanded, add the ```open``` class on the ```accordion```.
 
