@@ -2,14 +2,16 @@ function saveOffcanvasScrollPosition() {
   let offcanvas = document.querySelector("#siteOffcanvas .offcanvas-body");
 
   if (offcanvas) {
-    let positionTop = localStorage.getItem("offcanvas-scroll");
-    if (positionTop !== null) {
-      offcanvas.scrollTop = parseInt(positionTop, 10);
-    }
+    var offcanvasHeight = offcanvas.clientHeight
+    var offcanvasActiveLink = document.querySelector('.active')
+    var offcanvasActiveLinkTop = offcanvasActiveLink.offsetTop
+    var offcanvasActiveLinkHeight = offcanvasActiveLink.clientHeight
+    var viewportTop = offcanvasActiveLinkTop
+    var viewportBottom = viewportTop - offcanvasHeight + offcanvasActiveLinkHeight
 
-    window.addEventListener("beforeunload", () => {
-      localStorage.setItem("offcanvas-scroll", offcanvas.scrollTop);
-    });
+    if (offcanvas.scrollTop > viewportTop || offcanvas.scrollTop < viewportBottom) {
+      offcanvas.scrollTop = viewportTop - (offcanvasHeight / 2) + (offcanvasActiveLinkHeight / 2)
+    }
   }
 }
 
