@@ -13,35 +13,55 @@ toc: true
 {{< example codeId="code1" >}}
 
 <div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
+  Primary | Blue
 </div>
 ##split##
 <div class="alert alert-secondary" role="alert">
-  A simple secondary alert—check it out!
+  Secondary | Gray
 </div>
 ##split##
 <div class="alert alert-success" role="alert">
-  A simple success alert—check it out!
-</div>
-##split##
-<div class="alert alert-danger" role="alert">
-  A simple danger alert—check it out!
-</div>
-##split##
-<div class="alert alert-warning" role="alert">
-  A simple warning alert—check it out!
+  Success | Green
 </div>
 ##split##
 <div class="alert alert-info" role="alert">
-  A simple info alert—check it out!
+  Info | Cyan
+</div>
+##split##
+<div class="alert alert-warning" role="alert">
+  Warning | Yellow
+</div>
+##split##
+<div class="alert alert-danger" role="alert">
+  Danger | Red
 </div>
 ##split##
 <div class="alert alert-light" role="alert">
-  A simple light alert—check it out!
+  Light
 </div>
 ##split##
 <div class="alert alert-dark" role="alert">
-  A simple dark alert—check it out!
+  Dark
+</div>
+##split##
+<div class="alert alert-indigo" role="alert">
+  Indigo
+</div>
+##split##
+<div class="alert alert-purple" role="alert">
+  Purple
+</div>
+##split##
+<div class="alert alert-pink" role="alert">
+  Pink
+</div>
+##split##
+<div class="alert alert-orange" role="alert">
+  Orange
+</div>
+##split##
+<div class="alert alert-teal" role="alert">
+  Teal
 </div>
 
 {{< /example >}}
