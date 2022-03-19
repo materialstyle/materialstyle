@@ -7,10 +7,41 @@ toc: true
 
 # Alerts
 
+<p class="fs-4 ms-0 mb-4 text-secondary">Alerts provide contextual feedback messages for typical user actions.</p>
+
+## Color options
 {{< example codeId="code1" >}}
 
-<div class="alert alert-success">
-  <strong>Success!</strong> Indicates a successful action.
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+##split##
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+##split##
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+##split##
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+##split##
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+##split##
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+##split##
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+##split##
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
 </div>
 
 {{< /example >}}
