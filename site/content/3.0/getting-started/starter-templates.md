@@ -39,6 +39,22 @@ add the responsive viewport meta tag to your ```<head>```.
 
 <br>
 
+## Box-sizing
+For more straightforward sizing in CSS, Bootstrap switches the global ```box-sizing``` value 
+from ```content-box``` to ```border-box```. This ensures ```padding``` does not affect the final 
+computed width of an element, but it can cause problems with some third-party software like 
+Google Maps and Google Custom Search Engine.
+
+On the rare occasion you need to override it, use something like the following:
+
+```css
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+```
+
+<br>
+
 For your convenience, we have created two starter templates:
 1. With Sidebar/Drawer
 2. Without Sidebar/Drawer
