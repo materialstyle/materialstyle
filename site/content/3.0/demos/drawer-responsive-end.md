@@ -19,7 +19,7 @@ title: Drawer Responsive End
   </div>
 </nav>
 
-<aside class="offcanvas offcanvas-end show offcanvas-expand-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer-responsive-end">
+<aside class="offcanvas offcanvas-end show offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer-responsive-end">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand

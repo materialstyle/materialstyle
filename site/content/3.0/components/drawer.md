@@ -294,7 +294,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 ## Drawer Responsive
 
-Use Breakpoints ```.offcanvas-expand{-sm|-md|-lg|-xl|-xxl}``` to create a responsive drawer.
+Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive drawer.
 
 <div class="border rounded-3">
   <div class="p-4 d-flex justify-content-center">
@@ -349,7 +349,7 @@ Use Breakpoints ```.offcanvas-expand{-sm|-md|-lg|-xl|-xxl}``` to create a respon
 </nav>
 
 <!-- Sidebar / Drawer -->
-<aside class="offcanvas offcanvas-start show offcanvas-expand-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
+<aside class="offcanvas offcanvas-start show offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
@@ -482,7 +482,7 @@ Use Breakpoints ```.offcanvas-expand{-sm|-md|-lg|-xl|-xxl}``` to create a respon
 </nav>
 
 <!-- Sidebar / Drawer -->
-<aside class="offcanvas offcanvas-end show offcanvas-expand-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
+<aside class="offcanvas offcanvas-end show offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand

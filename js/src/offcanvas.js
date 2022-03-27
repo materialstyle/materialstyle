@@ -6,19 +6,19 @@ export default Offcanvas
  * Class definition
  */
 
-class OffCanvasExpand {
+class OffCanvasResponsive {
   constructor() {
-    this._offCanvasExpand = document.querySelector('.offcanvas[class*="offcanvas-expand"]')
+    this._offCanvas = document.querySelector('.offcanvas')
 
-    if (this._offCanvasExpand) {
-      this._offCanvasInstance = Offcanvas.getOrCreateInstance(this._offCanvasExpand)
+    if (this._offCanvas) {
+      this._offCanvasInstance = Offcanvas.getOrCreateInstance(this._offCanvas)
 
       this.addEventListeners()
     }
   }
 
   handleSidebarVisibility() {
-    const onCanvas = window.getComputedStyle(this._offCanvasExpand).getPropertyValue('--oncanvas').trim()
+    const onCanvas = window.getComputedStyle(this._offCanvas).getPropertyValue('--oncanvas').trim()
 
     if (!this._offCanvasInstance._isShown && onCanvas === 'true') {
       this._offCanvasInstance.show()
@@ -42,4 +42,4 @@ class OffCanvasExpand {
   }
 }
 
-(() => new OffCanvasExpand())()
+(() => new OffCanvasResponsive())()

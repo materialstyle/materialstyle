@@ -89,7 +89,7 @@ For your convenience, we have created two starter templates:
 </nav>
 
 <!-- Sidebar / Drawer -->
-<aside class="offcanvas offcanvas-start offcanvas-expand-md offcanvas-light" tabindex="-1"
+<aside class="offcanvas offcanvas-start offcanvas-md offcanvas-light" tabindex="-1"
        id="drawerAutoHide">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
