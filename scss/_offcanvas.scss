@@ -1,10 +1,13 @@
 @import "node_modules/bootstrap/scss/offcanvas";
 
 :root {
-  --offcanvas-expand-width: #{$offcanvas-horizontal-width};
+  --offcanvas-width: #{$offcanvas-horizontal-width};
 }
 
 .offcanvas {
+  width: var(--offcanvas-width);
+  border: 0;
+
   .offcanvas-header {
     .btn-close {
       padding: $btn-close-padding-y $btn-close-padding-x;
@@ -42,41 +45,36 @@
       }
     }
   }
-}
 
-.offcanvas[class*="offcanvas-expand"] {
-  width: var(--offcanvas-expand-width);
-  border: 0;
-}
-
-.offcanvas-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($next, $grid-breakpoints);
 
-    &#{$infix} {
-      @include media-breakpoint-up($next) {
-        --oncanvas: true;
-        z-index: auto;
+    @if not ($infix == "") {
+      &#{$infix} {
+        @include media-breakpoint-up($next) {
+          --oncanvas: true;
+          z-index: auto;
 
-        &.show.offcanvas-start ~ .offcanvas-pushed-content {
-          margin-left: var(--offcanvas-expand-width);
-        }
+          &.show.offcanvas-start ~ .offcanvas-pushed-content {
+            margin-left: var(--offcanvas-width);
+          }
 
-        &.show.offcanvas-end ~ .offcanvas-pushed-content {
-          margin-right: var(--offcanvas-expand-width);
-        }
+          &.show.offcanvas-end ~ .offcanvas-pushed-content {
+            margin-right: var(--offcanvas-width);
+          }
 
-        ~ .offcanvas-backdrop {
-          display: none;
-        }
+          ~ .offcanvas-backdrop {
+            display: none;
+          }
 
-        .btn-close {
-          display: none;
+          .btn-close {
+            display: none;
+          }
         }
-      }
-      @include media-breakpoint-down($next) {
-        --oncanvas: false;
+        @include media-breakpoint-down($next) {
+          --oncanvas: false;
+        }
       }
     }
   }
