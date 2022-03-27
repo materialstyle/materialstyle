@@ -2,6 +2,13 @@
 .form-floating {
   position: relative;
 
+  > .form-control,
+  > .form-control-plaintext,
+  > .dropdown > .dropdown-toggle {
+    height: $form-floating-height;
+    line-height: $form-floating-line-height;
+  }
+
   > label {
     position: absolute;
     top: 0;
@@ -14,29 +21,9 @@
     @include transition($form-floating-transition);
   }
 
-  > select.form-select {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  > textarea.form-control {
-    padding: 0 var(--prepend-width, $input-padding-x);
-    margin: 1.625rem 0 .2rem 0; // stylelint-disable shorthand-property-no-redundant-values
-
-    &:focus,
-    &:not(:placeholder-shown) {
-      padding: 0 var(--prepend-width, $input-padding-x);
-    }
-  }
-
   // stylelint-disable no-duplicate-selectors
-  > .form-control {
+  > .form-control,
+  > .form-control-plaintext {
     padding: $form-floating-padding-y var(--append-width, $form-floating-padding-x) $form-floating-padding-y var(--prepend-width, $form-floating-padding-x);
     background-color: transparent;
     border: 0;
@@ -61,10 +48,25 @@
     }
   }
 
-  > .form-control,
-  > .dropdown > .dropdown-toggle {
-    height: $form-floating-height;
-    line-height: $form-floating-line-height;
+  > textarea.form-control {
+    padding: 0 var(--prepend-width, $input-padding-x);
+    margin: 1.625rem 0 .2rem 0; // stylelint-disable shorthand-property-no-redundant-values
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      padding: 0 var(--prepend-width, $input-padding-x);
+    }
+  }
+
+  > .form-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    pointer-events: none;
+    opacity: 0;
   }
 
   > .dropdown {
@@ -136,7 +138,8 @@
 
   > .dropdown.float,
   > .form-control:focus,
-  > .form-control:not(:placeholder-shown) {
+  > .form-control:not(:placeholder-shown),
+  > .form-control-plaintext {
     ~ label {
       opacity: $form-floating-label-opacity;
       transform: $form-floating-label-transform;

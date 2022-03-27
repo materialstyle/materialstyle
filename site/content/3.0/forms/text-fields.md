@@ -142,6 +142,27 @@ To set a custom height on your ```<textarea>```, do not use the rows attribute. 
 
 {{< /example >}}
 
+## Readonly Plain text
+If you want to have ```<input readonly>``` elements in your form styled as plain text, 
+use the ```.form-control-plaintext``` class to remove the default form field styling 
+and preserve the correct margin and padding.
+
+{{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+
+<div class="form-floating">
+  <input type="email" class="form-control-plaintext" id="email-read-only-outline"
+         placeholder="email-read-only-outline" value="someone@example.com" readonly autocomplete="off">
+  <label for="email-read-only-outline">Email</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined">
+  <input type="email" class="form-control-plaintext" id="email-read-only-outline-outline"
+         placeholder="email-read-only-outline-outline" value="someone@example.com" readonly autocomplete="off">
+  <label for="email-read-only-outline-outline">Email</label>
+</div>
+        
+{{< /example >}}
+
 ## Javascript
 ```javascript
 // Initialize Text fields
