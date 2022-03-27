@@ -349,7 +349,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 </nav>
 
 <!-- Sidebar / Drawer -->
-<aside class="offcanvas offcanvas-start show offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
+<aside class="offcanvas offcanvas-start offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
@@ -482,7 +482,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 </nav>
 
 <!-- Sidebar / Drawer -->
-<aside class="offcanvas offcanvas-end show offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
+<aside class="offcanvas offcanvas-end offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
