@@ -289,11 +289,10 @@
   position: relative;
   width: 100%;
   height: 2px;
-  margin-bottom: -2px;
   // stylelint-disable value-list-comma-newline-after, value-list-comma-space-after
   background:
-    linear-gradient($form-field-primary-color, $form-field-primary-color) top/0 2px no-repeat border-box,
-    linear-gradient($form-field-base-color, $form-field-base-color) top/100% 1px no-repeat border-box transparent;
+    linear-gradient($form-field-primary-color, $form-field-primary-color) bottom/0 2px no-repeat border-box,
+    linear-gradient($form-field-base-color, $form-field-base-color) bottom/100% 1px no-repeat border-box transparent;
   // stylelint-enable value-list-comma-newline-after, value-list-comma-space-after
   transition: .3s cubic-bezier(.4, 0, .2, 1);
 }
@@ -346,3 +345,39 @@
   }
 }
 // stylelint-enable selector-max-class, selector-max-compound-selectors, selector-no-qualifying-type
+
+// stylelint-disable selector-max-compound-selectors
+.form-floating-with-icon {
+  position: relative;
+
+  .prepend, .append {
+    position: absolute;
+    top: 0;
+    padding: 1rem .75rem;
+    pointer-events: none;
+  }
+
+  .prepend {
+    left: 0;
+  }
+
+  .append {
+    right: 0;
+  }
+
+  > .form-floating {
+    .form-control,
+    .dropdown {
+      ~ label {
+        left: var(--prepend-width, 0);
+      }
+    }
+
+    > .m-notch {
+      > .m-notch-between > label {
+        transform: translateX(calc(var(--prepend-width, calc(.75rem + 5px)) - (.75rem + 5px)));
+      }
+    }
+  }
+}
+// stylelint-enable selector-max-compound-selectors

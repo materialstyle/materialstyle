@@ -69,54 +69,50 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
         
 {{< /example >}}
 
-## Input Group Prepend
+## Overlay Icons
+
 {{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating">
     <input type="email" class="form-control" id="email"
            placeholder="Email" autocomplete="off">
     <label for="email">Email</label>
   </div>
-  <span class="input-group-text prepend">
-      <i class="bi bi-person-circle"></i>
-  </span>
+   <span class="prepend">
+        <i class="bi bi-person-circle"></i>
+    </span>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <input type="email" class="form-control" id="email-outline"
            placeholder="Email" autocomplete="off">
     <label for="email-outline">Email</label>
   </div>
-  <span class="input-group-text prepend">
-      <i class="bi bi-person-circle"></i>
-  </span>
+  <span class="prepend">
+        <i class="bi bi-person-circle"></i>
+    </span>
 </div>
-        
-{{< /example >}}
-
-## Input Group Append
-{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
-
-<div class="input-group">
+##split##
+<div class="form-floating-with-icon">
   <div class="form-floating">
     <input type="password" class="form-control" id="password"
            placeholder="Password" autocomplete="off">
     <label for="password">Password</label>
   </div>
-  <span class="input-group-text append">
+  <span class="append">
       <i class="bi bi-keyboard-fill"></i>
   </span>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <input type="password" class="form-control" id="password-outline"
            placeholder="Password" autocomplete="off">
     <label for="password-outline">Password</label>
   </div>
-  <span class="input-group-text append">
+  <span class="append">
       <i class="bi bi-keyboard-fill"></i>
   </span>
 </div>

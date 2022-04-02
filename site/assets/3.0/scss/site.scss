@@ -41,8 +41,15 @@ body {
     flex-grow: 1;
   }
 
-  .form-floating, .input-group {
+  .form-floating {
     width: 300px;
+  }
+
+  .input-group {
+    width: 300px;
+    .form-floating {
+      width: auto;
+    }
   }
 }
 

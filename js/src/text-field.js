@@ -69,8 +69,18 @@ class TextField extends BaseComponent {
     this._inputGroup = this._formFloating.closest('.input-group')
 
     if (this._inputGroup) {
-      this._prepend = this._inputGroup.querySelector('.prepend')
-      this._append = this._inputGroup.querySelector('.append')
+      if (this._formFloating.className.includes(CLASS_NAME_FLOATING_OUTLINED)) {
+        this._inputGroup.classList.add('has-form-floating-outlined')
+      } else {
+        this._inputGroup.classList.add('has-form-floating')
+      }
+    }
+
+    this._formFloatingWithIcon = this._formFloating.closest('.form-floating-with-icon')
+
+    if (this._formFloatingWithIcon) {
+      this._prepend = this._formFloatingWithIcon.querySelector('.prepend')
+      this._append = this._formFloatingWithIcon.querySelector('.append')
     }
 
     if (this._prepend) {
@@ -128,7 +138,7 @@ class TextField extends BaseComponent {
 
   addFontsReadyEvent() {
     document.fonts.ready.then(() => {
-      if (this._inputGroup) {
+      if (this._formFloatingWithIcon) {
         if (this._prepend) {
           this._prepend.style.height = `${this._textField.offsetHeight}px`
           this._formFloating.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
