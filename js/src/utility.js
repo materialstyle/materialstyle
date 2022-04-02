@@ -32,7 +32,7 @@ const getBaseColor = (element) => {
 
 const getPrimaryColor = (element) => {
   let primary = element.className.match(/primary-[^\s]+/)
-  let primaryColor = '#2196F3'
+  let primaryColor = '#0d6efd'
 
   if (primary) {
     primary = primary[0].replace('primary-', '')
