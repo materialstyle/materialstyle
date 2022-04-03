@@ -69,7 +69,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
         
 {{< /example >}}
 
-## Overlay Icons
+## With Icon
 
 {{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
@@ -79,9 +79,9 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
            placeholder="Email" autocomplete="off">
     <label for="email">Email</label>
   </div>
-   <span class="prepend">
-        <i class="bi bi-person-circle"></i>
-    </span>
+  <span class="prepend">
+    <i class="bi bi-person-circle"></i>
+  </span>
 </div>
 ##split##
 <div class="form-floating-with-icon">
@@ -91,8 +91,8 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
     <label for="email-outline">Email</label>
   </div>
   <span class="prepend">
-        <i class="bi bi-person-circle"></i>
-    </span>
+    <i class="bi bi-person-circle"></i>
+  </span>
 </div>
 ##split##
 <div class="form-floating-with-icon">
@@ -102,7 +102,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
     <label for="password">Password</label>
   </div>
   <span class="append">
-      <i class="bi bi-keyboard-fill"></i>
+    <i class="bi bi-keyboard-fill"></i>
   </span>
 </div>
 ##split##
@@ -113,7 +113,57 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
     <label for="password-outline">Password</label>
   </div>
   <span class="append">
-      <i class="bi bi-keyboard-fill"></i>
+    <i class="bi bi-keyboard-fill"></i>
+  </span>
+</div>
+        
+{{< /example >}}
+
+## With Spinner
+
+{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+
+<div class="form-floating-with-icon">
+  <div class="form-floating">
+    <input type="email" class="form-control" id="email-spinner"
+           placeholder="Email" autocomplete="off">
+    <label for="email-spinner">Email</label>
+  </div>
+  <span class="prepend">
+    <div class="m-spinner"></div>
+  </span>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating form-floating-outlined">
+    <input type="email" class="form-control" id="email-outline-spinner"
+           placeholder="Email" autocomplete="off">
+    <label for="email-outline-spinner">Email</label>
+  </div>
+  <span class="prepend">
+    <div class="m-spinner"></div>
+  </span>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating">
+    <input type="password" class="form-control" id="password-spinner"
+           placeholder="Password" autocomplete="off">
+    <label for="password-spinner">Password</label>
+  </div>
+  <span class="append">
+    <div class="spinner-border text-teal"></div>
+  </span>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating form-floating-outlined">
+    <input type="password" class="form-control" id="password-outline-spinner"
+           placeholder="Password" autocomplete="off">
+    <label for="password-outline-spinner">Password</label>
+  </div>
+  <span class="append">
+    <div class="spinner-grow text-primary"></div>
   </span>
 </div>
         
