@@ -3,7 +3,8 @@
 //
 
 .spinner-grow,
-.spinner-border {
+.spinner-border,
+.spinner-material {
   display: inline-block;
   width: var(--#{$prefix}spinner-width);
   height: var(--#{$prefix}spinner-height);
@@ -84,21 +85,9 @@
   }
 }
 
-
-@each $color, $value in $theme-colors {
-  .m-spinner.spinner-#{$color} {
-    .animate-loader .path {
-      stroke: $value;
-      animation: dash 1.5s ease-in-out infinite;
-    }
-  }
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
+//
+// Material design spinner
+//
 
 @keyframes dash {
   0% {
@@ -132,32 +121,37 @@
   }
 }
 
-.m-spinner .animate-loader {
-  position: relative;
-  width: 50px;
-  border-radius: 50%;
+.spinner-material {
+  --#{$prefix}spinner-width: #{$spinner-width};
+  --#{$prefix}spinner-height: #{$spinner-height};
+  --#{$prefix}spinner-vertical-align: #{$spinner-vertical-align};
+  --#{$prefix}spinner-border-width: #{$spinner-border-width};
+  --#{$prefix}spinner-animation-speed: #{$spinner-material-animation-speed};
+  --#{$prefix}spinner-animation-name: spinner-border;
 
-  &::before {
-    display: block;
-    padding-top: 100%;
-    content: "";
-  }
+  position: relative;
+
   .circular {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: auto;
     transform-origin: center center;
-    animation: rotate 2s linear infinite;
+    animation: var(--#{$prefix}spinner-animation-speed) linear infinite var(--#{$prefix}spinner-animation-name);
   }
   .path {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
+    stroke: currentColor;
     stroke-linecap: round;
-    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-width: var(--#{$prefix}spinner-border-width);
+    animation: dash 1.5s ease-in-out infinite;
   }
+
+  &.spinner-rainbow {
+    .path {
+      animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    }
+  }
+}
+
+.spinner-material-sm {
+  --#{$prefix}spinner-width: #{$spinner-width-sm};
+  --#{$prefix}spinner-height: #{$spinner-height-sm};
+  --#{$prefix}spinner-border-width: .5em;
 }

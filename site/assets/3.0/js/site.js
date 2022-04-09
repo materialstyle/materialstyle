@@ -114,7 +114,7 @@ function initComponents() {
   })
 
   // Spinner
-  var spinnerList = [].slice.call(document.querySelectorAll('.m-spinner'))
+  var spinnerList = [].slice.call(document.querySelectorAll('.spinner-material'))
   var spinners = spinnerList.map(function (s) {
     return new materialstyle.Spinner(s)
   })
