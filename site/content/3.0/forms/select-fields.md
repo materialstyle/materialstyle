@@ -199,7 +199,11 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="prepend">
-    <div class="m-spinner"></div>
+    <div class="spinner-material spinner-rainbow">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
   </div>
 </div>
 ##split##
@@ -215,7 +219,11 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="prepend">
-    <div class="m-spinner"></div>
+    <div class="spinner-material text-blue">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
   </div>
 </div>
 ##split##
@@ -231,7 +239,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="append">
-    <div class="spinner-border text-teal"></div>
+    <div class="spinner-border text-blue"></div>
   </div>
 </div>
 ##split##
@@ -354,7 +362,11 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     <label>Select</label>
   </div>
   <div class="prepend">
-    <div class="m-spinner"></div>
+    <div class="spinner-material text-blue">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
   </div>
 </div>
 ##split##
