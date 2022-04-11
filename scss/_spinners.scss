@@ -76,15 +76,6 @@
   --#{$prefix}spinner-height: #{$spinner-height-sm};
 }
 
-@if $enable-reduced-motion {
-  @media (prefers-reduced-motion: reduce) {
-    .spinner-border,
-    .spinner-grow {
-      --#{$prefix}spinner-animation-speed: #{$spinner-animation-speed * 2};
-    }
-  }
-}
-
 //
 // Material design spinner
 //
@@ -127,25 +118,27 @@
   --#{$prefix}spinner-vertical-align: #{$spinner-vertical-align};
   --#{$prefix}spinner-border-width: #{$spinner-border-width};
   --#{$prefix}spinner-animation-speed: #{$spinner-material-animation-speed};
+  --#{$prefix}spinner-dash-animation-speed: #{$spinner-material-dash-animation-speed};
+  --#{$prefix}spinner-color-animation-speed: #{$spinner-material-color-animation-speed};
   --#{$prefix}spinner-animation-name: spinner-border;
 
   position: relative;
 
-  .circular {
+  svg {
     position: absolute;
     transform-origin: center center;
     animation: var(--#{$prefix}spinner-animation-speed) linear infinite var(--#{$prefix}spinner-animation-name);
   }
-  .path {
+  circle {
     stroke: currentColor;
     stroke-linecap: round;
     stroke-width: var(--#{$prefix}spinner-border-width);
-    animation: dash 1.5s ease-in-out infinite;
+    animation: dash var(--#{$prefix}spinner-dash-animation-speed) ease-in-out infinite;
   }
 
   &.spinner-rainbow {
-    .path {
-      animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    circle {
+      animation: dash var(--#{$prefix}spinner-dash-animation-speed) ease-in-out infinite, color var(--#{$prefix}spinner-color-animation-speed) ease-in-out infinite;
     }
   }
 }
@@ -153,5 +146,20 @@
 .spinner-material-sm {
   --#{$prefix}spinner-width: #{$spinner-width-sm};
   --#{$prefix}spinner-height: #{$spinner-height-sm};
-  --#{$prefix}spinner-border-width: .5em;
+  --#{$prefix}spinner-border-width: #{$spinner-material-border-width-sm};
+}
+
+@if $enable-reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    .spinner-border,
+    .spinner-grow {
+      --#{$prefix}spinner-animation-speed: #{$spinner-animation-speed * 2};
+    }
+
+    .spinner-material {
+      --#{$prefix}spinner-animation-speed: #{$spinner-material-animation-speed * 2};
+      --#{$prefix}spinner-dash-animation-speed: #{$spinner-material-dash-animation-speed * 2};
+      --#{$prefix}spinner-color-animation-speed: #{$spinner-material-color-animation-speed * 2};
+    }
+  }
 }

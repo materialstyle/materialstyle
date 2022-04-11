@@ -17,7 +17,6 @@ import Scrollspy from './src/scrollspy'
 import SelectField from './src/select-field'
 import Shape from './src/shape'
 import Snackbar from './src/snackbar'
-import Spinner from './src/spinner'
 import Tab from './src/tab'
 import TextField from './src/text-field'
 import Toast from './src/toast'
@@ -38,7 +37,6 @@ export default {
   SelectField,
   Shape,
   Snackbar,
-  Spinner,
   Tab,
   TextField,
   Toast,

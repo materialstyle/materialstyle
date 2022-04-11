@@ -113,12 +113,6 @@ function initComponents() {
     return new materialstyle.Rainbow(rainbow)
   })
 
-  // Spinner
-  var spinnerList = [].slice.call(document.querySelectorAll('.spinner-material'))
-  var spinners = spinnerList.map(function (s) {
-    return new materialstyle.Spinner(s)
-  })
-
   // Toast
   var toastTrigger = document.getElementById('show-toast')
   var toastLiveExample = document.getElementById('live-toast')

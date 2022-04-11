@@ -1640,11 +1640,15 @@ $spinner-height:          $spinner-width !default;
 $spinner-vertical-align:  -.125em !default;
 $spinner-border-width:    .25em !default;
 $spinner-animation-speed: .75s !default;
-$spinner-material-animation-speed: 2s !default;
 
 $spinner-width-sm:        1rem !default;
 $spinner-height-sm:       $spinner-width-sm !default;
 $spinner-border-width-sm: .2em !default;
+
+$spinner-material-animation-speed:       2s !default;
+$spinner-material-dash-animation-speed:  1.5s !default;
+$spinner-material-color-animation-speed: 6s !default;
+$spinner-material-border-width-sm:       .5em !default;
 // scss-docs-end spinner-variables
 
 
