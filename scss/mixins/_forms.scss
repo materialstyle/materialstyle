@@ -23,6 +23,10 @@
   $tooltip-bg-color: rgba($color, $form-feedback-tooltip-opacity),
   $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity)
 ) {
+  .validation-feedbacks {
+    width: 100%;
+  }
+
   .#{$state}-feedback {
     display: none;
     width: 100%;
@@ -49,7 +53,9 @@
 
   @include form-validation-state-selector($state) {
     ~ .#{$state}-feedback,
-    ~ .#{$state}-tooltip {
+    ~ .#{$state}-tooltip,
+    ~ .validation-feedbacks > .#{$state}-feedback,
+    ~ .validation-feedbacks > .#{$state}-tooltip {
       display: block;
     }
   }
