@@ -10,11 +10,11 @@ keywords: forms, input-group
 
 ## On Text Fields
 
-{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
+    <i class="bi bi-person-circle"></i>
   </span>
   <div class="form-floating">
     <input type="email" class="form-control" id="email"
@@ -25,7 +25,7 @@ keywords: forms, input-group
 ##split##
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
+    <i class="bi bi-person-circle"></i>
   </span>
   <div class="form-floating form-floating-outlined">
     <input type="email" class="form-control" id="email-outline"
@@ -41,7 +41,7 @@ keywords: forms, input-group
     <label for="password">Password</label>
   </div>
   <span class="input-group-text">
-      <i class="bi bi-keyboard-fill"></i>
+    <i class="bi bi-keyboard-fill"></i>
   </span>
 </div>
 ##split##
@@ -52,14 +52,14 @@ keywords: forms, input-group
     <label for="password-outline">Password</label>
   </div>
   <span class="input-group-text">
-      <i class="bi bi-keyboard-fill"></i>
+    <i class="bi bi-keyboard-fill"></i>
   </span>
 </div>
         
 {{< /example >}}
 
 ### With Buttons
-{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group flex-nowrap">
   <button class="btn btn-secondary" type="button">Button</button>
@@ -100,12 +100,12 @@ keywords: forms, input-group
 {{< /example >}}
 
 ### With Checkbox and Radio
-{{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-        <input class="form-check-input" type="checkbox">
-    </span>
+    <input class="form-check-input" type="checkbox">
+  </span>
   <div class="form-floating">
     <input type="text" class="form-control" id="example-5"
            placeholder="example" autocomplete="off">
@@ -115,8 +115,8 @@ keywords: forms, input-group
 ##split##
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-        <input class="form-check-input" type="checkbox">
-    </span>
+    <input class="form-check-input" type="checkbox">
+  </span>
   <div class="form-floating form-floating-outlined">
     <input type="text" class="form-control" id="example-6"
            placeholder="example" autocomplete="off">
@@ -131,8 +131,8 @@ keywords: forms, input-group
     <label for="example-7">Label</label>
   </div>
   <span class="input-group-text">
-        <input class="form-check-input" type="radio">
-    </span>
+    <input class="form-check-input" type="radio">
+  </span>
 </div>
 ##split##
 <div class="input-group flex-nowrap">
@@ -142,8 +142,208 @@ keywords: forms, input-group
     <label for="example-8">Label</label>
   </div>
   <span class="input-group-text">
-        <input class="form-check-input" type="radio">
-    </span>
+    <input class="form-check-input" type="radio">
+  </span>
+</div>
+        
+{{< /example >}}
+
+## On Select Fields
+
+{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+
+<div class="input-group flex-nowrap">
+  <span class="input-group-text">
+    <i class="bi bi-person-circle"></i>
+  </span>
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <span class="input-group-text">
+    <i class="bi bi-person-circle"></i>
+  </span>
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <span class="input-group-text">
+    <i class="bi bi-keyboard-fill"></i>
+  </span>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <span class="input-group-text">
+    <i class="bi bi-keyboard-fill"></i>
+  </span>
+</div>
+        
+{{< /example >}}
+
+### With Buttons
+{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+
+<div class="input-group flex-nowrap">
+  <button class="btn btn-secondary" type="button">Button</button>
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <button class="btn btn-secondary" type="button">Button</button>
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <button class="btn btn-secondary" type="button">Button</button>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <button class="btn btn-secondary" type="button">Button</button>
+</div>
+        
+{{< /example >}}
+
+### With Checkbox and Radio
+{{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+
+<div class="input-group flex-nowrap">
+  <span class="input-group-text">
+    <input class="form-check-input" type="checkbox">
+  </span>
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <span class="input-group-text">
+    <input class="form-check-input" type="checkbox">
+  </span>
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <span class="input-group-text">
+    <input class="form-check-input" type="radio">
+  </span>
+</div>
+##split##
+<div class="input-group flex-nowrap">
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <span class="input-group-text">
+    <input class="form-check-input" type="radio">
+  </span>
 </div>
         
 {{< /example >}}
