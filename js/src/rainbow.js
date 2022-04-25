@@ -5,12 +5,12 @@
  * --------------------------------------------------------------------------
  */
 
-import BaseComponent from 'bootstrap/js/src/base-component'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import BaseComponent from './base-component'
+import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
 import {
   defineJQueryPlugin
-} from 'bootstrap/js/src/util/index'
+} from './util/index'
 
 /**
  * ------------------------------------------------------------------------

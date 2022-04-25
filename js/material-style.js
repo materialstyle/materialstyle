@@ -18,6 +18,7 @@ import SelectField from './src/select-field'
 import Shape from './src/shape'
 import Snackbar from './src/snackbar'
 import Tab from './src/tab'
+import MaterialTab from './src/material-tab'
 import TextField from './src/text-field'
 import Toast from './src/toast'
 import Tooltip from './src/tooltip'
@@ -38,6 +39,7 @@ export default {
   Shape,
   Snackbar,
   Tab,
+  MaterialTab,
   TextField,
   Toast,
   Tooltip

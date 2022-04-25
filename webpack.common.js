@@ -15,6 +15,7 @@ webpackConfig = {
     Popover: './js/src/popover.js',
     Scrollspy: './js/src/scrollspy.js',
     Tab: './js/src/tab.js',
+    MaterialTab: './js/src/material-tab.js',
     Toast: './js/src/toast.js',
     Tooltip: './js/src/tooltip.js',
     Utility: './js/src/utility.js',

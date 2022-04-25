@@ -98,7 +98,7 @@ function initComponents() {
 
   var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))
   tabs.map(function (tab) {
-    new materialstyle.Tab(tab)
+    new materialstyle.MaterialTab(tab)
   })
 
   // Popover

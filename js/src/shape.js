@@ -5,10 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
-import BaseComponent from 'bootstrap/js/src/base-component'
+import BaseComponent from './base-component'
 import {
   defineJQueryPlugin
-} from 'bootstrap/js/src/util/index'
+} from './util/index'
 
 /**
  * --------------------------------------------------------------------------

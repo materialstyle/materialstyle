@@ -8,12 +8,12 @@
 import {
   defineJQueryPlugin,
   typeCheckConfig
-} from 'bootstrap/js/src/util/index'
-import BaseComponent from 'bootstrap/js/src/base-component'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+} from './util/index'
+import BaseComponent from './base-component'
+import Manipulator from './dom/manipulator'
 import {
   enableDismissTrigger
-} from 'bootstrap/js/src/util/component-functions'
+} from './util/component-functions'
 
 /**
  * Constants
