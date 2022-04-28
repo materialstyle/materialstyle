@@ -6,15 +6,18 @@
 <body data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="150" tabindex="0">
   {{ partial "navbar" . }}
 
-  {{ partial "drawer" . }}
+  <div class="d-flex">
 
-  <div class="offcanvas-pushed-content pt-4 bg-white"
-       style="margin-top: var(--navbar-fixed-height);">
-    <div class="container">
-      {{ block "main" . }}
-      {{ end }}
+    {{ partial "drawer" . }}
+
+    <div class="offcanvas-pushed-content pt-4 bg-white" style="margin-top: var(--navbar-fixed-height);">
+      <div class="container">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
+      {{ partial "footer" . }}
     </div>
-    {{ partial "footer" . }}
+
   </div>
 
   {{ partial "scripts" . }}

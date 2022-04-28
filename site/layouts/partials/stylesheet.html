@@ -12,9 +12,3 @@
 {{- $style := resources.Get "3.0/scss/site.scss" | toCSS $sassOptions | postCSS $postcssOptions }}
 
 <link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
-
-<style>
-  body {
-    --offcanvas-width: 300px;
-  }
-</style>

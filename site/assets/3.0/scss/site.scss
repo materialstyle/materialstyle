@@ -11,8 +11,8 @@ html {
   min-height: 100vh;
 }
 
-body {
-  --offcanvas-width: 300px;
+.offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-pushed-content {
+  --bs-offcanvas-width: 300px;
 }
 
 .ms-toc {
