@@ -10,7 +10,7 @@ title: Drawer Responsive End
         <i class="bi bi-star-fill me-2"></i>Brand
       </a>
     </div>
-    <button class="drawer-toggler ms-2"
+    <button class="drawer-toggler d-md-none ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer-responsive-end">
@@ -19,12 +19,12 @@ title: Drawer Responsive End
   </div>
 </nav>
 
-<aside class="offcanvas offcanvas-end offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer-responsive-end">
+<aside class="offcanvas-end offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer-responsive-end">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#drawer-responsive-end" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body bg-purple bg-opacity-10">
     <ul class="nav flex-column">
