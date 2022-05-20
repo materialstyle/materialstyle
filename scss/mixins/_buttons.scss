@@ -1,3 +1,11 @@
+// stylelint-disable custom-property-empty-line-before
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+// scss-docs-start btn-variant-mixin
 @mixin button-variant(
   $background,
   $border,
@@ -13,67 +21,52 @@
   $disabled-color: color-contrast($disabled-background)
 ) {
   --mdc-ripple-color: #{$color};
-
-  color: $color;
-  @include gradient-bg($background);
-
-  &:hover {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-  }
-
-  .btn-check:focus + &,
-  &:focus {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-  }
-
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active,
-  .show > &.dropdown-toggle {
-    color: $active-color;
-    background-color: $active-background;
-  }
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-bg: #{$background};
+  --#{$prefix}btn-border-color: #{$border};
+  --#{$prefix}btn-hover-color: #{$hover-color};
+  --#{$prefix}btn-hover-bg: #{$hover-background};
+  --#{$prefix}btn-hover-border-color: #{$hover-border};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+  --#{$prefix}btn-active-color: #{$active-color};
+  --#{$prefix}btn-active-bg: #{$active-background};
+  --#{$prefix}btn-active-border-color: #{$active-border};
+  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+  --#{$prefix}btn-disabled-color: #{$disabled-color};
+  --#{$prefix}btn-disabled-bg: #{$disabled-background};
+  --#{$prefix}btn-disabled-border-color: #{$disabled-border};
 }
+// scss-docs-end btn-variant-mixin
 
+// scss-docs-start btn-outline-variant-mixin
 @mixin button-outline-variant(
   $color,
   $hover-background: rgba($color, .15),
   $active-background: rgba($color, .2),
 ) {
   --mdc-ripple-color: #{$color};
-
-  color: $color;
-  border-color: $color;
-
-  &:hover {
-    color: $color;
-    @include gradient-bg($hover-background);
-    border-color: $color;
-  }
-
-  .btn-check:focus + &,
-  &:focus {
-    color: $color;
-    @include gradient-bg($hover-background);
-  }
-
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active,
-  &.dropdown-toggle.show {
-    color: $color;
-    @include gradient-bg($active-background);
-    border-color: $color;
-  }
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-border-color: #{$color};
+  --#{$prefix}btn-border-width: 1px;
+  --#{$prefix}btn-hover-color: #{$color};
+  --#{$prefix}btn-hover-bg: #{$hover-background};
+  --#{$prefix}btn-hover-border-color: #{$color};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+  --#{$prefix}btn-active-color: #{$color};
+  --#{$prefix}btn-active-bg: #{$active-background};
+  --#{$prefix}btn-active-border-color: #{$color};
+  --#{$prefix}btn-active-shadow: none;
+  --#{$prefix}btn-disabled-color: #{$color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}gradient: none;
 }
+// scss-docs-end btn-outline-variant-mixin
 
+// scss-docs-start btn-size-mixin
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
-  padding: $padding-y $padding-x;
-  @include font-size($font-size);
-  // Manually declare to provide an override to the browser default
-  @include border-radius($border-radius, 0);
+  --#{$prefix}btn-padding-y: #{$padding-y};
+  --#{$prefix}btn-padding-x: #{$padding-x};
+  @include rfs($font-size, --#{$prefix}btn-font-size);
+  --#{$prefix}btn-border-radius: #{$border-radius};
 }
+// scss-docs-end btn-size-mixin
