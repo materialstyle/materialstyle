@@ -30,9 +30,10 @@ module.exports = merge(common, {
 * Copyright 2018-2021 Material Style
 * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
 *
-* Bootstrap v5.1.3 (https://getbootstrap.com/)
-* Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-* Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+* Bootstrap v5.2.0-beta1 (https://getbootstrap.com/)
+* Copyright 2011-2022 The Bootstrap Authors
+* Copyright 2011-2022 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 */`
     })
   ]

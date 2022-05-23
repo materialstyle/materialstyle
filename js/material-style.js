@@ -1,3 +1,10 @@
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v3.0.0-alpha1): material-style.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 import '../scss/material-style.scss'
 
 import './src/utility'

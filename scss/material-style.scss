@@ -1,3 +1,14 @@
+/*!
+ * Material Style v3.0.0-alpha1 (https://materialstyle.github.io/)
+ * Copyright 2018-2021 Material Style
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ *
+ * Bootstrap v5.2.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
@@ -16,10 +27,10 @@
 @import "tables";
 @import "ripple";
 @import "forms";
-// buttons and button-group are imported in button
 @import "buttons";
 @import "transitions";
 @import "dropdown";
+@import "button-group";
 @import "nav";
 @import "navbar";
 @import "tab";
@@ -48,3 +59,4 @@
 
 // Utilities
 @import "utilities/api";
+// scss-docs-end import-stack
