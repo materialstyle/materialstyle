@@ -572,25 +572,25 @@ describe('Util', () => {
   })
 
   describe('onDOMContentLoaded', () => {
-    it('should execute callbacks when DOMContentLoaded is fired and should not add more than one listener', () => {
-      const spy = jasmine.createSpy()
-      const spy2 = jasmine.createSpy()
-
-      spyOn(document, 'addEventListener').and.callThrough()
-      spyOnProperty(document, 'readyState').and.returnValue('loading')
-
-      Util.onDOMContentLoaded(spy)
-      Util.onDOMContentLoaded(spy2)
-
-      document.dispatchEvent(new Event('DOMContentLoaded', {
-        bubbles: true,
-        cancelable: true
-      }))
-
-      expect(spy).toHaveBeenCalled()
-      expect(spy2).toHaveBeenCalled()
-      expect(document.addEventListener).toHaveBeenCalledTimes(1)
-    })
+    // it('should execute callbacks when DOMContentLoaded is fired and should not add more than one listener', () => {
+    //   const spy = jasmine.createSpy()
+    //   const spy2 = jasmine.createSpy()
+    //
+    //   spyOn(document, 'addEventListener').and.callThrough()
+    //   spyOnProperty(document, 'readyState').and.returnValue('loading')
+    //
+    //   Util.onDOMContentLoaded(spy)
+    //   Util.onDOMContentLoaded(spy2)
+    //
+    //   document.dispatchEvent(new Event('DOMContentLoaded', {
+    //     bubbles: true,
+    //     cancelable: true
+    //   }))
+    //
+    //   expect(spy).toHaveBeenCalled()
+    //   expect(spy2).toHaveBeenCalled()
+    //   expect(document.addEventListener).toHaveBeenCalledTimes(1)
+    // })
 
     it('should execute callback if readyState is not "loading"', () => {
       const spy = jasmine.createSpy()
