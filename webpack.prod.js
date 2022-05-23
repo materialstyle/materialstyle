@@ -27,7 +27,7 @@ module.exports = merge(common, {
       banner:
         `/*!
 * Material Style v3.0.0-alpha1 (https://materialstyle.github.io/)
-* Copyright 2018-2021 Material Style
+* Copyright 2018-2022 Material Style
 * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
 *
 * Bootstrap v5.2.0-beta1 (https://getbootstrap.com/)
