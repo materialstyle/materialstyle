@@ -78,3 +78,15 @@ Thank you <a href="https://getbootstrap.com/">Bootstrap</a> for an awesome front
 <p align="center">
 Thank you <a href="https://www.browserstack.com/">BrowserStack</a> for providing the infrastructure that allows us to test in real browsers!
 </p>
+
+<br><br>
+ 
+<p align="center">
+  <a href="https://www.netlify.com/">
+    <img src="https://www.netlify.com/v3/img/components/logomark.svg" alt="Netlify" width="50">
+  </a>
+</p>
+    
+<p align="center">
+Thank you <a href="https://www.netlify.com/">Netlify</a> for providing us with Deploy Previews!
+</p>
