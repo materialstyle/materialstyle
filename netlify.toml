@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/materialstyle/*"
-  to = "/*"
+  to = "/:splat"
   status = 200
   force = true
