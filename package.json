@@ -32,7 +32,6 @@
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --config webpack.common.js --mode=development --watch",
     "docs-build": "hugo --cleanDestinationDir",
-    "docs-build-netlify": "hugo --cleanDestinationDir --destination _site/materialstyle",
     "docs-serve": "hugo server --port 9001 --disableFastRender",
     "js-lint": "eslint js/src/*",
     "scss-lint": "stylelint scss/*",
