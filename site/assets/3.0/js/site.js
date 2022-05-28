@@ -151,7 +151,7 @@ function initComponents() {
       // Redraw Tabs
       var tabs = this.querySelectorAll('.nav-tabs');
       for (const [, value] of Object.entries(tabs)) {
-        var tabInstance = materialstyle.Tab.getOrCreateInstance(value)
+        var tabInstance = materialstyle.MaterialTab.getOrCreateInstance(value)
         tabInstance.redraw();
       }
 
