@@ -335,7 +335,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
     <div class="d-flex align-items-center">
     
       <!-- Drawer toggler -->
-      <button class="drawer-toggler me-2"
+      <button class="drawer-toggler d-md-none me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawer">
@@ -349,7 +349,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 </nav>
 
 <!-- Sidebar / Drawer -->
-<aside class="offcanvas offcanvas-start offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
+<aside class="offcanvas-start offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
@@ -472,7 +472,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
     </div>
     
     <!-- Drawer toggler -->
-    <button class="drawer-toggler ms-2"
+    <button class="drawer-toggler d-md-none ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer">
@@ -482,7 +482,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 </nav>
 
 <!-- Sidebar / Drawer -->
-<aside class="offcanvas offcanvas-end offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
+<aside class="offcanvas-end offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand

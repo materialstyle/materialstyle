@@ -115,10 +115,10 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
         
 {{< /example >}}
 
-## Input Group Prepend
+## With Icon
 {{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating">
     <select class="form-select">
       <option value=""></option>
@@ -129,12 +129,12 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     </select>
     <label>Select One</label>
   </div>
-  <div class="input-group-text prepend">
+  <div class="prepend">
     <i class="bi bi-star-fill"></i>
   </div>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
       <option value=""></option>
@@ -145,17 +145,49 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     </select>
     <label>Select One</label>
   </div>
-  <div class="input-group-text prepend">
+  <div class="prepend">
     <i class="bi bi-star-fill"></i>
   </div>
 </div>
-        
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <div class="append">
+    <i class="bi bi-star-fill"></i>
+  </div>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <div class="append">
+    <i class="bi bi-star-fill"></i>
+  </div>
+</div>
+
 {{< /example >}}
 
-## Input Group Append
+## With Spinner
 {{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating">
     <select class="form-select">
       <option value=""></option>
@@ -166,12 +198,16 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     </select>
     <label>Select One</label>
   </div>
-  <div class="input-group-text append">
-    <i class="bi bi-star-fill"></i>
+  <div class="prepend">
+    <div class="spinner-material spinner-rainbow">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
   </div>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
       <option value=""></option>
@@ -182,8 +218,44 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     </select>
     <label>Select One</label>
   </div>
-  <div class="input-group-text append">
-    <i class="bi bi-star-fill"></i>
+  <div class="prepend">
+    <div class="spinner-material text-blue">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
+  </div>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <div class="append">
+    <div class="spinner-border text-blue"></div>
+  </div>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select">
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select One</label>
+  </div>
+  <div class="append">
+    <div class="spinner-grow text-primary"></div>
   </div>
 </div>
         
@@ -241,10 +313,10 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
 
 {{< /example >}}
 
-## Multi Select Input Group Prepend
+## Multi Select With Icon
 {{< example codeId="code9" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating multi-select">
     <select class="form-select" name="cars[]" multiple>
       <option value="1">Option 1</option>
@@ -254,12 +326,12 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     </select>
     <label>Select</label>
   </div>
-  <div class="input-group-text prepend">
+  <div class="prepend">
     <i class="bi bi-star-fill"></i>
   </div>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined multi-select">
     <select class="form-select" name="cars[]" multiple>
       <option value="1">Option 1</option>
@@ -269,17 +341,17 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     </select>
     <label>Select</label>
   </div>
-  <div class="input-group-text prepend">
+  <div class="append">
     <i class="bi bi-star-fill"></i>
   </div>
 </div>
 
 {{< /example >}}
 
-## Multi Select Input Group Append
+## Multi Select With Spinner
 {{< example codeId="code10" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating multi-select">
     <select class="form-select" name="cars[]" multiple>
       <option value="1">Option 1</option>
@@ -289,12 +361,16 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     </select>
     <label>Select</label>
   </div>
-  <div class="input-group-text append">
-    <i class="bi bi-star-fill"></i>
+  <div class="prepend">
+    <div class="spinner-material text-blue">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
   </div>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined multi-select">
     <select class="form-select" name="cars[]" multiple>
       <option value="1">Option 1</option>
@@ -304,8 +380,8 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     </select>
     <label>Select</label>
   </div>
-  <div class="input-group-text append">
-    <i class="bi bi-star-fill"></i>
+  <div class="append">
+    <div class="spinner-grow text-primary"></div>
   </div>
 </div>
 

@@ -15,6 +15,7 @@ webpackConfig = {
     Popover: './js/src/popover.js',
     Scrollspy: './js/src/scrollspy.js',
     Tab: './js/src/tab.js',
+    MaterialTab: './js/src/material-tab.js',
     Toast: './js/src/toast.js',
     Tooltip: './js/src/tooltip.js',
     Utility: './js/src/utility.js',
@@ -22,7 +23,6 @@ webpackConfig = {
     SelectField: './js/src/select-field.js',
     Shape: './js/src/shape.js',
     Snackbar: './js/src/snackbar.js',
-    Spinner: './js/src/spinner.js',
     Rainbow: './js/src/rainbow.js',
     TextField: './js/src/text-field.js',
     materialstyle: './js/material-style.js'

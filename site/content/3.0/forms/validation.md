@@ -75,16 +75,18 @@ better communicate feedback.
     <div class="invalid-feedback">Doesn't look good!</div>
   </div>
 
-  <div class="input-group">
+  <div class="input-group has-validation">
     <div class="form-floating">
       <input type="text" class="form-control" id="inputgroup" placeholder="inputgroup" autocomplete="off" required>
       <label for="inputgroup">Input Group</label>
     </div>
-    <span class="input-group-text prepend">
+    <span class="input-group-text">
       <i class="bi bi-person-circle"></i>
     </span>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Doesn't look good!</div>
+    </div>
   </div>
 
   <div>
@@ -117,7 +119,7 @@ better communicate feedback.
     <div class="invalid-feedback">Doesn't look good!</div>
   </div>
 
-  <div class="input-group">
+  <div class="input-group has-validation">
     <div class="form-floating">
       <select class="form-select" required>
         <option value=""></option>
@@ -128,11 +130,13 @@ better communicate feedback.
       </select>
       <label>Select with Input Group</label>
     </div>
-    <div class="input-group-text prepend">
+    <div class="input-group-text">
       <i class="bi bi-star-fill"></i>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Doesn't look good!</div>
+    </div>
   </div>
 
   <div class="form-check w-100">

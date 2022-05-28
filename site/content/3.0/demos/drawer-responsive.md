@@ -6,7 +6,7 @@ title: Drawer Responsive
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
-      <button class="drawer-toggler me-2"
+      <button class="drawer-toggler d-md-none me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawer-responsive">
@@ -19,12 +19,12 @@ title: Drawer Responsive
   </div>
 </nav>
 
-<aside class="offcanvas offcanvas-start offcanvas-md offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer-responsive">
+<aside class="offcanvas-start offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer-responsive">
   <div class="offcanvas-header bg-purple">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#drawer-responsive" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body bg-purple bg-opacity-10">
     <ul class="nav flex-column">

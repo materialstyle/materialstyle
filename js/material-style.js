@@ -1,3 +1,10 @@
+/**
+ * --------------------------------------------------------------------------
+ * Material Style (v3.0.0-alpha1): material-style.js
+ * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 import '../scss/material-style.scss'
 
 import './src/utility'
@@ -17,8 +24,8 @@ import Scrollspy from './src/scrollspy'
 import SelectField from './src/select-field'
 import Shape from './src/shape'
 import Snackbar from './src/snackbar'
-import Spinner from './src/spinner'
 import Tab from './src/tab'
+import MaterialTab from './src/material-tab'
 import TextField from './src/text-field'
 import Toast from './src/toast'
 import Tooltip from './src/tooltip'
@@ -38,8 +45,8 @@ export default {
   SelectField,
   Shape,
   Snackbar,
-  Spinner,
   Tab,
+  MaterialTab,
   TextField,
   Toast,
   Tooltip

@@ -69,55 +69,109 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
         
 {{< /example >}}
 
-## Input Group Prepend
+## With Icon
+
 {{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating">
     <input type="email" class="form-control" id="email"
            placeholder="Email" autocomplete="off">
     <label for="email">Email</label>
   </div>
-  <span class="input-group-text prepend">
-      <i class="bi bi-person-circle"></i>
+  <span class="prepend">
+    <i class="bi bi-person-circle"></i>
   </span>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <input type="email" class="form-control" id="email-outline"
            placeholder="Email" autocomplete="off">
     <label for="email-outline">Email</label>
   </div>
-  <span class="input-group-text prepend">
-      <i class="bi bi-person-circle"></i>
+  <span class="prepend">
+    <i class="bi bi-person-circle"></i>
   </span>
 </div>
-        
-{{< /example >}}
-
-## Input Group Append
-{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
-
-<div class="input-group">
+##split##
+<div class="form-floating-with-icon">
   <div class="form-floating">
     <input type="password" class="form-control" id="password"
            placeholder="Password" autocomplete="off">
     <label for="password">Password</label>
   </div>
-  <span class="input-group-text append">
-      <i class="bi bi-keyboard-fill"></i>
+  <span class="append">
+    <i class="bi bi-keyboard-fill"></i>
   </span>
 </div>
 ##split##
-<div class="input-group">
+<div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <input type="password" class="form-control" id="password-outline"
            placeholder="Password" autocomplete="off">
     <label for="password-outline">Password</label>
   </div>
-  <span class="input-group-text append">
-      <i class="bi bi-keyboard-fill"></i>
+  <span class="append">
+    <i class="bi bi-keyboard-fill"></i>
+  </span>
+</div>
+        
+{{< /example >}}
+
+## With Spinner
+
+{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+
+<div class="form-floating-with-icon">
+  <div class="form-floating">
+    <input type="email" class="form-control" id="email-spinner"
+           placeholder="Email" autocomplete="off">
+    <label for="email-spinner">Email</label>
+  </div>
+  <span class="prepend">
+    <div class="spinner-material spinner-rainbow">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
+  </span>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating form-floating-outlined">
+    <input type="email" class="form-control" id="email-outline-spinner"
+           placeholder="Email" autocomplete="off">
+    <label for="email-outline-spinner">Email</label>
+  </div>
+  <span class="prepend">
+    <div class="spinner-material text-blue">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none">
+      </svg>
+    </div>
+  </span>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating">
+    <input type="password" class="form-control" id="password-spinner"
+           placeholder="Password" autocomplete="off">
+    <label for="password-spinner">Password</label>
+  </div>
+  <span class="append">
+    <div class="spinner-border text-blue"></div>
+  </span>
+</div>
+##split##
+<div class="form-floating-with-icon">
+  <div class="form-floating form-floating-outlined">
+    <input type="password" class="form-control" id="password-outline-spinner"
+           placeholder="Password" autocomplete="off">
+    <label for="password-outline-spinner">Password</label>
+  </div>
+  <span class="append">
+    <div class="spinner-grow text-blue"></div>
   </span>
 </div>
         
@@ -140,6 +194,27 @@ To set a custom height on your ```<textarea>```, do not use the rows attribute. 
   <label for="address-outline">Address</label>
 </div>
 
+{{< /example >}}
+
+## Readonly Plain text
+If you want to have ```<input readonly>``` elements in your form styled as plain text, 
+use the ```.form-control-plaintext``` class to remove the default form field styling 
+and preserve the correct margin and padding.
+
+{{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+
+<div class="form-floating">
+  <input type="email" class="form-control-plaintext" id="email-read-only-outline"
+         placeholder="email-read-only-outline" value="someone@example.com" readonly autocomplete="off">
+  <label for="email-read-only-outline">Email</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined">
+  <input type="email" class="form-control-plaintext" id="email-read-only-outline-outline"
+         placeholder="email-read-only-outline-outline" value="someone@example.com" readonly autocomplete="off">
+  <label for="email-read-only-outline-outline">Email</label>
+</div>
+        
 {{< /example >}}
 
 ## Javascript

@@ -98,7 +98,7 @@ function initComponents() {
 
   var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))
   tabs.map(function (tab) {
-    new materialstyle.Tab(tab)
+    new materialstyle.MaterialTab(tab)
   })
 
   // Popover
@@ -111,12 +111,6 @@ function initComponents() {
   var rainbowList = [].slice.call(document.querySelectorAll('.progress-bar-rainbow'))
   var progressList = rainbowList.map(function (rainbow) {
     return new materialstyle.Rainbow(rainbow)
-  })
-
-  // Spinner
-  var spinnerList = [].slice.call(document.querySelectorAll('.m-spinner'))
-  var spinners = spinnerList.map(function (s) {
-    return new materialstyle.Spinner(s)
   })
 
   // Toast
@@ -157,7 +151,7 @@ function initComponents() {
       // Redraw Tabs
       var tabs = this.querySelectorAll('.nav-tabs');
       for (const [, value] of Object.entries(tabs)) {
-        var tabInstance = materialstyle.Tab.getOrCreateInstance(value)
+        var tabInstance = materialstyle.MaterialTab.getOrCreateInstance(value)
         tabInstance.redraw();
       }
 

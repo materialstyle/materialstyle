@@ -6,14 +6,14 @@
  */
 
 import {
-  defineJQueryPlugin,
-  typeCheckConfig
-} from 'bootstrap/js/src/util/index'
-import BaseComponent from 'bootstrap/js/src/base-component'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+  defineJQueryPlugin
+} from './util/index'
+import BaseComponent from './base-component'
+import Manipulator from './dom/manipulator'
 import {
   enableDismissTrigger
-} from 'bootstrap/js/src/util/component-functions'
+} from './util/component-functions'
+import TemplateFactory from './util/template-factory'
 
 /**
  * Constants
@@ -111,7 +111,11 @@ class Snackbar extends BaseComponent {
       ...Manipulator.getDataAttributes(this._element),
       ...typeof config === 'object' ? config : {}
     }
-    typeCheckConfig(NAME, config, DefaultType)
+    config = this._mergeConfigObj(config)
+    config = this._configAfterMerge(config)
+
+    this._typeCheckConfig(config)
+
     return config
   }
 
