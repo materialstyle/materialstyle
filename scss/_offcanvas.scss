@@ -44,17 +44,6 @@
       @include box-shadow(var(--#{$prefix}offcanvas-box-shadow));
       @include transition(transform $offcanvas-transition-duration ease-in-out);
 
-      &.showing,
-      &.show:not(.hiding) {
-        transform: none;
-      }
-
-      &.showing,
-      &.hiding,
-      &.show {
-        visibility: visible;
-      }
-
       &.offcanvas-start {
         top: 0;
         left: 0;
@@ -89,12 +78,25 @@
         border-top: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
         transform: translateY(100%);
       }
+
+      &.showing,
+      &.show:not(.hiding) {
+        transform: none;
+      }
+
+      &.showing,
+      &.hiding,
+      &.show {
+        visibility: visible;
+      }
     }
 
     @if not ($infix == "") {
       @include media-breakpoint-up($next) {
         --#{$prefix}offcanvas-height: auto;
         --#{$prefix}offcanvas-border-width: 0;
+        // Reset `background-color` in case `.bg-*` classes are used in offcanvas
+        background-color: transparent !important; // stylelint-disable-line declaration-no-important
 
         .offcanvas-header {
           display: none;
@@ -184,7 +186,7 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
-    padding: $btn-close-padding-y $btn-close-padding-x;
+    padding: calc(var(--#{$prefix}offcanvas-padding-y) * .5) calc(var(--#{$prefix}offcanvas-padding-x) * .5);
     margin-top: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
     margin-right: calc(var(--#{$prefix}offcanvas-padding-x) * -.5);
     margin-bottom: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
