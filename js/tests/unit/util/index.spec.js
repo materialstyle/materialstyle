@@ -425,8 +425,8 @@ describe('Util', () => {
     it('should return true if the element has disabled attribute', () => {
       fixtureEl.innerHTML = [
         '<div>',
-        '  <input id="input" disabled="disabled"/>',
-        '  <input id="input1" disabled="disabled"/>',
+        '  <input id="input" disabled="disabled">',
+        '  <input id="input1" disabled="disabled">',
         '  <button id="button" disabled="true"></button>',
         '  <button id="button1" disabled="disabled"></button>',
         '  <button id="button2" disabled></button>',
@@ -460,7 +460,7 @@ describe('Util', () => {
     it('should return true if the element has class "disabled" but disabled attribute is false', () => {
       fixtureEl.innerHTML = [
         '<div>',
-        '  <input id="input" class="disabled" disabled="false"/>',
+        '  <input id="input" class="disabled" disabled="false">',
         '</div>'
       ].join('')
 
@@ -572,25 +572,25 @@ describe('Util', () => {
   })
 
   describe('onDOMContentLoaded', () => {
-    // it('should execute callbacks when DOMContentLoaded is fired and should not add more than one listener', () => {
-    //   const spy = jasmine.createSpy()
-    //   const spy2 = jasmine.createSpy()
-    //
-    //   spyOn(document, 'addEventListener').and.callThrough()
-    //   spyOnProperty(document, 'readyState').and.returnValue('loading')
-    //
-    //   Util.onDOMContentLoaded(spy)
-    //   Util.onDOMContentLoaded(spy2)
-    //
-    //   document.dispatchEvent(new Event('DOMContentLoaded', {
-    //     bubbles: true,
-    //     cancelable: true
-    //   }))
-    //
-    //   expect(spy).toHaveBeenCalled()
-    //   expect(spy2).toHaveBeenCalled()
-    //   expect(document.addEventListener).toHaveBeenCalledTimes(1)
-    // })
+    it('should execute callbacks when DOMContentLoaded is fired and should not add more than one listener', () => {
+      const spy = jasmine.createSpy()
+      const spy2 = jasmine.createSpy()
+
+      const spyAdd = spyOn(document, 'addEventListener').and.callThrough()
+      spyOnProperty(document, 'readyState').and.returnValue('loading')
+
+      Util.onDOMContentLoaded(spy)
+      Util.onDOMContentLoaded(spy2)
+
+      document.dispatchEvent(new Event('DOMContentLoaded', {
+        bubbles: true,
+        cancelable: true
+      }))
+
+      expect(spy).toHaveBeenCalled()
+      expect(spy2).toHaveBeenCalled()
+      expect(spyAdd).toHaveBeenCalledTimes(1)
+    })
 
     it('should execute callback if readyState is not "loading"', () => {
       const spy = jasmine.createSpy()
