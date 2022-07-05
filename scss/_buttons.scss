@@ -209,5 +209,6 @@
 }
 
 [class*="btn-outline-"] {
+  --#{$prefix}btn-border-width:  #{$border-width};
   @include box-shadow(none !important);
 }

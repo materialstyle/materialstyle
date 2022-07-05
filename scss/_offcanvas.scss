@@ -186,7 +186,7 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
-    padding: calc(var(--#{$prefix}offcanvas-padding-y) * .5) calc(var(--#{$prefix}offcanvas-padding-x) * .5);
+    padding: $btn-close-padding-y $btn-close-padding-x;
     margin-top: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
     margin-right: calc(var(--#{$prefix}offcanvas-padding-x) * -.5);
     margin-bottom: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);

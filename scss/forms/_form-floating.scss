@@ -16,6 +16,7 @@
     width: 100%;
     height: 100%; // allow textareas
     padding: $form-floating-padding-y $form-floating-padding-x;
+    color: $form-field-base-color;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
