@@ -38,7 +38,7 @@
       justify-content: center;
       color: $gray-900;
       border: 0;
-      outline: none;
+      outline: none; // stylelint-disable declaration-property-value-disallowed-list
       box-shadow: none;
 
       &.active {
@@ -71,7 +71,7 @@
     display: block;
     height: 2px;
     background: $primary;
-    transition: left .2s ease;
+    @include transition(left .2s ease);
   }
 }
 

@@ -48,6 +48,7 @@ class MaterialTab extends Tab {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
         }
+
         data[config]()
       }
     })
@@ -60,11 +61,7 @@ class MaterialTab extends Tab {
 
     let activeItem = this._element.querySelector('.nav-link.active')
 
-    if (activeItem === null) {
-      activeItem = this._element.querySelector('.nav-item')
-    } else {
-      activeItem = activeItem.closest('.nav-item')
-    }
+    activeItem = activeItem === null ? this._element.querySelector('.nav-item') : activeItem.closest('.nav-item')
 
     if (activeItem !== null) {
       indicatorLeft = `${activeItem.offsetLeft}px`
@@ -80,7 +77,7 @@ class MaterialTab extends Tab {
 
     this._activeIndicator = activeIndicator
 
-    this._element.appendChild(activeIndicator)
+    this._element.append(activeIndicator)
 
     this._element.style.visibility = 'visible'
   }
@@ -102,11 +99,7 @@ class MaterialTab extends Tab {
 
     let activeItem = this._element.querySelector('.nav-link.active')
 
-    if (activeItem === null) {
-      activeItem = this._element.querySelector('.nav-item')
-    } else {
-      activeItem = activeItem.closest('.nav-item')
-    }
+    activeItem = activeItem === null ? this._element.querySelector('.nav-item') : activeItem.closest('.nav-item')
 
     if (activeItem !== null) {
       indicatorLeft = `${activeItem.offsetLeft}px`
@@ -127,7 +120,7 @@ class MaterialTab extends Tab {
         this.setIndicatorPosition(value)
       })
 
-      EventHandler.on(value, 'keyup', (event) => {
+      EventHandler.on(value, 'keyup', event => {
         if (event.code === 'Enter' || event.keyCode === ENTER_KEY_CODE ||
           event.code === 'Space' || event.keyCode === SPACE_KEY_CODE
         ) {

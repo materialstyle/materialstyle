@@ -1,4 +1,2 @@
-import {
-  MDCRipple as Ripple
-} from '@material/ripple/index'
-export default Ripple
+
+export { MDCRipple as default } from '@material/ripple/index'

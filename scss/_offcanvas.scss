@@ -44,17 +44,6 @@
       @include box-shadow(var(--#{$prefix}offcanvas-box-shadow));
       @include transition(transform $offcanvas-transition-duration ease-in-out);
 
-      &.showing,
-      &.show:not(.hiding) {
-        transform: none;
-      }
-
-      &.showing,
-      &.hiding,
-      &.show {
-        visibility: visible;
-      }
-
       &.offcanvas-start {
         top: 0;
         left: 0;
@@ -89,12 +78,25 @@
         border-top: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
         transform: translateY(100%);
       }
+
+      &.showing,
+      &.show:not(.hiding) {
+        transform: none;
+      }
+
+      &.showing,
+      &.hiding,
+      &.show {
+        visibility: visible;
+      }
     }
 
     @if not ($infix == "") {
       @include media-breakpoint-up($next) {
         --#{$prefix}offcanvas-height: auto;
         --#{$prefix}offcanvas-border-width: 0;
+        // Reset `background-color` in case `.bg-*` classes are used in offcanvas
+        background-color: transparent !important; // stylelint-disable-line declaration-no-important
 
         .offcanvas-header {
           display: none;
@@ -192,11 +194,11 @@
 }
 
 .offcanvas-title {
-  margin-bottom: 0;
-  line-height: $offcanvas-title-line-height;
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-brand-margin-end;
+  margin-bottom: 0;
+  line-height: $offcanvas-title-line-height;
   @include font-size($navbar-brand-font-size);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
@@ -230,7 +232,7 @@
   &::after {
     width: 1.25em;
     line-height: 0;
-    transition: transform 200ms 0ms cubic-bezier(.4, 0, .2, 1);
+    @include transition(transform 200ms 0ms cubic-bezier(.4, 0, .2, 1));
   }
 
   &[aria-expanded="true"] {

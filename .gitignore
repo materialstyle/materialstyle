@@ -1,11 +1,12 @@
 /node_modules
 /dist
-/examples
 /js/dist/*
 /js/coverage/
-.idea
 
 # Docs
 /_site/
 /resources/
 /.hugo_build.lock
+
+.cache
+.idea

@@ -13,7 +13,6 @@ import Manipulator from './dom/manipulator'
 import {
   enableDismissTrigger
 } from './util/component-functions'
-import TemplateFactory from './util/template-factory'
 
 /**
  * Constants
@@ -93,6 +92,14 @@ class Snackbar extends BaseComponent {
     this._element.dataset.bsAutoClose = this._config.autoClose
 
     waitingQueue.pushToWaitingQueue(this._element)
+  }
+
+  static get Default() {
+    return Default
+  }
+
+  static get DefaultType() {
+    return DefaultType
   }
 
   static get NAME() {

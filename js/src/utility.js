@@ -5,7 +5,7 @@
  * --------------------------------------------------------------------------
  */
 
-const getColor = (color) => {
+const getColor = color => {
   const label = document.createElement('label')
   label.className = `text-${color}`
   label.style.display = 'none'
@@ -18,8 +18,8 @@ const getColor = (color) => {
   return color
 }
 
-const getBaseColor = (element) => {
-  let base = element.className.match(/base-[^\s]+/)
+const getBaseColor = element => {
+  let base = element.className.match(/base-\S+/)
   let baseColor = '#757575'
 
   if (base) {
@@ -30,8 +30,8 @@ const getBaseColor = (element) => {
   return baseColor
 }
 
-const getPrimaryColor = (element) => {
-  let primary = element.className.match(/primary-[^\s]+/)
+const getPrimaryColor = element => {
+  let primary = element.className.match(/primary-\S+/)
   let primaryColor = '#0d6efd'
 
   if (primary) {

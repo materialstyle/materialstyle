@@ -1,3 +1,7 @@
+/* eslint-env node */
+
+'use strict'
+
 module.exports = [
   'alert',
   'badge',

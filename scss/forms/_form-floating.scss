@@ -1,4 +1,4 @@
-// stylelint-disable selector-max-class, selector-max-compound-selectors, selector-no-qualifying-type
+// stylelint-disable selector-max-class, selector-max-compound-selectors, selector-no-qualifying-type, function-disallowed-list
 .form-floating {
   position: relative;
 
@@ -13,22 +13,26 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    width: 100%;
+    height: 100%; // allow textareas
     padding: $form-floating-padding-y $form-floating-padding-x;
+    overflow: hidden;
     color: $form-field-base-color;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     pointer-events: none;
+    border: $input-border-width solid transparent; // Required for aligning label's text with the input as it affects inner box model
     transform-origin: 0 0;
     @include transition($form-floating-transition);
   }
 
-  // stylelint-disable no-duplicate-selectors
   > .form-control,
   > .form-control-plaintext {
     padding: $form-floating-padding-y var(--append-width, $form-floating-padding-x) $form-floating-padding-y var(--prepend-width, $form-floating-padding-x);
     background-color: transparent;
     border: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    @include border-bottom-end-radius(0);
+    @include border-bottom-start-radius(0);
     box-shadow: none;
 
     &::placeholder {
@@ -85,7 +89,7 @@
       background-repeat: no-repeat;
       background-position: right var(--append-width, $form-select-padding-x) center;
       background-size: $form-select-bg-size;
-      border-radius: $border-radius $border-radius 0 0;
+      @include border-radius($border-radius $border-radius 0 0);
 
       &::after {
         display: none;
@@ -114,7 +118,7 @@
 
     .btn-close {
       box-sizing: border-box;
-      border-radius: 0;
+      @include border-radius(0);
       box-shadow: none;
     }
 
@@ -153,7 +157,12 @@
       transform: $form-floating-label-transform;
     }
   }
-  // stylelint-enable no-duplicate-selectors
+
+  > .form-control-plaintext {
+    ~ label {
+      border-width: $input-border-width 0; // Required to properly position label text - as explained above
+    }
+  }
 
   .search-input {
     display: block;
@@ -161,8 +170,8 @@
     padding: $input-padding-x;
     background: linear-gradient(#212121, #212121) center bottom/0 2px no-repeat border-box, linear-gradient(#9e9e9e, #9e9e9e) center bottom/ 100% 1px no-repeat border-box transparent;
     border: 0;
-    border-radius: 0;
-    transition: .3s cubic-bezier(.4, 0, .2, 1);
+    @include border-radius(0);
+    @include transition(.3s cubic-bezier(.4, 0, .2, 1));
 
     &:focus {
       background-color: transparent;
@@ -177,7 +186,7 @@
     padding: 0;
     overflow-y: auto;
     user-select: none;
-    border: none;
+    border: hidden;
   }
 
   &.multi-select {
@@ -220,7 +229,7 @@
         padding: 1rem 0;
         color: $form-field-base-color;
         pointer-events: none;
-        transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+        @include transition(opacity .1s ease-in-out, transform .1s ease-in-out);
         transform-origin: 0 0;
       }
     }
@@ -271,8 +280,8 @@
 
   &:not(.form-floating-outlined) {
     background-color: $form-control-bg;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    @include border-top-start-radius($border-radius);
+    @include border-top-end-radius($border-radius);
 
     &:hover {
       background-color: $form-control-hover-bg;
@@ -294,7 +303,7 @@
     linear-gradient($form-field-primary-color, $form-field-primary-color) bottom/0 2px no-repeat border-box,
     linear-gradient($form-field-base-color, $form-field-base-color) bottom/100% 1px no-repeat border-box transparent;
   // stylelint-enable value-list-comma-newline-after, value-list-comma-space-after
-  transition: .3s cubic-bezier(.4, 0, .2, 1);
+  @include transition(.3s cubic-bezier(.4, 0, .2, 1));
 }
 
 .m-notch {
@@ -316,14 +325,14 @@
   .m-notch-after {
     pointer-events: none;
     border: 1px solid $form-field-base-color;
-    border-radius: .25rem;
+    @include border-radius(.25rem);
   }
 
   .m-notch-before {
     width: .75rem;
     border-right: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    @include border-top-end-radius(0);
+    @include border-bottom-end-radius(0);
   }
 
   .m-notch-between {
@@ -334,19 +343,17 @@
     padding: 0 5px;
     border-right: 0;
     border-left: 0;
-    border-radius: 0;
+    @include border-radius(0);
   }
 
   .m-notch-after {
     flex: 1;
     border-left: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    @include border-top-start-radius(0);
+    @include border-bottom-start-radius(0);
   }
 }
-// stylelint-enable selector-max-class, selector-max-compound-selectors, selector-no-qualifying-type
 
-// stylelint-disable selector-max-compound-selectors
 .form-floating-with-icon {
   position: relative;
 
@@ -383,4 +390,4 @@
     }
   }
 }
-// stylelint-enable selector-max-compound-selectors
+// stylelint-enable selector-max-class, selector-max-compound-selectors, selector-no-qualifying-type, function-disallowed-list

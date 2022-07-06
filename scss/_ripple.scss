@@ -14,5 +14,5 @@
   z-index: 0;
   box-sizing: content-box;
   overflow: hidden;
-  border-radius: inherit;
+  @include border-radius(inherit);
 }

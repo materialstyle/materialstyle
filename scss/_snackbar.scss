@@ -8,7 +8,7 @@
   font: 500 16px Roboto, sans-serif;
   color: $snackbar-color;
   background-color: $snackbar-bg;
-  border-radius: $snackbar-border-radius;
+  @include border-radius($snackbar-border-radius);
   opacity: 0;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1), cubic-bezier(.4, 0, .2, 1);
   transition-duration: .3s, .3s;

@@ -28,13 +28,13 @@
   // scss-docs-end navbar-css-vars
 
   position: relative;
+  z-index: $zindex-navbar;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
   padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
   transform: translateY(0);
-  z-index: $zindex-navbar;
   @include gradient-bg();
   @include transition(transform 300ms 300ms cubic-bezier(.4, 0, .2, 1), opacity 300ms 300ms);
 

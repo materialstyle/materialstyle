@@ -110,8 +110,10 @@
     }
   }
 
+  // stylelint-disable function-disallowed-list, selector-max-class, selector-max-compound-selectors
   .form-floating {
-    .form-control, .form-select {
+    .form-control,
+    .form-select {
       @include form-validation-state-selector($state) {
         padding-right: calc($input-height-inner + var(--append-width, 0px));
         background-position: right var(--append-width, $input-height-inner-quarter) center;
@@ -139,7 +141,8 @@
     }
 
     &.form-floating-outlined {
-      .form-control, .form-select {
+      .form-control,
+      .form-select {
         @include form-validation-state-selector($state) {
           ~ .m-notch > .m-notch-between > label {
             color: $color;
@@ -156,6 +159,7 @@
       }
     }
   }
+  // stylelint-enable function-disallowed-list, selector-max-class, selector-max-compound-selectors
 
   .form-control-color {
     @include form-validation-state-selector($state) {

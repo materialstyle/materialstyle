@@ -20,7 +20,7 @@
   color: var(--#{$prefix}alert-color);
   background-color: var(--#{$prefix}alert-bg);
   border: var(--#{$prefix}alert-border);
-  border-radius: var(--#{$prefix}alert-border-radius, 0); // stylelint-disable-line property-disallowed-list
+  @include border-radius(var(--#{$prefix}alert-border-radius));
 }
 
 // Headings for larger alerts
@@ -48,7 +48,7 @@
     top: 0;
     right: 0;
     z-index: $stretched-link-z-index + 1;
-    padding: $alert-padding-y * 1.25 $alert-padding-x;
+    padding: $alert-padding-y * 1.25 $alert-padding-x * 1.25;
   }
 }
 
