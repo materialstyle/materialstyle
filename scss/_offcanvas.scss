@@ -194,11 +194,11 @@
 }
 
 .offcanvas-title {
-  margin-bottom: 0;
-  line-height: $offcanvas-title-line-height;
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-brand-margin-end;
+  margin-bottom: 0;
+  line-height: $offcanvas-title-line-height;
   @include font-size($navbar-brand-font-size);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
@@ -232,7 +232,7 @@
   &::after {
     width: 1.25em;
     line-height: 0;
-    transition: transform 200ms 0ms cubic-bezier(.4, 0, .2, 1);
+    @include transition(transform 200ms 0ms cubic-bezier(.4, 0, .2, 1));
   }
 
   &[aria-expanded="true"] {

@@ -7,8 +7,8 @@
 
   *:not(.ripple-surface):not(.btn-fab),
   *:not(.ripple-surface):not(.btn-fab):hover {
-    border-radius: 0;
-    outline: none;
+    @include border-radius(0);
+    outline: none; // stylelint-disable declaration-property-value-disallowed-list
     box-shadow: none;
   }
 

@@ -1,7 +1,7 @@
 /* global $, materialstyle, anchors */
 
 function saveOffcanvasScrollPosition() {
-  const offcanvas = document.querySelector('#siteOffcanvas .offcanvas-body')
+  const offcanvas = document.querySelector('#site-offcanvas .offcanvas-body')
 
   if (offcanvas) {
     const offcanvasHeight = offcanvas.clientHeight

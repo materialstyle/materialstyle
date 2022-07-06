@@ -100,7 +100,7 @@
   &.btn-fab {
     width: 56px;
     height: 56px;
-    border-radius: 100%;
+    @include border-radius(100%);
   }
 
   &.mini-fab {
@@ -110,15 +110,15 @@
   }
 
   &.leaf-fab {
-    border-radius: 0;
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    @include border-radius(0);
+    @include border-top-start-radius(50%);
+    @include border-bottom-end-radius(50%);
   }
 
   &.leaf-fab-inverted {
-    border-radius: 0;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
+    @include border-radius(0);
+    @include border-top-end-radius(50%);
+    @include border-bottom-start-radius(50%);
   }
 
   .fas,
@@ -209,6 +209,6 @@
 }
 
 [class*="btn-outline-"] {
-  --#{$prefix}btn-border-width:  #{$border-width};
+  --#{$prefix}btn-border-width: #{$border-width};
   @include box-shadow(none !important);
 }

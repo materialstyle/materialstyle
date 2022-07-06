@@ -80,8 +80,8 @@
   color: var(--#{$prefix}list-group-color);
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}list-group-bg);
-  border-left: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
   border-right: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
+  border-left: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
 
   &.list-divider {
     height: 0;

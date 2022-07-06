@@ -540,7 +540,7 @@ $shadows: (
   22dp: unquote("0 10px 14px -6px rgba(0,0,0,.2), 0 22px 35px 3px rgba(0,0,0,.14), 0 8px 42px 7px rgba(0,0,0,.12)"),
   23dp: unquote("0 11px 14px -7px rgba(0,0,0,.2), 0 23px 36px 3px rgba(0,0,0,.14), 0 9px 44px 8px rgba(0,0,0,.12)"),
   24dp: unquote("0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)")
-);
+) !default;
 
 $box-shadow:                  map-get($shadows, 8dp) !default;
 $box-shadow-sm:               map-get($shadows, 1dp) !default;
@@ -1377,7 +1377,7 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 $popover-font-size:                 $font-size-sm !default;
 $popover-bg:                        $white !default;
 $popover-max-width:                 276px !default;
-$popover-border-width:              0px !default;
+$popover-border-width:              0 !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
@@ -1413,7 +1413,7 @@ $toast-padding-y:                   .5rem !default;
 $toast-font-size:                   .875rem !default;
 $toast-color:                       null !default;
 $toast-background-color:            rgba($white, .85) !default;
-$toast-border-width:                0px !default;
+$toast-border-width:                0 !default;
 $toast-border-color:                var(--#{$prefix}border-color-translucent) !default;
 $toast-border-radius:               $border-radius !default;
 $toast-box-shadow:                  map-get($shadows, 4dp) !default;

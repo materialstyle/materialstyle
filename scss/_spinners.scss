@@ -130,7 +130,7 @@
     animation: var(--#{$prefix}spinner-animation-speed) linear infinite var(--#{$prefix}spinner-animation-name);
   }
   circle {
-    stroke: currentColor;
+    stroke: currentcolor;
     stroke-linecap: round;
     stroke-width: var(--#{$prefix}spinner-border-width);
     animation: dash var(--#{$prefix}spinner-dash-animation-speed) ease-in-out infinite;
