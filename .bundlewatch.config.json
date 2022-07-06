@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "./dist/css/materialstyle.min.css",
-      "maxSize": "36.5 kB"
+      "maxSize": "37 kB"
     },
     {
       "path": "./dist/js/materialstyle.min.js",
