@@ -745,6 +745,20 @@ $table-variants: (
   "danger":     shift-color($danger, $table-bg-scale),
   "light":      $light,
   "dark":       $dark,
+  "blue":       shift-color($blue, $table-bg-scale),
+  "indigo":     shift-color($indigo, $table-bg-scale),
+  "purple":     shift-color($purple, $table-bg-scale),
+  "pink":       shift-color($pink, $table-bg-scale),
+  "red":        shift-color($red, $table-bg-scale),
+  "orange":     shift-color($orange, $table-bg-scale),
+  "yellow":     shift-color($yellow, $table-bg-scale),
+  "green":      shift-color($green, $table-bg-scale),
+  "teal":       shift-color($teal, $table-bg-scale),
+  "cyan":       shift-color($cyan, $table-bg-scale),
+  "gray":       shift-color($gray-600, $table-bg-scale),
+  "gray-dark":  shift-color($gray-800, $table-bg-scale),
+  "white":      $white,
+  "black":      $black
 ) !default;
 // scss-docs-end table-loop
 
@@ -1377,7 +1391,7 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 $popover-font-size:                 $font-size-sm !default;
 $popover-bg:                        $white !default;
 $popover-max-width:                 276px !default;
-$popover-border-width:              0 !default;
+$popover-border-width:              $border-width !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
@@ -1413,7 +1427,7 @@ $toast-padding-y:                   .5rem !default;
 $toast-font-size:                   .875rem !default;
 $toast-color:                       null !default;
 $toast-background-color:            rgba($white, .85) !default;
-$toast-border-width:                0 !default;
+$toast-border-width:                $border-width !default;
 $toast-border-color:                var(--#{$prefix}border-color-translucent) !default;
 $toast-border-radius:               $border-radius !default;
 $toast-box-shadow:                  map-get($shadows, 4dp) !default;

@@ -48,7 +48,7 @@
     top: 0;
     right: 0;
     z-index: $stretched-link-z-index + 1;
-    padding: $alert-padding-y * 1.25 $alert-padding-x;
+    padding: $alert-padding-y * 1.25 $alert-padding-x * 1.25;
   }
 }
 
