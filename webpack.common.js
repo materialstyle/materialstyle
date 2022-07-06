@@ -1,9 +1,13 @@
-const path = require('path');
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+/* eslint-env node */
 
-webpackConfig = {
+'use strict'
+
+const path = require('node:path')
+const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+const webpackConfig = {
   entry: {
     Alert: './js/src/alert.js',
     Button: './js/src/button.js',
@@ -30,14 +34,10 @@ webpackConfig = {
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: chunkData => {
-      let chunkName = chunkData.chunk.name;
+    filename(chunkData) {
+      const chunkName = chunkData.chunk.name
 
-      if (chunkName === 'materialstyle') {
-        return 'js/materialstyle.min.js';
-      } else {
-        return '../js/dist/' + (chunkName.split(/(?=[A-Z])/).join('-').toLowerCase()) + '.js';
-      }
+      return (chunkName === 'materialstyle') ? 'js/materialstyle.min.js' : '../js/dist/' + (chunkName.split(/(?=[A-Z])/).join('-').toLowerCase()) + '.js'
     },
     publicPath: '/dist/',
     library: {
@@ -64,8 +64,8 @@ webpackConfig = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              esModule: false,
-            },
+              esModule: false
+            }
           },
           'css-loader',
           'postcss-loader',
@@ -73,7 +73,7 @@ webpackConfig = {
             loader: 'sass-loader',
             options: {
               implementation: require('sass')
-            },
+            }
           }
         ]
       }
@@ -93,9 +93,9 @@ webpackConfig = {
       commonjs: 'popper.js',
       commonjs2: 'popper.js',
       amd: 'popper.js',
-      root: 'Popper',
-    },
+      root: 'Popper'
+    }
   }
-};
+}
 
-module.exports = webpackConfig;
+module.exports = webpackConfig

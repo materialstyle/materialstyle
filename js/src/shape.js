@@ -52,7 +52,7 @@ class Shape extends BaseComponent {
   }
 
   setShapeColor() {
-    let shapeColor = this._element.className.match(/shape-parent-bg-[^\s]+/)
+    let shapeColor = this._element.className.match(/shape-parent-bg-\S+/)
 
     if (shapeColor) {
       shapeColor = shapeColor[0].replace('shape-parent-', '')
@@ -60,12 +60,15 @@ class Shape extends BaseComponent {
       if (this._topLeftAngle) {
         this._topLeftAngle.classList.add(shapeColor)
       }
+
       if (this._topRightAngle) {
         this._topRightAngle.classList.add(shapeColor)
       }
+
       if (this._bottomLeftAngle) {
         this._bottomLeftAngle.classList.add(shapeColor)
       }
+
       if (this._bottomRightAngle) {
         this._bottomRightAngle.classList.add(shapeColor)
       }
@@ -79,31 +82,31 @@ class Shape extends BaseComponent {
     let topRightWidth = 0
 
     if (this._topLeftAngle) {
-      topLeftWidth = this._topLeftAngle.className.match(/size-[^\s]+/)
+      topLeftWidth = this._topLeftAngle.className.match(/size-\S+/)
       if (topLeftWidth) {
-        topLeftWidth = parseInt(topLeftWidth[0].replace('size-', ''), 10)
+        topLeftWidth = Number.parseInt(topLeftWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._topRightAngle) {
-      topRightWidth = this._topRightAngle.className.match(/size-[^\s]+/)
+      topRightWidth = this._topRightAngle.className.match(/size-\S+/)
       if (topRightWidth) {
-        topRightWidth = parseInt(topRightWidth[0].replace('size-', ''), 10)
+        topRightWidth = Number.parseInt(topRightWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._bottomLeftAngle) {
-      bottomLeftWidth = this._bottomLeftAngle.className.match(/size-[^\s]+/)
+      bottomLeftWidth = this._bottomLeftAngle.className.match(/size-\S+/)
       if (bottomLeftWidth) {
-        bottomLeftWidth = parseInt(bottomLeftWidth[0].replace('size-', ''), 10)
+        bottomLeftWidth = Number.parseInt(bottomLeftWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._bottomRightAngle) {
-      bottomRightWidth = this._bottomRightAngle.className.match(/size-[^\s]+/)
+      bottomRightWidth = this._bottomRightAngle.className.match(/size-\S+/)
 
       if (bottomRightWidth) {
-        bottomRightWidth = parseInt(bottomRightWidth[0].replace('size-', ''), 10)
+        bottomRightWidth = Number.parseInt(bottomRightWidth[0].replace('size-', ''), 10)
       }
     }
 

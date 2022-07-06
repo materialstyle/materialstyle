@@ -96,7 +96,7 @@ class TextField extends BaseComponent {
 
   redraw() {
     if (this._label) {
-      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - (this._label.offsetWidth * LABEL_SCALE)}px`)
     }
 
     this.addFontsReadyEvent()
@@ -123,16 +123,16 @@ class TextField extends BaseComponent {
     const notchAfter = document.createElement('div')
     notchAfter.className = 'm-notch-after'
 
-    notch.appendChild(notchBefore)
-    notch.appendChild(notchBetween)
-    notch.appendChild(notchAfter)
+    notch.append(notchBefore)
+    notch.append(notchBetween)
+    notch.append(notchAfter)
 
     this._textField.after(notch)
     this._notch = notch
 
     if (this._label) {
-      notchBetween.appendChild(this._label)
-      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      notchBetween.append(this._label)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - (this._label.offsetWidth * LABEL_SCALE)}px`)
     }
   }
 
@@ -143,6 +143,7 @@ class TextField extends BaseComponent {
           this._prepend.style.height = `${this._textField.offsetHeight}px`
           this._formFloating.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
         }
+
         if (this._append) {
           this._append.style.height = `${this._textField.offsetHeight}px`
           this._formFloating.style.setProperty('--append-width', `${this._append.offsetWidth}px`)

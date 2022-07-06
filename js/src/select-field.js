@@ -127,7 +127,7 @@ class SelectField extends BaseComponent {
   redraw() {
     if (this._label) {
       this.toggleLabelState()
-      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - (this._label.offsetWidth * LABEL_SCALE)}px`)
     }
 
     this.addFontsReadyEvent()
@@ -152,24 +152,25 @@ class SelectField extends BaseComponent {
     }
 
     if (this._isSearchable) {
-      dropdownMenu.appendChild(this.createSearchContainer())
+      dropdownMenu.append(this.createSearchContainer())
     }
 
     if (this._multiSelectEnabled) {
-      dropdownMenu.appendChild(this.createDropdownItems('Select All', '', false, true))
+      dropdownMenu.append(this.createDropdownItems('Select All', '', false, true))
     }
 
     const optionsArray = []
     const options = this._select.querySelectorAll('option')
 
     for (const [, value] of Object.entries(options)) {
-      dropdownMenu.appendChild(this.createDropdownItems(value.text, value.value, value.selected))
+      dropdownMenu.append(this.createDropdownItems(value.text, value.value, value.selected))
       optionsArray.push({
         value: value.value,
         text: value.innerHTML,
         selected: value.selected
       })
     }
+
     this._options = optionsArray
 
     if (this._multiSelectEnabled) {
@@ -179,7 +180,7 @@ class SelectField extends BaseComponent {
       closeButton.ariaLabel = 'Close'
 
       this._closeButton = closeButton
-      dropdownMenu.appendChild(closeButton)
+      dropdownMenu.append(closeButton)
     }
 
     this._dropdownMenu = dropdownMenu
@@ -195,8 +196,8 @@ class SelectField extends BaseComponent {
     selectedItem.dataset.bsToggle = 'dropdown'
     selectedItem.dataset.bsAutoClose = 'outside'
 
-    dropdown.appendChild(selectedItem)
-    dropdown.appendChild(this._dropdownMenu)
+    dropdown.append(selectedItem)
+    dropdown.append(this._dropdownMenu)
 
     this._dropdown = dropdown
     this._selectedItem = selectedItem
@@ -235,8 +236,8 @@ class SelectField extends BaseComponent {
       label.className = 'dropdown-text'
       label.innerHTML = text
 
-      dropdownItem.appendChild(checkmark)
-      dropdownItem.appendChild(label)
+      dropdownItem.append(checkmark)
+      dropdownItem.append(label)
     } else {
       dropdownItem.innerHTML = text
       if (checked) {
@@ -250,26 +251,28 @@ class SelectField extends BaseComponent {
 
   showSelectedItems() {
     if (this._multiSelectEnabled) {
-      this._selectedItem.innerHTML = this._options.map((option) => {
+      this._selectedItem.innerHTML = this._options.map(option => {
         if (option.selected) {
           return `<span class="badge bg-dark d-inline-flex align-items-center p-1 m-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-bs-value="${option.value}"></button></span>`
         }
+
         return ''
       }).join('')
 
       const closeButton = this._selectedItem.querySelectorAll('.btn-close')
 
       for (const [, value] of Object.entries(closeButton)) {
-        EventHandler.on(value, EVENT_CLICK, (event) => {
+        EventHandler.on(value, EVENT_CLICK, event => {
           this._dropdownInstance.show()
           this.selectOne(event.target.dataset.bsValue, false)
         })
       }
     } else {
-      this._selectedItem.innerHTML = this._options.map((option) => {
+      this._selectedItem.innerHTML = this._options.map(option => {
         if (option.selected) {
           return option.text
         }
+
         return ''
       }).join('')
     }
@@ -296,16 +299,16 @@ class SelectField extends BaseComponent {
     const notchAfter = document.createElement('div')
     notchAfter.className = 'm-notch-after'
 
-    notch.appendChild(notchBefore)
-    notch.appendChild(notchBetween)
-    notch.appendChild(notchAfter)
+    notch.append(notchBefore)
+    notch.append(notchBetween)
+    notch.append(notchAfter)
 
     this._dropdown.after(notch)
     this._notch = notch
 
     if (this._label) {
-      notchBetween.appendChild(this._label)
-      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      notchBetween.append(this._label)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - (this._label.offsetWidth * LABEL_SCALE)}px`)
     }
   }
 
@@ -326,9 +329,9 @@ class SelectField extends BaseComponent {
   selectOne(value, checked) {
     if (!this._multiSelectEnabled) {
       const selectedOptions = this._select.querySelectorAll('option')
-      for (let i = 0; i < selectedOptions.length; i++) {
-        if (selectedOptions[i].selected) {
-          selectedOptions[i].selected = false
+      for (const selectedOption of selectedOptions) {
+        if (selectedOption.selected) {
+          selectedOption.selected = false
         }
       }
     }
@@ -343,8 +346,8 @@ class SelectField extends BaseComponent {
   selectAll(checked) {
     const options = this._select.querySelectorAll('option')
 
-    for (let i = 0; i < options.length; i++) {
-      options[i].selected = checked
+    for (const option of options) {
+      option.selected = checked
     }
 
     this._select.dispatchEvent(new Event('change', {
@@ -357,12 +360,12 @@ class SelectField extends BaseComponent {
 
     if (!this._multiSelectEnabled) {
       const dropdownItems = this._dropdown.querySelectorAll(SELECTOR_DROPDOWN_ITEM)
-      for (let i = 0; i < dropdownItems.length; i++) {
-        dropdownItems[i].dataset.bsChecked = false
-        dropdownItems[i].classList.remove('checked')
+      for (const dropdownItem of dropdownItems) {
+        dropdownItem.dataset.bsChecked = false
+        dropdownItem.classList.remove('checked')
       }
 
-      index = this._options.findIndex((o) => o.selected === true)
+      index = this._options.findIndex(o => o.selected === true)
       if (index !== -1) {
         this._options[index].selected = false
       }
@@ -376,7 +379,7 @@ class SelectField extends BaseComponent {
       this._dropdown.querySelector(`.dropdown-item[data-bs-value="${value}"]`).classList.remove('checked')
     }
 
-    index = this._options.findIndex((o) => o.value === value)
+    index = this._options.findIndex(o => o.value === value)
     this._options[index].selected = checked
 
     this.showSelectedItems()
@@ -390,13 +393,9 @@ class SelectField extends BaseComponent {
     for (const [, item] of Object.entries(dropdownItems)) {
       let optionText = ''
 
-      if (this._multiSelectEnabled) {
-        optionText = item.querySelector('.dropdown-text').innerHTML
-      } else {
-        optionText = item.innerHTML
-      }
+      optionText = this._multiSelectEnabled ? item.querySelector('.dropdown-text').innerHTML : item.innerHTML
 
-      if (optionText.toLowerCase().indexOf(value) === -1) {
+      if (!optionText.toLowerCase().includes(value)) {
         item.classList.add('d-none')
         item.classList.remove('d-flex')
       } else {
@@ -412,7 +411,7 @@ class SelectField extends BaseComponent {
     EventHandler.on(this._dropdown, EVENT_SHOWN, () => this._dropdown.classList.add('float'))
     EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
 
-    EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, (event) => {
+    EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, event => {
       const checked = event.target.dataset.bsChecked !== 'true'
       event.target.dataset.bsChecked = checked
 
@@ -425,18 +424,18 @@ class SelectField extends BaseComponent {
       this.selectAll(checked)
     })
 
-    EventHandler.on(this._dropdown.querySelector('.search-input'), EVENT_KEYUP, (event) => {
+    EventHandler.on(this._dropdown.querySelector('.search-input'), EVENT_KEYUP, event => {
       this.search(event.target.value)
     })
 
-    EventHandler.on(this._dropdown.querySelector('.search-input'), 'search', (event) => {
+    EventHandler.on(this._dropdown.querySelector('.search-input'), 'search', event => {
       this.search(event.target.value)
     })
 
     const dropdownItems = this._dropdown.querySelectorAll(SELECTOR_DROPDOWN_ITEM)
 
     for (const [, value] of Object.entries(dropdownItems)) {
-      EventHandler.on(value, EVENT_CLICK, (event) => {
+      EventHandler.on(value, EVENT_CLICK, event => {
         if (this._multiSelectEnabled) {
           this.selectOne(event.target.dataset.bsValue, event.target.dataset.bsChecked !== 'true')
         } else {
@@ -453,13 +452,13 @@ class SelectField extends BaseComponent {
       })
     }
 
-    EventHandler.on(this._select, 'change', (event) => {
+    EventHandler.on(this._select, 'change', event => {
       if (this._multiSelectEnabled) {
-        const selectValue = [...event.target.options].filter((option) => option.selected).map((option) => option.value)
+        const selectValue = new Set([...event.target.options].filter(option => option.selected).map(option => option.value))
         let allSelected = true
 
         for (const [, value] of Object.entries(this._options)) {
-          if (selectValue.includes(value.value)) {
+          if (selectValue.has(value.value)) {
             this.setSelectValue(value.value, true)
           } else {
             this.setSelectValue(value.value, false)
@@ -490,6 +489,7 @@ class SelectField extends BaseComponent {
           this._prepend.style.height = `${this._selectedItem.offsetHeight}px`
           this._formFloating.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
         }
+
         if (this._append) {
           this._append.style.height = `${this._selectedItem.offsetHeight}px`
           this._formFloating.style.setProperty('--append-width', `${this._append.offsetWidth}px`)

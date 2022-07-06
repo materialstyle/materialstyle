@@ -1,8 +1,10 @@
+/* eslint-env node */
+
 'use strict'
 
-const path = require('path')
+const path = require('node:path')
 const ip = require('ip')
-const {browsers} = require('./browsers')
+const { browsers } = require('./browsers')
 
 const ENV = process.env
 const BROWSERSTACK = Boolean(ENV.BROWSERSTACK)
@@ -80,13 +82,13 @@ const conf = {
           use: {
             loader: 'babel-loader',
             options: {
-              "plugins": ["istanbul"]
+              plugins: ['istanbul']
             }
           }
-        },
-      ],
-    },
-  },
+        }
+      ]
+    }
+  }
 }
 
 if (BROWSERSTACK) {
@@ -130,8 +132,8 @@ if (BROWSERSTACK) {
   conf.coverageReporter = {
     dir: path.resolve(__dirname, 'js/coverage/'),
     reporters: [
-      {type: 'lcov', subdir: 'report-lcov'},
-      {type: 'text-summary'}
+      { type: 'lcov', subdir: 'report-lcov' },
+      { type: 'text-summary' }
     ]
   }
 
