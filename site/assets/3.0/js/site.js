@@ -179,19 +179,20 @@ function populateColors() {
   if (colorContainer) {
     const bgToColorMap = {
       'red,danger': '#dc3545,white',
-      pink: '#d63384,white',
-      purple: '#6f42c1,white',
-      indigo: '#6610f2,white',
+      'pink': '#d63384,white',
+      'purple': '#6f42c1,white',
+      'indigo': '#6610f2,white',
       'blue,primary': '#0d6efd,white',
       'cyan,info': '#0dcaf0,black',
-      teal: '#20c997,black',
+      'teal': '#20c997,black',
       'green,success': '#198754,white',
       'yellow,warning': '#ffc107,black',
-      orange: '#fd7e14,black',
-      'gray-dark,dark': '#343a40,white',
+      'orange': '#fd7e14,black',
       'gray,secondary': '#6c757d,white',
-      black: '#000,white',
-      white: '#fff,black'
+      'light': '#f8f9fa,black',
+      'dark': '#212529,white',
+      'white': '#fff,black',
+      'black': '#000,white'
     }
 
     for (const [key, value] of Object.entries(bgToColorMap)) {
