@@ -7,7 +7,7 @@
 
 import {
   getBaseColor, getPrimaryColor
-} from '../src/utility.js'
+} from './util/color'
 import BaseComponent from './base-component'
 import EventHandler from './dom/event-handler'
 import {
