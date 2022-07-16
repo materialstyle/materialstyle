@@ -157,7 +157,7 @@ if (BROWSERSTACK) {
     plugins.push('karma-jasmine-html-reporter')
     reporters.push('kjhtml')
     config.singleRun = false
-    config.autoWatch = true
+    config.autoWatch = false
   }
 }
 
