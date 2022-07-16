@@ -15,7 +15,6 @@ import Navbar from './src/navbar'
 import Offcanvas from './src/offcanvas'
 import Popover from './src/popover'
 import Rainbow from './src/rainbow'
-import Ripple from './src/ripple'
 import Scrollspy from './src/scrollspy'
 import SelectField from './src/select-field'
 import Shape from './src/shape'
@@ -37,7 +36,6 @@ export default {
   Offcanvas,
   Popover,
   Rainbow,
-  Ripple,
   Scrollspy,
   SelectField,
   Shape,

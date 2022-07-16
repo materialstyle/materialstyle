@@ -96,7 +96,7 @@ function initComponents() {
   // Initialize Ripple
   const rippleSurface = Array.prototype.slice.call(document.querySelectorAll('.ripple-surface'))
   rippleSurface.map(s => {
-    return new materialstyle.Ripple(s)
+    return new mdc.ripple.MDCRipple(s)
   })
 
   const tabs = Array.prototype.slice.call(document.querySelectorAll('.nav-tabs'))

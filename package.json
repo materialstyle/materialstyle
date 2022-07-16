@@ -81,11 +81,10 @@
     "docs-serve-only": "npx sirv-cli _site --port 9001",
     "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "update-deps": "ncu -u -x globby,karma-browserstack-launcher,karma-rollup-preprocessor && echo Manually update site/assets/js/vendor",
-    "release": "npm-run-all dist release-sri docs-build release-zip*",
+    "release": "npm-run-all dist release-sri docs-build release-zip",
     "release-sri": "node build/generate-sri.js",
     "release-version": "node build/change-version.js",
     "release-zip": "cross-env-shell \"rm -rf materialstyle-$npm_package_version-dist && cp -r dist/ materialstyle-$npm_package_version-dist && zip -r9 materialstyle-$npm_package_version-dist.zip materialstyle-$npm_package_version-dist && rm -rf materialstyle-$npm_package_version-dist\"",
-    "release-zip-examples": "node build/zip-examples.js",
     "dist": "npm-run-all --aggregate-output --parallel css js",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri docs-build",
@@ -97,7 +96,8 @@
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\""
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.11.5"
+    "@popperjs/core": "^2.11.5",
+    "@material/ripple": "^14.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.6",
