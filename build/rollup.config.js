@@ -1,6 +1,6 @@
 'use strict'
 
-const path = require('node:path')
+const path = require('path')
 const { babel } = require('@rollup/plugin-babel')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const replace = require('@rollup/plugin-replace')
@@ -25,11 +25,9 @@ const globals = {
 
 if (BUNDLE) {
   fileDestination += '.bundle'
-
+  // Remove last entry in external array to bundle Popper
   external.pop()
-
   delete globals['@popperjs/core']
-
   plugins.push(
     replace({
       'process.env.NODE_ENV': '"production"',

@@ -9,7 +9,7 @@
 
 'use strict'
 
-const path = require('node:path')
+const path = require('path')
 const rollup = require('rollup')
 const globby = require('globby')
 const { babel } = require('@rollup/plugin-babel')
@@ -69,7 +69,6 @@ const build = async plugin => {
       // We can change `Index` with `UtilIndex` etc if we use
       // `safeClassName` instead of `className` everywhere
       globals[path.normalize(usedPlugin.src)] = usedPlugin.className
-
       return true
     }
   })

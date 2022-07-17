@@ -9,7 +9,7 @@
 
 'use strict'
 
-const path = require('node:path')
+const path = require('path')
 const sh = require('shelljs')
 
 const pkg = require('../package.json')
