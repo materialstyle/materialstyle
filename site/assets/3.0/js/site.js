@@ -1,4 +1,4 @@
-/* global $, materialstyle, anchors */
+/* global $, mdc, materialstyle, anchors */
 
 function saveOffcanvasScrollPosition() {
   const offcanvas = document.querySelector('#site-offcanvas .offcanvas-body')

@@ -204,7 +204,7 @@ class SelectField extends BaseComponent {
 
     this._select.after(this._dropdown)
 
-    this._dropdownInstance = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+    this._dropdownInstance = window.materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
   }
 
   createSearchContainer() {
