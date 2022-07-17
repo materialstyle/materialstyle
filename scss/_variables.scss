@@ -645,6 +645,8 @@ $display-font-sizes: (
   6: 2.5rem
 ) !default;
 
+$display-font-family: null !default;
+$display-font-style:  null !default;
 $display-font-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
@@ -657,7 +659,7 @@ $small-font-size:             .875em !default;
 
 $sub-sup-font-size:           .75em !default;
 
-$text-muted:                  rgba(var(--#{$prefix}body-color-rgb), .75) !default;
+$text-muted:                  $gray-600 !default;
 
 $initialism-font-size:        $small-font-size !default;
 
@@ -817,7 +819,6 @@ $btn-border-width:            0 !default;
 $btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-hover-box-shadow:        map-get($shadows, 4dp) !default;
-$btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $btn-hover-box-shadow !default;
 $btn-disabled-opacity:        .65 !default;
 $btn-active-box-shadow:       map-get($shadows, 6dp) !default;
@@ -940,7 +941,6 @@ $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;
 $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
-$form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='none' stroke='#fff' stroke-width='3.5' d='M1.73,12.91 8.1,19.28 22.79,4.59'/></svg>") !default;

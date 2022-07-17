@@ -7,7 +7,7 @@
 
 import {
   getBaseColor, getPrimaryColor
-} from '../src/utility.js'
+} from './util/color'
 import BaseComponent from './base-component'
 import EventHandler from './dom/event-handler'
 import {
@@ -204,7 +204,7 @@ class SelectField extends BaseComponent {
 
     this._select.after(this._dropdown)
 
-    this._dropdownInstance = materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+    this._dropdownInstance = window.materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
   }
 
   createSearchContainer() {

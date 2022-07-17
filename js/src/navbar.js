@@ -49,3 +49,5 @@ class Navbar {
 }
 
 (() => new Navbar())()
+
+export default Navbar

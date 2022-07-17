@@ -2,8 +2,12 @@
 
 'use strict'
 
-const path = require('node:path')
+const path = require('path')
 const ip = require('ip')
+const { babel } = require('@rollup/plugin-babel')
+const istanbul = require('rollup-plugin-istanbul')
+const { nodeResolve } = require('@rollup/plugin-node-resolve')
+const replace = require('@rollup/plugin-replace')
 const { browsers } = require('./browsers')
 
 const ENV = process.env
@@ -12,14 +16,12 @@ const DEBUG = Boolean(ENV.DEBUG)
 const JQUERY_TEST = Boolean(ENV.JQUERY)
 
 const frameworks = [
-  'jasmine',
-  'webpack'
+  'jasmine'
 ]
 
 const plugins = [
   'karma-jasmine',
-  'karma-webpack',
-  'karma-sourcemap-loader'
+  'karma-rollup-preprocessor'
 ]
 
 const reporters = ['dots']
@@ -48,8 +50,8 @@ const detectBrowsers = {
   }
 }
 
-const conf = {
-  basePath: '',
+const config = {
+  basePath: '../..',
   port: 9876,
   colors: true,
   autoWatch: false,
@@ -66,43 +68,50 @@ const conf = {
     }
   ],
   preprocessors: {
-    'js/tests/unit/**/*.spec.js': ['webpack', 'sourcemap']
+    'js/tests/unit/**/*.spec.js': ['rollup']
   },
-  webpack: {
-    mode: 'development',
-    cache: true,
-    devtool: 'inline-source-map',
-    module: {
-      rules: [
-        {
-          enforce: 'pre',
-          test: /\.js$/,
-          include: path.resolve(__dirname, 'js/src/'),
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              plugins: ['istanbul']
-            }
-          }
-        }
-      ]
+  rollupPreprocessor: {
+    plugins: [
+      replace({
+        'process.env.NODE_ENV': '"dev"',
+        preventAssignment: true
+      }),
+      istanbul({
+        exclude: [
+          'node_modules/**',
+          'js/tests/unit/**/*.spec.js',
+          'js/tests/helpers/**/*.js'
+        ]
+      }),
+      babel({
+        // Only transpile our source code
+        exclude: 'node_modules/**',
+        // Inline the required helpers in each file
+        babelHelpers: 'inline'
+      }),
+      nodeResolve()
+    ],
+    output: {
+      format: 'iife',
+      name: 'materialStyleTest',
+      sourcemap: 'inline',
+      generatedCode: 'es2015'
     }
   }
 }
 
 if (BROWSERSTACK) {
-  conf.hostname = ip.address()
-  conf.browserStack = {
-    username: ENV.BROWSERSTACK_USERNAME,
-    accessKey: ENV.BROWSERSTACK_ACCESS_KEY,
+  config.hostname = ip.address()
+  config.browserStack = {
+    username: ENV.BROWSER_STACK_USERNAME,
+    accessKey: ENV.BROWSER_STACK_ACCESS_KEY,
     build: `materialstyle-${ENV.GITHUB_SHA ? ENV.GITHUB_SHA.slice(0, 7) + '-' : ''}${new Date().toISOString()}`,
     project: 'materialstyle',
     retryLimit: 2
   }
   plugins.push('karma-browserstack-launcher', 'karma-jasmine-html-reporter')
-  conf.customLaunchers = browsers
-  conf.browsers = Object.keys(browsers)
+  config.customLaunchers = browsers
+  config.browsers = Object.keys(browsers)
   reporters.push('BrowserStack', 'kjhtml')
 } else if (JQUERY_TEST) {
   frameworks.push('detectBrowsers')
@@ -111,8 +120,8 @@ if (BROWSERSTACK) {
     'karma-firefox-launcher',
     'karma-detect-browsers'
   )
-  conf.detectBrowsers = detectBrowsers
-  conf.files = [
+  config.detectBrowsers = detectBrowsers
+  config.files = [
     'node_modules/jquery/dist/jquery.slim.min.js',
     {
       pattern: 'js/tests/unit/jquery.spec.js',
@@ -125,32 +134,38 @@ if (BROWSERSTACK) {
     'karma-chrome-launcher',
     'karma-firefox-launcher',
     'karma-detect-browsers',
-    'karma-coverage'
+    'karma-coverage-istanbul-reporter'
   )
-  reporters.push('coverage')
-  conf.detectBrowsers = detectBrowsers
-  conf.coverageReporter = {
-    dir: path.resolve(__dirname, 'js/coverage/'),
-    reporters: [
-      { type: 'lcov', subdir: 'report-lcov' },
-      { type: 'text-summary' }
-    ]
+  reporters.push('coverage-istanbul')
+  config.detectBrowsers = detectBrowsers
+  config.coverageIstanbulReporter = {
+    dir: path.resolve(__dirname, '../coverage/'),
+    reports: ['lcov', 'text-summary'],
+    thresholds: {
+      emitWarning: false,
+      global: {
+        statements: 90,
+        branches: 89,
+        functions: 90,
+        lines: 90
+      }
+    }
   }
 
   if (DEBUG) {
-    conf.hostname = ip.address()
+    config.hostname = ip.address()
     plugins.push('karma-jasmine-html-reporter')
     reporters.push('kjhtml')
-    conf.singleRun = false
-    conf.autoWatch = true
+    config.singleRun = false
+    config.autoWatch = false
   }
 }
 
-conf.frameworks = frameworks
-conf.plugins = plugins
-conf.reporters = reporters
+config.frameworks = frameworks
+config.plugins = plugins
+config.reporters = reporters
 
 module.exports = karmaConfig => {
-  conf.logLevel = karmaConfig.LOG_ERROR
-  karmaConfig.set(conf)
+  config.logLevel = karmaConfig.LOG_ERROR
+  karmaConfig.set(config)
 }

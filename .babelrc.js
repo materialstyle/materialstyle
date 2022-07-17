@@ -1,7 +1,3 @@
-/* eslint-env node */
-
-'use strict'
-
 module.exports = {
   presets: [
     [
@@ -13,4 +9,4 @@ module.exports = {
       }
     ]
   ]
-}
+};
