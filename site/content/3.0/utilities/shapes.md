@@ -121,7 +121,7 @@ keywords: utilities, shapes
 
 <div class="m-shape-container shape-parent-bg-white">
   <div class="bg-purple bg-opacity-10 border border-bottom border-2 border-purple"
-       style="height: 200px; width: 400px;"></div>
+       style="height: 200px; width: 200px;"></div>
   <div class="angle-top-left size-50 border border-bottom border-2 border-purple"></div>
   <div class="angle-top-right size-50 border border-bottom border-2 border-purple"></div>
   <div class="angle-bottom-left size-50 border border-bottom border-2 border-purple"></div>
