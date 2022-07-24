@@ -51,18 +51,10 @@ keywords: buttons, floating action buttons
 ## Javascript for ripple
 ```javascript
 // Initialize Ripple
-var rippleSurface = [].slice.call(document.querySelectorAll('.ripple-surface'))
-rippleSurface.map(function (s) {
-  new materialstyle.Ripple(s)
+const rippleSurface = Array.prototype.slice.call(document.querySelectorAll('.ripple-surface'))
+rippleSurface.map(s => {
+  return new mdc.ripple.MDCRipple(s)
 })
-```
-
-<br>
-
-### jQuery
-```javascript
-// Initialize Ripple
-$('.ripple-surface').ripple();
 ```
 
 <br>

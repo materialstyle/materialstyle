@@ -1,14 +1,9 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0-alpha1): material-style.js
+ * Material Style (v3.0.0-alpha1): index.umd.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-
-import '../scss/material-style.scss'
-
-import './src/utility'
-import './src/navbar'
 
 import Alert from './src/alert'
 import Button from './src/button'
@@ -16,10 +11,10 @@ import Carousel from './src/carousel'
 import Collapse from './src/collapse'
 import Dropdown from './src/dropdown'
 import Modal from './src/modal'
+import Navbar from './src/navbar'
 import Offcanvas from './src/offcanvas'
 import Popover from './src/popover'
 import Rainbow from './src/rainbow'
-import Ripple from './src/ripple'
 import Scrollspy from './src/scrollspy'
 import SelectField from './src/select-field'
 import Shape from './src/shape'
@@ -37,10 +32,10 @@ export default {
   Collapse,
   Dropdown,
   Modal,
+  Navbar,
   Offcanvas,
   Popover,
   Rainbow,
-  Ripple,
   Scrollspy,
   SelectField,
   Shape,

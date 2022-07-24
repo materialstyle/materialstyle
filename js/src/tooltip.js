@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.0-beta1): tooltip.js
+ * Bootstrap (v5.2.0): tooltip.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -344,8 +344,6 @@ class Tooltip extends BaseComponent {
   setContent(content) {
     this._newContent = content
     if (this._isShown()) {
-      this.tip.remove()
-      this.tip = null
       this._disposePopper()
       this.show()
     }
@@ -518,7 +516,7 @@ class Tooltip extends BaseComponent {
       return
     }
 
-    if (!this._element.getAttribute('aria-label') && !this._element.textContent) {
+    if (!this._element.getAttribute('aria-label') && !this._element.textContent.trim()) {
       this._element.setAttribute('aria-label', title)
     }
 

@@ -6,7 +6,16 @@
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
 
+<script src="https://unpkg.com/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
+        integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
+        crossorigin="anonymous"></script>
+
+{{ if eq hugo.Environment "production" -}}
 <script src="/materialstyle/{{ .Site.Params.docs_version }}/dist/js/materialstyle.min.js"></script>
+{{ else -}}
+<script src="/materialstyle/{{ .Site.Params.docs_version }}/dist/js/materialstyle.js"></script>
+{{- end }}
+
 
 <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
 

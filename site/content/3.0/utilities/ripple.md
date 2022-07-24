@@ -120,16 +120,8 @@ Use the custom properties:
 ## Javascript
 ```javascript
 // Initialize Ripple
-var rippleSurface = [].slice.call(document.querySelectorAll('.ripple-surface'))
-rippleSurface.map(function (s) {
-  new materialstyle.Ripple(s)
+const rippleSurface = Array.prototype.slice.call(document.querySelectorAll('.ripple-surface'))
+rippleSurface.map(s => {
+  return new mdc.ripple.MDCRipple(s)
 })
-```
-
-<br>
-
-### With jQuery
-```javascript
-// Initialize Ripple
-$('.ripple-surface').ripple();
 ```

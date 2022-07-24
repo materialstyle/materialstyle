@@ -6,3 +6,6 @@
 
 # Don't diff or textually merge source maps
 *.map binary
+
+materialstyle.css linguist-vendored=false
+materialstyle.js linguist-vendored=false
