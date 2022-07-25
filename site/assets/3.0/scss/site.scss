@@ -1,5 +1,5 @@
-// stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:500");
+// stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation, import-notation
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 
 @mixin flex($flex) {
   -webkit-flex: $flex;
@@ -639,4 +639,4 @@ pre,
 .ms-placeholder-img-lg {
   font-size: calc(1.475rem + 2.7vw);
 }
-// stylelint-enable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation
+// stylelint-enable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation, import-notation
