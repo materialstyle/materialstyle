@@ -112,7 +112,7 @@ h5:not(.badge-example-headings h5) {
   font-weight: 300;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .component-page {
     -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse;
@@ -120,8 +120,28 @@ h5:not(.badge-example-headings h5) {
 }
 
 @media (max-width: 455px) {
+  #site-home-top-nav #site-name {
+    display: none;
+  }
+
+  .component-showcase {
+    .list-group {
+      max-width: 200px;
+    }
+
+    .form-floating {
+      width: 200px;
+    }
+
+    .input-group {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 281px) {
   #site-home-top-nav .navbar-nav {
-    width: 100%;
+    gap: 1rem !important;
   }
 }
 
