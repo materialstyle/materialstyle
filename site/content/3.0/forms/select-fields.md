@@ -405,12 +405,26 @@ for example, ```Modal```, ```Collapse```, ```Offcanvas```, you need to call the 
 var myModal = document.getElementById('myModal')
 myModal.addEventListener('shown.bs.modal', function (event) {
   // Redraw Select Field
-  var selectFields = this.querySelectorAll('.form-select');
+  var selectFields = this.querySelectorAll('.form-select')
   for (const [, value] of Object.entries(selectFields)) {
     var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(value)
-    selectFieldInstance.redraw();
+    selectFieldInstance.redraw()
   }
 });
+```
+
+<br>
+
+### Rebuild
+If options of a select field are changed after initialization, you need to call the ```rebuild()``` function on the instance.
+
+```javascript
+// Rebuild Select Field
+var selectFields = this.querySelectorAll('.form-select')
+for (const [, value] of Object.entries(selectFields)) {
+  var selectFieldInstance = materialstyle.SelectField.getOrCreateInstance(value)
+  selectFieldInstance.rebuild()
+}
 ```
 
 <br>
@@ -425,4 +439,11 @@ $('.form-select').selectfield();
 ```javascript
 // Redraw Select fields
 $('.form-select').selectfield('redraw');
+```
+
+<br>
+
+```javascript
+// Rebuild Select fields
+$('.form-select').selectfield('rebuild');
 ```
