@@ -104,7 +104,7 @@ keywords: forms, input-group
 
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-    <input class="form-check-input" type="checkbox">
+    <input class="form-check-input mt-0" type="checkbox">
   </span>
   <div class="form-floating">
     <input type="text" class="form-control" id="example-5"
@@ -115,7 +115,7 @@ keywords: forms, input-group
 ##split##
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-    <input class="form-check-input" type="checkbox">
+    <input class="form-check-input mt-0" type="checkbox">
   </span>
   <div class="form-floating form-floating-outlined">
     <input type="text" class="form-control" id="example-6"
@@ -131,7 +131,7 @@ keywords: forms, input-group
     <label for="example-7">Label</label>
   </div>
   <span class="input-group-text">
-    <input class="form-check-input" type="radio">
+    <input class="form-check-input mt-0" type="radio">
   </span>
 </div>
 ##split##
@@ -142,7 +142,7 @@ keywords: forms, input-group
     <label for="example-8">Label</label>
   </div>
   <span class="input-group-text">
-    <input class="form-check-input" type="radio">
+    <input class="form-check-input mt-0" type="radio">
   </span>
 </div>
         
@@ -284,7 +284,7 @@ keywords: forms, input-group
 
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-    <input class="form-check-input" type="checkbox">
+    <input class="form-check-input mt-0" type="checkbox">
   </span>
   <div class="form-floating">
     <select class="form-select">
@@ -300,7 +300,7 @@ keywords: forms, input-group
 ##split##
 <div class="input-group flex-nowrap">
   <span class="input-group-text">
-    <input class="form-check-input" type="checkbox">
+    <input class="form-check-input mt-0" type="checkbox">
   </span>
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
@@ -326,7 +326,7 @@ keywords: forms, input-group
     <label>Select One</label>
   </div>
   <span class="input-group-text">
-    <input class="form-check-input" type="radio">
+    <input class="form-check-input mt-0" type="radio">
   </span>
 </div>
 ##split##
@@ -342,7 +342,7 @@ keywords: forms, input-group
     <label>Select One</label>
   </div>
   <span class="input-group-text">
-    <input class="form-check-input" type="radio">
+    <input class="form-check-input mt-0" type="radio">
   </span>
 </div>
         

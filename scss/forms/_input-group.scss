@@ -125,7 +125,6 @@
   > .form-floating:not(:first-child) > .m-notch > .m-notch-before,
   > .form-floating:not(:first-child) > .form-control,
   > .form-floating:not(:first-child) > .form-select {
-    margin-left: -$input-border-width;
     @include border-start-radius(0);
   }
 
