@@ -28,24 +28,36 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 {{< /callout >}}
 
 ## Filled
-{{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="form-floating">
   <input type="text" class="form-control" id="firstname"
          placeholder="firstname" autocomplete="off">
   <label for="firstname">Firstname</label>
 </div>
+##split##
+<div class="form-floating">
+  <input type="text" class="form-control" id="disabled"
+         placeholder="disabled" autocomplete="off" disabled>
+  <label for="disabled">Disabled</label>
+</div>
 
 {{< /example >}}
 
 ## Outlined
 
-{{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="form-floating form-floating-outlined">
   <input type="text" class="form-control" id="firstname-outline"
          placeholder="firstname" autocomplete="off">
   <label for="firstname-outline">Firstname</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined">
+  <input type="text" class="form-control" id="disabled-outlined"
+         placeholder="disabled-outlined" autocomplete="off" disabled>
+  <label for="disabled-outlined">Disabled</label>
 </div>
 
 {{< /example >}}
