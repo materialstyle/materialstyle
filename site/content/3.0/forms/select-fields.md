@@ -25,7 +25,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 {{< /callout >}}
 
 ## Filled
-{{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="form-floating">
   <select class="form-select">
@@ -37,12 +37,23 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
   </select>
   <label>Select One</label>
 </div>
+##split##
+<div class="form-floating">
+  <select class="form-select" disabled>
+    <option value=""></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Disabled Select</label>
+</div>
 
 {{< /example >}}
 
 ## Outlined
 
-{{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="form-floating form-floating-outlined">
   <select class="form-select">
@@ -53,6 +64,17 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
     <option value="4">Option 4</option>
   </select>
   <label>Select One</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined">
+  <select class="form-select" disabled>
+    <option value=""></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Disabled Select</label>
 </div>
 
 {{< /example >}}
@@ -389,6 +411,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
 
 ## Javascript
 ```javascript
+// Initialize
 var selectList = [].slice.call(document.querySelectorAll('.form-select'))
 var selectFields = selectList.map(function (select) {
   return new materialstyle.SelectField(select)
@@ -397,9 +420,22 @@ var selectFields = selectList.map(function (select) {
 
 <br>
 
+### Change
+If the value of a ```<select>``` is changed dynamically, ```change``` event must be triggered.
+
+```javascript
+var select = document.getElementById('mySelect')
+// Change value
+select.value = 2;
+// Trigger "change" event
+select.dispatchEvent(new Event('change'))
+```
+
+<br>
+
 ### Redraw
 If a Select field is not visible at the time of initialization OR if it is within a container that is not visible by default, 
-for example, ```Modal```, ```Collapse```, ```Offcanvas```, you need to call the ```redraw()``` function on the instance when it becomes visible.
+for example, ```Modal```, ```Collapse```, ```Offcanvas```, ```redraw()``` function must be called on the instance when it becomes visible.
 
 ```javascript
 var myModal = document.getElementById('myModal')
@@ -416,7 +452,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
 <br>
 
 ### Rebuild
-If options of a select field are changed after initialization, you need to call the ```rebuild()``` function on the instance.
+If options of a select field are changed after initialization, ```rebuild()``` function must be called on the instance.
 
 ```javascript
 // Rebuild Select Field
@@ -431,6 +467,7 @@ for (const [, value] of Object.entries(selectFields)) {
 
 ### With jQuery
 ```javascript
+// Initialize
 $('.form-select').selectfield();
 ```
 
@@ -446,4 +483,11 @@ $('.form-select').selectfield('redraw');
 ```javascript
 // Rebuild Select fields
 $('.form-select').selectfield('rebuild');
+```
+
+<br>
+
+```javascript
+// Change select's value and trigger "change" event
+$('#mySelect').val(2).trigger('change');
 ```
