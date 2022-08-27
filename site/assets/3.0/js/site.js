@@ -127,6 +127,23 @@ function initComponents() {
     })
   }
 
+  // Toast
+  const stackedToastTrigger = document.getElementById('show-stacked-toasts')
+  const stackedToast1 = document.getElementById('stacked-toast-1')
+  const stackedToast2 = document.getElementById('stacked-toast-2')
+  if (stackedToastTrigger && stackedToast1 && stackedToast2) {
+    stackedToastTrigger.addEventListener('click', () => {
+      const toast1 = new materialstyle.Toast(stackedToast1)
+      const toast2 = new materialstyle.Toast(stackedToast2)
+
+      toast1.show()
+
+      setTimeout(function () {
+        toast2.show()
+      }, 1000)
+    })
+  }
+
   // Tooltip
   const tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   tooltipTriggerList.map(tooltipTriggerEl => {
@@ -188,10 +205,11 @@ function populateColors() {
       'green,success': '#198754,white',
       'yellow,warning': '#ffc107,black',
       orange: '#fd7e14,black',
-      'gray-dark,dark': '#343a40,white',
       'gray,secondary': '#6c757d,white',
-      black: '#000,white',
-      white: '#fff,black'
+      light: '#f8f9fa,black',
+      dark: '#212529,white',
+      white: '#fff,black',
+      black: '#000,white'
     }
 
     for (const [key, value] of Object.entries(bgToColorMap)) {
@@ -216,7 +234,7 @@ function populateColors() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  anchors.add('h2:not(.accordion-header):not(.badge-example-headings h2), h3:not(.badge-example-headings h3), h4:not(.badge-example-headings h4)')
+  anchors.add('h2:not(.accordion-header):not(.badge-example-headings h2), h3:not(.badge-example-headings h3), h4:not(.badge-example-headings h4):not(.card h4)')
 
   // Hide AdSpace
   const ad = document.querySelector('.adspace')

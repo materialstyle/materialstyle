@@ -41,8 +41,10 @@
     - title: Modal
     - title: Navbar
     - title: Pagination
+    - title: Placeholders
     - title: Popovers
     - title: Progress Bars
+    - title: Scrollspy
     - title: Snackbars
     - title: Spinners
     - title: Tables
@@ -56,4 +58,8 @@
   - title: Drawer End
   - title: Drawer Responsive
   - title: Drawer Responsive End
+  - title: Navbar Fixed Top
+  - title: Navbar Fixed Bottom
   - title: Navbar Auto Hide
+
+- title: Migration

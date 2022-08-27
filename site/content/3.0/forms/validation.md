@@ -68,8 +68,8 @@ better communicate feedback.
 
   <div>
     <div class="form-floating form-floating-outlined">
-      <input type="text" class="form-control" id="textfield-outlined" placeholder="textfield" autocomplete="off" required>
-      <label for="textfield-outlined">Outlined Text Field</label>
+      <input type="text" class="form-control" id="textfieldOutlined" placeholder="textfield" autocomplete="off" required>
+      <label for="textfieldOutlined">Outlined Text Field</label>
     </div>
     <div class="valid-feedback">Looks good!</div>
     <div class="invalid-feedback">Doesn't look good!</div>
@@ -215,6 +215,197 @@ function toggleValidityClasses(input, formFloating) {
   });
 })();
 ```
+<br>
+
+## Tooltips
+
+If your form layout allows it, you can swap the ```.{valid|invalid}-feedback``` classes 
+for ```.{valid|invalid}-tooltip``` classes to display validation feedback in a styled tooltip. 
+Be sure to have a parent with ```position: relative``` on it for tooltip positioning.
+
+{{< example codeId="code2">}}
+
+<form class="needs-validation d-flex flex-wrap gap-2" novalidate>
+
+  <div class="position-relative mb-5">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="textfieldTooltip" placeholder="textfield" autocomplete="off" required>
+      <label for="textfieldTooltip">Text Field</label>
+    </div>
+    <div class="valid-tooltip">Looks good!</div>
+    <div class="invalid-tooltip">Doesn't look good!</div>
+  </div>
+
+  <div class="position-relative mb-5">
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="textfieldOutlinedTooltip" placeholder="textfield" autocomplete="off" required>
+      <label for="textfieldOutlinedTooltip">Outlined Text Field</label>
+    </div>
+    <div class="valid-tooltip">Looks good!</div>
+    <div class="invalid-tooltip">Doesn't look good!</div>
+  </div>
+
+  <div class="input-group has-validation position-relative mb-5">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="inputgroupTooltip" placeholder="inputgroup" autocomplete="off" required>
+      <label for="inputgroupTooltip">Input Group</label>
+    </div>
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="validation-feedbacks">
+      <div class="valid-tooltip">Looks good!</div>
+      <div class="invalid-tooltip">Doesn't look good!</div>
+    </div>
+  </div>
+
+  <div class="position-relative mb-5">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value=""></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Select</label>
+    </div>
+    <div class="valid-tooltip">Looks good!</div>
+    <div class="invalid-tooltip">Doesn't look good!</div>
+  </div>
+
+  <div class="position-relative mb-5">
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value=""></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Outlined Select</label>
+    </div>
+    <div class="valid-tooltip">Looks good!</div>
+    <div class="invalid-tooltip">Doesn't look good!</div>
+  </div>
+
+  <div class="input-group has-validation position-relative mb-5">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value=""></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Select with Input Group</label>
+    </div>
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-tooltip">Looks good!</div>
+      <div class="invalid-tooltip">Doesn't look good!</div>
+    </div>
+  </div>
+
+  <div class="form-check w-100 position-relative mb-5">
+    <input class="form-check-input" type="checkbox" value="" id="invalidCheckTooltip" required>
+    <label class="form-check-label" for="invalidCheckTooltip">
+      Agree to terms and conditions
+    </label>
+    <div class="invalid-tooltip">
+      You must agree before submitting.
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+{{< /example >}}
+
+## Browser defaults
+
+Not interested in custom validation feedback messages or writing JavaScript to change form 
+behaviors? All good, you can use the browser defaults. Try submitting the form below. 
+Depending on your browser and OS, you’ll see a slightly different style of feedback.
+
+While these feedback styles cannot be styled with CSS, you can still customize the feedback 
+text through JavaScript.
+
+{{< example codeId="code3">}}
+
+<form class="d-flex flex-wrap gap-2">
+
+  <div class="form-floating">
+    <input type="text" class="form-control" id="textfieldDefault" placeholder="textfield" autocomplete="off" required>
+    <label for="textfieldDefault">Text Field</label>
+  </div>
+
+  <div class="form-floating form-floating-outlined">
+    <input type="text" class="form-control" id="textfieldOutlinedDefault" placeholder="textfield" autocomplete="off" required>
+    <label for="textfieldOutlinedDefault">Outlined Text Field</label>
+  </div>
+
+  <div class="input-group">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="inputgroupDefault" placeholder="inputgroup" autocomplete="off" required>
+      <label for="inputgroupDefault">Input Group</label>
+    </div>
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+  </div>
+
+  <div class="form-floating">
+    <select class="form-select" required>
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Select</label>
+  </div>
+
+  <div class="form-floating form-floating-outlined">
+    <select class="form-select" required>
+      <option value=""></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <label>Outlined Select</label>
+  </div>
+
+  <div class="input-group">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value=""></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Select with Input Group</label>
+    </div>
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+  </div>
+
+  <div class="form-check w-100">
+    <input class="form-check-input" type="checkbox" value="" id="invalidCheckDefault" required>
+    <label class="form-check-label" for="invalidCheckDefault">
+      Agree to terms and conditions
+    </label>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+{{< /example >}}
 
 
 <script>

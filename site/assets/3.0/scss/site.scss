@@ -1,5 +1,5 @@
-// stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:500");
+// stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation, import-notation
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 
 @mixin flex($flex) {
   -webkit-flex: $flex;
@@ -112,7 +112,7 @@ h5:not(.badge-example-headings h5) {
   font-weight: 300;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .component-page {
     -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse;
@@ -120,8 +120,28 @@ h5:not(.badge-example-headings h5) {
 }
 
 @media (max-width: 455px) {
+  #site-home-top-nav #site-name {
+    display: none;
+  }
+
+  .component-showcase {
+    .list-group {
+      max-width: 200px;
+    }
+
+    .form-floating {
+      width: 200px;
+    }
+
+    .input-group {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 281px) {
   #site-home-top-nav .navbar-nav {
-    width: 100%;
+    gap: 1rem !important;
   }
 }
 
@@ -211,6 +231,10 @@ h5:not(.badge-example-headings h5) {
   bottom: 20px;
   z-index: 1030;
   display: none;
+}
+
+.migration-intro ~ h3, .migration-intro ~ h2 {
+  margin-top: 1rem;
 }
 
 .hljs {
@@ -639,4 +663,4 @@ pre,
 .ms-placeholder-img-lg {
   font-size: calc(1.475rem + 2.7vw);
 }
-// stylelint-enable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation
+// stylelint-enable value-no-vendor-prefix, property-no-vendor-prefix, property-disallowed-list, declaration-no-important, selector-max-id, function-disallowed-list, font-weight-notation, import-notation

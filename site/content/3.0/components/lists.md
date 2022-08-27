@@ -80,43 +80,40 @@ toc: true
 ## With Checkbox
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<div class="list-group">
-  <label class="list-group-item list-group-item-action d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="">
-    First checkbox
-  </label>
-  <label class="list-group-item list-group-item-action d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
-    Second checkbox
-  </label>
-  <label class="list-group-item list-group-item-action d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
-    Third checkbox
-  </label>
-</div>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-action">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    <label class="form-check-label stretched-link" for="firstCheckbox">First checkbox</label>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    <label class="form-check-label stretched-link" for="secondCheckbox">Second checkbox</label>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label stretched-link" for="thirdCheckbox">Third checkbox</label>
+  </li>
+</ul>
 
 {{< /example >}}
 
 ## With Radio
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<div class="list-group">
-  <label class="list-group-item list-group-item-action d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios"
-           id="listGroupRadios1" value="" checked="">
-    First radio
-  </label>
-  <label class="list-group-item list-group-item-action d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios"
-           id="listGroupRadios2" value="">
-    Second radio
-  </label>
-  <label class="list-group-item list-group-item-action d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios"
-           id="listGroupRadios3" value="">
-    Third radio
-  </label>
-</div>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-action">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+    <label class="form-check-label stretched-link" for="firstRadio">First radio</label>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+    <label class="form-check-label stretched-link" for="secondRadio">Second radio</label>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+    <label class="form-check-label stretched-link" for="thirdRadio">Third radio</label>
+  </li>
+</ul>
 
 {{< /example >}}
 

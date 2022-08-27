@@ -196,6 +196,10 @@ class SelectField extends BaseComponent {
     selectedItem.dataset.bsToggle = 'dropdown'
     selectedItem.dataset.bsAutoClose = 'outside'
 
+    if (this._select.disabled) {
+      selectedItem.disabled = true
+    }
+
     dropdown.append(selectedItem)
     dropdown.append(this._dropdownMenu)
 
@@ -477,6 +481,8 @@ class SelectField extends BaseComponent {
       } else {
         this.setSelectValue(event.target.value, true)
       }
+
+      this.handleFocusOut()
     })
 
     this.addFontsReadyEvent()
