@@ -127,6 +127,23 @@ function initComponents() {
     })
   }
 
+  // Toast
+  const stackedToastTrigger = document.getElementById('show-stacked-toasts')
+  const stackedToast1 = document.getElementById('stacked-toast-1')
+  const stackedToast2 = document.getElementById('stacked-toast-2')
+  if (stackedToastTrigger && stackedToast1 && stackedToast2) {
+    stackedToastTrigger.addEventListener('click', () => {
+      const toast1 = new materialstyle.Toast(stackedToast1)
+      const toast2 = new materialstyle.Toast(stackedToast2)
+
+      toast1.show()
+
+      setTimeout(function () {
+        toast2.show()
+      }, 1000)
+    })
+  }
+
   // Tooltip
   const tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   tooltipTriggerList.map(tooltipTriggerEl => {
