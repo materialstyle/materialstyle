@@ -138,7 +138,7 @@ function initComponents() {
 
       toast1.show()
 
-      setTimeout(function () {
+      setTimeout(() => {
         toast2.show()
       }, 1000)
     })

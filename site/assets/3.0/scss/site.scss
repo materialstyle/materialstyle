@@ -233,8 +233,11 @@ h5:not(.badge-example-headings h5) {
   display: none;
 }
 
-.migration-intro ~ h3, .migration-intro ~ h2 {
-  margin-top: 1rem;
+.migration-intro {
+  ~ h3,
+  ~ h2 {
+    margin-top: 1rem;
+  }
 }
 
 .hljs {
