@@ -145,40 +145,21 @@ h5:not(.badge-example-headings h5) {
   }
 }
 
+.highlight-toolbar {
+  background: #f5f6f7;
+}
+
 .highlight {
   position: relative;
   padding: 1.5rem 1rem;
   font-family: monospace;
   color: #424242;
   word-break: break-word;
-  background: #f5f5f5;
-  border-radius: .3rem;
-}
-
-.collapse .highlight {
-  border-radius: 0;
+  background: var(--bs-light);
 }
 
 .highlight .highlight pre {
   margin: 0;
-}
-
-.highlight:hover .hljs,
-.highlight:hover {
-  background: darken(#f5f5f5, 3%);
-}
-
-.highlight:hover .copy-btn {
-  visibility: visible;
-}
-
-.copy-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: 12px;
-  pointer-events: none;
-  visibility: hidden;
 }
 
 .component-page {

@@ -19,7 +19,7 @@
 
 {{- $input := split $input "##split##" -}}
 
-<div class="border mb-4 rounded-3">
+<div class="border mb-4 rounded material-example" style="overflow:hidden;">
   {{- if eq $show_preview true -}}
     <div{{ with $id }} id="{{ . }}"{{ end }} class="p-4 {{ with $class }} {{ . }}{{ end }}">
       {{- range $input }}
@@ -29,10 +29,10 @@
   {{- end -}}
 
   <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" {{ with $codeId }} href="#{{ . }}" {{ end }}>
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" {{ with $codeId }} href="#{{ . }}" {{ end }} style="border-top-left-radius: 0.275rem !important;">
       <i class="bi bi-code-slash fs-5 me-1"></i> CODE
       <span class="ripple-surface"></span>
-    </btn>
+    </button>
   </div>
 
   <div class="collapse" {{ with $codeId }} id="{{ . }}" {{ end }}>
@@ -40,6 +40,14 @@
       {{- range $input }}
         {{- $content := replaceRE `<svg class="ms-placeholder-img(?:-lg)?(?: *?ms-placeholder-img-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` . | safeHTML -}}
         {{- $content = replaceRE ` (class=" *?")` "" $content -}}
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">{{- $lang -}}</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div>
         {{- highlight (trim $content "\n") $lang "" -}}
       {{- end -}}
     {{- end -}}
