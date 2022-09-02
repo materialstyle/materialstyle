@@ -71,7 +71,7 @@ When modifying via Sass, the
 function is required to generate the quotes around a string. 
 For example, using ```>``` as the divider, you can use this:
 
-```css
+```scss
 $breadcrumb-divider: quote(">");
 ```
 
@@ -94,7 +94,7 @@ $breadcrumb-divider: quote(">");
 
 ### Via Sass
 
-```css
+```scss
 $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
 ```
 
@@ -121,6 +121,6 @@ Remove the divider by setting ```--bs-breadcrumb-divider: '';``` (empty strings 
 
 Remove the divider by setting the Sass variable ```$breadcrumb-divider``` to ```none```.
 
-```css
+```scss
 $breadcrumb-divider: none;
 ```

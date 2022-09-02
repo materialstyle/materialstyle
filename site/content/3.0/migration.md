@@ -14,7 +14,7 @@ Material Style 3 is a major rewrite of the entire project.
 
 Follows <a class="link-pink" href="https://getbootstrap.com/docs/5.2/migration/">Bootstrap v5 migration guide</a>.
 
-## Utilities
+## **Utilities**
 ### Colors
 To avoid increased file sizes, now we only use a subset of the v2 color palette.
 
@@ -26,7 +26,7 @@ in v3, we need to add an element with the class ```.ripple-surface``` to the des
 - Shadow classes ```.raised-*dp``` has been renamed to ```.shadow-*dp```
 - Class ```.unelevated``` has been replaced with ```.shadow-none```
 
-## Components
+## **Components**
 ### Buttons
 - Classes ```btn-text-[color]``` have been dropped. ```btn-outline-[color] border-0``` can be used for Text Buttons.
 - File inputs now use Bootstrap's default styling. Classes ```m-file-input``` and ```btn-file``` have been dropped.
@@ -49,7 +49,7 @@ We are using Bootstrap 5’s Offcanvas component for Drawers.
 - Class ```m-spinner``` has been renamd to ```spinner-material```.
 - Classes ```spinner-[color]``` have been dropped. ```text-[color]``` can be used for colored spinners.
 
-## Forms
+## **Forms**
 ### Text Fields
 - We are using Bootstrap 5's ```.form-floating``` for Text fields.
 - Introduced ```.form-floating-with-icon``` to support icons and spinners on Text fields.
