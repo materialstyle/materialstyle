@@ -13,7 +13,7 @@ keywords: layout, navbar
 </p>
 
 {{< example codeId="code1" >}}
-<nav class="navbar navbar-expand-xl navbar-dark bg-green">
+<nav class="navbar navbar-expand-xl navbar-dark bg-purple">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:30px; height:30px;">
@@ -51,7 +51,7 @@ keywords: layout, navbar
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
-        <button class="btn btn-yellow" type="button">Search</button>
+        <button class="btn btn-outline-white" type="button">Search</button>
       </form>
     </div>
   </div>
@@ -60,24 +60,7 @@ keywords: layout, navbar
 
 ## Fixed Top
 
-<div class="border rounded-3">
-  <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/navbar-fixed-top">
-      View Demo <i class="bi bi-box-arrow-up-right"></i>
-      <span class="ripple-surface"></span>
-    </a>
-  </div>
-
-  <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" href="#code2">
-      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
-      <span class="ripple-surface"></span>
-    </btn>
-  </div>
-
-  <div class="collapse" id="code2">
-
-```html
+{{< example codeId="code2" show_preview="false" link="/materialstyle/3.0/demos/navbar-fixed-top" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,33 +106,11 @@ keywords: layout, navbar
 
 </body>
 </html>
-```
-
-  </div>
-</div>
-
-<br>
+{{< /example >}}
 
 ## Fixed Bottom
 
-<div class="border rounded-3">
-  <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/navbar-fixed-bottom">
-      View Demo <i class="bi bi-box-arrow-up-right"></i>
-      <span class="ripple-surface"></span>
-    </a>
-  </div>
-
-  <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" href="#code3">
-      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
-      <span class="ripple-surface"></span>
-    </btn>
-  </div>
-
-  <div class="collapse" id="code3">
-
-```html
+{{< example codeId="code3" show_preview="false" link="/materialstyle/3.0/demos/navbar-fixed-bottom" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -195,33 +156,11 @@ keywords: layout, navbar
 
 </body>
 </html>
-```
-
-  </div>
-</div>
-
-<br>
+{{< /example >}}
 
 ## Auto hide
 
-<div class="border rounded-3">
-  <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/navbar-auto-hide">
-      View Demo <i class="bi bi-box-arrow-up-right"></i>
-      <span class="ripple-surface"></span>
-    </a>
-  </div>
-
-  <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" href="#code4">
-      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
-      <span class="ripple-surface"></span>
-    </btn>
-  </div>
-
-  <div class="collapse" id="code4">
-
-```html
+{{< example codeId="code4" show_preview="false" link="/materialstyle/3.0/demos/navbar-auto-hide" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -267,7 +206,4 @@ keywords: layout, navbar
 
 </body>
 </html>
-```
-
-  </div>
-</div>
+{{< /example >}}

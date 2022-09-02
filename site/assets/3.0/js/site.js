@@ -1,4 +1,4 @@
-/* global $, mdc, materialstyle, anchors */
+/* global $, mdc, materialstyle, anchors, ClipboardJS */
 
 function saveOffcanvasScrollPosition() {
   const offcanvas = document.querySelector('#site-offcanvas .offcanvas-body')
@@ -61,17 +61,6 @@ function scrollFunction() {
   } else {
     $('#top-btn').css('display', 'none')
   }
-}
-
-function getHighlightedText() {
-  let text = ''
-  if (window.getSelection) {
-    text = window.getSelection().toString()
-  } else if (document.selection && document.selection.type !== 'Control') {
-    text = document.selection.createRange().text
-  }
-
-  return text
 }
 
 function initComponents() {
@@ -266,6 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyBtnTitle = 'Copy to clipboard'
 
   const btnHtml = `<div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 rounded-top border">
+      <small class="font-monospace text-muted text-uppercase">##lang##</small>
       <div class="d-flex ms-auto">
         <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
           <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
@@ -273,14 +263,13 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>`
 
-  // wrap programmatically code blocks and add copy btn.
-  document.querySelectorAll('.highlight')
-    .forEach(element => {
-      if (!element.closest('.material-example')) { // Ignore examples made by shortcode
-        element.insertAdjacentHTML('beforebegin', btnHtml)
-        element.classList.add('rounded-bottom', 'border', 'border-top-0')
-      }
-    })
+  // Add copy button to code blocks that were not created by shortcode
+  for (const element of document.querySelectorAll('.highlight')) {
+    if (!element.closest('.collapse')) {
+      element.insertAdjacentHTML('beforebegin', btnHtml.replace('##lang##', element.querySelector('code').dataset.lang))
+      element.classList.add('rounded-bottom', 'border', 'border-top-0')
+    }
+  }
 
   /**
    *
@@ -288,9 +277,9 @@ document.addEventListener('DOMContentLoaded', () => {
    * @param {string} title
    */
   function snippetButtonTooltip(selector, title) {
-    document.querySelectorAll(selector).forEach(btn => {
+    for (const btn of document.querySelectorAll(selector)) {
       materialstyle.Tooltip.getOrCreateInstance(btn, { title })
-    })
+    }
   }
 
   snippetButtonTooltip('.copy-to-clipboard', copyBtnTitle)
@@ -300,8 +289,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   clipboard.on('success', event => {
-    const iconCopy = `<i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>`
-    const iconCopied = `<i class="bi bi-check2 text-green" role="img" aria-label="Copied"></i>`
+    const iconCopy = '<i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>'
+    const iconCopied = '<i class="bi bi-check2 text-green" role="img" aria-label="Copied"></i>'
     const originalTitle = event.trigger.title
     const tooltipBtn = materialstyle.Tooltip.getInstance(event.trigger)
 
@@ -328,7 +317,6 @@ document.addEventListener('DOMContentLoaded', () => {
       tooltipBtn.setContent({ '.tooltip-inner': copyBtnTitle })
     }, { once: true })
   })
-
 })
 
 $(() => {
