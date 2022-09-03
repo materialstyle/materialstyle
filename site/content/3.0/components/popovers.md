@@ -6,8 +6,6 @@ toc: true
 keywords: tooltips, popovers
 ---
 
-# Popovers
-
 {{< callout >}}
 {{< partial "callout-requiresjavascript.md" >}}
 {{< /callout >}}

@@ -6,8 +6,6 @@ toc: true
 keywords: snackbar, toast
 ---
 
-# Toasts
-
 <p class="fs-4 ms-0 mb-4 text-secondary">Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}

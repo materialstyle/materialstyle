@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Tables
-
 {{< example codeId="code1" class="overflow-auto" >}}
 
 <table class="table">

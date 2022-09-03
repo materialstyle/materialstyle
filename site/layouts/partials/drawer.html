@@ -14,7 +14,7 @@
     {{- $url := split .Permalink "/" -}}
     {{- $page_slug := index $url (sub (len $url) 2) -}}
 
-    <ul class="nav flex-column">
+    <ul class="nav flex-column" id="sidebar">
       {{- range $index, $group := .Site.Data.drawer -}}
 
         {{- $link := $group.title -}}

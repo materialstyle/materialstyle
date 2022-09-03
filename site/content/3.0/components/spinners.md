@@ -6,8 +6,6 @@ toc: true
 keywords: progress, spinners
 ---
 
-# Spinners
-
 <p class="fs-4 ms-0 mb-4 text-secondary">Indicate the loading state of a component or page with spinners.</p>
 
 ## Material Design Spinner

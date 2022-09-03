@@ -6,8 +6,6 @@ toc: true
 keywords: badges
 ---
 
-# Badges
-
 Badges scale to match the size of the immediate parent element by using relative font sizing and ```em``` units.
 
 {{< example codeId="code1" class="badge-example-headings">}}

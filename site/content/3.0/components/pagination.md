@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Pagination
-
 Pagination is built with list HTML elements so screen readers can announce the number of available 
 links. Use a wrapping ```<nav>``` element to identify it as a navigation section to screen readers 
 and other assistive technologies.

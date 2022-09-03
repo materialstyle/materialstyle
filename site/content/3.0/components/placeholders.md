@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Placeholders
-
 <p class="fs-4 ms-0 mb-4 text-secondary">Use loading placeholders for your components or pages to indicate something may still be loading.</p>
 
 ## How it works

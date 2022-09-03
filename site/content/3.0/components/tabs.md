@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Tabs
-
 <p class="fs-4 ms-0 mb-4 text-secondary">
   Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
 </p>

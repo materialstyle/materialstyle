@@ -6,8 +6,6 @@ toc: true
 keywords: getting-started, layout, starter-template
 ---
 
-# Starter Templates
-
 <p class="fs-4 ms-0 mb-4 text-secondary">
   Be sure to have your pages set up with the latest design and development standards. 
   That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.

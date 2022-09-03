@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Carousel
-
 <p class="fs-4 ms-0 mb-4 text-secondary">
 The carousel is a slideshow for cycling through a series of images, text, or custom markup.
 </p>

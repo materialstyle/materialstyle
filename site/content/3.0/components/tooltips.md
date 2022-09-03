@@ -6,8 +6,6 @@ toc: true
 keywords: tooltips, popovers
 ---
 
-# Tooltips
-
 Things to know when using the tooltip plugin:
 
  - Tooltips rely on the 3rd party library 

@@ -5,7 +5,7 @@ function saveOffcanvasScrollPosition() {
 
   if (offcanvas) {
     const offcanvasHeight = offcanvas.clientHeight
-    const offcanvasActiveLink = document.querySelector('.active')
+    const offcanvasActiveLink = offcanvas.querySelector('.active')
     const offcanvasActiveLinkTop = offcanvasActiveLink.offsetTop
     const offcanvasActiveLinkHeight = offcanvasActiveLink.clientHeight
     const viewportTop = offcanvasActiveLinkTop

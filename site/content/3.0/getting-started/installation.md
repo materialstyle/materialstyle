@@ -9,8 +9,6 @@ toc: true
 keywords: getting-started, installation
 ---
 
-# Installation
-
 ## CDN
 
 Styles

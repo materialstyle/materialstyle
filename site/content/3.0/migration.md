@@ -1,12 +1,10 @@
 ---
 layout: docs
-title: Migration
+title: Migrating to v3
 group: migration
 toc: true
 keywords: migration
 ---
-
-# Migrating to v3
 
 <p class="fs-4 ms-0 mb-4 text-secondary migration-intro">
 Material Style 3 is a major rewrite of the entire project.

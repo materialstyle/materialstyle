@@ -6,8 +6,6 @@ toc: true
 keywords: forms, validation
 ---
 
-# Validation
-
 ## How it works in Bootstrap
 
 - HTML form validation is applied via CSS’s two pseudo-classes, ```:invalid``` and ```:valid```. 

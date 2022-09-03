@@ -1,4 +1,10 @@
 <nav id="site-home-top-nav" class="navbar bg-purple navbar-dark fixed-top">
+  <!-- Skip to main content or sidebar -->
+  <div class="d-flex justify-content-center align-items-center w-100 visually-hidden-focusable overflow-hidden" >
+    <a class="link-white p-2 m-1" href="#content">Skip to main content</a>
+    <a class="link-white d-none d-lg-inline-block p-2 m-1" href="#sidebar">Skip to sidebar</a>
+  </div>
+
   <div class="container-fluid gap-3">
     <div class="d-flex align-items-center">
         <button class="drawer-toggler d-lg-none"
@@ -14,7 +20,7 @@
         </a>
     </div>
 
-    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-3">
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
       <li class="nav-item dropdown">
         <a class="nav-link text-white dropdown-toggle rounded px-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           v{{ .Site.Params.docs_version }}
