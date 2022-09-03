@@ -28,24 +28,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 ## Drawer
 
-<div class="border rounded-3">
-  <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer">
-      View Demo <i class="bi bi-box-arrow-up-right"></i>
-      <span class="ripple-surface"></span>
-    </a>
-  </div>
-
-  <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" href="#code1">
-      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
-      <span class="ripple-surface"></span>
-    </btn>
-  </div>
-
-  <div class="collapse" id="code1">
-
-```html
+{{< example codeId="code1" show_preview="false" link="/materialstyle/3.0/demos/drawer" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -152,33 +135,11 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 </body>
 </html>
-```
-
-  </div>
-</div>
-
-<br>
+{{< /example >}}
 
 ### Drawer End
 
-<div class="border rounded-3">
-  <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer-end">
-      View Demo <i class="bi bi-box-arrow-up-right"></i>
-      <span class="ripple-surface"></span>
-    </a>
-  </div>
-
-  <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" href="#code2">
-      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
-      <span class="ripple-surface"></span>
-    </btn>
-  </div>
-
-  <div class="collapse" id="code2">
-
-```html
+{{< example codeId="code2" show_preview="false" link="/materialstyle/3.0/demos/drawer-end" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -285,35 +246,13 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 </body>
 </html>
-```
-
-  </div>
-</div>
-
-<br>
+{{< /example >}}
 
 ## Drawer Responsive
 
 Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive drawer.
 
-<div class="border rounded-3">
-  <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer-responsive">
-      View Demo <i class="bi bi-box-arrow-up-right"></i>
-      <span class="ripple-surface"></span>
-    </a>
-  </div>
-
-  <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" href="#code3">
-      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
-      <span class="ripple-surface"></span>
-    </btn>
-  </div>
-
-  <div class="collapse" id="code3">
-
-```html
+{{< example codeId="code3" show_preview="false" link="/materialstyle/3.0/demos/drawer-responsive" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -420,33 +359,11 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 
 </body>
 </html>
-```
-
-  </div>
-</div>
-
-<br>
+{{< /example >}}
 
 ### Drawer Responsive End
 
-<div class="border rounded-3">
-  <div class="p-4 d-flex justify-content-center">
-    <a class="btn btn-success rounded-pill px-4" href="/materialstyle/3.0/demos/drawer-responsive-end">
-      View Demo <i class="bi bi-box-arrow-up-right"></i>
-      <span class="ripple-surface"></span>
-    </a>
-  </div>
-
-  <div class="d-flex justify-content-end">
-    <btn class="btn btn-sm btn-outline-purple border-0 rounded-0 d-flex align-items-center" data-bs-toggle="collapse" href="#code4">
-      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
-      <span class="ripple-surface"></span>
-    </btn>
-  </div>
-
-  <div class="collapse" id="code4">
-
-```html
+{{< example codeId="code4" show_preview="false" link="/materialstyle/3.0/demos/drawer-responsive-end" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -553,7 +470,4 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 
 </body>
 </html>
-```
-
-  </div>
-</div>
+{{< /example >}}

@@ -1,4 +1,4 @@
-/* global $, mdc, materialstyle, anchors */
+/* global $, mdc, materialstyle, anchors, ClipboardJS */
 
 function saveOffcanvasScrollPosition() {
   const offcanvas = document.querySelector('#site-offcanvas .offcanvas-body')
@@ -61,17 +61,6 @@ function scrollFunction() {
   } else {
     $('#top-btn').css('display', 'none')
   }
-}
-
-function getHighlightedText() {
-  let text = ''
-  if (window.getSelection) {
-    text = window.getSelection().toString()
-  } else if (document.selection && document.selection.type !== 'Control') {
-    text = document.selection.createRange().text
-  }
-
-  return text
 }
 
 function initComponents() {
@@ -258,35 +247,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
   populateColors()
   populateShadows()
+
+  /**
+   * Copy to clipboard
+   */
+
+  const copyBtnTitle = 'Copy to clipboard'
+
+  const btnHtml = `<div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 rounded-top border">
+      <small class="font-monospace text-muted text-uppercase">##lang##</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div>`
+
+  // Add copy button to code blocks that were not created by shortcode
+  for (const element of document.querySelectorAll('.highlight')) {
+    if (!element.closest('.collapse')) {
+      element.insertAdjacentHTML('beforebegin', btnHtml.replace('##lang##', element.querySelector('code').dataset.lang))
+      element.classList.add('rounded-bottom', 'border', 'border-top-0')
+    }
+  }
+
+  /**
+   *
+   * @param {string} selector
+   * @param {string} title
+   */
+  function snippetButtonTooltip(selector, title) {
+    for (const btn of document.querySelectorAll(selector)) {
+      materialstyle.Tooltip.getOrCreateInstance(btn, { title })
+    }
+  }
+
+  snippetButtonTooltip('.copy-to-clipboard', copyBtnTitle)
+
+  const clipboard = new ClipboardJS('.copy-to-clipboard', {
+    target: trigger => trigger.closest('.highlight-toolbar').nextElementSibling
+  })
+
+  clipboard.on('success', event => {
+    const iconCopy = '<i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>'
+    const iconCopied = '<i class="bi bi-check2 text-green" role="img" aria-label="Copied"></i>'
+    const originalTitle = event.trigger.title
+    const tooltipBtn = materialstyle.Tooltip.getInstance(event.trigger)
+
+    tooltipBtn.setContent({ '.tooltip-inner': 'Copied!' })
+
+    event.clearSelection()
+    event.trigger.title = 'Copied!'
+    event.trigger.innerHTML = iconCopied
+
+    setTimeout(() => {
+      tooltipBtn.setContent({ '.tooltip-inner': copyBtnTitle })
+      event.trigger.title = originalTitle
+      event.trigger.innerHTML = iconCopy
+    }, 2000)
+  })
+
+  clipboard.on('error', event => {
+    const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
+    const fallbackMsg = `Press ${modifierKey}C to copy`
+    const tooltipBtn = materialstyle.Tooltip.getInstance(event.trigger)
+
+    tooltipBtn.setContent({ '.tooltip-inner': fallbackMsg })
+    event.trigger.addEventListener('hidden.bs.tooltip', () => {
+      tooltipBtn.setContent({ '.tooltip-inner': copyBtnTitle })
+    }, { once: true })
+  })
 })
 
 $(() => {
-  $('.highlight').append('<span class="copy-btn p-1"><b>click</b> or <b>highlight</b> the code to copy</span>')
-
-  $('.highlight').on('click', function () {
-    const clip = $('<textarea>')
-    $('body').append(clip)
-
-    const highlightedText = getHighlightedText()
-
-    if (highlightedText.length) {
-      clip.val(highlightedText.replace(/\u00A0/g, ' ')).select()
-    } else {
-      clip.val($(this).find('code').find('br').prepend('\r\n').end().text().replace(/\u00A0/g, ' ')).select()
-    }
-
-    document.execCommand('copy')
-    $(this).find('.copy-btn').html('<b>copied</b>')
-
-    $(this).find('code').find('br').text('')
-
-    clip.remove()
-  })
-
-  $('.highlight').on('mouseenter', function () {
-    $(this).find('.copy-btn').html('<b>click</b> or <b>highlight</b> the code to copy')
-  })
-
   $('#top-btn').on('click', () => {
     $('html, body').animate({ scrollTop: 0 }, 300, 'swing')
   })
