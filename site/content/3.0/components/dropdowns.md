@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Dropdowns
-
 <p class="fs-4 ms-0 mb-4 text-secondary">Dropdowns display a list of choices.</p>
 
 ## Button

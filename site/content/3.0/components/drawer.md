@@ -6,8 +6,6 @@ toc: true
 keywords: layout, drawer
 ---
 
-# Drawer / Sidebar
-
 <p class="fs-4 ms-0 mb-4 text-secondary">
   Drawers provide access to destinations and app functionality, such as switching accounts.
 </p>

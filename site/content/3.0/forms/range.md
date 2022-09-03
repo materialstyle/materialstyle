@@ -6,8 +6,6 @@ toc: true
 keywords: forms, range
 ---
 
-# Range
-
 {{< example codeId="code1">}}
 
 <label for="customRange1" class="form-label">Example range</label>

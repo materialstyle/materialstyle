@@ -6,8 +6,6 @@ toc: true
 keywords: utilities, shadows
 ---
 
-# Shadows
-
 ## Bootstrap Shadows
 <div class="row">
   <div class="d-flex flex-wrap mb-4">

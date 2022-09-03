@@ -3,13 +3,13 @@
 <head>
   {{ partial "header" . }}
 </head>
-<body data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-root-margin="0px 0px -80%" tabindex="0">
+<body>
   {{ partial "navbar" . }}
 
   {{ partial "drawer" . }}
 
   <div class="offcanvas-pushed-content pt-4 bg-white" style="margin-top: var(--navbar-fixed-height);">
-    <div class="container">
+    <div class="container" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-root-margin="0px 0px -80%" tabindex="0">
       {{ block "main" . }}
       {{ end }}
     </div>

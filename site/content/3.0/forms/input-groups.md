@@ -6,8 +6,6 @@ toc: true
 keywords: forms, input-group
 ---
 
-# Input Groups
-
 ## On Text Fields
 
 {{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}

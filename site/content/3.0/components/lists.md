@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Lists
-
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <ul class="list-group">

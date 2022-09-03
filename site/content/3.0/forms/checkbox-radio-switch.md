@@ -6,8 +6,6 @@ toc: true
 keywords: forms, checkbox, radio, switch
 ---
 
-# Checkbox, Radio & Switch
-
 ## Checkbox
 {{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 

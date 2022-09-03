@@ -6,8 +6,6 @@ toc: true
 keywords: forms, select-field
 ---
 
-# Select Fields
-
 <p class="fs-4 ms-0 mb-4 text-secondary">
   Selects allow users to select from a menu. It functions as a wrapper around the browser's native select element.
 </p>

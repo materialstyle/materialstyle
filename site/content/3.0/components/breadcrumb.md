@@ -6,8 +6,6 @@ toc: true
 keywords: breadcrumb
 ---
 
-# Breadcrumb
-
 <p class="fs-4 ms-0 mb-4 text-secondary">Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.</p>
 
 {{< example codeId="code1" >}}

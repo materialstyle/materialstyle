@@ -6,8 +6,6 @@ toc: true
 keywords: getting-started, browsers-and-devices
 ---
 
-# Browsers and Devices
-
 ## Supported browsers
 Material Style supports the **latest, stable releases** of all major browsers and platforms.
 

@@ -5,8 +5,6 @@ group: components
 toc: true
 ---
 
-# Close button
-
 <p class="fs-4 ms-0 mb-4 text-secondary">
 A generic close button for dismissing content like modals and alerts.
 </p>

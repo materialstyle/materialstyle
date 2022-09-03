@@ -9,8 +9,6 @@ toc: true
 keywords: utilities, colors
 ---
 
-# Colors
-
 <div class="row">
   <div id="defaultColorOptions" class="theme-colors-container d-flex flex-wrap mb-4">
   </div>
