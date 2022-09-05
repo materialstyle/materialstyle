@@ -10,6 +10,32 @@ keywords: utilities, ripple
   Ripples are visual representations used to communicate the status of a component or interactive element.
 </p>
 
+## Installation
+
+We use <a class="link-pink" href="https://www.npmjs.com/package/@material/ripple">@material/ripple</a> for Ripple effects,
+which can be used from a CDN or installed using a package manager.
+
+<br>
+
+1. CDN
+```html
+<!-- MDC Ripple JS -->
+<script src="https://unpkg.com/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
+        integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
+        crossorigin="anonymous"></script>
+```
+
+<br>
+
+2. NPM 
+```console
+npm i @material/ripple@14.0.0
+```
+
+<br>
+
+## Add Ripple effect
+
 To add Ripple to your component:
 1. Add Ripple surface (```<span class="ripple-surface"></span>```) to your component.
 2. Set the position of your component to either ```relative```, ```absolute```, ```fixed```, or ```sticky``` 
@@ -116,10 +142,26 @@ Use the custom properties:
 {{< /example >}}
 
 ## Javascript
+
+If CDN is used to add @material/ripple to the project
+
 ```javascript
 // Initialize Ripple
 const rippleSurface = Array.prototype.slice.call(document.querySelectorAll('.ripple-surface'))
 rippleSurface.map(s => {
   return new mdc.ripple.MDCRipple(s)
+})
+```
+
+Else
+
+```javascript
+// Import MDCRipple
+import { MDCRipple } from '@material/ripple';
+
+// Initialize Ripple
+const rippleSurface = Array.prototype.slice.call(document.querySelectorAll('.ripple-surface'))
+rippleSurface.map(s => {
+  return new MDCRipple(s)
 })
 ```

@@ -27,7 +27,7 @@ Scripts
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
         crossorigin="anonymous"></script>
         
-<!-- MDC Ripple JS -->
+<!-- MDC Ripple JS (Only for Ripple effects) -->
 <script src="https://unpkg.com/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
         integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
         crossorigin="anonymous"></script>
@@ -47,29 +47,36 @@ Install
 npm i @materialstyle/materialstyle
 ```
 
+Our Select Fields, Dropdowns, Popovers, and Tooltips depend on Popper, install it using:
+
+```console
+npm i @popperjs/core
+```
+
+For ripple effects, install @material/ripple:
+
+```console
+npm i @material/ripple@14.0.0
+```
+
 Import Material Style
 
 ```javascript
-import '@materialstyle/materialstyle';
+import * as materialstyle from '@materialstyle/materialstyle'
+import { MDCRipple } from '@material/ripple';
 ```
 
 Alternatively, you may import plugins individually as needed
 
 ```javascript
-import '@materialstyle/materialstyle/js/dist/util';
-import '@materialstyle/materialstyle/js/dist/alert';
+import { Util, Dropdown, Offcanvas, Popover } from '@materialstyle/materialstyle';
+import { MDCRipple } from '@material/ripple';
 ```
 
-Import Material Style CSS in your SCSS/CSS file
+Import Material Style SCSS in your SCSS file
 
-```css
-@import '@materialstyle/materialstyle/dist/css/materialstyle.min.css';
-```
-
-Material Style depends on Popper, which is specified in the peerDependencies property; this means that you will have to make sure to add both of them to your package.json using:
-
-```console
-npm i popper.js
+```scss
+@import "~@materialstyle/materialstyle/scss/materialstyle";
 ```
 
 <br>
