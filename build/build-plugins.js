@@ -59,6 +59,10 @@ const build = async plugin => {
       }
 
       const usedPlugin = resolvedPlugins.find(plugin => {
+        // If Tab's source is being checked, skip matching MaterialTab's src
+        if (source === './tab' && plugin.className === 'MaterialTab') {
+          return false
+        }
         return plugin.src.includes(source.replace(pattern, ''))
       })
 

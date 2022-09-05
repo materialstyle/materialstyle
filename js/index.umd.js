@@ -10,6 +10,7 @@ import Button from './src/button'
 import Carousel from './src/carousel'
 import Collapse from './src/collapse'
 import Dropdown from './src/dropdown'
+import MaterialTab from './src/material-tab'
 import Modal from './src/modal'
 import Navbar from './src/navbar'
 import Offcanvas from './src/offcanvas'
@@ -20,7 +21,6 @@ import SelectField from './src/select-field'
 import Shape from './src/shape'
 import Snackbar from './src/snackbar'
 import Tab from './src/tab'
-import MaterialTab from './src/material-tab'
 import TextField from './src/text-field'
 import Toast from './src/toast'
 import Tooltip from './src/tooltip'
@@ -31,6 +31,7 @@ export default {
   Carousel,
   Collapse,
   Dropdown,
+  MaterialTab,
   Modal,
   Navbar,
   Offcanvas,
@@ -41,7 +42,6 @@ export default {
   Shape,
   Snackbar,
   Tab,
-  MaterialTab,
   TextField,
   Toast,
   Tooltip
