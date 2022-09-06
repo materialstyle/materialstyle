@@ -10,6 +10,7 @@ import {
 } from './util/color'
 import BaseComponent from './base-component'
 import EventHandler from './dom/event-handler'
+import Dropdown from './dropdown'
 import {
   defineJQueryPlugin
 } from './util/index'
@@ -208,7 +209,7 @@ class SelectField extends BaseComponent {
 
     this._select.after(this._dropdown)
 
-    this._dropdownInstance = window.materialstyle.Dropdown.getOrCreateInstance(this._selectedItem)
+    this._dropdownInstance = Dropdown.getOrCreateInstance(this._selectedItem)
   }
 
   createSearchContainer() {

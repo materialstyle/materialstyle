@@ -1,6 +1,7 @@
 // stylelint-disable selector-max-class, selector-max-compound-selectors, selector-no-qualifying-type, function-disallowed-list
 .form-floating {
   position: relative;
+  width: 100%;
 
   > .form-control,
   > .form-control-plaintext,
@@ -356,6 +357,7 @@
 
 .form-floating-with-icon {
   position: relative;
+  width: 100%;
 
   .prepend,
   .append {

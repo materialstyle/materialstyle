@@ -63,6 +63,7 @@ const build = async plugin => {
         if (source === './tab' && plugin.className === 'MaterialTab') {
           return false
         }
+
         return plugin.src.includes(source.replace(pattern, ''))
       })
 
