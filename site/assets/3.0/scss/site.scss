@@ -226,6 +226,9 @@ h5:not(.badge-example-headings h5) {
   ~ h2 {
     margin-top: 1rem;
   }
+  ~ ul li,  ~ h3 ~ p {
+    padding-bottom: 15px;
+  }
 }
 
 .hljs {

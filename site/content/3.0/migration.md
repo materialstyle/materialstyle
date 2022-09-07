@@ -7,61 +7,106 @@ keywords: migration
 ---
 
 <p class="fs-4 ms-0 mb-4 text-secondary migration-intro">
-Material Style 3 is a major rewrite of the entire project.
+Material Style 3 is a major rewrite of the entire project. The most notable changes are 
+summarized below.
 </p>
 
-Follows <a class="link-pink" href="https://getbootstrap.com/docs/5.2/migration/">Bootstrap v5 migration guide</a>.
+**Follows <a class="link-pink" href="https://getbootstrap.com/docs/5.2/migration/">Bootstrap v5 migration guide</a>.**
 
 ## **Utilities**
 ### Colors
-To avoid increased file sizes, now we only use a subset of the v2 color palette.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+To avoid increased file sizes, v3 uses only a subset of the v2 color palette. 
+It uses Bootstrap's default theme colors + pink, purple, indigo, teal, orange, white & black.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Color shades (Example: ```red-50```, ```blue-500```, ```pink-a100```) have been removed to 
+reduce file size.
 
 ### Ripple
-Unlike v2, where the ripple effect can be activated just by calling the JS function, 
-in v3, we need to add an element with the class ```.ripple-surface``` to the desired element.
+- v3 uses the official Material Design Ripple package 
+<a class="link-pink" href="https://www.npmjs.com/package/@material/ripple">@material/ripple</a>
+for the ripple effects.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> Unlike v2, where the ripple effect is directly 
+applied to components, in v3, we need to add an element 
+```<span class="ripple-surface"></span>``` to the desired component like a Button and activate 
+the effect on the ```ripple-surface```.
 
 ### Shadows
-- Shadow classes ```.raised-*dp``` has been renamed to ```.shadow-*dp```
-- Class ```.unelevated``` has been replaced with ```.shadow-none```
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Classes ```raised-*dp``` have been renamed to ```shadow-*dp```
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Class ```unelevated``` has been replaced with ```shadow-none```
 
 ## **Components**
 ### Buttons
-- Classes ```btn-text-[color]``` have been dropped. ```btn-outline-[color] border-0``` can be used for Text Buttons.
-- File inputs now use Bootstrap's default styling. Classes ```m-file-input``` and ```btn-file``` have been dropped.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Classes ```btn-text-[color]``` have been dropped. 
+```btn-outline-[color] border-0``` can be used for Text Buttons.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+File inputs now use Bootstrap's default styling. 
+Classes ```m-file-input``` and ```btn-file``` have been dropped.
 
 ### Floating Action Buttons
+<span class="badge bg-danger rounded-pill me-1">Breaking</span> 
 Class ```extended-fab``` has been dropped. ```rounded-pill``` can be used.
 
 ### Cards
-- Classes ```card-outline-[color]``` have been dropped. ```border border-[color]``` can be used for Cards with border.
-- Classes ```card-actions```, ```card-buttons``` & ```card-icons``` have been dropped as well.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Classes ```card-outline-[color]``` have been dropped. 
+```border border-[color]``` can be used for Cards with border.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Classes ```card-actions```, ```card-buttons``` & ```card-icons``` have been dropped as well.
 
 ### Drawer / Sidebar
-We are using Bootstrap 5’s Offcanvas component for Drawers.
+<span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+v3 uses Bootstrap 5’s Offcanvas component for Drawers.
 
 ### Progress bars
-- Class ```m-progress``` has been renamed to ```progress-bar-indeterminate```.
-- Class ```m-rainbow``` has been renamed to ```progress-bar-rainbow```.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Class ```m-progress``` has been renamed to ```progress-bar-indeterminate```.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Class ```m-rainbow``` has been renamed to ```progress-bar-rainbow```.
 
 ### Spinners
-- Class ```m-spinner``` has been renamd to ```spinner-material```.
-- Classes ```spinner-[color]``` have been dropped. ```text-[color]``` can be used for colored spinners.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Class ```m-spinner``` has been renamed to ```spinner-material```.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Classes ```spinner-[color]``` have been dropped. ```text-[color]``` can be used for colored spinners.
 
 ## **Forms**
 ### Text Fields
-- We are using Bootstrap 5's ```.form-floating``` for Text fields.
-- Introduced ```.form-floating-with-icon``` to support icons and spinners on Text fields.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+v3 uses Bootstrap 5's ```.form-floating``` for Text and Select fields.
+- Introduced ```.form-floating-with-icon``` to support icons and spinners on Text and Select fields.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Classes ```m-text-field```, ```m-text-field-outline```, ```static-label``` & ```floating-label``` 
+have been removed.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Color class ```primary-[color]``` has been replaced with ```base-[color]```.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Color class ```accent-[color]``` has been replaced with ```primary-[color]```.
 
 ### Select Fields
-- We are using Bootstrap 5's ```.form-floating``` for Select fields.
-- Bootstrap's dropdowns are being used for the Select options.
-- Introduced ```.form-floating-with-icon``` to support icons and spinners on Select fields.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+v3 uses Bootstrap's dropdown component for the Select options.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+v3 uses Bootstrap 5's ```.form-floating``` for Text and Select fields.
+- Introduced ```.form-floating-with-icon``` to support icons and spinners on Text and Select fields.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Classes ```m-select```, ```m-select-outline```, ```static-label``` & ```floating-label``` have been removed.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Color class ```primary-[color]``` has been replaced with ```base-[color]```.
+- <span class="badge bg-danger rounded-pill me-1">Breaking</span> 
+Color class ```accent-[color]``` has been replaced with ```primary-[color]```.
 
 ### Input groups
-Added support for ```.input-group``` on Text and Select fields.
+v3 supports ```.input-group``` on Text and Select fields.
 
 ### Form validation
-Added form validation support on forms.
+v3 supports form validation.
+
+### Checkbox, Radio & Switch
+<span class="badge bg-danger rounded-pill me-1">Breaking</span> Color classes ```input-[color]``` have been dropped.
 
 
 
