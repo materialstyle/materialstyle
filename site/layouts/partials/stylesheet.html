@@ -1,0 +1,22 @@
+{{ if eq hugo.Environment "production" -}}
+<link href="/materialstyle/{{ .Site.Params.docs_version }}/dist/css/materialstyle.min.css" rel="stylesheet">
+{{- else -}}
+<link href="/materialstyle/{{ .Site.Params.docs_version }}/dist/css/materialstyle.css" rel="stylesheet">
+{{- end }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<link rel="preconnect" href="https://3EHDQBJAE1-dsn.algolia.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+
+{{- $targetDocsCssPath := path.Join "/" .Site.Params.docs_version "assets/css/styles.css" -}}
+{{- $sassOptions := dict "targetPath" $targetDocsCssPath "outputStyle" "expanded" "precision" 6 -}}
+{{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
+
+{{ if eq hugo.Environment "production" -}}
+  {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
+{{- end -}}
+
+{{- $style := resources.Get "3.0/scss/site.scss" | toCSS $sassOptions | postCSS $postcssOptions }}
+
+<link href="{{ $style.Permalink | relURL }}" rel="stylesheet">

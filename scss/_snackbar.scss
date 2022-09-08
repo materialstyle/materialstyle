@@ -8,7 +8,7 @@
   font: 500 16px Roboto, sans-serif;
   color: $snackbar-color;
   background-color: $snackbar-bg;
-  border-radius: $snackbar-border-radius;
+  @include border-radius($snackbar-border-radius);
   opacity: 0;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1), cubic-bezier(.4, 0, .2, 1);
   transition-duration: .3s, .3s;
@@ -22,13 +22,13 @@
   transition-duration: .2s, .3s;
 }
 
-.snackbar.snackbar-left {
+.snackbar.snackbar-start {
   right: auto;
   left: $snackbar-left-left;
   transform: translate(0, 0);
 }
 
-.snackbar.snackbar-right {
+.snackbar.snackbar-end {
   right: $snackbar-right-right;
   left: auto;
   transform: translate(0, 0);

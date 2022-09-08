@@ -1,0 +1,60 @@
+<nav id="site-home-top-nav" class="navbar bg-purple navbar-dark fixed-top">
+  <!-- Skip to main content or sidebar -->
+  <div class="d-flex justify-content-center align-items-center w-100 visually-hidden-focusable overflow-hidden" >
+    <a class="link-white p-2 m-1" href="#content">Skip to main content</a>
+    <a class="link-white d-none d-lg-inline-block p-2 m-1" href="#sidebar">Skip to sidebar</a>
+  </div>
+
+  <div class="container-fluid gap-3">
+    <div class="d-flex align-items-center">
+        <button class="drawer-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#site-offcanvas">
+          <span class="drawer-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand d-flex align-items-center py-0 me-0" href="/">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <div id="site-name" class="text-white ml-1">Material Style</div>
+        </a>
+    </div>
+
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
+      <li class="nav-item dropdown">
+        <a class="nav-link text-white dropdown-toggle rounded px-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          v{{ .Site.Params.docs_version }}
+          <span class="ripple-surface"></span>
+        </a>
+        <ul class="dropdown-menu bg-light position-absolute" style="min-width: auto;">
+          <li><a class="dropdown-item" href="/docs/2.0/">2.0</a></li>
+          <div class="dropdown-divider"></div>
+          <li><a class="dropdown-item" href="/docs/1.2/">1.2</a></li>
+          <li><a class="dropdown-item" href="/docs/1.1/">1.1</a></li>
+          <li><a class="dropdown-item" href="/docs/1.0/">1.0</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white px-1 py-0 fs-4" href="https://github.com/materialstyle/materialstyle">
+          <i class="bi bi-github"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-1 py-0" id="docsearch">
+          <i class="bi bi-search text-white fs-4"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--<div class="modal fade" id="search-container">-->
+  <!--<div class="modal-dialog m-0">-->
+    <!--<div class="modal-content border-0" style="width:100vw;">-->
+      <!--<div class="modal-header" style="width:100vw;">-->
+        <!--<input id="search-box" type="text" class="modal-title text-dark ml-4" placeholder="Search">-->
+        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->

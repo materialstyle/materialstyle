@@ -1,19 +1,18 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0-alpha1): snackbar.js
+ * Material Style (v3.0.0): snackbar.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import {
-  defineJQueryPlugin,
-  typeCheckConfig
-} from 'bootstrap/js/src/util/index'
-import BaseComponent from 'bootstrap/js/src/base-component'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+  defineJQueryPlugin
+} from './util/index'
+import BaseComponent from './base-component'
+import Manipulator from './dom/manipulator'
 import {
   enableDismissTrigger
-} from 'bootstrap/js/src/util/component-functions'
+} from './util/component-functions'
 
 /**
  * Constants
@@ -58,11 +57,11 @@ Object.defineProperty(runningQueue, 'pushToRunningQueue', {
     activeSnackbar.classList.add('show')
     runningQueue.push(activeSnackbar)
 
-    if (activeSnackbar.dataset.autoClose === 'true') {
+    if (activeSnackbar.dataset.bsAutoClose === 'true') {
       setTimeout(() => {
         activeSnackbar.classList.remove('show')
         runningQueue.removeFromRunningQueue(activeSnackbar)
-      }, activeSnackbar.dataset.visibleDuration)
+      }, activeSnackbar.dataset.bsVisibleDuration)
     }
   }
 })
@@ -89,10 +88,18 @@ class Snackbar extends BaseComponent {
     super(element)
 
     this._config = this._getConfig(config)
-    this._element.dataset.visibleDuration = this._config.visibleDuration
-    this._element.dataset.autoClose = this._config.autoClose
+    this._element.dataset.bsVisibleDuration = this._config.visibleDuration
+    this._element.dataset.bsAutoClose = this._config.autoClose
 
     waitingQueue.pushToWaitingQueue(this._element)
+  }
+
+  static get Default() {
+    return Default
+  }
+
+  static get DefaultType() {
+    return DefaultType
   }
 
   static get NAME() {
@@ -111,7 +118,11 @@ class Snackbar extends BaseComponent {
       ...Manipulator.getDataAttributes(this._element),
       ...typeof config === 'object' ? config : {}
     }
-    typeCheckConfig(NAME, config, DefaultType)
+    config = this._mergeConfigObj(config)
+    config = this._configAfterMerge(config)
+
+    this._typeCheckConfig(config)
+
     return config
   }
 

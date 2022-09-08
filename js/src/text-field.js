@@ -1,17 +1,17 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0-alpha1): text_field.js
+ * Material Style (v3.0.0): text_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import {
   getBaseColor, getPrimaryColor
-} from '../src/utility.js'
-import BaseComponent from 'bootstrap/js/src/base-component'
+} from './util/color'
+import BaseComponent from './base-component'
 import {
   defineJQueryPlugin
-} from 'bootstrap/js/src/util/index'
+} from './util/index'
 
 /**
  * --------------------------------------------------------------------------
@@ -20,20 +20,20 @@ import {
  */
 
 const NAME = 'textfield'
-const VERSION = '3.0.0-alpha1'
+const VERSION = '3.0.0'
 
-const CLASS_NAME_TEXTFIELD = 'form-control'
-const CLASS_NAME_OUTLINED = 'form-floating--outlined'
+const CLASS_NAME_FLOATING = 'form-floating'
+const CLASS_NAME_FLOATING_OUTLINED = 'form-floating-outlined'
 
 const LABEL_SCALE = 0.85
 
 class TextField extends BaseComponent {
   constructor(element) {
     super(element)
-    this._element = element
-    this._textField = element.querySelector(`.${CLASS_NAME_TEXTFIELD}`)
+    this._textField = element
+    this._formFloating = element.closest(`.${CLASS_NAME_FLOATING}`)
 
-    if (this._textField) {
+    if (this._textField && this._formFloating) {
       this.initTextFields()
       this.addFontsReadyEvent()
     }
@@ -62,22 +62,32 @@ class TextField extends BaseComponent {
   }
 
   initTextFields() {
-    this._element.style.setProperty('--form-field-base-color', getBaseColor(this._element))
-    this._element.style.setProperty('--form-field-primary-color', getPrimaryColor(this._element))
+    this._formFloating.style.setProperty('--form-field-base-color', getBaseColor(this._formFloating))
+    this._formFloating.style.setProperty('--form-field-primary-color', getPrimaryColor(this._formFloating))
 
-    this._label = this._element.querySelector('label')
-    this._inputGroup = this._element.closest('.input-group')
+    this._label = this._formFloating.querySelector('label')
+    this._inputGroup = this._formFloating.closest('.input-group')
 
     if (this._inputGroup) {
-      this._prepend = this._inputGroup.querySelector('.prepend')
-      this._append = this._inputGroup.querySelector('.append')
+      if (this._formFloating.className.includes(CLASS_NAME_FLOATING_OUTLINED)) {
+        this._inputGroup.classList.add('has-form-floating-outlined')
+      } else {
+        this._inputGroup.classList.add('has-form-floating')
+      }
+    }
+
+    this._formFloatingWithIcon = this._formFloating.closest('.form-floating-with-icon')
+
+    if (this._formFloatingWithIcon) {
+      this._prepend = this._formFloatingWithIcon.querySelector('.prepend')
+      this._append = this._formFloatingWithIcon.querySelector('.append')
     }
 
     if (this._prepend) {
       this._label.style.paddingLeft = 0
     }
 
-    if (this._element.className.includes(CLASS_NAME_OUTLINED)) {
+    if (this._formFloating.className.includes(CLASS_NAME_FLOATING_OUTLINED)) {
       this.addNotch()
     } else {
       this.addRipple()
@@ -86,7 +96,7 @@ class TextField extends BaseComponent {
 
   redraw() {
     if (this._label) {
-      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - (this._label.offsetWidth * LABEL_SCALE)}px`)
     }
 
     this.addFontsReadyEvent()
@@ -113,29 +123,30 @@ class TextField extends BaseComponent {
     const notchAfter = document.createElement('div')
     notchAfter.className = 'm-notch-after'
 
-    notch.appendChild(notchBefore)
-    notch.appendChild(notchBetween)
-    notch.appendChild(notchAfter)
+    notch.append(notchBefore)
+    notch.append(notchBetween)
+    notch.append(notchAfter)
 
     this._textField.after(notch)
     this._notch = notch
 
     if (this._label) {
-      notchBetween.appendChild(this._label)
-      this._element.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - this._label.offsetWidth * LABEL_SCALE}px`)
+      notchBetween.append(this._label)
+      this._formFloating.style.setProperty('--label-floating-margin-right', `-${this._label.offsetWidth - (this._label.offsetWidth * LABEL_SCALE)}px`)
     }
   }
 
   addFontsReadyEvent() {
     document.fonts.ready.then(() => {
-      if (this._inputGroup) {
+      if (this._formFloatingWithIcon) {
         if (this._prepend) {
           this._prepend.style.height = `${this._textField.offsetHeight}px`
-          this._element.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
+          this._formFloating.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
         }
+
         if (this._append) {
           this._append.style.height = `${this._textField.offsetHeight}px`
-          this._element.style.setProperty('--append-width', `${this._append.offsetWidth}px`)
+          this._formFloating.style.setProperty('--append-width', `${this._append.offsetWidth}px`)
         }
       }
     })

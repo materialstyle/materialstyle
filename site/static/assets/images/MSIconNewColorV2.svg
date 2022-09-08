@@ -1,0 +1,36 @@
+<svg id="M" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f44336;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        opacity: 0.55;
+      }
+
+      .cls-3 {
+        fill: #ffc107;
+      }
+
+      .cls-4 {
+        fill: #2196f3;
+      }
+
+      .cls-5 {
+        fill: #1de9b6;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="54" y="65" width="50" height="220"/>
+  <path id="Polygon_1" data-name="Polygon 1" class="cls-2" d="M54.882,66.709L104,222.985V173.3Z"/>
+  <path id="Rectangle_1_copy_2" data-name="Rectangle 1 copy 2" class="cls-3" d="M54,65h50l96,219H150Z"/>
+  <path id="Polygon_2" data-name="Polygon 2" class="cls-2" d="M190.188,262.126l-38.842,19.155,18.618-65.827Z"/>
+  <rect id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-4" x="246" y="65" width="50" height="220"/>
+  <path id="Polygon_1-2" data-name="Polygon 1" class="cls-2" d="M294.993,66.991L246,222.985V173.394Z"/>
+  <path id="Rectangle_1_copy_3" data-name="Rectangle 1 copy 3" class="cls-5" d="M296,65H246L150,284h50Z"/>
+</svg>

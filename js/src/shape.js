@@ -1,17 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0-alpha1): shape.js
+ * Material Style (v3.0.0): shape.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import BaseComponent from 'bootstrap/js/src/base-component'
+import BaseComponent from './base-component'
 import {
   defineJQueryPlugin
-} from 'bootstrap/js/src/util/index'
-import {
-  getColor
-} from '../src/utility.js'
+} from './util/index'
 
 /**
  * --------------------------------------------------------------------------
@@ -20,7 +17,7 @@ import {
  */
 
 const NAME = 'shape'
-const VERSION = '3.0.0-alpha1'
+const VERSION = '3.0.0'
 
 const DIVISOR = 2
 
@@ -52,11 +49,10 @@ class Shape extends BaseComponent {
   initShape() {
     this.setShapeColor()
     this.setShapeSize()
-    this.setShapeOutline()
   }
 
   setShapeColor() {
-    let shapeColor = this._element.className.match(/shape-parent-bg-[^\s]+/)
+    let shapeColor = this._element.className.match(/shape-parent-bg-\S+/)
 
     if (shapeColor) {
       shapeColor = shapeColor[0].replace('shape-parent-', '')
@@ -64,12 +60,15 @@ class Shape extends BaseComponent {
       if (this._topLeftAngle) {
         this._topLeftAngle.classList.add(shapeColor)
       }
+
       if (this._topRightAngle) {
         this._topRightAngle.classList.add(shapeColor)
       }
+
       if (this._bottomLeftAngle) {
         this._bottomLeftAngle.classList.add(shapeColor)
       }
+
       if (this._bottomRightAngle) {
         this._bottomRightAngle.classList.add(shapeColor)
       }
@@ -83,31 +82,31 @@ class Shape extends BaseComponent {
     let topRightWidth = 0
 
     if (this._topLeftAngle) {
-      topLeftWidth = this._topLeftAngle.className.match(/size-[^\s]+/)
+      topLeftWidth = this._topLeftAngle.className.match(/size-\S+/)
       if (topLeftWidth) {
-        topLeftWidth = parseInt(topLeftWidth[0].replace('size-', ''), 10)
+        topLeftWidth = Number.parseInt(topLeftWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._topRightAngle) {
-      topRightWidth = this._topRightAngle.className.match(/size-[^\s]+/)
+      topRightWidth = this._topRightAngle.className.match(/size-\S+/)
       if (topRightWidth) {
-        topRightWidth = parseInt(topRightWidth[0].replace('size-', ''), 10)
+        topRightWidth = Number.parseInt(topRightWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._bottomLeftAngle) {
-      bottomLeftWidth = this._bottomLeftAngle.className.match(/size-[^\s]+/)
+      bottomLeftWidth = this._bottomLeftAngle.className.match(/size-\S+/)
       if (bottomLeftWidth) {
-        bottomLeftWidth = parseInt(bottomLeftWidth[0].replace('size-', ''), 10)
+        bottomLeftWidth = Number.parseInt(bottomLeftWidth[0].replace('size-', ''), 10)
       }
     }
 
     if (this._bottomRightAngle) {
-      bottomRightWidth = this._bottomRightAngle.className.match(/size-[^\s]+/)
+      bottomRightWidth = this._bottomRightAngle.className.match(/size-\S+/)
 
       if (bottomRightWidth) {
-        bottomRightWidth = parseInt(bottomRightWidth[0].replace('size-', ''), 10)
+        bottomRightWidth = Number.parseInt(bottomRightWidth[0].replace('size-', ''), 10)
       }
     }
 
@@ -137,36 +136,6 @@ class Shape extends BaseComponent {
       this._bottomRightAngle.style.right = `${-(bottomRightWidth / DIVISOR)}px`
       this._bottomRightAngle.style.width = `${bottomRightWidth}px`
       this._bottomRightAngle.style.height = `${bottomRightWidth}px`
-    }
-  }
-
-  setShapeOutline() {
-    let shapeOutline
-
-    const btnOutline = this._element.querySelector('[class*="btn-outline-"]')
-
-    if (btnOutline) {
-      shapeOutline = btnOutline.className.match(/btn-outline-[^\s]+/)
-      shapeOutline = shapeOutline[0].replace('btn-outline-', '')
-    }
-
-    if (shapeOutline) {
-      shapeOutline = getColor(shapeOutline)
-
-      const borderBottom = `1px solid ${shapeOutline}`
-
-      if (this._topLeftAngle) {
-        this._topLeftAngle.style.borderBottom = borderBottom
-      }
-      if (this._topRightAngle) {
-        this._topRightAngle.style.borderBottom = borderBottom
-      }
-      if (this._bottomLeftAngle) {
-        this._bottomLeftAngle.style.borderBottom = borderBottom
-      }
-      if (this._bottomRightAngle) {
-        this._bottomRightAngle.style.borderBottom = borderBottom
-      }
     }
   }
 }

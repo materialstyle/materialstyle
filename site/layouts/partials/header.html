@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ .Page.Params.description | default .Site.Params.description | markdownify }}">
+<meta name="author" content="{{ .Site.Params.authors }}">
+<meta name="generator" content="Hugo {{ hugo.Version }}">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="{{ .Site.Params.docs_version }}">
+
+<meta name="theme-color" content="#6f42c1"/>
+
+<meta property="og:url" content="https://materialstyle.github.io"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}"/>
+<meta property="og:description" content="{{ .Page.Params.description | default .Site.Params.description | markdownify }}"/>
+<meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg"/>
+
+<title>{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}</title>
+
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="/materialstyle/assets/images/favicon.ico" type="image/x-icon">
+
+{{ with .Params.robots -}}
+<meta name="robots" content="{{ . }}">
+{{- end }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+{{ partial "stylesheet" . }}

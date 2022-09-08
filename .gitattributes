@@ -1,8 +1,11 @@
 # Enforce Unix newlines
 * text=auto eol=lf
 
+*.jpg binary
+*.png binary
+
 # Don't diff or textually merge source maps
 *.map binary
 
-bootstrap.css linguist-vendored=false
-bootstrap.js linguist-vendored=false
+materialstyle.css linguist-vendored=false
+materialstyle.js linguist-vendored=false

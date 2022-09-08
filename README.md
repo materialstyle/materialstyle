@@ -1,56 +1,92 @@
-# Material Style
-Material Style is an easy to use UI Library based on Bootstrap 4.5 that lets you add Material Design styles and animations to Bootstrap components.
+<p align="center">
+  <a href="https://materialstyle.github.io/">
+    <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" alt="Material Style logo" width="100" height="100">
+  </a>
+</p>
+
+<h3 align="center">Material Style</h3>
+
+<p align="center">
+  A Material Design UI Library based on Bootstrap.
+</p>
+
+## Table of contents
+
+- [Components](#components)
+- [Getting Started](#getting-started)
+- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Creator](#creator)
+- [Thank you](#thank-you)
 
 ## Components
-https://materialstyle.github.io/docs/2.0/components/alert/
+https://materialstyle.github.io/materialstyle/3.0/components/alert/
 
-## Get Started
-https://materialstyle.github.io/docs/2.0/getting-started/installation/
+## Getting Started
+https://materialstyle.github.io/materialstyle/3.0/getting-started/installation/
 
-### 1. CDN
-#### Styles
-```
-<!-- Material Icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!-- Material Style CSS -->
-<link rel="stylesheet" href="https://unpkg.com/@materialstyle/materialstyle@2.0.2/dist/css/materialstyle.min.css">
-```
-#### Scripts
-```
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous"></script>
-<!-- Popper JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<!-- Material Style JS -->
-<script src="https://unpkg.com/@materialstyle/materialstyle@2.0.2/dist/js/materialstyle.min.js"></script>
-```
+## Bugs and feature requests
+Have a bug or a feature request? Please read the [issue guidelines](https://github.com/materialstyle/materialstyle/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/materialstyle/materialstyle/issues/new).
 
-### 2. NPM
-#### Install
-```
-npm i @materialstyle/materialstyle
-```
-#### Import Material Style JS
-```
-import '@materialstyle/materialstyle';
-```
-#### Alternatively, you may import plugins individually as needed
-```
-import '@materialstyle/materialstyle/js/dist/util';
-import '@materialstyle/materialstyle/js/dist/alert';
-```
-#### Import Material Style CSS in your SCSS/CSS file
-```
-@import '@materialstyle/materialstyle/dist/css/materialstyle.min.css';
-```
-#### Material Style depends on jQuery and Popper, which are specified in the peerDependencies property; this means that you will have to make sure to add both of them to your package.json using:
-```
-npm i jquery popper.js
-```
+## Documentation
+Bootstrap's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://materialstyle.github.io/>. The docs may also be run locally.
 
-### 3. Download the latest release
-https://github.com/materialstyle/materialstyle.github.io/raw/master/store/2.0.2.zip
+### Running documentation locally
+1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
+2. From the root `/materialstyle` directory, run `npm run docs-serve` in the command line.
+3. Open `http://localhost:9001/materialstyle` in your browser, and voilà.
+
+Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+
+## Contributing
+Please read through our [contributing guidelines](https://github.com/materialstyle/materialstyle/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+
+
+Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/materialstyle/materialstyle/tree/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
+
+
+Editor preferences are available in the [editor config](https://github.com/materialstyle/materialstyle/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
+
+## Creator
+
+**Neeraj Kumar Das** 
+
+- <https://github.com/nkdas91>
+- <https://neerajdas.com/>
+
+## Thank you!
+
+<p align="center">
+  <a href="https://getbootstrap.com/">
+    <img src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" width="50">
+  </a>
+</p>
+    
+<p align="center">
+Thank you <a href="https://getbootstrap.com/">Bootstrap</a> for an awesome front-end framework!
+</p>
+  
+<br><br>
+ 
+<p align="center">
+  <a href="https://www.browserstack.com/">
+    <img src="https://materialstyle.github.io/assets/images/browserstack-logo.svg" alt="BrowserStack" width="50">
+  </a>
+</p>
+    
+<p align="center">
+Thank you <a href="https://www.browserstack.com/">BrowserStack</a> for providing the infrastructure that allows us to test in real browsers!
+</p>
+
+<br><br>
+ 
+<p align="center">
+  <a href="https://www.netlify.com/">
+    <img src="https://www.netlify.com/v3/img/components/logomark.svg" alt="Netlify" width="50">
+  </a>
+</p>
+    
+<p align="center">
+Thank you <a href="https://www.netlify.com/">Netlify</a> for providing us with Deploy Previews!
+</p>
