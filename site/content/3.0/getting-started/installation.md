@@ -3,6 +3,7 @@ layout: docs
 title: Installation
 group: getting-started
 aliases:
+  - "/3.0/"
   - "/3.0/getting-started/"
   - "/getting-started/"
 toc: true
