@@ -88,7 +88,7 @@ Import Material Style SCSS in your SCSS file
 ## Download
 
 <a class="btn btn-purple btn-lg rounded-pill" 
-   href="https://github.com/materialstyle/materialstyle.github.io/raw/main/store/3.0.0.zip" download>
+   href="https://github.com/materialstyle/materialstyle/releases/download/v3.0.0/materialstyle-3.0.0-dist.zip" download>
   Download v3.0.0
 </a>
 
