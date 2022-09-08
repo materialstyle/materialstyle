@@ -25,7 +25,6 @@
 
 {{- if eq hugo.Environment "production" -}}
   {{- $docsJs = $docsJs | resources.Minify -}}
-  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 {{- end }}
-
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 <script src="{{ $docsJs.Permalink | relURL }}"></script>

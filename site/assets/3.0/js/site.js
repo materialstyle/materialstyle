@@ -1,4 +1,4 @@
-/* global $, mdc, materialstyle, anchors, ClipboardJS */
+/* global $, mdc, materialstyle, anchors, ClipboardJS, docsearch */
 
 function saveOffcanvasScrollPosition() {
   const offcanvas = document.querySelector('#site-offcanvas .offcanvas-body')
@@ -316,6 +316,19 @@ document.addEventListener('DOMContentLoaded', () => {
     event.trigger.addEventListener('hidden.bs.tooltip', () => {
       tooltipBtn.setContent({ '.tooltip-inner': copyBtnTitle })
     }, { once: true })
+  })
+
+  /**
+   * Docsearch
+   */
+  docsearch({
+    container: '#docsearch',
+    appId: '3EHDQBJAE1',
+    indexName: 'materialstyle',
+    apiKey: '045965c449c981a98498474ab5ff774a',
+    searchParameters: {
+      facetFilters: ['version:3.0']
+    }
   })
 })
 
