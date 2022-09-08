@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0-alpha1): rainbow.js
+ * Material Style (v3.0.0): rainbow.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -19,7 +19,7 @@ import {
  */
 
 const NAME = 'rainbow'
-const VERSION = '3.0.0-alpha1'
+const VERSION = '3.0.0'
 const DATA_KEY = 'bs.rainbow'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'

@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0-alpha1): text_field.js
+ * Material Style (v3.0.0): text_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ import {
  */
 
 const NAME = 'textfield'
-const VERSION = '3.0.0-alpha1'
+const VERSION = '3.0.0'
 
 const CLASS_NAME_FLOATING = 'form-floating'
 const CLASS_NAME_FLOATING_OUTLINED = 'form-floating-outlined'

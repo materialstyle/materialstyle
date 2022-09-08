@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0-alpha1): shape.js
+ * Material Style (v3.0.0): shape.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ import {
  */
 
 const NAME = 'shape'
-const VERSION = '3.0.0-alpha1'
+const VERSION = '3.0.0'
 
 const DIVISOR = 2
 
