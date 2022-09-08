@@ -17,7 +17,9 @@ Styles
 ```html
 <!-- Material Style CSS -->
 <link rel="stylesheet"
-      href="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css">
+      href="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css" 
+      integrity="sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5" 
+      crossorigin="anonymous">
 ```
 
 Scripts
@@ -34,8 +36,9 @@ Scripts
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js">
-</script>
+<script src="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js" 
+        integrity="sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES" 
+        crossorigin="anonymous"></script>
 ```
 
 <br>
