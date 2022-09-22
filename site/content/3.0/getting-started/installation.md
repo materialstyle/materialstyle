@@ -45,6 +45,17 @@ Scripts
 
 ## npm
 
+<a target="_blank" href="https://github.com/materialstyle/materialstyle-examples" class="text-decoration-none text-dark">
+  <div class="d-flex align-items-center bg-purple bg-opacity-25 my-4 rounded-3 overflow-hidden">
+    <div class="d-flex align-items-center align-self-stretch bg-purple text-white p-3 fs-4">
+      <i class="bi bi-box-arrow-up-right"></i>
+    </div>
+    <div class="flex-grow-1 p-3">
+      Head over to our <b>Material Style Examples</b> repository for examples on Webpack, Parcel & Vite.
+    </div>
+  </div>
+</a>
+
 Install
 
 ```console
