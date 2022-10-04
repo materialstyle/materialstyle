@@ -4,7 +4,7 @@
   * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)  
   * This a fork of Bootstrap: Initial license below
   * 
-  * Bootstrap select-field.js v5.2.0 (https://getbootstrap.com/)
+  * Bootstrap select-field.js v5.2.2 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */

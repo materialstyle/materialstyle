@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
  *
- * Bootstrap Grid v5.2.0 (https://getbootstrap.com/)
+ * Bootstrap Grid v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -102,6 +102,12 @@
   --bs-link-hover-color: #0a58ca;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
 }
 
 .container,

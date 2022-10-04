@@ -4,7 +4,7 @@
   * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)  
   * This a fork of Bootstrap: Initial license below
   * 
-  * Bootstrap base-component.js v5.2.0 (https://getbootstrap.com/)
+  * Bootstrap base-component.js v5.2.2 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -22,7 +22,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): base-component.js
+   * Bootstrap (v5.2.2): base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -30,7 +30,7 @@
    * Constants
    */
 
-  const VERSION = '5.2.0';
+  const VERSION = '3.0.0';
   /**
    * Class definition
    */

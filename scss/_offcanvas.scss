@@ -12,6 +12,9 @@
   --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
   --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
   --#{$prefix}dropdown-divider-bg: #{$dropdown-divider-bg};
+  --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas};
+  --#{$prefix}offcanvas-transition: #{transform $offcanvas-transition-duration ease-in-out};
+  --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height};
   // scss-docs-end offcanvas-css-vars
 }
 
@@ -32,7 +35,7 @@
     @include media-breakpoint-down($next) {
       position: fixed;
       bottom: 0;
-      z-index: $zindex-offcanvas;
+      z-index: var(--#{$prefix}offcanvas-zindex);
       display: flex;
       flex-direction: column;
       max-width: 100%;
@@ -42,7 +45,7 @@
       background-clip: padding-box;
       outline: 0;
       @include box-shadow(var(--#{$prefix}offcanvas-box-shadow));
-      @include transition(transform $offcanvas-transition-duration ease-in-out);
+      @include transition(var(--#{$prefix}offcanvas-transition));
 
       &.offcanvas-start {
         top: 0;
@@ -186,10 +189,10 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
-    padding: $btn-close-padding-y $btn-close-padding-x;
-    margin-top: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
-    margin-right: calc(var(--#{$prefix}offcanvas-padding-x) * -.5);
-    margin-bottom: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
+    padding: calc(var(--#{$prefix}offcanvas-padding-y) * .5) calc(var(--#{$prefix}offcanvas-padding-x) * .5);
+    margin-top: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
+    margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
+    margin-bottom: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
   }
 }
 
@@ -198,7 +201,7 @@
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-brand-margin-end;
   margin-bottom: 0;
-  line-height: $offcanvas-title-line-height;
+  line-height: var(--#{$prefix}offcanvas-title-line-height);
   @include font-size($navbar-brand-font-size);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
