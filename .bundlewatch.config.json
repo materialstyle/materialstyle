@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "./dist/css/materialstyle-grid.css",
-      "maxSize": "7.45 kB"
+      "maxSize": "7.46 kB"
     },
     {
       "path": "./dist/css/materialstyle-grid.min.css",
@@ -18,19 +18,19 @@
     },
     {
       "path": "./dist/css/materialstyle-utilities.css",
-      "maxSize": "9.05 kB"
+      "maxSize": "9.3 kB"
     },
     {
       "path": "./dist/css/materialstyle-utilities.min.css",
-      "maxSize": "8.50 kB"
+      "maxSize": "8.6 kB"
     },
     {
       "path": "./dist/css/materialstyle.css",
-      "maxSize": "39.9 kB"
+      "maxSize": "40 kB"
     },
     {
       "path": "./dist/css/materialstyle.min.css",
-      "maxSize": "36.85 kB"
+      "maxSize": "37 kB"
     },
     {
       "path": "./dist/js/materialstyle.bundle.js",
@@ -38,7 +38,7 @@
     },
     {
       "path": "./dist/js/materialstyle.bundle.min.js",
-      "maxSize": "26.45 kB"
+      "maxSize": "26.5 kB"
     },
     {
       "path": "./dist/js/materialstyle.esm.js",
