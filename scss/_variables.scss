@@ -48,25 +48,6 @@ $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
 
-// scss-docs-start colors-map
-$colors: (
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "black":      $black,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
-) !default;
-// scss-docs-end colors-map
-
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $min-contrast-ratio:   4.5 !default;
@@ -541,9 +522,9 @@ $shadows: (
   24dp: unquote("0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)")
 ) !default;
 
-$box-shadow:                  map-get($shadows, 8dp) !default;
-$box-shadow-sm:               map-get($shadows, 1dp) !default;
-$box-shadow-lg:               map-get($shadows, 18dp) !default;
+$box-shadow:                  var(--#{$prefix}shadow-8dp) !default;
+$box-shadow-sm:               var(--#{$prefix}shadow-1dp) !default;
+$box-shadow-lg:               var(--#{$prefix}shadow-18dp) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // scss-docs-end box-shadow-variables
 
@@ -817,11 +798,11 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 $btn-border-width:            0 !default;
 
 $btn-font-weight:             $font-weight-normal !default;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
-$btn-hover-box-shadow:        map-get($shadows, 4dp) !default;
+$btn-box-shadow:              none !default;
+$btn-hover-box-shadow:        var(--#{$prefix}shadow-4dp) !default;
 $btn-focus-box-shadow:        $btn-hover-box-shadow !default;
+$btn-active-box-shadow:       var(--#{$prefix}shadow-8dp) !default;
 $btn-disabled-opacity:        .65 !default;
-$btn-active-box-shadow:       map-get($shadows, 6dp) !default;
 
 $btn-link-color:              var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
@@ -1236,7 +1217,7 @@ $dropdown-dark-color:               $gray-300 !default;
 $dropdown-dark-bg:                  $gray-800 !default;
 $dropdown-dark-border-color:        $dropdown-border-color !default;
 $dropdown-dark-divider-bg:          $dropdown-divider-bg !default;
-$dropdown-dark-box-shadow:          null !default;
+$dropdown-dark-box-shadow:          none !default;
 $dropdown-dark-link-color:          $dropdown-dark-color !default;
 $dropdown-dark-link-hover-color:    $white !default;
 $dropdown-dark-link-hover-bg:       rgba($white, .15) !default;
@@ -1268,7 +1249,7 @@ $pagination-border-color:           $gray-300 !default;
 
 $pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
 $pagination-focus-bg:               $gray-200 !default;
-$pagination-focus-box-shadow:       null !default;
+$pagination-focus-box-shadow:       none !default;
 $pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
@@ -1306,7 +1287,7 @@ $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 0 !default;
 $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
 $card-border-radius:                $border-radius !default;
-$card-box-shadow:                   null !default;
+$card-box-shadow:                   none !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
@@ -1343,7 +1324,7 @@ $accordion-button-active-bg:              tint-color($component-active-bg, 90%) 
 $accordion-button-active-color:           shade-color($primary, 10%) !default;
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
-$accordion-button-focus-box-shadow:       null !default;
+$accordion-button-focus-box-shadow:       none !default;
 
 $accordion-icon-width:                    1.25rem !default;
 $accordion-icon-color:                    $accordion-button-color !default;
@@ -1431,7 +1412,7 @@ $toast-background-color:            rgba($white, .85) !default;
 $toast-border-width:                $border-width !default;
 $toast-border-color:                var(--#{$prefix}border-color-translucent) !default;
 $toast-border-radius:               $border-radius !default;
-$toast-box-shadow:                  map-get($shadows, 4dp) !default;
+$toast-box-shadow:                  var(--#{$prefix}shadow-4dp) !default;
 $toast-spacing:                     $container-padding-x !default;
 
 $toast-header-color:                $gray-600 !default;
