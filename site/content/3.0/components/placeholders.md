@@ -146,7 +146,7 @@ In the example below, we take a typical card component and recreate it with plac
 <div class="card bg-purple bg-opacity-10" style="width:400px">
   <div class="card-body">
     <h4 class="card-title text-purple placeholder-glow">
-      <span class="placeholder col-6"></span>
+      <span class="placeholder col-6">&nbsp;</span>
     </h4>
     <p class="card-text placeholder-glow">
       <span class="placeholder col-12"></span>
