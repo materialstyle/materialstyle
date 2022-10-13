@@ -156,7 +156,7 @@ keywords: forms, input-group
   </span>
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -172,7 +172,7 @@ keywords: forms, input-group
   </span>
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -185,7 +185,7 @@ keywords: forms, input-group
 <div class="input-group flex-nowrap">
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -201,7 +201,7 @@ keywords: forms, input-group
 <div class="input-group flex-nowrap">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -223,7 +223,7 @@ keywords: forms, input-group
   <button class="btn btn-secondary" type="button">Button</button>
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -237,7 +237,7 @@ keywords: forms, input-group
   <button class="btn btn-secondary" type="button">Button</button>
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -250,7 +250,7 @@ keywords: forms, input-group
 <div class="input-group flex-nowrap">
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -264,7 +264,7 @@ keywords: forms, input-group
 <div class="input-group flex-nowrap">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -286,7 +286,7 @@ keywords: forms, input-group
   </span>
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -302,7 +302,7 @@ keywords: forms, input-group
   </span>
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -315,7 +315,7 @@ keywords: forms, input-group
 <div class="input-group flex-nowrap">
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -331,7 +331,7 @@ keywords: forms, input-group
 <div class="input-group flex-nowrap">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>

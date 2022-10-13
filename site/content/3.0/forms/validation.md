@@ -90,7 +90,7 @@ better communicate feedback.
   <div>
     <div class="form-floating">
       <select class="form-select" required>
-        <option value=""></option>
+        <option value="" label="blank option"></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>
@@ -105,7 +105,7 @@ better communicate feedback.
   <div>
     <div class="form-floating form-floating-outlined">
       <select class="form-select" required>
-        <option value=""></option>
+        <option value="" label="blank option"></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>
@@ -120,7 +120,7 @@ better communicate feedback.
   <div class="input-group has-validation">
     <div class="form-floating">
       <select class="form-select" required>
-        <option value=""></option>
+        <option value="" label="blank option"></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>
@@ -260,7 +260,7 @@ Be sure to have a parent with ```position: relative``` on it for tooltip positio
   <div class="position-relative mb-5">
     <div class="form-floating">
       <select class="form-select" required>
-        <option value=""></option>
+        <option value="" label="blank option"></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>
@@ -275,7 +275,7 @@ Be sure to have a parent with ```position: relative``` on it for tooltip positio
   <div class="position-relative mb-5">
     <div class="form-floating form-floating-outlined">
       <select class="form-select" required>
-        <option value=""></option>
+        <option value="" label="blank option"></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>
@@ -290,7 +290,7 @@ Be sure to have a parent with ```position: relative``` on it for tooltip positio
   <div class="input-group has-validation position-relative mb-5">
     <div class="form-floating">
       <select class="form-select" required>
-        <option value=""></option>
+        <option value="" label="blank option"></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>
@@ -357,7 +357,7 @@ text through JavaScript.
 
   <div class="form-floating">
     <select class="form-select" required>
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -368,7 +368,7 @@ text through JavaScript.
 
   <div class="form-floating form-floating-outlined">
     <select class="form-select" required>
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -380,7 +380,7 @@ text through JavaScript.
   <div class="input-group">
     <div class="form-floating">
       <select class="form-select" required>
-        <option value=""></option>
+        <option value="" label="blank option"></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>

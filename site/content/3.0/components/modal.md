@@ -117,7 +117,7 @@ Tooltips and popovers can be placed within modals as needed. When modals are clo
             <div class="input-group">
               <fieldset class="form-floating">
                 <select class="form-select">
-                  <option value=""></option>
+                  <option value="" label="blank option"></option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                   <option value="3">Option 3</option>
@@ -136,7 +136,7 @@ Tooltips and popovers can be placed within modals as needed. When modals are clo
             <div class="input-group">
               <fieldset class="form-floating form-floating-outlined">
                 <select class="form-select">
-                  <option value=""></option>
+                  <option value="" label="blank option"></option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                   <option value="3">Option 3</option>

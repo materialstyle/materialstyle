@@ -67,7 +67,7 @@ toc: true
 ## With a link
 {{< example codeId="code2" >}}
 
-<div class="alert alert-info" role="alert" role="alert">
+<div class="alert alert-info" role="alert">
   A simple info alert with <a href="#" class="alert-link">a link</a>.
 </div>
 
@@ -110,7 +110,7 @@ toc: true
 ## With heading, paragraph and divider
 {{< example codeId="code6" >}}
 
-<div class="alert alert-success" role="alert" role="alert">
+<div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Alert with heading, paragraph and divider.</h4>
   <p>
     Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
