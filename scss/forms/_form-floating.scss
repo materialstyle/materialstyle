@@ -95,12 +95,6 @@
       &::after {
         display: none;
       }
-
-      .badge {
-        .btn-close {
-          cursor: pointer;
-        }
-      }
     }
 
     .dropdown-item {
@@ -109,18 +103,27 @@
         pointer-events: none;
       }
 
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        color: $dark;
+        background-color: $gray-100;
+        outline: 0;
+      }
+
       &.active,
       &.checked,
       &:active {
         color: $dark;
         background-color: $gray-200;
-      }
-    }
 
-    .btn-close {
-      box-sizing: border-box;
-      @include border-radius(0);
-      box-shadow: none;
+        &:hover,
+        &:focus,
+        &:focus-visible {
+          background-color: $gray-300;
+          outline: 0;
+        }
+      }
     }
 
     &.float {
@@ -192,7 +195,25 @@
 
   &.multi-select {
     .dropdown-toggle {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
       white-space: normal;
+
+      .badge {
+        --bs-badge-color: inherit;
+
+        .btn-close {
+          --bs-btn-close-color: inherit;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .dropdown-item.btn-close {
+      box-sizing: border-box;
+      @include border-radius(0);
+      box-shadow: none;
     }
 
     .checkmark {

@@ -258,7 +258,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map(option => {
         if (option.selected) {
-          return `<span class="badge bg-dark d-inline-flex align-items-center p-1 m-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-bs-value="${option.value}"></button></span>`
+          return `<span class="badge d-inline-flex align-items-center p-0">${option.text}<button type="button" class="btn-close ms-1" aria-hidden="true" data-bs-value="${option.value}"></button></span>`
         }
 
         return ''
