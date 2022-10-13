@@ -26,11 +26,11 @@
     },
     {
       "path": "./dist/css/materialstyle.css",
-      "maxSize": "40.15 kB"
+      "maxSize": "40.25 kB"
     },
     {
       "path": "./dist/css/materialstyle.min.css",
-      "maxSize": "37.15 kB"
+      "maxSize": "37.25 kB"
     },
     {
       "path": "./dist/js/materialstyle.bundle.js",

@@ -414,7 +414,13 @@ class SelectField extends BaseComponent {
     EventHandler.on(this._selectedItem, EVENT_FOCUS, () => this._dropdown.classList.add('float'))
     EventHandler.on(this._selectedItem, EVENT_FOCUSOUT, () => this.handleFocusOut())
     EventHandler.on(this._dropdown, EVENT_SHOWN, () => this._dropdown.classList.add('float'))
-    EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
+    EventHandler.on(this._dropdown, EVENT_HIDDEN, e => {
+      if (!e.clickEvent) {
+        this._selectedItem.focus()
+      } else {
+        this.handleFocusOut()
+      }
+    })
 
     EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, event => {
       const checked = event.target.dataset.bsChecked !== 'true'
