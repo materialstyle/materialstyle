@@ -62,7 +62,7 @@ For your convenience, we have created two starter templates:
 ## Template with Sidebar/Drawer
 
 <div class="d-flex align-items-center justify-content-center my-4">
-  <img class="lazy border border-purple" width="100%" style="max-width:800px;"
+  <img class="lazy border border-purple" style="width:100%;max-width:800px;"
        src="/materialstyle/assets/images/default.jpg"
        data-src="/materialstyle/assets/images/with_drawer.jpg"
        data-srcset="/materialstyle/assets/images/with_drawer.jpg"
@@ -182,7 +182,7 @@ For your convenience, we have created two starter templates:
 ## Template without Sidebar/Drawer
 
 <div class="d-flex align-items-center justify-content-center my-4">
-  <img class="lazy border border-purple" width="100%" style="max-width:800px;"
+  <img class="lazy border border-purple" style="width:100%;max-width:800px;"
        src="/materialstyle/assets/images/default.jpg"
        data-src="/materialstyle/assets/images/without_drawer.jpg"
        data-srcset="/materialstyle/assets/images/without_drawer.jpg"

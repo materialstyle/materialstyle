@@ -300,19 +300,19 @@ $('.nav-tabs').tab('redraw');
 
 <ul class="nav nav-tabs nav-justified" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple3">
       Apple
       <span class="ripple-surface"></span>
     </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#apricot">
+    <button class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#apricot3">
       Apricot
       <span class="ripple-surface"></span>
     </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#avocado">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#avocado3">
       Avocado
       <span class="ripple-surface"></span>
     </button>
@@ -320,9 +320,9 @@ $('.nav-tabs').tab('redraw');
 </ul>
 <!-- Tab Panes -->
 <div class="tab-content">
-  <div class="tab-pane container-fluid fade" role="tabpanel" id="apple">Apple</div>
-  <div class="tab-pane container-fluid active" role="tabpanel" id="apricot">Apricot</div>
-  <div class="tab-pane container-fluid fade" role="tabpanel" id="avocado">Avocado</div>
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="apple3">Apple</div>
+  <div class="tab-pane container-fluid active" role="tabpanel" id="apricot3">Apricot</div>
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="avocado3">Avocado</div>
 </div>
 
 {{< /example >}}
@@ -333,19 +333,19 @@ $('.nav-tabs').tab('redraw');
 
 <ul class="nav nav-tabs nav-justified primary-red base-indigo" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple4">
       Apple
       <span class="ripple-surface"></span>
     </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#apricot">
+    <button class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#apricot4">
       Apricot
       <span class="ripple-surface"></span>
     </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#avocado">
+    <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#avocado4">
       Avocado
       <span class="ripple-surface"></span>
     </button>
@@ -353,9 +353,9 @@ $('.nav-tabs').tab('redraw');
 </ul>
 <!-- Tab Panes -->
 <div class="tab-content">
-  <div class="tab-pane container-fluid fade" role="tabpanel" id="apple">Apple</div>
-  <div class="tab-pane container-fluid active" role="tabpanel" id="apricot">Apricot</div>
-  <div class="tab-pane container-fluid fade" role="tabpanel" id="avocado">Avocado</div>
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="apple4">Apple</div>
+  <div class="tab-pane container-fluid active" role="tabpanel" id="apricot4">Apricot</div>
+  <div class="tab-pane container-fluid fade" role="tabpanel" id="avocado4">Avocado</div>
 </div>
 
 {{< /example >}}

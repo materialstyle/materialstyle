@@ -47,6 +47,7 @@ into your projects.
 Generally speaking, Material Style supports the latest versions of each major platform's default 
 browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, 
 UC Browser Mini, Amazon Silk) are not supported.
+
 {{< bs-table "table table-bordered" >}}
 | | Chrome | Firefox | Safari | Android Browser &amp; WebView |
 | --- | --- | --- | --- | --- |

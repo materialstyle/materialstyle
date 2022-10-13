@@ -288,6 +288,7 @@
 }
 
 .navbar-dark {
+  // scss-docs-start navbar-dark-css-vars
   --#{$prefix}navbar-color: #{$navbar-dark-color};
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
   --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
@@ -304,4 +305,5 @@
   .drawer-toggler-icon {
     background-image: escape-svg($navbar-dark-drawer-toggler-icon-bg);
   }
+  // scss-docs-end navbar-dark-css-vars
 }

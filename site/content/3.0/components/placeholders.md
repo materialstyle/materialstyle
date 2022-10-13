@@ -33,6 +33,7 @@ of the placeholder and inform AT users of the update.
 
 ## Width
 You can change the width through grid column classes, width utilities, or inline styles.
+
 {{< example codeId="code2" >}}
 
 <span class="placeholder col-6"></span>
@@ -112,6 +113,7 @@ the perception of something being <i>actively</i> loaded.
 
 ## On Cards
 In the example below, we take a typical card component and recreate it with placeholders applied to create a “loading card”. Size and proportions are the same between the two.
+
 {{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
 <div class="card bg-purple bg-opacity-10" style="width:400px">
@@ -143,7 +145,9 @@ In the example below, we take a typical card component and recreate it with plac
 ##split##
 <div class="card bg-purple bg-opacity-10" style="width:400px">
   <div class="card-body">
-    <h4 class="card-title text-purple placeholder-glow"><span class="placeholder col-6"></span></h4>
+    <h4 class="card-title text-purple placeholder-glow">
+      <span class="placeholder col-6">&nbsp;</span>
+    </h4>
     <p class="card-text placeholder-glow">
       <span class="placeholder col-12"></span>
       <span class="placeholder col-4"></span>

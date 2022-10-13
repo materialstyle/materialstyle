@@ -3,6 +3,7 @@
 //
 
 .btn {
+  // MDC Ripple variables
   --mdc-ripple-hover-opacity: 0;
   --mdc-ripple-focus-opacity: 0;
   --mdc-ripple-press-opacity: .2;
@@ -19,9 +20,11 @@
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
-  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
   --#{$prefix}btn-focus-box-shadow: #{$btn-focus-box-shadow};
+  --#{$prefix}btn-active-box-shadow: #{$btn-active-box-shadow};
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
   // scss-docs-end btn-css-vars
 
   position: relative;
@@ -51,26 +54,25 @@
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
 
-  &:not([class*="btn-outline-"]):hover {
+  &:not([class*="btn-outline-"], .btn-link):hover {
     @include box-shadow($btn-hover-box-shadow);
   }
 
-  .btn-check:focus + &,
-  &:focus {
+  &:focus,
+  &:focus-visible {
     color: var(--#{$prefix}btn-hover-color);
     @include gradient-bg(var(--#{$prefix}btn-hover-bg));
     border-color: var(--#{$prefix}btn-hover-border-color);
     outline: 0;
   }
 
-  &:not([class*="btn-outline-"]):focus,
-  .btn-check:focus + & {
+  &:not([class*="btn-outline-"]):focus {
     box-shadow: var(--#{$prefix}btn-focus-box-shadow);
   }
 
   .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
+  :not(.btn-check) + &:active,
+  &:first-child:active,
   &.active,
   &.show {
     color: var(--#{$prefix}btn-active-color);
@@ -78,11 +80,17 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
     border-color: var(--#{$prefix}btn-active-border-color);
-    @include box-shadow(var(--#{$prefix}btn-active-shadow));
+    @include box-shadow(var(--#{$prefix}btn-active-box-shadow));
 
-    &:focus {
-      box-shadow: var(--#{$prefix}btn-active-shadow);
+    &:focus,
+    &:focus-visible {
+      box-shadow: var(--#{$prefix}btn-active-box-shadow);
     }
+  }
+
+  &:not([class*="btn-outline-"]):focus-visible,
+  .btn-check:focus-visible + & {
+    box-shadow: var(--#{$prefix}btn-focus-box-shadow);
   }
 
   &:disabled,
@@ -96,6 +104,10 @@
     opacity: var(--#{$prefix}btn-disabled-opacity);
     @include box-shadow(none);
   }
+
+  //
+  // Floating Action Buttons
+  //
 
   &.btn-fab {
     width: 56px;
@@ -176,24 +188,29 @@
   --#{$prefix}btn-font-weight: #{$font-weight-normal};
   --#{$prefix}btn-color: #{$btn-link-color};
   --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-width: #{$border-width};
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-hover-border-color: #{$btn-link-hover-color};
   --#{$prefix}btn-active-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-active-border-color: #{$btn-link-hover-color};
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$prefix}btn-disabled-border-color: transparent;
   --#{$prefix}btn-box-shadow: none;
-  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($primary), $primary, 15%))};
+  --#{$prefix}btn-focus-box-shadow: none;
+  --#{$prefix}btn-active-box-shadow: none;
 
   text-decoration: $link-decoration;
+  @if $enable-gradients {
+    background-image: none;
+  }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     text-decoration: $link-hover-decoration;
   }
 
-  &:focus {
+  &:focus-visible {
     color: var(--#{$prefix}btn-color);
   }
 
@@ -219,5 +236,8 @@
 
 [class*="btn-outline-"] {
   --#{$prefix}btn-border-width: #{$border-width};
-  @include box-shadow(none !important);
+  --#{$prefix}btn-box-shadow: none;
+  --#{$prefix}btn-active-box-shadow: none;
+  --#{$prefix}btn-focus-box-shadow: none;
+  --#{$prefix}gradient: none;
 }

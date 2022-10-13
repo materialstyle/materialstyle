@@ -139,13 +139,13 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
            placeholder="Email" autocomplete="off">
     <label for="email-spinner">Email</label>
   </div>
-  <span class="prepend">
+  <div class="prepend">
     <div class="spinner-material spinner-rainbow">
       <svg viewBox="25 25 50 50">
-        <circle cx="50" cy="50" r="20" fill="none">
+        <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
     </div>
-  </span>
+  </div>
 </div>
 ##split##
 <div class="form-floating-with-icon">
@@ -154,13 +154,13 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
            placeholder="Email" autocomplete="off">
     <label for="email-outline-spinner">Email</label>
   </div>
-  <span class="prepend">
+  <div class="prepend">
     <div class="spinner-material text-blue">
       <svg viewBox="25 25 50 50">
-        <circle cx="50" cy="50" r="20" fill="none">
+        <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
     </div>
-  </span>
+  </div>
 </div>
 ##split##
 <div class="form-floating-with-icon">
@@ -169,9 +169,9 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
            placeholder="Password" autocomplete="off">
     <label for="password-spinner">Password</label>
   </div>
-  <span class="append">
+  <div class="append">
     <div class="spinner-border text-blue"></div>
-  </span>
+  </div>
 </div>
 ##split##
 <div class="form-floating-with-icon">
@@ -180,9 +180,9 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
            placeholder="Password" autocomplete="off">
     <label for="password-outline-spinner">Password</label>
   </div>
-  <span class="append">
+  <div class="append">
     <div class="spinner-grow text-blue"></div>
-  </span>
+  </div>
 </div>
         
 {{< /example >}}

@@ -40,7 +40,7 @@ keywords: progress, progress bars
 {{< example codeId="code4" >}}
 
 <div class="progress" style="height: 5px;">
-  <div class="progress-bar bg-pink" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 5px;"></div>
+  <div class="progress-bar bg-pink" role="progressbar" style="width: 75%; height: 5px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 {{< /example >}}

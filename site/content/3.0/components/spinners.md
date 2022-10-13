@@ -14,7 +14,7 @@ keywords: progress, spinners
 
 <div class="spinner-material text-blue">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 
@@ -25,79 +25,79 @@ keywords: progress, spinners
 
 <div class="spinner-material text-blue">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-gray">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-green">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-cyan">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-yellow">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-red">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-light">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-dark">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-indigo">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-purple">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-pink">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-orange">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
 <div class="spinner-material text-teal">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 
@@ -109,7 +109,7 @@ keywords: progress, spinners
 
 <div class="spinner-material spinner-rainbow">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 
@@ -120,7 +120,7 @@ keywords: progress, spinners
 
 <div class="spinner-material spinner-material-sm spinner-blue">
   <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none">
+    <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 

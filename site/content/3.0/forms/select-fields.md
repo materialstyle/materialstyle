@@ -27,7 +27,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 
 <div class="form-floating">
   <select class="form-select">
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -38,7 +38,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 ##split##
 <div class="form-floating">
   <select class="form-select" disabled>
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -55,7 +55,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 
 <div class="form-floating form-floating-outlined">
   <select class="form-select">
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -66,7 +66,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 ##split##
 <div class="form-floating form-floating-outlined">
   <select class="form-select" disabled>
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -84,7 +84,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 
 <div class="form-floating base-purple primary-pink">
   <select class="form-select">
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -95,7 +95,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 ##split##
 <div class="form-floating form-floating-outlined base-purple primary-pink">
   <select class="form-select">
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -113,7 +113,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 
 <div class="form-floating searchable">
   <select class="form-select">
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -124,7 +124,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 ##split##
 <div class="form-floating form-floating-outlined searchable">
   <select class="form-select">
-    <option value=""></option>
+    <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -141,7 +141,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -157,7 +157,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -173,7 +173,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -189,7 +189,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -210,7 +210,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -221,7 +221,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
   <div class="prepend">
     <div class="spinner-material spinner-rainbow">
       <svg viewBox="25 25 50 50">
-        <circle cx="50" cy="50" r="20" fill="none">
+        <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
     </div>
   </div>
@@ -230,7 +230,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -241,7 +241,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
   <div class="prepend">
     <div class="spinner-material text-blue">
       <svg viewBox="25 25 50 50">
-        <circle cx="50" cy="50" r="20" fill="none">
+        <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
     </div>
   </div>
@@ -250,7 +250,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -266,7 +266,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 <div class="form-floating-with-icon">
   <div class="form-floating form-floating-outlined">
     <select class="form-select">
-      <option value=""></option>
+      <option value="" label="blank option"></option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
       <option value="3">Option 3</option>
@@ -384,7 +384,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
   <div class="prepend">
     <div class="spinner-material text-blue">
       <svg viewBox="25 25 50 50">
-        <circle cx="50" cy="50" r="20" fill="none">
+        <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
     </div>
   </div>
