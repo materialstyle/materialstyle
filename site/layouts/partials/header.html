@@ -7,13 +7,13 @@
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="{{ .Site.Params.docs_version }}">
 
-<meta name="theme-color" content="#6f42c1"/>
+<meta name="theme-color" content="#6f42c1">
 
-<meta property="og:url" content="https://materialstyle.github.io"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}"/>
-<meta property="og:description" content="{{ .Page.Params.description | default .Site.Params.description | markdownify }}"/>
-<meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg"/>
+<meta property="og:url" content="https://materialstyle.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}">
+<meta property="og:description" content="{{ .Page.Params.description | default .Site.Params.description | markdownify }}">
+<meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg">
 
 <title>{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}</title>
 
@@ -24,5 +24,5 @@
 <meta name="robots" content="{{ . }}">
 {{- end }}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
 {{ partial "stylesheet" . }}

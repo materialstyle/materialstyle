@@ -38,13 +38,13 @@
   {{- end -}}
 
   <div class="d-flex justify-content-end">
-    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
             data-bs-toggle="collapse"
             {{ with $codeId }} href="#{{ . }}" {{ end }}
             style="border-top-left-radius: 0.275rem !important;">
       <i class="bi bi-code-slash fs-5 me-1"></i> CODE
       <span class="ripple-surface"></span>
-    </button>
+    </a>
   </div>
 
   <div class="collapse" {{ with $codeId }} id="{{ . }}" {{ end }}>
