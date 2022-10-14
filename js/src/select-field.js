@@ -153,7 +153,7 @@ class SelectField extends BaseComponent {
       dropdownMenu = document.createElement('div')
       dropdownMenu.role = 'listbox'
       dropdownMenu.className = 'dropdown-menu'
-      dropdownMenu.setAttribute('aria-label', (this._label ? this._label.innerHTML : 'Select Field') + ' listbox')
+      dropdownMenu.setAttribute('aria-label', this._label ? this._label.innerHTML : 'Select Field')
       dropdownMenu.id = `listbox${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).slice(SUBSTR_INDEX)}${Date.now().toString(TO_STRING_BASE)}listbox`
     }
 
@@ -269,7 +269,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map(option => {
         if (option.selected) {
-          return `<span class="badge d-inline-flex align-items-center p-0">${option.text}<button type="button" class="btn-close ms-1" aria-label="Deselect option ${option.text}" data-value="${option.value}"></button></span>`
+          return `<span class="badge d-inline-flex align-items-center p-0">${option.text}<button type="button" class="btn-close ms-1" aria-label="Deselect ${option.text}" data-value="${option.value}"></button></span>`
         }
 
         return ''
