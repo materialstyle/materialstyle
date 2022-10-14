@@ -154,7 +154,7 @@ class SelectField extends BaseComponent {
       dropdownMenu.role = 'listbox'
       dropdownMenu.className = 'dropdown-menu'
       dropdownMenu.setAttribute('aria-label', (this._label ? this._label.innerHTML : 'Select Field') + ' listbox')
-      dropdownMenu.id = `listbox${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).substr(SUBSTR_INDEX)}${Date.now().toString(TO_STRING_BASE)}listbox`
+      dropdownMenu.id = `listbox${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).slice(SUBSTR_INDEX)}${Date.now().toString(TO_STRING_BASE)}listbox`
     }
 
     if (this._isSearchable) {
