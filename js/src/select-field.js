@@ -44,6 +44,8 @@ const SELECTOR_DROPDOWN_ITEM = '.dropdown-item:not(.select-all):not(.btn-close)'
 const SELECTOR_SELECT_ALL = '.select-all'
 
 const LABEL_SCALE = 0.85
+const TO_STRING_BASE = 36
+const SUBSTR_INDEX = 2
 
 class SelectField extends BaseComponent {
   constructor(element) {
@@ -151,6 +153,8 @@ class SelectField extends BaseComponent {
       dropdownMenu = document.createElement('div')
       dropdownMenu.role = 'listbox'
       dropdownMenu.className = 'dropdown-menu'
+      dropdownMenu.setAttribute('aria-label', (this._label ? this._label.innerHTML : 'Select Field') + ' Menu')
+      dropdownMenu.id = `listbox${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).substr(SUBSTR_INDEX)}${Date.now().toString(TO_STRING_BASE)}listbox`
     }
 
     if (this._isSearchable) {
@@ -196,6 +200,8 @@ class SelectField extends BaseComponent {
     selectedItem.type = 'button'
     selectedItem.role = 'combobox'
     selectedItem.setAttribute('aria-haspopup', 'listbox')
+    selectedItem.setAttribute('aria-controls', this._dropdownMenu.id)
+    selectedItem.setAttribute('aria-expanded', 'false')
     selectedItem.setAttribute('aria-label', this._label ? this._label.innerHTML : 'Select Field')
     selectedItem.className = 'btn btn-select dropdown-toggle text-start shadow-none'
     selectedItem.dataset.bsToggle = 'dropdown'
