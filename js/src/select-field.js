@@ -44,6 +44,8 @@ const SELECTOR_DROPDOWN_ITEM = '.dropdown-item:not(.select-all):not(.btn-close)'
 const SELECTOR_SELECT_ALL = '.select-all'
 
 const LABEL_SCALE = 0.85
+const TO_STRING_BASE = 36
+const SUBSTR_INDEX = 2
 
 class SelectField extends BaseComponent {
   constructor(element) {
@@ -149,7 +151,10 @@ class SelectField extends BaseComponent {
 
     if (dropdownMenu === undefined) {
       dropdownMenu = document.createElement('div')
+      dropdownMenu.role = 'listbox'
       dropdownMenu.className = 'dropdown-menu'
+      dropdownMenu.setAttribute('aria-label', this._label ? this._label.innerHTML : 'Select Field')
+      dropdownMenu.id = `listbox${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).slice(SUBSTR_INDEX)}${Date.now().toString(TO_STRING_BASE)}listbox`
     }
 
     if (this._isSearchable) {
@@ -178,7 +183,7 @@ class SelectField extends BaseComponent {
       const closeButton = document.createElement('button')
       closeButton.type = 'button'
       closeButton.className = 'btn-close dropdown-item w-100'
-      closeButton.ariaLabel = 'Close'
+      closeButton.setAttribute('aria-label', 'Close listbox')
 
       this._closeButton = closeButton
       dropdownMenu.append(closeButton)
@@ -193,6 +198,11 @@ class SelectField extends BaseComponent {
 
     const selectedItem = document.createElement('button')
     selectedItem.type = 'button'
+    selectedItem.role = 'combobox'
+    selectedItem.setAttribute('aria-haspopup', 'listbox')
+    selectedItem.setAttribute('aria-controls', this._dropdownMenu.id)
+    selectedItem.setAttribute('aria-expanded', 'false')
+    selectedItem.setAttribute('aria-label', this._label ? this._label.innerHTML : 'Select Field')
     selectedItem.className = 'btn btn-select dropdown-toggle text-start shadow-none'
     selectedItem.dataset.bsToggle = 'dropdown'
     selectedItem.dataset.bsAutoClose = 'outside'
@@ -225,9 +235,11 @@ class SelectField extends BaseComponent {
   createDropdownItems(text, value, checked, isSelectAllButton = false) {
     const dropdownItem = document.createElement('button')
     dropdownItem.type = 'button'
+    dropdownItem.role = 'option'
     dropdownItem.className = 'dropdown-item d-flex align-items-center'
-    dropdownItem.dataset.bsValue = value
-    dropdownItem.dataset.bsChecked = false
+    dropdownItem.setAttribute('aria-selected', 'false')
+    dropdownItem.setAttribute('aria-label', text)
+    dropdownItem.dataset.value = value
 
     if (isSelectAllButton) {
       dropdownItem.classList.add('select-all')
@@ -246,8 +258,7 @@ class SelectField extends BaseComponent {
     } else {
       dropdownItem.innerHTML = text
       if (checked) {
-        dropdownItem.classList.add('checked')
-        dropdownItem.dataset.bsChecked = true
+        dropdownItem.setAttribute('aria-selected', 'true')
       }
     }
 
@@ -258,7 +269,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map(option => {
         if (option.selected) {
-          return `<span class="badge bg-dark d-inline-flex align-items-center p-1 m-1">${option.text}<button type="button" class="btn-close btn-close-white ms-1" aria-hidden="true" data-bs-value="${option.value}"></button></span>`
+          return `<span class="badge d-inline-flex align-items-center p-0">${option.text}<button type="button" class="btn-close ms-1" aria-label="Deselect ${option.text}" data-value="${option.value}"></button></span>`
         }
 
         return ''
@@ -269,7 +280,7 @@ class SelectField extends BaseComponent {
       for (const [, value] of Object.entries(closeButton)) {
         EventHandler.on(value, EVENT_CLICK, event => {
           this._dropdownInstance.show()
-          this.selectOne(event.target.dataset.bsValue, false)
+          this.selectOne(event.target.dataset.value, false)
         })
       }
     } else {
@@ -364,26 +375,22 @@ class SelectField extends BaseComponent {
     let index
 
     if (!this._multiSelectEnabled) {
+      // Reset Dropdown
       const dropdownItems = this._dropdown.querySelectorAll(SELECTOR_DROPDOWN_ITEM)
       for (const dropdownItem of dropdownItems) {
-        dropdownItem.dataset.bsChecked = false
-        dropdownItem.classList.remove('checked')
+        dropdownItem.setAttribute('aria-selected', 'false')
       }
 
+      // Reset Select
       index = this._options.findIndex(o => o.selected === true)
       if (index !== -1) {
         this._options[index].selected = false
       }
     }
 
-    this._dropdown.querySelector(`.dropdown-item[data-bs-value="${value}"]`).dataset.bsChecked = checked
+    this._dropdown.querySelector(`.dropdown-item[data-value="${value}"]`).setAttribute('aria-selected', checked)
 
-    if (checked) {
-      this._dropdown.querySelector(`.dropdown-item[data-bs-value="${value}"]`).classList.add('checked')
-    } else {
-      this._dropdown.querySelector(`.dropdown-item[data-bs-value="${value}"]`).classList.remove('checked')
-    }
-
+    // Select the option
     index = this._options.findIndex(o => o.value === value)
     this._options[index].selected = checked
 
@@ -414,17 +421,17 @@ class SelectField extends BaseComponent {
     EventHandler.on(this._selectedItem, EVENT_FOCUS, () => this._dropdown.classList.add('float'))
     EventHandler.on(this._selectedItem, EVENT_FOCUSOUT, () => this.handleFocusOut())
     EventHandler.on(this._dropdown, EVENT_SHOWN, () => this._dropdown.classList.add('float'))
-    EventHandler.on(this._dropdown, EVENT_HIDDEN, () => this.handleFocusOut())
+    EventHandler.on(this._dropdown, EVENT_HIDDEN, e => {
+      if (!e.clickEvent) {
+        this._selectedItem.focus()
+      } else {
+        this.handleFocusOut()
+      }
+    })
 
     EventHandler.on(this._dropdown.querySelector(SELECTOR_SELECT_ALL), EVENT_CLICK, event => {
-      const checked = event.target.dataset.bsChecked !== 'true'
-      event.target.dataset.bsChecked = checked
-
-      if (checked) {
-        event.target.classList.add('checked')
-      } else {
-        event.target.classList.remove('checked')
-      }
+      const checked = event.target.getAttribute('aria-selected') !== 'true'
+      event.target.setAttribute('aria-selected', checked)
 
       this.selectAll(checked)
     })
@@ -442,9 +449,9 @@ class SelectField extends BaseComponent {
     for (const [, value] of Object.entries(dropdownItems)) {
       EventHandler.on(value, EVENT_CLICK, event => {
         if (this._multiSelectEnabled) {
-          this.selectOne(event.target.dataset.bsValue, event.target.dataset.bsChecked !== 'true')
+          this.selectOne(event.target.dataset.value, event.target.getAttribute('aria-selected') !== 'true')
         } else {
-          this.selectOne(event.target.dataset.bsValue, true)
+          this.selectOne(event.target.dataset.value, true)
 
           this._dropdownInstance.toggle()
         }
@@ -473,11 +480,9 @@ class SelectField extends BaseComponent {
 
         const selectAllButton = this._dropdown.querySelector(SELECTOR_SELECT_ALL)
         if (allSelected) {
-          selectAllButton.classList.add('checked')
-          selectAllButton.dataset.bsChecked = true
+          selectAllButton.setAttribute('aria-selected', 'true')
         } else {
-          selectAllButton.classList.remove('checked')
-          selectAllButton.dataset.bsChecked = false
+          selectAllButton.setAttribute('aria-selected', 'false')
         }
       } else {
         this.setSelectValue(event.target.value, true)
