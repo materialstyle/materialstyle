@@ -34,27 +34,27 @@
     },
     {
       "path": "./dist/js/materialstyle.bundle.js",
-      "maxSize": "48.6 kB"
+      "maxSize": "48.75 kB"
     },
     {
       "path": "./dist/js/materialstyle.bundle.min.js",
-      "maxSize": "26.5 kB"
+      "maxSize": "26.55 kB"
     },
     {
       "path": "./dist/js/materialstyle.esm.js",
-      "maxSize": "33.45 kB"
+      "maxSize": "33.55 kB"
     },
     {
       "path": "./dist/js/materialstyle.esm.min.js",
-      "maxSize": "22.2 kB"
+      "maxSize": "22.3 kB"
     },
     {
       "path": "./dist/js/materialstyle.js",
-      "maxSize": "34.25 kB"
+      "maxSize": "34.35 kB"
     },
     {
       "path": "./dist/js/materialstyle.min.js",
-      "maxSize": "19.4 kB"
+      "maxSize": "19.5 kB"
     }
   ],
   "ci": {
