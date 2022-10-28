@@ -20,7 +20,7 @@ which can be used from a CDN or installed using a package manager.
 1. CDN
 ```html
 <!-- MDC Ripple JS -->
-<script src="https://unpkg.com/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
+<script src="https://cdn.jsdelivr.net/npm/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
         integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
         crossorigin="anonymous"></script>
 ```
