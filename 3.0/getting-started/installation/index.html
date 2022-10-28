@@ -234,6 +234,45 @@ v3.0
 <div class=component-showcase>
 <h1 id=content>Installation</h1>
 <h2 id=cdn>CDN</h2>
+<ul class="nav nav-tabs primary-purple base-dark" id=cdn-tab role=tablist>
+<li class=nav-item role=presentation>
+<button class="nav-link active" id=jsdelivr-tab data-bs-toggle=tab data-bs-target=#jsdelivr type=button role=tab aria-controls=jsdelivr aria-selected=true>
+jsDelivr
+<span class=ripple-surface></span>
+</button>
+</li>
+<li class=nav-item role=presentation>
+<button class=nav-link id=unpkg-tab data-bs-toggle=tab data-bs-target=#unpkg type=button role=tab aria-controls=unpkg aria-selected=false>
+unpkg
+<span class=ripple-surface></span>
+</button>
+</li>
+</ul>
+<div class=tab-content id=cdn-tab-content>
+<div class="tab-pane fade show active pt-2" id=jsdelivr role=tabpanel aria-labelledby=jsdelivr-tab tabindex=0>
+<p>Styles</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=c>&lt;!-- Material Style CSS --&gt;</span>
+<span class=p>&lt;</span><span class=nt>link</span> <span class=na>rel</span><span class=o>=</span><span class=s>&#34;stylesheet&#34;</span>
+      <span class=na>href</span><span class=o>=</span><span class=s>&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css&#34;</span> 
+      <span class=na>integrity</span><span class=o>=</span><span class=s>&#34;sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5&#34;</span> 
+      <span class=na>crossorigin</span><span class=o>=</span><span class=s>&#34;anonymous&#34;</span><span class=p>&gt;</span>
+</code></pre></div><p>Scripts</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=c>&lt;!-- Popper JS --&gt;</span>
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js&#34;</span> 
+        <span class=na>integrity</span><span class=o>=</span><span class=s>&#34;sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB&#34;</span> 
+        <span class=na>crossorigin</span><span class=o>=</span><span class=s>&#34;anonymous&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+        
+<span class=c>&lt;!-- MDC Ripple JS (Only for Ripple effects) --&gt;</span>
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://cdn.jsdelivr.net/npm/@material/ripple@14.0.0/dist/mdc.ripple.min.js&#34;</span>
+        <span class=na>integrity</span><span class=o>=</span><span class=s>&#34;sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ&#34;</span>
+        <span class=na>crossorigin</span><span class=o>=</span><span class=s>&#34;anonymous&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+
+<span class=c>&lt;!-- Material Style JS --&gt;</span>
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js&#34;</span> 
+        <span class=na>integrity</span><span class=o>=</span><span class=s>&#34;sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES&#34;</span> 
+        <span class=na>crossorigin</span><span class=o>=</span><span class=s>&#34;anonymous&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</code></pre></div> </div>
+<div class="tab-pane fade pt-2" id=unpkg role=tabpanel aria-labelledby=unpkg-tab tabindex=0>
 <p>Styles</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=c>&lt;!-- Material Style CSS --&gt;</span>
 <span class=p>&lt;</span><span class=nt>link</span> <span class=na>rel</span><span class=o>=</span><span class=s>&#34;stylesheet&#34;</span>
@@ -242,7 +281,7 @@ v3.0
       <span class=na>crossorigin</span><span class=o>=</span><span class=s>&#34;anonymous&#34;</span><span class=p>&gt;</span>
 </code></pre></div><p>Scripts</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=c>&lt;!-- Popper JS --&gt;</span>
-<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js&#34;</span> 
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js&#34;</span> 
         <span class=na>integrity</span><span class=o>=</span><span class=s>&#34;sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB&#34;</span> 
         <span class=na>crossorigin</span><span class=o>=</span><span class=s>&#34;anonymous&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
         
@@ -255,7 +294,9 @@ v3.0
 <span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js&#34;</span> 
         <span class=na>integrity</span><span class=o>=</span><span class=s>&#34;sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES&#34;</span> 
         <span class=na>crossorigin</span><span class=o>=</span><span class=s>&#34;anonymous&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
-</code></pre></div><br>
+</code></pre></div> </div>
+</div>
+<br>
 <h2 id=npm>npm</h2>
 <a target=_blank href=https://github.com/materialstyle/materialstyle-examples class="text-decoration-none text-dark">
 <div class="d-flex align-items-center bg-purple bg-opacity-25 my-4 rounded-3 overflow-hidden">
