@@ -18,8 +18,23 @@ keywords: buttons, floating action buttons
 
 {{< /example >}}
 
+## Elevated
+Add ```.elevated-[1 to 10]``` to create Elevated buttons.
+
+{{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-3">}}
+
+<button type="button" class="btn btn-fab btn-purple elevated-1">
+  <i class="bi bi-heart-fill"></i>
+</button>
+##split##
+<button type="button" class="btn btn-fab btn-purple elevated-10">
+  <i class="bi bi-heart-fill"></i>
+</button>
+
+{{< /example >}}
+
 ## Disabled
-{{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-fab btn-purple" disabled>
   <i class="bi bi-heart-fill"></i>
@@ -37,7 +52,7 @@ keywords: buttons, floating action buttons
 {{< partial "callout-rippledocs.md" >}}
 {{< /callout >}}
 
-{{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-fab btn-purple">
   <i class="bi bi-heart-fill"></i>
@@ -58,7 +73,7 @@ rippleSurface.map(s => {
 <br>
 
 ## Leaf FAB
-{{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-fab leaf-fab btn-purple">
   <i class="bi bi-heart-fill"></i>
@@ -67,7 +82,7 @@ rippleSurface.map(s => {
 {{< /example >}}
 
 ## Leaf FAB inverted
-{{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-fab leaf-fab-inverted btn-purple">
   <i class="bi bi-heart-fill"></i>
@@ -76,7 +91,7 @@ rippleSurface.map(s => {
 {{< /example >}}
 
 ## Mini FAB
-{{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-fab mini-fab btn-purple">
   <i class="bi bi-heart-fill"></i>
@@ -85,7 +100,7 @@ rippleSurface.map(s => {
 {{< /example >}}
 
 ## Extended Fab / Rounded Button
-{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-purple btn-lg rounded-pill">
   <i class="bi bi-heart-fill"></i> Like
