@@ -22,10 +22,20 @@
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
   --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
+  --#{$prefix}btn-hover-box-shadow: #{$btn-hover-box-shadow};
   --#{$prefix}btn-focus-box-shadow: #{$btn-focus-box-shadow};
   --#{$prefix}btn-active-box-shadow: #{$btn-active-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
   // scss-docs-end btn-css-vars
+
+  @for $i from 1 through 10 {
+    &.elevated-#{$i} {
+      --#{$prefix}btn-box-shadow: var(--#{$prefix}shadow-#{$i}dp);
+      --#{$prefix}btn-hover-box-shadow: var(--#{$prefix}shadow-#{($i + 4)}dp);
+      --#{$prefix}btn-focus-box-shadow: var(--#{$prefix}shadow-#{($i + 4)}dp);
+      --#{$prefix}btn-active-box-shadow: var(--#{$prefix}shadow-#{($i + 8)}dp);
+    }
+  }
 
   position: relative;
   display: inline-block;
@@ -55,7 +65,7 @@
   }
 
   &:not([class*="btn-outline-"], .btn-link):hover {
-    @include box-shadow($btn-hover-box-shadow);
+    @include box-shadow(var(--#{$prefix}btn-hover-box-shadow));
   }
 
   &:focus,
@@ -67,7 +77,7 @@
   }
 
   &:not([class*="btn-outline-"]):focus {
-    box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    @include box-shadow(var(--#{$prefix}btn-focus-box-shadow));
   }
 
   .btn-check:checked + &,
@@ -84,13 +94,13 @@
 
     &:focus,
     &:focus-visible {
-      box-shadow: var(--#{$prefix}btn-active-box-shadow);
+      @include box-shadow(var(--#{$prefix}btn-active-box-shadow));
     }
   }
 
   &:not([class*="btn-outline-"]):focus-visible,
   .btn-check:focus-visible + & {
-    box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    @include box-shadow(var(--#{$prefix}btn-focus-box-shadow));
   }
 
   &:disabled,

@@ -32,9 +32,24 @@ keywords: buttons
 
 {{< /example >}}
 
+## Elevated buttons
+Add ```.elevated-[1 to 10]``` to create Elevated buttons.
+
+{{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-3">}}
+
+<button type="button" class="btn btn-purple elevated-1">
+  Elevated 1
+</button>
+##split##
+<button type="button" class="btn btn-purple elevated-10">
+  Elevated 10
+</button>
+
+{{< /example >}}
+
 ## Color options
 
-{{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-primary m-1">
   Primary | Blue
@@ -91,7 +106,7 @@ keywords: buttons
 {{< /example >}}
 
 ## Button Link
-{{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-link m-1">
   Link
@@ -102,7 +117,7 @@ keywords: buttons
 ## Outlined Buttons
 Add ```.btn-outline-[color]``` to create Outlined buttons.
 
-{{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-outline-pink m-1">
   Icon <i class="bi bi-star-fill"></i>
@@ -125,7 +140,7 @@ Add ```.btn-outline-[color]``` to create Outlined buttons.
 ## Text Buttons
 Add ```.border-0``` to Outlined buttons to create Text buttons.
 
-{{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-outline-green border-0 m-1">
   Icon <i class="bi bi-star-fill"></i>
@@ -155,7 +170,7 @@ Add ```.border-0``` to Outlined buttons to create Text buttons.
 {{< partial "callout-rippledocs.md" >}}
 {{< /callout >}}
 
-{{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-success m-1">
   Success | Green
@@ -191,7 +206,7 @@ rippleSurface.map(s => {
 <br>
 
 ## Horizontal Button group
-{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="btn-group m-1">
   <button type="button" class="btn btn-indigo">Button</button>
@@ -225,7 +240,7 @@ rippleSurface.map(s => {
 {{< /example >}}
 
 ## Vertical Button group
-{{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code9" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="btn-group-vertical m-1">
   <button type="button" class="btn btn-indigo">Button</button>
