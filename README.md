@@ -30,7 +30,7 @@ https://materialstyle.github.io/materialstyle/3.0/getting-started/installation/
 Have a bug or a feature request? Please read the [issue guidelines](https://github.com/materialstyle/materialstyle/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/materialstyle/materialstyle/issues/new).
 
 ## Documentation
-Bootstrap's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://materialstyle.github.io/>. The docs may also be run locally.
+Material Style's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://materialstyle.github.io/>. The docs may also be run locally.
 
 ### Running documentation locally
 1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
