@@ -5,11 +5,11 @@
  * --------------------------------------------------------------------------
  */
 
-import Tab from './tab'
-import EventHandler from './dom/event-handler'
+import Tab from './tab.js'
+import EventHandler from './dom/event-handler.js'
 import {
   defineJQueryPlugin
-} from './util/index'
+} from './util/index.js'
 
 /**
  * ------------------------------------------------------------------------

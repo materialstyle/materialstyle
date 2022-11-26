@@ -105,7 +105,7 @@ if (BROWSERSTACK) {
   config.browserStack = {
     username: ENV.BROWSER_STACK_USERNAME,
     accessKey: ENV.BROWSER_STACK_ACCESS_KEY,
-    build: `materialstyle-${ENV.GITHUB_SHA ? ENV.GITHUB_SHA.slice(0, 7) + '-' : ''}${new Date().toISOString()}`,
+    build: `materialstyle-${ENV.GITHUB_SHA ? `${ENV.GITHUB_SHA.slice(0, 7)}-` : ''}${new Date().toISOString()}`,
     project: 'materialstyle',
     retryLimit: 2
   }

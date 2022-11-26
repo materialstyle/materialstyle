@@ -1,6 +1,6 @@
-## How does Bootstrap's test suite work?
+## How does Material Style's test suite work?
 
-Bootstrap uses [Jasmine](https://jasmine.github.io/). Each plugin has a file dedicated to its tests in `tests/unit/<plugin-name>.spec.js`.
+Material Style uses [Jasmine](https://jasmine.github.io/). Each plugin has a file dedicated to its tests in `tests/unit/<plugin-name>.spec.js`.
 
 - `visual/` contains "visual" tests which are run interactively in real browsers and require manual verification by humans.
 
@@ -22,7 +22,7 @@ To run the unit test suite via [Karma](https://karma-runner.github.io/) and debu
 - Each test should be in the corresponding `describe`.
 - Each test should test only one unit per test, although one test can include several assertions. Create multiple tests for multiple units of functionality.
 - Each test should use [`expect`](https://jasmine.github.io/api/edge/matchers.html) to ensure something is expected.
-- Each test should follow the project's [JavaScript Code Guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#js)
+- Each test should follow the project's [JavaScript Code Guidelines](https://github.com/materialstyle/materialstyle/blob/main/.github/CONTRIBUTING.md#js)
 
 ## Code coverage
 

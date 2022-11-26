@@ -7,13 +7,13 @@
 
 import {
   getBaseColor, getPrimaryColor
-} from './util/color'
-import BaseComponent from './base-component'
-import EventHandler from './dom/event-handler'
-import Dropdown from './dropdown'
+} from './util/color.js'
+import BaseComponent from './base-component.js'
+import EventHandler from './dom/event-handler.js'
+import Dropdown from './dropdown.js'
 import {
   defineJQueryPlugin
-} from './util/index'
+} from './util/index.js'
 
 /**
  * --------------------------------------------------------------------------

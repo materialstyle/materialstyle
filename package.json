@@ -59,7 +59,7 @@
     "js-compile-standalone-esm": "rollup --environment ESM:true,BUNDLE:false --config build/rollup.config.js --sourcemap",
     "js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap",
     "js-compile-plugins": "node build/build-plugins.js",
-    "js-lint": "eslint --fix --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .html,.js .",
+    "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .html,.js .",
     "js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
     "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/materialstyle.js.map,includeSources,url=materialstyle.min.js.map\" --output dist/js/materialstyle.min.js dist/js/materialstyle.js",
     "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=dist/js/materialstyle.esm.js.map,includeSources,url=materialstyle.esm.min.js.map\" --output dist/js/materialstyle.esm.min.js dist/js/materialstyle.esm.js",

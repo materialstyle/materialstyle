@@ -7,11 +7,11 @@
 
 import {
   getBaseColor, getPrimaryColor
-} from './util/color'
-import BaseComponent from './base-component'
+} from './util/color.js'
+import BaseComponent from './base-component.js'
 import {
   defineJQueryPlugin
-} from './util/index'
+} from './util/index.js'
 
 /**
  * --------------------------------------------------------------------------

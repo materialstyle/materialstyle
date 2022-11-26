@@ -16,7 +16,7 @@ const { babel } = require('@rollup/plugin-babel')
 const banner = require('./banner.js')
 
 const sourcePath = path.resolve(__dirname, '../js/src/').replace(/\\/g, '/')
-const jsFiles = globby.sync(sourcePath + '/**/*.js')
+const jsFiles = globby.sync(`${sourcePath}/**/*.js`)
 
 // Array which holds the resolved plugins
 const resolvedPlugins = []
@@ -27,7 +27,7 @@ const filenameToEntity = filename => filename.replace('.js', '')
 
 for (const file of jsFiles) {
   resolvedPlugins.push({
-    src: file.replace('.js', ''),
+    src: file,
     dist: file.replace('src', 'dist'),
     fileName: path.basename(file),
     className: filenameToEntity(path.basename(file))
@@ -60,7 +60,7 @@ const build = async plugin => {
 
       const usedPlugin = resolvedPlugins.find(plugin => {
         // If Tab's source is being checked, skip matching MaterialTab's src
-        if (source === './tab' && plugin.className === 'MaterialTab') {
+        if (source === './tab.js' && plugin.className === 'MaterialTab') {
           return false
         }
 

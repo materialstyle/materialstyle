@@ -143,7 +143,7 @@
     })
 
     // Modal
-    const myModal = document.getElementById('myModal2')
+    const myModal = document.getElementById('myModalWithForms')
     if (myModal) {
       myModal.addEventListener('shown.bs.modal', function () {
         // Redraw Text Field

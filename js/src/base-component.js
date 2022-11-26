@@ -1,14 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.2): base-component.js
+ * Bootstrap (v5.2.3): base-component.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import Data from './dom/data'
-import { executeAfterTransition, getElement } from './util/index'
-import EventHandler from './dom/event-handler'
-import Config from './util/config'
+import Data from './dom/data.js'
+import { executeAfterTransition, getElement } from './util/index.js'
+import EventHandler from './dom/event-handler.js'
+import Config from './util/config.js'
 
 /**
  * Constants

@@ -18,6 +18,7 @@
   --#{$prefix}btn-color: #{$body-color};
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-hover-box-shadow: #{$btn-hover-box-shadow};
   --#{$prefix}btn-focus-box-shadow: #{$btn-focus-box-shadow};
@@ -62,6 +63,13 @@
 
   &:not([class*="btn-outline-"], .btn-link):hover {
     @include box-shadow(var(--#{$prefix}btn-hover-box-shadow));
+  }
+
+  .btn-check + &:hover {
+    // override for the checkbox/radio buttons
+    color: var(--#{$prefix}btn-color);
+    background-color: var(--#{$prefix}btn-bg);
+    border-color: var(--#{$prefix}btn-border-color);
   }
 
   &:focus,

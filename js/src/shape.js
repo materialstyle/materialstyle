@@ -5,10 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
-import BaseComponent from './base-component'
+import BaseComponent from './base-component.js'
 import {
   defineJQueryPlugin
-} from './util/index'
+} from './util/index.js'
 
 /**
  * --------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.2): dropdown.js
+ * Bootstrap (v5.2.3): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -16,11 +16,11 @@ import {
   isRTL,
   isVisible,
   noop
-} from './util/index'
-import EventHandler from './dom/event-handler'
-import Manipulator from './dom/manipulator'
-import SelectorEngine from './dom/selector-engine'
-import BaseComponent from './base-component'
+} from './util/index.js'
+import EventHandler from './dom/event-handler.js'
+import Manipulator from './dom/manipulator.js'
+import SelectorEngine from './dom/selector-engine.js'
+import BaseComponent from './base-component.js'
 
 /**
  * Constants

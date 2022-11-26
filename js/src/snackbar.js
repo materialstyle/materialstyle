@@ -7,12 +7,12 @@
 
 import {
   defineJQueryPlugin
-} from './util/index'
-import BaseComponent from './base-component'
-import Manipulator from './dom/manipulator'
+} from './util/index.js'
+import BaseComponent from './base-component.js'
+import Manipulator from './dom/manipulator.js'
 import {
   enableDismissTrigger
-} from './util/component-functions'
+} from './util/component-functions.js'
 
 /**
  * Constants

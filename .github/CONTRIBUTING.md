@@ -72,17 +72,17 @@ Example:
 
 Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in Material Style per se.
 
-| Vendor(s)     | Browser(s)                   | Rendering engine | Bug reporting website(s)                               | Notes                                                    |
-| ------------- | ---------------------------- | ---------------- | ------------------------------------------------------ | -------------------------------------------------------- |
-| Mozilla       | Firefox                      | Gecko            | https://bugzilla.mozilla.org/enter_bug.cgi             | "Core" is normally the right product option to choose.   |
-| Apple         | Safari                       | WebKit           | https://bugs.webkit.org/enter_bug.cgi?product=WebKit   | In Apple's bug reporter, choose "Safari" as the product. |
-| Google, Opera | Chrome, Chromium, Opera v15+ | Blink            | https://bugs.chromium.org/p/chromium/issues/list       | Click the "New issue" button.                            |
-| Microsoft     | Edge                         | Blink            | https://developer.microsoft.com/en-us/microsoft-edge/  | Go to "Help > Send Feedback" from the browser            |
+| Vendor(s)     | Browser(s)                   | Rendering engine | Bug reporting website(s)                                 | Notes                                                    |
+| ------------- | ---------------------------- | ---------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| Mozilla       | Firefox                      | Gecko            | <https://bugzilla.mozilla.org/enter_bug.cgi>             | "Core" is normally the right product option to choose.   |
+| Apple         | Safari                       | WebKit           | <https://bugs.webkit.org/enter_bug.cgi?product=WebKit>   | In Apple's bug reporter, choose "Safari" as the product. |
+| Google, Opera | Chrome, Chromium, Opera v15+ | Blink            | <https://bugs.chromium.org/p/chromium/issues/list>       | Click the "New issue" button.                            |
+| Microsoft     | Edge                         | Blink            | <https://developer.microsoft.com/en-us/microsoft-edge/>  | Go to "Help > Send Feedback" from the browser            |
 
 ## Feature requests
 
 Feature requests are welcome. But take a moment to find out whether your idea
-fits with the scope and aims of the project. It's up to *you* to make a strong
+fits with the scope and aims of the project. It's up to _you_ to make a strong
 case to convince the project's developers of the merits of this feature. Please
 provide as much detail and context as possible.
 
