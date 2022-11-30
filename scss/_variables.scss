@@ -823,12 +823,19 @@ $btn-active-bg-tint-amount:       20% !default;
 
 
 // Forms
+$form-field-color:               $dark !default;
+$form-field-bg:                  #f5f5f5 !default;
+$form-field-hover-bg:            #eee !default;
+$form-field-active-bg:           #e0e0e0 !default;
+$form-field-border-color:        #757575 !default;
+$form-field-active-border-color: $primary !default;
 
-$form-field-base-color:    var(--form-field-base-color, #757575) !default;
-$form-field-primary-color: var(--form-field-primary-color, $primary) !default;
-$form-control-bg:          #f5f5f5 !default;
-$form-control-hover-bg:    #eee !default;
-$form-control-active-bg:   #e0e0e0 !default;
+$form-field-dark-color:               $light !default;
+$form-field-dark-bg:                  $gray-900 !default;
+$form-field-dark-hover-bg:            $gray-800 !default;
+$form-field-dark-active-bg:           $gray-700 !default;
+$form-field-dark-border-color:        $light !default;
+$form-field-dark-active-border-color: $primary !default;
 
 // scss-docs-start form-text-variables
 $form-text-margin-top:                  .25rem !default;
