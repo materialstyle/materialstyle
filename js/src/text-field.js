@@ -62,8 +62,8 @@ class TextField extends BaseComponent {
   }
 
   initTextFields() {
-    this._formFloating.style.setProperty('--form-field-base-color', getBaseColor(this._formFloating))
-    this._formFloating.style.setProperty('--form-field-primary-color', getPrimaryColor(this._formFloating))
+    this._formFloating.style.setProperty('--bs-form-field-border-color', getBaseColor(this._formFloating))
+    this._formFloating.style.setProperty('--bs-form-field-active-border-color', getPrimaryColor(this._formFloating))
 
     this._label = this._formFloating.querySelector('label')
     this._inputGroup = this._formFloating.closest('.input-group')
