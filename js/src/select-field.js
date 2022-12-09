@@ -36,6 +36,7 @@ const EVENT_SHOWN = 'shown.bs.dropdown'
 
 const CLASS_NAME_FLOATING = 'form-floating'
 const CLASS_NAME_FLOATING_OUTLINED = 'form-floating-outlined'
+const CLASS_NAME_FLOATING_DARK = 'form-floating-dark'
 
 const CLASS_NAME_SEARCHABLE = 'searchable'
 const CLASS_NAME_MULTI_SELECT = 'multi-select'
@@ -152,7 +153,7 @@ class SelectField extends BaseComponent {
     if (dropdownMenu === undefined) {
       dropdownMenu = document.createElement('div')
       dropdownMenu.role = 'listbox'
-      dropdownMenu.className = 'dropdown-menu'
+      dropdownMenu.className = 'dropdown-menu mb-2'
       dropdownMenu.setAttribute('aria-label', this._label ? this._label.innerHTML : 'Select Field')
       dropdownMenu.id = `listbox${Date.now().toString(TO_STRING_BASE)}${Math.random().toString(TO_STRING_BASE).slice(SUBSTR_INDEX)}${Date.now().toString(TO_STRING_BASE)}listbox`
     }
@@ -182,7 +183,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       const closeButton = document.createElement('button')
       closeButton.type = 'button'
-      closeButton.className = 'btn-close dropdown-item w-100'
+      closeButton.className = `btn-close ${(this._formFloating.className.includes(CLASS_NAME_FLOATING_DARK) ? 'btn-close-white' : '')} dropdown-item w-100`
       closeButton.setAttribute('aria-label', 'Close listbox')
 
       this._closeButton = closeButton
@@ -269,7 +270,7 @@ class SelectField extends BaseComponent {
     if (this._multiSelectEnabled) {
       this._selectedItem.innerHTML = this._options.map(option => {
         if (option.selected) {
-          return `<span class="badge d-inline-flex align-items-center p-0">${option.text}<button type="button" class="btn-close ms-1" aria-label="Deselect ${option.text}" data-value="${option.value}"></button></span>`
+          return `<span class="badge d-inline-flex align-items-center p-0">${option.text}<button type="button" class="btn-close ${(this._formFloating.className.includes(CLASS_NAME_FLOATING_DARK) ? 'btn-close-white' : '')}" aria-label="Deselect ${option.text}" data-value="${option.value}"></button></span>`
         }
 
         return ''

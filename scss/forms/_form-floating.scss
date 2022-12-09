@@ -6,6 +6,8 @@
   --#{$prefix}form-field-active-bg: #{$form-field-active-bg};
   --#{$prefix}form-field-border-color: #{$form-field-border-color};
   --#{$prefix}form-field-active-border-color: #{$form-field-active-border-color};
+  --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator)};
+  --#{$prefix}form-select-checkmark: #{escape-svg($form-select-checkmark)};
 
   position: relative;
   width: 100%;
@@ -36,7 +38,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     pointer-events: none;
-    border: $input-border-width solid transparent; // Required for aligning label's text with the input as it affects inner box model
     transform-origin: 0 0;
     @include transition($form-floating-transition);
   }
@@ -98,14 +99,14 @@
     > .dropdown-toggle {
       display: block;
       width: 100%;
-      height: $form-floating-height;
+      height: auto;
       min-height: 60px;
       max-height: 300px;
       padding: $form-select-padding-y calc(var(--append-width, 0px) + $form-select-indicator-padding) $form-select-padding-y var(--prepend-width, $form-select-padding-x);
       overflow: auto;
       line-height: $form-floating-line-height;
       color: var(--#{$prefix}form-field-color);
-      background-image: escape-svg($form-select-indicator);
+      background-image: var(--#{$prefix}form-select-indicator);
       background-repeat: no-repeat;
       background-position: right var(--append-width, $form-select-padding-x) center;
       background-size: $form-select-bg-size;
@@ -117,12 +118,12 @@
     }
 
     .dropdown-menu {
-      --#{$prefix}dropdown-link-color: #{$dark};
-      --#{$prefix}dropdown-link-hover-color: #{$dark};
-      --#{$prefix}dropdown-link-hover-bg: #{$gray-100};
-      --#{$prefix}dropdown-link-active-color: #{$dark};
-      --#{$prefix}dropdown-link-active-bg: #{$gray-200};
-      --#{$prefix}dropdown-link-active-hover-bg: #{$gray-300};
+      --#{$prefix}dropdown-link-color: var(--#{$prefix}form-field-color);
+      --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}form-field-color);
+      --#{$prefix}dropdown-link-hover-bg: var(--#{$prefix}form-field-hover-bg);
+      --#{$prefix}dropdown-link-active-color: var(--#{$prefix}form-field-color);
+      --#{$prefix}dropdown-link-active-bg: var(--#{$prefix}form-field-active-bg);
+      --#{$prefix}dropdown-link-active-hover-bg: #{$gray-400};
 
       width: 100%;
       max-height: 40vh;
@@ -229,10 +230,9 @@
       white-space: normal;
 
       .badge {
-        --bs-badge-color: inherit;
+        --bs-badge-color: var(--#{$prefix}form-field-color);
 
         .btn-close {
-          --bs-btn-close-color: inherit;
           cursor: pointer;
         }
       }
@@ -242,6 +242,11 @@
       box-sizing: border-box;
       @include border-radius(0);
       box-shadow: none;
+
+      &.btn-close-white {
+        --#{$prefix}btn-close-bg: #{ escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>")) };
+        filter: none;
+      }
     }
 
     .checkmark {
@@ -253,7 +258,7 @@
 
     .dropdown-item[aria-selected="true"] > .checkmark {
       visibility: visible;
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+      background-image: var(--#{$prefix}form-select-checkmark);
     }
   }
 
@@ -337,6 +342,8 @@
     --#{$prefix}form-field-active-bg: #{$form-field-dark-active-bg};
     --#{$prefix}form-field-border-color: #{$form-field-dark-border-color};
     --#{$prefix}form-field-active-border-color: #{$form-field-dark-active-border-color};
+    --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator-dark)};
+    --#{$prefix}form-select-checkmark: #{escape-svg($form-select-checkmark-dark)};
 
     .dropdown-menu {
       --#{$prefix}dropdown-color: #{$form-field-dark-color};

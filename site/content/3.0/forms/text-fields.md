@@ -26,7 +26,7 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 {{< /callout >}}
 
 ## Filled
-{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating">
   <input type="text" class="form-control" id="firstname"
@@ -44,7 +44,7 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 
 ## Outlined
 
-{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating form-floating-outlined">
   <input type="text" class="form-control" id="firstname-outline"
@@ -63,7 +63,7 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 ## Color options
 Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
 
-{{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating base-purple primary-pink">
   <input type="text" class="form-control" id="lastname"
@@ -81,7 +81,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 
 ## With Icon
 
-{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating-with-icon">
   <div class="form-floating">
@@ -131,7 +131,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 
 ## With Spinner
 
-{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating-with-icon">
   <div class="form-floating">
@@ -190,7 +190,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 ## Text Area
 To set a custom height on your ```<textarea>```, do not use the rows attribute. Instead, set an explicit height (either inline or via custom CSS).
 
-{{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating">
   <textarea class="form-control" placeholder="address"
@@ -211,7 +211,7 @@ If you want to have ```<input readonly>``` elements in your form styled as plain
 use the ```.form-control-plaintext``` class to remove the default form field styling 
 and preserve the correct margin and padding.
 
-{{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating">
   <input type="email" class="form-control-plaintext" id="email-read-only-outline"
@@ -225,6 +225,40 @@ and preserve the correct margin and padding.
   <label for="email-read-only-outline-outline">Email</label>
 </div>
         
+{{< /example >}}
+
+## Dark Text Field
+{{< example codeId="code8" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
+
+<div class="form-floating form-floating-dark">
+  <input type="text" class="form-control" id="dark-text"
+         placeholder="dark-text" autocomplete="off">
+  <label for="dark-text">Dark</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined form-floating-dark">
+  <input type="text" class="form-control" id="dark-text-outlined"
+         placeholder="dark-text-outlined" autocomplete="off">
+  <label for="dark-text-outlined">Dark</label>
+</div>
+
+{{< /example >}}
+
+## Dark Text Field with custom color 
+{{< example codeId="code9" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
+
+<div class="form-floating form-floating-dark base-cyan primary-yellow">
+  <input type="text" class="form-control" id="dark-text-custom"
+         placeholder="dark-text-custom" autocomplete="off">
+  <label for="dark-text-custom">Dark</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined form-floating-dark base-cyan primary-yellow">
+  <input type="text" class="form-control" id="dark-text-outlined-custom"
+         placeholder="dark-text-outlined-custom" autocomplete="off">
+  <label for="dark-text-outlined-custom">Dark</label>
+</div>
+
 {{< /example >}}
 
 ## Javascript
