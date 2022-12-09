@@ -18,43 +18,43 @@
     },
     {
       "path": "./dist/css/materialstyle-utilities.css",
-      "maxSize": "9.65 kB"
+      "maxSize": "11.05 kB"
     },
     {
       "path": "./dist/css/materialstyle-utilities.min.css",
-      "maxSize": "8.9 kB"
+      "maxSize": "10.25 kB"
     },
     {
       "path": "./dist/css/materialstyle.css",
-      "maxSize": "40.25 kB"
+      "maxSize": "41.1 kB"
     },
     {
       "path": "./dist/css/materialstyle.min.css",
-      "maxSize": "37.25 kB"
+      "maxSize": "38 kB"
     },
     {
       "path": "./dist/js/materialstyle.bundle.js",
-      "maxSize": "48.8 kB"
+      "maxSize": "48.9 kB"
     },
     {
       "path": "./dist/js/materialstyle.bundle.min.js",
-      "maxSize": "26.55 kB"
+      "maxSize": "26.7 kB"
     },
     {
       "path": "./dist/js/materialstyle.esm.js",
-      "maxSize": "33.6 kB"
+      "maxSize": "33.65 kB"
     },
     {
       "path": "./dist/js/materialstyle.esm.min.js",
-      "maxSize": "22.35 kB"
+      "maxSize": "22.5 kB"
     },
     {
       "path": "./dist/js/materialstyle.js",
-      "maxSize": "34.41 kB"
+      "maxSize": "34.5 kB"
     },
     {
       "path": "./dist/js/materialstyle.min.js",
-      "maxSize": "19.5 kB"
+      "maxSize": "19.7 kB"
     }
   ],
   "ci": {

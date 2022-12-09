@@ -23,7 +23,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 {{< /callout >}}
 
 ## Filled
-{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code1" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating">
   <select class="form-select">
@@ -51,7 +51,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 
 ## Outlined
 
-{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating form-floating-outlined">
   <select class="form-select">
@@ -80,7 +80,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 ## Color options
 Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
 
-{{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating base-purple primary-pink">
   <select class="form-select">
@@ -109,7 +109,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
 ## Searchable
 Add class ```searchable``` on ```.form-floating``` to add a search box to the menu.
 
-{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code4" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating searchable">
   <select class="form-select">
@@ -136,7 +136,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 {{< /example >}}
 
 ## With Icon
-{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code5" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating-with-icon">
   <div class="form-floating">
@@ -205,7 +205,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 {{< /example >}}
 
 ## With Spinner
-{{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating-with-icon">
   <div class="form-floating">
@@ -284,7 +284,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 ## Multi Select
 Add class ```multi-select``` on ```.form-floating``` to enable multi select.
 
-{{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating multi-select">
   <select class="form-select" name="cars[]" multiple>
@@ -293,7 +293,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     <option value="3">Option 3</option>
     <option value="4">Option 4</option>
   </select>
-  <label>Select</label>
+  <label>Select Multiple</label>
 </div>
 ##split##
 <div class="form-floating form-floating-outlined multi-select">
@@ -303,13 +303,13 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     <option value="3">Option 3</option>
     <option value="4">Option 4</option>
   </select>
-  <label>Select</label>
+  <label>Select Multiple</label>
 </div>
 
 {{< /example >}}
 
 ## Multi Select Searchable
-{{< example codeId="code8" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code8" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating multi-select searchable">
   <select class="form-select" name="cars[]" multiple>
@@ -334,7 +334,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
 {{< /example >}}
 
 ## Multi Select With Icon
-{{< example codeId="code9" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code9" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating-with-icon">
   <div class="form-floating multi-select">
@@ -344,7 +344,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
       <option value="3">Option 3</option>
       <option value="4">Option 4</option>
     </select>
-    <label>Select</label>
+    <label>Select Multiple</label>
   </div>
   <div class="prepend">
     <i class="bi bi-star-fill"></i>
@@ -359,7 +359,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
       <option value="3">Option 3</option>
       <option value="4">Option 4</option>
     </select>
-    <label>Select</label>
+    <label>Select Multiple</label>
   </div>
   <div class="append">
     <i class="bi bi-star-fill"></i>
@@ -369,7 +369,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
 {{< /example >}}
 
 ## Multi Select With Spinner
-{{< example codeId="code10" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
+{{< example codeId="code10" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
 <div class="form-floating-with-icon">
   <div class="form-floating multi-select">
@@ -379,7 +379,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
       <option value="3">Option 3</option>
       <option value="4">Option 4</option>
     </select>
-    <label>Select</label>
+    <label>Select Multiple</label>
   </div>
   <div class="prepend">
     <div class="spinner-material text-blue">
@@ -398,11 +398,90 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
       <option value="3">Option 3</option>
       <option value="4">Option 4</option>
     </select>
-    <label>Select</label>
+    <label>Select Multiple</label>
   </div>
   <div class="append">
     <div class="spinner-grow text-primary"></div>
   </div>
+</div>
+
+{{< /example >}}
+
+## Dark Select
+{{< example codeId="code11" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
+
+<div class="form-floating form-floating-dark">
+  <select class="form-select">
+    <option value="" label="blank option"></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Select One</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined form-floating-dark">
+  <select class="form-select">
+    <option value="" label="blank option"></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Select One</label>
+</div>
+
+{{< /example >}}
+
+## Dark Multi Select
+{{< example codeId="code12" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
+
+<div class="form-floating form-floating-dark multi-select">
+  <select class="form-select" multiple>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Select Multiple</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined form-floating-dark multi-select">
+  <select class="form-select" multiple>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Select Multiple</label>
+</div>
+
+{{< /example >}}
+
+## Dark Select with custom color
+{{< example codeId="code13" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
+
+<div class="form-floating form-floating-dark base-cyan primary-yellow">
+  <select class="form-select">
+    <option value="" label="blank option"></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Select One</label>
+</div>
+##split##
+<div class="form-floating form-floating-outlined form-floating-dark base-cyan primary-yellow">
+  <select class="form-select">
+    <option value="" label="blank option"></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+  </select>
+  <label>Select One</label>
 </div>
 
 {{< /example >}}
