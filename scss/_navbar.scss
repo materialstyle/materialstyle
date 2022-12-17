@@ -307,3 +307,11 @@
   }
   // scss-docs-end navbar-dark-css-vars
 }
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .navbar {
+      --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
+    }
+  }
+}
