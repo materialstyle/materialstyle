@@ -1008,10 +1008,8 @@ $input-group-addon-padding-y:           $input-padding-y !default;
 $input-group-addon-padding-x:           $input-padding-x !default;
 $input-group-addon-font-weight:         $input-font-weight !default;
 $input-group-addon-color:               $input-color !default;
-//$input-group-addon-bg:                  $gray-200 !default;
-//$input-group-addon-border-color:        $secondary !default;
-$input-group-addon-bg:                  var(--#{$prefix}tertiary-bg) !default;
-$input-group-addon-border-color:        $input-border-color !default;
+$input-group-addon-bg:                  var(--#{$prefix}secondary-bg) !default;
+$input-group-addon-border-color:        var(--#{$prefix}body-color) !default;
 // scss-docs-end input-group-variables
 
 // scss-docs-start form-select-variables
