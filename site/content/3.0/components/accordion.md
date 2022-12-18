@@ -63,10 +63,6 @@ and some rounded corners to render accordions edge-to-edge with their parent con
 
 {{< example codeId="code2" >}}
 
-<<<<<<< HEAD:site/content/3.0/components/accordion.md
-=======
-{{< example class="bg-body-secondary" >}}
->>>>>>> twbsbootstrap/main:site/content/docs/5.2/components/accordion.md
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">

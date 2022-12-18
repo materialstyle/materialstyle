@@ -165,11 +165,13 @@
 
           &.offcanvas-start ~ .offcanvas-pushed-content {
             margin-left: var(--#{$prefix}offcanvas-width);
+            background-color: var(--#{$prefix}body-bg);
             @include transition(margin-left $offcanvas-transition-duration ease-in-out);
           }
 
           &.offcanvas-end ~ .offcanvas-pushed-content {
             margin-right: var(--#{$prefix}offcanvas-width);
+            background-color: var(--#{$prefix}body-bg);
             @include transition(margin-right $offcanvas-transition-duration ease-in-out);
           }
         }

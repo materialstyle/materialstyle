@@ -330,32 +330,29 @@
       }
     }
   }
+}
 
-  // Form floating dark
-  &.form-floating-dark {
-    --#{$prefix}form-field-color: #{$form-field-dark-color};
-    --#{$prefix}form-field-bg: #{$form-field-dark-bg};
-    --#{$prefix}form-field-hover-bg: #{$form-field-dark-hover-bg};
-    --#{$prefix}form-field-active-bg: #{$form-field-dark-active-bg};
-    --#{$prefix}form-field-border-color: #{$form-field-dark-border-color};
-    --#{$prefix}form-field-active-border-color: #{$form-field-dark-active-border-color};
-    --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator-dark)};
-    --#{$prefix}form-select-checkmark: #{escape-svg($form-select-checkmark-dark)};
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .form-floating {
+      --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator-dark)};
+      --#{$prefix}form-select-checkmark: #{escape-svg($form-select-checkmark-dark)};
 
-    .dropdown-menu {
-      --#{$prefix}dropdown-color: #{$form-field-dark-color};
-      --#{$prefix}dropdown-bg: #{$form-field-dark-bg};
-      --#{$prefix}dropdown-border-color: #{$dropdown-dark-border-color};
-      --#{$prefix}dropdown-box-shadow: #{$dropdown-dark-box-shadow};
-      --#{$prefix}dropdown-link-color: #{$dropdown-dark-link-color};
-      --#{$prefix}dropdown-link-hover-color: #{$dropdown-dark-link-hover-color};
-      --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
-      --#{$prefix}dropdown-link-hover-bg: #{$dropdown-dark-link-hover-bg};
-      --#{$prefix}dropdown-link-active-color: #{$dropdown-dark-link-active-color};
-      --#{$prefix}dropdown-link-active-bg: #{$gray-700};
-      --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
-      --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
-      --#{$prefix}dropdown-link-active-hover-bg: #{$gray-600};
+      .dropdown-menu {
+        --#{$prefix}dropdown-color: #{$form-field-color};
+        --#{$prefix}dropdown-bg: #{$form-field-bg};
+        --#{$prefix}dropdown-border-color: #{$dropdown-dark-border-color};
+        --#{$prefix}dropdown-box-shadow: #{$dropdown-dark-box-shadow};
+        --#{$prefix}dropdown-link-color: #{$dropdown-dark-link-color};
+        --#{$prefix}dropdown-link-hover-color: #{$dropdown-dark-link-hover-color};
+        --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
+        --#{$prefix}dropdown-link-hover-bg: #{$dropdown-dark-link-hover-bg};
+        --#{$prefix}dropdown-link-active-color: #{$dropdown-dark-link-active-color};
+        --#{$prefix}dropdown-link-active-bg: #{$gray-700};
+        --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
+        --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
+        --#{$prefix}dropdown-link-active-hover-bg: #{$gray-600};
+      }
     }
   }
 }

@@ -41,7 +41,7 @@
             {{- $href := printf "/materialstyle/%s/%s/%s/" $.Site.Params.docs_version $group_slug $doc_slug }}
 
             <li class="nav-item mb-1">
-              <a class="nav-link rounded-pill text-dark {{ if $is_active }} active{{ end }}"
+              <a class="nav-link rounded-pill {{ if $is_active }} active{{ end }}"
                  href="{{ $href }}">{{ $doc.title }}</a>
             </li>
           {{- end }}
@@ -49,7 +49,7 @@
         {{- else }}
 
           <li class="nav-item my-1">
-            <a class="nav-link rounded-pill text-dark {{ if $is_active_group }} active{{ end }}"
+            <a class="nav-link rounded-pill {{ if $is_active_group }} active{{ end }}"
                href="/materialstyle/{{ $.Site.Params.docs_version }}/{{ $group_slug }}">{{ $group.title }}</a>
           </li>
 

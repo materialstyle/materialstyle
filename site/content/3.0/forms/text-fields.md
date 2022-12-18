@@ -227,40 +227,6 @@ and preserve the correct margin and padding.
         
 {{< /example >}}
 
-## Dark Text Field
-{{< example codeId="code8" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
-
-<div class="form-floating form-floating-dark">
-  <input type="text" class="form-control" id="dark-text"
-         placeholder="dark-text" autocomplete="off">
-  <label for="dark-text">Dark</label>
-</div>
-##split##
-<div class="form-floating form-floating-outlined form-floating-dark">
-  <input type="text" class="form-control" id="dark-text-outlined"
-         placeholder="dark-text-outlined" autocomplete="off">
-  <label for="dark-text-outlined">Dark</label>
-</div>
-
-{{< /example >}}
-
-## Dark Text Field with custom color 
-{{< example codeId="code9" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
-
-<div class="form-floating form-floating-dark base-cyan primary-yellow">
-  <input type="text" class="form-control" id="dark-text-custom"
-         placeholder="dark-text-custom" autocomplete="off">
-  <label for="dark-text-custom">Dark</label>
-</div>
-##split##
-<div class="form-floating form-floating-outlined form-floating-dark base-cyan primary-yellow">
-  <input type="text" class="form-control" id="dark-text-outlined-custom"
-         placeholder="dark-text-outlined-custom" autocomplete="off">
-  <label for="dark-text-outlined-custom">Dark</label>
-</div>
-
-{{< /example >}}
-
 ## Javascript
 ```javascript
 // Initialize Text fields

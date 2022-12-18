@@ -867,20 +867,13 @@ $btn-active-bg-tint-amount:       20% !default;
 
 
 // Forms
-$form-field-color:                      $dark !default;
-$form-field-bg:                         $gray-100 !default;
-$form-field-hover-bg:                   $gray-200 !default;
-$form-field-active-bg:                  $gray-300 !default;
-$form-field-border-color:               $dark !default;
-$form-field-active-border-color:        $primary !default;
+$form-field-color:                      var(--#{$prefix}emphasis-color) !default;
+$form-field-bg:                         var(--#{$prefix}tertiary-bg) !default;
+$form-field-hover-bg:                   var(--#{$prefix}secondary-bg) !default;
+$form-field-active-bg:                  var(--#{$prefix}secondary-bg) !default;
+$form-field-border-color:               var(--#{$prefix}body-color) !default;
+$form-field-active-border-color:        var(--#{$prefix}primary-text) !default;
 $form-select-checkmark:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$gray-800}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
-
-$form-field-dark-color:                 $light !default;
-$form-field-dark-bg:                    $gray-900 !default;
-$form-field-dark-hover-bg:              $gray-800 !default;
-$form-field-dark-active-bg:             $gray-700 !default;
-$form-field-dark-border-color:          $light !default;
-$form-field-dark-active-border-color:   $primary !default;
 $form-select-checkmark-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$gray-100}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
 
 // scss-docs-start form-text-variables

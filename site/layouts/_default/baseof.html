@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   {{ partial "header" . }}
 </head>
@@ -8,7 +8,7 @@
 
   {{ partial "drawer" . }}
 
-  <div class="offcanvas-pushed-content pt-4 bg-white" style="margin-top: var(--navbar-fixed-height);">
+  <div class="offcanvas-pushed-content pt-4" style="margin-top: var(--navbar-fixed-height);">
     <div class="container" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-root-margin="0px 0px -80%">
       {{ block "main" . }}
       {{ end }}
