@@ -958,15 +958,14 @@ $form-check-transition:                   null !default;
 $form-check-input-active-filter:          brightness(90%) !default;
 
 $form-check-input-bg:                     $input-bg !default;
-//$form-check-input-border:                 2px solid rgba($black, .25) !default;
-//$form-check-input-border-radius:          2px !default;
-$form-check-input-border:                 var(--#{$prefix}border-width) solid var(--#{$prefix}border-color) !default;
-$form-check-input-border-radius:          .25em !default;
+$form-check-input-border:                 2px solid var(--#{$prefix}border-color) !default;
+$form-check-input-border-radius:          2px !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;
 $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-bg-color:       $component-active-bg !default;
+$form-check-radio-checked-bg-color:       var(--#{$prefix}body-bg) !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='none' stroke='#fff' stroke-width='3.5' d='M1.73,12.91 8.1,19.28 22.79,4.59'/></svg>") !default;
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$primary}'/></svg>") !default;

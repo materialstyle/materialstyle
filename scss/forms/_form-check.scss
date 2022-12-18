@@ -74,7 +74,7 @@
     }
 
     &[type="radio"] {
-      background-color: #fff;
+      background-color: $form-check-radio-checked-bg-color;
       @if $enable-gradients {
         --#{$prefix}form-check-bg-image: #{escape-svg($form-check-radio-checked-bg-image)}, var(--#{$prefix}gradient);
       } @else {
