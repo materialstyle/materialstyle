@@ -324,15 +324,17 @@
     /**
      * Docsearch
      */
-    docsearch({
-      container: '#docsearch',
-      appId: '3EHDQBJAE1',
-      indexName: 'materialstyle',
-      apiKey: '045965c449c981a98498474ab5ff774a',
-      searchParameters: {
-        facetFilters: ['version:3.0']
-      }
-    })
+    if (document.querySelector('#docsearch')) {
+      docsearch({
+        container: '#docsearch',
+        appId: '3EHDQBJAE1',
+        indexName: 'materialstyle',
+        apiKey: '045965c449c981a98498474ab5ff774a',
+        searchParameters: {
+          facetFilters: ['version:3.0']
+        }
+      })
+    }
   })
 
   $(() => {

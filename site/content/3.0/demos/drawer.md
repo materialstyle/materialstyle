@@ -6,11 +6,11 @@ title: Drawer
 <nav class="navbar navbar-expand-sm bg-purple navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
-      <button class="drawer-toggler me-2"
+      <button class="navbar-toggler me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawer">
-        <span class="drawer-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
         <i class="bi bi-star-fill me-2"></i>Brand

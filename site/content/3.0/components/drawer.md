@@ -48,11 +48,11 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
     <div class="d-flex align-items-center">
     
       <!-- Drawer toggler -->
-      <button class="drawer-toggler me-2"
+      <button class="navbar-toggler me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawer">
-        <span class="drawer-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
         <i class="bi bi-star-fill me-2"></i>Brand
@@ -163,11 +163,11 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
     </div>
     
     <!-- Drawer toggler -->
-    <button class="drawer-toggler ms-2"
+    <button class="navbar-toggler ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer">
-      <span class="drawer-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav>
@@ -272,11 +272,11 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
     <div class="d-flex align-items-center">
     
       <!-- Drawer toggler -->
-      <button class="drawer-toggler d-md-none me-2"
+      <button class="navbar-toggler d-sm-none me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawer">
-        <span class="drawer-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
         <i class="bi bi-star-fill me-2"></i>Brand
@@ -387,11 +387,11 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
     </div>
     
     <!-- Drawer toggler -->
-    <button class="drawer-toggler d-md-none ms-2"
+    <button class="navbar-toggler d-sm-none ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer">
-      <span class="drawer-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav>

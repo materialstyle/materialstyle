@@ -10,11 +10,11 @@ title: Drawer End
         <i class="bi bi-star-fill me-2"></i>Brand
       </a>
     </div>
-    <button class="drawer-toggler ms-2"
+    <button class="navbar-toggler ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer-end">
-      <span class="drawer-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav>

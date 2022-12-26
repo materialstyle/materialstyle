@@ -3,18 +3,18 @@ layout: demo
 title: Drawer Responsive End
 ---
 
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-md bg-purple navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
         <i class="bi bi-star-fill me-2"></i>Brand
       </a>
     </div>
-    <button class="drawer-toggler d-md-none ms-2"
+    <button class="navbar-toggler d-md-none ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer-responsive-end">
-      <span class="drawer-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav>

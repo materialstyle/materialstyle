@@ -63,14 +63,6 @@
       @extend %container-flex-properties;
     }
   }
-
-  .drawer-toggler {
-    color: $navbar-light-color;
-    border-color: $navbar-light-toggler-border-color;
-  }
-  .drawer-toggler-icon {
-    background-image: escape-svg($navbar-light-drawer-toggler-icon-bg);
-  }
 }
 
 
@@ -170,12 +162,6 @@
   border: var(--#{$prefix}border-width) solid var(--#{$prefix}navbar-toggler-border-color); // remove default button style
   @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
   @include transition(var(--#{$prefix}navbar-toggler-transition));
-
-  &[aria-expanded="true"] {
-    .navbar-toggler-icon {
-      transform: rotate(180deg);
-    }
-  }
 
   &:hover {
     text-decoration: none;
@@ -297,14 +283,6 @@
   --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
   --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
-
-  .drawer-toggler {
-    color: $navbar-dark-color;
-    border-color: $navbar-dark-toggler-border-color;
-  }
-  .drawer-toggler-icon {
-    background-image: escape-svg($navbar-dark-drawer-toggler-icon-bg);
-  }
   // scss-docs-end navbar-dark-css-vars
 }
 

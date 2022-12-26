@@ -13,7 +13,14 @@
   --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
   --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
   --#{$prefix}offcanvas-transition: #{transform $offcanvas-transition-duration ease-in-out};
-  --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height};
+  --#{$prefix}offcanvas-title-padding-y: #{$navbar-brand-padding-y};
+  --#{$prefix}offcanvas-title-margin-end: #{$navbar-brand-margin-end};
+  --#{$prefix}offcanvas-title-font-size: #{$navbar-brand-font-size};
+  --#{$prefix}offcanvas-nav-link-color: #{$offcanvas-nav-link-color};
+  --#{$prefix}offcanvas-nav-link-hover-color: #{$offcanvas-nav-link-hover-color};
+  --#{$prefix}offcanvas-nav-link-hover-bg: #{$offcanvas-nav-link-hover-bg};
+  --#{$prefix}offcanvas-nav-link-active-color: #{$offcanvas-nav-link-active-color};
+  --#{$prefix}offcanvas-nav-link-disabled-color: #{$offcanvas-nav-link-disabled-color};
   --#{$prefix}dropdown-divider-bg: #{$dropdown-divider-bg};
   // scss-docs-end offcanvas-css-vars
 }
@@ -98,7 +105,6 @@
       @include media-breakpoint-up($next) {
         --#{$prefix}offcanvas-height: auto;
         --#{$prefix}offcanvas-border-width: 0;
-        // Reset `background-color` in case `.bg-*` classes are used in offcanvas
         background-color: transparent !important; // stylelint-disable-line declaration-no-important
 
         .offcanvas-header {
@@ -128,7 +134,7 @@
           .offcanvas-body {
             display: block;
             flex-grow: 1;
-            padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+            padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
             overflow-y: auto;
           }
 
@@ -191,20 +197,15 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
-    padding: $btn-close-padding-y $btn-close-padding-x;
-    margin-top: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
     margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
-    margin-bottom: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
   }
 }
 
 .offcanvas-title {
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-brand-margin-end;
-  margin-bottom: 0;
-  line-height: var(--#{$prefix}offcanvas-title-line-height);
-  @include font-size($navbar-brand-font-size);
+  padding-top: var(--#{$prefix}offcanvas-title-padding-y);
+  padding-bottom: var(--#{$prefix}offcanvas-title-padding-y);
+  margin-right: var(--#{$prefix}offcanvas-title-margin-end);
+  @include font-size(var(--#{$prefix}offcanvas-title-font-size));
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
 
@@ -218,6 +219,48 @@
   flex-grow: 1;
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
   overflow-y: auto;
+
+  .nav-item [data-bs-toggle="collapse"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      line-height: 0;
+      @include transition(transform 200ms 0ms cubic-bezier(.4, 0, .2, 1));
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .nav-link {
+    color: var(--#{$prefix}offcanvas-nav-link-color);
+
+    &:hover,
+    &:focus {
+      color: var(--#{$prefix}offcanvas-nav-link-hover-color);
+      background-color: var(--#{$prefix}offcanvas-nav-link-hover-bg);
+    }
+
+    &.disabled {
+      color: var(--#{$prefix}offcanvas-nav-link-disabled-color);
+    }
+  }
+
+  .show > .nav-link,
+  .nav-link.active {
+    color: var(--#{$prefix}offcanvas-nav-link-active-color);
+  }
+
+  [data-bs-toggle="collapse"] {
+    &::after {
+      content: escape-svg($offcanvas-light-collapse-icon);
+    }
+  }
 }
 
 .offcanvas-fixed {
@@ -225,111 +268,15 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  @include transition(transform $offcanvas-transition-duration ease-in-out);
+  @include transition(var(--#{$prefix}offcanvas-transition));
 }
 
-// Nav Items
-.nav-item [data-bs-toggle="collapse"] {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &::after {
-    width: 1.25em;
-    line-height: 0;
-    @include transition(transform 200ms 0ms cubic-bezier(.4, 0, .2, 1));
-  }
-
-  &[aria-expanded="true"] {
-    &::after {
-      transform: rotate(180deg);
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .offcanvas-body [data-bs-toggle="collapse"] {
+      &::after {
+        content: escape-svg($offcanvas-dark-collapse-icon);
+      }
     }
   }
-}
-
-.offcanvas-light {
-  .nav-link {
-    color: $navbar-light-color;
-
-    &:hover,
-    &:focus {
-      color: $navbar-light-hover-color;
-      background-color: $drawer-light-link-hover-bg;
-    }
-
-    &.disabled {
-      color: $navbar-light-disabled-color;
-    }
-  }
-
-  .show > .nav-link,
-  .nav-link.active {
-    color: $navbar-light-active-color;
-  }
-
-  [data-bs-toggle="collapse"] {
-    &::after {
-      content: escape-svg($navbar-light-toggler-icon-bg);
-    }
-  }
-}
-
-.offcanvas-dark {
-  .nav-link {
-    color: $navbar-dark-color;
-
-    &:hover,
-    &:focus {
-      color: $navbar-dark-hover-color;
-      background-color: $drawer-dark-link-hover-bg;
-    }
-
-    &.disabled {
-      color: $navbar-dark-disabled-color;
-    }
-  }
-
-  .show > .nav-link,
-  .nav-link.active {
-    color: $navbar-dark-active-color;
-  }
-
-  [data-bs-toggle="collapse"] {
-    &::after {
-      content: escape-svg($navbar-dark-toggler-icon-bg);
-    }
-  }
-}
-
-// Drawer Toggler
-.drawer-toggler {
-  padding: $drawer-toggler-padding-y $drawer-toggler-padding-x;
-  @include font-size($navbar-toggler-font-size);
-  line-height: 1;
-  background-color: transparent;
-  border: $border-width solid transparent;
-  @include border-radius($drawer-toggler-border-radius);
-  @include transition($navbar-toggler-transition);
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
-    text-decoration: none;
-    outline: 0;
-    box-shadow: 0 0 0 $navbar-toggler-focus-width;
-  }
-}
-
-.drawer-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  pointer-events: none;
-  background-image: escape-svg($navbar-dark-drawer-toggler-icon-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }

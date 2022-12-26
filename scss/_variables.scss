@@ -1210,20 +1210,12 @@ $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * 
 $navbar-brand-margin-end:           1rem !default;
 
 $navbar-toggler-padding-y:          .25rem !default;
-$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-padding-x:          .25rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
-$navbar-toggler-border-radius:      0 !default;
+$navbar-toggler-border-radius:      50% !default;
 $navbar-toggler-focus-width:        .2rem !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
-// scss-docs-end navbar-variables
 
-// scss-docs-start navbar-light-variables
-//$navbar-light-color:                rgba($black, .55) !default;
-//$navbar-light-hover-color:          rgba($black, .7) !default;
-//$navbar-light-active-color:         rgba($black, .9) !default;
-//$navbar-light-disabled-color:       rgba($black, .3) !default;
-//$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-light-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
-//$navbar-light-toggler-border-color: transparent !default;
 $navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .65) !default;
 $navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8) !default;
 $navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
@@ -1239,7 +1231,7 @@ $navbar-dark-color:                 rgba($white, .55) !default;
 $navbar-dark-hover-color:           rgba($white, .75) !default;
 $navbar-dark-active-color:          $white !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
-$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-dark-color}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  transparent !default;
 $navbar-dark-brand-color:           $navbar-dark-active-color !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
@@ -1775,35 +1767,27 @@ $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default
 // Offcanvas
 
 // scss-docs-start offcanvas-variables
-$offcanvas-padding-y:               1rem * .5 !default;
+$offcanvas-padding-y:               $navbar-padding-y !default;
 $offcanvas-padding-x:               $modal-inner-padding !default;
 $offcanvas-horizontal-width:        400px !default;
 $offcanvas-vertical-height:         30vh !default;
 $offcanvas-transition-duration:     .3s !default;
 $offcanvas-border-color:            $modal-content-border-color !default;
 $offcanvas-border-width:            0 !default;
-$offcanvas-title-line-height:       $modal-title-line-height !default;
 $offcanvas-bg-color:                var(--#{$prefix}body-bg) !default;
 $offcanvas-color:                   var(--#{$prefix}body-color) !default;
 $offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
 $offcanvas-backdrop-bg:             $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
+$offcanvas-nav-link-color:          var(--#{$prefix}body-color) !default;
+$offcanvas-nav-link-hover-color:    var(--#{$prefix}emphasis-color) !default;
+$offcanvas-nav-link-hover-bg:       var(--#{$prefix}secondary-bg) !default;
+$offcanvas-nav-link-active-color:   var(--#{$prefix}emphasis-color) !default;
+$offcanvas-nav-link-disabled-color: var(--#{$prefix}tertiary-color) !default;
+$offcanvas-light-collapse-icon:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24' fill='#{rgba($dark, .65)}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
+$offcanvas-dark-collapse-icon:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24' fill='#{rgba($light, .65)}'><path d='M24 24H0V0h24v24z' fill='none' opacity='.87'/><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/></svg>") !default;
 // scss-docs-end offcanvas-variables
 
-
-// Drawer
-
-// scss-docs-start drawer-variables
-$drawer-toggler-padding-y: .25rem !default;
-$drawer-toggler-padding-x: .25rem !default;
-$navbar-dark-drawer-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-dark-color}'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>") !default;
-$navbar-light-drawer-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$navbar-light-color}'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>") !default;
-$drawer-toggler-border-radius: 50% !default;
-
-$drawer-link-hover-bg-factor: .075 !default;
-$drawer-light-link-hover-bg: rgba($black, $drawer-link-hover-bg-factor) !default;
-$drawer-dark-link-hover-bg: rgba($white, $drawer-link-hover-bg-factor) !default;
-// scss-docs-end drawer-variables
 
 // Code
 

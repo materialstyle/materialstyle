@@ -31,19 +31,20 @@ html {
 .ms-toc {
   .nav-pills .nav-link {
     font-size: .875rem;
-    color: #6c757d;
-    border-left: 2px solid rgba(0, 0, 0, .12) !important;
+    color: var(--bs-secondary-color);
+    border-left: 2px solid var(--bs-secondary-color) !important;
     border-radius: 0 !important;
 
     &.active {
       font-weight: 700;
-      color: #212121;
+      color: var(--bs-primary-text);
       background-color: unset;
-      border-left: 2px solid #212121 !important;
+      border-left: 2px solid var(--bs-primary-text) !important;
     }
 
     &:hover {
-      color: #212121;
+      color: var(--bs-primary-text);
+      border-left: 2px solid var(--bs-primary-text) !important;
     }
   }
 }
