@@ -93,6 +93,12 @@ html {
   border-radius: 4rem;
 }
 
+#site-home-top-nav .dropdown .bi {
+  width: 1rem;
+  height: 1rem;
+  fill: currentcolor;
+}
+
 #site-home-top-nav .navbar-brand,
 #site-offcanvas .offcanvas-title,
 .footer-brand {
@@ -127,7 +133,7 @@ h5:not(.badge-example-headings h5) {
   }
 }
 
-@media (max-width: 455px) {
+@media (max-width: 475px) {
   #site-home-top-nav #site-name {
     display: none;
   }
@@ -148,10 +154,20 @@ h5:not(.badge-example-headings h5) {
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 345px) {
+  #site-home-top-nav .container-fluid {
+    gap: .5rem !important;
+  }
+
   #site-home-top-nav .navbar-nav {
-    gap: .8rem !important;
+    gap: .5rem !important;
     margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 278px) {
+  #site-home-top-nav .navbar-nav {
+    width: 100%;
   }
 }
 
@@ -529,6 +545,7 @@ pre,
 
   .DocSearch-Container {
     z-index: 1055;
+    position: fixed !important;
   }
 
   .DocSearch-Button {
