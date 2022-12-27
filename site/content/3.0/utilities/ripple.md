@@ -59,7 +59,7 @@ To add Ripple to your component:
   <span class="ripple-surface"></span>
 </button>
 ##split##
-<button type="button" class="btn btn-outline-purple m-1">
+<button type="button" class="btn btn-outline-pink m-1">
   Outlined Button
   <span class="ripple-surface"></span>
 </button>
@@ -106,7 +106,7 @@ To add Ripple to your component:
 ## On a div
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<div class="bg-teal p-4 position-relative">
+<div class="bg-teal text-dark p-4 position-relative">
   Ripple on a div
   <span class="ripple-surface"></span>
 </div>
@@ -118,7 +118,7 @@ Use the custom property ``` --mdc-ripple-color``` to set the color of the Ripple
 
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<div class="bg-white border p-4 position-relative" style="--mdc-ripple-color: blue;">
+<div class="bg-white text-dark border p-4 position-relative" style="--mdc-ripple-color: blue;">
   Ripple with custom color
   <span class="ripple-surface"></span>
 </div>
@@ -133,7 +133,7 @@ Use the custom properties:
 
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<div class="bg-white border p-4 position-relative" 
+<div class="bg-white text-dark border p-4 position-relative" 
      style="--mdc-ripple-color: blue; --mdc-ripple-hover-opacity: .3; --mdc-ripple-focus-opacity: .4; --mdc-ripple-press-opacity: .5;">
   Ripple with custom color
   <span class="ripple-surface"></span>

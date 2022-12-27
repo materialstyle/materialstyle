@@ -54,8 +54,8 @@ On the rare occasion you need to override it, use something like the following:
 <br>
 
 For your convenience, we have created two starter templates:
-1. <a class="link-purple text-decoration-none" href="#template-with-sidebardrawer">With Sidebar/Drawer</a>
-2. <a class="link-purple text-decoration-none" href="#template-without-sidebardrawer">Without Sidebar/Drawer</a>
+1. <a class="link-theme text-decoration-none" href="#template-with-sidebardrawer">With Sidebar/Drawer</a>
+2. <a class="link-theme text-decoration-none" href="#template-without-sidebardrawer">Without Sidebar/Drawer</a>
 
 <br>
 
