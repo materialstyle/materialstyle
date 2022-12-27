@@ -247,7 +247,7 @@ toc: true
 // Initialize tabs
 var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))
 tabs.map(function (tab) {
-  new materialstyle.Tab(tab)
+  new materialstyle.MaterialTab(tab)
 })
 ```
 
@@ -263,7 +263,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
   // Redraw Tabs
   var tabs = this.querySelectorAll('.nav-tabs');
   for (const [, value] of Object.entries(tabs)) {
-    var tabInstance = materialstyle.Tab.getOrCreateInstance(value)
+    var tabInstance = materialstyle.MaterialTab.getOrCreateInstance(value)
     tabInstance.redraw();
   }
 });
@@ -274,14 +274,14 @@ myModal.addEventListener('shown.bs.modal', function (event) {
 ### With jQuery
 ```javascript
 // Initialize tabs
-$('.nav-tabs').tab();
+$('.nav-tabs').materialtab();
 ```
 
 <br>
 
 ```javascript
 // Redraw Tab
-$('.nav-tabs').tab('redraw');
+$('.nav-tabs').materialtab('redraw');
 ```
 
 <br>
