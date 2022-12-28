@@ -19,7 +19,7 @@ toc: true
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <ul class="list-group">
-  <li class="list-group-item list-group-item-purple">Purple</li>
+  <li class="list-group-item list-group-item-success">Success</li>
   <li class="list-group-item list-group-item-primary">Primary</li>
   <li class="list-group-item list-group-item-danger">Danger</li>
 </ul>
@@ -62,14 +62,14 @@ toc: true
 </div>
 ##split##
 <ul class="list-group">
-  <li class="list-group-item list-group-item-pink">
-    <span class="ripple-surface"></span>Pink
+  <li class="list-group-item list-group-item-danger">
+    <span class="ripple-surface"></span>Danger
   </li>  
-  <li class="list-group-item list-group-item-yellow">
-    <span class="ripple-surface"></span>Yellow
+  <li class="list-group-item list-group-item-warning">
+    <span class="ripple-surface"></span>Warning
   </li>
-  <li class="list-group-item list-group-item-green">
-    <span class="ripple-surface"></span>Green
+  <li class="list-group-item list-group-item-success">
+    <span class="ripple-surface"></span>Success
   </li>
 </ul>
 

@@ -18,7 +18,7 @@ keywords: snackbar, toast
 <div class="snackbar" id="default-snackbar">This is a Snackbar.</div>
 ##split##
 <!-- Button to trigger a Snackbar -->
-<button type="button" class="btn btn-indigo" id="show-snackbar">Show Snackbar</button>
+<button type="button" class="btn btn-success" id="show-snackbar">Show Snackbar</button>
 ##split##
 <script>
 document.querySelector('#show-snackbar').addEventListener('click', function () {
@@ -35,7 +35,7 @@ document.querySelector('#show-snackbar').addEventListener('click', function () {
 <div class="snackbar snackbar-start" id="snackbar-start-example">This is a Snackbar</div>
 ##split##
 <!-- Button to trigger a Snackbar -->
-<button type="button" class="btn btn-indigo" id="show-snackbar-start">Show snackbar to the Start</button>
+<button type="button" class="btn btn-success" id="show-snackbar-start">Show snackbar to the Start</button>
 ##split##
 <script>
 document.querySelector('#show-snackbar-start').addEventListener('click', function () {
@@ -52,7 +52,7 @@ document.querySelector('#show-snackbar-start').addEventListener('click', functio
 <div class="snackbar snackbar-end" id="snackbar-end-example">This is a Snackbar</div>
 ##split##
 <!-- Button to trigger a Snackbar -->
-<button type="button" class="btn btn-indigo" id="show-snackbar-end">Show snackbar to the End</button>
+<button type="button" class="btn btn-success" id="show-snackbar-end">Show snackbar to the End</button>
 ##split##
 <script>
 document.querySelector('#show-snackbar-end').addEventListener('click', function () {
@@ -69,7 +69,7 @@ document.querySelector('#show-snackbar-end').addEventListener('click', function 
 <div class="snackbar" id="snackbar-5000">This is a Snackbar with visible duration of 5000ms.</div>
 ##split##
 <!-- Button to trigger a Snackbar -->
-<button type="button" class="btn btn-indigo" id="show-snackbar-5000">Show Snackbar for 5000ms</button>
+<button type="button" class="btn btn-success" id="show-snackbar-5000">Show Snackbar for 5000ms</button>
 ##split##
 <script>
 document.querySelector('#show-snackbar-5000').addEventListener('click', function () {
@@ -87,13 +87,13 @@ document.querySelector('#show-snackbar-5000').addEventListener('click', function
 <!-- Snackbar -->
 <div class="snackbar" id="snackbar-close">
   Close this snackbar
-  <button type="button" class="btn btn-outline-yellow border-0 ms-2" data-bs-dismiss="snackbar">
+  <button type="button" class="btn btn-outline-warning border-0 ms-2" data-bs-dismiss="snackbar">
     Dismiss
   </button>
 </div>
 ##split##
 <!-- Button to trigger a Snackbar -->
-<button type="button" class="btn btn-indigo" id="show-snackbar-dismissible">Dismissible snackbar</button>
+<button type="button" class="btn btn-success" id="show-snackbar-dismissible">Dismissible snackbar</button>
 ##split##
 <script>
 document.querySelector('#show-snackbar-dismissible').addEventListener('click', function () {

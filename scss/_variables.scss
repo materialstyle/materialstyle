@@ -298,20 +298,7 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark,
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "gray":       $gray-600,
-  "white":      $white,
-  "black":      $black
+  "dark":       $dark
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1518,8 +1505,8 @@ $toast-header-border-color:         $toast-border-color !default;
 // Snackbar
 
 // scss-docs-start snackbar-variables
-$snackbar-bg:            #212121 !default;
-$snackbar-color:         #fff !default;
+$snackbar-bg:            var(--#{$prefix}body-color) !default;
+$snackbar-color:         var(--#{$prefix}body-bg) !default;
 $snackbar-padding:       16px !default;
 $snackbar-min-width:     250px !default;
 $snackbar-border-radius: 2px !default;

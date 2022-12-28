@@ -155,7 +155,7 @@ toc: true
 ## Color options
 {{< example codeId="code6" >}}
 
-<ul class="nav nav-tabs nav-justified primary-pink base-purple" role="tablist">
+<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple1">Apple</button>
   </li>
@@ -179,7 +179,7 @@ toc: true
 ## Tabs split to multiple rows when there are too many to fit on a row
 {{< example codeId="code7" >}}
 
-<ul class="nav nav-tabs nav-justified base-purple primary-pink" role="tablist">
+<ul class="nav nav-tabs nav-justified base-primary primary-danger" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple2">Apple</button>
   </li>
@@ -331,7 +331,7 @@ $('.nav-tabs').materialtab('redraw');
 
 {{< example codeId="code9" >}}
 
-<ul class="nav nav-tabs nav-justified primary-red base-indigo" role="tablist">
+<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple4">
       Apple

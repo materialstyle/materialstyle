@@ -77,7 +77,7 @@ Add ```table-[color]``` class to ```<table>``` to color tables.
 </table>
 ##split##
 <!-- Pink -->
-<table class="table table-pink">
+<table class="table table-danger">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -125,7 +125,7 @@ Add ```table-[color]``` class to ```<tr>``` to color rows.
     </tr>
   </thead>
   <tbody>
-    <tr class="table-purple">
+    <tr class="table-success">
       <th scope="row">1</th>
       <td>Mark</td>
       <td>Otto</td>
@@ -167,13 +167,13 @@ Add ```table-[color]``` class to ```<th>``` or ```<td>``` to color cells.
       <th scope="row">1</th>
       <td>Mark</td>
       <td>Otto</td>
-      <td class="table-teal">@mdo</td>
+      <td class="table-success">@mdo</td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
-      <td class="table-yellow">@fat</td>
+      <td class="table-warning">@fat</td>
     </tr>
     <tr>
       <th scope="row">3</th>
@@ -253,7 +253,7 @@ Add ```table-striped``` class to ```<table>``` to add zebra-striping table rows 
 </table>
 ##split##
 <!-- Colored Striped table -->
-<table class="table table-striped table-indigo">
+<table class="table table-striped table-primary">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -353,7 +353,7 @@ Add ```table-hover``` class to ```<table>``` to enable a hover state on table ro
 </table>
 ##split##
 <!-- Colored Hoverable table -->
-<table class="table table-hover table-indigo">
+<table class="table table-hover table-primary">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -391,7 +391,7 @@ Highlight a table row or cell by adding a ```table-active``` class.
 
 {{< example codeId="code7" class="overflow-auto" >}}
 
-<table class="table table-red">
+<table class="table table-danger">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -467,7 +467,7 @@ Add ```border-[color]``` class to ```<table>``` to change border colors.
 
 {{< example codeId="code9" class="overflow-auto" >}}
 
-<table class="table table-bordered border-green">
+<table class="table table-bordered border-success">
   <thead>
     <tr>
       <th scope="col">#</th>

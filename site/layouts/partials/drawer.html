@@ -1,6 +1,6 @@
 <aside class="offcanvas-start offcanvas-lg offcanvas-light offcanvas-fixed"
        data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title d-flex align-items-center text-white py-0" href="/">
       <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
            alt="Material Style Logo" style="width:40px; height:40px;">Material Style
@@ -8,7 +8,7 @@
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
             data-bs-target="#site-offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
 
     {{- $url := split .Permalink "/" -}}
     {{- $page_slug := index $url (sub (len $url) 2) -}}

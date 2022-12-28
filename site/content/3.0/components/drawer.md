@@ -43,7 +43,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
     
@@ -63,13 +63,13 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas offcanvas-start offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -154,7 +154,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
@@ -174,13 +174,13 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas offcanvas-end offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -267,7 +267,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
     
@@ -287,13 +287,13 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas-start offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -378,7 +378,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
@@ -398,13 +398,13 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas-end offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">

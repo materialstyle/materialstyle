@@ -11,7 +11,7 @@ toc: true
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="dropdown">
-  <button class="btn btn-purple dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown button
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -48,8 +48,8 @@ toc: true
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="btn-group">
-  <button type="button" class="btn btn-pink">Action</button>
-  <button type="button" class="btn btn-pink dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-success">Action</button>
+  <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
@@ -67,7 +67,7 @@ toc: true
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="dropdown">
-  <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown button
   </button>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -84,7 +84,7 @@ toc: true
 ## In a Navbar
 {{< example codeId="code5">}}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">

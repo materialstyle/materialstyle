@@ -10,7 +10,7 @@ keywords: snackbar, toast
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button class="btn btn-pink" id="show-toast">Show Toast</button>
+<button class="btn btn-success" id="show-toast">Show Toast</button>
 ##split##
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="live-toast" class="toast bg-dark text-white" role="alert" aria-live="assertive" aria-atomic="true">
@@ -36,7 +36,7 @@ some spacing.
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button class="btn btn-pink" id="show-stacked-toasts">Show stacked toasts</button>
+<button class="btn btn-success" id="show-stacked-toasts">Show stacked toasts</button>
 ##split##
 <div class="toast-container position-fixed top-0 end-0 p-3">
   <div id="stacked-toast-1" class="toast bg-white" role="alert" aria-live="assertive" aria-atomic="true">

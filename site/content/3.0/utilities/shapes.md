@@ -18,7 +18,7 @@ keywords: utilities, shapes
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 
 <div class="m-shape-container">
-  <button type="button" class="btn btn-pink">
+  <button type="button" class="btn btn-success">
     Button
   </button>
   <div class="angle-top-left bg-body"></div>
@@ -62,13 +62,13 @@ keywords: utilities, shapes
       </button>
 
       <div>
-        <button type="button" class="btn btn-fab mini-fab btn-pink m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
           <i class="bi bi-heart-fill"></i>
         </button>
-        <button type="button" class="btn btn-fab mini-fab btn-pink m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
           <i class="bi bi-share-fill"></i>
         </button>
-        <button type="button" class="btn btn-fab mini-fab btn-pink m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
           <i class="bi bi-three-dots-vertical"></i>
         </button>
       </div>
@@ -97,13 +97,13 @@ keywords: utilities, shapes
       </button>
 
       <div>
-        <button type="button" class="btn btn-fab mini-fab btn-pink m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
           <i class="bi bi-heart-fill"></i>
         </button>
-        <button type="button" class="btn btn-fab mini-fab btn-pink m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
           <i class="bi bi-share-fill"></i>
         </button>
-        <button type="button" class="btn btn-fab mini-fab btn-pink m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
           <i class="bi bi-three-dots-vertical"></i>
         </button>
       </div>

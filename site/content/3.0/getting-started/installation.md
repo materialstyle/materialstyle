@@ -93,8 +93,8 @@ keywords: getting-started, installation
 ## npm
 
 <a target="_blank" href="https://github.com/materialstyle/materialstyle-examples" class="text-decoration-none text-dark">
-  <div class="d-flex align-items-center bg-purple bg-opacity-25 my-4 rounded-3 overflow-hidden">
-    <div class="d-flex align-items-center align-self-stretch bg-purple text-white p-3 fs-4">
+  <div class="d-flex align-items-center bg-primary bg-opacity-25 my-4 rounded-3 overflow-hidden">
+    <div class="d-flex align-items-center align-self-stretch bg-primary text-white p-3 fs-4">
       <i class="bi bi-box-arrow-up-right"></i>
     </div>
     <div class="flex-grow-1 p-3 text-body">
@@ -145,7 +145,7 @@ Import Material Style SCSS in your SCSS file
 
 ## Download
 
-<a class="btn btn-purple btn-lg rounded-pill" 
+<a class="btn btn-primary btn-lg rounded-pill" 
    href="https://github.com/materialstyle/materialstyle/releases/download/v3.0.0/materialstyle-3.0.0-dist.zip" download>
   Download v3.0.0
 </a>

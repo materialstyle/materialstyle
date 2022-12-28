@@ -12,7 +12,7 @@ keywords: progress, spinners
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<div class="spinner-material text-blue">
+<div class="spinner-material text-primary">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
@@ -23,37 +23,37 @@ keywords: progress, spinners
 ### Color Options
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-2">}}
 
-<div class="spinner-material text-blue">
+<div class="spinner-material text-primary">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
-<div class="spinner-material text-gray">
+<div class="spinner-material text-secondary">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
-<div class="spinner-material text-green">
+<div class="spinner-material text-success">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
-<div class="spinner-material text-cyan">
+<div class="spinner-material text-info">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
-<div class="spinner-material text-yellow">
+<div class="spinner-material text-warning">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
 </div>
 ##split##
-<div class="spinner-material text-red">
+<div class="spinner-material text-danger">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
@@ -66,36 +66,6 @@ keywords: progress, spinners
 </div>
 ##split##
 <div class="spinner-material text-dark">
-  <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none" />
-  </svg>
-</div>
-##split##
-<div class="spinner-material text-indigo">
-  <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none" />
-  </svg>
-</div>
-##split##
-<div class="spinner-material text-purple">
-  <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none" />
-  </svg>
-</div>
-##split##
-<div class="spinner-material text-pink">
-  <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none" />
-  </svg>
-</div>
-##split##
-<div class="spinner-material text-orange">
-  <svg viewBox="25 25 50 50">
-    <circle cx="50" cy="50" r="20" fill="none" />
-  </svg>
-</div>
-##split##
-<div class="spinner-material text-teal">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
@@ -118,7 +88,7 @@ keywords: progress, spinners
 ### Small 
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<div class="spinner-material spinner-material-sm spinner-blue">
+<div class="spinner-material spinner-material-sm text-primary">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
   </svg>
@@ -129,38 +99,28 @@ keywords: progress, spinners
 ## Bootstrap Spinner
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<div class="spinner-border text-blue"></div>
+<div class="spinner-border text-primary"></div>
 
 {{< /example >}}
 
 ### Color options
 {{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap gap-2">}}
 
-<div class="spinner-border text-blue"></div>
+<div class="spinner-border text-primary"></div>
 ##split##
-<div class="spinner-border text-gray"></div>
+<div class="spinner-border text-secondary"></div>
 ##split##
-<div class="spinner-border text-green"></div>
+<div class="spinner-border text-success"></div>
 ##split##
-<div class="spinner-border text-cyan"></div>
+<div class="spinner-border text-info"></div>
 ##split##
-<div class="spinner-border text-yellow"></div>
+<div class="spinner-border text-warning"></div>
 ##split##
-<div class="spinner-border text-red"></div>
+<div class="spinner-border text-danger"></div>
 ##split##
 <div class="spinner-border text-light"></div>
 ##split##
 <div class="spinner-border text-dark"></div>
-##split##
-<div class="spinner-border text-indigo"></div>
-##split##
-<div class="spinner-border text-purple"></div>
-##split##
-<div class="spinner-border text-pink"></div>
-##split##
-<div class="spinner-border text-orange"></div>
-##split##
-<div class="spinner-border text-teal"></div>
 
 {{< /example >}}
 
@@ -174,31 +134,21 @@ keywords: progress, spinners
 ### Color options
 {{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap gap-2">}}
 
-<div class="spinner-grow text-blue"></div>
+<div class="spinner-grow text-primary"></div>
 ##split##
-<div class="spinner-grow text-gray"></div>
+<div class="spinner-grow text-secondary"></div>
 ##split##
-<div class="spinner-grow text-green"></div>
+<div class="spinner-grow text-success"></div>
 ##split##
-<div class="spinner-grow text-cyan"></div>
+<div class="spinner-grow text-info"></div>
 ##split##
-<div class="spinner-grow text-yellow"></div>
+<div class="spinner-grow text-warning"></div>
 ##split##
-<div class="spinner-grow text-red"></div>
+<div class="spinner-grow text-danger"></div>
 ##split##
 <div class="spinner-grow text-light"></div>
 ##split##
 <div class="spinner-grow text-dark"></div>
-##split##
-<div class="spinner-grow text-indigo"></div>
-##split##
-<div class="spinner-grow text-purple"></div>
-##split##
-<div class="spinner-grow text-pink"></div>
-##split##
-<div class="spinner-grow text-orange"></div>
-##split##
-<div class="spinner-grow text-teal"></div>
 
 {{< /example >}}
 

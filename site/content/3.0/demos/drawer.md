@@ -3,7 +3,7 @@ layout: demo
 title: Drawer
 ---
 
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
       <button class="navbar-toggler me-2"
@@ -20,13 +20,13 @@ title: Drawer
 </nav>
 
 <aside class="offcanvas offcanvas-start offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -126,7 +126,7 @@ title: Drawer
 
 <div class="offcanvas-pushed-content">
   <div class="container-fluid p-2">
-    <label class="bg-purple text-white text-center fs-1 p-5">
+    <label class="bg-primary text-white text-center fs-1 p-5">
       S<br>O<br>M<br>E<br><br>
       I<br>N<br>T<br>E<br>R<br>E<br>S<br>T<br>I<br>N<br>G<br><br>
       S<br>T<br>U<br>F<br>F
