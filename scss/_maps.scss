@@ -6,6 +6,17 @@
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 // scss-docs-end theme-colors-rgb
 
+$text-on-theme-colors: (
+  "primary": $white,
+  "secondary": $white,
+  "success": $white,
+  "info": $black,
+  "warning": $black,
+  "danger": $white,
+  "light": $black,
+  "dark": $white,
+) !default;
+
 $theme-colors-text: (
   "primary": $primary-text,
   "secondary": $secondary-text,
@@ -15,6 +26,39 @@ $theme-colors-text: (
   "danger": $danger-text,
   "light": $light-text,
   "dark": $dark-text,
+) !default;
+
+$theme-colors-text-hover: (
+  "primary": $primary-text-hover,
+  "secondary": $secondary-text-hover,
+  "success": $success-text-hover,
+  "info": $info-text-hover,
+  "warning": $warning-text-hover,
+  "danger": $danger-text-hover,
+  "light": $light-text-hover,
+  "dark": $dark-text-hover,
+) !default;
+
+$theme-colors-bg-hover: (
+  "primary": $primary-bg-hover,
+  "secondary": $secondary-bg-hover,
+  "success": $success-bg-hover,
+  "info": $info-bg-hover,
+  "warning": $warning-bg-hover,
+  "danger": $danger-bg-hover,
+  "light": $light-bg-hover,
+  "dark": $dark-bg-hover,
+) !default;
+
+$theme-colors-bg-active: (
+  "primary": $primary-bg-active,
+  "secondary": $secondary-bg-active,
+  "success": $success-bg-active,
+  "info": $info-bg-active,
+  "warning": $warning-bg-active,
+  "danger": $danger-bg-active,
+  "light": $light-bg-active,
+  "dark": $dark-bg-active,
 ) !default;
 
 $theme-colors-bg-subtle: (

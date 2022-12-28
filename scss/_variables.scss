@@ -324,6 +324,33 @@ $danger-text:             $red-600 !default;
 $light-text:              $gray-600 !default;
 $dark-text:               $gray-700 !default;
 
+$primary-text-hover:      $blue-700 !default;
+$secondary-text-hover:    $gray-700 !default;
+$success-text-hover:      $green-700 !default;
+$info-text-hover:         $cyan-800 !default;
+$warning-text-hover:      $yellow-800 !default;
+$danger-text-hover:       $red-700 !default;
+$light-text-hover:        $gray-700 !default;
+$dark-text-hover:         $gray-800 !default;
+
+$primary-bg-hover:        shade-color($blue, 10%) !default;
+$secondary-bg-hover:      shade-color($gray-600, 10%) !default;
+$success-bg-hover:        shade-color($green, 10%) !default;
+$info-bg-hover:           $cyan-400 !default;
+$warning-bg-hover:        $yellow-400 !default;
+$danger-bg-hover:         shade-color($red, 10%) !default;
+$light-bg-hover:          $gray-200 !default;
+$dark-bg-hover:           $gray-800 !default;
+
+$primary-bg-active:       shade-color($blue, 20%) !default;
+$secondary-bg-active:     shade-color($gray-600, 20%) !default;
+$success-bg-active:       shade-color($green, 20%) !default;
+$info-bg-active:          $cyan-300 !default;
+$warning-bg-active:       $yellow-300 !default;
+$danger-bg-active:        shade-color($red, 20%) !default;
+$light-bg-active:         $gray-300 !default;
+$dark-bg-active:          $gray-700 !default;
+
 $primary-bg-subtle:       $blue-100 !default;
 $secondary-bg-subtle:     $gray-100 !default;
 $success-bg-subtle:       $green-100 !default;

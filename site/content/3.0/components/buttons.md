@@ -10,23 +10,23 @@ keywords: buttons
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-purple m-1">
+<button type="button" class="btn btn-primary m-1">
   Default
 </button>
 ##split##
-<button type="button" class="btn btn-purple m-1">
-  With Icon <i class="bi bi-star-fill"></i>
+<button type="button" class="btn btn-primary m-1">
+  Icon <i class="bi bi-star-fill"></i>
 </button>
 ##split##
-<button type="button" class="btn btn-purple btn-lg m-1">
+<button type="button" class="btn btn-primary btn-lg m-1">
   Large
 </button>
 ##split##
-<button type="button" class="btn btn-purple btn-sm m-1">
+<button type="button" class="btn btn-primary btn-sm m-1">
   Small
 </button>
 ##split##
-<button type="button" class="btn btn-purple m-1" disabled>
+<button type="button" class="btn btn-primary m-1" disabled>
   Disabled
 </button>
 
@@ -37,76 +37,18 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-3">}}
 
-<button type="button" class="btn btn-purple elevated-1">
+<button type="button" class="btn btn-primary elevated-1">
   Elevated 1
 </button>
 ##split##
-<button type="button" class="btn btn-purple elevated-10">
+<button type="button" class="btn btn-primary elevated-10">
   Elevated 10
 </button>
 
 {{< /example >}}
 
-## Color options
-
-{{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
-
-<button type="button" class="btn btn-primary m-1">
-  Primary | Blue
-</button>
-##split##
-<button type="button" class="btn btn-secondary m-1">
-  Secondary | Gray
-</button>
-##split##
-<button type="button" class="btn btn-success m-1">
-  Success | Green
-</button>
-##split##
-<button type="button" class="btn btn-info m-1">
-  Info | Cyan
-</button>
-##split##
-<button type="button" class="btn btn-warning m-1">
-  Warning | Yellow
-</button>
-##split##
-<button type="button" class="btn btn-danger m-1">
-  Danger | Red
-</button>
-##split##
-<button type="button" class="btn btn-light m-1">
-  Light
-</button>
-##split##
-<button type="button" class="btn btn-dark m-1">
-  Dark
-</button>
-##split##
-<button type="button" class="btn btn-indigo m-1">
-  Indigo
-</button>
-##split##
-<button type="button" class="btn btn-purple m-1">
-  Purple
-</button>
-##split##
-<button type="button" class="btn btn-pink m-1">
-  Pink
-</button>
-##split##
-<button type="button" class="btn btn-orange m-1">
-  Orange
-</button>
-##split##
-<button type="button" class="btn btn-teal m-1">
-  Teal
-</button>
-
-{{< /example >}}
-
 ## Button Link
-{{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-link m-1">
   Link
@@ -117,21 +59,21 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 ## Outlined Buttons
 Add ```.btn-outline-[color]``` to create Outlined buttons.
 
-{{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-outline-pink m-1">
+<button type="button" class="btn btn-outline-primary m-1">
   Icon <i class="bi bi-star-fill"></i>
 </button>
 ##split##
-<button type="button" class="btn btn-outline-pink btn-lg m-1">
+<button type="button" class="btn btn-outline-primary btn-lg m-1">
   Large
 </button>
 ##split##
-<button type="button" class="btn btn-outline-pink btn-sm m-1">
+<button type="button" class="btn btn-outline-primary btn-sm m-1">
   Small
 </button>
 ##split##
-<button type="button" class="btn btn-outline-pink m-1" disabled>
+<button type="button" class="btn btn-outline-primary m-1" disabled>
   Disabled
 </button>
         
@@ -140,24 +82,136 @@ Add ```.btn-outline-[color]``` to create Outlined buttons.
 ## Text Buttons
 Add ```.border-0``` to Outlined buttons to create Text buttons.
 
-{{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-outline-green border-0 m-1">
+<button type="button" class="btn btn-outline-primary border-0 m-1">
   Icon <i class="bi bi-star-fill"></i>
 </button>
 ##split##
-<button type="button" class="btn btn-outline-green border-0 btn-lg m-1">
+<button type="button" class="btn btn-outline-primary border-0 btn-lg m-1">
   Large
 </button>
 ##split##
-<button type="button" class="btn btn-outline-green border-0 btn-sm m-1">
+<button type="button" class="btn btn-outline-primary border-0 btn-sm m-1">
   Small
 </button>
 ##split##
-<button type="button" class="btn btn-outline-green border-0 m-1" disabled>
+<button type="button" class="btn btn-outline-primary border-0 m-1" disabled>
   Disabled
 </button>
         
+{{< /example >}}
+
+## Color options
+### Default
+{{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
+
+<button type="button" class="btn btn-primary m-1">
+  Primary
+</button>
+##split##
+<button type="button" class="btn btn-secondary m-1">
+  Secondary
+</button>
+##split##
+<button type="button" class="btn btn-success m-1">
+  Success
+</button>
+##split##
+<button type="button" class="btn btn-danger m-1">
+  Danger
+</button>
+##split##
+<button type="button" class="btn btn-warning m-1">
+  Warning
+</button>
+##split##
+<button type="button" class="btn btn-info m-1">
+  Info
+</button>
+##split##
+<button type="button" class="btn btn-light m-1">
+  Light
+</button>
+##split##
+<button type="button" class="btn btn-dark m-1">
+  Dark
+</button>
+
+{{< /example >}}
+
+### Outlined
+{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
+
+<button type="button" class="btn btn-outline-primary m-1">
+  Primary
+</button>
+##split##
+<button type="button" class="btn btn-outline-secondary m-1">
+  Secondary
+</button>
+##split##
+<button type="button" class="btn btn-outline-success m-1">
+  Success
+</button>
+##split##
+<button type="button" class="btn btn-outline-danger m-1">
+  Danger
+</button>
+##split##
+<button type="button" class="btn btn-outline-warning m-1">
+  Warning
+</button>
+##split##
+<button type="button" class="btn btn-outline-info m-1">
+  Info
+</button>
+##split##
+<button type="button" class="btn btn-outline-light m-1">
+  Light
+</button>
+##split##
+<button type="button" class="btn btn-outline-dark m-1">
+  Dark
+</button>
+
+{{< /example >}}
+
+### Text
+{{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap">}}
+
+<button type="button" class="btn btn-outline-primary border-0 m-1">
+  Primary
+</button>
+##split##
+<button type="button" class="btn btn-outline-secondary border-0 m-1">
+  Secondary
+</button>
+##split##
+<button type="button" class="btn btn-outline-success border-0 m-1">
+  Success
+</button>
+##split##
+<button type="button" class="btn btn-outline-danger border-0 m-1">
+  Danger
+</button>
+##split##
+<button type="button" class="btn btn-outline-warning border-0 m-1">
+  Warning
+</button>
+##split##
+<button type="button" class="btn btn-outline-info border-0 m-1">
+  Info
+</button>
+##split##
+<button type="button" class="btn btn-outline-light border-0 m-1">
+  Light
+</button>
+##split##
+<button type="button" class="btn btn-outline-dark border-0 m-1">
+  Dark
+</button>
+
 {{< /example >}}
 
 ## Ripple effect
@@ -170,7 +224,7 @@ Add ```.border-0``` to Outlined buttons to create Text buttons.
 {{< partial "callout-rippledocs.md" >}}
 {{< /callout >}}
 
-{{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code9" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <button type="button" class="btn btn-success m-1">
   Success | Green
@@ -182,12 +236,12 @@ Add ```.border-0``` to Outlined buttons to create Text buttons.
   <span class="ripple-surface"></span>
 </button>
 ##split##
-<button type="button" class="btn btn-outline-purple m-1">
+<button type="button" class="btn btn-outline-danger m-1">
   Outlined Button
   <span class="ripple-surface"></span>
 </button>
 ##split##
-<button type="button" class="btn btn-outline-pink border-0 m-1">
+<button type="button" class="btn btn-outline-primary border-0 m-1">
   Text Button
   <span class="ripple-surface"></span>
 </button>
@@ -206,69 +260,69 @@ rippleSurface.map(s => {
 <br>
 
 ## Horizontal Button group
-{{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code10" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="btn-group m-1">
-  <button type="button" class="btn btn-indigo">Button</button>
-  <button type="button" class="btn btn-indigo">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
 </div>
 ##split##
 <div class="btn-group m-1">
-  <button type="button" class="btn btn-indigo">
+  <button type="button" class="btn btn-primary">
     Icon <i class="bi bi-star-fill"></i>
   </button>
-  <button type="button" class="btn btn-indigo">
+  <button type="button" class="btn btn-primary">
     Icon <i class="bi bi-star-fill"></i>
   </button>
 </div>
 ##split##
 <div class="btn-group m-1">
-  <button type="button" class="btn btn-indigo btn-lg">Large</button>
-  <button type="button" class="btn btn-indigo btn-lg">Large</button>
+  <button type="button" class="btn btn-primary btn-lg">Large</button>
+  <button type="button" class="btn btn-primary btn-lg">Large</button>
 </div>
 ##split##
 <div class="btn-group m-1">
-  <button type="button" class="btn btn-indigo btn-sm">Small</button>
-  <button type="button" class="btn btn-indigo btn-sm">Small</button>
+  <button type="button" class="btn btn-primary btn-sm">Small</button>
+  <button type="button" class="btn btn-primary btn-sm">Small</button>
 </div>
 ##split##
 <div class="btn-group m-1">
-  <button type="button" class="btn btn-indigo" disabled>Disabled</button>
-  <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+  <button type="button" class="btn btn-primary" disabled>Disabled</button>
+  <button type="button" class="btn btn-primary" disabled>Disabled</button>
 </div>
 
 {{< /example >}}
 
 ## Vertical Button group
-{{< example codeId="code9" class="d-flex justify-content-center align-items-center flex-wrap">}}
+{{< example codeId="code11" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
 <div class="btn-group-vertical m-1">
-  <button type="button" class="btn btn-indigo">Button</button>
-  <button type="button" class="btn btn-indigo">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
 </div>
 ##split##
 <div class="btn-group-vertical m-1">
-  <button type="button" class="btn btn-indigo">
+  <button type="button" class="btn btn-primary">
     Icon <i class="bi bi-star-fill"></i>
   </button>
-  <button type="button" class="btn btn-indigo">
+  <button type="button" class="btn btn-primary">
     Icon <i class="bi bi-star-fill"></i>
   </button>
 </div>
 ##split##
 <div class="btn-group-vertical m-1">
-  <button type="button" class="btn btn-indigo btn-lg">Large</button>
-  <button type="button" class="btn btn-indigo btn-lg">Large</button>
+  <button type="button" class="btn btn-primary btn-lg">Large</button>
+  <button type="button" class="btn btn-primary btn-lg">Large</button>
 </div>
 ##split##
 <div class="btn-group-vertical m-1">
-  <button type="button" class="btn btn-indigo btn-sm">Small</button>
-  <button type="button" class="btn btn-indigo btn-sm">Small</button>
+  <button type="button" class="btn btn-primary btn-sm">Small</button>
+  <button type="button" class="btn btn-primary btn-sm">Small</button>
 </div>
 ##split##
 <div class="btn-group-vertical m-1">
-  <button type="button" class="btn btn-indigo" disabled>Disabled</button>
-  <button type="button" class="btn btn-indigo" disabled>Disabled</button>
+  <button type="button" class="btn btn-primary" disabled>Disabled</button>
+  <button type="button" class="btn btn-primary" disabled>Disabled</button>
 </div>
         
 {{< /example >}}

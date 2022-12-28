@@ -248,7 +248,7 @@
 
     initComponents()
 
-    populateColors()
+    // populateColors()
     populateShadows()
 
     /**

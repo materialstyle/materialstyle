@@ -18,8 +18,24 @@
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
+  @each $color, $value in $text-on-theme-colors {
+    --#{$prefix}text-on-#{$color}: #{$value};
+  }
+
   @each $color, $value in $theme-colors-text {
     --#{$prefix}#{$color}-text: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-text-hover {
+    --#{$prefix}#{$color}-text-hover: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-bg-hover {
+    --#{$prefix}#{$color}-bg-hover: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-bg-active {
+    --#{$prefix}#{$color}-bg-active: #{$value};
   }
 
   @each $color, $value in $theme-colors-bg-subtle {
@@ -160,6 +176,15 @@
     --#{$prefix}danger-text: #{$danger-text-dark};
     --#{$prefix}light-text: #{$light-text-dark};
     --#{$prefix}dark-text: #{$dark-text-dark};
+
+    --#{$prefix}primary-text-hover: #{$primary-text-hover-dark};
+    --#{$prefix}secondary-text-hover: #{$secondary-text-hover-dark};
+    --#{$prefix}success-text-hover: #{$success-text-hover-dark};
+    --#{$prefix}info-text-hover: #{$info-text-hover-dark};
+    --#{$prefix}warning-text-hover: #{$warning-text-hover-dark};
+    --#{$prefix}danger-text-hover: #{$danger-text-hover-dark};
+    --#{$prefix}light-text-hover: #{$light-text-hover-dark};
+    --#{$prefix}dark-text-hover: #{$dark-text-hover-dark};
 
     --#{$prefix}primary-bg-subtle: #{$primary-bg-subtle-dark};
     --#{$prefix}secondary-bg-subtle: #{$secondary-bg-subtle-dark};
