@@ -94,6 +94,14 @@ keywords: utilities, colors
     <span>{{< markdown >}}`--bs-primary-bg-subtle`{{< /markdown >}}</span>
   </li>
   <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-primary-bg-subtle-hover); --bs-border-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Background subtle hover</div>
+    <span>{{< markdown >}}`--bs-primary-bg-subtle-hover`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-primary-bg-subtle-active); --bs-border-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Background subtle active</div>
+    <span>{{< markdown >}}`--bs-primary-bg-subtle-active`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
     <div style="background-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Border subtle</div>
     <span>{{< markdown >}}`--bs-primary-border-subtle`{{< /markdown >}}</span>
   </li>
@@ -130,6 +138,14 @@ keywords: utilities, colors
   <li class="list-group-item">
     <div class="border" style="background-color: var(--bs-success-bg-subtle); --bs-border-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Background subtle</div>
     <span>{{< markdown >}}`--bs-success-bg-subtle`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-success-bg-subtle-hover); --bs-border-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Background subtle hover</div>
+    <span>{{< markdown >}}`--bs-success-bg-subtle-hover`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-success-bg-subtle-active); --bs-border-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Background subtle active</div>
+    <span>{{< markdown >}}`--bs-success-bg-subtle-active`{{< /markdown >}}</span>
   </li>
   <li class="list-group-item">
     <div  style="background-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Border subtle</div>
@@ -170,6 +186,14 @@ keywords: utilities, colors
     <span>{{< markdown >}}`--bs-danger-bg-subtle`{{< /markdown >}}</span>
   </li>
   <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-danger-bg-subtle-hover); --bs-border-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Background subtle hover</div>
+    <span>{{< markdown >}}`--bs-danger-bg-subtle-hover`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-danger-bg-subtle-active); --bs-border-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Background subtle active</div>
+    <span>{{< markdown >}}`--bs-danger-bg-subtle-active`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
     <div style="background-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Border subtle</div>
     <span>{{< markdown >}}`--bs-danger-border-subtle`{{< /markdown >}}</span>
   </li>
@@ -206,6 +230,14 @@ keywords: utilities, colors
   <li class="list-group-item">
     <div class="border" style="background-color: var(--bs-warning-bg-subtle); --bs-border-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Background subtle</div>
     <span>{{< markdown >}}`--bs-warning-bg-subtle`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-warning-bg-subtle-hover); --bs-border-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Background subtle hover</div>
+    <span>{{< markdown >}}`--bs-warning-bg-subtle-hover`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-warning-bg-subtle-active); --bs-border-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Background subtle active</div>
+    <span>{{< markdown >}}`--bs-warning-bg-subtle-active`{{< /markdown >}}</span>
   </li>
   <li class="list-group-item">
     <div  style="background-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Border subtle</div>
@@ -246,6 +278,14 @@ keywords: utilities, colors
     <span>{{< markdown >}}`--bs-info-bg-subtle`{{< /markdown >}}</span>
   </li>
   <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-info-bg-subtle-hover); --bs-border-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Background subtle hover</div>
+    <span>{{< markdown >}}`--bs-info-bg-subtle-hover`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-info-bg-subtle-active); --bs-border-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Background subtle active</div>
+    <span>{{< markdown >}}`--bs-info-bg-subtle-active`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
      <div  style="background-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Border subtle</div>
     <span>{{< markdown >}}`--bs-info-border-subtle`{{< /markdown >}}</span>
   </li>
@@ -284,6 +324,14 @@ keywords: utilities, colors
     <span>{{< markdown >}}`--bs-light-bg-subtle`{{< /markdown >}}</span>
   </li>
   <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-light-bg-subtle-hover); --bs-border-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Background subtle hover</div>
+    <span>{{< markdown >}}`--bs-light-bg-subtle-hover`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-light-bg-subtle-active); --bs-border-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Background subtle active</div>
+    <span>{{< markdown >}}`--bs-light-bg-subtle-active`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
      <div  style="background-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Border subtle</div>
     <span>{{< markdown >}}`--bs-light-border-subtle`{{< /markdown >}}</span>
   </li>
@@ -320,6 +368,14 @@ keywords: utilities, colors
   <li class="list-group-item">
     <div class="border" style="background-color: var(--bs-dark-bg-subtle); --bs-border-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Background subtle</div>
     <span>{{< markdown >}}`--bs-dark-bg-subtle`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-dark-bg-subtle-hover); --bs-border-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Background subtle hover</div>
+    <span>{{< markdown >}}`--bs-dark-bg-subtle-hover`{{< /markdown >}}</span>
+  </li>
+  <li class="list-group-item">
+    <div class="border" style="background-color: var(--bs-dark-bg-subtle-active); --bs-border-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Background subtle active</div>
+    <span>{{< markdown >}}`--bs-dark-bg-subtle-active`{{< /markdown >}}</span>
   </li>
   <li class="list-group-item">
     <div  style="background-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Border subtle</div>

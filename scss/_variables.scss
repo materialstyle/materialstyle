@@ -347,6 +347,24 @@ $danger-bg-subtle:        $red-100 !default;
 $light-bg-subtle:         mix($gray-100, $white) !default;
 $dark-bg-subtle:          $gray-400 !default;
 
+$primary-bg-subtle-hover:       tint-color($blue-100, 30%) !default;
+$secondary-bg-subtle-hover:     tint-color($gray-100, 30%) !default;
+$success-bg-subtle-hover:       tint-color($green-100, 30%) !default;
+$info-bg-subtle-hover:          tint-color($cyan-100, 30%) !default;
+$warning-bg-subtle-hover:       tint-color($yellow-100, 30%) !default;
+$danger-bg-subtle-hover:        tint-color($red-100, 30%) !default;
+$light-bg-subtle-hover:         mix($gray-200, $white) !default;
+$dark-bg-subtle-hover:          $gray-300 !default;
+
+$primary-bg-subtle-active:       tint-color($blue-100, 60%) !default;
+$secondary-bg-subtle-active:     tint-color($gray-100, 60%) !default;
+$success-bg-subtle-active:       tint-color($green-100, 60%) !default;
+$info-bg-subtle-active:          tint-color($cyan-100, 60%) !default;
+$warning-bg-subtle-active:       tint-color($yellow-100, 60%) !default;
+$danger-bg-subtle-active:        tint-color($red-100, 60%) !default;
+$light-bg-subtle-active:         mix($gray-300, $white) !default;
+$dark-bg-subtle-active:          $gray-200 !default;
+
 $primary-border-subtle:   $blue-200 !default;
 $secondary-border-subtle: $gray-200 !default;
 $success-border-subtle:   $green-200 !default;
@@ -756,7 +774,6 @@ $table-hover-color:           $table-color !default;
 $table-hover-bg-factor:       .075 !default;
 $table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
 
-$table-border-factor:         .1 !default;
 $table-border-width:          var(--#{$prefix}border-width) !default;
 $table-border-color:          var(--#{$prefix}border-color) !default;
 

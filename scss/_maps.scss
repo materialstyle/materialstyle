@@ -72,6 +72,28 @@ $theme-colors-bg-subtle: (
   "dark": $dark-bg-subtle,
 ) !default;
 
+$theme-colors-bg-subtle-hover: (
+  "primary": $primary-bg-subtle-hover,
+  "secondary": $secondary-bg-subtle-hover,
+  "success": $success-bg-subtle-hover,
+  "info": $info-bg-subtle-hover,
+  "warning": $warning-bg-subtle-hover,
+  "danger": $danger-bg-subtle-hover,
+  "light": $light-bg-subtle-hover,
+  "dark": $dark-bg-subtle-hover,
+) !default;
+
+$theme-colors-bg-subtle-active: (
+  "primary": $primary-bg-subtle-active,
+  "secondary": $secondary-bg-subtle-active,
+  "success": $success-bg-subtle-active,
+  "info": $info-bg-subtle-active,
+  "warning": $warning-bg-subtle-active,
+  "danger": $danger-bg-subtle-active,
+  "light": $light-bg-subtle-active,
+  "dark": $dark-bg-subtle-active,
+) !default;
+
 $theme-colors-border-subtle: (
   "primary": $primary-border-subtle,
   "secondary": $secondary-border-subtle,

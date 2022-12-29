@@ -16,14 +16,14 @@ $danger-text-dark:                  $red-300 !default;
 $light-text-dark:                   $gray-100 !default;
 $dark-text-dark:                    $gray-300 !default;
 
-$primary-text-hover-dark:           $blue-200 !default;
-$secondary-text-hover-dark:         $gray-200 !default;
-$success-text-hover-dark:           $green-200 !default;
-$info-text-hover-dark:              $cyan-200 !default;
-$warning-text-hover-dark:           $yellow-200 !default;
-$danger-text-hover-dark:            $red-200 !default;
-$light-text-hover-dark:             $gray-200 !default;
-$dark-text-hover-dark:              $gray-200 !default;
+$primary-text-dark-hover:           $blue-200 !default;
+$secondary-text-dark-hover:         $gray-200 !default;
+$success-text-dark-hover:           $green-200 !default;
+$info-text-dark-hover:              $cyan-200 !default;
+$warning-text-dark-hover:           $yellow-200 !default;
+$danger-text-dark-hover:            $red-200 !default;
+$light-text-dark-hover:             $gray-200 !default;
+$dark-text-dark-hover:              $gray-200 !default;
 
 $primary-bg-subtle-dark:            $blue-900 !default;
 $secondary-bg-subtle-dark:          $gray-900 !default;
@@ -33,6 +33,24 @@ $warning-bg-subtle-dark:            $yellow-900 !default;
 $danger-bg-subtle-dark:             $red-900 !default;
 $light-bg-subtle-dark:              $gray-800 !default;
 $dark-bg-subtle-dark:               mix($gray-800, $black) !default;
+
+$primary-bg-subtle-dark-hover:       shade-color($blue-900, 30%) !default;
+$secondary-bg-subtle-dark-hover:     shade-color($gray-900, 30%) !default;
+$success-bg-subtle-dark-hover:       shade-color($green-900, 30%) !default;
+$info-bg-subtle-dark-hover:          shade-color($cyan-900, 30%) !default;
+$warning-bg-subtle-dark-hover:       shade-color($yellow-900, 30%) !default;
+$danger-bg-subtle-dark-hover:        shade-color($red-900, 30%) !default;
+$light-bg-subtle-dark-hover:         shade-color($gray-800, 30%) !default;
+$dark-bg-subtle-dark-hover:          mix($gray-700, $black) !default;
+
+$primary-bg-subtle-dark-active:       shade-color($blue-900, 60%) !default;
+$secondary-bg-subtle-dark-active:     shade-color($gray-900, 60%) !default;
+$success-bg-subtle-dark-active:       shade-color($green-900, 60%) !default;
+$info-bg-subtle-dark-active:          shade-color($cyan-900, 60%) !default;
+$warning-bg-subtle-dark-active:       shade-color($yellow-900, 60%) !default;
+$danger-bg-subtle-dark-active:        shade-color($red-900, 60%) !default;
+$light-bg-subtle-dark-active:         shade-color($gray-800, 60%) !default;
+$dark-bg-subtle-dark-active:          mix($gray-600, $black) !default;
 
 $primary-border-subtle-dark:        $blue-700 !default;
 $secondary-border-subtle-dark:      $gray-700 !default;
