@@ -53,7 +53,11 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 <button type="button" class="btn btn-link m-1">
   Link
 </button>
-        
+##split##
+<button type="button" class="btn btn-link m-1" disabled>
+  Disabled Link
+</button>
+
 {{< /example >}}
 
 ## Outlined Buttons

@@ -143,7 +143,7 @@
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
 
-@each $color, $value in $table-variants {
+@each $color, $value in $theme-colors {
   @include table-variant($color, $value);
 }
 
