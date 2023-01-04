@@ -120,7 +120,7 @@
       --#{$prefix}dropdown-link-hover-bg: var(--#{$prefix}form-field-hover-bg);
       --#{$prefix}dropdown-link-active-color: var(--#{$prefix}form-field-color);
       --#{$prefix}dropdown-link-active-bg: var(--#{$prefix}form-field-active-bg);
-      --#{$prefix}dropdown-link-active-hover-bg: #{$gray-400};
+      --#{$prefix}dropdown-link-active-hover-bg: #{$gray-3};
 
       width: 100%;
       max-height: 40vh;
@@ -348,10 +348,10 @@
         --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
         --#{$prefix}dropdown-link-hover-bg: #{$dropdown-dark-link-hover-bg};
         --#{$prefix}dropdown-link-active-color: #{$dropdown-dark-link-active-color};
-        --#{$prefix}dropdown-link-active-bg: #{$gray-700};
+        --#{$prefix}dropdown-link-active-bg: #{$gray-6};
         --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
         --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
-        --#{$prefix}dropdown-link-active-hover-bg: #{$gray-600};
+        --#{$prefix}dropdown-link-active-hover-bg: #{$gray-5};
       }
     }
   }

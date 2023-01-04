@@ -6,17 +6,6 @@
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 // scss-docs-end theme-colors-rgb
 
-$text-on-theme-colors: (
-  "primary": $white,
-  "secondary": $white,
-  "success": $white,
-  "info": $black,
-  "warning": $black,
-  "danger": $white,
-  "light": $black,
-  "dark": $white,
-) !default;
-
 $theme-colors-text: (
   "primary": $primary-text,
   "secondary": $secondary-text,

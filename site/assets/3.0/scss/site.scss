@@ -245,7 +245,8 @@ footer {
       height: 55px;
       padding: 1rem;
     }
-    span, code {
+    span,
+    code {
       width: 220px;
     }
   }
@@ -751,7 +752,7 @@ pre,
 }
 
 /* Algolia Doc Search */
-// stylelint-disable selector-class-pattern
+// stylelint-disable selector-class-pattern, no-duplicate-selectors
 :root {
   --docsearch-searchbox-background: var(--bs-white);
   --docsearch-primary-color: var(--bs-purple);
@@ -800,7 +801,7 @@ pre,
     --docsearch-text-color: var(--bs-white);
   }
 }
-// stylelint-enable selector-class-pattern
+// stylelint-enable selector-class-pattern, no-duplicate-selectors
 
 .ms-placeholder-img {
   font-size: 1.125rem;

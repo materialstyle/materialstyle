@@ -6,7 +6,7 @@
   //
   // Generate palettes for full colors, grays, and theme colors.
 
-  @each $color, $value in $grays {
+  @each $color, $value in $gray-list {
     --#{$prefix}gray-#{$color}: #{$value};
   }
 
@@ -18,8 +18,8 @@
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
-  @each $color, $value in $text-on-theme-colors {
-    --#{$prefix}text-on-#{$color}: #{$value};
+  @each $color, $value in $theme-colors {
+    --#{$prefix}text-on-#{$color}: #{color-contrast($value)};
   }
 
   @each $color, $value in $theme-colors-text {
