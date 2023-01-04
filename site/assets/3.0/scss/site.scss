@@ -8,6 +8,165 @@
   -o-flex: $flex;
 }
 
+:root {
+  --m-red-0: #fff5f5;
+  --m-red-1: #ffe3e3;
+  --m-red-2: #ffc9c9;
+  --m-red-3: #ffa8a8;
+  --m-red-4: #ff8787;
+  --m-red-5: #ff6b6b;
+  --m-red-6: #fa5252;
+  --m-red-7: #f03e3e;
+  --m-red-8: #e03131;
+  --m-red-9: #c92a2a;
+  --m-red-10: #b02525;
+  --m-red-11: #962020;
+  --m-red-12: #7d1a1a;
+  --m-pink-0: #fff0f6;
+  --m-pink-1: #ffdeeb;
+  --m-pink-2: #fcc2d7;
+  --m-pink-3: #faa2c1;
+  --m-pink-4: #f783ac;
+  --m-pink-5: #f06595;
+  --m-pink-6: #e64980;
+  --m-pink-7: #d6336c;
+  --m-pink-8: #c2255c;
+  --m-pink-9: #a61e4d;
+  --m-pink-10: #8c1941;
+  --m-pink-11: #731536;
+  --m-pink-12: #59102a;
+  --m-grape-0: #f8f0fc;
+  --m-grape-1: #f3d9fa;
+  --m-grape-2: #eebefa;
+  --m-grape-3: #e599f7;
+  --m-grape-4: #da77f2;
+  --m-grape-5: #cc5de8;
+  --m-grape-6: #be4bdb;
+  --m-grape-7: #ae3ec9;
+  --m-grape-8: #9c36b5;
+  --m-grape-9: #862e9c;
+  --m-grape-10: #702682;
+  --m-grape-11: #5a1e69;
+  --m-grape-12: #44174f;
+  --m-violet-0: #f3f0ff;
+  --m-violet-1: #e5dbff;
+  --m-violet-2: #d0bfff;
+  --m-violet-3: #b197fc;
+  --m-violet-4: #9775fa;
+  --m-violet-5: #845ef7;
+  --m-violet-6: #7950f2;
+  --m-violet-7: #7048e8;
+  --m-violet-8: #6741d9;
+  --m-violet-9: #5f3dc4;
+  --m-violet-10: #5235ab;
+  --m-violet-11: #462d91;
+  --m-violet-12: #3a2578;
+  --m-indigo-0: #edf2ff;
+  --m-indigo-1: #dbe4ff;
+  --m-indigo-2: #bac8ff;
+  --m-indigo-3: #91a7ff;
+  --m-indigo-4: #748ffc;
+  --m-indigo-5: #5c7cfa;
+  --m-indigo-6: #4c6ef5;
+  --m-indigo-7: #4263eb;
+  --m-indigo-8: #3b5bdb;
+  --m-indigo-9: #364fc7;
+  --m-indigo-10: #2f44ad;
+  --m-indigo-11: #283a94;
+  --m-indigo-12: #21307a;
+  --m-blue-0: #e7f5ff;
+  --m-blue-1: #d0ebff;
+  --m-blue-2: #a5d8ff;
+  --m-blue-3: #74c0fc;
+  --m-blue-4: #4dabf7;
+  --m-blue-5: #339af0;
+  --m-blue-6: #228be6;
+  --m-blue-7: #1c7ed6;
+  --m-blue-8: #1971c2;
+  --m-blue-9: #1864ab;
+  --m-blue-10: #145591;
+  --m-blue-11: #114678;
+  --m-blue-12: #0d375e;
+  --m-cyan-0: #e3fafc;
+  --m-cyan-1: #c5f6fa;
+  --m-cyan-2: #99e9f2;
+  --m-cyan-3: #66d9e8;
+  --m-cyan-4: #3bc9db;
+  --m-cyan-5: #22b8cf;
+  --m-cyan-6: #15aabf;
+  --m-cyan-7: #1098ad;
+  --m-cyan-8: #0c8599;
+  --m-cyan-9: #0b7285;
+  --m-cyan-10: #095c6b;
+  --m-cyan-11: #074652;
+  --m-cyan-12: #053038;
+  --m-teal-0: #e6fcf5;
+  --m-teal-1: #c3fae8;
+  --m-teal-2: #96f2d7;
+  --m-teal-3: #63e6be;
+  --m-teal-4: #38d9a9;
+  --m-teal-5: #20c997;
+  --m-teal-6: #12b886;
+  --m-teal-7: #0ca678;
+  --m-teal-8: #099268;
+  --m-teal-9: #087f5b;
+  --m-teal-10: #066649;
+  --m-teal-11: #054d37;
+  --m-teal-12: #033325;
+  --m-green-0: #ebfbee;
+  --m-green-1: #d3f9d8;
+  --m-green-2: #b2f2bb;
+  --m-green-3: #8ce99a;
+  --m-green-4: #69db7c;
+  --m-green-5: #51cf66;
+  --m-green-6: #40c057;
+  --m-green-7: #37b24d;
+  --m-green-8: #2f9e44;
+  --m-green-9: #2b8a3e;
+  --m-green-10: #237032;
+  --m-green-11: #1b5727;
+  --m-green-12: #133d1b;
+  --m-lime-0: #f4fce3;
+  --m-lime-1: #e9fac8;
+  --m-lime-2: #d8f5a2;
+  --m-lime-3: #c0eb75;
+  --m-lime-4: #a9e34b;
+  --m-lime-5: #94d82d;
+  --m-lime-6: #82c91e;
+  --m-lime-7: #74b816;
+  --m-lime-8: #66a80f;
+  --m-lime-9: #5c940d;
+  --m-lime-10: #4c7a0b;
+  --m-lime-11: #3c6109;
+  --m-lime-12: #2c4706;
+  --m-yellow-0: #fff9db;
+  --m-yellow-1: #fff3bf;
+  --m-yellow-2: #ffec99;
+  --m-yellow-3: #ffe066;
+  --m-yellow-4: #ffd43b;
+  --m-yellow-5: #fcc419;
+  --m-yellow-6: #fab005;
+  --m-yellow-7: #f59f00;
+  --m-yellow-8: #f08c00;
+  --m-yellow-9: #e67700;
+  --m-yellow-10: #b35c00;
+  --m-yellow-11: #804200;
+  --m-yellow-12: #663500;
+  --m-orange-0: #fff4e6;
+  --m-orange-1: #ffe8cc;
+  --m-orange-2: #ffd8a8;
+  --m-orange-3: #ffc078;
+  --m-orange-4: #ffa94d;
+  --m-orange-5: #ff922b;
+  --m-orange-6: #fd7e14;
+  --m-orange-7: #f76707;
+  --m-orange-8: #e8590c;
+  --m-orange-9: #d9480f;
+  --m-orange-10: #bf400d;
+  --m-orange-11: #99330b;
+  --m-orange-12: #802b09;
+}
+
 [data-bs-theme="light"] {
   --ms-primary-color: #693eb6;
   --ms-primary-color-rgb: 105, 62, 182;
@@ -80,17 +239,20 @@ footer {
 }
 
 .color-list {
-  margin-bottom: .8rem;
-  .list-group-item:not(:first-of-type) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-
+  .theme-color-palette {
     div {
-      width: 240px;
+      width: 220px;
+      height: 55px;
       padding: 1rem;
-      border-radius: var(--bs-border-radius);
+    }
+    span, code {
+      width: 220px;
+    }
+  }
+  .color-palette {
+    div {
+      width: 150px;
+      height: 75px;
     }
   }
 }

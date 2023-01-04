@@ -1,0 +1,17 @@
+{{- $color := .Get "color" -}}
+{{- $prefix := .Get "prefix" | default "m" -}}
+
+<div class="color-list py-3 mb-4">
+  <div class="d-flex flex-wrap gap-1">
+{{ range $index, $num := (seq 13) }}
+
+    <div class="color-palette mb-3">
+      <div style="background-color: var(--{{ $prefix }}-{{$color}}-{{ $index }})">&nbsp;</div>
+      <span class="text-uppercase d-block p-1" style="color: var(--bs-secondary-color);">{{ $color }} {{ $index }}</span>
+      <small class="color-hex d-block px-1" style="color: var(--bs-tertiary-color);"></small>
+      <small class="color-rgb d-block px-1" style="color: var(--bs-tertiary-color);"></small>
+    </div>
+
+{{ end }}
+  </div>
+</div>

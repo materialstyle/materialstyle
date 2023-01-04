@@ -9,7 +9,8 @@
 
 - title: Utilities
   pages:
-    - title: Colors
+    - title: Theme colors
+    - title: Color Palette
     - title: Ripple
     - title: Shadows
     - title: Shapes
