@@ -18,8 +18,24 @@
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
-  @each $color, $value in $theme-colors {
-    --#{$prefix}text-on-#{$color}: #{color-contrast($value)};
+  @each $color, $value in $theme-colors-hover {
+    --#{$prefix}#{$color}-hover: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-active {
+    --#{$prefix}#{$color}-active: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-subtle {
+    --#{$prefix}#{$color}-subtle: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-subtle-hover {
+    --#{$prefix}#{$color}-subtle-hover: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-subtle-active {
+    --#{$prefix}#{$color}-subtle-active: #{$value};
   }
 
   @each $color, $value in $theme-colors-text {
@@ -30,24 +46,8 @@
     --#{$prefix}#{$color}-text-hover: #{$value};
   }
 
-  @each $color, $value in $theme-colors-bg-hover {
-    --#{$prefix}#{$color}-bg-hover: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-bg-active {
-    --#{$prefix}#{$color}-bg-active: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-bg-subtle {
-    --#{$prefix}#{$color}-bg-subtle: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-bg-subtle-hover {
-    --#{$prefix}#{$color}-bg-subtle-hover: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-bg-subtle-active {
-    --#{$prefix}#{$color}-bg-subtle-active: #{$value};
+  @each $color, $value in $theme-colors {
+    --#{$prefix}text-on-#{$color}: #{color-contrast($value)};
   }
 
   @each $color, $value in $theme-colors-border-subtle {
@@ -56,8 +56,6 @@
 
   --#{$prefix}white-rgb: #{to-rgb($white)};
   --#{$prefix}black-rgb: #{to-rgb($black)};
-  --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
-  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
   // Fonts
 
@@ -76,26 +74,27 @@
   @include rfs($font-size-base, --#{$prefix}body-font-size);
   --#{$prefix}body-font-weight: #{$font-weight-base};
   --#{$prefix}body-line-height: #{$line-height-base};
+
   --#{$prefix}body-color: #{$body-color};
+  --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+  --#{$prefix}body-bg: #{$body-bg};
+  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
-  --#{$prefix}emphasis-color: #{$body-emphasis-color};
-  --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
+  --#{$prefix}surface-color: #{$surface-color};
+  --#{$prefix}surface-color-rgb: #{to-rgb($surface-color)};
+  --#{$prefix}surface-bg: #{$surface-bg};
+  --#{$prefix}surface-bg-rgb: #{to-rgb($surface-bg)};
+  --#{$prefix}surface-bg-hover: #{$surface-bg-hover};
+  --#{$prefix}surface-bg-active: #{$surface-bg-active};
 
-  --#{$prefix}secondary-color: #{$body-secondary-color};
-  --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
-  --#{$prefix}secondary-bg: #{$body-secondary-bg};
-  --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
+  --#{$prefix}emphasis-color: #{$emphasis-color};
+  --#{$prefix}emphasis-color-rgb: #{to-rgb($emphasis-color)};
 
-  --#{$prefix}tertiary-color: #{$body-tertiary-color};
-  --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
-  --#{$prefix}tertiary-bg: #{$body-tertiary-bg};
-  --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
+  --#{$prefix}muted-color: #{$muted-color};
 
   @if $body-text-align != null {
     --#{$prefix}body-text-align: #{$body-text-align};
   }
-  --#{$prefix}body-bg: #{$body-bg};
-  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
   // scss-docs-end root-body-variables
 
   @if $headings-color != null {
@@ -133,14 +132,10 @@
   --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
   --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
 
-  --#{$prefix}emphasis-color: #{$emphasis-color};
-
   // scss-docs-start form-control-vars
   --#{$prefix}form-control-bg: var(--#{$prefix}body-bg);
-  --#{$prefix}form-control-disabled-bg: var(--#{$prefix}secondary-bg);
+  --#{$prefix}form-control-disabled-bg: var(--#{$prefix}surface-bg);
   // scss-docs-end form-control-vars
-
-  --#{$prefix}highlight-bg: #{$mark-bg};
 
   @each $name, $value in $grid-breakpoints {
     --#{$prefix}breakpoint-#{$name}: #{$value};
@@ -159,23 +154,21 @@
     --#{$prefix}body-bg: #{$body-bg-dark};
     --#{$prefix}body-bg-rgb: #{to-rgb($body-bg-dark)};
 
-    --#{$prefix}emphasis-color: #{$body-emphasis-color-dark};
-    --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color-dark)};
-
-    --#{$prefix}secondary-color: #{$body-secondary-color-dark};
-    --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color-dark)};
-    --#{$prefix}secondary-bg: #{$body-secondary-bg-dark};
-    --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark)};
-
-    --#{$prefix}tertiary-color: #{$body-tertiary-color-dark};
-    --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
-    --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
-    --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
+    --#{$prefix}surface-color: #{$surface-color-dark};
+    --#{$prefix}surface-color-rgb: #{to-rgb($surface-color-dark)};
+    --#{$prefix}surface-bg: #{$surface-bg-dark};
+    --#{$prefix}surface-bg-rgb: #{to-rgb($surface-bg-dark)};
+    --#{$prefix}surface-bg-hover: #{$surface-bg-dark-hover};
+    --#{$prefix}surface-bg-active: #{$surface-bg-dark-active};
 
     --#{$prefix}emphasis-color: #{$emphasis-color-dark};
+    --#{$prefix}emphasis-color-rgb: #{to-rgb($emphasis-color-dark)};
+
+    --#{$prefix}muted-color: #{$muted-color-dark};
 
     --#{$prefix}primary-text: #{$primary-text-dark};
     --#{$prefix}secondary-text: #{$secondary-text-dark};
+    --#{$prefix}tertiary-text: #{$tertiary-text-dark};
     --#{$prefix}success-text: #{$success-text-dark};
     --#{$prefix}info-text: #{$info-text-dark};
     --#{$prefix}warning-text: #{$warning-text-dark};
@@ -185,6 +178,7 @@
 
     --#{$prefix}primary-text-hover: #{$primary-text-dark-hover};
     --#{$prefix}secondary-text-hover: #{$secondary-text-dark-hover};
+    --#{$prefix}tertiary-text-hover: #{$tertiary-text-dark-hover};
     --#{$prefix}success-text-hover: #{$success-text-dark-hover};
     --#{$prefix}info-text-hover: #{$info-text-dark-hover};
     --#{$prefix}warning-text-hover: #{$warning-text-dark-hover};
@@ -192,35 +186,39 @@
     --#{$prefix}light-text-hover: #{$light-text-dark-hover};
     --#{$prefix}dark-text-hover: #{$dark-text-dark-hover};
 
-    --#{$prefix}primary-bg-subtle: #{$primary-bg-subtle-dark};
-    --#{$prefix}secondary-bg-subtle: #{$secondary-bg-subtle-dark};
-    --#{$prefix}success-bg-subtle: #{$success-bg-subtle-dark};
-    --#{$prefix}info-bg-subtle: #{$info-bg-subtle-dark};
-    --#{$prefix}warning-bg-subtle: #{$warning-bg-subtle-dark};
-    --#{$prefix}danger-bg-subtle: #{$danger-bg-subtle-dark};
-    --#{$prefix}light-bg-subtle: #{$light-bg-subtle-dark};
-    --#{$prefix}dark-bg-subtle: #{$dark-bg-subtle-dark};
+    --#{$prefix}primary-subtle: #{$primary-subtle-dark};
+    --#{$prefix}secondary-subtle: #{$secondary-subtle-dark};
+    --#{$prefix}tertiary-subtle: #{$tertiary-subtle-dark};
+    --#{$prefix}success-subtle: #{$success-subtle-dark};
+    --#{$prefix}info-subtle: #{$info-subtle-dark};
+    --#{$prefix}warning-subtle: #{$warning-subtle-dark};
+    --#{$prefix}danger-subtle: #{$danger-subtle-dark};
+    --#{$prefix}light-subtle: #{$light-subtle-dark};
+    --#{$prefix}dark-subtle: #{$dark-subtle-dark};
 
-    --#{$prefix}primary-bg-subtle-hover: #{$primary-bg-subtle-dark-hover};
-    --#{$prefix}secondary-bg-subtle-hover: #{$secondary-bg-subtle-dark-hover};
-    --#{$prefix}success-bg-subtle-hover: #{$success-bg-subtle-dark-hover};
-    --#{$prefix}info-bg-subtle-hover: #{$info-bg-subtle-dark-hover};
-    --#{$prefix}warning-bg-subtle-hover: #{$warning-bg-subtle-dark-hover};
-    --#{$prefix}danger-bg-subtle-hover: #{$danger-bg-subtle-dark-hover};
-    --#{$prefix}light-bg-subtle-hover: #{$light-bg-subtle-dark-hover};
-    --#{$prefix}dark-bg-subtle-hover: #{$dark-bg-subtle-dark-hover};
+    --#{$prefix}primary-subtle-hover: #{$primary-subtle-dark-hover};
+    --#{$prefix}secondary-subtle-hover: #{$secondary-subtle-dark-hover};
+    --#{$prefix}tertiary-subtle-hover: #{$tertiary-subtle-dark-hover};
+    --#{$prefix}success-subtle-hover: #{$success-subtle-dark-hover};
+    --#{$prefix}info-subtle-hover: #{$info-subtle-dark-hover};
+    --#{$prefix}warning-subtle-hover: #{$warning-subtle-dark-hover};
+    --#{$prefix}danger-subtle-hover: #{$danger-subtle-dark-hover};
+    --#{$prefix}light-subtle-hover: #{$light-subtle-dark-hover};
+    --#{$prefix}dark-subtle-hover: #{$dark-subtle-dark-hover};
 
-    --#{$prefix}primary-bg-subtle-active: #{$primary-bg-subtle-dark-active};
-    --#{$prefix}secondary-bg-subtle-active: #{$secondary-bg-subtle-dark-active};
-    --#{$prefix}success-bg-subtle-active: #{$success-bg-subtle-dark-active};
-    --#{$prefix}info-bg-subtle-active: #{$info-bg-subtle-dark-active};
-    --#{$prefix}warning-bg-subtle-active: #{$warning-bg-subtle-dark-active};
-    --#{$prefix}danger-bg-subtle-active: #{$danger-bg-subtle-dark-active};
-    --#{$prefix}light-bg-subtle-active: #{$light-bg-subtle-dark-active};
-    --#{$prefix}dark-bg-subtle-active: #{$dark-bg-subtle-dark-active};
+    --#{$prefix}primary-subtle-active: #{$primary-subtle-dark-active};
+    --#{$prefix}secondary-subtle-active: #{$secondary-subtle-dark-active};
+    --#{$prefix}tertiary-subtle-active: #{$tertiary-subtle-dark-active};
+    --#{$prefix}success-subtle-active: #{$success-subtle-dark-active};
+    --#{$prefix}info-subtle-active: #{$info-subtle-dark-active};
+    --#{$prefix}warning-subtle-active: #{$warning-subtle-dark-active};
+    --#{$prefix}danger-subtle-active: #{$danger-subtle-dark-active};
+    --#{$prefix}light-subtle-active: #{$light-subtle-dark-active};
+    --#{$prefix}dark-subtle-active: #{$dark-subtle-dark-active};
 
     --#{$prefix}primary-border-subtle: #{$primary-border-subtle-dark};
     --#{$prefix}secondary-border-subtle: #{$secondary-border-subtle-dark};
+    --#{$prefix}tertiary-border-subtle: #{$tertiary-border-subtle-dark};
     --#{$prefix}success-border-subtle: #{$success-border-subtle-dark};
     --#{$prefix}info-border-subtle: #{$info-border-subtle-dark};
     --#{$prefix}warning-border-subtle: #{$warning-border-subtle-dark};

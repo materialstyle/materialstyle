@@ -156,35 +156,35 @@
 //
 
 // scss-docs-start btn-variant-loops
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    --mdc-ripple-color: var(--#{$prefix}text-on-#{$color});
-    --#{$prefix}btn-color: var(--#{$prefix}text-on-#{$color});
-    --#{$prefix}btn-bg: var(--#{$prefix}#{$color});
-    --#{$prefix}btn-hover-color: var(--#{$prefix}text-on-#{$color});
-    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$color}-bg-hover);
-    --#{$prefix}btn-active-color: var(--#{$prefix}text-on-#{$color});
-    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$color}-bg-active);
-    --#{$prefix}btn-disabled-color: var(--#{$prefix}text-on-#{$color});
-    --#{$prefix}btn-disabled-bg: var(--#{$prefix}#{$color});
+// Generate contextual modifier classes for colorizing the alert
+@each $state in map-keys($theme-colors) {
+  .btn-#{$state} {
+    --mdc-ripple-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-bg: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-hover-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$state}-bg-hover);
+    --#{$prefix}btn-active-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$state}-bg-active);
+    --#{$prefix}btn-disabled-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-disabled-bg: var(--#{$prefix}#{$state});
   }
 }
 
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    //@include button-outline-variant($value);
-    --mdc-ripple-color: var(--#{$prefix}#{$color}-text);
-    --#{$prefix}btn-color: var(--#{$prefix}#{$color}-text);
-    --#{$prefix}btn-border-color: var(--#{$prefix}#{$color}-text);
-    --#{$prefix}btn-hover-color: var(--#{$prefix}#{$color}-text);
-    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$color}-bg-subtle);
-    --#{$prefix}btn-hover-border-color: var(--#{$prefix}#{$color}-text);
-    --#{$prefix}btn-active-color: var(--#{$prefix}#{$color}-text-hover);
-    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$color}-bg-subtle);
-    --#{$prefix}btn-active-border-color: var(--#{$prefix}#{$color}-text-hover);
-    --#{$prefix}btn-disabled-color: var(--#{$prefix}#{$color}-text);
+@each $state in map-keys($theme-colors) {
+  .btn-outline-#{$state} {
+    --mdc-ripple-color: var(--#{$prefix}#{$state}-text);
+    --#{$prefix}btn-color: var(--#{$prefix}#{$state}-text);
+    --#{$prefix}btn-border-color: var(--#{$prefix}#{$state}-text);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}#{$state}-text-hover);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$state}-subtle);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}#{$state}-text-hover);
+    --#{$prefix}btn-active-color: var(--#{$prefix}#{$state}-text-hover);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$state}-subtle-hover);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}#{$state}-text-hover);
+    --#{$prefix}btn-disabled-color: var(--#{$prefix}#{$state}-text);
     --#{$prefix}btn-disabled-bg: transparent;
-    --#{$prefix}btn-disabled-border-color: var(--#{$prefix}#{$color}-text);
+    --#{$prefix}btn-disabled-border-color: var(--#{$prefix}#{$state}-text);
   }
 }
 // scss-docs-end btn-variant-loops

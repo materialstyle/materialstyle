@@ -7,17 +7,19 @@
 //
 
 // scss-docs-start sass-dark-mode-vars
-$primary-text-dark:                 $indigo-2 !default;
-$secondary-text-dark:               $gray-2 !default;
-$success-text-dark:                 $green-2 !default;
-$info-text-dark:                    $cyan-2 !default;
-$warning-text-dark:                 $yellow-2 !default;
-$danger-text-dark:                  $red-2 !default;
+$primary-text-dark:                 $indigo-3 !default;
+$secondary-text-dark:               $gray-3 !default;
+$tertiary-text-dark:                $pink-3 !default;
+$success-text-dark:                 $green-3 !default;
+$info-text-dark:                    $cyan-3 !default;
+$warning-text-dark:                 $yellow-3 !default;
+$danger-text-dark:                  $red-3 !default;
 $light-text-dark:                   $gray-0 !default;
-$dark-text-dark:                    $gray-2 !default;
+$dark-text-dark:                    $gray-3 !default;
 
 $primary-text-dark-hover:           $indigo-1 !default;
 $secondary-text-dark-hover:         $gray-1 !default;
+$tertiary-text-dark-hover:          $pink-1 !default;
 $success-text-dark-hover:           $green-1 !default;
 $info-text-dark-hover:              $cyan-1 !default;
 $warning-text-dark-hover:           $yellow-1 !default;
@@ -25,50 +27,56 @@ $danger-text-dark-hover:            $red-1 !default;
 $light-text-dark-hover:             $gray-1 !default;
 $dark-text-dark-hover:              $gray-1 !default;
 
-$primary-bg-subtle-dark:            $indigo-12 !default;
-$secondary-bg-subtle-dark:          $gray-8 !default;
-$success-bg-subtle-dark:            $green-12 !default;
-$info-bg-subtle-dark:               $cyan-12 !default;
-$warning-bg-subtle-dark:            $yellow-12 !default;
-$danger-bg-subtle-dark:             $red-12 !default;
-$light-bg-subtle-dark:              $gray-7 !default;
-$dark-bg-subtle-dark:               $gray-10 !default;
+$primary-subtle-dark:            $indigo-12 !default;
+$secondary-subtle-dark:          $gray-8 !default;
+$tertiary-subtle-dark:           $pink-12 !default;
+$success-subtle-dark:            $green-12 !default;
+$info-subtle-dark:               $cyan-12 !default;
+$warning-subtle-dark:            $yellow-12 !default;
+$danger-subtle-dark:             $red-12 !default;
+$light-subtle-dark:              $gray-7 !default;
+$dark-subtle-dark:               $gray-10 !default;
 
-$primary-bg-subtle-dark-hover:       $indigo-11 !default;
-$secondary-bg-subtle-dark-hover:     $gray-7 !default;
-$success-bg-subtle-dark-hover:       $green-11 !default;
-$info-bg-subtle-dark-hover:          $cyan-11 !default;
-$warning-bg-subtle-dark-hover:       $yellow-11 !default;
-$danger-bg-subtle-dark-hover:        $red-11 !default;
-$light-bg-subtle-dark-hover:         $gray-6 !default;
-$dark-bg-subtle-dark-hover:          $gray-9 !default;
+$primary-subtle-dark-hover:       $indigo-11 !default;
+$secondary-subtle-dark-hover:     $gray-7 !default;
+$tertiary-subtle-dark-hover:      $pink-11 !default;
+$success-subtle-dark-hover:       $green-11 !default;
+$info-subtle-dark-hover:          $cyan-11 !default;
+$warning-subtle-dark-hover:       $yellow-11 !default;
+$danger-subtle-dark-hover:        $red-11 !default;
+$light-subtle-dark-hover:         $gray-6 !default;
+$dark-subtle-dark-hover:          $gray-9 !default;
 
-$primary-bg-subtle-dark-active:       $indigo-10 !default;
-$secondary-bg-subtle-dark-active:     $gray-6 !default;
-$success-bg-subtle-dark-active:       $green-10 !default;
-$info-bg-subtle-dark-active:          $cyan-10 !default;
-$warning-bg-subtle-dark-active:       $yellow-10 !default;
-$danger-bg-subtle-dark-active:        $red-10 !default;
-$light-bg-subtle-dark-active:         $gray-5 !default;
-$dark-bg-subtle-dark-active:          $gray-8 !default;
+$primary-subtle-dark-active:       $indigo-10 !default;
+$secondary-subtle-dark-active:     $gray-6 !default;
+$tertiary-subtle-dark-active:      $pink-10 !default;
+$success-subtle-dark-active:       $green-10 !default;
+$info-subtle-dark-active:          $cyan-10 !default;
+$warning-subtle-dark-active:       $yellow-10 !default;
+$danger-subtle-dark-active:        $red-10 !default;
+$light-subtle-dark-active:         $gray-5 !default;
+$dark-subtle-dark-active:          $gray-8 !default;
 
-$primary-border-subtle-dark:        $indigo-6 !default;
+$primary-border-subtle-dark:        $indigo-10 !default;
 $secondary-border-subtle-dark:      $gray-6 !default;
-$success-border-subtle-dark:        $green-6 !default;
-$info-border-subtle-dark:           $cyan-6 !default;
-$warning-border-subtle-dark:        $yellow-6 !default;
-$danger-border-subtle-dark:         $red-6 !default;
+$tertiary-border-subtle-dark:       $pink-10 !default;
+$success-border-subtle-dark:        $green-10 !default;
+$info-border-subtle-dark:           $cyan-10 !default;
+$warning-border-subtle-dark:        $yellow-10 !default;
+$danger-border-subtle-dark:         $red-10 !default;
 $light-border-subtle-dark:          $gray-6 !default;
-$dark-border-subtle-dark:           $gray-6 !default;
+$dark-border-subtle-dark:           $gray-8 !default;
 
+$body-bg-dark:                      $gray-10 !default;
 $body-color-dark:                   $gray-4 !default;
-$body-bg-dark:                      $gray-9 !default;
-$body-secondary-color-dark:         $gray-5 !default;
-$body-secondary-bg-dark:            $gray-8 !default;
-$body-tertiary-color-dark:          $gray-6 !default;
-$body-tertiary-bg-dark:             $gray-7 !default;
-$body-emphasis-color-dark:          $gray-0 !default;
+
+$surface-bg-dark:                   $gray-9 !default;
+$surface-bg-dark-hover:             $gray-8 !default;
+$surface-bg-dark-active:            $gray-7 !default;
+$surface-color-dark:                $gray-3 !default;
+
 $emphasis-color-dark:               $white !default;
+$muted-color-dark:                  $gray-5 !default;
 
 $border-color-dark:                 $gray-7 !default;
 $border-color-translucent-dark:     rgba($white, .15) !default;

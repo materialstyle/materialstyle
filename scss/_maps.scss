@@ -6,9 +6,70 @@
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 // scss-docs-end theme-colors-rgb
 
+$theme-colors-hover: (
+  "primary": $primary-hover,
+  "secondary": $secondary-hover,
+  "tertiary": $tertiary-hover,
+  "success": $success-hover,
+  "info": $info-hover,
+  "warning": $warning-hover,
+  "danger": $danger-hover,
+  "light": $light-hover,
+  "dark": $dark-hover,
+) !default;
+
+$theme-colors-active: (
+  "primary": $primary-active,
+  "secondary": $secondary-active,
+  "tertiary": $tertiary-active,
+  "success": $success-active,
+  "info": $info-active,
+  "warning": $warning-active,
+  "danger": $danger-active,
+  "light": $light-active,
+  "dark": $dark-active,
+) !default;
+
+$theme-colors-subtle: (
+  "primary": $primary-subtle,
+  "secondary": $secondary-subtle,
+  "tertiary": $tertiary-subtle,
+  "success": $success-subtle,
+  "info": $info-subtle,
+  "warning": $warning-subtle,
+  "danger": $danger-subtle,
+  "light": $light-subtle,
+  "dark": $dark-subtle,
+) !default;
+
+$theme-colors-subtle-hover: (
+  "primary": $primary-subtle-hover,
+  "secondary": $secondary-subtle-hover,
+  "tertiary": $tertiary-subtle-hover,
+  "success": $success-subtle-hover,
+  "info": $info-subtle-hover,
+  "warning": $warning-subtle-hover,
+  "danger": $danger-subtle-hover,
+  "light": $light-subtle-hover,
+  "dark": $dark-subtle-hover,
+) !default;
+
+$theme-colors-subtle-active: (
+  "primary": $primary-subtle-active,
+  "secondary": $secondary-subtle-active,
+  "tertiary": $tertiary-subtle-active,
+  "success": $success-subtle-active,
+  "info": $info-subtle-active,
+  "warning": $warning-subtle-active,
+  "danger": $danger-subtle-active,
+  "light": $light-subtle-active,
+  "dark": $dark-subtle-active,
+) !default;
+
 $theme-colors-text: (
   "primary": $primary-text,
   "secondary": $secondary-text,
+  "tertiary": $tertiary-text,
   "success": $success-text,
   "info": $info-text,
   "warning": $warning-text,
@@ -20,6 +81,7 @@ $theme-colors-text: (
 $theme-colors-text-hover: (
   "primary": $primary-text-hover,
   "secondary": $secondary-text-hover,
+  "tertiary": $tertiary-text-hover,
   "success": $success-text-hover,
   "info": $info-text-hover,
   "warning": $warning-text-hover,
@@ -28,64 +90,10 @@ $theme-colors-text-hover: (
   "dark": $dark-text-hover,
 ) !default;
 
-$theme-colors-bg-hover: (
-  "primary": $primary-bg-hover,
-  "secondary": $secondary-bg-hover,
-  "success": $success-bg-hover,
-  "info": $info-bg-hover,
-  "warning": $warning-bg-hover,
-  "danger": $danger-bg-hover,
-  "light": $light-bg-hover,
-  "dark": $dark-bg-hover,
-) !default;
-
-$theme-colors-bg-active: (
-  "primary": $primary-bg-active,
-  "secondary": $secondary-bg-active,
-  "success": $success-bg-active,
-  "info": $info-bg-active,
-  "warning": $warning-bg-active,
-  "danger": $danger-bg-active,
-  "light": $light-bg-active,
-  "dark": $dark-bg-active,
-) !default;
-
-$theme-colors-bg-subtle: (
-  "primary": $primary-bg-subtle,
-  "secondary": $secondary-bg-subtle,
-  "success": $success-bg-subtle,
-  "info": $info-bg-subtle,
-  "warning": $warning-bg-subtle,
-  "danger": $danger-bg-subtle,
-  "light": $light-bg-subtle,
-  "dark": $dark-bg-subtle,
-) !default;
-
-$theme-colors-bg-subtle-hover: (
-  "primary": $primary-bg-subtle-hover,
-  "secondary": $secondary-bg-subtle-hover,
-  "success": $success-bg-subtle-hover,
-  "info": $info-bg-subtle-hover,
-  "warning": $warning-bg-subtle-hover,
-  "danger": $danger-bg-subtle-hover,
-  "light": $light-bg-subtle-hover,
-  "dark": $dark-bg-subtle-hover,
-) !default;
-
-$theme-colors-bg-subtle-active: (
-  "primary": $primary-bg-subtle-active,
-  "secondary": $secondary-bg-subtle-active,
-  "success": $success-bg-subtle-active,
-  "info": $info-bg-subtle-active,
-  "warning": $warning-bg-subtle-active,
-  "danger": $danger-bg-subtle-active,
-  "light": $light-bg-subtle-active,
-  "dark": $dark-bg-subtle-active,
-) !default;
-
 $theme-colors-border-subtle: (
   "primary": $primary-border-subtle,
   "secondary": $secondary-border-subtle,
+  "tertiary": $tertiary-border-subtle,
   "success": $success-border-subtle,
   "info": $info-border-subtle,
   "warning": $warning-border-subtle,
@@ -117,6 +125,7 @@ $utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") 
 $utilities-text-emphasis-colors: (
   "primary-emphasis": var(--#{$prefix}primary-text),
   "secondary-emphasis": var(--#{$prefix}secondary-text),
+  "tertiary-emphasis": var(--#{$prefix}tertiary-text),
   "success-emphasis": var(--#{$prefix}success-text),
   "info-emphasis": var(--#{$prefix}info-text),
   "warning-emphasis": var(--#{$prefix}warning-text),
@@ -137,17 +146,18 @@ $utilities-bg: map-merge(
 ) !default;
 $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
 
-$utilities-bg-subtle: (
-  "primary-subtle": var(--#{$prefix}primary-bg-subtle),
-  "secondary-subtle": var(--#{$prefix}secondary-bg-subtle),
-  "success-subtle": var(--#{$prefix}success-bg-subtle),
-  "info-subtle": var(--#{$prefix}info-bg-subtle),
-  "warning-subtle": var(--#{$prefix}warning-bg-subtle),
-  "danger-subtle": var(--#{$prefix}danger-bg-subtle),
-  "light-subtle": var(--#{$prefix}light-bg-subtle),
-  "dark-subtle": var(--#{$prefix}dark-bg-subtle)
+$utilities-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-subtle),
+  "tertiary-subtle": var(--#{$prefix}tertiary-subtle),
+  "success-subtle": var(--#{$prefix}success-subtle),
+  "info-subtle": var(--#{$prefix}info-subtle),
+  "warning-subtle": var(--#{$prefix}warning-subtle),
+  "danger-subtle": var(--#{$prefix}danger-subtle),
+  "light-subtle": var(--#{$prefix}light-subtle),
+  "dark-subtle": var(--#{$prefix}dark-subtle)
 ) !default;
-// $utilities-bg-subtle-colors: map-loop($utilities-bg-subtle, rgba-css-var, "$key", "bg") !default;
+// $utilities-subtle-colors: map-loop($utilities-subtle, rgba-css-var, "$key", "bg") !default;
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
@@ -162,6 +172,7 @@ $utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "bor
 $utilities-border-subtle: (
   "primary-subtle": var(--#{$prefix}primary-border-subtle),
   "secondary-subtle": var(--#{$prefix}secondary-border-subtle),
+  "tertiary-subtle": var(--#{$prefix}tertiary-border-subtle),
   "success-subtle": var(--#{$prefix}success-border-subtle),
   "info-subtle": var(--#{$prefix}info-border-subtle),
   "warning-subtle": var(--#{$prefix}warning-border-subtle),

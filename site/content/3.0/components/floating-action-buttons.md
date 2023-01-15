@@ -12,7 +12,7 @@ keywords: buttons, floating action buttons
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab btn-success">
+<button type="button" class="btn btn-fab btn-primary">
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -23,11 +23,11 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-3">}}
 
-<button type="button" class="btn btn-fab btn-success elevated-1">
+<button type="button" class="btn btn-fab btn-info elevated-1">
   <i class="bi bi-heart-fill"></i>
 </button>
 ##split##
-<button type="button" class="btn btn-fab btn-success elevated-10">
+<button type="button" class="btn btn-fab btn-info elevated-10">
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -36,7 +36,7 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 ## Disabled
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab btn-success" disabled>
+<button type="button" class="btn btn-fab btn-primary" disabled>
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -54,7 +54,7 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab btn-success">
+<button type="button" class="btn btn-fab btn-primary">
   <i class="bi bi-heart-fill"></i>
   <span class="ripple-surface"></span>
 </button>
@@ -75,7 +75,7 @@ rippleSurface.map(s => {
 ## Leaf FAB
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab leaf-fab btn-success">
+<button type="button" class="btn btn-fab leaf-fab btn-danger">
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -84,7 +84,7 @@ rippleSurface.map(s => {
 ## Leaf FAB inverted
 {{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab leaf-fab-inverted btn-success">
+<button type="button" class="btn btn-fab leaf-fab-inverted btn-danger">
   <i class="bi bi-heart-fill"></i>
 </button>
         
