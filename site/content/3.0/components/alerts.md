@@ -5,7 +5,7 @@ group: components
 toc: true
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">Alerts provide contextual feedback messages for typical user actions.</p>
+<p class="fs-4 ms-0 mb-4 page-description">Alerts provide contextual feedback messages for typical user actions.</p>
 
 ## Color options
 {{< example codeId="code1" >}}

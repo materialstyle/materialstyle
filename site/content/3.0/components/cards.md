@@ -5,7 +5,7 @@ group: components
 toc: true
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">Cards contain content and actions that relate information about a subject.</p>
+<p class="fs-4 ms-0 mb-4 page-description">Cards contain content and actions that relate information about a subject.</p>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 

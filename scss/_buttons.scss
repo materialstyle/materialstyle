@@ -163,9 +163,9 @@
     --#{$prefix}btn-color: var(--#{$prefix}text-on-#{$state});
     --#{$prefix}btn-bg: var(--#{$prefix}#{$state});
     --#{$prefix}btn-hover-color: var(--#{$prefix}text-on-#{$state});
-    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$state}-bg-hover);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$state}-hover);
     --#{$prefix}btn-active-color: var(--#{$prefix}text-on-#{$state});
-    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$state}-bg-active);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$state}-active);
     --#{$prefix}btn-disabled-color: var(--#{$prefix}text-on-#{$state});
     --#{$prefix}btn-disabled-bg: var(--#{$prefix}#{$state});
   }

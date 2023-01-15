@@ -6,7 +6,7 @@ toc: true
 keywords: snackbar, toast
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Snackbars provide brief messages at the bottom of the screen.<br>
   They appear temporarily and shouldn’t interrupt the user experience.<br>
   Only one snackbar may be displayed at a time.

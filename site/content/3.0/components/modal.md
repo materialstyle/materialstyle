@@ -5,7 +5,7 @@ group: components
 toc: true
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
 A Modal appears in front of app content to provide critical information or ask for a decision. 
 Modals remain on screen until confirmed, dismissed, or a required action has been taken.
 </p>

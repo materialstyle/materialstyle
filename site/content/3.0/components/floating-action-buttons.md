@@ -6,7 +6,7 @@ toc: true
 keywords: buttons, floating action buttons
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   The FAB represents the most important action on a screen. It puts key actions within reach.
 </p>
 

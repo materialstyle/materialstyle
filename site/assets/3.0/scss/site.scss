@@ -168,13 +168,13 @@
 }
 
 [data-bs-theme="light"] {
-  --ms-primary-color: #693eb6;
-  --ms-primary-color-rgb: 105, 62, 182;
+  --ms-primary-color: var(--m-violet-9);
+  --ms-primary-color-rgb: 95, 61, 196;
 }
 
 [data-bs-theme="dark"] {
-  --ms-primary-color: #c19fff;
-  --ms-primary-color-rgb: 193, 159, 255;
+  --ms-primary-color: var(--m-violet-2);
+  --ms-primary-color-rgb: 208, 191, 255;
 }
 
 html {
@@ -184,6 +184,18 @@ html {
 #cdn-tab {
   --bs-nav-tabs-link-active-color: var(--ms-primary-color);
   --bs-nav-tabs-link-hover-bg: rgba(var(--ms-primary-color-rgb), .15);
+}
+
+#content,
+.page-description {
+  color: var(--ms-primary-color);
+}
+
+.callout.primary {
+  background-color: rgba(var(--ms-primary-color-rgb), .15);
+  .callout-icon {
+    background-color: var(--ms-primary-color);
+  }
 }
 
 .supported-properties span {
@@ -303,14 +315,37 @@ footer {
 }
 
 #site-home-top-nav {
+  background-color: var(--m-violet-9);
+
+  .btn-outline-light {
+    --mdc-ripple-color: rgb(var(--bs-white-rgb));
+    --bs-btn-hover-bg: rgba(var(--bs-white-rgb), .1);
+    --bs-btn-active-bg: rgba(var(--bs-white-rgb), .2);
+  }
+
+  .dropdown-menu {
+    --bs-dropdown-bg: var(--m-violet-9);
+    --bs-dropdown-color: rgb(var(--bs-white-rgb));
+    --bs-dropdown-link-color: rgb(var(--bs-white-rgb));
+  }
+
   .dropdown-item {
-    --bs-dropdown-link-active-bg: var(--bs-purple);
+    --bs-dropdown-link-hover-bg: rgba(var(--bs-white-rgb), .1);
+    --bs-dropdown-link-hover-color: rgb(var(--bs-white-rgb));
+    --bs-dropdown-link-active-bg: rgba(var(--bs-white-rgb), .2);
+    --bs-dropdown-link-active-color: rgb(var(--bs-white-rgb));
   }
 
   .dropdown .bi {
     width: 1rem;
     height: 1rem;
     fill: currentcolor;
+  }
+
+  a:focus-visible,
+  .btn:focus-visible {
+    outline: none; // stylelint-disable-line declaration-property-value-disallowed-list
+    box-shadow: 0 0 0 .15rem var(--m-grape-2);
   }
 }
 
@@ -324,15 +359,27 @@ footer {
 }
 
 #site-offcanvas {
-  --bs-offcanvas-nav-link-hover-bg: rgba(var(--ms-primary-color-rgb), .15);
+  --bs-offcanvas-nav-link-hover-bg: var(--m-violet-2);
   --bs-offcanvas-nav-link-active-color: #fff;
 
+  .offcanvas-header {
+    background-color: var(--m-violet-9);
+  }
+
+  .offcanvas-body {
+    background-color: rgba(95, 61, 196, .2);
+  }
+
   .nav-link.active {
-    background-color: #6f50c1;
+    background-color: var(--m-violet-9);
   }
   .list-heading {
     padding: .5rem 1rem;
   }
+}
+
+#site-footer {
+  background-color: rgba(95, 61, 196, .2);
 }
 
 h1:not(.badge-example-headings h1),
@@ -398,7 +445,7 @@ h5:not(.badge-example-headings h5) {
   font-family: monospace;
   color: var(--bs-body-color);
   word-break: break-word;
-  background: var(--bs-tertiary-bg);
+  background: var(--bs-surface-bg);
 }
 
 .highlight .highlight pre {
@@ -455,17 +502,6 @@ h5:not(.badge-example-headings h5) {
   bottom: 20px;
   z-index: 1030;
   display: none;
-}
-
-.migration-intro {
-  ~ h3,
-  ~ h2 {
-    margin-top: 1rem;
-  }
-  ~ ul li,
-  ~ h3 ~ p {
-    padding-bottom: 15px;
-  }
 }
 
 .hljs {
@@ -754,11 +790,12 @@ pre,
 /* Algolia Doc Search */
 // stylelint-disable selector-class-pattern, no-duplicate-selectors
 :root {
-  --docsearch-searchbox-background: var(--bs-white);
-  --docsearch-primary-color: var(--bs-purple);
-  --docsearch-logo-color: var(--bs-purple);
-  --docsearch-text-color: var(--bs-purple);
-  --docsearch-muted-color: var(--bs-gray);
+  --docsearch-searchbox-background: var(--m-violet-1);
+  --docsearch-searchbox-focus-background: var(--m-violet-0);
+  --docsearch-primary-color: var(--m-violet-9);
+  --docsearch-logo-color: var(--m-violet-9);
+  --docsearch-text-color: var(--m-violet-9);
+  --docsearch-muted-color: var(--bs-gray-7);
 
   .DocSearch-Container {
     position: fixed !important;
@@ -766,7 +803,7 @@ pre,
   }
 
   .DocSearch-Button {
-    --docsearch-searchbox-shadow: 0 0 0 .25rem #f2e5f8;
+    --docsearch-searchbox-shadow: 0 0 0 .15rem var(--m-grape-2);
     margin: 0;
     border-radius: .375rem;
   }
@@ -784,8 +821,8 @@ pre,
     padding: 0;
     margin: 0;
     font-family: var(--bs-body-font-family);
-    color: var(--bs-purple);
-    background: #f2e5f8;
+    color: var(--m-violet-12);
+    background: var(--m-violet-3);
     box-shadow: none;
   }
 
@@ -798,7 +835,7 @@ pre,
   .DocSearch-Button  {
     --docsearch-searchbox-background: transparent;
     --docsearch-searchbox-focus-background: transparent;
-    --docsearch-text-color: var(--bs-white);
+    --docsearch-text-color: rgb(var(--bs-white-rgb));
   }
 }
 // stylelint-enable selector-class-pattern, no-duplicate-selectors

@@ -6,7 +6,7 @@ toc: true
 keywords: layout, navbar
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Navigation bars offer a persistent and convenient way to switch between primary destinations in an app.
 </p>
 

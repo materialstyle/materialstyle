@@ -6,7 +6,7 @@ toc: true
 keywords: scrollspy
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
 Automatically update navigation or list group components based on scroll position to 
 indicate which link is currently active in the viewport.
 </p>

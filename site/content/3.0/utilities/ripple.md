@@ -6,7 +6,7 @@ toc: true
 keywords: utilities, ripple
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Ripples are visual representations used to communicate the status of a component or interactive element.
 </p>
 

@@ -6,7 +6,7 @@ toc: true
 keywords: progress, progress bars
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Progress bars express an unspecified wait time or display the length of a process.
 </p>
 

@@ -6,7 +6,7 @@ toc: true
 keywords: buttons
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">Buttons allow users to take actions, and make choices, with a single tap.</p>
+<p class="fs-4 ms-0 mb-4 page-description">Buttons allow users to take actions, and make choices, with a single tap.</p>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

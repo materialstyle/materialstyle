@@ -6,7 +6,7 @@ toc: true
 keywords: migration
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary migration-intro">
+<p class="fs-4 ms-0 mb-4 page-description">
 Material Style 3 is a major rewrite of the entire project. The most notable changes are 
 summarized below.
 </p>
