@@ -38,12 +38,12 @@
     --#{$prefix}#{$color}-subtle-active: #{$value};
   }
 
-  @each $color, $value in $theme-colors-text {
-    --#{$prefix}#{$color}-text: #{$value};
+  @each $color, $value in $theme-colors-emphasis {
+    --#{$prefix}#{$color}-emphasis: #{$value};
   }
 
-  @each $color, $value in $theme-colors-text-hover {
-    --#{$prefix}#{$color}-text-hover: #{$value};
+  @each $color, $value in $theme-colors-emphasis-hover {
+    --#{$prefix}#{$color}-emphasis-hover: #{$value};
   }
 
   @each $color, $value in $theme-colors {
@@ -166,25 +166,22 @@
 
     --#{$prefix}muted-color: #{$muted-color-dark};
 
-    --#{$prefix}primary-text: #{$primary-text-dark};
-    --#{$prefix}secondary-text: #{$secondary-text-dark};
-    --#{$prefix}tertiary-text: #{$tertiary-text-dark};
-    --#{$prefix}success-text: #{$success-text-dark};
-    --#{$prefix}info-text: #{$info-text-dark};
-    --#{$prefix}warning-text: #{$warning-text-dark};
-    --#{$prefix}danger-text: #{$danger-text-dark};
-    --#{$prefix}light-text: #{$light-text-dark};
-    --#{$prefix}dark-text: #{$dark-text-dark};
+    @each $color, $value in $theme-colors-dark {
+      --#{$prefix}#{$color}: #{$value};
+      --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
+    }
 
-    --#{$prefix}primary-text-hover: #{$primary-text-dark-hover};
-    --#{$prefix}secondary-text-hover: #{$secondary-text-dark-hover};
-    --#{$prefix}tertiary-text-hover: #{$tertiary-text-dark-hover};
-    --#{$prefix}success-text-hover: #{$success-text-dark-hover};
-    --#{$prefix}info-text-hover: #{$info-text-dark-hover};
-    --#{$prefix}warning-text-hover: #{$warning-text-dark-hover};
-    --#{$prefix}danger-text-hover: #{$danger-text-dark-hover};
-    --#{$prefix}light-text-hover: #{$light-text-dark-hover};
-    --#{$prefix}dark-text-hover: #{$dark-text-dark-hover};
+    @each $color, $value in $theme-colors-dark {
+      --#{$prefix}text-on-#{$color}: #{color-contrast($value)};
+    }
+
+    @each $color, $value in $theme-colors-dark-hover {
+      --#{$prefix}#{$color}-hover: #{$value};
+    }
+
+    @each $color, $value in $theme-colors-dark-active {
+      --#{$prefix}#{$color}-active: #{$value};
+    }
 
     --#{$prefix}primary-subtle: #{$primary-subtle-dark};
     --#{$prefix}secondary-subtle: #{$secondary-subtle-dark};
@@ -215,6 +212,26 @@
     --#{$prefix}danger-subtle-active: #{$danger-subtle-dark-active};
     --#{$prefix}light-subtle-active: #{$light-subtle-dark-active};
     --#{$prefix}dark-subtle-active: #{$dark-subtle-dark-active};
+
+    --#{$prefix}primary-emphasis: #{$primary-emphasis-dark};
+    --#{$prefix}secondary-emphasis: #{$secondary-emphasis-dark};
+    --#{$prefix}tertiary-emphasis: #{$tertiary-emphasis-dark};
+    --#{$prefix}success-emphasis: #{$success-emphasis-dark};
+    --#{$prefix}info-emphasis: #{$info-emphasis-dark};
+    --#{$prefix}warning-emphasis: #{$warning-emphasis-dark};
+    --#{$prefix}danger-emphasis: #{$danger-emphasis-dark};
+    --#{$prefix}light-emphasis: #{$light-emphasis-dark};
+    --#{$prefix}dark-emphasis: #{$dark-emphasis-dark};
+
+    --#{$prefix}primary-emphasis-hover: #{$primary-emphasis-dark-hover};
+    --#{$prefix}secondary-emphasis-hover: #{$secondary-emphasis-dark-hover};
+    --#{$prefix}tertiary-emphasis-hover: #{$tertiary-emphasis-dark-hover};
+    --#{$prefix}success-emphasis-hover: #{$success-emphasis-dark-hover};
+    --#{$prefix}info-emphasis-hover: #{$info-emphasis-dark-hover};
+    --#{$prefix}warning-emphasis-hover: #{$warning-emphasis-dark-hover};
+    --#{$prefix}danger-emphasis-hover: #{$danger-emphasis-dark-hover};
+    --#{$prefix}light-emphasis-hover: #{$light-emphasis-dark-hover};
+    --#{$prefix}dark-emphasis-hover: #{$dark-emphasis-dark-hover};
 
     --#{$prefix}primary-border-subtle: #{$primary-border-subtle-dark};
     --#{$prefix}secondary-border-subtle: #{$secondary-border-subtle-dark};

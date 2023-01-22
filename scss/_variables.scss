@@ -402,21 +402,6 @@ $orange-9: map-get($orange-list, "9") !default;
 $orange-10: map-get($orange-list, "10") !default;
 $orange-11: map-get($orange-list, "11") !default;
 $orange-12: map-get($orange-list, "12") !default;
-
-// scss-docs-start color-variables
-$red:     $red-7 !default;
-$pink:    $pink-7 !default;
-$grape:   $grape-7 !default;
-$violet:  $violet-7 !default;
-$indigo:  $indigo-7 !default;
-$blue:    $blue-7 !default;
-$cyan:    $cyan-7 !default;
-$teal:    $teal-7 !default;
-$green:   $green-7 !default;
-$lime:    $lime-7 !default;
-$yellow:  $yellow-7 !default;
-$orange:  $orange-7 !default;
-// scss-docs-end color-variables
 // fusv-enable
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
@@ -428,30 +413,15 @@ $color-contrast-dark:      $black !default;
 $color-contrast-light:     $white !default;
 
 // scss-docs-start theme-color-variables
-$primary:       $indigo !default;
+$primary:       $indigo-7 !default;
 $secondary:     $gray-7 !default;
-$tertiary:      $pink !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
+$tertiary:      $pink-7 !default;
+$success:       $green-7 !default;
+$info:          $cyan-7 !default;
+$warning:       $yellow-7 !default;
+$danger:        $red-7 !default;
 $light:         $gray-0 !default;
 $dark:          $gray-9 !default;
-// scss-docs-end theme-color-variables
-
-// scss-docs-start theme-colors-map
-$theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "tertiary":   $tertiary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-) !default;
-// scss-docs-end theme-colors-map
 
 $primary-hover:        $indigo-8 !default;
 $secondary-hover:      $gray-8 !default;
@@ -472,7 +442,9 @@ $warning-active:       $yellow-5 !default;
 $danger-active:        $red-5 !default;
 $light-active:         $gray-2 !default;
 $dark-active:          $gray-7 !default;
+// scss-docs-end theme-color-variables
 
+// scss-docs-start theme-color-subtle-variables
 $primary-subtle:       $indigo-1 !default;
 $secondary-subtle:     $gray-1 !default;
 $tertiary-subtle:      $pink-1 !default;
@@ -502,26 +474,29 @@ $warning-subtle-active:       $yellow-3 !default;
 $danger-subtle-active:        $red-3 !default;
 $light-subtle-active:         $gray-2 !default;
 $dark-subtle-active:          $gray-5 !default;
+// scss-docs-end theme-color-subtle-variables
 
-$primary-text:            $indigo-10 !default;
-$secondary-text:          $gray-10 !default;
-$tertiary-text:           $pink-10 !default;
-$success-text:            $green-10 !default;
-$info-text:               $cyan-10 !default;
-$warning-text:            $yellow-10 !default;
-$danger-text:             $red-10 !default;
-$light-text:              $gray-7 !default;
-$dark-text:               $gray-10 !default;
+// scss-docs-start theme-color-emphasis-variables
+$primary-emphasis:            $indigo-10 !default;
+$secondary-emphasis:          $gray-10 !default;
+$tertiary-emphasis:           $pink-10 !default;
+$success-emphasis:            $green-10 !default;
+$info-emphasis:               $cyan-10 !default;
+$warning-emphasis:            $yellow-10 !default;
+$danger-emphasis:             $red-10 !default;
+$light-emphasis:              $gray-7 !default;
+$dark-emphasis:               $gray-10 !default;
 
-$primary-text-hover:      $indigo-12 !default;
-$secondary-text-hover:    $gray-12 !default;
-$tertiary-text-hover:     $pink-12 !default;
-$success-text-hover:      $green-12 !default;
-$info-text-hover:         $cyan-12 !default;
-$warning-text-hover:      $yellow-12 !default;
-$danger-text-hover:       $red-12 !default;
-$light-text-hover:        $gray-8 !default;
-$dark-text-hover:         $gray-12 !default;
+$primary-emphasis-hover:      $indigo-12 !default;
+$secondary-emphasis-hover:    $gray-12 !default;
+$tertiary-emphasis-hover:     $pink-12 !default;
+$success-emphasis-hover:      $green-12 !default;
+$info-emphasis-hover:         $cyan-12 !default;
+$warning-emphasis-hover:      $yellow-12 !default;
+$danger-emphasis-hover:       $red-12 !default;
+$light-emphasis-hover:        $gray-8 !default;
+$dark-emphasis-hover:         $gray-12 !default;
+// scss-docs-end theme-color-emphasis-variables
 
 $primary-border-subtle:   $indigo-3 !default;
 $secondary-border-subtle: $gray-3 !default;
@@ -554,7 +529,7 @@ $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
 $enable-smooth-scroll:        true !default;
 $enable-grid-classes:         true !default;
-$enable-container-classes:    true !default;
+$enable-subtle-classes:       true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  true !default;
@@ -629,9 +604,9 @@ $muted-color:               $gray-6 !default;
 //
 // Style anchor elements.
 
-$link-color:                              var(--#{$prefix}primary-text) !default;
+$link-color:                              var(--#{$prefix}primary-emphasis) !default;
 $link-decoration:                         underline !default;
-$link-hover-color:                        var(--#{$prefix}primary-text-hover) !default;
+$link-hover-color:                        var(--#{$prefix}primary-emphasis-hover) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -1024,7 +999,7 @@ $form-field-bg:                         var(--#{$prefix}surface-bg) !default;
 $form-field-hover-bg:                   var(--#{$prefix}surface-bg-hover) !default;
 $form-field-active-bg:                  var(--#{$prefix}surface-bg-active) !default;
 $form-field-border-color:               var(--#{$prefix}body-color) !default;
-$form-field-active-border-color:        var(--#{$prefix}primary-text) !default;
+$form-field-active-border-color:        var(--#{$prefix}primary-emphasis) !default;
 $form-select-checkmark:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$gray-7}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
 $form-select-checkmark-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$gray-0}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
 
@@ -1266,7 +1241,7 @@ $form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://w
 // scss-docs-start form-validation-states
 $form-validation-states: (
   "valid": (
-    "color": var(--#{$prefix}success-text),
+    "color": var(--#{$prefix}success-emphasis),
     "icon": $form-feedback-icon-valid,
     "tooltip-color": #fff,
     "tooltip-bg-color": var(--#{$prefix}success),
@@ -1274,7 +1249,7 @@ $form-validation-states: (
     "border-color": var(--#{$prefix}success),
   ),
   "invalid": (
-    "color": var(--#{$prefix}danger-text),
+    "color": var(--#{$prefix}danger-emphasis),
     "icon": $form-feedback-icon-invalid,
     "tooltip-color": #fff,
     "tooltip-bg-color": var(--#{$prefix}danger),
@@ -1330,7 +1305,7 @@ $nav-link-disabled-color:           var(--#{$prefix}surface-color) !default;
 $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
 $nav-tabs-border-width:             var(--#{$prefix}border-width) !default;
 $nav-tabs-link-color:               var(--#{$prefix}body-color) !default;
-$nav-tabs-link-active-color:        var(--#{$prefix}primary-text) !default;
+$nav-tabs-link-active-color:        var(--#{$prefix}primary-emphasis) !default;
 $nav-tabs-link-hover-bg:            rgba(var(--#{$prefix}primary-rgb), .15) !default;
 
 $nav-pills-border-radius:           $border-radius !default;
@@ -1534,14 +1509,14 @@ $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              var(--#{$prefix}primary-subtle) !default;
-$accordion-button-active-color:           var(--#{$prefix}primary-text) !default;
+$accordion-button-active-color:           var(--#{$prefix}primary-emphasis) !default;
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       none !default;
 
 $accordion-icon-width:                    1.25rem !default;
 $accordion-icon-color:                    $body-color !default;
-$accordion-icon-active-color:             $primary-text !default;
+$accordion-icon-active-color:             $primary-emphasis !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
 $accordion-icon-transform:                rotate(-180deg) !default;
 
@@ -1919,7 +1894,7 @@ $offcanvas-dark-collapse-icon:      url("data:image/svg+xml,<svg xmlns='http://w
 // Code
 
 $code-font-size:                    $small-font-size !default;
-$code-color:                        $pink !default;
+$code-color:                        $tertiary !default;
 
 $kbd-padding-y:                     .1875rem !default;
 $kbd-padding-x:                     .375rem !default;

@@ -2,9 +2,18 @@
 //
 // Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
 
-// scss-docs-start theme-colors-rgb
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
-// scss-docs-end theme-colors-rgb
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "tertiary":   $tertiary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
 
 $theme-colors-hover: (
   "primary": $primary-hover,
@@ -29,6 +38,11 @@ $theme-colors-active: (
   "light": $light-active,
   "dark": $dark-active,
 ) !default;
+// scss-docs-end theme-colors-map
+
+// scss-docs-start theme-colors-rgb
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
+// scss-docs-end theme-colors-rgb
 
 $theme-colors-subtle: (
   "primary": $primary-subtle,
@@ -66,28 +80,28 @@ $theme-colors-subtle-active: (
   "dark": $dark-subtle-active,
 ) !default;
 
-$theme-colors-text: (
-  "primary": $primary-text,
-  "secondary": $secondary-text,
-  "tertiary": $tertiary-text,
-  "success": $success-text,
-  "info": $info-text,
-  "warning": $warning-text,
-  "danger": $danger-text,
-  "light": $light-text,
-  "dark": $dark-text,
+$theme-colors-emphasis: (
+  "primary": $primary-emphasis,
+  "secondary": $secondary-emphasis,
+  "tertiary": $tertiary-emphasis,
+  "success": $success-emphasis,
+  "info": $info-emphasis,
+  "warning": $warning-emphasis,
+  "danger": $danger-emphasis,
+  "light": $light-emphasis,
+  "dark": $dark-emphasis,
 ) !default;
 
-$theme-colors-text-hover: (
-  "primary": $primary-text-hover,
-  "secondary": $secondary-text-hover,
-  "tertiary": $tertiary-text-hover,
-  "success": $success-text-hover,
-  "info": $info-text-hover,
-  "warning": $warning-text-hover,
-  "danger": $danger-text-hover,
-  "light": $light-text-hover,
-  "dark": $dark-text-hover,
+$theme-colors-emphasis-hover: (
+  "primary": $primary-emphasis-hover,
+  "secondary": $secondary-emphasis-hover,
+  "tertiary": $tertiary-emphasis-hover,
+  "success": $success-emphasis-hover,
+  "info": $info-emphasis-hover,
+  "warning": $warning-emphasis-hover,
+  "danger": $danger-emphasis-hover,
+  "light": $light-emphasis-hover,
+  "dark": $dark-emphasis-hover,
 ) !default;
 
 $theme-colors-border-subtle: (
@@ -101,6 +115,44 @@ $theme-colors-border-subtle: (
   "light": $light-border-subtle,
   "dark": $dark-border-subtle,
 ) !default;
+
+// Dark
+$theme-colors-dark: (
+  "primary":    $primary-dark,
+  "secondary":  $secondary-dark,
+  "tertiary":   $tertiary-dark,
+  "success":    $success-dark,
+  "info":       $info-dark,
+  "warning":    $warning-dark,
+  "danger":     $danger-dark,
+  "light":      $light-dark,
+  "dark":       $dark-dark
+) !default;
+
+$theme-colors-dark-hover: (
+  "primary": $primary-dark-hover,
+  "secondary": $secondary-dark-hover,
+  "tertiary": $tertiary-dark-hover,
+  "success": $success-dark-hover,
+  "info": $info-dark-hover,
+  "warning": $warning-dark-hover,
+  "danger": $danger-dark-hover,
+  "light": $light-dark-hover,
+  "dark": $dark-dark-hover,
+) !default;
+
+$theme-colors-dark-active: (
+  "primary": $primary-dark-active,
+  "secondary": $secondary-dark-active,
+  "tertiary": $tertiary-dark-active,
+  "success": $success-dark-active,
+  "info": $info-dark-active,
+  "warning": $warning-dark-active,
+  "danger": $danger-dark-active,
+  "light": $light-dark-active,
+  "dark": $dark-dark-active,
+) !default;
+
 
 // Utilities maps
 //
@@ -123,15 +175,15 @@ $utilities-text: map-merge(
 $utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
 
 $utilities-text-emphasis-colors: (
-  "primary-emphasis": var(--#{$prefix}primary-text),
-  "secondary-emphasis": var(--#{$prefix}secondary-text),
-  "tertiary-emphasis": var(--#{$prefix}tertiary-text),
-  "success-emphasis": var(--#{$prefix}success-text),
-  "info-emphasis": var(--#{$prefix}info-text),
-  "warning-emphasis": var(--#{$prefix}warning-text),
-  "danger-emphasis": var(--#{$prefix}danger-text),
-  "light-emphasis": var(--#{$prefix}light-text),
-  "dark-emphasis": var(--#{$prefix}dark-text)
+  "primary-emphasis": var(--#{$prefix}primary-emphasis),
+  "secondary-emphasis": var(--#{$prefix}secondary-emphasis),
+  "tertiary-emphasis": var(--#{$prefix}tertiary-emphasis),
+  "success-emphasis": var(--#{$prefix}success-emphasis),
+  "info-emphasis": var(--#{$prefix}info-emphasis),
+  "warning-emphasis": var(--#{$prefix}warning-emphasis),
+  "danger-emphasis": var(--#{$prefix}danger-emphasis),
+  "light-emphasis": var(--#{$prefix}light-emphasis),
+  "dark-emphasis": var(--#{$prefix}dark-emphasis)
 ) !default;
 // scss-docs-end utilities-text-colors
 
