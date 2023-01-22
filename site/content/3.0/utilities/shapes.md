@@ -18,7 +18,7 @@ keywords: utilities, shapes
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 
 <div class="m-shape-container">
-  <button type="button" class="btn btn-success">
+  <button type="button" class="btn btn-primary">
     Button
   </button>
   <div class="angle-top-left bg-body"></div>
@@ -33,13 +33,13 @@ keywords: utilities, shapes
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 
 <div class="m-shape-container">
-  <button type="button" class="btn btn-outline-pink">
+  <button type="button" class="btn btn-outline-success">
     Button
   </button>
-  <div class="angle-top-left bg-body border border-bottom border-pink"></div>
-  <div class="angle-top-right bg-body border border-bottom border-pink"></div>
-  <div class="angle-bottom-left bg-body border border-bottom border-pink"></div>
-  <div class="angle-bottom-right bg-body border border-bottom border-pink"></div>
+  <div class="angle-top-left bg-body border border-success border-bottom" ></div>
+  <div class="angle-top-right bg-body border border-success border-bottom"></div>
+  <div class="angle-bottom-left bg-body border border-success border-bottom"></div>
+  <div class="angle-bottom-right bg-body border border-success border-bottom"></div>
 </div>
 
 {{< /example >}}
@@ -48,27 +48,27 @@ keywords: utilities, shapes
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 
 <div class="m-shape-container">
-  <div class="card bg-pink bg-opacity-10" style="max-width:400px">
+  <div class="card bg-tertiary bg-opacity-10" style="max-width:400px">
     <div class="card-body">
-      <h4 class="card-title text-pink">Unlimited Music</h4>
+      <h4 class="card-title text-tertiary">Unlimited Music</h4>
       <p class="card-text">
         Listen to your favourite artists and albums whenever wherever online
         and offline
       </p>
     </div>
     <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-      <button type="button" class="btn btn-outline-pink border-0">
+      <button type="button" class="btn btn-outline-tertiary border-0">
         Listen Now
       </button>
 
       <div>
-        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-tertiary m-1">
           <i class="bi bi-heart-fill"></i>
         </button>
-        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-tertiary m-1">
           <i class="bi bi-share-fill"></i>
         </button>
-        <button type="button" class="btn btn-fab mini-fab btn-success m-1">
+        <button type="button" class="btn btn-fab mini-fab btn-tertiary m-1">
           <i class="bi bi-three-dots-vertical"></i>
         </button>
       </div>
@@ -83,16 +83,16 @@ keywords: utilities, shapes
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 
 <div class="m-shape-container">
-  <div class="card border border-pink" style="max-width:400px">
+  <div class="card border border-success" style="max-width:400px">
     <div class="card-body">
-      <h4 class="card-title text-pink">Unlimited Music</h4>
+      <h4 class="card-title text-success">Unlimited Music</h4>
       <p class="card-text">
         Listen to your favourite artists and albums whenever wherever online
         and offline
       </p>
     </div>
     <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-      <button type="button" class="btn btn-outline-pink border-0">
+      <button type="button" class="btn btn-outline-success border-0">
         Listen Now
       </button>
 
@@ -109,7 +109,7 @@ keywords: utilities, shapes
       </div>
     </div>
   </div>
-  <div class="angle-top-right bg-body size-50 border border-bottom border-pink"></div>
+  <div class="angle-top-right bg-body size-50 border border-bottom border-success"></div>
 </div>
 
 {{< /example >}}
@@ -118,12 +118,12 @@ keywords: utilities, shapes
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap" >}}
 
 <div class="m-shape-container">
-  <div class="bg-pink bg-opacity-10 border border-bottom border-2 border-pink"
+  <div class="bg-warning bg-opacity-10 border border-bottom border-2 border-warning"
        style="height: 200px; width: 200px;"></div>
-  <div class="angle-top-left bg-body size-50 border border-bottom border-2 border-pink"></div>
-  <div class="angle-top-right bg-body size-50 border border-bottom border-2 border-pink"></div>
-  <div class="angle-bottom-left bg-body size-50 border border-bottom border-2 border-pink"></div>
-  <div class="angle-bottom-right bg-body size-50 border border-bottom border-2 border-pink"></div>
+  <div class="angle-top-left bg-body size-50 border border-bottom border-2 border-warning"></div>
+  <div class="angle-top-right bg-body size-50 border border-bottom border-2 border-warning"></div>
+  <div class="angle-bottom-left bg-body size-50 border border-bottom border-2 border-warning"></div>
+  <div class="angle-bottom-right bg-body size-50 border border-bottom border-2 border-warning"></div>
 </div>
 
 {{< /example >}}
