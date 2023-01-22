@@ -85,7 +85,6 @@
   --#{$prefix}surface-bg: #{$surface-bg};
   --#{$prefix}surface-bg-rgb: #{to-rgb($surface-bg)};
   --#{$prefix}surface-bg-hover: #{$surface-bg-hover};
-  --#{$prefix}surface-bg-active: #{$surface-bg-active};
 
   --#{$prefix}emphasis-color: #{$emphasis-color};
   --#{$prefix}emphasis-color-rgb: #{to-rgb($emphasis-color)};
@@ -159,7 +158,6 @@
     --#{$prefix}surface-bg: #{$surface-bg-dark};
     --#{$prefix}surface-bg-rgb: #{to-rgb($surface-bg-dark)};
     --#{$prefix}surface-bg-hover: #{$surface-bg-dark-hover};
-    --#{$prefix}surface-bg-active: #{$surface-bg-dark-active};
 
     --#{$prefix}emphasis-color: #{$emphasis-color-dark};
     --#{$prefix}emphasis-color-rgb: #{to-rgb($emphasis-color-dark)};

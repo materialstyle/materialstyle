@@ -3,7 +3,6 @@
   --#{$prefix}form-field-color: #{$form-field-color};
   --#{$prefix}form-field-bg: #{$form-field-bg};
   --#{$prefix}form-field-hover-bg: #{$form-field-hover-bg};
-  --#{$prefix}form-field-active-bg: #{$form-field-active-bg};
   --#{$prefix}form-field-border-color: #{$form-field-border-color};
   --#{$prefix}form-field-active-border-color: #{$form-field-active-border-color};
   --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator)};
@@ -19,10 +18,6 @@
 
     &:hover {
       background-color: var(--#{$prefix}form-field-hover-bg);
-    }
-
-    &:focus-within {
-      background-color: var(--#{$prefix}form-field-active-bg);
     }
   }
 
@@ -119,7 +114,7 @@
       --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}form-field-color);
       --#{$prefix}dropdown-link-hover-bg: var(--#{$prefix}form-field-hover-bg);
       --#{$prefix}dropdown-link-active-color: var(--#{$prefix}form-field-color);
-      --#{$prefix}dropdown-link-active-bg: var(--#{$prefix}form-field-active-bg);
+      --#{$prefix}dropdown-link-active-bg: var(--#{$prefix}form-field-hover-bg);
       --#{$prefix}dropdown-link-active-hover-bg: #{$gray-3};
 
       width: 100%;

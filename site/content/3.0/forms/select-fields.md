@@ -78,11 +78,21 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 {{< /example >}}
 
 ## Color options
-Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
+
+Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-border-color``` css variables to personalize it according to your brand's style.
+
+<div class="d-flex align-items-center bg-danger bg-opacity-25 my-4 rounded-3 overflow-hidden">
+  <div class="d-flex align-items-center align-self-stretch text-bg-danger p-3 fs-4">
+    <i class="bi bi-info-circle-fill"></i>
+  </div>
+  <div class="flex-grow-1 p-3 text-body">
+    Classes <b>.base-[color]</b> & <b>.primary-[color]</b> are depricated in v3.1.0
+  </div>
+</div>
 
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
-<div class="form-floating base-purple primary-pink">
+<div class="form-floating" style="--bs-form-field-border-color: var(--bs-primary-emphasis); --bs-form-field-active-border-color: var(--bs-success-emphasis);">
   <select class="form-select">
     <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
@@ -93,7 +103,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
   <label>Select One</label>
 </div>
 ##split##
-<div class="form-floating form-floating-outlined base-purple primary-pink">
+<div class="form-floating form-floating-outlined" style="--bs-form-field-border-color: var(--bs-primary-emphasis); --bs-form-field-active-border-color: var(--bs-success-emphasis);">
   <select class="form-select">
     <option value="" label="blank option"></option>
     <option value="1">Option 1</option>

@@ -18,6 +18,10 @@ toc: true
   Secondary
 </div>
 ##split##
+<div class="alert alert-tertiary" role="alert">
+  Tertiary
+</div>
+##split##
 <div class="alert alert-success" role="alert">
   Success
 </div>

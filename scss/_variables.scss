@@ -594,7 +594,6 @@ $body-color:                $gray-8 !default;
 
 $surface-bg:                   $gray-1 !default;
 $surface-bg-hover:             $gray-2 !default;
-$surface-bg-active:            $gray-3 !default;
 $surface-color:                $gray-9 !default;
 
 $emphasis-color:            $black !default;
@@ -997,7 +996,6 @@ $btn-active-bg-tint-amount:       20% !default;
 $form-field-color:                      var(--#{$prefix}emphasis-color) !default;
 $form-field-bg:                         var(--#{$prefix}surface-bg) !default;
 $form-field-hover-bg:                   var(--#{$prefix}surface-bg-hover) !default;
-$form-field-active-bg:                  var(--#{$prefix}surface-bg-active) !default;
 $form-field-border-color:               var(--#{$prefix}body-color) !default;
 $form-field-active-border-color:        var(--#{$prefix}primary-emphasis) !default;
 $form-select-checkmark:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$gray-7}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
