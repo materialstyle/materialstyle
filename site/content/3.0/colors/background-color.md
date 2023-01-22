@@ -22,39 +22,39 @@ keywords: colors, background color
 
 {{< example codeId="code2" class="d-flex flex-column gap-2" >}}
 
-<div class="p-3 bg-primary text-white">.bg-primary</div>
+<div class="p-3 bg-primary" style="color: var(--bs-text-on-primary);">.bg-primary</div>
 ##split##
 <div class="p-3 bg-primary-subtle text-primary-emphasis">.bg-primary-subtle</div>
 ##split##
-<div class="p-3 bg-secondary text-white">.bg-secondary</div>
+<div class="p-3 bg-secondary" style="color: var(--bs-text-on-secondary);">.bg-secondary</div>
 ##split##
 <div class="p-3 bg-secondary-subtle text-secondary-emphasis">.bg-secondary-subtle</div>
 ##split##
-<div class="p-3 bg-tertiary text-white">.bg-tertiary</div>
+<div class="p-3 bg-tertiary" style="color: var(--bs-text-on-tertiary);">.bg-tertiary</div>
 ##split##
 <div class="p-3 bg-tertiary-subtle text-tertiary-emphasis">.bg-tertiary-subtle</div>
 ##split##
-<div class="p-3 bg-success text-black">.bg-success</div>
+<div class="p-3 bg-success" style="color: var(--bs-text-on-success);">.bg-success</div>
 ##split##
 <div class="p-3 bg-success-subtle text-success-emphasis">.bg-success-subtle</div>
 ##split##
-<div class="p-3 bg-danger text-black">.bg-danger</div>
+<div class="p-3 bg-danger" style="color: var(--bs-text-on-danger);">.bg-danger</div>
 ##split##
 <div class="p-3 bg-danger-subtle text-danger-emphasis">.bg-danger-subtle</div>
 ##split##
-<div class="p-3 bg-warning text-black">.bg-warning</div>
+<div class="p-3 bg-warning" style="color: var(--bs-text-on-warning);">.bg-warning</div>
 ##split##
 <div class="p-3 bg-warning-subtle text-warning-emphasis">.bg-warning-subtle</div>
 ##split##
-<div class="p-3 bg-info text-black">.bg-info</div>
+<div class="p-3 bg-info" style="color: var(--bs-text-on-info);">.bg-info</div>
 ##split##
 <div class="p-3 bg-info-subtle text-info-emphasis">.bg-info-subtle</div>
 ##split##
-<div class="p-3 bg-light text-black">.bg-light</div>
+<div class="p-3 bg-light" style="color: var(--bs-text-on-light);">.bg-light</div>
 ##split##
 <div class="p-3 bg-light-subtle text-light-emphasis">.bg-light-subtle</div>
 ##split##
-<div class="p-3 bg-dark text-white">.bg-dark</div>
+<div class="p-3 bg-dark" style="color: var(--bs-text-on-dark);">.bg-dark</div>
 ##split##
 <div class="p-3 bg-dark-subtle text-dark-emphasis">.bg-dark-subtle</div>
 
@@ -69,23 +69,23 @@ Do you need a gradient in your custom CSS? Just add ```background-image: var(--b
 
 {{< example codeId="code3" class="d-flex flex-column gap-2" >}}
 
-<div class="p-3 bg-primary bg-gradient text-white">.bg-primary.bg-gradient</div>
+<div class="p-3 bg-primary bg-gradient" style="color: var(--bs-text-on-primary);">.bg-primary.bg-gradient</div>
 ##split##
-<div class="p-3 bg-secondary bg-gradient text-white">.bg-secondary.bg-gradient</div>
+<div class="p-3 bg-secondary bg-gradient" style="color: var(--bs-text-on-secondary);">.bg-secondary.bg-gradient</div>
 ##split##
-<div class="p-3 bg-tertiary bg-gradient text-white">.bg-tertiary.bg-gradient</div>
+<div class="p-3 bg-tertiary bg-gradient" style="color: var(--bs-text-on-tertiary);">.bg-tertiary.bg-gradient</div>
 ##split##
-<div class="p-3 bg-success bg-gradient text-black">.bg-success.bg-gradient</div>
+<div class="p-3 bg-success bg-gradient" style="color: var(--bs-text-on-success);">.bg-success.bg-gradient</div>
 ##split##
-<div class="p-3 bg-danger bg-gradient text-black">.bg-danger.bg-gradient</div>
+<div class="p-3 bg-danger bg-gradient" style="color: var(--bs-text-on-danger);">.bg-danger.bg-gradient</div>
 ##split##
-<div class="p-3 bg-warning bg-gradient text-black">.bg-warning.bg-gradient</div>
+<div class="p-3 bg-warning bg-gradient" style="color: var(--bs-text-on-warning);">.bg-warning.bg-gradient</div>
 ##split##
-<div class="p-3 bg-info bg-gradient text-black">.bg-info.bg-gradient</div>
+<div class="p-3 bg-info bg-gradient" style="color: var(--bs-text-on-info);">.bg-info.bg-gradient</div>
 ##split##
-<div class="p-3 bg-light bg-gradient text-black">.bg-light.bg-gradient</div>
+<div class="p-3 bg-light bg-gradient" style="color: var(--bs-text-on-light);">.bg-light.bg-gradient</div>
 ##split##
-<div class="p-3 bg-dark bg-gradient text-white">.bg-dark.bg-gradient</div>
+<div class="p-3 bg-dark bg-gradient" style="color: var(--bs-text-on-dark);">.bg-dark.bg-gradient</div>
 
 {{< /example >}}
 
@@ -123,5 +123,29 @@ Or, choose from any of the .bg-opacity utilities:
 <div class="bg-success p-2 text-black bg-opacity-50">This is 50% opacity success background</div>
 <div class="bg-success p-2 text-black bg-opacity-25">This is 25% opacity success background</div>
 <div class="bg-success p-2 text-black bg-opacity-10">This is 10% opacity success background</div>
+
+{{< /example >}}
+
+## Background color with contrasting foreground color
+
+{{< example codeId="code6" class="d-flex flex-column gap-2" >}}
+
+<div class="p-3 text-bg-primary">.text-bg-primary</div>
+##split##
+<div class="p-3 text-bg-secondary">.text-bg-secondary</div>
+##split##
+<div class="p-3 text-bg-tertiary">.text-bg-tertiary</div>
+##split##
+<div class="p-3 text-bg-success">.text-bg-success</div>
+##split##
+<div class="p-3 text-bg-danger">.text-bg-danger</div>
+##split##
+<div class="p-3 text-bg-warning">.text-bg-warning</div>
+##split##
+<div class="p-3 text-bg-info">.text-bg-info</div>
+##split##
+<div class="p-3 text-bg-light">.text-bg-light</div>
+##split##
+<div class="p-3 text-bg-dark">.text-bg-dark</div>
 
 {{< /example >}}
