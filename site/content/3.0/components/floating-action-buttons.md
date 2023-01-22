@@ -23,11 +23,11 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-3">}}
 
-<button type="button" class="btn btn-fab btn-info elevated-1">
+<button type="button" class="btn btn-fab btn-tertiary elevated-1">
   <i class="bi bi-heart-fill"></i>
 </button>
 ##split##
-<button type="button" class="btn btn-fab btn-info elevated-10">
+<button type="button" class="btn btn-fab btn-tertiary elevated-10">
   <i class="bi bi-heart-fill"></i>
 </button>
 

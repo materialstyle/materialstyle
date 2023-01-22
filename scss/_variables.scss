@@ -425,7 +425,7 @@ $dark:          $gray-9 !default;
 
 $primary-hover:        $indigo-8 !default;
 $secondary-hover:      $gray-8 !default;
-$tertiary-hover:       $pink-6 !default;
+$tertiary-hover:       $pink-8 !default;
 $success-hover:        $green-6 !default;
 $info-hover:           $cyan-6 !default;
 $warning-hover:        $yellow-6 !default;
@@ -435,7 +435,7 @@ $dark-hover:           $gray-8 !default;
 
 $primary-active:       $indigo-9 !default;
 $secondary-active:     $gray-9 !default;
-$tertiary-active:      $pink-5 !default;
+$tertiary-active:      $pink-9 !default;
 $success-active:       $green-5 !default;
 $info-active:          $cyan-5 !default;
 $warning-active:       $yellow-5 !default;
@@ -529,7 +529,7 @@ $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
 $enable-smooth-scroll:        true !default;
 $enable-grid-classes:         true !default;
-$enable-subtle-classes:       true !default;
+$enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  true !default;
@@ -604,9 +604,9 @@ $muted-color:               $gray-6 !default;
 //
 // Style anchor elements.
 
-$link-color:                              var(--#{$prefix}primary-emphasis) !default;
+$link-color:                              var(--#{$prefix}primary) !default;
 $link-decoration:                         underline !default;
-$link-hover-color:                        var(--#{$prefix}primary-emphasis-hover) !default;
+$link-hover-color:                        var(--#{$prefix}primary-hover) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;

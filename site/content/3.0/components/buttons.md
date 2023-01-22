@@ -118,6 +118,10 @@ Add ```.border-0``` to Outlined buttons to create Text buttons.
   Secondary
 </button>
 ##split##
+<button type="button" class="btn btn-tertiary m-1">
+  Tertiary
+</button>
+##split##
 <button type="button" class="btn btn-success m-1">
   Success
 </button>
@@ -155,6 +159,10 @@ Add ```.border-0``` to Outlined buttons to create Text buttons.
   Secondary
 </button>
 ##split##
+<button type="button" class="btn btn-outline-tertiary m-1">
+  Tertiary
+</button>
+##split##
 <button type="button" class="btn btn-outline-success m-1">
   Success
 </button>
@@ -190,6 +198,10 @@ Add ```.border-0``` to Outlined buttons to create Text buttons.
 ##split##
 <button type="button" class="btn btn-outline-secondary border-0 m-1">
   Secondary
+</button>
+##split##
+<button type="button" class="btn btn-outline-tertiary border-0 m-1">
+  Tertiary
 </button>
 ##split##
 <button type="button" class="btn btn-outline-success border-0 m-1">
@@ -230,23 +242,23 @@ Add ```.border-0``` to Outlined buttons to create Text buttons.
 
 {{< example codeId="code9" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
+<button type="button" class="btn btn-primary m-1">
+  Primary
+  <span class="ripple-surface"></span>
+</button>
+##split##
 <button type="button" class="btn btn-success m-1">
-  Success | Green
+  Success
   <span class="ripple-surface"></span>
 </button>
 ##split##
-<button type="button" class="btn btn-warning m-1">
-  Warning | Yellow
-  <span class="ripple-surface"></span>
-</button>
-##split##
-<button type="button" class="btn btn-outline-danger m-1">
-  Outlined Button
+<button type="button" class="btn btn-outline-tertiary m-1">
+  Outlined Tertiary
   <span class="ripple-surface"></span>
 </button>
 ##split##
 <button type="button" class="btn btn-outline-primary border-0 m-1">
-  Text Button
+  Primary
   <span class="ripple-surface"></span>
 </button>
 
