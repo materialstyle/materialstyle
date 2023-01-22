@@ -2,6 +2,9 @@
 layout: docs
 title: Ripple
 group: utilities
+aliases:
+  - "/3.0/utilities/"
+  - "/utilities/"
 toc: true
 keywords: utilities, ripple
 ---
@@ -49,22 +52,22 @@ To add Ripple to your component:
 ## On Buttons
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<button type="button" class="btn btn-success m-1">
-  Success | Green
+<button type="button" class="btn btn-primary m-1">
+  Primary
   <span class="ripple-surface"></span>
 </button>
 ##split##
-<button type="button" class="btn btn-warning m-1">
-  Warning | Yellow
+<button type="button" class="btn btn-tertiary m-1">
+  Tertiary
   <span class="ripple-surface"></span>
 </button>
 ##split##
-<button type="button" class="btn btn-outline-pink m-1">
+<button type="button" class="btn btn-outline-success m-1">
   Outlined Button
   <span class="ripple-surface"></span>
 </button>
 ##split##
-<button type="button" class="btn btn-outline-pink border-0 m-1">
+<button type="button" class="btn btn-outline-danger border-0 m-1">
   Text Button
   <span class="ripple-surface"></span>
 </button>
@@ -106,7 +109,7 @@ To add Ripple to your component:
 ## On a div
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<div class="bg-teal text-dark p-4 position-relative">
+<div class="text-bg-success p-4 position-relative">
   Ripple on a div
   <span class="ripple-surface"></span>
 </div>
@@ -118,7 +121,7 @@ Use the custom property ``` --mdc-ripple-color``` to set the color of the Ripple
 
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<div class="bg-white text-dark border p-4 position-relative" style="--mdc-ripple-color: blue;">
+<div class="border p-4 position-relative" style="--mdc-ripple-color: blue;">
   Ripple with custom color
   <span class="ripple-surface"></span>
 </div>
@@ -133,9 +136,9 @@ Use the custom properties:
 
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<div class="bg-white text-dark border p-4 position-relative" 
+<div class="border p-4 position-relative" 
      style="--mdc-ripple-color: blue; --mdc-ripple-hover-opacity: .3; --mdc-ripple-focus-opacity: .4; --mdc-ripple-press-opacity: .5;">
-  Ripple with custom color
+  Ripple with custom color levels
   <span class="ripple-surface"></span>
 </div>
  
