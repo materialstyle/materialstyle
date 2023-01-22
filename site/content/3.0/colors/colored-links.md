@@ -3,6 +3,7 @@ layout: docs
 title: Colored links
 group: colors
 toc: true
+keywords: colors, colored links
 ---
 
 ## Default link
