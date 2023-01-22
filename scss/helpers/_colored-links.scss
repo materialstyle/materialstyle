@@ -1,10 +1,10 @@
 @each $color, $value in $theme-colors {
   .link-#{$color} {
-    color: var(--#{$prefix}#{$color}-text) if($enable-important-utilities, !important, null);
+    color: var(--#{$prefix}#{$color}) if($enable-important-utilities, !important, null);
 
     &:hover,
     &:focus {
-      color: var(--#{$prefix}#{$color}-text-hover) if($enable-important-utilities, !important, null);
+      color: var(--#{$prefix}#{$color}-emphasis) if($enable-important-utilities, !important, null);
     }
   }
 }

@@ -1,9 +1,9 @@
 ---
 layout: docs
 title: Color palette
-group: utilities
+group: colors
 toc: true
-keywords: utilities, colors
+keywords: colors, color palette
 ---
 
 ## Gray

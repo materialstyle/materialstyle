@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Links
-group: components
+title: Colored links
+group: colors
 toc: true
 ---
 

@@ -606,7 +606,7 @@ $muted-color:               $gray-6 !default;
 
 $link-color:                              var(--#{$prefix}primary) !default;
 $link-decoration:                         underline !default;
-$link-hover-color:                        var(--#{$prefix}primary-hover) !default;
+$link-hover-color:                        var(--#{$prefix}primary-emphasis) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;

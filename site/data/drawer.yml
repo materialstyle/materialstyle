@@ -7,10 +7,14 @@
     - title: Starter Templates
     - title: Browsers and Devices
 
+- title: Colors
+  pages:
+  - title: Theme colors
+  - title: Color Palette
+  - title: Colored Links
+
 - title: Utilities
   pages:
-    - title: Theme colors
-    - title: Color Palette
     - title: Ripple
     - title: Shadows
     - title: Shapes
@@ -38,7 +42,6 @@
     - title: Drawer
     - title: Dropdowns
     - title: Floating Action Buttons
-    - title: Links
     - title: Lists
     - title: Modal
     - title: Navbar

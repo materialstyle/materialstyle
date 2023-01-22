@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Theme colors
-group: utilities
+group: colors
 aliases:
-  - "/3.0/utilities/"
-  - "/utilities/"
+  - "/3.0/colors/"
+  - "/colors/"
 toc: true
-keywords: utilities, colors
+keywords: colors, theme colors
 ---
 
 ## Primary
@@ -46,7 +46,6 @@ Additional theme option for higher contrasting colors.
 {{< theme-color-palette theme="dark" >}}
 
 ## Body
-Default foreground (color) and background, including components.
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
     <div class="theme-color-palette">
@@ -63,7 +62,6 @@ Default foreground (color) and background, including components.
 </div>
 
 ## Surface
-Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
     <div class="theme-color-palette">
@@ -102,7 +100,6 @@ For higher contrast text. Not applicable for backgrounds.
 </div>
 
 ## Muted
-For higher contrast text. Not applicable for backgrounds.
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
     <div class="theme-color-palette">
