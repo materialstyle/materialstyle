@@ -101,7 +101,7 @@ $body-bg-dark:                      $gray-10 !default;
 $body-color-dark:                   $gray-4 !default;
 
 $surface-bg-dark:                   $gray-9 !default;
-$surface-bg-dark-hover:             $gray-8 !default;
+$surface-bg-dark-hover:             tint-color($surface-bg-dark, 2%) !default;
 $surface-color-dark:                $gray-3 !default;
 
 $emphasis-color-dark:               $white !default;

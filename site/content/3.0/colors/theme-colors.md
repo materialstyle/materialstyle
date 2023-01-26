@@ -45,6 +45,8 @@ Additional theme option for less contrasting colors.
 Additional theme option for higher contrasting colors.
 {{< theme-color-palette theme="dark" >}}
 
+<hr class="mb-5">
+
 ## Body
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
@@ -73,11 +75,6 @@ Additional theme option for higher contrasting colors.
       <div style="background-color: var(--bs-surface-bg-hover);">&nbsp;</div>
       <span class="d-block p-2 text-capitalize" style="color: var(--bs-surface-color);">Background hover color</span>
       <span class="d-block px-2">{{< markdown >}}`--bs-surface-bg-hover`{{< /markdown >}}</span>
-    </div>
-    <div class="theme-color-palette">
-      <div style="background-color: var(--bs-surface-bg-active);">&nbsp;</div>
-      <span class="d-block p-2 text-capitalize" style="color: var(--bs-surface-color);">Background active color</span>
-      <span class="d-block px-2">{{< markdown >}}`--bs-surface-bg-active`{{< /markdown >}}</span>
     </div>
     <div class="theme-color-palette">
       <div style="background-color: var(--bs-surface-color);">&nbsp;</div>
