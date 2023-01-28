@@ -412,101 +412,28 @@ $min-contrast-ratio:   4.5 !default;
 $color-contrast-dark:      $black !default;
 $color-contrast-light:     $white !default;
 
+$theme-hover-shade-amount:          15% !default;
+$theme-hover-tint-amount:           15% !default;
+$theme-active-shade-amount:         20% !default;
+$theme-active-tint-amount:          20% !default;
+$theme-subtle-tint-amount:          80% !default;
+$theme-subtle-hover-tint-amount:    65% !default;
+$theme-subtle-active-tint-amount:   60% !default;
+$theme-emphasis-shade-amount:       40% !default;
+$theme-emphasis-hover-shade-amount: 55% !default;
+$theme-border-subtle-tint-amount:   60% !default;
+
 // scss-docs-start theme-color-variables
-$primary:       $indigo-7 !default;
-$secondary:     $gray-7 !default;
-$tertiary:      $pink-7 !default;
-$success:       $green-7 !default;
-$info:          $cyan-7 !default;
-$warning:       $yellow-7 !default;
-$danger:        $red-7 !default;
+$primary:       #0d6efd !default;
+$secondary:     #6c757d !default;
+$tertiary:      #d63384 !default;
+$success:       #198754 !default;
+$info:          #0dcaf0 !default;
+$warning:       #ffc107 !default;
+$danger:        #dc3545 !default;
 $light:         $gray-0 !default;
 $dark:          $gray-9 !default;
-
-$primary-hover:        $indigo-8 !default;
-$secondary-hover:      $gray-8 !default;
-$tertiary-hover:       $pink-8 !default;
-$success-hover:        $green-6 !default;
-$info-hover:           $cyan-6 !default;
-$warning-hover:        $yellow-6 !default;
-$danger-hover:         $red-6 !default;
-$light-hover:          $gray-1 !default;
-$dark-hover:           $gray-8 !default;
-
-$primary-active:       $indigo-9 !default;
-$secondary-active:     $gray-9 !default;
-$tertiary-active:      $pink-9 !default;
-$success-active:       $green-5 !default;
-$info-active:          $cyan-5 !default;
-$warning-active:       $yellow-5 !default;
-$danger-active:        $red-5 !default;
-$light-active:         $gray-2 !default;
-$dark-active:          $gray-7 !default;
 // scss-docs-end theme-color-variables
-
-// scss-docs-start theme-color-subtle-variables
-$primary-subtle:       $indigo-1 !default;
-$secondary-subtle:     $gray-1 !default;
-$tertiary-subtle:      $pink-1 !default;
-$success-subtle:       $green-1 !default;
-$info-subtle:          $cyan-1 !default;
-$warning-subtle:       $yellow-1 !default;
-$danger-subtle:        $red-1 !default;
-$light-subtle:         $gray-0 !default;
-$dark-subtle:          $gray-3 !default;
-
-$primary-subtle-hover:       $indigo-2 !default;
-$secondary-subtle-hover:     $gray-2 !default;
-$tertiary-subtle-hover:      $pink-2 !default;
-$success-subtle-hover:       $green-2 !default;
-$info-subtle-hover:          $cyan-2 !default;
-$warning-subtle-hover:       $yellow-2 !default;
-$danger-subtle-hover:        $red-2 !default;
-$light-subtle-hover:         $gray-1 !default;
-$dark-subtle-hover:          $gray-4 !default;
-
-$primary-subtle-active:       $indigo-3 !default;
-$secondary-subtle-active:     $gray-3 !default;
-$tertiary-subtle-active:      $pink-3 !default;
-$success-subtle-active:       $green-3 !default;
-$info-subtle-active:          $cyan-3 !default;
-$warning-subtle-active:       $yellow-3 !default;
-$danger-subtle-active:        $red-3 !default;
-$light-subtle-active:         $gray-2 !default;
-$dark-subtle-active:          $gray-5 !default;
-// scss-docs-end theme-color-subtle-variables
-
-// scss-docs-start theme-color-emphasis-variables
-$primary-emphasis:            $indigo-10 !default;
-$secondary-emphasis:          $gray-10 !default;
-$tertiary-emphasis:           $pink-10 !default;
-$success-emphasis:            $green-10 !default;
-$info-emphasis:               $cyan-10 !default;
-$warning-emphasis:            $yellow-10 !default;
-$danger-emphasis:             $red-10 !default;
-$light-emphasis:              $gray-7 !default;
-$dark-emphasis:               $gray-10 !default;
-
-$primary-emphasis-hover:      $indigo-12 !default;
-$secondary-emphasis-hover:    $gray-12 !default;
-$tertiary-emphasis-hover:     $pink-12 !default;
-$success-emphasis-hover:      $green-12 !default;
-$info-emphasis-hover:         $cyan-12 !default;
-$warning-emphasis-hover:      $yellow-12 !default;
-$danger-emphasis-hover:       $red-12 !default;
-$light-emphasis-hover:        $gray-8 !default;
-$dark-emphasis-hover:         $gray-12 !default;
-// scss-docs-end theme-color-emphasis-variables
-
-$primary-border-subtle:   $indigo-3 !default;
-$secondary-border-subtle: $gray-3 !default;
-$tertiary-border-subtle:  $pink-3 !default;
-$success-border-subtle:   $green-3 !default;
-$info-border-subtle:      $cyan-3 !default;
-$warning-border-subtle:   $yellow-3 !default;
-$danger-border-subtle:    $red-3 !default;
-$light-border-subtle:     $gray-2 !default;
-$dark-border-subtle:      $gray-5 !default;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
@@ -1512,7 +1439,7 @@ $accordion-button-focus-box-shadow:       none !default;
 
 $accordion-icon-width:                    1.25rem !default;
 $accordion-icon-color:                    $body-color !default;
-$accordion-icon-active-color:             $primary-emphasis !default;
+$accordion-icon-active-color:             var(--#{$prefix}primary-emphasis) !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
 $accordion-icon-transform:                rotate(-180deg) !default;
 

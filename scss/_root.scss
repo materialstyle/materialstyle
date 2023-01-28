@@ -12,46 +12,19 @@
 
   @each $color, $value in $theme-colors {
     --#{$prefix}#{$color}: #{$value};
+    --#{$prefix}#{$color}-hover: #{if(color-contrast($value) == $color-contrast-light, shade-color($value, $theme-hover-shade-amount), tint-color($value, $theme-hover-tint-amount))};
+    --#{$prefix}#{$color}-active: #{if(color-contrast($value) == $color-contrast-light, shade-color($value, $theme-active-shade-amount), tint-color($value, $theme-active-tint-amount))};
+    --#{$prefix}#{$color}-subtle: #{tint-color($value, $theme-subtle-tint-amount)};
+    --#{$prefix}#{$color}-subtle-hover: #{tint-color($value, $theme-subtle-hover-tint-amount)};
+    --#{$prefix}#{$color}-subtle-active: #{tint-color($value, $theme-subtle-active-tint-amount)};
+    --#{$prefix}#{$color}-emphasis: #{shade-color($value, $theme-emphasis-shade-amount)};
+    --#{$prefix}#{$color}-emphasis-hover: #{shade-color($value, $theme-emphasis-hover-shade-amount)};
+    --#{$prefix}text-on-#{$color}: #{color-contrast($value)};
+    --#{$prefix}#{$color}-border-subtle: #{tint-color($value, $theme-border-subtle-tint-amount)};
   }
 
   @each $color, $value in $theme-colors-rgb {
     --#{$prefix}#{$color}-rgb: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-hover {
-    --#{$prefix}#{$color}-hover: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-active {
-    --#{$prefix}#{$color}-active: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-subtle {
-    --#{$prefix}#{$color}-subtle: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-subtle-hover {
-    --#{$prefix}#{$color}-subtle-hover: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-subtle-active {
-    --#{$prefix}#{$color}-subtle-active: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-emphasis {
-    --#{$prefix}#{$color}-emphasis: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-emphasis-hover {
-    --#{$prefix}#{$color}-emphasis-hover: #{$value};
-  }
-
-  @each $color, $value in $theme-colors {
-    --#{$prefix}text-on-#{$color}: #{color-contrast($value)};
-  }
-
-  @each $color, $value in $theme-colors-border-subtle {
-    --#{$prefix}#{$color}-border-subtle: #{$value};
   }
 
   --#{$prefix}white-rgb: #{to-rgb($white)};
@@ -164,82 +137,21 @@
 
     --#{$prefix}muted-color: #{$muted-color-dark};
 
-    @each $color, $value in $theme-colors-dark {
-      --#{$prefix}#{$color}: #{$value};
-      --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
+    @each $color, $value in $theme-colors {
+      $theme: tint-color($value, $theme-dark-tint-amount);
+
+      --#{$prefix}#{$color}: #{$theme};
+      --#{$prefix}#{$color}-rgb: #{to-rgb($theme)};
+      --#{$prefix}#{$color}-hover: #{if(color-contrast($theme) == $color-contrast-light, shade-color($theme, $theme-dark-hover-shade-amount), tint-color($theme, $theme-dark-hover-tint-amount))};
+      --#{$prefix}#{$color}-active: #{if(color-contrast($theme) == $color-contrast-light, shade-color($theme, $theme-dark-active-shade-amount), tint-color($theme, $theme-dark-active-tint-amount))};
+      --#{$prefix}#{$color}-subtle: #{shade-color($value, $theme-dark-subtle-shade-amount)};
+      --#{$prefix}#{$color}-subtle-hover: #{shade-color($value, $theme-dark-subtle-hover-shade-amount)};
+      --#{$prefix}#{$color}-subtle-active: #{shade-color($value, $theme-dark-subtle-active-shade-amount)};
+      --#{$prefix}#{$color}-emphasis: #{tint-color($value, $theme-dark-emphasis-tint-amount)};
+      --#{$prefix}#{$color}-emphasis-hover: #{tint-color($value, $theme-dark-emphasis-hover-tint-amount)};
+      --#{$prefix}text-on-#{$color}: #{color-contrast($theme)};
+      --#{$prefix}#{$color}-border-subtle: #{shade-color($value, $theme-dark-border-subtle-shade-amount)};
     }
-
-    @each $color, $value in $theme-colors-dark {
-      --#{$prefix}text-on-#{$color}: #{color-contrast($value)};
-    }
-
-    @each $color, $value in $theme-colors-dark-hover {
-      --#{$prefix}#{$color}-hover: #{$value};
-    }
-
-    @each $color, $value in $theme-colors-dark-active {
-      --#{$prefix}#{$color}-active: #{$value};
-    }
-
-    --#{$prefix}primary-subtle: #{$primary-subtle-dark};
-    --#{$prefix}secondary-subtle: #{$secondary-subtle-dark};
-    --#{$prefix}tertiary-subtle: #{$tertiary-subtle-dark};
-    --#{$prefix}success-subtle: #{$success-subtle-dark};
-    --#{$prefix}info-subtle: #{$info-subtle-dark};
-    --#{$prefix}warning-subtle: #{$warning-subtle-dark};
-    --#{$prefix}danger-subtle: #{$danger-subtle-dark};
-    --#{$prefix}light-subtle: #{$light-subtle-dark};
-    --#{$prefix}dark-subtle: #{$dark-subtle-dark};
-
-    --#{$prefix}primary-subtle-hover: #{$primary-subtle-dark-hover};
-    --#{$prefix}secondary-subtle-hover: #{$secondary-subtle-dark-hover};
-    --#{$prefix}tertiary-subtle-hover: #{$tertiary-subtle-dark-hover};
-    --#{$prefix}success-subtle-hover: #{$success-subtle-dark-hover};
-    --#{$prefix}info-subtle-hover: #{$info-subtle-dark-hover};
-    --#{$prefix}warning-subtle-hover: #{$warning-subtle-dark-hover};
-    --#{$prefix}danger-subtle-hover: #{$danger-subtle-dark-hover};
-    --#{$prefix}light-subtle-hover: #{$light-subtle-dark-hover};
-    --#{$prefix}dark-subtle-hover: #{$dark-subtle-dark-hover};
-
-    --#{$prefix}primary-subtle-active: #{$primary-subtle-dark-active};
-    --#{$prefix}secondary-subtle-active: #{$secondary-subtle-dark-active};
-    --#{$prefix}tertiary-subtle-active: #{$tertiary-subtle-dark-active};
-    --#{$prefix}success-subtle-active: #{$success-subtle-dark-active};
-    --#{$prefix}info-subtle-active: #{$info-subtle-dark-active};
-    --#{$prefix}warning-subtle-active: #{$warning-subtle-dark-active};
-    --#{$prefix}danger-subtle-active: #{$danger-subtle-dark-active};
-    --#{$prefix}light-subtle-active: #{$light-subtle-dark-active};
-    --#{$prefix}dark-subtle-active: #{$dark-subtle-dark-active};
-
-    --#{$prefix}primary-emphasis: #{$primary-emphasis-dark};
-    --#{$prefix}secondary-emphasis: #{$secondary-emphasis-dark};
-    --#{$prefix}tertiary-emphasis: #{$tertiary-emphasis-dark};
-    --#{$prefix}success-emphasis: #{$success-emphasis-dark};
-    --#{$prefix}info-emphasis: #{$info-emphasis-dark};
-    --#{$prefix}warning-emphasis: #{$warning-emphasis-dark};
-    --#{$prefix}danger-emphasis: #{$danger-emphasis-dark};
-    --#{$prefix}light-emphasis: #{$light-emphasis-dark};
-    --#{$prefix}dark-emphasis: #{$dark-emphasis-dark};
-
-    --#{$prefix}primary-emphasis-hover: #{$primary-emphasis-dark-hover};
-    --#{$prefix}secondary-emphasis-hover: #{$secondary-emphasis-dark-hover};
-    --#{$prefix}tertiary-emphasis-hover: #{$tertiary-emphasis-dark-hover};
-    --#{$prefix}success-emphasis-hover: #{$success-emphasis-dark-hover};
-    --#{$prefix}info-emphasis-hover: #{$info-emphasis-dark-hover};
-    --#{$prefix}warning-emphasis-hover: #{$warning-emphasis-dark-hover};
-    --#{$prefix}danger-emphasis-hover: #{$danger-emphasis-dark-hover};
-    --#{$prefix}light-emphasis-hover: #{$light-emphasis-dark-hover};
-    --#{$prefix}dark-emphasis-hover: #{$dark-emphasis-dark-hover};
-
-    --#{$prefix}primary-border-subtle: #{$primary-border-subtle-dark};
-    --#{$prefix}secondary-border-subtle: #{$secondary-border-subtle-dark};
-    --#{$prefix}tertiary-border-subtle: #{$tertiary-border-subtle-dark};
-    --#{$prefix}success-border-subtle: #{$success-border-subtle-dark};
-    --#{$prefix}info-border-subtle: #{$info-border-subtle-dark};
-    --#{$prefix}warning-border-subtle: #{$warning-border-subtle-dark};
-    --#{$prefix}danger-border-subtle: #{$danger-border-subtle-dark};
-    --#{$prefix}light-border-subtle: #{$light-border-subtle-dark};
-    --#{$prefix}dark-border-subtle: #{$dark-border-subtle-dark};
 
     --#{$prefix}heading-color: #{$headings-color-dark};
 

@@ -6,96 +6,17 @@
 // Global colors
 //
 
-// scss-docs-start sass-dark-mode-vars
-$primary-dark:       $indigo-4 !default;
-$secondary-dark:     $gray-4 !default;
-$tertiary-dark:      $pink-4 !default;
-$success-dark:       $green-4 !default;
-$info-dark:          $cyan-4 !default;
-$warning-dark:       $yellow-4 !default;
-$danger-dark:        $red-4 !default;
-$light-dark:         $gray-0 !default;
-$dark-dark:          $gray-8 !default;
-
-$primary-dark-hover:        $indigo-3 !default;
-$secondary-dark-hover:      $gray-3 !default;
-$tertiary-dark-hover:       $pink-3 !default;
-$success-dark-hover:        $green-3 !default;
-$info-dark-hover:           $cyan-3 !default;
-$warning-dark-hover:        $yellow-3 !default;
-$danger-dark-hover:         $red-3 !default;
-$light-dark-hover:          $gray-1 !default;
-$dark-dark-hover:           $gray-7 !default;
-
-$primary-dark-active:       $indigo-2 !default;
-$secondary-dark-active:     $gray-2 !default;
-$tertiary-dark-active:      $pink-2 !default;
-$success-dark-active:       $green-2 !default;
-$info-dark-active:          $cyan-2 !default;
-$warning-dark-active:       $yellow-2 !default;
-$danger-dark-active:        $red-2 !default;
-$light-dark-active:         $gray-2 !default;
-$dark-dark-active:          $gray-6 !default;
-
-$primary-subtle-dark:            $indigo-12 !default;
-$secondary-subtle-dark:          $gray-8 !default;
-$tertiary-subtle-dark:           $pink-12 !default;
-$success-subtle-dark:            $green-12 !default;
-$info-subtle-dark:               $cyan-12 !default;
-$warning-subtle-dark:            $yellow-12 !default;
-$danger-subtle-dark:             $red-12 !default;
-$light-subtle-dark:              $gray-7 !default;
-$dark-subtle-dark:               $gray-10 !default;
-
-$primary-subtle-dark-hover:       $indigo-11 !default;
-$secondary-subtle-dark-hover:     $gray-7 !default;
-$tertiary-subtle-dark-hover:      $pink-11 !default;
-$success-subtle-dark-hover:       $green-11 !default;
-$info-subtle-dark-hover:          $cyan-11 !default;
-$warning-subtle-dark-hover:       $yellow-11 !default;
-$danger-subtle-dark-hover:        $red-11 !default;
-$light-subtle-dark-hover:         $gray-6 !default;
-$dark-subtle-dark-hover:          $gray-9 !default;
-
-$primary-subtle-dark-active:       $indigo-10 !default;
-$secondary-subtle-dark-active:     $gray-6 !default;
-$tertiary-subtle-dark-active:      $pink-10 !default;
-$success-subtle-dark-active:       $green-10 !default;
-$info-subtle-dark-active:          $cyan-10 !default;
-$warning-subtle-dark-active:       $yellow-10 !default;
-$danger-subtle-dark-active:        $red-10 !default;
-$light-subtle-dark-active:         $gray-5 !default;
-$dark-subtle-dark-active:          $gray-8 !default;
-
-$primary-emphasis-dark:                 $indigo-3 !default;
-$secondary-emphasis-dark:               $gray-3 !default;
-$tertiary-emphasis-dark:                $pink-3 !default;
-$success-emphasis-dark:                 $green-3 !default;
-$info-emphasis-dark:                    $cyan-3 !default;
-$warning-emphasis-dark:                 $yellow-3 !default;
-$danger-emphasis-dark:                  $red-3 !default;
-$light-emphasis-dark:                   $gray-0 !default;
-$dark-emphasis-dark:                    $gray-3 !default;
-
-$primary-emphasis-dark-hover:           $indigo-1 !default;
-$secondary-emphasis-dark-hover:         $gray-1 !default;
-$tertiary-emphasis-dark-hover:          $pink-1 !default;
-$success-emphasis-dark-hover:           $green-1 !default;
-$info-emphasis-dark-hover:              $cyan-1 !default;
-$warning-emphasis-dark-hover:           $yellow-1 !default;
-$danger-emphasis-dark-hover:            $red-1 !default;
-$light-emphasis-dark-hover:             $gray-1 !default;
-$dark-emphasis-dark-hover:              $gray-1 !default;
-
-$primary-border-subtle-dark:        $indigo-10 !default;
-$secondary-border-subtle-dark:      $gray-6 !default;
-$tertiary-border-subtle-dark:       $pink-10 !default;
-$success-border-subtle-dark:        $green-10 !default;
-$info-border-subtle-dark:           $cyan-10 !default;
-$warning-border-subtle-dark:        $yellow-10 !default;
-$danger-border-subtle-dark:         $red-10 !default;
-$light-border-subtle-dark:          $gray-6 !default;
-$dark-border-subtle-dark:           $gray-8 !default;
+$theme-dark-tint-amount:                20% !default;
+$theme-dark-hover-shade-amount:         20% !default;
+$theme-dark-hover-tint-amount:          20% !default;
+$theme-dark-active-shade-amount:        30% !default;
+$theme-dark-active-tint-amount:         30% !default;
+$theme-dark-subtle-shade-amount:        60% !default;
+$theme-dark-subtle-hover-shade-amount:  65% !default;
+$theme-dark-subtle-active-shade-amount: 60% !default;
+$theme-dark-emphasis-tint-amount:       40% !default;
+$theme-dark-emphasis-hover-tint-amount: 35% !default;
+$theme-dark-border-subtle-shade-amount: 60% !default;
 
 $body-bg-dark:                      $gray-10 !default;
 $body-color-dark:                   $gray-4 !default;
@@ -128,6 +49,6 @@ $form-switch-bg-image-dark:         url("data:image/svg+xml,<svg xmlns='http://w
 // Accordion
 //
 
-$accordion-button-icon-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary-emphasis-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
-$accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary-emphasis-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-icon-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{var(--#{$prefix}primary-emphasis)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{var(--#{$prefix}primary-emphasis)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 // scss-docs-end sass-dark-mode-vars
