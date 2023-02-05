@@ -242,5 +242,29 @@
     .form-switch .form-check-input:not(:checked):not(:focus) {
       --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image-dark)};
     }
+
+    .form-switch.form-switch-square .form-check-input:not(:checked):not(:focus) {
+      background-image: escape-svg($form-switch-square-bg-image-dark);
+    }
+
+    .form-check-input {
+      &:checked {
+        &[type="checkbox"] {
+          @if $enable-gradients {
+            --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-checked-bg-image-dark)}, var(--#{$prefix}gradient);
+          } @else {
+            --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-checked-bg-image-dark)};
+          }
+        }
+
+        &[type="radio"] {
+          @if $enable-gradients {
+            --#{$prefix}form-check-bg-image: #{escape-svg($form-check-radio-checked-bg-image-dark)}, var(--#{$prefix}gradient);
+          } @else {
+            --#{$prefix}form-check-bg-image: #{escape-svg($form-check-radio-checked-bg-image-dark)};
+          }
+        }
+      }
+    }
   }
 }

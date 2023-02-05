@@ -115,7 +115,7 @@
       --#{$prefix}dropdown-link-hover-bg: var(--#{$prefix}form-field-hover-bg);
       --#{$prefix}dropdown-link-active-color: var(--#{$prefix}form-field-color);
       --#{$prefix}dropdown-link-active-bg: var(--#{$prefix}form-field-hover-bg);
-      --#{$prefix}dropdown-link-active-hover-bg: #{$gray-3};
+      --#{$prefix}dropdown-link-active-hover-bg: var(--#{$prefix}form-field-hover-bg);
 
       width: 100%;
       max-height: 40vh;
@@ -332,22 +332,6 @@
     .form-floating {
       --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator-dark)};
       --#{$prefix}form-select-checkmark: #{escape-svg($form-select-checkmark-dark)};
-
-      .dropdown-menu {
-        --#{$prefix}dropdown-color: #{$form-field-color};
-        --#{$prefix}dropdown-bg: #{$form-field-bg};
-        --#{$prefix}dropdown-border-color: #{$dropdown-dark-border-color};
-        --#{$prefix}dropdown-box-shadow: #{$dropdown-dark-box-shadow};
-        --#{$prefix}dropdown-link-color: #{$dropdown-dark-link-color};
-        --#{$prefix}dropdown-link-hover-color: #{$dropdown-dark-link-hover-color};
-        --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
-        --#{$prefix}dropdown-link-hover-bg: #{$dropdown-dark-link-hover-bg};
-        --#{$prefix}dropdown-link-active-color: #{$dropdown-dark-link-active-color};
-        --#{$prefix}dropdown-link-active-bg: #{$gray-6};
-        --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
-        --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
-        --#{$prefix}dropdown-link-active-hover-bg: #{$gray-5};
-      }
     }
   }
 }
