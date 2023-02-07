@@ -49,7 +49,7 @@ keywords: layout, navbar
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
-        <button class="btn btn-outline-white" type="button">Search</button>
+        <button class="btn btn-warning" type="button">Search</button>
       </form>
     </div>
   </div>

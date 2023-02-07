@@ -4,7 +4,7 @@
 
     &:hover,
     &:focus {
-      color: var(--#{$prefix}#{$color}-emphasis) if($enable-important-utilities, !important, null);
+      color: var(--#{$prefix}#{$color}-hover) if($enable-important-utilities, !important, null);
     }
   }
 }

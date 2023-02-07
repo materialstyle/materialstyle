@@ -75,13 +75,13 @@ Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-borde
 
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
-<div class="form-floating" style="--bs-form-field-border-color: var(--bs-primary-emphasis); --bs-form-field-active-border-color: var(--bs-success-emphasis);">
+<div class="form-floating" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <input type="text" class="form-control" id="lastname"
          placeholder="lastname" autocomplete="off">
   <label for="lastname">Lastname</label>
 </div>
 ##split##
-<div class="form-floating form-floating-outlined" style="--bs-form-field-border-color: var(--bs-primary-emphasis); --bs-form-field-active-border-color: var(--bs-success-emphasis);">
+<div class="form-floating form-floating-outlined" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <input type="text" class="form-control" id="lastname-outline"
          placeholder="lastname" autocomplete="off">
   <label for="lastname-outline">Lastname</label>
@@ -165,7 +165,7 @@ Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-borde
     <label for="email-outline-spinner">Email</label>
   </div>
   <div class="prepend">
-    <div class="spinner-material text-blue">
+    <div class="spinner-material text-primary">
       <svg viewBox="25 25 50 50">
         <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
@@ -180,7 +180,7 @@ Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-borde
     <label for="password-spinner">Password</label>
   </div>
   <div class="append">
-    <div class="spinner-border text-blue"></div>
+    <div class="spinner-border text-tertiary"></div>
   </div>
 </div>
 ##split##
@@ -191,7 +191,7 @@ Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-borde
     <label for="password-outline-spinner">Password</label>
   </div>
   <div class="append">
-    <div class="spinner-grow text-blue"></div>
+    <div class="spinner-grow text-success"></div>
   </div>
 </div>
         

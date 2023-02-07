@@ -178,10 +178,10 @@
     --#{$prefix}btn-border-color: var(--#{$prefix}#{$state});
     --#{$prefix}btn-hover-color: var(--#{$prefix}#{$state}-emphasis);
     --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$state}-subtle);
-    --#{$prefix}btn-hover-border-color: var(--#{$prefix}#{$state}-hover);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}#{$state});
     --#{$prefix}btn-active-color: var(--#{$prefix}#{$state}-emphasis-hover);
     --#{$prefix}btn-active-bg: var(--#{$prefix}#{$state}-subtle-hover);
-    --#{$prefix}btn-active-border-color: var(--#{$prefix}#{$state}-active);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}#{$state});
     --#{$prefix}btn-disabled-color: var(--#{$prefix}#{$state});
     --#{$prefix}btn-disabled-bg: transparent;
     --#{$prefix}btn-disabled-border-color: var(--#{$prefix}#{$state});

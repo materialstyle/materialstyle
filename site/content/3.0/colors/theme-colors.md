@@ -9,6 +9,18 @@ toc: true
 keywords: colors, theme colors
 ---
 
+<div class="color-list mb-4">
+  <div class="theme-color-palette d-flex flex-wrap gap-2">
+    <div class="text-bg-primary">Primary</div>
+    <div class="text-bg-secondary">Secondary</div>
+    <div class="text-bg-tertiary">Tertiary</div>
+    <div class="text-bg-success">Success</div>
+    <div class="text-bg-info">Info</div>
+    <div class="text-bg-warning">Warning</div>
+    <div class="text-bg-danger">Danger</div>
+  </div>
+</div>
+
 ## Primary
 The primary color is used to derive roles for key components across the UI, such as the hyperlinks, prominent buttons, focus and active states.
 {{< theme-color-palette theme="primary" >}}
@@ -25,17 +37,17 @@ The tertiary key color is used to derive the roles of contrasting accents that c
 Theme color used for positive or successful actions and information.
 {{< theme-color-palette theme="success" >}}
 
-## Danger
-Theme color used for errors and dangerous actions.
-{{< theme-color-palette theme="danger" >}}
+## Info
+Theme color used for neutral and informative content.
+{{< theme-color-palette theme="info" >}}
 
 ## Warning
 Theme color used for non-destructive warning messages.
 {{< theme-color-palette theme="warning" >}}
 
-## Info
-Theme color used for neutral and informative content.
-{{< theme-color-palette theme="info" >}}
+## Danger
+Theme color used for errors and dangerous actions.
+{{< theme-color-palette theme="danger" >}}
 
 ## Light
 Additional theme option for less contrasting colors.

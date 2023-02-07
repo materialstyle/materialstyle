@@ -425,7 +425,7 @@ $theme-border-subtle-tint-amount:   60% !default;
 
 // scss-docs-start theme-color-variables
 $primary:       #0d6efd !default;
-$secondary:     #6c757d !default;
+$secondary:     #71767b !default;
 $tertiary:      #d63384 !default;
 $success:       #198754 !default;
 $info:          #0dcaf0 !default;
@@ -530,7 +530,7 @@ $muted-color:               $gray-6 !default;
 
 $link-color:                              var(--#{$prefix}primary) !default;
 $link-decoration:                         underline !default;
-$link-hover-color:                        var(--#{$prefix}primary-emphasis) !default;
+$link-hover-color:                        var(--#{$prefix}primary-hover) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -922,7 +922,7 @@ $form-field-color:                      var(--#{$prefix}emphasis-color) !default
 $form-field-bg:                         var(--#{$prefix}surface-bg) !default;
 $form-field-hover-bg:                   var(--#{$prefix}surface-bg-hover) !default;
 $form-field-border-color:               var(--#{$prefix}body-color) !default;
-$form-field-active-border-color:        var(--#{$prefix}primary-emphasis) !default;
+$form-field-active-border-color:        var(--#{$prefix}primary-hover) !default;
 
 // scss-docs-start form-text-variables
 $form-text-margin-top:                  .25rem !default;
@@ -1163,7 +1163,7 @@ $form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://w
 // scss-docs-start form-validation-states
 $form-validation-states: (
   "valid": (
-    "color": var(--#{$prefix}success-emphasis),
+    "color": var(--#{$prefix}success-hover),
     "icon": $form-feedback-icon-valid,
     "tooltip-color": #fff,
     "tooltip-bg-color": var(--#{$prefix}success),
@@ -1171,7 +1171,7 @@ $form-validation-states: (
     "border-color": var(--#{$prefix}success),
   ),
   "invalid": (
-    "color": var(--#{$prefix}danger-emphasis),
+    "color": var(--#{$prefix}danger-hover),
     "icon": $form-feedback-icon-invalid,
     "tooltip-color": #fff,
     "tooltip-bg-color": var(--#{$prefix}danger),
@@ -1227,7 +1227,7 @@ $nav-link-disabled-color:           var(--#{$prefix}surface-color) !default;
 $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
 $nav-tabs-border-width:             var(--#{$prefix}border-width) !default;
 $nav-tabs-link-color:               var(--#{$prefix}body-color) !default;
-$nav-tabs-link-active-color:        var(--#{$prefix}primary-emphasis) !default;
+$nav-tabs-link-active-color:        var(--#{$prefix}primary-active) !default;
 $nav-tabs-link-hover-bg:            rgba(var(--#{$prefix}primary-rgb), .15) !default;
 
 $nav-pills-border-radius:           $border-radius !default;
@@ -1420,7 +1420,7 @@ $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              var(--#{$prefix}primary-subtle) !default;
-$accordion-button-active-color:           var(--#{$prefix}primary-emphasis) !default;
+$accordion-button-active-color:           var(--#{$prefix}primary-active) !default;
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       none !default;

@@ -92,7 +92,7 @@ Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-borde
 
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
-<div class="form-floating" style="--bs-form-field-border-color: var(--bs-primary-emphasis); --bs-form-field-active-border-color: var(--bs-success-emphasis);">
+<div class="form-floating" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <select class="form-select">
     <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
@@ -103,7 +103,7 @@ Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-borde
   <label>Select One</label>
 </div>
 ##split##
-<div class="form-floating form-floating-outlined" style="--bs-form-field-border-color: var(--bs-primary-emphasis); --bs-form-field-active-border-color: var(--bs-success-emphasis);">
+<div class="form-floating form-floating-outlined" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <select class="form-select">
     <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
@@ -249,7 +249,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="prepend">
-    <div class="spinner-material text-blue">
+    <div class="spinner-material text-primary">
       <svg viewBox="25 25 50 50">
         <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
@@ -269,7 +269,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="append">
-    <div class="spinner-border text-blue"></div>
+    <div class="spinner-border text-tertiary"></div>
   </div>
 </div>
 ##split##
@@ -285,7 +285,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="append">
-    <div class="spinner-grow text-primary"></div>
+    <div class="spinner-grow text-success"></div>
   </div>
 </div>
         
@@ -392,7 +392,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     <label>Select Multiple</label>
   </div>
   <div class="prepend">
-    <div class="spinner-material text-blue">
+    <div class="spinner-material text-primary">
       <svg viewBox="25 25 50 50">
         <circle cx="50" cy="50" r="20" fill="none" />
       </svg>

@@ -87,7 +87,7 @@ document.querySelector('#show-snackbar-5000').addEventListener('click', function
 <!-- Snackbar -->
 <div class="snackbar" id="snackbar-close">
   Close this snackbar
-  <button type="button" class="btn btn-outline-warning border-0 ms-2" data-bs-dismiss="snackbar">
+  <button type="button" class="btn btn-warning border-0 ms-2" data-bs-dismiss="snackbar">
     Dismiss
   </button>
 </div>
