@@ -153,4 +153,4 @@ Import Material Style SCSS in your SCSS file
 <br>
     
 ## Next steps
-For the next steps, check our <a class="link-theme text-decoration-none" href="/materialstyle/3.0/getting-started/starter-templates/">Starter Templates</a> to start laying out your site’s content and components.
+Check our <a class="link-theme text-decoration-none" href="/materialstyle/3.0/getting-started/starter-templates/">Starter Templates</a> to start laying out your site’s content and components.
