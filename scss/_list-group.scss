@@ -200,13 +200,13 @@
     &.list-group-item-action {
       &:hover,
       &:focus {
-        --#{$prefix}list-group-action-hover-color: var(--#{$prefix}-emphasis-hover);
-        --#{$prefix}list-group-action-hover-bg: var(--#{$prefix}#{$state}-border-subtle);
+        --#{$prefix}list-group-action-hover-color: var(--#{$prefix}#{$state}-emphasis-hover);
+        --#{$prefix}list-group-action-hover-bg: var(--#{$prefix}#{$state}-subtle-hover);
       }
 
       &:active {
-        --#{$prefix}list-group-active-color: var(--#{$prefix}-emphasis-active);
-        --#{$prefix}list-group-active-bg: var(--#{$prefix}#{$state}-subtle-active);
+        --#{$prefix}list-group-action-active-color: var(--#{$prefix}#{$state}-emphasis-hover);
+        --#{$prefix}list-group-action-active-bg: var(--#{$prefix}#{$state}-subtle-active);
         --#{$prefix}list-group-active-border-color: var(--#{$prefix}#{$state}-border-subtle);
       }
     }
