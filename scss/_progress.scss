@@ -39,7 +39,7 @@
 }
 
 @keyframes m-rainbow {
-  from {
+  0% {
     left: 50%;
     z-index: 100;
     width: 0;
@@ -49,7 +49,7 @@
     z-index: 10;
     width: 100%;
   }
-  to {
+  100% {
     left: 0;
     width: 100%;
   }

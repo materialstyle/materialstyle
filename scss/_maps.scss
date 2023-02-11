@@ -76,13 +76,13 @@ $utilities-subtle: (
   "light-subtle": var(--#{$prefix}light-subtle),
   "dark-subtle": var(--#{$prefix}dark-subtle)
 ) !default;
-// $utilities-subtle-colors: map-loop($utilities-subtle, rgba-css-var, "$key", "bg") !default;
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
 $utilities-border: map-merge(
   $utilities-colors,
   (
+    "black": to-rgb($black),
     "white": to-rgb($white)
   )
 ) !default;
@@ -100,6 +100,8 @@ $utilities-border-subtle: (
   "dark-subtle": var(--#{$prefix}dark-border-subtle)
 ) !default;
 // scss-docs-end utilities-border-colors
+
+$utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "link-underline") !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 

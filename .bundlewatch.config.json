@@ -10,19 +10,19 @@
     },
     {
       "path": "./dist/css/materialstyle-reboot.css",
-      "maxSize": "3.1 kB"
+      "maxSize": "4.55 kB"
     },
     {
       "path": "./dist/css/materialstyle-reboot.min.css",
-      "maxSize": "2.95 kB"
+      "maxSize": "4.35 kB"
     },
     {
       "path": "./dist/css/materialstyle-utilities.css",
-      "maxSize": "11.05 kB"
+      "maxSize": "12.8 kB"
     },
     {
       "path": "./dist/css/materialstyle-utilities.min.css",
-      "maxSize": "10.25 kB"
+      "maxSize": "12 kB"
     },
     {
       "path": "./dist/css/materialstyle.css",
