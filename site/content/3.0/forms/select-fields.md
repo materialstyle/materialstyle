@@ -82,7 +82,7 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-border-color``` css variables to personalize it according to your brand's style.
 
 <div class="d-flex align-items-center bg-danger bg-opacity-25 my-4 rounded-3 overflow-hidden">
-  <div class="d-flex align-items-center align-self-stretch text-bg-danger p-3 fs-4">
+  <div class="d-flex align-items-center align-self-stretch text-bg-danger bg-opacity-100 p-3 fs-4">
     <i class="bi bi-info-circle-fill"></i>
   </div>
   <div class="flex-grow-1 p-3 text-body">
