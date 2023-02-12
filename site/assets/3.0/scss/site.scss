@@ -60,9 +60,12 @@ html {
   --bs-nav-tabs-link-hover-bg: rgba(var(--m-primary-rgb), .15);
 }
 
-#content,
-.page-description {
+#content {
   color: var(--m-primary);
+}
+
+.page-description {
+  color: rgba(var(--m-primary-rgb), .8);
 }
 
 .callout.primary {

@@ -9,6 +9,12 @@ toc: true
 keywords: colors, theme colors
 ---
 
+<p class="fs-4 ms-0 mb-4 page-description">
+Material Style comes designed with a baseline theme that is adaptive to color modes and can be used as-is, straight out of the box or customized as per your need. 
+</p>
+
+Theme colors are adaptive to color modes, meaning they change according to the color mode (for example, dark and light mode). Try switching to dark/light mode from the top navigation bar.
+
 <div class="color-list mb-4">
   <div class="theme-color-palette d-flex flex-wrap gap-2">
     <div class="text-bg-primary">Primary</div>
@@ -21,40 +27,51 @@ keywords: colors, theme colors
   </div>
 </div>
 
+Each theme color has additional color variants:
+- Hover and active colors for the theme color.
+- A subtle variant of the theme color.
+- Hover and active colors for the subtle variant.
+- Emphasis variant of the theme color for high contrast.
+- Hover color for the emphasis variant.
+- Text on theme: Color of text on the theme-colored background.
+- Subtle border color.
+
+We use these color variants across our components, which allows us to change the theme colors using CSS variables.
+
+<br>
+
 ## Primary
 The primary color is used to derive roles for key components across the UI, such as the hyperlinks, prominent buttons, focus and active states.
 {{< theme-color-palette theme="primary" >}}
 
 ## Secondary
-The secondary key color is used for less prominent components in the UI.
+The secondary color is used for less prominent components in the UI.
 {{< theme-color-palette theme="secondary" >}}
 
 ## Tertiary
-The tertiary key color is used to derive the roles of contrasting accents that can be used to balance primary and secondary colors or bring heightened attention to an element. 
+The tertiary color is used to derive the roles of contrasting accents that can be used to balance primary and secondary colors or bring heightened attention to an element. 
 {{< theme-color-palette theme="tertiary" >}}
 
 ## Success
-Theme color used for positive or successful actions and information.
+The success color is used for positive or successful actions and information.
 {{< theme-color-palette theme="success" >}}
 
 ## Info
-Theme color used for neutral and informative content.
+The info color is used for neutral and informative content.
 {{< theme-color-palette theme="info" >}}
 
 ## Warning
-Theme color used for non-destructive warning messages.
+The warning color is used for non-destructive warning messages.
 {{< theme-color-palette theme="warning" >}}
 
 ## Danger
-Theme color used for errors and dangerous actions.
+The danger color is used for errors and dangerous actions.
 {{< theme-color-palette theme="danger" >}}
 
 ## Light
-Additional theme option for less contrasting colors.
 {{< theme-color-palette theme="light" >}}
 
 ## Dark
-Additional theme option for higher contrasting colors.
 {{< theme-color-palette theme="dark" >}}
 
 <hr class="mb-5">
