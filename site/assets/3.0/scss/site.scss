@@ -71,8 +71,8 @@ html {
 .callout.primary {
   background-color: rgba(var(--m-primary-rgb), .15);
   .callout-icon {
-    background-color: var(--m-primary);
     color: var(--m-text-on-primary);
+    background-color: var(--m-primary);
   }
 }
 

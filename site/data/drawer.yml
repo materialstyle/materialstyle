@@ -10,8 +10,9 @@
 - title: Colors
   pages:
   - title: Theme Colors
+  - title: Color modes
   - title: Background color
-  - title: Text Color
+  - title: Text color
   - title: Colored Links
 
 - title: Utilities
