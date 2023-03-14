@@ -37,7 +37,7 @@
   --m-violet-12: #3a2578;
 }
 
-[data-bs-theme="light"] {
+:root, [data-bs-theme="light"] {
   --m-primary: var(--m-violet-9);
   --m-primary-rgb: 95, 61, 196;
   --m-primary-subtle: var(--m-violet-2);
@@ -194,6 +194,14 @@ footer {
 
 #site-home-top-nav {
   background-color: var(--m-violet-9);
+
+  .navbar-toggler {
+    --bs-navbar-color: rgba(255, 255, 255, 0.65);
+
+    .navbar-toggler-icon {
+      --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{rgba(255, 255, 255, .75)}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+  }
 
   .btn-outline-light {
     --mdc-ripple-color: rgb(var(--bs-white-rgb));

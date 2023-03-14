@@ -928,7 +928,7 @@ $navbar-hover-color:          rgba(var(--#{$prefix}body-bg-rgb), .8) !default;
 $navbar-active-color:         rgba(var(--#{$prefix}body-bg-rgb), 1) !default;
 $navbar-disabled-color:       rgba(var(--#{$prefix}body-bg-rgb), .3) !default;
 $navbar-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{rgba($body-bg, .75)}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-toggler-border-color: rgba(var(--#{$prefix}body-bg-rgb), .15) !default;
+$navbar-toggler-border-color: transparent !default;
 $navbar-brand-color:          $navbar-active-color !default;
 $navbar-brand-hover-color:    $navbar-active-color !default;
 // scss-docs-end navbar-variables
