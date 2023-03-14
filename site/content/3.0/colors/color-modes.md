@@ -83,69 +83,6 @@ our dark mode for two reasons. First, it's better to have a single place to rese
 Second, some Sass variables had to be overridden for background images embedded in our CSS for 
 accordions, form components, and more.
 
-## Nesting color modes
-Use ```data-bs-theme``` on a nested element to change the color mode for a group of elements 
-or components. In the example below, we have an outer dark mode with a nested light mode. 
-You'll notice components naturally adapt their appearance, but you may need to add some utilities 
-along the way to utilize the styles specific to each color mode.
-
-For example, despite using ```data-bs-theme="dark"``` on a random ```<div>```, 
-the ```<div>``` has no background-color as it's set on the ```<body>```. As such, if you want 
-the ```color``` and ```background-color``` to adapt, you'll need to add ```.text-body``` 
-and ```.bg-body```.
-
-{{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
-
-<div data-bs-theme="dark" class="p-3 text-body bg-body">
-  <label class="text-tertiary">Text in tertiary color</label>
-
-  <p>This should be shown in a <strong>dark</strong> theme at all times.</p>
-
-  <div class="progress mb-4">
-    <div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-
-  <div class="dropdown mb-4">
-    <button class="btn btn-tertiary dropdown-toggle" type="button" id="dropdownMenuButtonDark2" data-bs-toggle="dropdown" aria-expanded="false">
-      Dark dropdown
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark2">
-      <li><a class="dropdown-item active" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div>
-
-  <div data-bs-theme="light" class="p-3 text-body bg-body rounded">
-    <label class="text-tertiary">Text in tertiary color</label>
-
-    <p>This should be shown in a <strong>light</strong> theme at all times.</p>
-
-    <div class="progress mb-4">
-      <div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-
-    <div class="dropdown">
-      <button class="btn btn-tertiary dropdown-toggle" type="button" id="dropdownMenuButtonLight2" data-bs-toggle="dropdown" aria-expanded="false">
-        Light dropdown
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight2">
-        <li><a class="dropdown-item active" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-{{< /example >}}
-
 ## Usage
 
 ### Enable dark mode
