@@ -6,12 +6,12 @@ toc: true
 keywords: layout, navbar
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Navigation bars offer a persistent and convenient way to switch between primary destinations in an app.
 </p>
 
 {{< example codeId="code1" >}}
-<nav class="navbar navbar-expand-xl navbar-dark bg-purple">
+<nav class="navbar navbar-expand-xl bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Logo" style="width:30px; height:30px;">
@@ -49,7 +49,7 @@ keywords: layout, navbar
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
-        <button class="btn btn-outline-white" type="button">Search</button>
+        <button class="btn btn-warning" type="button">Search</button>
       </form>
     </div>
   </div>
@@ -75,7 +75,7 @@ keywords: layout, navbar
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark fixed-top">
+<nav class="navbar navbar-expand-sm bg-primary fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
@@ -125,7 +125,7 @@ keywords: layout, navbar
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark fixed-bottom">
+<nav class="navbar navbar-expand-sm bg-primary fixed-bottom">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
@@ -175,7 +175,7 @@ keywords: layout, navbar
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark fixed-top auto-hide">
+<nav class="navbar navbar-expand-sm bg-primary fixed-top auto-hide">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand

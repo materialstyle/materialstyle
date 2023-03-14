@@ -6,7 +6,7 @@ toc: true
 keywords: scrollspy
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
 Automatically update navigation or list group components based on scroll position to 
 indicate which link is currently active in the viewport.
 </p>
@@ -37,7 +37,7 @@ and watch the dropdown items be highlighted as well.
 
 {{< example codeId="code1">}}
 
-<nav id="navbar-example" class="navbar bg-light px-3 mb-3">
+<nav id="navbar-example" class="navbar border px-3 mb-3">
   <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -57,7 +57,7 @@ and watch the dropdown items be highlighted as well.
     </li>
   </ul>
 </nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0" style="height:200px;overflow:auto;">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="border scrollspy-example p-3 rounded-2" tabindex="0" style="height:200px;overflow:auto;">
   <h4 id="scrollspyHeading1">First heading</h4>
   <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the 
   page, the appropriate navigation link is highlighted. It's repeated throughout the component 

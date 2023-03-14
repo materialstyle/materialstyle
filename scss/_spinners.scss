@@ -98,17 +98,17 @@
 @keyframes color {
   100%,
   0% {
-    stroke: $red;
+    stroke: var(--#{$prefix}spinner-color-1);
   }
   40% {
-    stroke: $yellow;
+    stroke: var(--#{$prefix}spinner-color-2);
   }
   66% {
-    stroke: $green;
+    stroke: var(--#{$prefix}spinner-color-3);
   }
   80%,
   90% {
-    stroke: $blue;
+    stroke: var(--#{$prefix}spinner-color-4);
   }
 }
 
@@ -121,6 +121,10 @@
   --#{$prefix}spinner-dash-animation-speed: #{$spinner-material-dash-animation-speed};
   --#{$prefix}spinner-color-animation-speed: #{$spinner-material-color-animation-speed};
   --#{$prefix}spinner-animation-name: spinner-border;
+  --#{$prefix}spinner-color-1: var(--#{$prefix}danger);
+  --#{$prefix}spinner-color-2: var(--#{$prefix}warning);
+  --#{$prefix}spinner-color-3: var(--#{$prefix}success);
+  --#{$prefix}spinner-color-4: var(--#{$prefix}primary);
 
   position: relative;
 

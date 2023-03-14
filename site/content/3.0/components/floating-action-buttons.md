@@ -6,13 +6,13 @@ toc: true
 keywords: buttons, floating action buttons
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   The FAB represents the most important action on a screen. It puts key actions within reach.
 </p>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab btn-purple">
+<button type="button" class="btn btn-fab btn-primary">
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -23,11 +23,11 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap gap-3">}}
 
-<button type="button" class="btn btn-fab btn-purple elevated-1">
+<button type="button" class="btn btn-fab btn-tertiary elevated-1">
   <i class="bi bi-heart-fill"></i>
 </button>
 ##split##
-<button type="button" class="btn btn-fab btn-purple elevated-10">
+<button type="button" class="btn btn-fab btn-tertiary elevated-10">
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -36,7 +36,7 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 ## Disabled
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab btn-purple" disabled>
+<button type="button" class="btn btn-fab btn-primary" disabled>
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -54,7 +54,7 @@ Add ```.elevated-[1 to 10]``` to create Elevated buttons.
 
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab btn-purple">
+<button type="button" class="btn btn-fab btn-primary">
   <i class="bi bi-heart-fill"></i>
   <span class="ripple-surface"></span>
 </button>
@@ -75,7 +75,7 @@ rippleSurface.map(s => {
 ## Leaf FAB
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab leaf-fab btn-purple">
+<button type="button" class="btn btn-fab leaf-fab btn-danger">
   <i class="bi bi-heart-fill"></i>
 </button>
 
@@ -84,7 +84,7 @@ rippleSurface.map(s => {
 ## Leaf FAB inverted
 {{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab leaf-fab-inverted btn-purple">
+<button type="button" class="btn btn-fab leaf-fab-inverted btn-danger">
   <i class="bi bi-heart-fill"></i>
 </button>
         
@@ -93,7 +93,7 @@ rippleSurface.map(s => {
 ## Mini FAB
 {{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-fab mini-fab btn-purple">
+<button type="button" class="btn btn-fab mini-fab btn-success">
   <i class="bi bi-heart-fill"></i>
 </button>
         
@@ -102,7 +102,7 @@ rippleSurface.map(s => {
 ## Extended Fab / Rounded Button
 {{< example codeId="code8" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-purple btn-lg rounded-pill">
+<button type="button" class="btn btn-success btn-lg rounded-pill">
   <i class="bi bi-heart-fill"></i> Like
 </button>
         

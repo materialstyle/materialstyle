@@ -183,47 +183,72 @@
     }
   }
 
-  function populateColors() {
-    const colorContainer = document.getElementById('defaultColorOptions')
-    if (colorContainer) {
-      const bgToColorMap = {
-        'red,danger': '#dc3545,white',
-        pink: '#d63384,white',
-        purple: '#6f42c1,white',
-        indigo: '#6610f2,white',
-        'blue,primary': '#0d6efd,white',
-        'cyan,info': '#0dcaf0,black',
-        teal: '#20c997,black',
-        'green,success': '#198754,white',
-        'yellow,warning': '#ffc107,black',
-        orange: '#fd7e14,black',
-        'gray,secondary': '#6c757d,white',
-        light: '#f8f9fa,black',
-        dark: '#212529,white',
-        white: '#fff,black',
-        black: '#000,white'
-      }
+  // function rgbToHex(rgb) {
+  //   // Choose correct separator
+  //   const sep = rgb.includes(',') ? ',' : ' '
+  //   // Turn "rgb(r,g,b)" into [r,g,b]
+  //   rgb = rgb.slice(4).split(')')[0].split(sep)
+  //
+  //   let r = Number(rgb[0]).toString(16)
+  //   let g = Number(rgb[1]).toString(16)
+  //   let b = Number(rgb[2]).toString(16)
+  //
+  //   if (r.length === 1) {
+  //     r = `0${r}`
+  //   }
+  //
+  //   if (g.length === 1) {
+  //     g = `0${g}`
+  //   }
+  //
+  //   if (b.length === 1) {
+  //     b = `0${b}`
+  //   }
+  //
+  //   return `#${r}${g}${b}`
+  // }
 
-      for (const [key, value] of Object.entries(bgToColorMap)) {
-        const colorClasses = key.split(',')
-        const colors = value.split(',')
-
-        const colorName = document.createElement('span')
-        colorName.innerHTML = colorClasses.join(' | ')
-
-        const color = document.createElement('span')
-        color.className = 'user-select-all'
-        color.innerHTML = colors[0]
-
-        const colorBox = document.createElement('div')
-        colorBox.className = `color-box bg-${colorClasses[0]} text-${colors[1]}`
-        colorBox.append(colorName)
-        colorBox.append(color)
-
-        colorContainer.append(colorBox)
-      }
-    }
-  }
+  // function populateColors() {
+  //   const colorContainer = document.getElementById('defaultColorOptions')
+  //   if (colorContainer) {
+  //     const bgToColorMap = {
+  //       'red,danger': '#dc3545,white',
+  //       pink: '#d63384,white',
+  //       purple: '#6f42c1,white',
+  //       indigo: '#6610f2,white',
+  //       'blue,primary': '#0d6efd,white',
+  //       'cyan,info': '#0dcaf0,black',
+  //       teal: '#20c997,black',
+  //       'green,success': '#198754,white',
+  //       'yellow,warning': '#ffc107,black',
+  //       orange: '#fd7e14,black',
+  //       'gray,secondary': '#6c757d,white',
+  //       light: '#f8f9fa,black',
+  //       dark: '#212529,white',
+  //       white: '#fff,black',
+  //       black: '#000,white'
+  //     }
+  //
+  //     for (const [key, value] of Object.entries(bgToColorMap)) {
+  //       const colorClasses = key.split(',')
+  //       const colors = value.split(',')
+  //
+  //       const colorName = document.createElement('span')
+  //       colorName.innerHTML = colorClasses.join(' | ')
+  //
+  //       const color = document.createElement('span')
+  //       color.className = 'user-select-all'
+  //       color.innerHTML = colors[0]
+  //
+  //       const colorBox = document.createElement('div')
+  //       colorBox.className = `color-box bg-${colorClasses[0]} text-${colors[1]}`
+  //       colorBox.append(colorName)
+  //       colorBox.append(color)
+  //
+  //       colorContainer.append(colorBox)
+  //     }
+  //   }
+  // }
 
   document.addEventListener('DOMContentLoaded', () => {
     anchors.add('h2:not(.accordion-header):not(.badge-example-headings h2), h3:not(.badge-example-headings h3), h4:not(.badge-example-headings h4):not(.card h4)')
@@ -248,7 +273,7 @@
 
     initComponents()
 
-    populateColors()
+    // populateColors()
     populateShadows()
 
     /**
@@ -324,15 +349,27 @@
     /**
      * Docsearch
      */
-    docsearch({
-      container: '#docsearch',
-      appId: '3EHDQBJAE1',
-      indexName: 'materialstyle',
-      apiKey: '045965c449c981a98498474ab5ff774a',
-      searchParameters: {
-        facetFilters: ['version:3.0']
-      }
-    })
+    if (document.querySelector('#docsearch')) {
+      docsearch({
+        container: '#docsearch',
+        appId: '3EHDQBJAE1',
+        indexName: 'materialstyle',
+        apiKey: '045965c449c981a98498474ab5ff774a',
+        searchParameters: {
+          facetFilters: ['version:3.0']
+        }
+      })
+    }
+
+    /**
+     * Print color hex
+     */
+    // for (const element of document.querySelectorAll('.color-palette')) {
+    //   const swatch = element.querySelector('div')
+    //   const color = window.getComputedStyle(swatch).backgroundColor
+    //   element.querySelector('.color-hex').innerHTML = rgbToHex(color)
+    //   element.querySelector('.color-rgb').innerHTML = color
+    // }
   })
 
   $(() => {

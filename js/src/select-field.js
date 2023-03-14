@@ -88,8 +88,16 @@ class SelectField extends BaseComponent {
     this._isSearchable = Boolean(this._formFloating.className.includes(CLASS_NAME_SEARCHABLE))
     this._multiSelectEnabled = Boolean(this._formFloating.className.includes(CLASS_NAME_MULTI_SELECT))
 
-    this._formFloating.style.setProperty('--bs-form-field-border-color', getBaseColor(this._formFloating))
-    this._formFloating.style.setProperty('--bs-form-field-active-border-color', getPrimaryColor(this._formFloating))
+    const baseColor = getBaseColor(this._formFloating)
+    const primaryColor = getPrimaryColor(this._formFloating)
+
+    if (baseColor) {
+      this._formFloating.style.setProperty('--bs-form-field-border-color', baseColor)
+    }
+
+    if (primaryColor) {
+      this._formFloating.style.setProperty('--bs-form-field-active-border-color', primaryColor)
+    }
 
     this._label = this._formFloating.querySelector('label')
     this._inputGroup = this._formFloating.closest('.input-group')

@@ -17,7 +17,7 @@ keywords: tooltips, popovers
   Popover Link
 </a>
 ##split##
-<button type="button" class="btn btn-purple" data-bs-toggle="popover"
+<button type="button" class="btn btn-primary" data-bs-toggle="popover"
         title="Popover Header" data-bs-content="Some content inside the Popover">
   Popover Button
 </button>
@@ -27,25 +27,25 @@ keywords: tooltips, popovers
 ## Placement
 {{< example codeId="code2" class="d-flex justify-content-evenly align-items-center flex-wrap gap-1">}}
 
-<button type="button" class="btn btn-purple m-2" data-bs-toggle="popover"
+<button type="button" class="btn btn-primary m-2" data-bs-toggle="popover"
         data-bs-placement="top" title="Popover Header"
         data-bs-content="Some content inside the Popover">
   Top
 </button>
 ##split##
-<button type="button" class="btn btn-purple m-2" data-bs-toggle="popover"
+<button type="button" class="btn btn-primary m-2" data-bs-toggle="popover"
         data-bs-placement="right" title="Popover Header"
         data-bs-content="Some content inside the Popover">
   Right
 </button>
 ##split##
-<button type="button" class="btn btn-purple m-2" data-bs-toggle="popover"
+<button type="button" class="btn btn-primary m-2" data-bs-toggle="popover"
         data-bs-placement="bottom" title="Popover Header"
         data-bs-content="Some content inside the Popover">
   Bottom
 </button>
 ##split##
-<button type="button" class="btn btn-purple m-2" data-bs-toggle="popover"
+<button type="button" class="btn btn-primary m-2" data-bs-toggle="popover"
         data-bs-placement="left" title="Popover Header"
         data-bs-content="Some content inside the Popover">
   Left

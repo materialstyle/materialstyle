@@ -41,7 +41,7 @@
         <div class="toast-header">
           <span class="d-block bg-primary rounded me-2" style="width: 20px; height: 20px;"></span>
           <strong class="me-auto">Bootstrap</strong>
-          <small class="text-muted">2 seconds ago</small>
+          <small class="text-body-secondary">2 seconds ago</small>
           <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
@@ -52,17 +52,17 @@
 
     <script src="../../../dist/js/materialstyle.bundle.js"></script>
     <script>
-      /* global bootstrap: false */
+      /* global materialstyle: false */
 
       window.addEventListener('load', () => {
-        document.querySelectorAll('.toast').forEach(toastEl => new bootstrap.Toast(toastEl))
+        document.querySelectorAll('.toast').forEach(toastEl => new materialstyle.Toast(toastEl))
 
         document.getElementById('btnShowToast').addEventListener('click', () => {
-          document.querySelectorAll('.toast').forEach(toastEl => bootstrap.Toast.getInstance(toastEl).show())
+          document.querySelectorAll('.toast').forEach(toastEl => materialstyle.Toast.getInstance(toastEl).show())
         })
 
         document.getElementById('btnHideToast').addEventListener('click', () => {
-          document.querySelectorAll('.toast').forEach(toastEl => bootstrap.Toast.getInstance(toastEl).hide())
+          document.querySelectorAll('.toast').forEach(toastEl => materialstyle.Toast.getInstance(toastEl).hide())
         })
       })
     </script>

@@ -5,7 +5,7 @@ group: components
 toc: true
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
 A Modal appears in front of app content to provide critical information or ask for a decision. 
 Modals remain on screen until confirmed, dismissed, or a required action has been taken.
 </p>
@@ -38,7 +38,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-pink rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#myModal">
+<button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#myModal">
   Open modal
 </button>
 ##split##
@@ -69,7 +69,7 @@ Tooltips and popovers can be placed within modals as needed. When modals are clo
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-pink rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#myModalWithForms">
+<button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#myModalWithForms">
   Open modal
 </button>
 ##split##
@@ -202,7 +202,7 @@ When backdrop is set to static, the modal will not close when clicking outside o
 
 {{< example codeId="code3" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-pink rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#staticBackdropModal">
+<button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#staticBackdropModal">
   Open static backdrop modal
 </button>
 ##split##
@@ -233,7 +233,7 @@ Add ```.modal-dialog-centered``` to ```.modal-dialog``` to vertically center the
 
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-pink rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#verticallyCenteredModal">
+<button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#verticallyCenteredModal">
   Open vertically centered modal
 </button>
 ##split##
@@ -264,7 +264,7 @@ When modals become too long for the user’s viewport or device, they scroll ind
 
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-pink rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#longContentModal">
+<button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#longContentModal">
   Open long content modal
 </button>
 ##split##
@@ -336,7 +336,7 @@ adding ```.modal-dialog-scrollable``` to ```.modal-dialog```.
 
 {{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-pink rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#bodyScrollModal">
+<button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#bodyScrollModal">
   Open body scrollable modal
 </button>
 ##split##

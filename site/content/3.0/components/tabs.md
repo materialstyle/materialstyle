@@ -5,7 +5,7 @@ group: components
 toc: true
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
 </p>
 
@@ -155,7 +155,7 @@ toc: true
 ## Color options
 {{< example codeId="code6" >}}
 
-<ul class="nav nav-tabs nav-justified primary-pink base-purple" role="tablist">
+<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple1">Apple</button>
   </li>
@@ -179,7 +179,7 @@ toc: true
 ## Tabs split to multiple rows when there are too many to fit on a row
 {{< example codeId="code7" >}}
 
-<ul class="nav nav-tabs nav-justified base-purple primary-pink" role="tablist">
+<ul class="nav nav-tabs nav-justified base-primary primary-danger" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple2">Apple</button>
   </li>
@@ -247,7 +247,7 @@ toc: true
 // Initialize tabs
 var tabs = [].slice.call(document.querySelectorAll('.nav-tabs'))
 tabs.map(function (tab) {
-  new materialstyle.Tab(tab)
+  new materialstyle.MaterialTab(tab)
 })
 ```
 
@@ -263,7 +263,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
   // Redraw Tabs
   var tabs = this.querySelectorAll('.nav-tabs');
   for (const [, value] of Object.entries(tabs)) {
-    var tabInstance = materialstyle.Tab.getOrCreateInstance(value)
+    var tabInstance = materialstyle.MaterialTab.getOrCreateInstance(value)
     tabInstance.redraw();
   }
 });
@@ -274,14 +274,14 @@ myModal.addEventListener('shown.bs.modal', function (event) {
 ### With jQuery
 ```javascript
 // Initialize tabs
-$('.nav-tabs').tab();
+$('.nav-tabs').materialtab();
 ```
 
 <br>
 
 ```javascript
 // Redraw Tab
-$('.nav-tabs').tab('redraw');
+$('.nav-tabs').materialtab('redraw');
 ```
 
 <br>
@@ -331,7 +331,7 @@ $('.nav-tabs').tab('redraw');
 
 {{< example codeId="code9" >}}
 
-<ul class="nav nav-tabs nav-justified primary-red base-indigo" role="tablist">
+<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple4">
       Apple

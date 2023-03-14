@@ -6,14 +6,14 @@ toc: true
 keywords: progress, progress bars
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Progress bars express an unspecified wait time or display the length of a process.
 </p>
 
 {{< example codeId="code1" >}}
 
 <div class="progress">
-  <div class="progress-bar bg-pink" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 {{< /example >}}
@@ -22,7 +22,7 @@ keywords: progress, progress bars
 {{< example codeId="code2" >}}
 
 <div class="progress">
-  <div class="progress-bar progress-bar-striped bg-pink" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 {{< /example >}}
@@ -31,7 +31,7 @@ keywords: progress, progress bars
 {{< example codeId="code3" >}}
 
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-pink" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 {{< /example >}}
@@ -40,7 +40,7 @@ keywords: progress, progress bars
 {{< example codeId="code4" >}}
 
 <div class="progress" style="height: 5px;">
-  <div class="progress-bar bg-pink" role="progressbar" style="width: 75%; height: 5px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-tertiary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 {{< /example >}}
@@ -48,9 +48,9 @@ keywords: progress, progress bars
 ## Multiple progress
 {{< example codeId="code5" >}}
 
-<div class="progress">
-  <div class="progress-bar bg-purple" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-pink" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" style="height: 5px;">
+  <div class="progress-bar bg-primary" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-tertiary" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
   <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
@@ -59,8 +59,8 @@ keywords: progress, progress bars
 ## Indeterminate
 {{< example codeId="code6" >}}
 
-<div class="progress">
-  <div class="progress-bar bg-pink progress-bar-indeterminate"></div>
+<div class="progress" style="height: 5px;">
+  <div class="progress-bar bg-tertiary progress-bar-indeterminate"></div>
 </div>
 
 {{< /example >}}
@@ -73,12 +73,12 @@ keywords: progress, progress bars
 
 {{< example codeId="code7" >}}
 
-<div class="progress">
+<div class="progress" style="height: 5px;">
   <div class="progress-bar progress-bar-rainbow">
-    <div class="color-bar bg-red"></div>
-    <div class="color-bar bg-green"></div>
-    <div class="color-bar bg-yellow"></div>
-    <div class="color-bar bg-blue"></div>
+    <div class="color-bar bg-tertiary"></div>
+    <div class="color-bar bg-success"></div>
+    <div class="color-bar bg-warning"></div>
+    <div class="color-bar bg-primary"></div>
   </div>
 </div>
 

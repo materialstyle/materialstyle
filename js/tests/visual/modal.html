@@ -201,7 +201,7 @@
 
     <script src="../../../dist/js/materialstyle.bundle.js"></script>
     <script>
-      /* global bootstrap: false */
+      /* global materialstyle: false */
 
       const ffBugTestResult = document.getElementById('ff-bug-test-result')
       const firefoxTestDone = false
@@ -213,9 +213,9 @@
         }
       }
 
-      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new bootstrap.Popover(popoverEl))
+      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new materialstyle.Popover(popoverEl))
 
-      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new bootstrap.Tooltip(tooltipEl))
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new materialstyle.Tooltip(tooltipEl))
 
       const tall = document.getElementById('tall')
       document.getElementById('tall-toggle').addEventListener('click', () => {
@@ -232,7 +232,7 @@
 
       ffBugInput.addEventListener('focus', handlerClickFfBugInput)
 
-      const modalFf = new bootstrap.Modal(firefoxModal)
+      const modalFf = new materialstyle.Modal(firefoxModal)
 
       document.getElementById('btnPreventModal').addEventListener('click', () => {
         const shownFirefoxModal = () => {

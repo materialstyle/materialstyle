@@ -1,0 +1,61 @@
+{{- $theme := .Get "theme" -}}
+
+<div class="color-list py-3 mb-4">
+  <div class="d-flex flex-wrap gap-2">
+    <div class="theme-color-palette mb-3">
+      <div class="bg-{{ $theme }}"></div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }}</span>
+      <code class="d-block px-2">--bs-{{ $theme }}</code>
+      <code class="d-block px-2">--bs-{{ $theme }}-rgb</code>
+    </div>
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-hover);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} hover</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-hover</code>
+    </div>
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-active);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} active</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-active</code>
+    </div>
+  </div>
+  <div class="d-flex flex-wrap gap-2">
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-subtle);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} subtle</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-subtle</code>
+    </div>
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-subtle-hover);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} subtle hover</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-subtle-hover</code>
+    </div>
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-subtle-active);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} subtle active</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-subtle-active</code>
+    </div>
+  </div>
+  <div class="d-flex flex-wrap gap-2">
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-emphasis);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} emphasis</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-emphasis</code>
+    </div>
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-emphasis-hover);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} emphasis hover</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-emphasis-hover</code>
+    </div>
+    <div class="theme-color-palette mb-3">
+      <div class="border" style="background-color: var(--bs-text-on-{{ $theme }});">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">Text on {{ $theme }}</span>
+      <code class="d-block px-2">--bs-text-on-{{ $theme }}</code>
+    </div>
+    <div class="theme-color-palette mb-3">
+      <div style="background-color: var(--bs-{{ $theme }}-border-subtle);">&nbsp;</div>
+      <span class="d-block p-2 text-capitalize" style="color: var(--bs-secondary-color);">{{ $theme }} Border subtle</span>
+      <code class="d-block px-2">--bs-{{ $theme }}-border-subtle</code>
+    </div>
+  </div>
+</div>

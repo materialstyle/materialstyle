@@ -10,8 +10,6 @@
   A Material Design UI Library based on Bootstrap.
 </p>
 
-[![](https://data.jsdelivr.com/v1/package/npm/@materialstyle/materialstyle/badge)](https://www.jsdelivr.com/package/npm/@materialstyle/materialstyle)
-
 ## Table of contents
 
 - [Components](#components)

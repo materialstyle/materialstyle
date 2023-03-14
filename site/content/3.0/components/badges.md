@@ -28,8 +28,8 @@ Badges scale to match the size of the immediate parent element by using relative
 
 {{< example codeId="code2" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-indigo">
-  Notifications <span class="badge text-bg-yellow">4</span>
+<button type="button" class="btn btn-primary">
+  Notifications <span class="badge text-bg-warning">4</span>
 </button>
 
 {{< /example >}}
@@ -40,7 +40,7 @@ Use utilities to modify a ```.badge``` and position it in the corner of a link o
 
 {{< example codeId="code4" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-teal position-relative">
+<button type="button" class="btn btn-success position-relative">
   Inbox
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     99+
@@ -55,7 +55,7 @@ for a more generic indicator.
 
 {{< example codeId="code5" class="d-flex justify-content-center align-items-center flex-wrap">}}
 
-<button type="button" class="btn btn-yellow position-relative">
+<button type="button" class="btn btn-warning position-relative">
   Profile
   <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
     <span class="visually-hidden">New alerts</span>
@@ -68,31 +68,21 @@ for a more generic indicator.
 
 {{< example codeId="code6" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<span class="badge text-bg-primary">Primary | Blue</span>
+<span class="badge text-bg-primary">Primary</span>
 ##split##
-<span class="badge text-bg-secondary">Secondary | Gray</span>
+<span class="badge text-bg-secondary">Secondary</span>
 ##split##
-<span class="badge text-bg-success">Success | Green</span>
+<span class="badge text-bg-success">Success</span>
 ##split##
-<span class="badge text-bg-info">Info | Cyan</span>
+<span class="badge text-bg-info">Info</span>
 ##split##
-<span class="badge text-bg-warning">Warning | Yellow</span>
+<span class="badge text-bg-warning">Warning</span>
 ##split##
-<span class="badge text-bg-danger">Danger | Red</span>
+<span class="badge text-bg-danger">Danger</span>
 ##split##
 <span class="badge text-bg-light">Light</span>
 ##split##
 <span class="badge text-bg-dark">Dark</span>
-##split##
-<span class="badge text-bg-indigo">Indigo</span>
-##split##
-<span class="badge text-bg-purple">Purple</span>
-##split##
-<span class="badge text-bg-pink">Pink</span>
-##split##
-<span class="badge text-bg-orange">Orange</span>
-##split##
-<span class="badge text-bg-teal">Teal</span>
 
 {{< /example >}}
 
@@ -103,30 +93,20 @@ with a larger ```border-radius```.
 
 {{< example codeId="code7" class="d-flex justify-content-center align-items-center flex-wrap gap-2" >}}
 
-<span class="badge rounded-pill text-bg-primary">Primary | Blue</span>
+<span class="badge rounded-pill text-bg-primary">Primary</span>
 ##split##
-<span class="badge rounded-pill text-bg-secondary">Secondary | Gray</span>
+<span class="badge rounded-pill text-bg-secondary">Secondary</span>
 ##split##
-<span class="badge rounded-pill text-bg-success">Success | Green</span>
+<span class="badge rounded-pill text-bg-success">Success</span>
 ##split##
-<span class="badge rounded-pill text-bg-info">Info | Cyan</span>
+<span class="badge rounded-pill text-bg-info">Info</span>
 ##split##
-<span class="badge rounded-pill text-bg-warning">Warning | Yellow</span>
+<span class="badge rounded-pill text-bg-warning">Warning</span>
 ##split##
-<span class="badge rounded-pill text-bg-danger">Danger | Red</span>
+<span class="badge rounded-pill text-bg-danger">Danger</span>
 ##split##
 <span class="badge rounded-pill text-bg-light">Light</span>
 ##split##
 <span class="badge rounded-pill text-bg-dark">Dark</span>
-##split##
-<span class="badge rounded-pill text-bg-indigo">Indigo</span>
-##split##
-<span class="badge rounded-pill text-bg-purple">Purple</span>
-##split##
-<span class="badge rounded-pill text-bg-pink">Pink</span>
-##split##
-<span class="badge rounded-pill text-bg-orange">Orange</span>
-##split##
-<span class="badge rounded-pill text-bg-teal">Teal</span>
 
 {{< /example >}}

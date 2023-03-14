@@ -156,29 +156,35 @@
 //
 
 // scss-docs-start btn-variant-loops
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @if $color == "light" {
-      @include button-variant(
-        $value,
-        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
-        $active-background: shade-color($value, $btn-active-bg-shade-amount)
-      );
-    } @else if $color == "dark" {
-      @include button-variant(
-        $value,
-        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
-        $active-background: tint-color($value, $btn-active-bg-tint-amount)
-      );
-    } @else {
-      @include button-variant($value);
-    }
+// Generate contextual modifier classes for colorizing the alert
+@each $state in map-keys($theme-colors) {
+  .btn-#{$state} {
+    --mdc-ripple-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-bg: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-hover-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$state}-hover);
+    --#{$prefix}btn-active-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$state}-active);
+    --#{$prefix}btn-disabled-color: var(--#{$prefix}text-on-#{$state});
+    --#{$prefix}btn-disabled-bg: var(--#{$prefix}#{$state});
   }
 }
 
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value);
+@each $state in map-keys($theme-colors) {
+  .btn-outline-#{$state} {
+    --mdc-ripple-color: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-color: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-border-color: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-hover-color: var(--#{$prefix}#{$state}-emphasis);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}#{$state}-subtle);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-active-color: var(--#{$prefix}#{$state}-emphasis-hover);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}#{$state}-subtle-hover);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-disabled-color: var(--#{$prefix}#{$state});
+    --#{$prefix}btn-disabled-bg: transparent;
+    --#{$prefix}btn-disabled-border-color: var(--#{$prefix}#{$state});
   }
 }
 // scss-docs-end btn-variant-loops
@@ -240,4 +246,12 @@
   --#{$prefix}btn-focus-box-shadow: none;
   --#{$prefix}gradient: none;
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+
+  .btn-check:checked + &,
+  :not(.btn-check) + &:active,
+  &:first-child:active,
+  &.active,
+  &.show {
+    border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-active-border-color);
+  }
 }

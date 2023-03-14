@@ -6,7 +6,7 @@ toc: true
 keywords: getting-started, layout, starter-template
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Be sure to have your pages set up with the latest design and development standards. 
   That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.
 </p>
@@ -54,8 +54,8 @@ On the rare occasion you need to override it, use something like the following:
 <br>
 
 For your convenience, we have created two starter templates:
-1. <a class="link-purple text-decoration-none" href="#template-with-sidebardrawer">With Sidebar/Drawer</a>
-2. <a class="link-purple text-decoration-none" href="#template-without-sidebardrawer">Without Sidebar/Drawer</a>
+1. <a class="link-theme text-decoration-none" href="#template-with-sidebardrawer">With Sidebar/Drawer</a>
+2. <a class="link-theme text-decoration-none" href="#template-without-sidebardrawer">Without Sidebar/Drawer</a>
 
 <br>
 
@@ -86,14 +86,14 @@ For your convenience, we have created two starter templates:
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
-      <button class="drawer-toggler me-2"
+      <button class="navbar-toggler me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawerAutoHide">
-        <span class="drawer-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
         <i class="bi bi-star-fill me-2"></i>Brand
@@ -105,14 +105,14 @@ For your convenience, we have created two starter templates:
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas offcanvas-start offcanvas-md offcanvas-light" tabindex="-1"
        id="drawerAutoHide">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -206,7 +206,7 @@ For your convenience, we have created two starter templates:
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="javascript:">

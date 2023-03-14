@@ -6,7 +6,7 @@ toc: true
 keywords: forms, select-field
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Selects allow users to select from a menu. It functions as a wrapper around the browser's native select element.
 </p>
 
@@ -78,11 +78,21 @@ Note that the ```<select>``` must come first so we can utilize a sibling selecto
 {{< /example >}}
 
 ## Color options
-Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
+
+Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-border-color``` css variables to personalize it according to your brand's style.
+
+<div class="d-flex align-items-center bg-danger bg-opacity-25 my-4 rounded-3 overflow-hidden">
+  <div class="d-flex align-items-center align-self-stretch text-bg-danger bg-opacity-100 p-3 fs-4">
+    <i class="bi bi-info-circle-fill"></i>
+  </div>
+  <div class="flex-grow-1 p-3 text-body">
+    Classes <b>.base-[color]</b> & <b>.primary-[color]</b> are depricated in v3.1.0
+  </div>
+</div>
 
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
-<div class="form-floating base-purple primary-pink">
+<div class="form-floating" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <select class="form-select">
     <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
@@ -93,7 +103,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
   <label>Select One</label>
 </div>
 ##split##
-<div class="form-floating form-floating-outlined base-purple primary-pink">
+<div class="form-floating form-floating-outlined" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <select class="form-select">
     <option value="" label="blank option"></option>
     <option value="1">Option 1</option>
@@ -239,7 +249,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="prepend">
-    <div class="spinner-material text-blue">
+    <div class="spinner-material text-primary">
       <svg viewBox="25 25 50 50">
         <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
@@ -259,7 +269,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="append">
-    <div class="spinner-border text-blue"></div>
+    <div class="spinner-border text-tertiary"></div>
   </div>
 </div>
 ##split##
@@ -275,7 +285,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
     <label>Select One</label>
   </div>
   <div class="append">
-    <div class="spinner-grow text-primary"></div>
+    <div class="spinner-grow text-success"></div>
   </div>
 </div>
         
@@ -382,7 +392,7 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
     <label>Select Multiple</label>
   </div>
   <div class="prepend">
-    <div class="spinner-material text-blue">
+    <div class="spinner-material text-primary">
       <svg viewBox="25 25 50 50">
         <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
@@ -403,85 +413,6 @@ Add class ```multi-select``` on ```.form-floating``` to enable multi select.
   <div class="append">
     <div class="spinner-grow text-primary"></div>
   </div>
-</div>
-
-{{< /example >}}
-
-## Dark Select
-{{< example codeId="code11" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
-
-<div class="form-floating form-floating-dark">
-  <select class="form-select">
-    <option value="" label="blank option"></option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-  </select>
-  <label>Select One</label>
-</div>
-##split##
-<div class="form-floating form-floating-outlined form-floating-dark">
-  <select class="form-select">
-    <option value="" label="blank option"></option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-  </select>
-  <label>Select One</label>
-</div>
-
-{{< /example >}}
-
-## Dark Multi Select
-{{< example codeId="code12" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
-
-<div class="form-floating form-floating-dark multi-select">
-  <select class="form-select" multiple>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-  </select>
-  <label>Select Multiple</label>
-</div>
-##split##
-<div class="form-floating form-floating-outlined form-floating-dark multi-select">
-  <select class="form-select" multiple>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-  </select>
-  <label>Select Multiple</label>
-</div>
-
-{{< /example >}}
-
-## Dark Select with custom color
-{{< example codeId="code13" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
-
-<div class="form-floating form-floating-dark base-cyan primary-yellow">
-  <select class="form-select">
-    <option value="" label="blank option"></option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-  </select>
-  <label>Select One</label>
-</div>
-##split##
-<div class="form-floating form-floating-outlined form-floating-dark base-cyan primary-yellow">
-  <select class="form-select">
-    <option value="" label="blank option"></option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-  </select>
-  <label>Select One</label>
 </div>
 
 {{< /example >}}

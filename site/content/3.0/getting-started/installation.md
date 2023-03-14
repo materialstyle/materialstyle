@@ -12,7 +12,7 @@ keywords: getting-started, installation
 
 ## CDN
 
-<ul class="nav nav-tabs primary-purple base-dark" id="cdn-tab" role="tablist">
+<ul class="nav nav-tabs" id="cdn-tab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="jsdelivr-tab" data-bs-toggle="tab" data-bs-target="#jsdelivr" type="button" role="tab" aria-controls="jsdelivr" aria-selected="true">
     jsDelivr
@@ -93,11 +93,11 @@ keywords: getting-started, installation
 ## npm
 
 <a target="_blank" href="https://github.com/materialstyle/materialstyle-examples" class="text-decoration-none text-dark">
-  <div class="d-flex align-items-center bg-purple bg-opacity-25 my-4 rounded-3 overflow-hidden">
-    <div class="d-flex align-items-center align-self-stretch bg-purple text-white p-3 fs-4">
+  <div class="d-flex align-items-center callout primary my-4 rounded-3 overflow-hidden">
+    <div class="d-flex align-items-center align-self-stretch callout-icon p-3 fs-4">
       <i class="bi bi-box-arrow-up-right"></i>
     </div>
-    <div class="flex-grow-1 p-3">
+    <div class="flex-grow-1 p-3 text-body">
       Head over to our <b>Material Style Examples</b> repository for examples on Webpack, Parcel & Vite.
     </div>
   </div>
@@ -145,7 +145,7 @@ Import Material Style SCSS in your SCSS file
 
 ## Download
 
-<a class="btn btn-purple btn-lg rounded-pill" 
+<a class="btn btn-tertiary btn-lg rounded-pill" 
    href="https://github.com/materialstyle/materialstyle/releases/download/v3.0.0/materialstyle-3.0.0-dist.zip" download>
   Download v3.0.0
 </a>
@@ -153,4 +153,4 @@ Import Material Style SCSS in your SCSS file
 <br>
     
 ## Next steps
-For the next steps, check our <a class="link-purple text-decoration-none" href="/materialstyle/3.0/getting-started/starter-templates/">Starter Templates</a> to start laying out your site’s content and components.
+Check our <a class="link-theme text-decoration-none" href="/materialstyle/3.0/getting-started/starter-templates/">Starter Templates</a> to start laying out your site’s content and components.

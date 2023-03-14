@@ -6,7 +6,7 @@ toc: true
 keywords: layout, drawer
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">
+<p class="fs-4 ms-0 mb-4 page-description">
   Drawers provide access to destinations and app functionality, such as switching accounts.
 </p>
 
@@ -43,16 +43,16 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
     
       <!-- Drawer toggler -->
-      <button class="drawer-toggler me-2"
+      <button class="navbar-toggler me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawer">
-        <span class="drawer-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
         <i class="bi bi-star-fill me-2"></i>Brand
@@ -63,13 +63,13 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas offcanvas-start offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -154,7 +154,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
@@ -163,24 +163,24 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
     </div>
     
     <!-- Drawer toggler -->
-    <button class="drawer-toggler ms-2"
+    <button class="navbar-toggler ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer">
-      <span class="drawer-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav>
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas offcanvas-end offcanvas-light" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -267,16 +267,16 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
     
       <!-- Drawer toggler -->
-      <button class="drawer-toggler d-md-none me-2"
+      <button class="navbar-toggler d-sm-none me-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#drawer">
-        <span class="drawer-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
         <i class="bi bi-star-fill me-2"></i>Brand
@@ -287,13 +287,13 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas-start offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">
@@ -378,7 +378,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-purple navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="javascript:">
@@ -387,24 +387,24 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
     </div>
     
     <!-- Drawer toggler -->
-    <button class="drawer-toggler d-md-none ms-2"
+    <button class="navbar-toggler d-sm-none ms-2"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#drawer">
-      <span class="drawer-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav>
 
 <!-- Sidebar / Drawer -->
 <aside class="offcanvas-end offcanvas-md offcanvas-light offcanvas-fixed" data-bs-scroll="true" tabindex="-1" id="drawer">
-  <div class="offcanvas-header bg-purple">
+  <div class="offcanvas-header bg-primary">
     <a class="offcanvas-title text-white" href="javascript:">
       <i class="bi bi-star-fill me-2"></i>Brand
     </a>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body bg-purple bg-opacity-10">
+  <div class="offcanvas-body bg-primary bg-opacity-10">
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" href="javascript:">

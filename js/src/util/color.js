@@ -20,11 +20,7 @@ const getColor = color => {
 
 const getBaseColor = element => {
   let base = element.className.match(/base-\S+/)
-  let baseColor = '#757575'
-
-  if (element.classList.contains('form-floating-dark')) {
-    baseColor = '#fff'
-  }
+  let baseColor
 
   if (base) {
     base = base[0].replace('base-', '')
@@ -36,11 +32,7 @@ const getBaseColor = element => {
 
 const getPrimaryColor = element => {
   let primary = element.className.match(/primary-\S+/)
-  let primaryColor = '#0d6efd'
-
-  if (element.classList.contains('form-floating-dark')) {
-    primaryColor = '#0dcaf0'
-  }
+  let primaryColor
 
   if (primary) {
     primary = primary[0].replace('primary-', '')

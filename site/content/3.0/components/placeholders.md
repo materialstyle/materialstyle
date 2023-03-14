@@ -5,7 +5,7 @@ group: components
 toc: true
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">Use loading placeholders for your components or pages to indicate something may still be loading.</p>
+<p class="fs-4 ms-0 mb-4 page-description">Use loading placeholders for your components or pages to indicate something may still be loading.</p>
 
 ## How it works
 Create placeholders with the ```.placeholder``` class and a grid column class (e.g., ```.col-6```) 
@@ -65,16 +65,6 @@ color or utility class.
 <span class="placeholder col-12 bg-light"></span>
 ##split##
 <span class="placeholder col-12 bg-dark"></span>
-##split##
-<span class="placeholder col-12 bg-indigo"></span>
-##split##
-<span class="placeholder col-12 bg-purple"></span>
-##split##
-<span class="placeholder col-12 bg-pink"></span>
-##split##
-<span class="placeholder col-12 bg-orange"></span>
-##split##
-<span class="placeholder col-12 bg-teal"></span>
 
 {{< /example >}}
 
@@ -116,7 +106,7 @@ In the example below, we take a typical card component and recreate it with plac
 
 {{< example codeId="code6" class="d-flex justify-content-evenly align-items-center flex-wrap gap-2">}}
 
-<div class="card bg-purple bg-opacity-10" style="width:400px">
+<div class="card bg-primary bg-opacity-10" style="width:400px">
   <div class="card-body">
     <h4 class="card-title text-purple">Unlimited Music</h4>
     <p class="card-text">
@@ -125,25 +115,25 @@ In the example below, we take a typical card component and recreate it with plac
     </p>
   </div>
   <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-    <button type="button" class="btn btn-outline-purple border-0">
+    <button type="button" class="btn btn-outline-primary border-0">
       Listen Now
     </button>
 
     <div>
-      <button type="button" class="btn btn-fab mini-fab btn-purple m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-primary m-1">
         <i class="bi bi-heart-fill"></i>
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-purple m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-primary m-1">
         <i class="bi bi-share-fill"></i>
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-purple m-1">
+      <button type="button" class="btn btn-fab mini-fab btn-primary m-1">
         <i class="bi bi-three-dots-vertical"></i>
       </button>
     </div>
   </div>
 </div>
 ##split##
-<div class="card bg-purple bg-opacity-10" style="width:400px">
+<div class="card bg-primary bg-opacity-10" style="width:400px">
   <div class="card-body">
     <h4 class="card-title text-purple placeholder-glow">
       <span class="placeholder col-6">&nbsp;</span>
@@ -154,15 +144,15 @@ In the example below, we take a typical card component and recreate it with plac
     </p>
   </div>
   <div class="d-flex justify-content-between align-items-center flex-wrap p-2">
-    <button type="button" class="btn btn-outline-purple border-0 placeholder disabled col-4 ms-2">
+    <button type="button" class="btn btn-outline-primary border-0 placeholder disabled col-4 ms-2">
     </button>
 
     <div>
-      <button type="button" class="btn btn-fab mini-fab btn-purple m-1 placeholder disabled">
+      <button type="button" class="btn btn-fab mini-fab btn-primary m-1 placeholder disabled">
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-purple m-1 placeholder disabled">
+      <button type="button" class="btn btn-fab mini-fab btn-primary m-1 placeholder disabled">
       </button>
-      <button type="button" class="btn btn-fab mini-fab btn-purple m-1 placeholder disabled">
+      <button type="button" class="btn btn-fab mini-fab btn-primary m-1 placeholder disabled">
       </button>
     </div>
   </div>

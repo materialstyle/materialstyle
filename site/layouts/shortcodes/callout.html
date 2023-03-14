@@ -2,33 +2,33 @@
 
 {{- if eq $type "javascript" -}}
 <a href="#javascript" class="text-decoration-none text-dark">
-  <div class="d-flex align-items-center bg-yellow bg-opacity-25 my-4 rounded-3 overflow-hidden">
-    <div class="d-flex align-items-center align-self-stretch bg-yellow text-red p-3 fs-4">
+  <div class="d-flex align-items-center bg-warning bg-opacity-25 my-4 rounded-3 overflow-hidden">
+    <div class="d-flex align-items-center align-self-stretch text-bg-warning bg-opacity-100 p-3 fs-4">
       <i class="bi bi-info-circle-fill"></i>
     </div>
-    <div class="flex-grow-1 p-3">
+    <div class="flex-grow-1 p-3 text-body">
       {{ .Inner | markdownify }}
     </div>
   </div>
 </a>
 {{- else if eq $type "javascript-ripple" -}}
 <a href="#javascript-for-ripple" class="text-decoration-none text-dark">
-  <div class="d-flex align-items-center bg-yellow bg-opacity-25 my-4 rounded-3 overflow-hidden">
-    <div class="d-flex align-items-center align-self-stretch bg-yellow text-red p-3 fs-4">
+  <div class="d-flex align-items-center bg-warning bg-opacity-25 my-4 rounded-3 overflow-hidden">
+    <div class="d-flex align-items-center align-self-stretch text-bg-warning bg-opacity-100 p-3 fs-4">
       <i class="bi bi-info-circle-fill"></i>
     </div>
-    <div class="flex-grow-1 p-3">
+    <div class="flex-grow-1 p-3 text-body">
       {{ .Inner | markdownify }}
     </div>
   </div>
 </a>
 {{- else -}}
 <a href="/materialstyle/3.0/utilities/ripple/" class="text-decoration-none text-dark">
-  <div class="d-flex align-items-center bg-teal bg-opacity-25 my-4 rounded-3 overflow-hidden">
-    <div class="d-flex align-items-center align-self-stretch bg-teal text-black p-3 fs-4">
+  <div class="d-flex align-items-center bg-success bg-opacity-25 my-4 rounded-3 overflow-hidden">
+    <div class="d-flex align-items-center align-self-stretch text-bg-success bg-opacity-100 p-3 fs-4">
       <i class="bi bi-box-arrow-up-right"></i>
     </div>
-    <div class="flex-grow-1 p-3">
+    <div class="flex-grow-1 p-3 text-body">
       {{ .Inner | markdownify }}
     </div>
   </div>

@@ -7,21 +7,21 @@
   // scss-docs-start navbar-css-vars
   --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
   --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
-  --#{$prefix}navbar-color: #{$navbar-light-color};
-  --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
-  --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
-  --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
+  --#{$prefix}navbar-color: #{$navbar-color};
+  --#{$prefix}navbar-hover-color: #{$navbar-hover-color};
+  --#{$prefix}navbar-disabled-color: #{$navbar-disabled-color};
+  --#{$prefix}navbar-active-color: #{$navbar-active-color};
   --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
   --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
   --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
-  --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
-  --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+  --#{$prefix}navbar-brand-color: #{$navbar-brand-color};
+  --#{$prefix}navbar-brand-hover-color: #{$navbar-brand-hover-color};
   --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
   --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
   --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
   --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
+  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-toggler-icon-bg)};
+  --#{$prefix}navbar-toggler-border-color: #{$navbar-toggler-border-color};
   --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
   --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
   --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
@@ -62,14 +62,6 @@
     > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
       @extend %container-flex-properties;
     }
-  }
-
-  .drawer-toggler {
-    color: $navbar-light-color;
-    border-color: $navbar-light-toggler-border-color;
-  }
-  .drawer-toggler-icon {
-    background-image: escape-svg($navbar-light-drawer-toggler-icon-bg);
   }
 }
 
@@ -116,9 +108,11 @@
   margin-bottom: 0;
   list-style: none;
 
-  .show > .nav-link,
-  .nav-link.active {
-    color: var(--#{$prefix}navbar-active-color);
+  .nav-link {
+    &.active,
+    &.show {
+      color: var(--#{$prefix}navbar-active-color);
+    }
   }
 
   .dropdown-menu {
@@ -170,12 +164,6 @@
   border: var(--#{$prefix}border-width) solid var(--#{$prefix}navbar-toggler-border-color); // remove default button style
   @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
   @include transition(var(--#{$prefix}navbar-toggler-transition));
-
-  &[aria-expanded="true"] {
-    .navbar-toggler-icon {
-      transform: rotate(180deg);
-    }
-  }
 
   &:hover {
     text-decoration: none;
@@ -279,31 +267,10 @@
 }
 // scss-docs-end navbar-expand-loop
 
-// Navbar themes
-//
-// Styles for switching between navbars with light or dark background.
-
-.navbar-light {
-  @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
-}
-
-.navbar-dark {
-  // scss-docs-start navbar-dark-css-vars
-  --#{$prefix}navbar-color: #{$navbar-dark-color};
-  --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
-  --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
-  --#{$prefix}navbar-active-color: #{$navbar-dark-active-color};
-  --#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
-  --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
-
-  .drawer-toggler {
-    color: $navbar-dark-color;
-    border-color: $navbar-dark-toggler-border-color;
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .navbar-toggler-icon {
+      --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
+    }
   }
-  .drawer-toggler-icon {
-    background-image: escape-svg($navbar-dark-drawer-toggler-icon-bg);
-  }
-  // scss-docs-end navbar-dark-css-vars
 }

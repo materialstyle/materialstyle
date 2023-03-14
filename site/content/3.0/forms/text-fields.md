@@ -9,7 +9,7 @@ toc: true
 keywords: forms, text-field
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">Text fields allow users to enter text into a UI.</p> 
+<p class="fs-4 ms-0 mb-4 page-description">Text fields allow users to enter text into a UI.</p> 
 
 They come in two types:
 - Filled text fields
@@ -61,17 +61,27 @@ Also note that the ```<input>``` must come first so we can utilize a sibling sel
 {{< /example >}}
 
 ## Color options
-Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize it according to your brand's style.
+
+Make use of ```--bs-form-field-border-color``` & ```--bs-form-field-active-border-color``` css variables to personalize it according to your brand's style.
+
+<div class="d-flex align-items-center bg-danger bg-opacity-25 my-4 rounded-3 overflow-hidden">
+  <div class="d-flex align-items-center align-self-stretch text-bg-danger bg-opacity-100 p-3 fs-4">
+    <i class="bi bi-info-circle-fill"></i>
+  </div>
+  <div class="flex-grow-1 p-3 text-body">
+    Classes <b>.base-[color]</b> & <b>.primary-[color]</b> are depricated in v3.1.0
+  </div>
+</div>
 
 {{< example codeId="code3" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 
-<div class="form-floating base-purple primary-pink">
+<div class="form-floating" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <input type="text" class="form-control" id="lastname"
          placeholder="lastname" autocomplete="off">
   <label for="lastname">Lastname</label>
 </div>
 ##split##
-<div class="form-floating form-floating-outlined base-purple primary-pink">
+<div class="form-floating form-floating-outlined" style="--bs-form-field-border-color: var(--bs-primary-hover); --bs-form-field-active-border-color: var(--bs-tertiary-hover);">
   <input type="text" class="form-control" id="lastname-outline"
          placeholder="lastname" autocomplete="off">
   <label for="lastname-outline">Lastname</label>
@@ -155,7 +165,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
     <label for="email-outline-spinner">Email</label>
   </div>
   <div class="prepend">
-    <div class="spinner-material text-blue">
+    <div class="spinner-material text-primary">
       <svg viewBox="25 25 50 50">
         <circle cx="50" cy="50" r="20" fill="none" />
       </svg>
@@ -170,7 +180,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
     <label for="password-spinner">Password</label>
   </div>
   <div class="append">
-    <div class="spinner-border text-blue"></div>
+    <div class="spinner-border text-tertiary"></div>
   </div>
 </div>
 ##split##
@@ -181,7 +191,7 @@ Make use of ```.base-[color]``` & ```.primary-[color]``` classes to personalize 
     <label for="password-outline-spinner">Password</label>
   </div>
   <div class="append">
-    <div class="spinner-grow text-blue"></div>
+    <div class="spinner-grow text-success"></div>
   </div>
 </div>
         
@@ -225,40 +235,6 @@ and preserve the correct margin and padding.
   <label for="email-read-only-outline-outline">Email</label>
 </div>
         
-{{< /example >}}
-
-## Dark Text Field
-{{< example codeId="code8" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
-
-<div class="form-floating form-floating-dark">
-  <input type="text" class="form-control" id="dark-text"
-         placeholder="dark-text" autocomplete="off">
-  <label for="dark-text">Dark</label>
-</div>
-##split##
-<div class="form-floating form-floating-outlined form-floating-dark">
-  <input type="text" class="form-control" id="dark-text-outlined"
-         placeholder="dark-text-outlined" autocomplete="off">
-  <label for="dark-text-outlined">Dark</label>
-</div>
-
-{{< /example >}}
-
-## Dark Text Field with custom color 
-{{< example codeId="code9" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bg-dark rounded-top">}}
-
-<div class="form-floating form-floating-dark base-cyan primary-yellow">
-  <input type="text" class="form-control" id="dark-text-custom"
-         placeholder="dark-text-custom" autocomplete="off">
-  <label for="dark-text-custom">Dark</label>
-</div>
-##split##
-<div class="form-floating form-floating-outlined form-floating-dark base-cyan primary-yellow">
-  <input type="text" class="form-control" id="dark-text-outlined-custom"
-         placeholder="dark-text-outlined-custom" autocomplete="off">
-  <label for="dark-text-outlined-custom">Dark</label>
-</div>
-
 {{< /example >}}
 
 ## Javascript

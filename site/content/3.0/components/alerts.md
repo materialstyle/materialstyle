@@ -5,33 +5,37 @@ group: components
 toc: true
 ---
 
-<p class="fs-4 ms-0 mb-4 text-secondary">Alerts provide contextual feedback messages for typical user actions.</p>
+<p class="fs-4 ms-0 mb-4 page-description">Alerts provide contextual feedback messages for typical user actions.</p>
 
 ## Color options
 {{< example codeId="code1" >}}
 
 <div class="alert alert-primary" role="alert">
-  Primary | Blue
+  Primary
 </div>
 ##split##
 <div class="alert alert-secondary" role="alert">
-  Secondary | Gray
+  Secondary
+</div>
+##split##
+<div class="alert alert-tertiary" role="alert">
+  Tertiary
 </div>
 ##split##
 <div class="alert alert-success" role="alert">
-  Success | Green
+  Success
 </div>
 ##split##
 <div class="alert alert-info" role="alert">
-  Info | Cyan
+  Info
 </div>
 ##split##
 <div class="alert alert-warning" role="alert">
-  Warning | Yellow
+  Warning
 </div>
 ##split##
 <div class="alert alert-danger" role="alert">
-  Danger | Red
+  Danger
 </div>
 ##split##
 <div class="alert alert-light" role="alert">
@@ -40,26 +44,6 @@ toc: true
 ##split##
 <div class="alert alert-dark" role="alert">
   Dark
-</div>
-##split##
-<div class="alert alert-indigo" role="alert">
-  Indigo
-</div>
-##split##
-<div class="alert alert-purple" role="alert">
-  Purple
-</div>
-##split##
-<div class="alert alert-pink" role="alert">
-  Pink
-</div>
-##split##
-<div class="alert alert-orange" role="alert">
-  Orange
-</div>
-##split##
-<div class="alert alert-teal" role="alert">
-  Teal
 </div>
 
 {{< /example >}}
@@ -90,7 +74,7 @@ toc: true
 ## Dismissible
 {{< example codeId="code4" >}}
 
-<div class="alert alert-pink alert-dismissible" role="alert">
+<div class="alert alert-success alert-dismissible" role="alert">
   Dismissible alert.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
@@ -100,7 +84,7 @@ toc: true
 ## Dismissible with fade effect
 {{< example codeId="code5" >}}
 
-<div class="alert alert-purple alert-dismissible fade show" role="alert">
+<div class="alert alert-info alert-dismissible fade show" role="alert">
   Dismissible alert with fade effect.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
