@@ -55,7 +55,7 @@
       /* global bootstrap: false */
 
       window.addEventListener('load', () => {
-        document.querySelectorAll('.toast').forEach(toastEl => new bootstrap.Toast(toastEl))
+        document.querySelectorAll('.toast').forEach(toastEl => new materialstyle.Toast(toastEl))
 
         document.getElementById('btnShowToast').addEventListener('click', () => {
           document.querySelectorAll('.toast').forEach(toastEl => bootstrap.Toast.getInstance(toastEl).show())

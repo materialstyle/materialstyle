@@ -97,29 +97,29 @@
           '  Tooltip on top in a shadow dom' +
           '</button>'
 
-        new bootstrap.Tooltip(shadowRoot.firstChild)
-        new bootstrap.Tooltip(shadowRoot.getElementById('secondShadowTooltip'), {
+        new materialstyle.Tooltip(shadowRoot.firstChild)
+        new materialstyle.Tooltip(shadowRoot.getElementById('secondShadowTooltip'), {
           container: shadowRoot
         })
       }
 
-      new bootstrap.Tooltip('#tooltipElement', {
+      new materialstyle.Tooltip('#tooltipElement', {
         container: '#customContainer'
       })
 
-      const targetTooltip = new bootstrap.Tooltip('#target', {
+      const targetTooltip = new materialstyle.Tooltip('#target', {
         placement: 'top',
         trigger: 'manual'
       })
       targetTooltip.show()
 
-      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new bootstrap.Tooltip(tooltipEl))
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new materialstyle.Tooltip(tooltipEl))
     </script>
 
     <script>
       /* global bootstrap: false */
 
-      new bootstrap.Tooltip('#wrapperTriggeredBySelector', {
+      new materialstyle.Tooltip('#wrapperTriggeredBySelector', {
         animation: false,
         selector: '.bs-dynamic-tooltip'
       })
