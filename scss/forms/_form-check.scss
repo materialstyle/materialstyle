@@ -124,26 +124,28 @@
   padding-left: $form-switch-padding-start;
 
   .form-check-input {
-    --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image)};
+    --#{$prefix}form-switch-bg-image: #{escape-svg($form-switch-bg-image)};
+    --#{$prefix}form-switch-focus-bg-image: #{escape-svg($form-switch-focus-bg-image)};
+    --#{$prefix}form-switch-checked-bg-image: #{escape-svg($form-switch-checked-bg-image)};
 
     width: $form-switch-width;
     margin-left: $form-switch-padding-start * -1;
-    background-image: var(--#{$prefix}form-switch-bg);
+    background-image: var(--#{$prefix}form-switch-bg-image);
     background-position: left center;
     @include border-radius($form-switch-border-radius);
     @include transition($form-switch-transition);
 
     &:focus {
-      --#{$prefix}form-switch-bg: #{escape-svg($form-switch-focus-bg-image)};
+      background-image: var(--#{$prefix}form-switch-focus-bg-image);
     }
 
     &:checked {
       background-position: $form-switch-checked-bg-position;
 
       @if $enable-gradients {
-        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$prefix}gradient);
+        background-image: var(--#{$prefix}form-switch-checked-bg-image), var(--#{$prefix}gradient);
       } @else {
-        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)};
+        background-image: var(--#{$prefix}form-switch-checked-bg-image);
       }
     }
   }
@@ -160,18 +162,22 @@
 
   &.form-switch-square {
     .form-check-input {
-      background-image: escape-svg($form-switch-square-bg-image);
+      --#{$prefix}form-switch-bg-image: #{escape-svg($form-switch-square-bg-image)};
+      --#{$prefix}form-switch-focus-bg-image: #{escape-svg($form-switch-square-focus-bg-image)};
+      --#{$prefix}form-switch-checked-bg-image: #{escape-svg($form-switch-square-checked-bg-image)};
+
+      background-image: var(--#{$prefix}form-switch-bg-image);
       @include border-radius(0);
 
       &:focus {
-        background-image: escape-svg($form-switch-square-focus-bg-image);
+        background-image: var(--#{$prefix}form-switch-focus-bg-image);
       }
 
       &:checked {
         @if $enable-gradients {
-          background-image: escape-svg($form-switch-square-checked-bg-image), var(--bs-gradient);
+          background-image: var(--#{$prefix}form-switch-checked-bg-image), var(--#{$prefix}gradient);
         } @else {
-          background-image: escape-svg($form-switch-square-checked-bg-image);
+          background-image: var(--#{$prefix}form-switch-checked-bg-image);
         }
       }
     }
@@ -192,21 +198,21 @@
         width: 1.25em;
         height: 1.25em;
         content: "";
-        background-color: #dfdfdf;
+        background-color: #999c9f;
         @include border-radius(50%);
         @include transition(left 90ms cubic-bezier(.4, 0, .2, 1), background-color 90ms cubic-bezier(.4, 0, .2, 1), border-color 90ms cubic-bezier(.4, 0, .2, 1));
       }
 
       &:focus {
         &::before {
-          background-color: $form-switch-focus-color;
+          background-color: $form-check-input-focus-border;
           box-shadow: 0 0 0 .3em $input-btn-focus-color;
         }
       }
 
       &:checked {
-        background-color: $form-switch-focus-color;
-        border-color: $form-switch-focus-color;
+        background-color: $form-check-input-focus-border;
+        border-color: $form-check-input-focus-border;
 
         &::before {
           left: .65em;
@@ -240,7 +246,7 @@
 @if $enable-dark-mode {
   @include color-mode(dark) {
     .form-switch .form-check-input:not(:checked):not(:focus) {
-      --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image-dark)};
+      --#{$prefix}form-switch-bg-image: #{escape-svg($form-switch-bg-image-dark)};
     }
 
     .form-switch.form-switch-square .form-check-input:not(:checked):not(:focus) {
