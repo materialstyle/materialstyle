@@ -24,6 +24,8 @@ Theme colors are adaptive to color modes, meaning they change according to the c
     <div class="text-bg-info">Info</div>
     <div class="text-bg-warning">Warning</div>
     <div class="text-bg-danger">Danger</div>
+    <div class="text-bg-light">Light</div>
+    <div class="text-bg-dark">Dark</div>
   </div>
 </div>
 
