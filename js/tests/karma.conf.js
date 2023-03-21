@@ -103,8 +103,8 @@ const config = {
 if (BROWSERSTACK) {
   config.hostname = ip.address()
   config.browserStack = {
-    username: ENV.BROWSER_STACK_USERNAME,
-    accessKey: ENV.BROWSER_STACK_ACCESS_KEY,
+    username: ENV.BROWSERSTACK_USERNAME,
+    accessKey: ENV.BROWSERSTACK_ACCESS_KEY,
     build: `materialstyle-${ENV.GITHUB_SHA ? `${ENV.GITHUB_SHA.slice(0, 7)}-` : ''}${new Date().toISOString()}`,
     project: 'materialstyle',
     retryLimit: 2
