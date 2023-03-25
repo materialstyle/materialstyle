@@ -31,7 +31,7 @@ your-project/
 
 In your `custom.scss`, you'll import Material Style's source Sass files. You have two options: include all of Material Style, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
 
-1. Include all of Material Style
+### Include all of Material Style
 ```scss
 // Custom.scss
 
@@ -43,7 +43,7 @@ In your `custom.scss`, you'll import Material Style's source Sass files. You hav
 ```
 <br>
 
-2. Include parts of Material Style
+### Include parts of Material Style
 ```scss
 // Custom.scss
 
