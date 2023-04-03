@@ -36,7 +36,7 @@ Should you modify your `$grid-breakpoints`, your changes will apply to all the l
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
-For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}).
+<br>
 
 ## Creating your own
 
