@@ -7,13 +7,21 @@
     - title: Starter Templates
     - title: Browsers and Devices
 
+- title: Customize
+  pages:
+    - title: Sass
+    - title: CSS variables
+    - title: Options
+    - title: Components
+
 - title: Colors
   pages:
-  - title: Theme Colors
-  - title: Color modes
-  - title: Background color
-  - title: Text color
-  - title: Colored Links
+    - title: Theme Colors
+    - title: Color modes
+    - title: Theming
+    - title: Background color
+    - title: Text color
+    - title: Colored Links
 
 - title: Utilities
   pages:

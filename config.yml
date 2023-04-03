@@ -1,6 +1,9 @@
-baseURL: 'http://materialstyle.github.io/materialstyle'
 languageCode: 'en'
 title: 'Material Style'
+baseURL: 'http://materialstyle.github.io/materialstyle'
+
+security:
+  enableInlineShortcodes: true
 
 markup:
   goldmark:

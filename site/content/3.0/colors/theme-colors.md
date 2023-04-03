@@ -78,7 +78,9 @@ The danger color is used for errors and dangerous actions.
 
 <hr class="mb-5">
 
-## Body
+## More colors
+
+### Body
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
     <div class="theme-color-palette">
@@ -94,7 +96,7 @@ The danger color is used for errors and dangerous actions.
   </div>
 </div>
 
-## Surface
+### Surface
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
     <div class="theme-color-palette">
@@ -115,7 +117,7 @@ The danger color is used for errors and dangerous actions.
   </div>
 </div>
 
-## Emphasis
+### Emphasis
 For higher contrast text. Not applicable for backgrounds.
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
@@ -127,7 +129,7 @@ For higher contrast text. Not applicable for backgrounds.
   </div>
 </div>
 
-## Muted
+### Muted
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
     <div class="theme-color-palette">
@@ -138,7 +140,7 @@ For higher contrast text. Not applicable for backgrounds.
   </div>
 </div>
 
-## Border
+### Border
 For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an `rgba()` value.
 <div class="color-list py-3 mb-4">
   <div class="d-flex flex-wrap gap-3">
