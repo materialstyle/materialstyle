@@ -257,11 +257,17 @@ footer {
     background-color: rgba(95, 61, 196, .2);
   }
 
+  .nav {
+    --bs-nav-link-padding-x: .8rem;
+    --bs-nav-link-padding-y: .3rem;
+  }
+
   .nav-link.active {
     background-color: var(--m-violet-9);
   }
+
   .list-heading {
-    padding: .5rem 1rem;
+    padding: .3rem .8rem;
   }
 }
 
