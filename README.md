@@ -21,10 +21,10 @@
 - [Thank you](#thank-you)
 
 ## Components
-https://materialstyle.github.io/materialstyle/3.0/components/alert/
+https://materialstyle.github.io/materialstyle/3.1/components/alert/
 
 ## Getting Started
-https://materialstyle.github.io/materialstyle/3.0/getting-started/installation/
+https://materialstyle.github.io/materialstyle/3.1/getting-started/installation/
 
 ## Bugs and feature requests
 Have a bug or a feature request? Please read the [issue guidelines](https://github.com/materialstyle/materialstyle/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/materialstyle/materialstyle/issues/new).

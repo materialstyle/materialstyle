@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0): select_field.js
+ * Material Style (v3.1.0-alpha1): select_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -22,7 +22,7 @@ import {
  */
 
 const NAME = 'selectfield'
-const VERSION = '3.0.0'
+const VERSION = '3.1.0-alpha1'
 const DATA_KEY = 'bs.selectfield'
 const EVENT_KEY = `.${DATA_KEY}`
 

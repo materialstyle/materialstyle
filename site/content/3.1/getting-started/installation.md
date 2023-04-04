@@ -3,8 +3,8 @@ layout: docs
 title: Installation
 group: getting-started
 aliases:
-  - "/3.0/"
-  - "/3.0/getting-started/"
+  - "/3.1/"
+  - "/3.1/getting-started/"
   - "/getting-started/"
 toc: true
 keywords: getting-started, installation
@@ -33,7 +33,7 @@ keywords: getting-started, installation
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css" 
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
         integrity="sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5" 
         crossorigin="anonymous">
   ```
@@ -51,7 +51,7 @@ keywords: getting-started, installation
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js" 
+  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
           integrity="sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES" 
           crossorigin="anonymous"></script>
   ```
@@ -63,7 +63,7 @@ keywords: getting-started, installation
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css" 
+        href="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
         integrity="sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5" 
         crossorigin="anonymous">
   ```
@@ -81,7 +81,7 @@ keywords: getting-started, installation
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://unpkg.com/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js" 
+  <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
           integrity="sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES" 
           crossorigin="anonymous"></script>
   ```
@@ -146,11 +146,11 @@ Import Material Style SCSS in your SCSS file
 ## Download
 
 <a class="btn btn-tertiary btn-lg rounded-pill" 
-   href="https://github.com/materialstyle/materialstyle/releases/download/v3.0.0/materialstyle-3.0.0-dist.zip" download>
-  Download v3.0.0
+   href="https://github.com/materialstyle/materialstyle/releases/download/v3.1.0/materialstyle-3.1.0-dist.zip" download>
+  Download v3.1.0
 </a>
 
 <br>
     
 ## Next steps
-Check our <a class="link-theme text-decoration-none" href="/materialstyle/3.0/getting-started/starter-templates/">Starter Templates</a> to start laying out your site’s content and components.
+Check our <a class="link-theme text-decoration-none" href="/materialstyle/3.1/getting-started/starter-templates/">Starter Templates</a> to start laying out your site’s content and components.

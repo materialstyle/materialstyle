@@ -3,7 +3,7 @@ layout: docs
 title: Theme colors
 group: colors
 aliases:
-  - "/3.0/colors/"
+  - "/3.1/colors/"
   - "/colors/"
 toc: true
 keywords: colors, theme colors

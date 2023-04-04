@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.0.0): material-tab.js
+ * Material Style (v3.1.0-alpha1): material-tab.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ import {
  */
 
 const NAME = 'materialtab'
-const VERSION = '3.0.0'
+const VERSION = '3.1.0-alpha1'
 
 const ENTER_KEY_CODE = 13
 const SPACE_KEY_CODE = 32
