@@ -33,7 +33,7 @@ keywords: getting-started, installation
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
         integrity="sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5" 
         crossorigin="anonymous">
   ```
@@ -51,7 +51,7 @@ keywords: getting-started, installation
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
+  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js" 
           integrity="sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES" 
           crossorigin="anonymous"></script>
   ```
@@ -63,7 +63,7 @@ keywords: getting-started, installation
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
+        href="https://unpkg.com/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
         integrity="sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5" 
         crossorigin="anonymous">
   ```
@@ -81,7 +81,7 @@ keywords: getting-started, installation
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
+  <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js" 
           integrity="sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES" 
           crossorigin="anonymous"></script>
   ```
@@ -106,7 +106,7 @@ keywords: getting-started, installation
 Install
 
 ```console
-npm i @materialstyle/materialstyle
+npm i @materialstyle/materialstyle@3.1.0-alpha1
 ```
 
 Our Select Fields, Dropdowns, Popovers, and Tooltips depend on Popper, install it using:
