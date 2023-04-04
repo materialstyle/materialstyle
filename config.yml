@@ -27,7 +27,7 @@ publishDir: "_site"
 module:
   mounts:
   - source: dist
-    target: static/3.0/dist
+    target: static/3.1/dist
   - source: site/content
     target: content
   - source: site/static
@@ -53,5 +53,5 @@ params:
   description:          "A Material Design UI Library based on Bootstrap"
   authors:              "Neeraj Kumar Das"
 
-  current_version:      "3.0.0"
-  docs_version:         "3.0"
+  current_version:      "3.1.0-alpha1"
+  docs_version:         "3.1"

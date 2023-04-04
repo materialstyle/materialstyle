@@ -356,7 +356,7 @@
         indexName: 'materialstyle',
         apiKey: '045965c449c981a98498474ab5ff774a',
         searchParameters: {
-          facetFilters: ['version:3.0']
+          facetFilters: ['version:3.1']
         }
       })
     }

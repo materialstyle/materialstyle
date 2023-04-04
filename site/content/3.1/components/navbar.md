@@ -58,7 +58,7 @@ keywords: layout, navbar
 
 ## Fixed Top
 
-{{< example codeId="code2" show_preview="false" link="/materialstyle/3.0/demos/navbar-fixed-top" >}}
+{{< example codeId="code2" show_preview="false" link="/materialstyle/3.1/demos/navbar-fixed-top" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +68,7 @@ keywords: layout, navbar
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -100,7 +100,7 @@ keywords: layout, navbar
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>
@@ -108,7 +108,7 @@ keywords: layout, navbar
 
 ## Fixed Bottom
 
-{{< example codeId="code3" show_preview="false" link="/materialstyle/3.0/demos/navbar-fixed-bottom" >}}
+{{< example codeId="code3" show_preview="false" link="/materialstyle/3.1/demos/navbar-fixed-bottom" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -118,7 +118,7 @@ keywords: layout, navbar
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -150,7 +150,7 @@ keywords: layout, navbar
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>
@@ -158,7 +158,7 @@ keywords: layout, navbar
 
 ## Auto hide
 
-{{< example codeId="code4" show_preview="false" link="/materialstyle/3.0/demos/navbar-auto-hide" >}}
+{{< example codeId="code4" show_preview="false" link="/materialstyle/3.1/demos/navbar-auto-hide" >}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -168,7 +168,7 @@ keywords: layout, navbar
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -200,7 +200,7 @@ keywords: layout, navbar
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.0.0/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>

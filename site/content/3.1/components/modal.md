@@ -19,7 +19,7 @@ rendering. Whenever possible, place your modal HTML in a top-level position to a
 potential interference from other elements. You’ll likely run into issues when nesting 
 a ```.modal``` within another fixed element.
 - Once again, due to position: fixed, there are some caveats with using modals on mobile devices. 
-<a class="link-pink" href="/materialstyle/3.0/getting-started/browsers-and-devices/#modals-and-dropdowns-on-mobile">
+<a class="link-pink" href="/materialstyle/3.1/getting-started/browsers-and-devices/#modals-and-dropdowns-on-mobile">
 See our browser support docs</a> for details.
 - Due to how HTML5 defines its semantics, 
 <a class="link-pink" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">

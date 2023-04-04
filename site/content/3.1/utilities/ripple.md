@@ -3,7 +3,7 @@ layout: docs
 title: Ripple
 group: utilities
 aliases:
-  - "/3.0/utilities/"
+  - "/3.1/utilities/"
   - "/utilities/"
 toc: true
 keywords: utilities, ripple

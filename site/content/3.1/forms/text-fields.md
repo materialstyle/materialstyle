@@ -3,7 +3,7 @@ layout: docs
 title: Text Fields
 group: forms
 aliases:
-  - "/3.0/forms/"
+  - "/3.1/forms/"
   - "/forms/"
 toc: true
 keywords: forms, text-field
