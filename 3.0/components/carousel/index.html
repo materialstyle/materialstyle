@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Material Design UI Library based on Bootstrap">
+<meta name="author" content="Neeraj Kumar Das">
+<meta name="generator" content="Hugo 0.101.0">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="3.0">
+
+<meta name="theme-color" content="#6f42c1"/>
+
+<meta property="og:url" content="https://materialstyle.github.io"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Carousel · Material Style v3.0"/>
+<meta property="og:description" content="A Material Design UI Library based on Bootstrap"/>
+<meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg"/>
+
+<title>Carousel · Material Style v3.0</title>
+
+<link rel="canonical" href="http://materialstyle.github.io/materialstyle/3.0/components/carousel/">
+<link rel="icon" href="/materialstyle/assets/images/favicon.ico" type="image/x-icon">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+<link href="/materialstyle/3.0/dist/css/materialstyle.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<link rel="preconnect" href="https://3EHDQBJAE1-dsn.algolia.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+
+<link href="/materialstyle/3.0/assets/css/styles.css" rel="stylesheet">
+
+
+</head>
+<body>
+  <nav id="site-home-top-nav" class="navbar bg-purple navbar-dark fixed-top">
+  
+  <div class="d-flex justify-content-center align-items-center w-100 visually-hidden-focusable overflow-hidden" >
+    <a class="link-white p-2 m-1" href="#content">Skip to main content</a>
+    <a class="link-white d-none d-lg-inline-block p-2 m-1" href="#sidebar">Skip to sidebar</a>
+  </div>
+
+  <div class="container-fluid gap-3">
+    <div class="d-flex align-items-center">
+        <button class="drawer-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#site-offcanvas">
+          <span class="drawer-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand d-flex align-items-center py-0 me-0" href="/">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <div id="site-name" class="text-white ml-1">Material Style</div>
+        </a>
+    </div>
+
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
+      <li class="nav-item dropdown">
+        <a class="nav-link text-white dropdown-toggle rounded px-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          v3.0
+          <span class="ripple-surface"></span>
+        </a>
+        <ul class="dropdown-menu bg-light position-absolute" style="min-width: auto;">
+          <li><a class="dropdown-item" href="/materialstyle/3.1/">3.1</a></li>
+          <div class="dropdown-divider"></div>
+          <li><a class="dropdown-item" href="/docs/2.0/">2.0</a></li>
+          <div class="dropdown-divider"></div>
+          <li><a class="dropdown-item" href="/docs/1.2/">1.2</a></li>
+          <li><a class="dropdown-item" href="/docs/1.1/">1.1</a></li>
+          <li><a class="dropdown-item" href="/docs/1.0/">1.0</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white px-1 py-0 fs-4" href="https://github.com/materialstyle/materialstyle">
+          <i class="bi bi-github"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-1 py-0" id="docsearch">
+          <i class="bi bi-search text-white fs-4"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  
+    
+      
+        
+        
+      
+    
+  
+
+
+
+  <aside class="offcanvas-start offcanvas-lg offcanvas-light offcanvas-fixed"
+       data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
+  <div class="offcanvas-header bg-purple">
+    <a class="offcanvas-title d-flex align-items-center text-white py-0" href="/">
+      <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
+           alt="Material Style Logo" style="width:40px; height:40px;">Material Style
+    </a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            data-bs-target="#site-offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body bg-purple bg-opacity-10"><ul class="nav flex-column" id="sidebar">
+
+          <li class="nav-item list-heading"><b>Getting started</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/getting-started/installation/">Installation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/getting-started/starter-templates/">Starter Templates</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/getting-started/browsers-and-devices/">Browsers and Devices</a>
+            </li>
+          <div class="dropdown-divider"></div>
+        
+
+          <li class="nav-item list-heading"><b>Utilities</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/utilities/colors/">Colors</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/utilities/ripple/">Ripple</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/utilities/shadows/">Shadows</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/utilities/shapes/">Shapes</a>
+            </li>
+          <div class="dropdown-divider"></div>
+        
+
+          <li class="nav-item list-heading"><b>Forms</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/forms/text-fields/">Text Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/forms/select-fields/">Select Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/forms/checkbox-radio-switch/">Checkbox, Radio &amp; Switch</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/forms/input-groups/">Input Groups</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/forms/range/">Range</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/forms/validation/">Validation</a>
+            </li>
+          <div class="dropdown-divider"></div>
+        
+
+          <li class="nav-item list-heading"><b>Components</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/accordion/">Accordion</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/alerts/">Alerts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/badges/">Badges</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/breadcrumb/">Breadcrumb</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/buttons/">Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/cards/">Cards</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark  active"
+                 href="/materialstyle/3.0/components/carousel/">Carousel</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/close-button/">Close Button</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/collapse/">Collapse</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/dropdowns/">Dropdowns</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/floating-action-buttons/">Floating Action Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/lists/">Lists</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/modal/">Modal</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/navbar/">Navbar</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/pagination/">Pagination</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/placeholders/">Placeholders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/popovers/">Popovers</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/progress-bars/">Progress Bars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/scrollspy/">Scrollspy</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/snackbars/">Snackbars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/spinners/">Spinners</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/tables/">Tables</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/tabs/">Tabs</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/toasts/">Toasts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/components/tooltips/">Tooltips</a>
+            </li>
+          <div class="dropdown-divider"></div>
+        
+
+          <li class="nav-item list-heading"><b>Demos</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/demos/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/demos/drawer-end/">Drawer End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/demos/drawer-responsive/">Drawer Responsive</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/demos/drawer-responsive-end/">Drawer Responsive End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/demos/navbar-fixed-top/">Navbar Fixed Top</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/demos/navbar-fixed-bottom/">Navbar Fixed Bottom</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill text-dark "
+                 href="/materialstyle/3.0/demos/navbar-auto-hide/">Navbar Auto Hide</a>
+            </li>
+          <div class="dropdown-divider"></div>
+        
+
+          <li class="nav-item my-1">
+            <a class="nav-link rounded-pill text-dark "
+               href="/materialstyle/3.0/migration">Migration</a>
+          </li>
+    </ul>
+  </div>
+</aside>
+
+
+  <div class="offcanvas-pushed-content pt-4 bg-white" style="margin-top: var(--navbar-fixed-height);">
+    <div class="container" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-root-margin="0px 0px -80%">
+      
+  <div class="component-page">
+
+    <div class="component-showcase">
+      <h1 id="content">Carousel</h1>
+      <p class="fs-4 ms-0 mb-4 text-secondary">
+The carousel is a slideshow for cycling through a series of images, text, or custom markup.
+</p>
+<h2 id="how-it-works">How it works</h2>
+<ul>
+<li>
+<p>In browsers where the
+<a class="link-pink" href="https://www.w3.org/TR/page-visibility/">Page Visibility API</a>
+is supported, the carousel will avoid sliding when the webpage is not visible to the user
+(such as when the browser tab is inactive, the browser window is minimized, etc.).</p>
+</li>
+<li>
+<p>Please be aware that nested carousels are not supported, and carousels are generally not
+compliant with accessibility standards.</p>
+</li>
+<li>
+<p>Carousels don’t automatically normalize slide dimensions. As such, you may need to use
+additional utilities or custom styles to appropriately size content.</p>
+</li>
+<li>
+<p><strong>The <code>.active</code> class needs to be added to one of the slides</strong> otherwise the carousel
+will not be visible. Also be sure to set a unique <code>id</code> on the <code>.carousel</code> for
+optional controls, especially if you’re using multiple carousels on a single page.
+Control and indicator elements must have a <code>data-bs-target</code> attribute
+(or <code>href</code> for links) that matches the <code>id</code> of the <code>.carousel</code> element.</p>
+</li>
+</ul>
+<h2 id="slides-only">Slides only</h2>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#fff" dy=".3em">First slide</text></svg>
+
+    </div>
+    <div class="carousel-item active">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#fff" dy=".3em">Second slide</text></svg>
+      
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#fff" dy=".3em">Third slide</text></svg>
+      
+    </div>
+  </div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code1" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code1" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleSlidesOnly&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="with-controls">With controls</h2>
+<p>Adding in the previous and next controls. We recommend using <code>&lt;button&gt;</code> elements,
+but you can also use <code>&lt;a&gt;</code> elements with <code>role=&quot;button&quot;</code>.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#fff" dy=".3em">First slide</text></svg>
+      
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#fff" dy=".3em">Second slide</text></svg>
+      
+    </div>
+    <div class="carousel-item active">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#fff" dy=".3em">Third slide</text></svg>
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code2" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code2" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleControls&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleControls&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleControls&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="with-indicators">With indicators</h2>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#fff" dy=".3em">First slide</text></svg>
+      
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#fff" dy=".3em">Second slide</text></svg>
+      
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#fff" dy=".3em">Third slide</text></svg>
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code3" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code3" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleIndicators&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-indicators&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 1&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 3&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="with-captions">With captions</h2>
+<p>Add captions to your slides easily with the <code>.carousel-caption</code> element within any
+<code>.carousel-item</code>. They can be easily hidden on smaller viewports, as shown below,
+with optional display utilities. We hide them initially with <code>.d-none</code> and bring
+them back on medium-sized devices with <code>.d-md-block</code>.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" aria-current="true" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#fff" dy=".3em">First slide</text></svg>
+      
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#fff" dy=".3em">Second slide</text></svg>
+      
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#fff" dy=".3em">Third slide</text></svg>
+      
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code4" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code4" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleCaptions&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-indicators&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 2&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 3&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>First slide label<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some representative placeholder content for the first slide.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Second slide label<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some representative placeholder content for the second slide.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Third slide label<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some representative placeholder content for the third slide.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="crossfade">Crossfade</h2>
+<p>Add <code>.carousel-fade</code> to your carousel to animate slides with a fade transition instead of a slide.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#fff" dy=".3em">First slide</text></svg>
+      
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#fff" dy=".3em">Second slide</text></svg>
+      
+    </div>
+    <div class="carousel-item active">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#fff" dy=".3em">Third slide</text></svg>
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code5" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code5" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleFade&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide carousel-fade&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleFade&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleFade&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="individual-carousel-item-interval">Individual <code>.carousel-item</code> interval</h2>
+<p>Add <code>data-bs-interval</code> to a <code>.carousel-item</code> to change the amount of time to delay between automatically cycling to the next item.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#fff" dy=".3em">First slide</text></svg>
+      
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#fff" dy=".3em">Second slide</text></svg>
+      
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#fff" dy=".3em">Third slide</text></svg>
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code6" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code6" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleInterval&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span> <span class="na">data-bs-interval</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span> <span class="na">data-bs-interval</span><span class="o">=</span><span class="s">&#34;2000&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleInterval&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleInterval&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="disable-touch-swiping">Disable touch swiping</h2>
+<p>Carousels support swiping left/right on touchscreen devices to move between slides.
+This can be disabled using the <code>data-bs-touch</code> attribute. The example below also
+does not include the <code>data-bs-ride</code> attribute and has <code>data-bs-interval=&quot;false&quot;</code>
+so it doesn’t autoplay.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#fff" dy=".3em">First slide</text></svg>
+      
+    </div>
+    <div class="carousel-item active">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#fff" dy=".3em">Second slide</text></svg>
+      
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#fff" dy=".3em">Third slide</text></svg>
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code7" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code7" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleControlsNoTouching&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-touch</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">data-bs-interval</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleControlsNoTouching&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleControlsNoTouching&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="dark-variant">Dark variant</h2>
+<p>Add <code>.carousel-dark</code> to the <code>.carousel</code> for darker controls, indicators, and captions.
+Controls have been inverted from their default white fill with the <code>filter</code> CSS property.
+Captions and controls have additional Sass variables that customize the <code>color</code> and
+<code>background-color</code>.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" aria-current="true" class="active"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6610f2"/><text x="50%" y="50%" fill="#000" dy=".3em">First slide</text></svg>
+      
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#EB46B4"/><text x="50%" y="50%" fill="#000" dy=".3em">Second slide</text></svg>
+      
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <svg class="ms-placeholder-img ms-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"/><text x="50%" y="50%" fill="#000" dy=".3em">Third slide</text></svg>
+      
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code8" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </button>
+  </div>
+
+  <div class="collapse"  id="code8" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleDark&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel carousel-dark slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-indicators&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Slide 3&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>First slide label<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some representative placeholder content for the first slide.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Second slide label<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some representative placeholder content for the second slide.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>      
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Third slide label<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some representative placeholder content for the third slide.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+
+    </div>
+
+    <div class="component-map">
+      <div class="row">
+        <div class="col">
+          <div class="adspace bg-gray-100">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="sticky-md-top" style="top: 3rem;">
+      
+        <div class="row">
+          <div class="col">
+            <div class="ms-toc my-2">
+              <label class="text-secondary mb-2">CONTENTS</label>
+              <nav id="TableOfContents">
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item"><a class="nav-link" href="#how-it-works">How it works</a></li>
+    <li class="nav-item"><a class="nav-link" href="#slides-only">Slides only</a></li>
+    <li class="nav-item"><a class="nav-link" href="#with-controls">With controls</a></li>
+    <li class="nav-item"><a class="nav-link" href="#with-indicators">With indicators</a></li>
+    <li class="nav-item"><a class="nav-link" href="#with-captions">With captions</a></li>
+    <li class="nav-item"><a class="nav-link" href="#crossfade">Crossfade</a></li>
+    <li class="nav-item"><a class="nav-link" href="#individual-carousel-item-interval">Individual <code>.carousel-item</code> interval</a></li>
+    <li class="nav-item"><a class="nav-link" href="#disable-touch-swiping">Disable touch swiping</a></li>
+    <li class="nav-item"><a class="nav-link" href="#dark-variant">Dark variant</a></li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      
+
+      
+      
+      </div>
+    </div>
+
+  </div>
+
+    </div>
+    <div class="m-5 p-3 px-5 rounded-4rem bg-warning bg-opacity-10">
+  We are aware that the documentation is incomplete. While we work on it, You may refer to
+  <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap docs</a>
+  or help us by
+  <a href="https://github.com/materialstyle/materialstyle#contributing">contributing</a>.
+</div>
+<footer class="m-5 rounded-4rem bg-purple bg-opacity-10">
+  <div class="container">
+    <div class="row py-4 px-2 px-sm-4">
+      <div class="d-flex flex-column justify-content-center align-items-center mb-2">
+        <a class="footer-brand link-dark text-decoration-none text-center" href="/" aria-label="Material Style">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <span class="d-block">Material Style</span>
+        </a>
+      </div>
+      <p class="text-center">Material Style is a Material Design UI Library based on Bootstrap. Currently v3.0.0</p>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link link-purple fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-purple fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-purple fw-bold" href="https://www.npmjs.com/package/@materialstyle/materialstyle">npm</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="bg-dark m-0">
+    <div class="row py-4 px-2 px-sm-4">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link link-dark small text-center" href="https://getbootstrap.com/">Bootstrap 5</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-dark small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-dark small text-center" href="https://m3.material.io/">Material Design 3 (Material You)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-dark small text-center" href="https://material.io/">Material Design 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-dark small text-center" href="https://fonts.google.com/icons">Material Icons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-dark small text-center" href="https://fonts.google.com/">Google Fonts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
+        integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
+        crossorigin="anonymous"></script>
+
+<script src="/materialstyle/3.0/dist/js/materialstyle.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script src="/materialstyle/3.0/assets/js/site.min.js"></script>
+
+</body>
+</html>

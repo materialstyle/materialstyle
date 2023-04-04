@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/materialstyle/*"
-  to = "/:splat"
-  status = 200

@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98a1c749-a499-4883-b0fe-e2721c12f75a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.babelrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bundlewatch.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cspell.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/feature_request.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/SUPPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/browserstack.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/bundlewatch.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/gh-pages.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hugo_build.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/banner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build-plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/change-version.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generate-sri.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vnu-jar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/zip-examples.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/base-component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/dom/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/dom/event-handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/dom/manipulator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/dom/selector-engine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/material-tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/offcanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/rainbow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/scrollspy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/select-field.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/shape.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/snackbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/text-field.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/backdrop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/component-functions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/focustrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/sanitizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/scrollbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/swipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/src/util/template-factory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/browsers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/helpers/fixture.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/integration/bundle-modularity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/integration/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/integration/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/integration/rollup.bundle-modularity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/integration/rollup.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/alert.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/base-component.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/button.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/carousel.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/collapse.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/dom/data.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/dom/event-handler.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/dom/manipulator.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/dom/selector-engine.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/dropdown.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/jquery.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/modal.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/offcanvas.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/popover.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/scrollspy.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/tab.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/toast.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/tooltip.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/backdrop.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/component-functions.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/config.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/focustrap.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/index.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/sanitizer.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/scrollbar.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/swipe.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/unit/util/template-factory.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/alert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/button.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/carousel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/collapse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/dropdown.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/input.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/popover.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/scrollspy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/toast.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tests/visual/tooltip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_accordion.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_containers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_helpers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_maps.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_offcanvas.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_placeholders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_ripple-surface.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_shape.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_snackbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_spinners.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_toasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_variables-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_form-check.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_form-control.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_form-floating.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_form-range.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_form-select.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_form-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_labels.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/forms/_validation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_color-bg.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_colored-links.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_focus-ring.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_icon-link.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_ratio.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_stacks.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_stretched-link.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_text-truncation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_visually-hidden.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/helpers/_vr.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/materialstyle-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/materialstyle-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/materialstyle-utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/materialstyle.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_backdrop.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_banner.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_color-mode.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_color-scheme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_container.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_deprecate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_table-variants.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/mixins/_visually-hidden.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/tests/jasmine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/tests/mixins/_color-modes.test.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/tests/mixins/_utilities.test.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/tests/sass-true/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/tests/sass-true/runner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/tests/utilities/_api.test.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/utilities/_api.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/vendor/_rfs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/assets/3.0/js/clipboard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/assets/3.0/js/color-modes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/assets/3.0/js/site.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/assets/3.0/scss/site.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/colors/background-color.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/colors/color-modes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/colors/colored-links.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/colors/text-color.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/colors/theme-colors.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/colors/theming.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/accordion.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/alerts.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/badges.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/breadcrumb.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/buttons.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/cards.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/carousel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/close-button.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/collapse.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/drawer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/dropdowns.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/floating-action-buttons.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/lists.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/modal.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/pagination.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/placeholders.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/popovers.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/progress-bars.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/scrollspy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/snackbars.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/spinners.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/tables.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/tabs.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/toasts.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/components/tooltips.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/customize/components.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/customize/css-variables.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/customize/options.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/customize/sass.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/demos/drawer-end.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/demos/drawer-responsive-end.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/demos/drawer-responsive.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/demos/drawer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/demos/navbar-auto-hide.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/demos/navbar-fixed-bottom.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/demos/navbar-fixed-top.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/forms/checkbox-radio-switch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/forms/input-groups.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/forms/range.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/forms/select-fields.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/forms/text-fields.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/forms/validation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/getting-started/browsers-and-devices.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/getting-started/installation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/getting-started/starter-templates.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/migration.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/utilities/ripple.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/utilities/shadows.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/3.0/utilities/shapes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/content/_index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/data/drawer.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/_default/baseof.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/_default/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/_default/docs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/_default/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/_default/redirect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/callout-requiresjavascript.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/callout-rippledocs.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/callout-ripplerequiresjavascript.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/drawer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/redirect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/scripts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/partials/stylesheet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/bs-table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/callout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/docsref.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/markdown.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/partial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/scss-docs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/layouts/shortcodes/theme-color-palette.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/MSIconNewColorV2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/MSIconNewGreyBg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/butterfly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/default.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/flower_400x600.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/flower_600x400.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/suv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/with_drawer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/static/assets/images/without_drawer.jpg" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/3.1/components/accordion/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>form-switch-bg</find>
+      <find>box-shadow</find>
+      <find>form-switch-checked-bg-image</find>
+      <find>$input-focus-border-color:</find>
+      <find>$form-check-input-border</find>
+      <find>$form-switch-focus-color</find>
+      <find>$form-check-input-checked-bg-color</find>
+      <find>gradiend</find>
+      <find>gradient</find>
+      <find>btn-clip</find>
+      <find>copy-to-clipboard</find>
+      <find>btn</find>
+      <find>scss-docs</find>
+      <find>added</find>
+      <find>inline</find>
+      <find>bootstrap</find>
+      <find>importing</find>
+      <find>docs</find>
+      <find>primary</find>
+      <find>root</find>
+      <find>In order to meet the</find>
+      <find>.Path</find>
+      <find>$path</find>
+      <find>--bs-offcanvas-width</find>
+      <find>ms-toc</find>
+      <find>Material Style (v3.0.0)</find>
+      <find>const VERSION = '3.0.0'</find>
+      <find>3.1</find>
+      <find>3.1.0</find>
+      <find>3.0</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>-container</replace>
+      <replace>-dark-hover</replace>
+      <replace>-dark-active</replace>
+      <replace>-subtle</replace>
+      <replace>subtle</replace>
+      <replace />
+      <replace>primary-text</replace>
+      <replace>emphasis</replace>
+      <replace>-text-emphasis</replace>
+      <replace>-emphasis</replace>
+      <replace>container</replace>
+      <replace>p-3</replace>
+      <replace>p-3 bg-gradient</replace>
+      <replace>text-bg-</replace>
+      <replace>success</replace>
+      <replace>$theme-dark-</replace>
+      <replace>$navbar</replace>
+      <replace>--ms-primary</replace>
+      <replace>--m-</replace>
+      <replace>'</replace>
+      <replace>bs-</replace>
+      <replace>new materialstyle</replace>
+      <replace>global materialstyle: false</replace>
+      <replace>materialstyle.</replace>
+      <replace>form-switch-bg-image</replace>
+      <replace>@materialstyle/materialstyle</replace>
+      <replace>Material Style (v3.1.0)</replace>
+      <replace>const VERSION = '3.1.0'</replace>
+      <replace>3.1</replace>
+      <replace>3.1.0-alpha1</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>/scss/</dir>
+      <dir>$PROJECT_DIR$/examples/</dir>
+      <dir>$PROJECT_DIR$/js/</dir>
+      <dir>$PROJECT_DIR$/examples</dir>
+      <dir>$PROJECT_DIR$/views/</dir>
+      <dir>$PROJECT_DIR$/site/content</dir>
+      <dir>$PROJECT_DIR$/</dir>
+      <dir>$PROJECT_DIR$/dist</dir>
+      <dir>$PROJECT_DIR$/scss/</dir>
+      <dir>$PROJECT_DIR$/js/src</dir>
+      <dir>$PROJECT_DIR$/js/tests</dir>
+      <dir>$PROJECT_DIR$/js</dir>
+      <dir>$PROJECT_DIR$/scss</dir>
+      <dir>$PROJECT_DIR$/site</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="github-pages" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/scss/forms/_form-control.scss" />
+        <option value="$PROJECT_DIR$/scss/_navbar.scss" />
+        <option value="$PROJECT_DIR$/scss/_carousel.scss" />
+        <option value="$PROJECT_DIR$/scss/helpers/_icon-link.scss" />
+        <option value="$PROJECT_DIR$/js/src/tab.js" />
+        <option value="$PROJECT_DIR$/js/tests/integration/bundle.js" />
+        <option value="$PROJECT_DIR$/js/tests/integration/index.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/alert.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/button.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/carousel.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/collapse.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/dropdown.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/input.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/popover.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/scrollspy.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/tab.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/tooltip.html" />
+        <option value="$PROJECT_DIR$/js/tests/karma.conf.js" />
+        <option value="$PROJECT_DIR$/site/content/3.0/colors/color-modes.md" />
+        <option value="$PROJECT_DIR$/scss/_variables-dark.scss" />
+        <option value="$PROJECT_DIR$/js/tests/visual/modal.html" />
+        <option value="$PROJECT_DIR$/js/tests/visual/toast.html" />
+        <option value="$PROJECT_DIR$/.stylelintrc.json" />
+        <option value="$PROJECT_DIR$/scss/_functions.scss" />
+        <option value="$PROJECT_DIR$/scss/_utilities.scss" />
+        <option value="$PROJECT_DIR$/scss/materialstyle-grid.scss" />
+        <option value="$PROJECT_DIR$/scss/_root.scss" />
+        <option value="$PROJECT_DIR$/scss/helpers/_color-bg.scss" />
+        <option value="$PROJECT_DIR$/scss/forms/_form-check.scss" />
+        <option value="$PROJECT_DIR$/site/layouts/shortcodes/docsref.html" />
+        <option value="$PROJECT_DIR$/site/layouts/shortcodes/scss-docs.html" />
+        <option value="$PROJECT_DIR$/site/content/3.0/customize/overview.md" />
+        <option value="$PROJECT_DIR$/site/content/3.0/colors/theme-colors.md" />
+        <option value="$PROJECT_DIR$/site/data/drawer.yml" />
+        <option value="$PROJECT_DIR$/site/content/3.0/customize/sass.md" />
+        <option value="$PROJECT_DIR$/site/content/3.0/colors/theming.md" />
+        <option value="$PROJECT_DIR$/site/content/3.0/customize/options.md" />
+        <option value="$PROJECT_DIR$/site/content/3.0/customize/components.md" />
+        <option value="$PROJECT_DIR$/site/content/3.0/customize/css-variables.md" />
+        <option value="$PROJECT_DIR$/site/assets/3.0/scss/site.scss" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/LICENSE" />
+        <option value="$PROJECT_DIR$/config.yml" />
+        <option value="$PROJECT_DIR$/site/assets/3.1/js/site.js" />
+        <option value="$PROJECT_DIR$/site/content/_index.md" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/scss/_variables.scss" />
+        <option value="$PROJECT_DIR$/js/index.esm.js" />
+        <option value="$PROJECT_DIR$/js/index.umd.js" />
+        <option value="$PROJECT_DIR$/components/index.html" />
+        <option value="$PROJECT_DIR$/site/layouts/partials/navbar.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="47" />
+    <option name="y" value="24" />
+    <option name="width" value="937" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="materialstyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialstyle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="materialstyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialstyle" type="462c0819:PsiDirectoryNode" />
+              <item name="3.1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="materialstyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialstyle" type="462c0819:PsiDirectoryNode" />
+              <item name="3.1" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="materialstyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialstyle" type="462c0819:PsiDirectoryNode" />
+              <item name="3.1" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="accordion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="materialstyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialstyle" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../materialstyle-examples" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/site/content" />
+      <recent name="$PROJECT_DIR$/site/content/3.0/customize" />
+      <recent name="$PROJECT_DIR$/site/layouts/shortcodes" />
+      <recent name="$PROJECT_DIR$/site/content/3.0" />
+      <recent name="$PROJECT_DIR$/js/tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/site/content/3.0/colors" />
+      <recent name="$PROJECT_DIR$/js/tests" />
+      <recent name="$PROJECT_DIR$/site/static/assets/images" />
+      <recent name="$PROJECT_DIR$/scss/mixins" />
+      <recent name="$PROJECT_DIR$/js/tests/unit" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98a1c749-a499-4883-b0fe-e2721c12f75a" name="Default Changelist" comment="" />
+      <created>1593171864908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593171864908</updated>
+      <workItem from="1593171866356" duration="1203000" />
+      <workItem from="1593177858270" duration="8490000" />
+      <workItem from="1593231263495" duration="46000" />
+      <workItem from="1593532399506" duration="3247000" />
+      <workItem from="1593582285964" duration="71000" />
+      <workItem from="1593699968924" duration="2829000" />
+      <workItem from="1593706491332" duration="29000" />
+      <workItem from="1594026152232" duration="8000" />
+      <workItem from="1594026191023" duration="1816000" />
+      <workItem from="1594029035320" duration="18780000" />
+      <workItem from="1594101500363" duration="611000" />
+      <workItem from="1594122222018" duration="10683000" />
+      <workItem from="1594285247990" duration="448000" />
+      <workItem from="1594382353291" duration="2739000" />
+      <workItem from="1594709373565" duration="7954000" />
+      <workItem from="1594719304060" duration="3650000" />
+      <workItem from="1594743883265" duration="1930000" />
+      <workItem from="1594791511065" duration="604000" />
+      <workItem from="1594811713214" duration="3228000" />
+      <workItem from="1594815737253" duration="17902000" />
+      <workItem from="1594891877699" duration="14000" />
+      <workItem from="1594898333320" duration="17906000" />
+      <workItem from="1594921827959" duration="4143000" />
+      <workItem from="1594981913136" duration="12089000" />
+      <workItem from="1595003384606" duration="10318000" />
+      <workItem from="1595052259897" duration="20472000" />
+      <workItem from="1595088430761" duration="7357000" />
+      <workItem from="1595148351670" duration="8382000" />
+      <workItem from="1595225092469" duration="201000" />
+      <workItem from="1595247628850" duration="19000" />
+      <workItem from="1595248031557" duration="4391000" />
+      <workItem from="1595605803178" duration="7083000" />
+      <workItem from="1595668690550" duration="189000" />
+      <workItem from="1596359804079" duration="13641000" />
+      <workItem from="1596430899375" duration="1203000" />
+      <workItem from="1596559585802" duration="834000" />
+      <workItem from="1596605677203" duration="363000" />
+      <workItem from="1597419373800" duration="11655000" />
+      <workItem from="1597473840275" duration="31729000" />
+      <workItem from="1597557188464" duration="13025000" />
+      <workItem from="1597572505329" duration="13842000" />
+      <workItem from="1597679089693" duration="8650000" />
+      <workItem from="1597762654300" duration="10342000" />
+      <workItem from="1597851735631" duration="4735000" />
+      <workItem from="1597900320387" duration="146000" />
+      <workItem from="1597936125779" duration="9402000" />
+      <workItem from="1597989105707" duration="602000" />
+      <workItem from="1598085029695" duration="4855000" />
+      <workItem from="1598166664944" duration="19139000" />
+      <workItem from="1598245637540" duration="604000" />
+      <workItem from="1598267529363" duration="1444000" />
+      <workItem from="1598284378653" duration="4397000" />
+      <workItem from="1598331525803" duration="39000" />
+      <workItem from="1598692413794" duration="10263000" />
+      <workItem from="1598775727756" duration="14751000" />
+      <workItem from="1598974709067" duration="6468000" />
+      <workItem from="1599021775535" duration="602000" />
+      <workItem from="1599042031954" duration="11540000" />
+      <workItem from="1599061338366" duration="6532000" />
+      <workItem from="1599112318908" duration="624000" />
+      <workItem from="1599139398897" duration="13816000" />
+      <workItem from="1599196331563" duration="388000" />
+      <workItem from="1599233414078" duration="6752000" />
+      <workItem from="1599293831239" duration="14525000" />
+      <workItem from="1599453839049" duration="606000" />
+      <workItem from="1599466232657" duration="23704000" />
+      <workItem from="1599546083116" duration="603000" />
+      <workItem from="1599560137901" duration="10113000" />
+      <workItem from="1599646258363" duration="9588000" />
+      <workItem from="1599673431931" duration="4539000" />
+      <workItem from="1599713913774" duration="83000" />
+      <workItem from="1599743560716" duration="2313000" />
+      <workItem from="1599753119247" duration="9451000" />
+      <workItem from="1599840504500" duration="10211000" />
+      <workItem from="1599904171436" duration="17851000" />
+      <workItem from="1599985101419" duration="24478000" />
+      <workItem from="1600100510260" duration="2290000" />
+      <workItem from="1600146770083" duration="603000" />
+      <workItem from="1600187773525" duration="5779000" />
+      <workItem from="1600235814939" duration="597000" />
+      <workItem from="1600272806699" duration="6176000" />
+      <workItem from="1600341156215" duration="3520000" />
+      <workItem from="1600347839812" duration="10600000" />
+      <workItem from="1600408384111" duration="604000" />
+      <workItem from="1600502977134" duration="25755000" />
+      <workItem from="1600591722533" duration="5369000" />
+      <workItem from="1600603608431" duration="2464000" />
+      <workItem from="1600622292756" duration="2796000" />
+      <workItem from="1600791555770" duration="2557000" />
+      <workItem from="1601106365378" duration="7414000" />
+      <workItem from="1601196582405" duration="12068000" />
+      <workItem from="1601305193814" duration="5149000" />
+      <workItem from="1601357436983" duration="74000" />
+      <workItem from="1601397172966" duration="4796000" />
+      <workItem from="1601446881700" duration="310000" />
+      <workItem from="1601481830694" duration="5280000" />
+      <workItem from="1601627045728" duration="12184000" />
+      <workItem from="1601657046450" duration="7537000" />
+      <workItem from="1601798430583" duration="9407000" />
+      <workItem from="1601876515586" duration="159000" />
+      <workItem from="1601913291643" duration="6791000" />
+      <workItem from="1601960918562" duration="605000" />
+      <workItem from="1602001088506" duration="1382000" />
+      <workItem from="1602049548860" duration="603000" />
+      <workItem from="1602091639031" duration="2512000" />
+      <workItem from="1602132748509" duration="21000" />
+      <workItem from="1602174048547" duration="1848000" />
+      <workItem from="1602226572570" duration="35000" />
+      <workItem from="1602264726882" duration="2996000" />
+      <workItem from="1602318667088" duration="8424000" />
+      <workItem from="1602405292862" duration="5578000" />
+      <workItem from="1602488388960" duration="1895000" />
+      <workItem from="1603103922808" duration="4295000" />
+      <workItem from="1603189990520" duration="5323000" />
+      <workItem from="1603259868767" duration="6985000" />
+      <workItem from="1603288327607" duration="4054000" />
+      <workItem from="1603368946070" duration="9295000" />
+      <workItem from="1603431363112" duration="844000" />
+      <workItem from="1603447584958" duration="3947000" />
+      <workItem from="1603532201771" duration="575000" />
+      <workItem from="1603532789759" duration="4502000" />
+      <workItem from="1603540711775" duration="5025000" />
+      <workItem from="1603605114643" duration="8239000" />
+      <workItem from="1603618101903" duration="11013000" />
+      <workItem from="1603710491308" duration="904000" />
+      <workItem from="1603711839409" duration="5254000" />
+      <workItem from="1603764510066" duration="88000" />
+      <workItem from="1603791399578" duration="1672000" />
+      <workItem from="1603794396739" duration="17660000" />
+      <workItem from="1603848368928" duration="3389000" />
+      <workItem from="1603853019380" duration="3191000" />
+      <workItem from="1603863011963" duration="21761000" />
+      <workItem from="1603941639814" duration="14766000" />
+      <workItem from="1603965708518" duration="10639000" />
+      <workItem from="1604037689561" duration="22609000" />
+      <workItem from="1604119161037" duration="5959000" />
+      <workItem from="1604140051089" duration="2045000" />
+      <workItem from="1604206597243" duration="13056000" />
+      <workItem from="1604297457063" duration="611000" />
+      <workItem from="1604643342582" duration="4527000" />
+      <workItem from="1604650957526" duration="3043000" />
+      <workItem from="1604924605932" duration="6795000" />
+      <workItem from="1604932625325" duration="2641000" />
+      <workItem from="1605100576468" duration="3140000" />
+      <workItem from="1605186238263" duration="2805000" />
+      <workItem from="1605189515718" duration="1167000" />
+      <workItem from="1605499213112" duration="12000" />
+      <workItem from="1605777166970" duration="13852000" />
+      <workItem from="1606137109566" duration="656000" />
+      <workItem from="1606996385445" duration="736000" />
+      <workItem from="1608029351476" duration="1903000" />
+      <workItem from="1608818867696" duration="947000" />
+      <workItem from="1609147025681" duration="17000" />
+      <workItem from="1609851840157" duration="435000" />
+      <workItem from="1610023179245" duration="807000" />
+      <workItem from="1612337402238" duration="99000" />
+      <workItem from="1617617235235" duration="1071000" />
+      <workItem from="1618914354122" duration="815000" />
+      <workItem from="1624358628236" duration="7902000" />
+      <workItem from="1624422248563" duration="194000" />
+      <workItem from="1624609323754" duration="7762000" />
+      <workItem from="1624862045904" duration="1007000" />
+      <workItem from="1624949426895" duration="54000" />
+      <workItem from="1625652309202" duration="14343000" />
+      <workItem from="1625726005174" duration="2392000" />
+      <workItem from="1626246471213" duration="1100000" />
+      <workItem from="1626252275639" duration="454000" />
+      <workItem from="1627549794216" duration="8357000" />
+      <workItem from="1629537803245" duration="1947000" />
+      <workItem from="1629548277621" duration="4193000" />
+      <workItem from="1629702146772" duration="604000" />
+      <workItem from="1629712901149" duration="6561000" />
+      <workItem from="1629979577471" duration="4926000" />
+      <workItem from="1629985039351" duration="8864000" />
+      <workItem from="1630043310683" duration="4064000" />
+      <workItem from="1630047556578" duration="1594000" />
+      <workItem from="1630057614925" duration="14055000" />
+      <workItem from="1630127505738" duration="9099000" />
+      <workItem from="1630202155912" duration="65000" />
+      <workItem from="1630746674147" duration="4735000" />
+      <workItem from="1630903091993" duration="605000" />
+      <workItem from="1631275025854" duration="7402000" />
+      <workItem from="1631333698063" duration="2189000" />
+      <workItem from="1631369684152" duration="78000" />
+      <workItem from="1631527813197" duration="12197000" />
+      <workItem from="1631620629224" duration="1205000" />
+      <workItem from="1631667469837" duration="24000" />
+      <workItem from="1633615579657" duration="2890000" />
+      <workItem from="1633673103233" duration="604000" />
+      <workItem from="1633686497030" duration="24000" />
+      <workItem from="1633771257546" duration="6266000" />
+      <workItem from="1633787456451" duration="3155000" />
+      <workItem from="1633857812135" duration="4158000" />
+      <workItem from="1633930045816" duration="607000" />
+      <workItem from="1634374562787" duration="5733000" />
+      <workItem from="1634459679820" duration="6426000" />
+      <workItem from="1634479437671" duration="3954000" />
+      <workItem from="1634532017856" duration="612000" />
+      <workItem from="1635054644276" duration="13110000" />
+      <workItem from="1635081537872" duration="2819000" />
+      <workItem from="1635138126947" duration="51000" />
+      <workItem from="1635428923142" duration="2744000" />
+      <workItem from="1635487195474" duration="604000" />
+      <workItem from="1635507542475" duration="1615000" />
+      <workItem from="1637067248846" duration="4560000" />
+      <workItem from="1637125716425" duration="437000" />
+      <workItem from="1637239022179" duration="776000" />
+      <workItem from="1637312953724" duration="18735000" />
+      <workItem from="1637399863721" duration="11502000" />
+      <workItem from="1637559610291" duration="704000" />
+      <workItem from="1637573419983" duration="16164000" />
+      <workItem from="1637642565703" duration="16000" />
+      <workItem from="1637738968034" duration="14320000" />
+      <workItem from="1637759973361" duration="6584000" />
+      <workItem from="1637812744287" duration="17621000" />
+      <workItem from="1637842746378" duration="1837000" />
+      <workItem from="1637902391133" duration="608000" />
+      <workItem from="1638172207127" duration="22881000" />
+      <workItem from="1638237621589" duration="3885000" />
+      <workItem from="1638255887005" duration="22055000" />
+      <workItem from="1638336326407" duration="1234000" />
+      <workItem from="1638350292914" duration="12453000" />
+      <workItem from="1638532950596" duration="3233000" />
+      <workItem from="1638585924346" duration="19960000" />
+      <workItem from="1638682667025" duration="24029000" />
+      <workItem from="1638766163893" duration="5462000" />
+      <workItem from="1638783982127" duration="9246000" />
+      <workItem from="1638956660493" duration="12142000" />
+      <workItem from="1639023522408" duration="13608000" />
+      <workItem from="1639217829187" duration="9623000" />
+      <workItem from="1639363459812" duration="26643000" />
+      <workItem from="1639401735658" duration="3789000" />
+      <workItem from="1639458350063" duration="605000" />
+      <workItem from="1639487753270" duration="1527000" />
+      <workItem from="1639546855048" duration="10954000" />
+      <workItem from="1639633438191" duration="13900000" />
+      <workItem from="1639659088015" duration="1364000" />
+      <workItem from="1639663479260" duration="1129000" />
+      <workItem from="1639734856520" duration="8503000" />
+      <workItem from="1639812262823" duration="19308000" />
+      <workItem from="1639904167089" duration="12646000" />
+      <workItem from="1639964127662" duration="28008000" />
+      <workItem from="1640079121200" duration="8962000" />
+      <workItem from="1640093559604" duration="637000" />
+      <workItem from="1640157727843" duration="25549000" />
+      <workItem from="1640229531428" duration="4553000" />
+      <workItem from="1640254655451" duration="9197000" />
+      <workItem from="1640348017566" duration="8212000" />
+      <workItem from="1640438766074" duration="4362000" />
+      <workItem from="1640505276313" duration="4876000" />
+      <workItem from="1640580373843" duration="12328000" />
+      <workItem from="1640660095742" duration="4461000" />
+      <workItem from="1640669618250" duration="4120000" />
+      <workItem from="1640858694988" duration="10543000" />
+      <workItem from="1640932323294" duration="13826000" />
+      <workItem from="1641014721553" duration="24104000" />
+      <workItem from="1641105650951" duration="16982000" />
+      <workItem from="1641190352577" duration="12524000" />
+      <workItem from="1641220678317" duration="1683000" />
+      <workItem from="1641272373221" duration="29329000" />
+      <workItem from="1641362481429" duration="20417000" />
+      <workItem from="1641445965837" duration="2705000" />
+      <workItem from="1641543313936" duration="10207000" />
+      <workItem from="1641808604090" duration="16578000" />
+      <workItem from="1641881035513" duration="8273000" />
+      <workItem from="1641897509743" duration="12076000" />
+      <workItem from="1642398162344" duration="25602000" />
+      <workItem from="1642474323551" duration="20907000" />
+      <workItem from="1642500410266" duration="452000" />
+      <workItem from="1642512151457" duration="5749000" />
+      <workItem from="1642562560283" duration="10604000" />
+      <workItem from="1642575612232" duration="24059000" />
+      <workItem from="1642658176891" duration="21643000" />
+      <workItem from="1642731737096" duration="38452000" />
+      <workItem from="1642856994287" duration="594000" />
+      <workItem from="1643075472924" duration="26048000" />
+      <workItem from="1643177860820" duration="86000" />
+      <workItem from="1643188990510" duration="2820000" />
+      <workItem from="1643365618676" duration="10894000" />
+      <workItem from="1643436849383" duration="16994000" />
+      <workItem from="1643547702301" duration="4614000" />
+      <workItem from="1643635718285" duration="4733000" />
+      <workItem from="1643692019268" duration="228000" />
+      <workItem from="1643981192677" duration="3888000" />
+      <workItem from="1644126951986" duration="7595000" />
+      <workItem from="1644208861188" duration="1200000" />
+      <workItem from="1644226457131" duration="562000" />
+      <workItem from="1644243313179" duration="883000" />
+      <workItem from="1644297435718" duration="604000" />
+      <workItem from="1644315337761" duration="3810000" />
+      <workItem from="1644320832073" duration="1089000" />
+      <workItem from="1644407619302" duration="679000" />
+      <workItem from="1644671943511" duration="6001000" />
+      <workItem from="1644923807204" duration="7607000" />
+      <workItem from="1644987567624" duration="600000" />
+      <workItem from="1645018708990" duration="5444000" />
+      <workItem from="1645079862018" duration="6532000" />
+      <workItem from="1645157307435" duration="601000" />
+      <workItem from="1645684559548" duration="16239000" />
+      <workItem from="1645851982241" duration="11332000" />
+      <workItem from="1645938356332" duration="8340000" />
+      <workItem from="1646025353810" duration="4247000" />
+      <workItem from="1646056234824" duration="1117000" />
+      <workItem from="1646111444846" duration="609000" />
+      <workItem from="1646217095986" duration="1230000" />
+      <workItem from="1647583254615" duration="12240000" />
+      <workItem from="1647665793989" duration="12195000" />
+      <workItem from="1647766976630" duration="931000" />
+      <workItem from="1647835185259" duration="595000" />
+      <workItem from="1647931413785" duration="1186000" />
+      <workItem from="1648010617624" duration="602000" />
+      <workItem from="1648015416157" duration="3451000" />
+      <workItem from="1648287002383" duration="3900000" />
+      <workItem from="1648362192539" duration="13902000" />
+      <workItem from="1648449484240" duration="1820000" />
+      <workItem from="1648472017171" duration="1126000" />
+      <workItem from="1648882523204" duration="16084000" />
+      <workItem from="1648979102661" duration="8458000" />
+      <workItem from="1649048214167" duration="605000" />
+      <workItem from="1649494986204" duration="9880000" />
+      <workItem from="1649668492398" duration="7001000" />
+      <workItem from="1649928074116" duration="11366000" />
+      <workItem from="1650893160970" duration="5334000" />
+      <workItem from="1650950251152" duration="613000" />
+      <workItem from="1651125080887" duration="5031000" />
+      <workItem from="1651135165715" duration="8377000" />
+      <workItem from="1651153706040" duration="4329000" />
+      <workItem from="1652350700072" duration="4601000" />
+      <workItem from="1652957257482" duration="7778000" />
+      <workItem from="1653028631775" duration="14617000" />
+      <workItem from="1653281468108" duration="9658000" />
+      <workItem from="1653641108092" duration="4964000" />
+      <workItem from="1653716435800" duration="7362000" />
+      <workItem from="1656508049549" duration="124000" />
+      <workItem from="1656580182360" duration="2052000" />
+      <workItem from="1656942701743" duration="5793000" />
+      <workItem from="1657013290303" duration="8097000" />
+      <workItem from="1657100679641" duration="10912000" />
+      <workItem from="1657176341502" duration="3896000" />
+      <workItem from="1657875823175" duration="12482000" />
+      <workItem from="1657892099166" duration="3288000" />
+      <workItem from="1657936282401" duration="27148000" />
+      <workItem from="1658022998810" duration="7260000" />
+      <workItem from="1658127184806" duration="597000" />
+      <workItem from="1658204958745" duration="26000" />
+      <workItem from="1658653311841" duration="10748000" />
+      <workItem from="1658673254885" duration="949000" />
+      <workItem from="1658739777782" duration="6201000" />
+      <workItem from="1659173085332" duration="10383000" />
+      <workItem from="1659256973678" duration="239000" />
+      <workItem from="1659338065022" duration="605000" />
+      <workItem from="1659517536750" duration="7520000" />
+      <workItem from="1659666103059" duration="2363000" />
+      <workItem from="1659937661100" duration="604000" />
+      <workItem from="1660640413762" duration="2492000" />
+      <workItem from="1661502925976" duration="6167000" />
+      <workItem from="1661588772080" duration="14419000" />
+      <workItem from="1661668263160" duration="7376000" />
+      <workItem from="1662036666024" duration="10949000" />
+      <workItem from="1662120838723" duration="10838000" />
+      <workItem from="1662186249147" duration="7233000" />
+      <workItem from="1662366053939" duration="12280000" />
+      <workItem from="1662460376187" duration="6003000" />
+      <workItem from="1662541771465" duration="7912000" />
+      <workItem from="1662620050402" duration="18622000" />
+      <workItem from="1662716917158" duration="608000" />
+      <workItem from="1662722543811" duration="41000" />
+      <workItem from="1663667223236" duration="1128000" />
+      <workItem from="1663840727515" duration="1494000" />
+      <workItem from="1664875151444" duration="8180000" />
+      <workItem from="1665062923918" duration="6236000" />
+      <workItem from="1665124437656" duration="1438000" />
+      <workItem from="1665498290218" duration="4021000" />
+      <workItem from="1665554679054" duration="546000" />
+      <workItem from="1665578487138" duration="10836000" />
+      <workItem from="1665625142892" duration="35475000" />
+      <workItem from="1665711728462" duration="15013000" />
+      <workItem from="1665741693070" duration="1432000" />
+      <workItem from="1666187432198" duration="606000" />
+      <workItem from="1666954888580" duration="3562000" />
+      <workItem from="1666963595683" duration="283000" />
+      <workItem from="1666964893786" duration="939000" />
+      <workItem from="1667038653391" duration="11587000" />
+      <workItem from="1667224308111" duration="9000" />
+      <workItem from="1667225207096" duration="2232000" />
+      <workItem from="1667270620889" duration="2068000" />
+      <workItem from="1667457313289" duration="7393000" />
+      <workItem from="1667485922058" duration="628000" />
+      <workItem from="1667490990748" duration="777000" />
+      <workItem from="1667520994057" duration="2579000" />
+      <workItem from="1667566430214" duration="619000" />
+      <workItem from="1667901029741" duration="5370000" />
+      <workItem from="1667959258058" duration="262000" />
+      <workItem from="1668261953270" duration="1769000" />
+      <workItem from="1669121871589" duration="6184000" />
+      <workItem from="1669185333741" duration="602000" />
+      <workItem from="1669453249363" duration="11042000" />
+      <workItem from="1669606646175" duration="588000" />
+      <workItem from="1669637876528" duration="9058000" />
+      <workItem from="1669812706605" duration="7965000" />
+      <workItem from="1669821658867" duration="146000" />
+      <workItem from="1669900829643" duration="5113000" />
+      <workItem from="1669974133366" duration="583000" />
+      <workItem from="1670221245908" duration="607000" />
+      <workItem from="1670589709482" duration="8490000" />
+      <workItem from="1670762322227" duration="14000" />
+      <workItem from="1670762364048" duration="1389000" />
+      <workItem from="1670769076192" duration="1240000" />
+      <workItem from="1670827293505" duration="842000" />
+      <workItem from="1670937833658" duration="2253000" />
+      <workItem from="1670995957032" duration="599000" />
+      <workItem from="1671269288334" duration="9679000" />
+      <workItem from="1671355086621" duration="10874000" />
+      <workItem from="1671427987051" duration="608000" />
+      <workItem from="1671457662232" duration="634000" />
+      <workItem from="1672032001413" duration="24563000" />
+      <workItem from="1672133778208" duration="15950000" />
+      <workItem from="1672194464979" duration="27899000" />
+      <workItem from="1672299328232" duration="10067000" />
+      <workItem from="1672371030839" duration="26797000" />
+      <workItem from="1672470515111" duration="2550000" />
+      <workItem from="1672639088473" duration="622000" />
+      <workItem from="1672732124990" duration="23617000" />
+      <workItem from="1672801812981" duration="17910000" />
+      <workItem from="1672887339497" duration="12048000" />
+      <workItem from="1673763757151" duration="24688000" />
+      <workItem from="1673847937994" duration="333000" />
+      <workItem from="1674304925530" duration="7327000" />
+      <workItem from="1674360234094" duration="23939000" />
+      <workItem from="1674449466491" duration="602000" />
+      <workItem from="1674713553561" duration="6222000" />
+      <workItem from="1674799728785" duration="344000" />
+      <workItem from="1674825888513" duration="6668000" />
+      <workItem from="1674916372699" duration="2566000" />
+      <workItem from="1675058155597" duration="85000" />
+      <workItem from="1675334100856" duration="8185000" />
+      <workItem from="1675402688024" duration="1747000" />
+      <workItem from="1675517541312" duration="6275000" />
+      <workItem from="1675579917815" duration="14862000" />
+      <workItem from="1675663394943" duration="592000" />
+      <workItem from="1675763253076" duration="10593000" />
+      <workItem from="1675838313717" duration="1197000" />
+      <workItem from="1675925771606" duration="606000" />
+      <workItem from="1676109478485" duration="11715000" />
+      <workItem from="1676190649360" duration="8803000" />
+      <workItem from="1676268431420" duration="240000" />
+      <workItem from="1676284078345" duration="3441000" />
+      <workItem from="1676295821606" duration="1599000" />
+      <workItem from="1676357336212" duration="6035000" />
+      <workItem from="1676452213802" duration="2453000" />
+      <workItem from="1677244062500" duration="48000" />
+      <workItem from="1678700067954" duration="3741000" />
+      <workItem from="1678782192994" duration="5735000" />
+      <workItem from="1678973349988" duration="540000" />
+      <workItem from="1679121454695" duration="8779000" />
+      <workItem from="1679209611302" duration="14081000" />
+      <workItem from="1679730899052" duration="15281000" />
+      <workItem from="1679913428790" duration="2848000" />
+      <workItem from="1679990055544" duration="591000" />
+      <workItem from="1680078227893" duration="598000" />
+      <workItem from="1680516147911" duration="12753000" />
+      <workItem from="1680587946516" duration="600000" />
+      <workItem from="1680600190332" duration="6477000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3059651000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="47" y="-4" width="1873" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4460274" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24916202" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32948583" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32948583" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32948583" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32864866" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5008219" side_tool="true" weight="0.19202518" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49917808" weight="0.3798531" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" side_tool="true" weight="0.32931507" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.handlebars" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.eslintignore" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.stylelintignore" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ejs" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scss/_functions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3952">
+          <caret line="152" column="161" selection-start-line="152" selection-start-column="161" selection-end-line="152" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/select-field.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="338" lean-forward="true" selection-start-line="338" selection-end-line="338" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/3.1/colors/theme-colors.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="833">
+            <caret line="142" column="3" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/3.1/customize/sass.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="393">
+            <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/3.1/colors/theming.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="157">
+            <caret line="45" column="56" lean-forward="true" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/3.1/customize/options.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="696">
+            <caret line="30" column="123" selection-start-line="30" selection-start-column="123" selection-end-line="30" selection-end-column="123" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/3.1/customize/components.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="117">
+            <caret line="30" column="156" selection-start-line="30" selection-start-column="156" selection-end-line="30" selection-end-column="156" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/materialstyle.css" />
+    <entry file="file://$PROJECT_DIR$/site/content/3.1/customize/css-variables.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="275">
+            <caret line="342" column="4" lean-forward="true" selection-start-line="342" selection-start-column="4" selection-end-line="342" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/layouts/_default/docs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="275">
+            <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netlify.toml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CODE_OF_CONDUCT.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="257">
+            <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.stylelintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.stylelintignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.hugo_build.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.cspell.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bundlewatch.config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.browserslistrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/assets/3.1/js/color-modes/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/assets/3.1/js/clipboard.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/assets/3.1/js/site.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="358" column="37" selection-start-line="358" selection-start-column="37" selection-end-line="358" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/assets/3.1/scss/site.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="113" column="23" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/_index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="130">
+            <caret line="5" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/layouts/shortcodes/callout.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/banner.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/build-plugins.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/change-version.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/generate-sri.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/rollup.config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/vnu-jar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/zip-examples.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="267" column="44" selection-start-line="267" selection-start-column="44" selection-end-line="267" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.esm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.umd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.0/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.0/components/accordion/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/layouts/partials/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.1/components/accordion/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
