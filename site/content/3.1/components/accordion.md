@@ -3,7 +3,7 @@ layout: docs
 title: Accordion
 group: components
 aliases:
-  - "/3.0/components/"
+  - "/3.1/components/"
   - "/components/"
 toc: true
 ---
