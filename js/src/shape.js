@@ -1,25 +1,24 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.1.0-alpha1): shape.js
+ * Material Style shape.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import BaseComponent from './base-component.js'
-import {
-  defineJQueryPlugin
-} from './util/index.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
- * --------------------------------------------------------------------------
  * Constants
- * --------------------------------------------------------------------------
  */
 
 const NAME = 'shape'
-const VERSION = '3.1.0-alpha1'
 
 const DIVISOR = 2
+
+/**
+ * Class definition
+ */
 
 class Shape extends BaseComponent {
   constructor(element) {
@@ -34,10 +33,6 @@ class Shape extends BaseComponent {
 
   static get NAME() {
     return NAME
-  }
-
-  static get VERSION() {
-    return VERSION
   }
 
   static jQueryInterface() {
@@ -141,9 +136,7 @@ class Shape extends BaseComponent {
 }
 
 /**
- * ------------------------------------------------------------------------
  * jQuery
- * ------------------------------------------------------------------------
  */
 
 defineJQueryPlugin(Shape)

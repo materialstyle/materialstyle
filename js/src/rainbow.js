@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.1.0-alpha1): rainbow.js
+ * Material Style rainbow.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -8,22 +8,21 @@
 import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
-import {
-  defineJQueryPlugin
-} from './util/index.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
- * ------------------------------------------------------------------------
  * Constants
- * ------------------------------------------------------------------------
  */
 
 const NAME = 'rainbow'
-const VERSION = '3.1.0-alpha1'
 const DATA_KEY = 'bs.rainbow'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
+
+/**
+ * Class definition
+ */
 
 class Rainbow extends BaseComponent {
   constructor(element) {
@@ -34,10 +33,6 @@ class Rainbow extends BaseComponent {
 
   static get NAME() {
     return NAME
-  }
-
-  static get VERSION() {
-    return VERSION
   }
 
   static jQueryInterface() {
@@ -63,9 +58,7 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
 })
 
 /**
- * ------------------------------------------------------------------------
  * jQuery
- * ------------------------------------------------------------------------
  */
 
 defineJQueryPlugin(Rainbow)

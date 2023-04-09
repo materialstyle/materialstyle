@@ -9,23 +9,22 @@ import {
   getBaseColor, getPrimaryColor
 } from './util/color.js'
 import BaseComponent from './base-component.js'
-import {
-  defineJQueryPlugin
-} from './util/index.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
- * --------------------------------------------------------------------------
  * Constants
- * --------------------------------------------------------------------------
  */
 
 const NAME = 'textfield'
-const VERSION = '3.1.0-alpha1'
 
 const CLASS_NAME_FLOATING = 'form-floating'
 const CLASS_NAME_FLOATING_OUTLINED = 'form-floating-outlined'
 
 const LABEL_SCALE = 0.85
+
+/**
+ * Class definition
+ */
 
 class TextField extends BaseComponent {
   constructor(element) {
@@ -41,10 +40,6 @@ class TextField extends BaseComponent {
 
   static get NAME() {
     return NAME
-  }
-
-  static get VERSION() {
-    return VERSION
   }
 
   static jQueryInterface(config) {
@@ -162,9 +157,7 @@ class TextField extends BaseComponent {
 }
 
 /**
- * ------------------------------------------------------------------------
  * jQuery
- * ------------------------------------------------------------------------
  */
 
 defineJQueryPlugin(TextField)

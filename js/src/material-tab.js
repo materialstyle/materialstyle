@@ -1,28 +1,26 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.1.0-alpha1): material-tab.js
+ * Material Style material-tab.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import Tab from './tab.js'
 import EventHandler from './dom/event-handler.js'
-import {
-  defineJQueryPlugin
-} from './util/index.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
- * ------------------------------------------------------------------------
  * Constants
- * ------------------------------------------------------------------------
  */
 
 const NAME = 'materialtab'
-const VERSION = '3.1.0-alpha1'
-
 const ENTER_KEY_CODE = 13
 const SPACE_KEY_CODE = 32
 const INDICATOR_HEIGHT = 2
+
+/**
+ * Class definition
+ */
 
 class MaterialTab extends Tab {
   constructor(element) {
@@ -34,10 +32,6 @@ class MaterialTab extends Tab {
 
   static get NAME() {
     return NAME
-  }
-
-  static get VERSION() {
-    return VERSION
   }
 
   static jQueryInterface(config) {
@@ -134,9 +128,7 @@ class MaterialTab extends Tab {
 }
 
 /**
- * ------------------------------------------------------------------------
  * jQuery
- * ------------------------------------------------------------------------
  */
 
 defineJQueryPlugin(MaterialTab)

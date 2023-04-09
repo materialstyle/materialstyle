@@ -13,12 +13,12 @@ keywords: snackbar, toast
 <button class="btn btn-success" id="show-toast">Show Toast</button>
 ##split##
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-  <div id="live-toast" class="toast bg-dark text-white" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header bg-dark">
+  <div id="live-toast" class="toast text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header text-bg-dark">
       <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" class="rounded me-2"
            alt="Material Style Icon" width="20">
-      <strong class="me-auto text-white">Material Style</strong>
-      <small class="text-white">just now</small>
+      <strong class="me-auto">Material Style</strong>
+      <small>just now</small>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close">
       </button>
     </div>
@@ -39,25 +39,25 @@ some spacing.
 <button class="btn btn-success" id="show-stacked-toasts">Show stacked toasts</button>
 ##split##
 <div class="toast-container position-fixed top-0 end-0 p-3">
-  <div id="stacked-toast-1" class="toast bg-white" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header text-bg-green">
+  <div id="stacked-toast-1" class="toast text-bg-light" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header text-bg-light">
       <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" 
            class="rounded me-2" alt="Material Style Icon" width="20">
-      <strong class="me-auto">Bootstrap</strong>
-      <small class="text-white">just now</small>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      <strong class="me-auto">Material Style</strong>
+      <small>just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
       See? Just like this.
     </div>
   </div>
 
-  <div id="stacked-toast-2" class="toast bg-white" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header text-bg-indigo">
+  <div id="stacked-toast-2" class="toast text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header text-bg-dark">
       <img src="https://materialstyle.github.io/assets/images/MSIconNewColorV2.svg" 
            class="rounded me-2" alt="Material Style Icon" width="20">
-      <strong class="me-auto">Bootstrap</strong>
-      <small class="text-white">just now</small>
+      <strong class="me-auto">Material Style</strong>
+      <small>just now</small>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">

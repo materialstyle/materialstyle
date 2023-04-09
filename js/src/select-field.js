@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.1.0-alpha1): select_field.js
+ * Material Style select_field.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -11,18 +11,13 @@ import {
 import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
 import Dropdown from './dropdown.js'
-import {
-  defineJQueryPlugin
-} from './util/index.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
- * --------------------------------------------------------------------------
  * Constants
- * --------------------------------------------------------------------------
  */
 
 const NAME = 'selectfield'
-const VERSION = '3.1.0-alpha1'
 const DATA_KEY = 'bs.selectfield'
 const EVENT_KEY = `.${DATA_KEY}`
 
@@ -48,6 +43,10 @@ const LABEL_SCALE = 0.85
 const TO_STRING_BASE = 36
 const SUBSTR_INDEX = 2
 
+/**
+ * Class definition
+ */
+
 class SelectField extends BaseComponent {
   constructor(element) {
     super(element)
@@ -62,10 +61,6 @@ class SelectField extends BaseComponent {
 
   static get NAME() {
     return NAME
-  }
-
-  static get VERSION() {
-    return VERSION
   }
 
   static jQueryInterface(config) {
@@ -521,9 +516,7 @@ class SelectField extends BaseComponent {
 }
 
 /**
- * ------------------------------------------------------------------------
  * jQuery
- * ------------------------------------------------------------------------
  */
 
 defineJQueryPlugin(SelectField)

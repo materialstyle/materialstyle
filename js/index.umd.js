@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.1.0-alpha1): index.umd.js
+ * Material Style index.umd.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
