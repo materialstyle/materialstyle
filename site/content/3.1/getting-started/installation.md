@@ -34,7 +34,7 @@ keywords: getting-started, installation
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
-        integrity="sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5" 
+        integrity="sha384-6sven7u0XhZKb96tL+LEfg6t1F2+7MhOEpRoddbDiMe5J3Xg1KLhfl+9OVaNQdH7" 
         crossorigin="anonymous">
   ```
   
@@ -52,7 +52,7 @@ keywords: getting-started, installation
   
   <!-- Material Style JS -->
   <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js" 
-          integrity="sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES" 
+          integrity="sha384-9dHtyYn5MfqSZOa0jU8joThzRiDJXezY3JupswCbQEIvXwLt/ZtGapT/m7tzKmiT" 
           crossorigin="anonymous"></script>
   ```
   </div>
@@ -64,7 +64,7 @@ keywords: getting-started, installation
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://unpkg.com/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
-        integrity="sha384-Lnu1KIAOFhyJWM4oUSzwxyStv1OD4B2ZiTZts6q+0kEuYbz7owWW1K4zyMFI8Kb5" 
+        integrity="sha384-6sven7u0XhZKb96tL+LEfg6t1F2+7MhOEpRoddbDiMe5J3Xg1KLhfl+9OVaNQdH7" 
         crossorigin="anonymous">
   ```
   
@@ -82,7 +82,7 @@ keywords: getting-started, installation
   
   <!-- Material Style JS -->
   <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js" 
-          integrity="sha384-Q5hpQ5oxjAOFZ4FCVYZ679rhwdssrUFlQuc38BExagMP+344TVLBb/3zKGhMBSES" 
+          integrity="sha384-9dHtyYn5MfqSZOa0jU8joThzRiDJXezY3JupswCbQEIvXwLt/ZtGapT/m7tzKmiT" 
           crossorigin="anonymous"></script>
   ```
   </div>
@@ -146,7 +146,7 @@ Import Material Style SCSS in your SCSS file
 ## Download
 
 <a class="btn btn-tertiary btn-lg rounded-pill" 
-   href="https://github.com/materialstyle/materialstyle/releases/download/v3.1.0/materialstyle-3.1.0-dist.zip" download>
+   href="https://github.com/materialstyle/materialstyle/releases/download/v3.1.0-alpha1/materialstyle-3.1.0-alpha1-dist.zip" download>
   Download v3.1.0
 </a>
 
