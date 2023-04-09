@@ -1,6 +1,7 @@
 'use strict'
 
 const pkg = require('../package.json')
+
 const year = new Date().getFullYear()
 
 function getBanner(pluginFilename) {
@@ -10,7 +11,7 @@ function getBanner(pluginFilename) {
   * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)  
   * This a fork of Bootstrap: Initial license below
   * 
-  * Bootstrap${pluginFilename ? ` ${pluginFilename}` : ''} v5.2.2 (https://getbootstrap.com/)
+  * Bootstrap${pluginFilename ? ` ${pluginFilename}` : ''} v5.3.0 (https://getbootstrap.com/)
   * Copyright 2011-${year} The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */`

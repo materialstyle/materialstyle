@@ -1,18 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Material Style (v3.1.0-alpha1): snackbar.js
+ * Material Style snackbar.js
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import {
-  defineJQueryPlugin
-} from './util/index.js'
+import { defineJQueryPlugin } from './util/index.js'
 import BaseComponent from './base-component.js'
 import Manipulator from './dom/manipulator.js'
-import {
-  enableDismissTrigger
-} from './util/component-functions.js'
+import { enableDismissTrigger } from './util/component-functions.js'
 
 /**
  * Constants
