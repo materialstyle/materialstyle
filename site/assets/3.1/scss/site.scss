@@ -110,6 +110,19 @@ footer {
 }
 
 .ms-toc {
+  .nav {
+    --bs-nav-link-padding-x: 0.5rem;
+    --bs-nav-link-padding-y: 0.3rem;
+  }
+
+  .nav-item {
+    .nav {
+      .nav-link {
+        padding-left: 1rem;
+      }
+    }
+  }
+  
   .nav-link {
     font-size: .875rem;
     color: var(--bs-secondary-color);
@@ -257,11 +270,17 @@ footer {
     background-color: rgba(95, 61, 196, .2);
   }
 
+  .nav {
+    --bs-nav-link-padding-x: .8rem;
+    --bs-nav-link-padding-y: .3rem;
+  }
+
   .nav-link.active {
     background-color: var(--m-violet-9);
   }
+
   .list-heading {
-    padding: .5rem 1rem;
+    padding: .3rem .8rem;
   }
 }
 
