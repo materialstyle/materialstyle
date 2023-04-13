@@ -153,9 +153,26 @@ toc: true
 {{< /example >}}
 
 ## Color options
+
+Make use of `--bs-nav-tabs-link-color`, `--bs-nav-tabs-link-hover-bg`, `--bs-nav-tabs-link-active-color` & 
+`--bs-nav-tabs-link-active-hover-bg` css variables to personalize it according to your brand's style.
+
+<div class="d-flex align-items-center bg-danger bg-opacity-25 my-4 rounded-3 overflow-hidden">
+  <div class="d-flex align-items-center align-self-stretch text-bg-danger bg-opacity-100 p-3 fs-4">
+    <i class="bi bi-info-circle-fill"></i>
+  </div>
+  <div class="flex-grow-1 p-3 text-body">
+    Classes <b>.base-[color]</b> & <b>.primary-[color]</b> are depricated in v3.1.0
+  </div>
+</div>
+
 {{< example codeId="code6" >}}
 
-<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist" 
+    style="--bs-nav-tabs-link-color: var(--bs-success-active); 
+           --bs-nav-tabs-link-hover-bg: var(--bs-success-subtle);
+           --bs-nav-tabs-link-active-color: var(--bs-tertiary-hover); 
+           --bs-nav-tabs-link-active-hover-bg: var(--bs-tertiary-subtle); ">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple1">Apple</button>
   </li>
@@ -179,7 +196,7 @@ toc: true
 ## Tabs split to multiple rows when there are too many to fit on a row
 {{< example codeId="code7" >}}
 
-<ul class="nav nav-tabs nav-justified base-primary primary-danger" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple2">Apple</button>
   </li>
@@ -331,7 +348,11 @@ $('.nav-tabs').materialtab('redraw');
 
 {{< example codeId="code9" >}}
 
-<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist" 
+    style="--bs-nav-tabs-link-color: var(--bs-success-active); 
+           --bs-nav-tabs-link-hover-bg: var(--bs-success-subtle);
+           --bs-nav-tabs-link-active-color: var(--bs-tertiary-hover); 
+           --bs-nav-tabs-link-active-hover-bg: var(--bs-tertiary-subtle); ">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple4">
       Apple

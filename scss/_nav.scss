@@ -62,10 +62,11 @@
   --#{$prefix}nav-tabs-link-color: #{$nav-tabs-link-color};
   --#{$prefix}nav-tabs-link-hover-bg: #{$nav-tabs-link-hover-bg};
   --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
+  --#{$prefix}nav-tabs-link-active-hover-bg: #{$nav-tabs-link-active-hover-bg};
   --mdc-ripple-hover-opacity: 0;
   --mdc-ripple-focus-opacity: 0;
   --mdc-ripple-press-opacity: .2;
-  --mdc-ripple-color: var(--#{$prefix}nav-tabs-link-active-color);
+  --mdc-ripple-color: var(--#{$prefix}nav-tabs-link-color);
   // scss-docs-end nav-tabs-css-vars
 
   position: relative;
@@ -127,6 +128,8 @@
       box-shadow: none;
 
       &.active {
+        --mdc-ripple-color: var(--#{$prefix}nav-tabs-link-active-color);
+        --#{$prefix}nav-tabs-link-hover-bg: var(--#{$prefix}nav-tabs-link-active-hover-bg);
         color: var(--#{$prefix}nav-tabs-link-active-color);
       }
 
@@ -168,19 +171,6 @@
     height: 2px;
     background: var(--#{$prefix}nav-tabs-link-active-color);
     @include transition(left .2s ease);
-  }
-}
-
-@each $color, $value in $theme-colors {
-  .nav-tabs.primary-#{$color} .nav-link.active,
-  .nav-tabs.base-#{$color} .nav-link:not(.active) {
-    --#{$prefix}nav-tabs-link-color: #{$value} !important; /* stylelint-disable-line declaration-no-important */
-    --#{$prefix}nav-tabs-link-hover-bg: #{rgba($value, .15)};
-    --mdc-ripple-color: #{$value};
-  }
-
-  .nav-tabs.primary-#{$color} {
-    --#{$prefix}nav-tabs-link-active-color: #{$value};
   }
 }
 
