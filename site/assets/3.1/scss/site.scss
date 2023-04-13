@@ -111,8 +111,8 @@ footer {
 
 .ms-toc {
   .nav {
-    --bs-nav-link-padding-x: 0.5rem;
-    --bs-nav-link-padding-y: 0.3rem;
+    --bs-nav-link-padding-x: .5rem;
+    --bs-nav-link-padding-y: .3rem;
   }
 
   .nav-item {
@@ -122,7 +122,7 @@ footer {
       }
     }
   }
-  
+
   .nav-link {
     font-size: .875rem;
     color: var(--bs-secondary-color);
@@ -335,7 +335,7 @@ h5:not(.badge-example-headings h5) {
   }
 }
 
-@media (max-width: 278px) {
+@media (max-width: 293px) {
   #site-home-top-nav .navbar-nav {
     width: 100%;
   }
