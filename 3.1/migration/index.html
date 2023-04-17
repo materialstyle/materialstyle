@@ -472,109 +472,149 @@
   <div class="component-showcase">
     <h1 id="content">Migrating to v3</h1>
     <p class="fs-4 ms-0 mb-4 page-description">
-Material Style 3 is a major rewrite of the entire project. The most notable changes are 
-summarized below.
+Review changes in Material Style source files, documentation, and components to 
+migrate from v2 to v3.
 </p>
-<p><strong>Follows <a class="link-pink" href="https://getbootstrap.com/docs/5.2/migration/">Bootstrap v5 migration guide</a>.</strong></p>
-<h2 id="utilities"><strong>Utilities</strong></h2>
+<h2 id="v310-alpha1"><strong>v3.1.0-alpha1</strong></h2>
+<p><em>Based on Bootstrap v5.3.0-alpha3</em></p>
+<p><strong>Follows the following Bootstrap migration guides:</strong></p>
+<ul>
+<li><a class="link-pink" href="https://getbootstrap.com/docs/5.3/migration/#v530-alpha1">Bootstrap v5.3.0-alpha1 migration guide</a></li>
+<li><a class="link-pink" href="https://getbootstrap.com/docs/5.3/migration/#v530-alpha2">Bootstrap v5.3.0-alpha2 migration guide</a></li>
+<li><a class="link-pink" href="https://getbootstrap.com/docs/5.3/migration/#v530">Bootstrap v5.3.0-alpha3 migration guide</a></li>
+</ul>
+<h2 id="docs">Docs</h2>
+<ul>
+<li>Added Light and Dark modes.</li>
+<li>Added Customization docs.</li>
+</ul>
+<h2 id="customization">Customization</h2>
+<h3 id="color-modes">Color modes</h3>
+<ul>
+<li>Material Style supports Light and Dark color modes. See <a href="/materialstyle/3.1/colors/color-modes">the color modes documentation</a> to learn more.</li>
+<li>Theme colors are adaptive to Light and Dark modes by default.</li>
+</ul>
+<h3 id="theming">Theming</h3>
+<p>Theme colors can be customized using CSS variables. And the components are updated to use theme colors from the CSS variables. It allows for custom theming using CSS variables. Helpful for CDN users. See <a href="/materialstyle/3.1/colors/theming">theming</a> to learn more.</p>
 <h3 id="colors">Colors</h3>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
+Colors <code>red</code>, <code>pink</code>, <code>purple</code>, <code>indigo</code>, <code>blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>yellow</code> &amp; <code>orange</code>
+have been removed in favour of custom theming.</li>
+</ul>
+<h2 id="components">Components</h2>
+<ul>
+<li>Added elevated buttons (Buttons with shadows).</li>
+<li>Added support for Dark Select and Text Fields.</li>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
+Classes <code>.base-[color]</code> &amp; <code>.primary-[color]</code> are depricated from Selects, Text fields &amp; Tabs.</li>
+</ul>
+<hr>
+<h2 id="v300"><strong>v3.0.0</strong></h2>
+<p><em>Based on Bootstrap v5.3.0-alpha3</em></p>
+<p>Material Style v3.0.0 is a major rewrite of the entire project. The most notable changes are
+summarized below.</p>
+<p><strong>Follows</strong> <a class="link-pink" href="https://getbootstrap.com/docs/5.2/migration/">Bootstrap v5.2.0 migration guide</a>.</p>
+<br>
+<h3 id="utilities"><strong>Utilities</strong></h3>
+<h4 id="colors-1">Colors</h4>
+<ul>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 To avoid increased file sizes, v3 uses only a subset of the v2 color palette.
 It uses Bootstrap&rsquo;s default theme colors + pink, purple, indigo, teal, orange, white &amp; black.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Color shades (Example: <code>red-50</code>, <code>blue-500</code>, <code>pink-a100</code>) have been removed to
 reduce file size.</li>
 </ul>
-<h3 id="ripple">Ripple</h3>
+<h4 id="ripple">Ripple</h4>
 <ul>
 <li>v3 uses the official Material Design Ripple package
 <a class="link-pink" href="https://www.npmjs.com/package/@material/ripple">@material/ripple</a>
 for the ripple effects.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span> Unlike v2, where the ripple effect is directly
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span> Unlike v2, where the ripple effect is directly
 applied to components, in v3, we need to add an element
 <code>&lt;span class=&quot;ripple-surface&quot;&gt;&lt;/span&gt;</code> to the desired component like a Button and activate
 the effect on the <code>ripple-surface</code>.</li>
 </ul>
-<h3 id="shadows">Shadows</h3>
+<h4 id="shadows">Shadows</h4>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Classes <code>raised-*dp</code> have been renamed to <code>shadow-*dp</code></li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Class <code>unelevated</code> has been replaced with <code>shadow-none</code></li>
 </ul>
-<h2 id="components"><strong>Components</strong></h2>
-<h3 id="buttons">Buttons</h3>
+<h3 id="components-1"><strong>Components</strong></h3>
+<h4 id="buttons">Buttons</h4>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Classes <code>btn-text-[color]</code> have been dropped.
 <code>btn-outline-[color] border-0</code> can be used for Text Buttons.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 File inputs now use Bootstrap&rsquo;s default styling.
 Classes <code>m-file-input</code> and <code>btn-file</code> have been dropped.</li>
 </ul>
-<h3 id="floating-action-buttons">Floating Action Buttons</h3>
-<p><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<h4 id="floating-action-buttons">Floating Action Buttons</h4>
+<p><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Class <code>extended-fab</code> has been dropped. <code>rounded-pill</code> can be used.</p>
-<h3 id="cards">Cards</h3>
+<h4 id="cards">Cards</h4>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Classes <code>card-outline-[color]</code> have been dropped.
 <code>border border-[color]</code> can be used for Cards with border.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Classes <code>card-actions</code>, <code>card-buttons</code> &amp; <code>card-icons</code> have been dropped as well.</li>
 </ul>
-<h3 id="drawer--sidebar">Drawer / Sidebar</h3>
-<p><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<h4 id="drawer--sidebar">Drawer / Sidebar</h4>
+<p><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 v3 uses Bootstrap 5’s Offcanvas component for Drawers.</p>
-<h3 id="progress-bars">Progress bars</h3>
+<h4 id="progress-bars">Progress bars</h4>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Class <code>m-progress</code> has been renamed to <code>progress-bar-indeterminate</code>.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Class <code>m-rainbow</code> has been renamed to <code>progress-bar-rainbow</code>.</li>
 </ul>
-<h3 id="spinners">Spinners</h3>
+<h4 id="spinners">Spinners</h4>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Class <code>m-spinner</code> has been renamed to <code>spinner-material</code>.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Classes <code>spinner-[color]</code> have been dropped. <code>text-[color]</code> can be used for colored spinners.</li>
 </ul>
-<h2 id="forms"><strong>Forms</strong></h2>
-<h3 id="text-fields">Text Fields</h3>
+<h3 id="forms"><strong>Forms</strong></h3>
+<h4 id="text-fields">Text Fields</h4>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 v3 uses Bootstrap 5&rsquo;s <code>.form-floating</code> for Text and Select fields.</li>
 <li>Introduced <code>.form-floating-with-icon</code> to support icons and spinners on Text and Select fields.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Classes <code>m-text-field</code>, <code>m-text-field-outline</code>, <code>static-label</code> &amp; <code>floating-label</code>
 have been removed.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Color class <code>primary-[color]</code> has been replaced with <code>base-[color]</code>.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Color class <code>accent-[color]</code> has been replaced with <code>primary-[color]</code>.</li>
 </ul>
-<h3 id="select-fields">Select Fields</h3>
+<h4 id="select-fields">Select Fields</h4>
 <ul>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 v3 uses Bootstrap&rsquo;s dropdown component for the Select options.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 v3 uses Bootstrap 5&rsquo;s <code>.form-floating</code> for Text and Select fields.</li>
 <li>Introduced <code>.form-floating-with-icon</code> to support icons and spinners on Text and Select fields.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Classes <code>m-select</code>, <code>m-select-outline</code>, <code>static-label</code> &amp; <code>floating-label</code> have been removed.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Color class <code>primary-[color]</code> has been replaced with <code>base-[color]</code>.</li>
-<li><span class="badge bg-danger rounded-pill me-1">Breaking</span>
+<li><span class="badge text-bg-danger rounded-pill me-1">Breaking</span>
 Color class <code>accent-[color]</code> has been replaced with <code>primary-[color]</code>.</li>
 </ul>
-<h3 id="input-groups">Input groups</h3>
+<h4 id="input-groups">Input groups</h4>
 <p>v3 supports <code>.input-group</code> on Text and Select fields.</p>
-<h3 id="form-validation">Form validation</h3>
+<h4 id="form-validation">Form validation</h4>
 <p>v3 supports form validation.</p>
-<h3 id="checkbox-radio--switch">Checkbox, Radio &amp; Switch</h3>
-<p><span class="badge bg-danger rounded-pill me-1">Breaking</span> Color classes <code>input-[color]</code> have been dropped.</p>
+<h4 id="checkbox-radio--switch">Checkbox, Radio &amp; Switch</h4>
+<p><span class="badge text-bg-danger rounded-pill me-1">Breaking</span> Color classes <code>input-[color]</code> have been dropped.</p>
 
   </div>
 
@@ -595,30 +635,44 @@ Color class <code>accent-[color]</code> has been replaced with <code>primary-[co
             <label class="text-secondary-emphasis mb-2">CONTENTS</label>
             <nav id="TableOfContents">
   <ul class="nav flex-column">
-    <li class="nav-item"><a class="nav-link" href="#utilities"><strong>Utilities</strong></a>
+    <li class="nav-item"><a class="nav-link" href="#v310-alpha1"><strong>v3.1.0-alpha1</strong></a></li>
+    <li class="nav-item"><a class="nav-link" href="#docs">Docs</a></li>
+    <li class="nav-item"><a class="nav-link" href="#customization">Customization</a>
       <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#color-modes">Color modes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#theming">Theming</a></li>
         <li class="nav-item"><a class="nav-link" href="#colors">Colors</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ripple">Ripple</a></li>
-        <li class="nav-item"><a class="nav-link" href="#shadows">Shadows</a></li>
       </ul>
     </li>
-    <li class="nav-item"><a class="nav-link" href="#components"><strong>Components</strong></a>
+    <li class="nav-item"><a class="nav-link" href="#components">Components</a></li>
+    <li class="nav-item"><a class="nav-link" href="#v300"><strong>v3.0.0</strong></a>
       <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" href="#buttons">Buttons</a></li>
-        <li class="nav-item"><a class="nav-link" href="#floating-action-buttons">Floating Action Buttons</a></li>
-        <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
-        <li class="nav-item"><a class="nav-link" href="#drawer--sidebar">Drawer / Sidebar</a></li>
-        <li class="nav-item"><a class="nav-link" href="#progress-bars">Progress bars</a></li>
-        <li class="nav-item"><a class="nav-link" href="#spinners">Spinners</a></li>
-      </ul>
-    </li>
-    <li class="nav-item"><a class="nav-link" href="#forms"><strong>Forms</strong></a>
-      <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" href="#text-fields">Text Fields</a></li>
-        <li class="nav-item"><a class="nav-link" href="#select-fields">Select Fields</a></li>
-        <li class="nav-item"><a class="nav-link" href="#input-groups">Input groups</a></li>
-        <li class="nav-item"><a class="nav-link" href="#form-validation">Form validation</a></li>
-        <li class="nav-item"><a class="nav-link" href="#checkbox-radio--switch">Checkbox, Radio &amp; Switch</a></li>
+        <li class="nav-item"><a class="nav-link" href="#utilities"><strong>Utilities</strong></a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#colors-1">Colors</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ripple">Ripple</a></li>
+            <li class="nav-item"><a class="nav-link" href="#shadows">Shadows</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#components-1"><strong>Components</strong></a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#buttons">Buttons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#floating-action-buttons">Floating Action Buttons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
+            <li class="nav-item"><a class="nav-link" href="#drawer--sidebar">Drawer / Sidebar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#progress-bars">Progress bars</a></li>
+            <li class="nav-item"><a class="nav-link" href="#spinners">Spinners</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#forms"><strong>Forms</strong></a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#text-fields">Text Fields</a></li>
+            <li class="nav-item"><a class="nav-link" href="#select-fields">Select Fields</a></li>
+            <li class="nav-item"><a class="nav-link" href="#input-groups">Input groups</a></li>
+            <li class="nav-item"><a class="nav-link" href="#form-validation">Form validation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#checkbox-radio--switch">Checkbox, Radio &amp; Switch</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

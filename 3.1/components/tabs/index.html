@@ -819,9 +819,23 @@
 </div>
 
 <h2 id="color-options">Color options</h2>
+<p>Make use of <code>--bs-nav-tabs-link-color</code>, <code>--bs-nav-tabs-link-hover-bg</code>, <code>--bs-nav-tabs-link-active-color</code> &amp;
+<code>--bs-nav-tabs-link-active-hover-bg</code> css variables to personalize it according to your brand&rsquo;s style.</p>
+<div class="d-flex align-items-center bg-danger bg-opacity-25 my-4 rounded-3 overflow-hidden">
+  <div class="d-flex align-items-center align-self-stretch text-bg-danger bg-opacity-100 p-3 fs-4">
+    <i class="bi bi-info-circle-fill"></i>
+  </div>
+  <div class="flex-grow-1 p-3 text-body">
+    Classes <b>.base-[color]</b> & <b>.primary-[color]</b> are depricated in v3.1.0
+  </div>
+</div>
 <div class="border mb-4 rounded"><div class="p-4 ">
 
-<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist" 
+    style="--bs-nav-tabs-link-color: var(--bs-success-active); 
+           --bs-nav-tabs-link-hover-bg: var(--bs-success-subtle);
+           --bs-nav-tabs-link-active-color: var(--bs-tertiary-hover); 
+           --bs-nav-tabs-link-active-hover-bg: var(--bs-tertiary-subtle); ">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple1">Apple</button>
   </li>
@@ -857,7 +871,11 @@
           <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
         </button>
       </div>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-justified primary-danger base-primary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-justified&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span> 
+</span></span><span class="line"><span class="cl">    <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-nav-tabs-link-color: var(--bs-success-active); 
+</span></span></span><span class="line"><span class="cl"><span class="s">           --bs-nav-tabs-link-hover-bg: var(--bs-success-subtle);
+</span></span></span><span class="line"><span class="cl"><span class="s">           --bs-nav-tabs-link-active-color: var(--bs-tertiary-hover); 
+</span></span></span><span class="line"><span class="cl"><span class="s">           --bs-nav-tabs-link-active-hover-bg: var(--bs-tertiary-subtle); &#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#apple1&#34;</span><span class="p">&gt;</span>Apple<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -880,7 +898,7 @@
 <h2 id="tabs-split-to-multiple-rows-when-there-are-too-many-to-fit-on-a-row">Tabs split to multiple rows when there are too many to fit on a row</h2>
 <div class="border mb-4 rounded"><div class="p-4 ">
 
-<ul class="nav nav-tabs nav-justified base-primary primary-danger" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple2">Apple</button>
   </li>
@@ -958,7 +976,7 @@
           <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
         </button>
       </div>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-justified base-primary primary-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-justified&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#apple2&#34;</span><span class="p">&gt;</span>Apple<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1145,7 +1163,11 @@ for example, <code>Modal</code>, <code>Collapse</code>, <code>Offcanvas</code>, 
 <h2 id="ripple-effect-on-tabs-with-custom-color">Ripple effect on tabs with custom color</h2>
 <div class="border mb-4 rounded"><div class="p-4 ">
 
-<ul class="nav nav-tabs nav-justified primary-danger base-primary" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist" 
+    style="--bs-nav-tabs-link-color: var(--bs-success-active); 
+           --bs-nav-tabs-link-hover-bg: var(--bs-success-subtle);
+           --bs-nav-tabs-link-active-color: var(--bs-tertiary-hover); 
+           --bs-nav-tabs-link-active-hover-bg: var(--bs-tertiary-subtle); ">
   <li class="nav-item" role="presentation">
     <button class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#apple4">
       Apple
@@ -1189,7 +1211,11 @@ for example, <code>Modal</code>, <code>Collapse</code>, <code>Offcanvas</code>, 
           <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
         </button>
       </div>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-justified primary-danger base-primary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-justified&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span> 
+</span></span><span class="line"><span class="cl">    <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-nav-tabs-link-color: var(--bs-success-active); 
+</span></span></span><span class="line"><span class="cl"><span class="s">           --bs-nav-tabs-link-hover-bg: var(--bs-success-subtle);
+</span></span></span><span class="line"><span class="cl"><span class="s">           --bs-nav-tabs-link-active-color: var(--bs-tertiary-hover); 
+</span></span></span><span class="line"><span class="cl"><span class="s">           --bs-nav-tabs-link-active-hover-bg: var(--bs-tertiary-subtle); &#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#apple4&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Apple
