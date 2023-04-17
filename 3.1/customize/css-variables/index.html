@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+<script src="/materialstyle/3.1/js/color-modes/index.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Material Design UI Library based on Bootstrap">
+<meta name="author" content="Neeraj Kumar Das">
+<meta name="generator" content="Hugo 0.111.3">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="3.1">
+
+<meta name="theme-color" content="#6f42c1">
+
+<meta property="og:url" content="https://materialstyle.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CSS variables · Material Style v3.1">
+<meta property="og:description" content="A Material Design UI Library based on Bootstrap">
+<meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg">
+
+<title>CSS variables · Material Style v3.1</title>
+
+<link rel="canonical" href="http://materialstyle.github.io/materialstyle/3.1/customize/css-variables/">
+<link rel="icon" href="/materialstyle/assets/images/favicon.ico" type="image/x-icon">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link href="/materialstyle/3.1/dist/css/materialstyle.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<link rel="preconnect" href="https://3EHDQBJAE1-dsn.algolia.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/materialstyle/3.1/assets/css/styles.css" rel="stylesheet">
+
+
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+  <nav id="site-home-top-nav" class="navbar fixed-top">
+  
+  <div class="d-flex justify-content-center align-items-center w-100 visually-hidden-focusable overflow-hidden" >
+    <a class="link-light p-2 m-1 rounded" href="#content">Skip to main content</a>
+    <a class="link-light d-none d-lg-inline-block p-2 m-1 rounded" href="#sidebar">Skip to sidebar</a>
+  </div>
+
+  <div class="container-fluid gap-3">
+    <div class="d-flex align-items-center">
+        <button class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#site-offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand d-flex align-items-center py-0 me-0 rounded" href="/">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <div id="site-name" class="text-white ml-1">Material Style</div>
+        </a>
+    </div>
+
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
+      <li class="nav-item dropdown">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+          v3.1
+          <span class="ripple-surface"></span>
+        </button>
+        <ul class="dropdown-menu position-absolute" style="--bs-dropdown-min-width: auto;">
+          <li><a class="dropdown-item" href="/materialstyle/3.0/">3.0</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="/docs/2.0/">2.0</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="/docs/1.2/">1.2</a></li>
+          <li><a class="dropdown-item" href="/docs/1.1/">1.1</a></li>
+          <li><a class="dropdown-item" href="/docs/1.0/">1.0</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-1 py-0" id="docsearch">
+          <i class="bi bi-search text-white fs-4"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center"
+                id="theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                data-bs-display="static">
+          <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+          <span class="visually-hidden">Toggle theme</span>
+          <span class="ripple-surface"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="theme" style="--bs-dropdown-min-width: 8rem;">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+              Light
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+              Dark
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+              Auto
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <aside class="offcanvas-start offcanvas-lg offcanvas-fixed"
+       data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
+  <div class="offcanvas-header">
+    <a class="offcanvas-title d-flex align-items-center text-white py-0" href="/">
+      <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
+           alt="Material Style Logo" style="width:40px; height:40px;">Material Style
+    </a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            data-bs-target="#site-offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body"><ul class="nav flex-column" id="sidebar">
+
+          <li class="nav-item list-heading"><b>Getting started</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/installation/">Installation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/starter-templates/">Starter Templates</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/browsers-and-devices/">Browsers and Devices</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Customize</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/sass/">Sass</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill  active"
+                 href="/materialstyle/3.1/customize/css-variables/">CSS variables</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/options/">Options</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/components/">Components</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Colors</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/colors/theme-colors/">Theme Colors</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/colors/color-modes/">Color modes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/colors/theming/">Theming</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/colors/background-color/">Background color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/colors/text-color/">Text color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/colors/colored-links/">Colored Links</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Utilities</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Forms</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/text-fields/">Text Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/select-fields/">Select Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/checkbox-radio-switch/">Checkbox, Radio &amp; Switch</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/input-groups/">Input Groups</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/range/">Range</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/validation/">Validation</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Components</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/accordion/">Accordion</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/alerts/">Alerts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/badges/">Badges</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/breadcrumb/">Breadcrumb</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/buttons/">Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/cards/">Cards</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/carousel/">Carousel</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/close-button/">Close Button</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/collapse/">Collapse</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/dropdowns/">Dropdowns</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/floating-action-buttons/">Floating Action Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/lists/">Lists</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/modal/">Modal</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/navbar/">Navbar</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/pagination/">Pagination</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/placeholders/">Placeholders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/popovers/">Popovers</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/progress-bars/">Progress Bars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/scrollspy/">Scrollspy</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/snackbars/">Snackbars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/spinners/">Spinners</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tables/">Tables</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tabs/">Tabs</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/toasts/">Toasts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tooltips/">Tooltips</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Demos</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-end/">Drawer End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-responsive/">Drawer Responsive</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-responsive-end/">Drawer Responsive End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-fixed-top/">Navbar Fixed Top</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-fixed-bottom/">Navbar Fixed Bottom</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-auto-hide/">Navbar Auto Hide</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item my-1">
+            <a class="nav-link rounded-pill "
+               href="/materialstyle/3.1/migration">Migration</a>
+          </li>
+    </ul>
+  </div>
+</aside>
+
+
+  <div class="offcanvas-pushed-content pt-4" style="margin-top: var(--navbar-fixed-height);">
+    <div class="container" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-root-margin="0px 0px -80%">
+      
+<div class="component-page">
+
+  <div class="component-showcase">
+    <h1 id="content">CSS variables</h1>
+    <p class="fs-4 ms-0 mb-4 page-description">
+Use Material Style's CSS custom properties for fast and forward-looking design and development. 
+</p>
+<p>Material Style includes many <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom properties (variables)</a> in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser&rsquo;s inspector, a code sandbox, or general prototyping.</p>
+<p><strong>All our custom properties are prefixed with <code>bs-</code></strong> to avoid conflicts with third party CSS.</p>
+<h2 id="root-variables">Root variables</h2>
+<p>Here are the variables we include (note that the <code>:root</code> is required) that can be accessed anywhere Material Style&rsquo;s CSS is loaded. They&rsquo;re located in our <code>_root.scss</code> file and included in our compiled dist files.</p>
+<h3 id="default">Default</h3>
+<p>These CSS variables are available everywhere, regardless of color mode.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">:</span><span class="nd">root</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">data-bs-theme</span><span class="o">=</span><span class="nt">light</span><span class="o">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-0</span><span class="p">:</span> <span class="mh">#f8f9fa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-1</span><span class="p">:</span> <span class="mh">#f1f3f5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-2</span><span class="p">:</span> <span class="mh">#e9ecef</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-3</span><span class="p">:</span> <span class="mh">#dee2e6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-4</span><span class="p">:</span> <span class="mh">#ced4da</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-5</span><span class="p">:</span> <span class="mh">#adb5bd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-6</span><span class="p">:</span> <span class="mh">#868e96</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-7</span><span class="p">:</span> <span class="mh">#495057</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-8</span><span class="p">:</span> <span class="mh">#343a40</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-9</span><span class="p">:</span> <span class="mh">#212529</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-10</span><span class="p">:</span> <span class="mh">#16191d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-11</span><span class="p">:</span> <span class="mh">#0d0f12</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gray-12</span><span class="p">:</span> <span class="mh">#030507</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary</span><span class="p">:</span> <span class="mh">#0d6efd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-hover</span><span class="p">:</span> <span class="mh">#0b5ed7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-active</span><span class="p">:</span> <span class="mh">#0a58ca</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-subtle</span><span class="p">:</span> <span class="mh">#cfe2ff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-subtle-hover</span><span class="p">:</span> <span class="mh">#aaccfe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-subtle-active</span><span class="p">:</span> <span class="mh">#9ec5fe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-emphasis</span><span class="p">:</span> <span class="mh">#084298</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-emphasis-hover</span><span class="p">:</span> <span class="mh">#063272</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-primary</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-border-subtle</span><span class="p">:</span> <span class="mh">#9ec5fe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary</span><span class="p">:</span> <span class="mh">#71767b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-hover</span><span class="p">:</span> <span class="mh">#606469</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-active</span><span class="p">:</span> <span class="mh">#5a5e62</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-subtle</span><span class="p">:</span> <span class="mh">#e3e4e5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-subtle-hover</span><span class="p">:</span> <span class="mh">#cdcfd1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-subtle-active</span><span class="p">:</span> <span class="mh">#c6c8ca</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-emphasis</span><span class="p">:</span> <span class="mh">#44474a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-emphasis-hover</span><span class="p">:</span> <span class="mh">#333537</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-secondary</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-border-subtle</span><span class="p">:</span> <span class="mh">#c6c8ca</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary</span><span class="p">:</span> <span class="mh">#d63384</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-hover</span><span class="p">:</span> <span class="mh">#b62b70</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-active</span><span class="p">:</span> <span class="mh">#ab296a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-subtle</span><span class="p">:</span> <span class="mh">#f7d6e6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-subtle-hover</span><span class="p">:</span> <span class="mh">#f1b8d4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-subtle-active</span><span class="p">:</span> <span class="mh">#efadce</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-emphasis</span><span class="p">:</span> <span class="mh">#801f4f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-emphasis-hover</span><span class="p">:</span> <span class="mh">#60173b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-tertiary</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-border-subtle</span><span class="p">:</span> <span class="mh">#efadce</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success</span><span class="p">:</span> <span class="mh">#198754</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-hover</span><span class="p">:</span> <span class="mh">#157347</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-active</span><span class="p">:</span> <span class="mh">#146c43</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-subtle</span><span class="p">:</span> <span class="mh">#d1e7dd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-subtle-hover</span><span class="p">:</span> <span class="mh">#afd5c3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-subtle-active</span><span class="p">:</span> <span class="mh">#a3cfbb</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-emphasis</span><span class="p">:</span> <span class="mh">#0f5132</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-emphasis-hover</span><span class="p">:</span> <span class="mh">#0b3d26</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-success</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-border-subtle</span><span class="p">:</span> <span class="mh">#a3cfbb</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info</span><span class="p">:</span> <span class="mh">#0dcaf0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-hover</span><span class="p">:</span> <span class="mh">#31d2f2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-active</span><span class="p">:</span> <span class="mh">#3dd5f3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-subtle</span><span class="p">:</span> <span class="mh">#cff4fc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-subtle-hover</span><span class="p">:</span> <span class="mh">#aaecfa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-subtle-active</span><span class="p">:</span> <span class="mh">#9eeaf9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-emphasis</span><span class="p">:</span> <span class="mh">#087990</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-emphasis-hover</span><span class="p">:</span> <span class="mh">#065b6c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-info</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-border-subtle</span><span class="p">:</span> <span class="mh">#9eeaf9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning</span><span class="p">:</span> <span class="mh">#ffc107</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-hover</span><span class="p">:</span> <span class="mh">#ffca2c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-active</span><span class="p">:</span> <span class="mh">#ffcd39</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-subtle</span><span class="p">:</span> <span class="mh">#fff3cd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-subtle-hover</span><span class="p">:</span> <span class="mh">#ffe9a8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-subtle-active</span><span class="p">:</span> <span class="mh">#ffe69c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-emphasis</span><span class="p">:</span> <span class="mh">#997404</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-emphasis-hover</span><span class="p">:</span> <span class="mh">#735703</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-warning</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-border-subtle</span><span class="p">:</span> <span class="mh">#ffe69c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger</span><span class="p">:</span> <span class="mh">#dc3545</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-hover</span><span class="p">:</span> <span class="mh">#bb2d3b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-active</span><span class="p">:</span> <span class="mh">#b02a37</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-subtle</span><span class="p">:</span> <span class="mh">#f8d7da</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-subtle-hover</span><span class="p">:</span> <span class="mh">#f3b8be</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-subtle-active</span><span class="p">:</span> <span class="mh">#f1aeb5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-emphasis</span><span class="p">:</span> <span class="mh">#842029</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-emphasis-hover</span><span class="p">:</span> <span class="mh">#63181f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-danger</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-border-subtle</span><span class="p">:</span> <span class="mh">#f1aeb5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light</span><span class="p">:</span> <span class="mh">#f8f9fa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-hover</span><span class="p">:</span> <span class="mh">#f9fafb</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-active</span><span class="p">:</span> <span class="mh">#f9fafb</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-subtle</span><span class="p">:</span> <span class="mh">#fefefe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-subtle-hover</span><span class="p">:</span> <span class="mh">#fdfdfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-subtle-active</span><span class="p">:</span> <span class="mh">#fcfdfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-emphasis</span><span class="p">:</span> <span class="mh">#959596</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-emphasis-hover</span><span class="p">:</span> <span class="mh">#707071</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-light</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-border-subtle</span><span class="p">:</span> <span class="mh">#fcfdfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark</span><span class="p">:</span> <span class="mh">#212529</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-hover</span><span class="p">:</span> <span class="mh">#1c1f23</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-active</span><span class="p">:</span> <span class="mh">#1a1e21</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-subtle</span><span class="p">:</span> <span class="mh">#d3d3d4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-subtle-hover</span><span class="p">:</span> <span class="mh">#b1b3b4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-subtle-active</span><span class="p">:</span> <span class="mh">#a6a8a9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-emphasis</span><span class="p">:</span> <span class="mh">#141619</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-emphasis-hover</span><span class="p">:</span> <span class="mh">#0f1112</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-dark</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-border-subtle</span><span class="p">:</span> <span class="mh">#a6a8a9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-rgb</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">253</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-rgb</span><span class="p">:</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">123</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-rgb</span><span class="p">:</span> <span class="mi">214</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">132</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-rgb</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">84</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-rgb</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">240</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-rgb</span><span class="p">:</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">193</span><span class="p">,</span> <span class="mi">7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-rgb</span><span class="p">:</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">69</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-rgb</span><span class="p">:</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">250</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-rgb</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-white-rgb</span><span class="p">:</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-black-rgb</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-font-sans-serif</span><span class="p">:</span> <span class="n">system-ui</span><span class="p">,</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="s2">&#34;Noto Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Liberation Sans&#34;</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">,</span> <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="p">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="p">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="p">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-font-monospace</span><span class="p">:</span> <span class="n">SFMono-Regular</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s2">&#34;Liberation Mono&#34;</span><span class="p">,</span> <span class="s2">&#34;Courier New&#34;</span><span class="p">,</span> <span class="kc">monospace</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-gradient</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">),</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-font-family</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="kc">sans-serif</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-font-weight</span><span class="p">:</span> <span class="mi">400</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-line-height</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-color</span><span class="p">:</span> <span class="mh">#343a40</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-color-rgb</span><span class="p">:</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">64</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-bg</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-bg-rgb</span><span class="p">:</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-color</span><span class="p">:</span> <span class="mh">#212529</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-color-rgb</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-bg</span><span class="p">:</span> <span class="mh">#f1f3f5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-bg-rgb</span><span class="p">:</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">245</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-bg-hover</span><span class="p">:</span> <span class="mh">#eceef0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-emphasis-color</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-emphasis-color-rgb</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-muted-color</span><span class="p">:</span> <span class="mh">#868e96</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-link-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-link-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-link-hover-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="n">hover</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-code-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">tertiary</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-highlight-bg</span><span class="p">:</span> <span class="mh">#fff3cd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-width</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-style</span><span class="p">:</span> <span class="kc">solid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-color</span><span class="p">:</span> <span class="mh">#e9ecef</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-color-translucent</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.175</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-radius</span><span class="p">:</span> <span class="mf">0.375</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-radius-sm</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-radius-lg</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-radius-xl</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-radius-xxl</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-radius-2xl</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="o">-</span><span class="n">xxl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-radius-pill</span><span class="p">:</span> <span class="mi">50</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-box-shadow</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">shadow</span><span class="mi">-8</span><span class="n">dp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-box-shadow-sm</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">shadow</span><span class="mi">-1</span><span class="n">dp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-box-shadow-lg</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">shadow</span><span class="mi">-18</span><span class="n">dp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-box-shadow-inset</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.075</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-form-control-bg</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">body</span><span class="o">-</span><span class="n">bg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-form-control-disabled-bg</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">surface</span><span class="o">-</span><span class="n">bg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-breakpoint-xs</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-breakpoint-sm</span><span class="p">:</span> <span class="mi">576</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-breakpoint-md</span><span class="p">:</span> <span class="mi">768</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-breakpoint-lg</span><span class="p">:</span> <span class="mi">992</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-breakpoint-xl</span><span class="p">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-breakpoint-xxl</span><span class="p">:</span> <span class="mi">1400</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-1dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">-1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-2dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">-2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-3dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">-2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-4dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">-1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-5dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">-1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">14</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-6dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">-1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">18</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-7dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">-2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">16</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-8dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">-3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">14</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-9dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">-3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">16</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-10dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">-3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">14</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">18</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-11dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">-4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">11</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-12dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">-4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">12</span><span class="kt">px</span> <span class="mi">17</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">22</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-13dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">-4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">13</span><span class="kt">px</span> <span class="mi">19</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">24</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-14dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">-4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">14</span><span class="kt">px</span> <span class="mi">21</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">26</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-15dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">-5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">22</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">28</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-16dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">-5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="mi">24</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">30</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-17dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">11</span><span class="kt">px</span> <span class="mi">-5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">17</span><span class="kt">px</span> <span class="mi">26</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">32</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-18dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">11</span><span class="kt">px</span> <span class="mi">-5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">18</span><span class="kt">px</span> <span class="mi">28</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">34</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-19dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span> <span class="mi">-6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">19</span><span class="kt">px</span> <span class="mi">29</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">36</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-20dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">13</span><span class="kt">px</span> <span class="mi">-6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">31</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">38</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-21dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">13</span><span class="kt">px</span> <span class="mi">-6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">21</span><span class="kt">px</span> <span class="mi">33</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">40</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-22dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">14</span><span class="kt">px</span> <span class="mi">-6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">22</span><span class="kt">px</span> <span class="mi">35</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">42</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-23dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">11</span><span class="kt">px</span> <span class="mi">14</span><span class="kt">px</span> <span class="mi">-7</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">23</span><span class="kt">px</span> <span class="mi">36</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">44</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-shadow-24dp</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">11</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">-7</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.2</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">24</span><span class="kt">px</span> <span class="mi">38</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.14</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">46</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-focus-ring-width</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-focus-ring-opacity</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-focus-ring-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="n">rgb</span><span class="p">),</span> <span class="mf">0.25</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<h3 id="dark-mode">Dark mode</h3>
+<p>These variables are scoped to our built-in dark mode.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">[</span><span class="nt">data-bs-theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">color-scheme</span><span class="p">:</span> <span class="n">dark</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-color</span><span class="p">:</span> <span class="mh">#ced4da</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-color-rgb</span><span class="p">:</span> <span class="mi">206</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">218</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-bg</span><span class="p">:</span> <span class="mh">#16191d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-body-bg-rgb</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">29</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-color</span><span class="p">:</span> <span class="mh">#dee2e6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-color-rgb</span><span class="p">:</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">230</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-bg</span><span class="p">:</span> <span class="mh">#212529</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-bg-rgb</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-surface-bg-hover</span><span class="p">:</span> <span class="mh">#25292d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-emphasis-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-emphasis-color-rgb</span><span class="p">:</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-muted-color</span><span class="p">:</span> <span class="mh">#868e96</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary</span><span class="p">:</span> <span class="mh">#62a1fe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-rgb</span><span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">254</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-hover</span><span class="p">:</span> <span class="mh">#81b4fe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-active</span><span class="p">:</span> <span class="mh">#91bdfe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-subtle</span><span class="p">:</span> <span class="mh">#052c65</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-subtle-hover</span><span class="p">:</span> <span class="mh">#063272</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-subtle-active</span><span class="p">:</span> <span class="mh">#084298</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-emphasis</span><span class="p">:</span> <span class="mh">#92befe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-emphasis-hover</span><span class="p">:</span> <span class="mh">#86b7fe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-primary</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-primary-border-subtle</span><span class="p">:</span> <span class="mh">#084298</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary</span><span class="p">:</span> <span class="mh">#a3a6a9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-rgb</span><span class="p">:</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">166</span><span class="p">,</span> <span class="mi">169</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-hover</span><span class="p">:</span> <span class="mh">#b5b8ba</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-active</span><span class="p">:</span> <span class="mh">#bfc1c3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-subtle</span><span class="p">:</span> <span class="mh">#2d2f31</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-subtle-hover</span><span class="p">:</span> <span class="mh">#333537</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-subtle-active</span><span class="p">:</span> <span class="mh">#44474a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-emphasis</span><span class="p">:</span> <span class="mh">#bfc1c4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-emphasis-hover</span><span class="p">:</span> <span class="mh">#b8bbbd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-secondary</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-secondary-border-subtle</span><span class="p">:</span> <span class="mh">#44474a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary</span><span class="p">:</span> <span class="mh">#e47aaf</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-rgb</span><span class="p">:</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">175</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-hover</span><span class="p">:</span> <span class="mh">#e995bf</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-active</span><span class="p">:</span> <span class="mh">#eca2c7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-subtle</span><span class="p">:</span> <span class="mh">#561435</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-subtle-hover</span><span class="p">:</span> <span class="mh">#60173b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-subtle-active</span><span class="p">:</span> <span class="mh">#801f4f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-emphasis</span><span class="p">:</span> <span class="mh">#eda3c8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-emphasis-hover</span><span class="p">:</span> <span class="mh">#eb99c2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-tertiary</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-tertiary-border-subtle</span><span class="p">:</span> <span class="mh">#801f4f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success</span><span class="p">:</span> <span class="mh">#6ab190</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-rgb</span><span class="p">:</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">144</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-hover</span><span class="p">:</span> <span class="mh">#88c1a6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-active</span><span class="p">:</span> <span class="mh">#97c8b1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-subtle</span><span class="p">:</span> <span class="mh">#0a3622</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-subtle-hover</span><span class="p">:</span> <span class="mh">#0b3d26</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-subtle-active</span><span class="p">:</span> <span class="mh">#0f5132</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-emphasis</span><span class="p">:</span> <span class="mh">#98c9b2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-emphasis-hover</span><span class="p">:</span> <span class="mh">#8cc3aa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-success</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-success-border-subtle</span><span class="p">:</span> <span class="mh">#0f5132</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info</span><span class="p">:</span> <span class="mh">#62ddf5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-rgb</span><span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">245</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-hover</span><span class="p">:</span> <span class="mh">#81e4f7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-active</span><span class="p">:</span> <span class="mh">#91e7f8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-subtle</span><span class="p">:</span> <span class="mh">#055160</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-subtle-hover</span><span class="p">:</span> <span class="mh">#065b6c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-subtle-active</span><span class="p">:</span> <span class="mh">#087990</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-emphasis</span><span class="p">:</span> <span class="mh">#92e7f8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-emphasis-hover</span><span class="p">:</span> <span class="mh">#86e5f8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-info</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-info-border-subtle</span><span class="p">:</span> <span class="mh">#087990</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning</span><span class="p">:</span> <span class="mh">#ffd75e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-rgb</span><span class="p">:</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">94</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-hover</span><span class="p">:</span> <span class="mh">#ffdf7e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-active</span><span class="p">:</span> <span class="mh">#ffe38e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-subtle</span><span class="p">:</span> <span class="mh">#664d03</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-subtle-hover</span><span class="p">:</span> <span class="mh">#735703</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-subtle-active</span><span class="p">:</span> <span class="mh">#997404</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-emphasis</span><span class="p">:</span> <span class="mh">#ffe38f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-emphasis-hover</span><span class="p">:</span> <span class="mh">#ffe083</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-warning</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-warning-border-subtle</span><span class="p">:</span> <span class="mh">#997404</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger</span><span class="p">:</span> <span class="mh">#e87c86</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-rgb</span><span class="p">:</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">134</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-hover</span><span class="p">:</span> <span class="mh">#ed969e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-active</span><span class="p">:</span> <span class="mh">#efa3aa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-subtle</span><span class="p">:</span> <span class="mh">#58151c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-subtle-hover</span><span class="p">:</span> <span class="mh">#63181f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-subtle-active</span><span class="p">:</span> <span class="mh">#842029</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-emphasis</span><span class="p">:</span> <span class="mh">#efa4ab</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-emphasis-hover</span><span class="p">:</span> <span class="mh">#ee9aa2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-danger</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-danger-border-subtle</span><span class="p">:</span> <span class="mh">#842029</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light</span><span class="p">:</span> <span class="mh">#fafbfc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-rgb</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">252</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-hover</span><span class="p">:</span> <span class="mh">#fbfcfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-active</span><span class="p">:</span> <span class="mh">#fcfcfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-subtle</span><span class="p">:</span> <span class="mh">#636464</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-subtle-hover</span><span class="p">:</span> <span class="mh">#707071</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-subtle-active</span><span class="p">:</span> <span class="mh">#959596</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-emphasis</span><span class="p">:</span> <span class="mh">#fcfcfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-emphasis-hover</span><span class="p">:</span> <span class="mh">#fcfcfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-light</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-light-border-subtle</span><span class="p">:</span> <span class="mh">#959596</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark</span><span class="p">:</span> <span class="mh">#6f7174</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-rgb</span><span class="p">:</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">116</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-hover</span><span class="p">:</span> <span class="mh">#595a5d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-active</span><span class="p">:</span> <span class="mh">#4e4f51</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-subtle</span><span class="p">:</span> <span class="mh">#0d0f10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-subtle-hover</span><span class="p">:</span> <span class="mh">#0f1112</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-subtle-active</span><span class="p">:</span> <span class="mh">#141619</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-emphasis</span><span class="p">:</span> <span class="mh">#9b9d9f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-emphasis-hover</span><span class="p">:</span> <span class="mh">#909294</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-text-on-dark</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-dark-border-subtle</span><span class="p">:</span> <span class="mh">#141619</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-heading-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-color</span><span class="p">:</span> <span class="mh">#495057</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--bs-border-color-translucent</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<h2 id="component-variables">Component variables</h2>
+<p>Material Style is making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren&rsquo;t inherited in places like nested tables, and allow some basic restyling and extending of our components after Sass compilation.</p>
+<p>Whenever possible, we&rsquo;ll assign CSS variables at the base component level (e.g., <code>.navbar</code> for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications in future updates.</p>
+<h2 id="prefix">Prefix</h2>
+<p>Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the <code>--</code> that&rsquo;s required on every CSS variable.</p>
+<p>Customize the prefix via the <code>$prefix</code> Sass variable. By default, it&rsquo;s set to <code>bs-</code> (note the trailing dash).</p>
+<h2 id="examples">Examples</h2>
+<p>CSS variables offer similar flexibility to Sass&rsquo;s variables, but without the need for compilation before being served to the browser. For example, here we&rsquo;re resetting our page&rsquo;s font and link styles with CSS variables.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="o">/</span><span class="mf">1.5</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="kc">sans-serif</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">tertiary</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<h2 id="focus-variables">Focus variables</h2>
+<p>Material Style provides custom <code>:focus</code> styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. We do not yet globally override all <code>:focus</code> styles.</p>
+<p>In our Sass, we set default values that can be customized before compiling.</p>
+<div class="d-flex align-items-center pe-2 py-1">
+    <small class="font-monospace text-muted">scss/_variables.scss</small>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$focus-ring-width</span><span class="o">:</span>      <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-opacity</span><span class="o">:</span>    <span class="mf">.25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-color</span><span class="o">:</span>      <span class="nf">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">primary-rgb</span><span class="p">)</span><span class="o">,</span> <span class="nv">$focus-ring-opacity</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-blur</span><span class="o">:</span>       <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="nv">$focus-ring-blur</span> <span class="nv">$focus-ring-width</span> <span class="nv">$focus-ring-color</span><span class="p">;</span>
+</span></span></code></pre></div>
+<p>Those variables are then reassigned to <code>:root</code> level CSS variables that can be customized in real-time, including with options for <code>x</code> and <code>y</code> offsets (which default to their fallback value of <code>0</code>).</p>
+<p><div class="d-flex align-items-center pe-2 py-1">
+    <small class="font-monospace text-muted">scss/_root.scss</small>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-width</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-opacity</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-opacity</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div>
+<br></p>
+<h2 id="grid-breakpoints">Grid breakpoints</h2>
+<p>While we include our grid breakpoints as CSS variables (except for <code>xs</code>), be aware that <strong>CSS variables do not work in media queries</strong>. This is by design in the CSS spec for variables, but may change in coming years with support for <code>env()</code> variables. Check out <a href="https://stackoverflow.com/a/47212942">this Stack Overflow answer</a> for some helpful links. In the meantime, you can use these variables in other CSS situations, as well as in your JavaScript.</p>
+
+  </div>
+
+  <div class="component-map">
+    <div class="row">
+      <div class="col">
+        <div class="adspace bg-gray-100">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-md-top" style="top: 3rem;">
+      
+      <div class="row">
+        <div class="col">
+          <div class="ms-toc my-2">
+            <label class="text-secondary-emphasis mb-2">CONTENTS</label>
+            <nav id="TableOfContents">
+  <ul class="nav flex-column">
+    <li class="nav-item"><a class="nav-link" href="#root-variables">Root variables</a>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#default">Default</a></li>
+        <li class="nav-item"><a class="nav-link" href="#dark-mode">Dark mode</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#component-variables">Component variables</a></li>
+    <li class="nav-item"><a class="nav-link" href="#prefix">Prefix</a></li>
+    <li class="nav-item"><a class="nav-link" href="#examples">Examples</a></li>
+    <li class="nav-item"><a class="nav-link" href="#focus-variables">Focus variables</a></li>
+    <li class="nav-item"><a class="nav-link" href="#grid-breakpoints">Grid breakpoints</a></li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="row">
+        <div class="col">
+          <div class="ms-toc mt-4 mb-2">
+            <label class="text-secondary-emphasis mb-2">SEE ALSO</label>
+            <nav>
+              <ul class="nav flex-column">
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/components/">Components</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/options/">Options</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/sass/">Sass</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+    </div>
+    <footer id="site-footer" class="m-5 rounded-4rem">
+  <div class="container">
+    <div class="row py-4 px-2 px-sm-4">
+      <div class="d-flex flex-column justify-content-center align-items-center mb-2">
+        <a class="footer-brand text-body text-decoration-none text-center" href="/" aria-label="Material Style">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <span class="d-block">Material Style</span>
+        </a>
+      </div>
+      <p class="text-center">Material Style is a Material Design UI Library based on Bootstrap. Currently v3.1.0-alpha1</p>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="bg-dark m-0">
+    <div class="row py-4 px-2 px-sm-4">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
+        integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
+        crossorigin="anonymous"></script>
+
+<script src="/materialstyle/3.1/dist/js/materialstyle.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script src="/materialstyle/3.1/assets/js/site.min.js"></script>
+
+</body>
+</html>
