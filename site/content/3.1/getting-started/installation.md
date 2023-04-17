@@ -34,7 +34,7 @@ keywords: getting-started, installation
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
-        integrity="sha384-6sven7u0XhZKb96tL+LEfg6t1F2+7MhOEpRoddbDiMe5J3Xg1KLhfl+9OVaNQdH7" 
+        integrity="sha384-DlOXFEUJgOq983IwRUvHG+n6CsUjQ9t8eVTO8BGW9jJQ7a99uxeE8Ux1aIt2qLsS" 
         crossorigin="anonymous">
   ```
   
@@ -64,7 +64,7 @@ keywords: getting-started, installation
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://unpkg.com/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
-        integrity="sha384-6sven7u0XhZKb96tL+LEfg6t1F2+7MhOEpRoddbDiMe5J3Xg1KLhfl+9OVaNQdH7" 
+        integrity="sha384-DlOXFEUJgOq983IwRUvHG+n6CsUjQ9t8eVTO8BGW9jJQ7a99uxeE8Ux1aIt2qLsS" 
         crossorigin="anonymous">
   ```
   
