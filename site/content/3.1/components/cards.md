@@ -115,7 +115,7 @@ toc: true
       Just when the caterpillar thought the world was over, it became a Butterfly.
     </p>
   </div>
-  <div class="d-flex justify-content-between align-items-center flex-wrap p-2 bg-warning bg-opacity-10">
+  <div class="d-flex justify-content-between align-items-center flex-wrap p-2 bg-warning bg-opacity-10 rounded-bottom">
     <div>
       <button type="button" class="btn btn-outline-danger border-0">Read</button>
       <button type="button" class="btn btn-outline-danger border-0">Bookmark</button>
