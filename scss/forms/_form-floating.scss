@@ -3,8 +3,10 @@
   --#{$prefix}form-field-color: #{$form-field-color};
   --#{$prefix}form-field-bg: #{$form-field-bg};
   --#{$prefix}form-field-hover-bg: #{$form-field-hover-bg};
+  --#{$prefix}form-field-border-width: #{$form-field-border-width};
   --#{$prefix}form-field-border-color: #{$form-field-border-color};
   --#{$prefix}form-field-active-border-color: #{$form-field-active-border-color};
+  --#{$prefix}form-field-border-radius: #{$form-field-border-radius};
   --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator)};
   --#{$prefix}form-select-checkmark: #{escape-svg($form-select-checkmark)};
 
@@ -13,8 +15,8 @@
 
   &:not(.form-floating-outlined) {
     background-color: var(--#{$prefix}form-field-bg);
-    @include border-top-start-radius($border-radius);
-    @include border-top-end-radius($border-radius);
+    @include border-top-start-radius(var(--#{$prefix}form-field-border-radius));
+    @include border-top-end-radius(var(--#{$prefix}form-field-border-radius));
 
     &:hover {
       background-color: var(--#{$prefix}form-field-hover-bg);
@@ -102,7 +104,7 @@
       background-repeat: no-repeat;
       background-position: right var(--append-width, $form-select-padding-x) center;
       background-size: $form-select-bg-size;
-      @include border-radius($border-radius $border-radius 0 0);
+      @include border-radius(var(--#{$prefix}form-field-border-radius) var(--#{$prefix}form-field-border-radius) 0 0);
 
       &::after {
         display: none;
@@ -116,6 +118,7 @@
       --#{$prefix}dropdown-link-active-color: var(--#{$prefix}form-field-color);
       --#{$prefix}dropdown-link-active-bg: var(--#{$prefix}form-field-hover-bg);
       --#{$prefix}dropdown-link-active-hover-bg: var(--#{$prefix}form-field-hover-bg);
+      --#{$prefix}dropdown-border-radius: var(--#{$prefix}form-field-border-radius);
 
       width: 100%;
       max-height: 40vh;
@@ -168,7 +171,7 @@
     }
 
     ~ .m-line-ripple {
-      background-size: 100% 2px, 100% 1px;
+      background-size: 100% calc(var(--#{$prefix}form-field-border-width, 1px) + 1px), 100% var(--#{$prefix}form-field-border-width, 1px);
     }
   }
 
@@ -300,7 +303,7 @@
         > .m-notch-between,
         > .m-notch-after {
           border-color: var(--#{$prefix}form-field-active-border-color);
-          border-width: 2px;
+          border-width: calc(var(--#{$prefix}form-field-border-width, 1px) + 1px);
         }
 
         > .m-notch-between > label {
@@ -340,11 +343,11 @@
 .m-line-ripple {
   position: relative;
   width: 100%;
-  height: 2px;
+  height: calc(var(--#{$prefix}form-field-border-width, 1px) + 1px);
   // stylelint-disable value-list-comma-newline-after, value-list-comma-space-after
   background:
-    linear-gradient(var(--#{$prefix}form-field-active-border-color), var(--#{$prefix}form-field-active-border-color)) bottom/0 2px no-repeat border-box,
-    linear-gradient(var(--#{$prefix}form-field-border-color), var(--#{$prefix}form-field-border-color)) bottom/100% 1px no-repeat border-box transparent;
+    linear-gradient(var(--#{$prefix}form-field-active-border-color), var(--#{$prefix}form-field-active-border-color)) bottom/0 calc(var(--#{$prefix}form-field-border-width, 1px) + 1px) no-repeat border-box,
+    linear-gradient(var(--#{$prefix}form-field-border-color), var(--#{$prefix}form-field-border-color)) bottom/100% var(--#{$prefix}form-field-border-width, 1px) no-repeat border-box transparent;
   // stylelint-enable value-list-comma-newline-after, value-list-comma-space-after
   @include transition(.3s cubic-bezier(.4, 0, .2, 1));
 }
@@ -367,12 +370,12 @@
   .m-notch-between,
   .m-notch-after {
     pointer-events: none;
-    border: 1px solid var(--#{$prefix}form-field-border-color);
-    @include border-radius(.25rem);
+    border: var(--#{$prefix}form-field-border-width) solid var(--#{$prefix}form-field-border-color);
+    @include border-radius(var(--bs-border-radius));
   }
 
   .m-notch-before {
-    width: .75rem;
+    width: max(.75rem, var(--bs-border-radius));
     border-right: 0;
     @include border-top-end-radius(0);
     @include border-bottom-end-radius(0);
