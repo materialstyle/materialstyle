@@ -125,7 +125,6 @@
   > .form-floating:not(:first-child) > .m-notch > .m-notch-before,
   > .form-floating:not(:first-child) > .form-control,
   > .form-floating:not(:first-child) > .form-select {
-    margin-left: calc(#{$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
     @include border-start-radius(0);
   }
 
@@ -141,6 +140,14 @@
       border-top: 0;
       border-right: 0;
       border-left: 0;
+    }
+
+    > .input-group-text:not(:first-child) {
+      padding-right: calc(#{$input-border-width} + #{$input-group-addon-padding-x}); // stylelint-disable-line function-disallowed-list
+    }
+
+    > .input-group-text:not(:last-child) {
+      padding-left: calc(#{$input-border-width} + #{$input-group-addon-padding-x}); // stylelint-disable-line function-disallowed-list
     }
   }
 

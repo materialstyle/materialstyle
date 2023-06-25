@@ -1,9 +1,13 @@
 // stylelint-disable selector-max-class, selector-max-compound-selectors, selector-no-qualifying-type, function-disallowed-list
+.form-floating,
+.form-floating-with-icon {
+  --#{$prefix}form-field-border-width: #{$form-field-border-width};
+}
+
 .form-floating {
   --#{$prefix}form-field-color: #{$form-field-color};
   --#{$prefix}form-field-bg: #{$form-field-bg};
   --#{$prefix}form-field-hover-bg: #{$form-field-hover-bg};
-  --#{$prefix}form-field-border-width: #{$form-field-border-width};
   --#{$prefix}form-field-border-color: #{$form-field-border-color};
   --#{$prefix}form-field-active-border-color: #{$form-field-active-border-color};
   --#{$prefix}form-field-border-radius: #{$form-field-border-radius};
@@ -35,6 +39,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     pointer-events: none;
+    border: var(--#{$prefix}form-field-border-width) solid transparent; // Required for aligning label's text with the input as it affects inner box model
     transform-origin: 0 0;
     @include transition($form-floating-transition);
   }
@@ -46,7 +51,7 @@
     line-height: $form-floating-line-height;
     color: var(--#{$prefix}form-field-color);
     background-color: transparent;
-    border: 0;
+    border: var(--#{$prefix}form-field-border-width) solid transparent;
     @include border-bottom-end-radius(0);
     @include border-bottom-start-radius(0);
     box-shadow: none;
@@ -94,9 +99,9 @@
       display: block;
       width: 100%;
       height: auto;
-      min-height: 60px;
+      min-height: $form-floating-height;
       max-height: 300px;
-      padding: $form-select-padding-y calc(var(--append-width, 0px) + $form-select-indicator-padding) $form-select-padding-y var(--prepend-width, $form-select-padding-x);
+      padding: $form-select-padding-y max(calc(var(--append-width, 0px) + $form-select-indicator-padding - 16px), var(--bs-border-radius)) $form-select-padding-y var(--prepend-width, max($form-select-padding-x, var(--bs-border-radius)));
       overflow: auto;
       line-height: $form-floating-line-height;
       color: var(--#{$prefix}form-field-color);
@@ -104,6 +109,7 @@
       background-repeat: no-repeat;
       background-position: right var(--append-width, $form-select-padding-x) center;
       background-size: $form-select-bg-size;
+      border: var(--#{$prefix}form-field-border-width) solid transparent;
       @include border-radius(var(--#{$prefix}form-field-border-radius) var(--#{$prefix}form-field-border-radius) 0 0);
 
       &::after {
@@ -291,7 +297,7 @@
 
     > .dropdown.float {
       > .dropdown-toggle {
-        padding: 1.125rem calc(var(--append-width, 0px) + $form-select-indicator-padding) 1.125rem var(--prepend-width, $form-select-padding-x);
+        padding: 1.125rem max(calc(var(--append-width, 0px) + $form-select-indicator-padding - 16px), var(--bs-border-radius)) 1.125rem var(--prepend-width, max($form-select-padding-x, var(--bs-border-radius)));
       }
     }
 
@@ -341,7 +347,8 @@
 
 // Ripple and Notch
 .m-line-ripple {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: calc(var(--#{$prefix}form-field-border-width, 1px) + 1px);
   // stylelint-disable value-list-comma-newline-after, value-list-comma-space-after
@@ -386,7 +393,7 @@
     box-sizing: border-box;
     flex: 0 0 auto;
     width: auto;
-    padding: 0 5px;
+    padding: 0 .75rem;
     border-right: 0;
     border-left: 0;
     @include border-radius(0);
@@ -411,16 +418,17 @@
     top: 0;
     display: flex;
     align-items: center;
+    height: $form-floating-height;
     padding: 0 .75rem;
     pointer-events: none;
   }
 
   .prepend {
-    left: 0;
+    left: var(--#{$prefix}form-field-border-width);
   }
 
   .append {
-    right: 0;
+    right: var(--#{$prefix}form-field-border-width);
   }
 
   > .form-floating {
@@ -433,7 +441,7 @@
 
     > .m-notch {
       > .m-notch-between > label {
-        transform: translateX(calc(var(--prepend-width, calc(.75rem + 5px)) - (.75rem + 5px)));
+        transform: translateX(calc(var(--prepend-width, .75rem) - .75rem));
       }
     }
   }
