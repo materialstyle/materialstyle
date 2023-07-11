@@ -128,6 +128,10 @@
     @include border-start-radius(0);
   }
 
+  > .form-floating:not(:first-child) > .m-notch > .m-notch-before {
+    width: .5rem;
+  }
+
   &.has-form-floating {
     > .form-control,
     > .form-select,
