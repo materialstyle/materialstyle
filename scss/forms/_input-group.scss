@@ -105,16 +105,37 @@
     > .form-floating:not(:last-child) > .form-select {
       @include border-end-radius(0);
     }
+
+    &.has-form-floating-outlined {
+      > .input-group-text:not(:first-child) {
+        border-left: 0;
+      }
+      > .input-group-text:not(:last-child) {
+        border-right: 0;
+      }
+    }
   }
 
+  // stylelint-disable selector-max-class
   &.has-validation {
     > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu),
     > .dropdown-toggle:nth-last-child(n + 4),
+    > .form-floating:nth-last-child(n + 3) > .m-notch > .m-notch-after,
     > .form-floating:nth-last-child(n + 3) > .form-control,
     > .form-floating:nth-last-child(n + 3) > .form-select {
       @include border-end-radius(0);
     }
+
+    &.has-form-floating-outlined {
+      > .input-group-text:not(:first-child) {
+        border-left: 0;
+      }
+      > .input-group-text:nth-last-child(n + 3) {
+        border-right: 0;
+      }
+    }
   }
+  // stylelint-enable selector-max-class
 
   $validation-messages: "";
   @each $state in map-keys($form-validation-states) {
@@ -152,15 +173,6 @@
 
     > .input-group-text:not(:last-child) {
       padding-left: calc(#{$input-border-width} + #{$input-group-addon-padding-x}); // stylelint-disable-line function-disallowed-list
-    }
-  }
-
-  &.has-form-floating-outlined {
-    > .input-group-text:not(:first-child) {
-      border-left: 0;
-    }
-    > .input-group-text:not(:last-child) {
-      border-right: 0;
     }
   }
 }
