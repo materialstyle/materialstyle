@@ -69,9 +69,7 @@
   }
   // scss-docs-end root-body-variables
 
-  @if $headings-color != null {
-    --#{$prefix}heading-color: #{$headings-color};
-  }
+  --#{$prefix}heading-color: #{$headings-color};
 
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-decoration: #{$link-decoration};
