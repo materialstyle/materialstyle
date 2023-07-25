@@ -292,7 +292,7 @@ Add class ```searchable``` on ```.form-floating``` to add a search box to the me
 {{< /example >}}
 
 ## Multi Select
-Add class ```multi-select``` on ```.form-floating``` to enable multi select.
+Add class ```multi-select``` on ```.form-floating``` and ```multiple``` attribute on the ```<select>``` to enable multi select.
 
 {{< example codeId="code7" class="d-flex justify-content-evenly align-items-center flex-wrap gap-3">}}
 

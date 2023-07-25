@@ -117,6 +117,7 @@
       @include form-validation-state-selector($state) {
         padding-right: calc($input-height-inner + var(--append-width, 0px));
         background-position: right var(--append-width, $input-height-inner-quarter) center;
+        border-color: transparent;
 
         &:focus {
           box-shadow: none;

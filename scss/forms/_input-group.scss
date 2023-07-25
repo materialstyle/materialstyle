@@ -105,16 +105,37 @@
     > .form-floating:not(:last-child) > .form-select {
       @include border-end-radius(0);
     }
+
+    &.has-form-floating-outlined {
+      > .input-group-text:not(:first-child) {
+        border-left: 0;
+      }
+      > .input-group-text:not(:last-child) {
+        border-right: 0;
+      }
+    }
   }
 
+  // stylelint-disable selector-max-class
   &.has-validation {
     > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu),
     > .dropdown-toggle:nth-last-child(n + 4),
+    > .form-floating:nth-last-child(n + 3) > .m-notch > .m-notch-after,
     > .form-floating:nth-last-child(n + 3) > .form-control,
     > .form-floating:nth-last-child(n + 3) > .form-select {
       @include border-end-radius(0);
     }
+
+    &.has-form-floating-outlined {
+      > .input-group-text:not(:first-child) {
+        border-left: 0;
+      }
+      > .input-group-text:nth-last-child(n + 3) {
+        border-right: 0;
+      }
+    }
   }
+  // stylelint-enable selector-max-class
 
   $validation-messages: "";
   @each $state in map-keys($form-validation-states) {
@@ -125,8 +146,11 @@
   > .form-floating:not(:first-child) > .m-notch > .m-notch-before,
   > .form-floating:not(:first-child) > .form-control,
   > .form-floating:not(:first-child) > .form-select {
-    margin-left: calc(#{$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
     @include border-start-radius(0);
+  }
+
+  > .form-floating:not(:first-child) > .m-notch > .m-notch-before {
+    width: .5rem;
   }
 
   &.has-form-floating {
@@ -142,14 +166,13 @@
       border-right: 0;
       border-left: 0;
     }
-  }
 
-  &.has-form-floating-outlined {
     > .input-group-text:not(:first-child) {
-      border-left: 0;
+      padding-right: calc(#{$input-border-width} + #{$input-group-addon-padding-x}); // stylelint-disable-line function-disallowed-list
     }
+
     > .input-group-text:not(:last-child) {
-      border-right: 0;
+      padding-left: calc(#{$input-border-width} + #{$input-group-addon-padding-x}); // stylelint-disable-line function-disallowed-list
     }
   }
 }

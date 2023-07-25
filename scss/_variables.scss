@@ -576,14 +576,6 @@ $btn-active-bg-shade-amount:      20% !default;
 $btn-active-bg-tint-amount:       20% !default;
 // scss-docs-end btn-variables
 
-
-// Forms
-$form-field-color:                      var(--#{$prefix}emphasis-color) !default;
-$form-field-bg:                         var(--#{$prefix}surface-bg) !default;
-$form-field-hover-bg:                   var(--#{$prefix}surface-bg-hover) !default;
-$form-field-border-color:               var(--#{$prefix}body-color) !default;
-$form-field-active-border-color:        var(--#{$prefix}primary-hover) !default;
-
 // scss-docs-start form-text-variables
 $form-text-margin-top:                  .25rem !default;
 $form-text-font-size:                   $small-font-size !default;
@@ -803,6 +795,15 @@ $form-floating-input-padding-b:   .625rem !default;
 $form-floating-label-opacity:     1 !default;
 $form-floating-label-transform:   scale(.85) translateY(-.5rem) translateX(.15rem) !default;
 $form-floating-transition:        opacity .1s ease-in-out, transform .1s ease-in-out !default;
+
+// Forms
+$form-field-color:                      var(--#{$prefix}emphasis-color) !default;
+$form-field-bg:                         var(--#{$prefix}surface-bg) !default;
+$form-field-hover-bg:                   var(--#{$prefix}surface-bg-hover) !default;
+$form-field-border-width:               var(--#{$prefix}border-width) !default;
+$form-field-border-color:               var(--#{$prefix}body-color) !default;
+$form-field-active-border-color:        var(--#{$prefix}primary-hover) !default;
+$form-field-border-radius:              var(--#{$prefix}border-radius) !default;
 // scss-docs-end form-floating-variables
 
 // Form validation

@@ -57,36 +57,22 @@ better communicate feedback.
 
   <div>
     <div class="form-floating">
-      <input type="text" class="form-control" id="textfield" placeholder="textfield" autocomplete="off" required>
-      <label for="textfield">Text Field</label>
+      <input type="text" class="form-control" id="textFieldExample" placeholder="textField" autocomplete="off" required>
+      <label for="textFieldExample">Text Field</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
   </div>
-
+  
   <div>
     <div class="form-floating form-floating-outlined">
-      <input type="text" class="form-control" id="textfieldOutlined" placeholder="textfield" autocomplete="off" required>
-      <label for="textfieldOutlined">Outlined Text Field</label>
+      <input type="text" class="form-control" id="textFieldOutlinedExample" placeholder="textField" autocomplete="off" required>
+      <label for="textFieldOutlinedExample">Outlined Text Field</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
   </div>
-
-  <div class="input-group has-validation">
-    <div class="form-floating">
-      <input type="text" class="form-control" id="inputgroup" placeholder="inputgroup" autocomplete="off" required>
-      <label for="inputgroup">Input Group</label>
-    </div>
-    <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
-    </span>
-    <div class="validation-feedbacks">
-      <div class="valid-feedback">Looks good!</div>
-      <div class="invalid-feedback">Doesn't look good!</div>
-    </div>
-  </div>
-
+  
   <div>
     <div class="form-floating">
       <select class="form-select" required>
@@ -98,8 +84,8 @@ better communicate feedback.
       </select>
       <label>Select</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
   </div>
 
   <div>
@@ -113,9 +99,188 @@ better communicate feedback.
       </select>
       <label>Outlined Select</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
   </div>
+
+  <div class="w-100"></div>
+  
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+{{< /example >}}
+
+## Supported Components
+
+{{< example codeId="code2">}}
+
+<form class="needs-validation d-flex flex-wrap gap-2" novalidate>
+
+  <label class="w-100 text-primary"><b>Text field</b></label>
+
+  <div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="textField" placeholder="textField" autocomplete="off" required>
+      <label for="textField">Text Field</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+
+  <div>
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="textFieldOutlined" placeholder="textField" autocomplete="off" required>
+      <label for="textFieldOutlined">Outlined Text Field</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+  
+  <label class="w-100 text-primary"><b>Input group</b></label>
+
+  <div class="input-group has-validation">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="inputGroup" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroup">Input Group</label>
+    </div>
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <div class="input-group has-validation">
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="inputGroupOutlined" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroupOutlined">Input Group</label>
+    </div>
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <div class="input-group has-validation">
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="inputGroupPrepend" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroupPrepend">Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <div class="input-group has-validation">
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="inputGroupOutlinedPrepend" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroupOutlinedPrepend">Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <label class="w-100 text-primary"><b>With icon</b></label>
+  
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="withIcon"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIcon">With Icon</label>
+    </div>
+    <span class="prepend">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+  
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="withIconOutlined"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIconOutlined">With Icon</label>
+    </div>
+    <span class="prepend">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="withIconAppend"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIconAppend">With Icon</label>
+    </div>
+    <span class="append">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+  
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="withIconOutlinedAppend"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIconOutlinedAppend">With Icon</label>
+    </div>
+    <span class="append">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+
+  <label class="w-100 text-primary"><b>Select</b></label>
+
+  <div>
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Select</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div>
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Outlined Select</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <label class="w-100 text-primary"><b>Input group</b></label>
 
   <div class="input-group has-validation">
     <div class="form-floating">
@@ -126,24 +291,197 @@ better communicate feedback.
         <option value="3">Option 3</option>
         <option value="4">Option 4</option>
       </select>
-      <label>Select with Input Group</label>
+      <label>Input Group</label>
     </div>
     <div class="input-group-text">
       <i class="bi bi-star-fill"></i>
     </div>
     <div class="validation-feedbacks">
-      <div class="valid-feedback">Looks good!</div>
-      <div class="invalid-feedback">Doesn't look good!</div>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
     </div>
   </div>
 
-  <div class="form-check w-100">
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-    <label class="form-check-label" for="invalidCheck">
-      Agree to terms and conditions
-    </label>
-    <div class="invalid-feedback">
-      You must agree before submitting.
+  <div class="input-group has-validation">
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Input Group</label>
+    </div>
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
+    </div>
+  </div>
+
+  <div class="input-group has-validation">
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
+    </div>
+  </div>
+
+  <div class="input-group has-validation">
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
+    </div>
+  </div>
+  
+  <label class="w-100 text-primary"><b>With icon</b></label>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="prepend">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="prepend">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="append">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="append">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <label class="w-100 text-primary"><b>Checks and Radios</b></label>
+
+  <div class="w-100 d-flex gap-3">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Checkbox
+      </label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
+
+    <div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radioSet1" id="radio1" required>
+        <label class="form-check-label" for="radio1">Radio</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radioSet1" id="radio2" required>
+        <label class="form-check-label" for="radio2">Radio</label>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please select one of these options</div>
+      </div>
+    </div>
+    
+    <div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="switch1" required>
+      <label class="form-check-label" for="switch1">Switch</label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
+
+    <div class="form-check form-switch form-switch-square">
+      <input class="form-check-input" type="checkbox" id="switch5" required>
+      <label class="form-check-label" for="switch5">Switch</label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
+
+    <div class="form-check form-switch form-switch-material">
+      <input class="form-check-input" type="checkbox" id="switch9" required>
+      <label class="form-check-label" for="switch9">Switch</label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
     </div>
   </div>
 
@@ -221,40 +559,26 @@ If your form layout allows it, you can swap the ```.{valid|invalid}-feedback``` 
 for ```.{valid|invalid}-tooltip``` classes to display validation feedback in a styled tooltip. 
 Be sure to have a parent with ```position: relative``` on it for tooltip positioning.
 
-{{< example codeId="code2">}}
+{{< example codeId="code3">}}
 
 <form class="needs-validation d-flex flex-wrap gap-2" novalidate>
 
-  <div class="position-relative mb-5">
+  <div class="position-relativ mb-5">
     <div class="form-floating">
-      <input type="text" class="form-control" id="textfieldTooltip" placeholder="textfield" autocomplete="off" required>
+      <input type="text" class="form-control" id="textfieldTooltip" placeholder="textField" autocomplete="off" required>
       <label for="textfieldTooltip">Text Field</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
 
   <div class="position-relative mb-5">
     <div class="form-floating form-floating-outlined">
-      <input type="text" class="form-control" id="textfieldOutlinedTooltip" placeholder="textfield" autocomplete="off" required>
+      <input type="text" class="form-control" id="textfieldOutlinedTooltip" placeholder="textField" autocomplete="off" required>
       <label for="textfieldOutlinedTooltip">Outlined Text Field</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
-  </div>
-
-  <div class="input-group has-validation position-relative mb-5">
-    <div class="form-floating">
-      <input type="text" class="form-control" id="inputgroupTooltip" placeholder="inputgroup" autocomplete="off" required>
-      <label for="inputgroupTooltip">Input Group</label>
-    </div>
-    <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
-    </span>
-    <div class="validation-feedbacks">
-      <div class="valid-tooltip">Looks good!</div>
-      <div class="invalid-tooltip">Doesn't look good!</div>
-    </div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
 
   <div class="position-relative mb-5">
@@ -268,8 +592,8 @@ Be sure to have a parent with ```position: relative``` on it for tooltip positio
       </select>
       <label>Select</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
 
   <div class="position-relative mb-5">
@@ -283,40 +607,12 @@ Be sure to have a parent with ```position: relative``` on it for tooltip positio
       </select>
       <label>Outlined Select</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
-
-  <div class="input-group has-validation position-relative mb-5">
-    <div class="form-floating">
-      <select class="form-select" required>
-        <option value="" label="blank option"></option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-        <option value="4">Option 4</option>
-      </select>
-      <label>Select with Input Group</label>
-    </div>
-    <div class="input-group-text">
-      <i class="bi bi-star-fill"></i>
-    </div>
-    <div class="validation-feedbacks">
-      <div class="valid-tooltip">Looks good!</div>
-      <div class="invalid-tooltip">Doesn't look good!</div>
-    </div>
-  </div>
-
-  <div class="form-check w-100 position-relative mb-5">
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheckTooltip" required>
-    <label class="form-check-label" for="invalidCheckTooltip">
-      Agree to terms and conditions
-    </label>
-    <div class="invalid-tooltip">
-      You must agree before submitting.
-    </div>
-  </div>
-
+  
+  <div class="w-100"></div>
+    
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 
@@ -331,28 +627,18 @@ Depending on your browser and OS, you’ll see a slightly different style of fee
 While these feedback styles cannot be styled with CSS, you can still customize the feedback 
 text through JavaScript.
 
-{{< example codeId="code3">}}
+{{< example codeId="code4">}}
 
 <form class="d-flex flex-wrap gap-2">
 
   <div class="form-floating">
-    <input type="text" class="form-control" id="textfieldDefault" placeholder="textfield" autocomplete="off" required>
+    <input type="text" class="form-control" id="textfieldDefault" placeholder="textField" autocomplete="off" required>
     <label for="textfieldDefault">Text Field</label>
   </div>
 
   <div class="form-floating form-floating-outlined">
-    <input type="text" class="form-control" id="textfieldOutlinedDefault" placeholder="textfield" autocomplete="off" required>
+    <input type="text" class="form-control" id="textfieldOutlinedDefault" placeholder="textField" autocomplete="off" required>
     <label for="textfieldOutlinedDefault">Outlined Text Field</label>
-  </div>
-
-  <div class="input-group">
-    <div class="form-floating">
-      <input type="text" class="form-control" id="inputgroupDefault" placeholder="inputgroup" autocomplete="off" required>
-      <label for="inputgroupDefault">Input Group</label>
-    </div>
-    <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
-    </span>
   </div>
 
   <div class="form-floating">
@@ -377,29 +663,8 @@ text through JavaScript.
     <label>Outlined Select</label>
   </div>
 
-  <div class="input-group">
-    <div class="form-floating">
-      <select class="form-select" required>
-        <option value="" label="blank option"></option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-        <option value="4">Option 4</option>
-      </select>
-      <label>Select with Input Group</label>
-    </div>
-    <div class="input-group-text">
-      <i class="bi bi-star-fill"></i>
-    </div>
-  </div>
-
-  <div class="form-check w-100">
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheckDefault" required>
-    <label class="form-check-label" for="invalidCheckDefault">
-      Agree to terms and conditions
-    </label>
-  </div>
-
+  <div class="w-100"></div>
+  
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 

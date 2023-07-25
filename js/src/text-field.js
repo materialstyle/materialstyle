@@ -143,12 +143,10 @@ class TextField extends BaseComponent {
     document.fonts.ready.then(() => {
       if (this._formFloatingWithIcon) {
         if (this._prepend) {
-          this._prepend.style.height = `${this._textField.offsetHeight}px`
           this._formFloating.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`)
         }
 
         if (this._append) {
-          this._append.style.height = `${this._textField.offsetHeight}px`
           this._formFloating.style.setProperty('--append-width', `${this._append.offsetWidth}px`)
         }
       }
