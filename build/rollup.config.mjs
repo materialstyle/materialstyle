@@ -11,7 +11,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const BUNDLE = process.env.BUNDLE === 'true'
 const ESM = process.env.ESM === 'true'
 
-let destinationFile = `bootstrap${ESM ? '.esm' : ''}`
+let destinationFile = `materialstyle${ESM ? '.esm' : ''}`
 const external = ['@popperjs/core', '@material/ripple']
 const plugins = [
   babel({
