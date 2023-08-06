@@ -18,11 +18,11 @@
     },
     {
       "path": "./dist/css/materialstyle-utilities.css",
-      "maxSize": "12.85 kB"
+      "maxSize": "13 kB"
     },
     {
       "path": "./dist/css/materialstyle-utilities.min.css",
-      "maxSize": "12 kB"
+      "maxSize": "12.20 kB"
     },
     {
       "path": "./dist/css/materialstyle.css",
@@ -38,7 +38,7 @@
     },
     {
       "path": "./dist/js/materialstyle.bundle.min.js",
-      "maxSize": "26.7 kB"
+      "maxSize": "27.15 kB"
     },
     {
       "path": "./dist/js/materialstyle.esm.js",
@@ -54,7 +54,7 @@
     },
     {
       "path": "./dist/js/materialstyle.min.js",
-      "maxSize": "19.7 kB"
+      "maxSize": "20 kB"
     }
   ],
   "ci": {

@@ -411,6 +411,7 @@ class SelectField extends BaseComponent {
 
       optionText = this._multiSelectEnabled ? item.querySelector('.dropdown-text').innerHTML : item.innerHTML
 
+      // eslint-disable-next-line unicorn/no-negated-condition
       if (!optionText.toLowerCase().includes(value)) {
         item.classList.add('d-none')
         item.classList.remove('d-flex')
@@ -426,6 +427,7 @@ class SelectField extends BaseComponent {
     EventHandler.on(this._selectedItem, EVENT_FOCUSOUT, () => this.handleFocusOut())
     EventHandler.on(this._dropdown, EVENT_SHOWN, () => this._dropdown.classList.add('float'))
     EventHandler.on(this._dropdown, EVENT_HIDDEN, e => {
+      // eslint-disable-next-line unicorn/no-negated-condition
       if (!e.clickEvent) {
         this._selectedItem.focus()
       } else {

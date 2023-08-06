@@ -150,8 +150,8 @@
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
 
-@each $color, $value in $table-variants {
-  @include table-variant($color, $value);
+@each $state in map-keys($theme-colors) {
+  @include table-variant($state);
 }
 
 // Responsive tables
