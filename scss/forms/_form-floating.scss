@@ -351,11 +351,11 @@
   bottom: 0;
   width: 100%;
   height: calc(var(--#{$prefix}form-field-border-width, 1px) + 1px);
-  // stylelint-disable value-list-comma-newline-after, value-list-comma-space-after
+  // stylelint-disable stylistic/value-list-comma-newline-after, stylistic/value-list-comma-space-after
   background:
     linear-gradient(var(--#{$prefix}form-field-active-border-color), var(--#{$prefix}form-field-active-border-color)) bottom/0 calc(var(--#{$prefix}form-field-border-width, 1px) + 1px) no-repeat border-box,
     linear-gradient(var(--#{$prefix}form-field-border-color), var(--#{$prefix}form-field-border-color)) bottom/100% var(--#{$prefix}form-field-border-width, 1px) no-repeat border-box transparent;
-  // stylelint-enable value-list-comma-newline-after, value-list-comma-space-after
+  // stylelint-enable stylistic/value-list-comma-newline-after, stylistic/value-list-comma-space-after
   @include transition(.3s cubic-bezier(.4, 0, .2, 1));
 }
 

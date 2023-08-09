@@ -44,7 +44,8 @@
   }
 
   // Disabled state lightens text
-  &.disabled {
+  &.disabled,
+  &:disabled {
     color: var(--#{$prefix}nav-link-disabled-color);
     pointer-events: none;
     cursor: default;
@@ -139,11 +140,6 @@
         // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
         isolation: isolate;
       }
-
-      &.disabled,
-      &:disabled {
-        color: var(--#{$prefix}nav-link-disabled-color);
-      }
     }
   }
 
@@ -187,12 +183,6 @@
 
   .nav-link {
     @include border-radius(var(--#{$prefix}nav-pills-border-radius));
-
-    &:disabled {
-      color: var(--#{$prefix}nav-link-disabled-color);
-      background-color: transparent;
-      border-color: transparent;
-    }
   }
 
   .nav-link.active,
