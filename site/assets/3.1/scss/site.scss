@@ -43,6 +43,10 @@
   --m-primary-rgb: 95, 61, 196;
   --m-primary-subtle: var(--m-violet-2);
   --m-text-on-primary: #fff;
+
+  .component-showcase .border-example [class^="border"] {
+    background-color: var(--bs-light);
+  }
 }
 
 [data-bs-theme="dark"] {
@@ -50,6 +54,10 @@
   --m-primary-rgb: 208, 191, 255;
   --m-primary-subtle: var(--m-violet-12);
   --m-text-on-primary: #000;
+
+  .component-showcase .border-example [class^="border"] {
+    background-color: var(--bs-dark-subtle);
+  }
 }
 
 html {
@@ -178,6 +186,21 @@ footer {
     .form-floating {
       width: 0;
     }
+  }
+
+  .border-example [class^="border"] {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .border-example-text [class^="border"] {
+    padding: .5rem;
+  }
+
+  .border-example [class^="rounded"] {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--bs-success);
   }
 }
 
