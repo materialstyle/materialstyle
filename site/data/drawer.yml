@@ -25,11 +25,12 @@
 
 - title: Utilities
   pages:
+    - title: Borders
+    - title: Display
+    - title: Flex
     - title: Ripple
     - title: Shadows
     - title: Shapes
-    - title: Borders
-    - title: Display
 
 - title: Forms
   pages:
