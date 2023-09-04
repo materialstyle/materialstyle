@@ -22,7 +22,7 @@ Change the way in which the content is selected when the user interacts with it.
 {{< /example >}}
 
 ## Pointer events
-Bootstrap provides `.pe-none` and `.pe-auto` classes to prevent or add element interactions.
+Material Style provides `.pe-none` and `.pe-auto` classes to prevent or add element interactions.
 
 {{< example codeId="code2" >}}
 

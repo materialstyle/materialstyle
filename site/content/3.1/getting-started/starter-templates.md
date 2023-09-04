@@ -12,8 +12,7 @@ keywords: getting-started, layout, starter-template
 </p>
 
 ## HTML5 doctype
-Bootstrap requires the use of the HTML5 doctype. 
-Without it, you’ll see some funky incomplete styling, 
+Material Style requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, 
 but including it shouldn’t cause any considerable hiccups.
 
 ```html
@@ -27,9 +26,8 @@ but including it shouldn’t cause any considerable hiccups.
 
 ## Responsive meta tag
 Bootstrap is developed mobile first, a strategy in which it optimizes code for mobile devices first 
-and then scales up components as necessary using CSS media queries. 
-To ensure proper rendering and touch zooming for all devices, 
-add the responsive viewport meta tag to your ```<head>```.
+and then scales up components as necessary using CSS media queries. To ensure proper rendering and touch zooming 
+for all devices, add the responsive viewport meta tag to your ```<head>```.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +36,7 @@ add the responsive viewport meta tag to your ```<head>```.
 <br>
 
 ## Box-sizing
-For more straightforward sizing in CSS, Bootstrap switches the global ```box-sizing``` value 
+For more straightforward sizing in CSS, Material Style switches the global ```box-sizing``` value 
 from ```content-box``` to ```border-box```. This ensures ```padding``` does not affect the final 
 computed width of an element, but it can cause problems with some third-party software like 
 Google Maps and Google Custom Search Engine.
