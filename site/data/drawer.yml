@@ -23,6 +23,12 @@
     - title: Text color
     - title: Colored Links
 
+- title: Layout
+  pages:
+    - title: Breakpoints
+    - title: Containers
+    - title: Grid
+
 - title: Utilities
   pages:
     - title: Borders
