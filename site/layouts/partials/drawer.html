@@ -40,7 +40,7 @@
             {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
             {{- $href := printf "/materialstyle/%s/%s/%s/" $.Site.Params.docs_version $group_slug $doc_slug }}
 
-            <li class="nav-item small mb-1">
+            <li class="nav-item mb-1">
               <a class="nav-link rounded-pill {{ if $is_active }} active{{ end }}"
                  href="{{ $href }}">{{ $doc.title }}</a>
             </li>

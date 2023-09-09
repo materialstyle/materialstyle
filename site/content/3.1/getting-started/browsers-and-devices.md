@@ -14,31 +14,20 @@ or via the platform’s web view API, are not explicitly supported. However, Mat
 (in most cases) display and function correctly in these browsers as well. More specific support 
 information is provided below.
 
-You can find our supported range of browsers and their versions in our 
-<a class="link-pink" href="https://github.com/materialstyle/materialstyle/blob/main/.browserslistrc">.browserslistrc</a> file:
+You can find our supported range of browsers and their versions 
+[in our `.browserslistrc file`]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc):
 
 ```text
-# https://github.com/browserslist/browserslist#readme
-
->= 0.5%
-last 2 major versions
-not dead
-Chrome >= 60
-Firefox >= 60
-Firefox ESR
-iOS >= 12
-Safari >= 12
-not Explorer <= 11
+{{< rf.inline >}}
+{{- readFile ".browserslistrc" | chomp | htmlEscape -}}
+{{< /rf.inline >}}
 ```
 
 <br>
 
-We use 
-<a class="link-pink" href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to handle 
-intended browser support via CSS prefixes, which uses 
-<a class="link-pink" href="https://github.com/browserslist/browserslist">Browserslist</a> to 
-manage these browser versions. Consult their documentation for how to integrate these tools 
-into your projects.
+We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intended browser support 
+via CSS prefixes, which uses [Browserslist](https://github.com/browserslist/browserslist) to manage these 
+browser versions. Consult their documentation for how to integrate these tools into your projects.
 
 <br>
 
@@ -69,7 +58,7 @@ Similarly, the latest versions of most desktop browsers are supported.
 {{< /bs-table >}}
 
 For Firefox, in addition to the latest normal stable release, we also support the latest 
-<a class="link-pink" href="https://www.mozilla.org/en-US/firefox/enterprise/">Extended Support Release (ESR)</a>
+[Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/)
 version of Firefox.
 
 Unofficially, Material Style should look and behave well enough in Chromium and Chrome for Linux, and 
@@ -92,9 +81,8 @@ Internet Explorer is not supported.
 Support for `overflow: hidden;` on the `<body>` element is quite limited in iOS and Android. 
 To that end, when you scroll past the top or bottom of a modal in either of those devices' 
 browsers, the `<body>` content will begin to scroll. 
-See <a class="link-pink" href="https://bugs.chromium.org/p/chromium/issues/detail?id=175502">Chrome bug #175502</a>
-(fixed in Chrome v40) and 
-<a class="link-pink" href="https://bugs.webkit.org/show_bug.cgi?id=153852">WebKit bug #153852</a>.
+See [Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502)
+(fixed in Chrome v40) and [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
 
 <br>
 
@@ -103,7 +91,7 @@ See <a class="link-pink" href="https://bugs.chromium.org/p/chromium/issues/detai
 As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the 
 boundary of a textual `<input>` or a `<textarea>`, the `<body>` content underneath the modal 
 will be scrolled instead of the modal itself. 
-See <a class="link-pink" href="https://bugs.webkit.org/show_bug.cgi?id=153856">WebKit bug #153856</a>.
+See [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
 
 <br>
 
@@ -111,7 +99,7 @@ See <a class="link-pink" href="https://bugs.webkit.org/show_bug.cgi?id=153856">W
 
 The `.dropdown-backdrop` element isn't used on iOS in the nav because of the complexity of 
 z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element 
-(or <a class="link-pink" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile">any other element which will fire a click event in iOS</a>).
+(or [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile)).
 
 <br>
 
@@ -127,16 +115,14 @@ often have no direct solution other than hacky workarounds.
 ## Validators
 
 In order to provide the best possible experience to old and buggy browsers, Material Style uses 
-<a class="link-pink" href="http://browserhacks.com/">CSS browser hacks</a>
-in several places to target special CSS to certain browser versions in order to work around bugs 
-in the browsers themselves. These hacks understandably cause CSS validators to complain that 
-they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet 
-fully standardized, but these are used purely for progressive enhancement.
+[CSS browser hacks](http://browserhacks.com/) in several places to target special CSS to certain browser 
+versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS 
+validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features 
+that aren't yet fully standardized, but these are used purely for progressive enhancement.
 
 These validation warnings don't matter in practice since the non-hacky portion of our CSS does 
 fully validate and the hacky portions don't interfere with the proper functioning of the 
 non-hacky portion, hence why we deliberately ignore these particular warnings.
 
 Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to 
-our inclusion of a workaround for 
-<a class="link-pink" href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">a certain Firefox bug</a>.
+our inclusion of a workaround for [a certain Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).

@@ -7,9 +7,14 @@ keywords: getting-started, layout, starter-template
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">
-  Be sure to have your pages set up with the latest design and development standards. 
-  That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.
+  Quickly kickstart your projects with our HTML templates that follow modern web development standards, 
+  ensuring ease and efficiency.
 </p>
+
+**Ensure your webpages adhere to best practices, include an HTML5 doctype and a viewport meta tag for proper 
+responsive behaviors.**
+
+<br>
 
 ## HTML5 doctype
 Material Style requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, 
@@ -51,9 +56,9 @@ On the rare occasion you need to override it, use something like the following:
 
 <br>
 
-For your convenience, we have created two starter templates:
-1. <a class="link-theme text-decoration-none" href="#template-with-sidebardrawer">With Sidebar/Drawer</a>
-2. <a class="link-theme text-decoration-none" href="#template-without-sidebardrawer">Without Sidebar/Drawer</a>
+**For your convenience, we have created two starter templates:**
+1. [With Sidebar/Drawer](#template-with-sidebardrawer)
+2. [Without Sidebar/Drawer](#template-without-sidebardrawer)
 
 <br>
 

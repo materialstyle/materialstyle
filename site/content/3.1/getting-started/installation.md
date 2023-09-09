@@ -19,7 +19,7 @@ keywords: getting-started, installation
 ## 1. CDN
 Use Material Style instantly by including its CSS and JavaScript files directly from a Content Delivery Network (CDN). 
 This option allows you to link to the files hosted on a remote server, ensuring quick and easy integration into your 
-project. You can choose from popular CDN providers like "jsDelivr" or "unpkg" to access Material Style's resources 
+project. You can choose from popular CDN providers like **`jsDelivr`** or **`unpkg`** to access Material Style's resources 
 seamlessly. This method is convenient and ideal for those who want a straightforward integration process.
 
 <ul class="nav nav-tabs" id="cdn-tab" role="tablist">

@@ -55,3 +55,4 @@ params:
 
   current_version:      "3.1.0-alpha1"
   docs_version:         "3.1"
+  repo:                 "https://github.com/materialstyle/materialstyle"
