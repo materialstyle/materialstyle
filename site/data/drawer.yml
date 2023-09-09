@@ -29,6 +29,10 @@
     - title: Containers
     - title: Grid
     - title: Columns
+    - title: Gutters
+    - title: Utilities
+    - title: Z-index
+    - title: CSS Grid
 
 - title: Utilities
   pages:
