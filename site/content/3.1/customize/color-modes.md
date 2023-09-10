@@ -1,9 +1,9 @@
 ---
 layout: docs
 title: Color modes
-group: colors
+group: customize
 toc: true
-keywords: colors, color modes
+keywords: customize, colors, color modes
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">

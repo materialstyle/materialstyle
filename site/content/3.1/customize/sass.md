@@ -2,6 +2,9 @@
 layout: docs
 title: Sass
 group: customize
+aliases:
+  - "/3.1/customize/"
+  - "/customize/"
 toc: true
 keywords: customize, sass
 ---

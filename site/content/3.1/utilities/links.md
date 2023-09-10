@@ -1,9 +1,9 @@
 ---
 layout: docs
-title: Colored links
-group: colors
+title: Links
+group: utilities
 toc: true
-keywords: colors, colored links
+keywords: utilities, colors, links
 ---
 
 ## Default link

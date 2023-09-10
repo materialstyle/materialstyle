@@ -11,17 +11,11 @@
   pages:
     - title: Sass
     - title: CSS variables
-    - title: Options
-    - title: Components
-
-- title: Colors
-  pages:
     - title: Theme Colors
     - title: Color modes
     - title: Theming
-    - title: Background color
-    - title: Text color
-    - title: Colored Links
+    - title: Options
+    - title: Components
 
 - title: Layout
   pages:
@@ -74,11 +68,13 @@
 
 - title: Utilities
   pages:
+    - title: Background color
     - title: Borders
     - title: Display
     - title: Flex
     - title: Float
     - title: Interactions
+    - title: Links
     - title: Object fit
     - title: Opacity
     - title: Overflow
@@ -88,6 +84,7 @@
     - title: Shapes
     - title: Sizing
     - title: Spacing
+    - title: Text color
     - title: Vertical align
     - title: Visibility
     - title: Z-index

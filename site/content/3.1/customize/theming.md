@@ -1,9 +1,9 @@
 ---
 layout: docs
 title: Theming
-group: colors
+group: customize
 toc: true
-keywords: colors, theming
+keywords: customize, colors, theming
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">

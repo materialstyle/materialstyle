@@ -1,9 +1,9 @@
 ---
 layout: docs
 title: Background color
-group: colors
+group: utilities
 toc: true
-keywords: colors, background color
+keywords: utilities, colors, background color
 ---
 
 {{< example codeId="code1" class="d-flex flex-column gap-2" >}}
