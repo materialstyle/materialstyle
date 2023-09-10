@@ -6,6 +6,10 @@ toc: true
 keywords: utilities, colors, background color
 ---
 
+<p class="fs-4 ms-0 mb-4 page-description">
+ Convey meaning through <code>background-color</code> and add decoration with gradients.
+</p>
+
 {{< example codeId="code1" class="d-flex flex-column gap-2" >}}
 
 <div class="p-3 bg-body text-body">.bg-body</div>
@@ -127,6 +131,7 @@ Or, choose from any of the .bg-opacity utilities:
 {{< /example >}}
 
 ## Background color with contrasting foreground color
+Set a background color with contrasting foreground color.
 
 {{< example codeId="code6" class="d-flex flex-column gap-2" >}}
 

@@ -68,13 +68,14 @@
 
 - title: Utilities
   pages:
+    - title: Api
     - title: Background color
     - title: Borders
     - title: Display
     - title: Flex
     - title: Float
     - title: Interactions
-    - title: Links
+    - title: Link
     - title: Object fit
     - title: Opacity
     - title: Overflow

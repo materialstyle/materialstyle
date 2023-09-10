@@ -10,7 +10,7 @@ keywords: customize, sass
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">
-Utilize our source Sass files to take advantage of variables, maps, mixins, and functions to help you build faster and customize your project. 
+  Customize Material Style with Sass: Harness the power of variables, maps, mixins, and functions. 
 </p>
 
 ## File structure
