@@ -94,6 +94,10 @@
 - title: Helpers
   pages:
     - title: Clearfix
+    - title: Focus ring
+    - title: Icon link
+    - title: Position
+    - title: Ratio
 
 - title: Demos
   pages:
