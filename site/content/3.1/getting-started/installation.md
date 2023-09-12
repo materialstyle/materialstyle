@@ -16,7 +16,7 @@ keywords: getting-started, installation
   enhance the visual appeal of your project with its Material Design goodness.
 </p>
 
-## 1. CDN
+## CDN
 Use Material Style instantly by including its CSS and JavaScript files directly from a Content Delivery Network (CDN). 
 This option allows you to link to the files hosted on a remote server, ensuring quick and easy integration into your 
 project. You can choose from popular CDN providers like **`jsDelivr`** or **`unpkg`** to access Material Style's resources 
@@ -100,7 +100,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
 
 <br>
 
-## 2. npm
+## npm
 Integrate Material Style into your project using the Node Package Manager (NPM). This method involves installing 
 Material Style as a package within your project's ecosystem, providing more control and flexibility over its 
 usage and updates.
@@ -156,7 +156,7 @@ Import Material Style SCSS in your SCSS file
 
 <br>
 
-## 3. Download
+## Download
 Download the pre-compiled CSS and JavaScript files of Material Style directly to your system. This option is 
 suitable for developers who prefer to have local copies of the required files and manually link them in their 
 project's code.

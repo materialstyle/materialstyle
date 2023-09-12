@@ -72,6 +72,8 @@ for a more generic indicator.
 ##split##
 <span class="badge text-bg-secondary">Secondary</span>
 ##split##
+<span class="badge text-bg-tertiary">Tertiary</span>
+##split##
 <span class="badge text-bg-success">Success</span>
 ##split##
 <span class="badge text-bg-info">Info</span>
@@ -96,6 +98,8 @@ with a larger ```border-radius```.
 <span class="badge rounded-pill text-bg-primary">Primary</span>
 ##split##
 <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+##split##
+<span class="badge rounded-pill text-bg-tertiary">Tertiary</span>
 ##split##
 <span class="badge rounded-pill text-bg-success">Success</span>
 ##split##
