@@ -53,6 +53,6 @@ params:
   description:          "A Material Design UI Library based on Bootstrap"
   authors:              "Neeraj Kumar Das"
 
-  current_version:      "3.1.0-alpha1"
+  current_version:      "3.1.0"
   docs_version:         "3.1"
   repo:                 "https://github.com/materialstyle/materialstyle"

@@ -11,7 +11,7 @@ Review changes in Material Style source files, documentation, and components to
 migrate from v2 to v3.
 </p>
 
-## **v3.1.0-alpha2**
+## **v3.1.0**
 *Based on Bootstrap v5.3.1*
 
 ### Docs

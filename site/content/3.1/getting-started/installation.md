@@ -43,7 +43,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
         integrity="sha384-DlOXFEUJgOq983IwRUvHG+n6CsUjQ9t8eVTO8BGW9jJQ7a99uxeE8Ux1aIt2qLsS" 
         crossorigin="anonymous">
   ```
@@ -61,7 +61,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js" 
+  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
           integrity="sha384-9dHtyYn5MfqSZOa0jU8joThzRiDJXezY3JupswCbQEIvXwLt/ZtGapT/m7tzKmiT" 
           crossorigin="anonymous"></script>
   ```
@@ -73,7 +73,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://unpkg.com/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css" 
+        href="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
         integrity="sha384-DlOXFEUJgOq983IwRUvHG+n6CsUjQ9t8eVTO8BGW9jJQ7a99uxeE8Ux1aIt2qLsS" 
         crossorigin="anonymous">
   ```
@@ -91,7 +91,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js" 
+  <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
           integrity="sha384-9dHtyYn5MfqSZOa0jU8joThzRiDJXezY3JupswCbQEIvXwLt/ZtGapT/m7tzKmiT" 
           crossorigin="anonymous"></script>
   ```
@@ -119,7 +119,7 @@ usage and updates.
 Install
 
 ```console
-npm i @materialstyle/materialstyle@3.1.0-alpha1
+npm i @materialstyle/materialstyle@3.1.0
 ```
 
 Our Select Fields, Dropdowns, Popovers, and Tooltips depend on Popper, install it using:
@@ -162,7 +162,7 @@ suitable for developers who prefer to have local copies of the required files an
 project's code.
 
 <a class="btn btn-tertiary btn-lg rounded-pill" 
-   href="https://github.com/materialstyle/materialstyle/releases/download/v3.1.0-alpha1/materialstyle-3.1.0-alpha1-dist.zip" download>
+   href="https://github.com/materialstyle/materialstyle/releases/download/v3.1.0/materialstyle-3.1.0-dist.zip" download>
   Download v3.1.0
 </a>
 
