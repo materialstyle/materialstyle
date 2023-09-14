@@ -1,18 +1,39 @@
 ---
 layout: docs
 title: Theming
-group: colors
+group: customize
 toc: true
-keywords: colors, theming
+keywords: customize, colors, theming
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">
-Customize the default theme colors to better reflect your product's brand.
+Personalize Material Style to align with your product's unique brand identity and style preferences.
 </p>
+
+## Theme Builder
+At Material Style, we believe in empowering our users to create designs that are uniquely their own. That's why we've 
+introduced the [Material Style Theme Builder](https://materialstyle.github.io/theme-builder), a powerful tool designed 
+to simplify and enhance your theming experience. Whether you choose to customize Material Style using Sass or CSS 
+variables, the Theme Builder will be your trusted companion throughout the process.
+
+Utilize this tool to effortlessly modify **theme colors**, `border-radius`, and `border-width`, as it automatically 
+generates the necessary **CSS** and **SASS** variables for you.
+
+1. Choose the theme (primary, secondary, ...) you'd like to update.
+2. Select a color for the theme.
+   Note: The selected color serves as the base color for the theme in light mode and is used to generate different 
+   variants of the theme (hover, active, emphasis, ...) for both light and dark modes. Ensure it maintains an 
+   appropriate contrast ratio against a light background (e.g., white).
+3. Adjust the `border-radius`.
+4. Set the `border-width`.
+5. Preview components in Light/Dark mode.
+6. Copy the generated CSS/SASS into your codebase.
 
 There are two ways to customize the default Material Style theme colors.
 1. [Using Sass](#sass)
 2. [Using CSS Variables](#css-variables)
+
+<br>
 
 ## Sass
 Please make sure you have gone through the [Sass customization docs]({{< docsref "/customize/sass" >}}) before proceeding.
@@ -80,6 +101,8 @@ $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
 // 6. Optionally include any other parts as needed
 ```
+
+<br>
 <br>
 
 ## CSS Variables
@@ -88,18 +111,9 @@ With CSS variables, you can only **modify existing theme colors**.
 
 To modify a theme color, you have to specify color values for each of the available variants 
 of a theme (Ex: `--bs-primary-hover`, `--bs-primary-active`, `--bs-primary-subtle`, ...).
-
-To make it easier, we have created a [Custom theme generator in CodePen](https://codepen.io/nkdas91/pen/vYzboME)
-to generate the required theme color variables.
  
-Head over to the [Custom theme generator in CodePen](https://codepen.io/nkdas91/pen/vYzboME) and 
-update the `$theme-colors` map in the **CSS(SCSS)** tab. 
-
-The new CSS variables will be displayed in the preview within few seconds. If the preview doesn't 
-reflect your changes, click somewhere in the **CSS(SCSS)** tab and press <kbd>Cmd/Ctrl</kbd> + 
-<kbd>Shift</kbd> + <kbd>7</kbd> to re-run the preview.
-
-Copy the CSS from the preview and add it to your CSS file.
+Utilize the [Theme Builder](https://materialstyle.github.io/theme-builder) to effortlessly modify **theme colors**, 
+`border-radius`, and `border-width`, as it automatically generates the necessary **CSS** and **SASS** variables for you.
 
 Example: To change the Primary theme color to Purple add this to your CSS file.
 ```css

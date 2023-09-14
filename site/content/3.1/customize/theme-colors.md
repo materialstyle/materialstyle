@@ -1,12 +1,9 @@
 ---
 layout: docs
 title: Theme colors
-group: colors
-aliases:
-  - "/3.1/colors/"
-  - "/colors/"
+group: customize
 toc: true
-keywords: colors, theme colors
+keywords: customize, colors, theme colors
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">

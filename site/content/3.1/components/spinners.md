@@ -35,6 +35,12 @@ keywords: progress, spinners
   </svg>
 </div>
 ##split##
+<div class="spinner-material text-tertiary">
+  <svg viewBox="25 25 50 50">
+    <circle cx="50" cy="50" r="20" fill="none" />
+  </svg>
+</div>
+##split##
 <div class="spinner-material text-success">
   <svg viewBox="25 25 50 50">
     <circle cx="50" cy="50" r="20" fill="none" />
@@ -110,6 +116,8 @@ keywords: progress, spinners
 ##split##
 <div class="spinner-border text-secondary"></div>
 ##split##
+<div class="spinner-border text-tertiary"></div>
+##split##
 <div class="spinner-border text-success"></div>
 ##split##
 <div class="spinner-border text-info"></div>
@@ -137,6 +145,8 @@ keywords: progress, spinners
 <div class="spinner-grow text-primary"></div>
 ##split##
 <div class="spinner-grow text-secondary"></div>
+##split##
+<div class="spinner-grow text-tertiary"></div>
 ##split##
 <div class="spinner-grow text-success"></div>
 ##split##

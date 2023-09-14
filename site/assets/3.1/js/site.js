@@ -9,13 +9,16 @@
     if (offcanvas) {
       const offcanvasHeight = offcanvas.clientHeight
       const offcanvasActiveLink = offcanvas.querySelector('.active')
-      const offcanvasActiveLinkTop = offcanvasActiveLink.offsetTop
-      const offcanvasActiveLinkHeight = offcanvasActiveLink.clientHeight
-      const viewportTop = offcanvasActiveLinkTop
-      const viewportBottom = viewportTop - offcanvasHeight + offcanvasActiveLinkHeight
 
-      if (offcanvas.scrollTop > viewportTop || offcanvas.scrollTop < viewportBottom) {
-        offcanvas.scrollTop = viewportTop - (offcanvasHeight / 2) + (offcanvasActiveLinkHeight / 2)
+      if (offcanvasActiveLink) {
+        const offcanvasActiveLinkTop = offcanvasActiveLink.offsetTop
+        const offcanvasActiveLinkHeight = offcanvasActiveLink.clientHeight
+        const viewportTop = offcanvasActiveLinkTop
+        const viewportBottom = viewportTop - offcanvasHeight + offcanvasActiveLinkHeight
+
+        if (offcanvas.scrollTop > viewportTop || offcanvas.scrollTop < viewportBottom) {
+          offcanvas.scrollTop = viewportTop - (offcanvasHeight / 2) + (offcanvasActiveLinkHeight / 2)
+        }
       }
     }
   }

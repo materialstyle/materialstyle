@@ -12,7 +12,7 @@ Customize Material Style with our built-in variables file and easily toggle glob
 
 You can find and customize these variables for key global options in Material Style's `scss/_variables.scss` file.
 
-{{< bs-table "table table-options" >}}
+{{< bs-table >}}
 | Variable                       | Values                             | Description                                                                            |
 | ------------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------- |
 | `$spacer`                      | `1rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our spacer utilities. |

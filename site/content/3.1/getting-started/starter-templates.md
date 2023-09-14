@@ -7,13 +7,17 @@ keywords: getting-started, layout, starter-template
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">
-  Be sure to have your pages set up with the latest design and development standards. 
-  That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.
+  Quickly kickstart your projects with our HTML templates that follow modern web development standards, 
+  ensuring ease and efficiency.
 </p>
 
+**Ensure your webpages adhere to best practices, include an HTML5 doctype and a viewport meta tag for proper 
+responsive behaviors.**
+
+<br>
+
 ## HTML5 doctype
-Bootstrap requires the use of the HTML5 doctype. 
-Without it, you’ll see some funky incomplete styling, 
+Material Style requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, 
 but including it shouldn’t cause any considerable hiccups.
 
 ```html
@@ -27,9 +31,8 @@ but including it shouldn’t cause any considerable hiccups.
 
 ## Responsive meta tag
 Bootstrap is developed mobile first, a strategy in which it optimizes code for mobile devices first 
-and then scales up components as necessary using CSS media queries. 
-To ensure proper rendering and touch zooming for all devices, 
-add the responsive viewport meta tag to your ```<head>```.
+and then scales up components as necessary using CSS media queries. To ensure proper rendering and touch zooming 
+for all devices, add the responsive viewport meta tag to your ```<head>```.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +41,7 @@ add the responsive viewport meta tag to your ```<head>```.
 <br>
 
 ## Box-sizing
-For more straightforward sizing in CSS, Bootstrap switches the global ```box-sizing``` value 
+For more straightforward sizing in CSS, Material Style switches the global ```box-sizing``` value 
 from ```content-box``` to ```border-box```. This ensures ```padding``` does not affect the final 
 computed width of an element, but it can cause problems with some third-party software like 
 Google Maps and Google Custom Search Engine.
@@ -53,9 +56,9 @@ On the rare occasion you need to override it, use something like the following:
 
 <br>
 
-For your convenience, we have created two starter templates:
-1. <a class="link-theme text-decoration-none" href="#template-with-sidebardrawer">With Sidebar/Drawer</a>
-2. <a class="link-theme text-decoration-none" href="#template-without-sidebardrawer">Without Sidebar/Drawer</a>
+**For your convenience, we have created two starter templates:**
+1. [With Sidebar/Drawer](#template-with-sidebardrawer)
+2. [Without Sidebar/Drawer](#template-without-sidebardrawer)
 
 <br>
 
@@ -79,7 +82,7 @@ For your convenience, we have created two starter templates:
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -171,7 +174,7 @@ For your convenience, we have created two starter templates:
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>
@@ -199,7 +202,7 @@ For your convenience, we have created two starter templates:
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -232,7 +235,7 @@ For your convenience, we have created two starter templates:
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>

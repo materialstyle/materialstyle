@@ -36,7 +36,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -129,7 +129,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>
@@ -147,7 +147,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -240,7 +240,7 @@ We use Bootstrap's Offcanvas component for Drawers which come in two types:
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>
@@ -260,7 +260,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -353,7 +353,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>
@@ -371,7 +371,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -464,7 +464,7 @@ Use Breakpoints ```.offcanvas{-sm|-md|-lg|-xl|-xxl}``` to create a responsive dr
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>

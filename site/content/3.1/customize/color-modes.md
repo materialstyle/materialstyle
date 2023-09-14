@@ -1,9 +1,9 @@
 ---
 layout: docs
 title: Color modes
-group: colors
+group: customize
 toc: true
-keywords: colors, color modes
+keywords: customize, colors, color modes
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">
@@ -101,7 +101,7 @@ attribute applied.
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -193,7 +193,7 @@ attribute applied.
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>

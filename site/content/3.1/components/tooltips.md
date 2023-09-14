@@ -12,7 +12,7 @@ Things to know when using the tooltip plugin:
  <a class="link-pink" href="https://popper.js.org/">Popper</a> for positioning. You must include 
  <a class="link-pink" href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js">popper.min.js</a> 
  before 
- <a class="link-pink" href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js">materialstyle.min.js</a> 
+ <a class="link-pink" href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js">materialstyle.min.js</a> 
  in order for tooltips to work!
  
  - Tooltips are opt-in for performance reasons, so you must initialize them yourself.

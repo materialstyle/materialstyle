@@ -44,7 +44,7 @@ They can be changed by:
 2. Modifying the ```$breadcrumb-divider``` Sass variable and ```$breadcrumb-divider-flipped``` 
 for its RTL counterpart, if needed. 
 
-Bootstrap defaults to the Sass variable, which is set as a fallback to the custom property. 
+Material Style defaults to the Sass variable, which is set as a fallback to the custom property. 
 This way, you get a global divider that you can override without recompiling CSS at any time.
 
 <br>

@@ -27,7 +27,7 @@
       </div>
       {{ end }}
 
-      {{ $related := .Site.RegularPages.Related . | first 5 }}
+      {{ $related := .Site.RegularPages.Related . | first 10 }}
       {{ with $related }}
       <div class="row">
         <div class="col">

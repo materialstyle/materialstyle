@@ -11,32 +11,50 @@ Review changes in Material Style source files, documentation, and components to
 migrate from v2 to v3.
 </p>
 
+## **v3.1.0**
+*Based on Bootstrap v5.3.1*
+
+### Docs
+Added documentation for Layout, Utilities & Helpers
+
+### Forms
+Text and Select Fields now use the global `border-width` & `border-radius`
+
+### Theming
+We have created <a class="link-pink" href="https://materialstyle.github.io/theme-builder">Theme builder</a>, 
+a tool for customizing Material Style. With this tool, you can effortlessly select your theme color, 
+set the global `border-width`, and adjust `border-radius`. The tool offers real-time previews on components, making it 
+easy to visualize your design choices. Additionally, it automatically generates **CSS variables** based on your 
+theme color selection.
+
+---
+
 ## **v3.1.0-alpha1**
 *Based on Bootstrap v5.3.0-alpha3*
 
 **Follows the following Bootstrap migration guides:**
 - <a class="link-pink" href="https://getbootstrap.com/docs/5.3/migration/#v530-alpha1">Bootstrap v5.3.0-alpha1 migration guide</a>
 - <a class="link-pink" href="https://getbootstrap.com/docs/5.3/migration/#v530-alpha2">Bootstrap v5.3.0-alpha2 migration guide</a>
-- <a class="link-pink" href="https://getbootstrap.com/docs/5.3/migration/#v530">Bootstrap v5.3.0-alpha3 migration guide</a>
+- <a class="link-pink" href="https://getbootstrap.com/docs/5.3/migration/#v530">Bootstrap v5.3.0 migration guide</a>
 
-## Docs
+### Docs
 - Added Light and Dark modes.
 - Added Customization docs.
 
-## Customization
-### Color modes
+### Customization
+#### Color modes
 - Material Style supports Light and Dark color modes. See [the color modes documentation]({{< docsref "/colors/color-modes" >}}) to learn more.
 - Theme colors are adaptive to Light and Dark modes by default.
 
-### Theming
+#### Theming
 Theme colors can be customized using CSS variables. And the components are updated to use theme colors from the CSS variables. It allows for custom theming using CSS variables. Helpful for CDN users. See [theming]({{< docsref "/colors/theming" >}}) to learn more.
 
-### Colors
+#### Colors
 - <span class="badge text-bg-danger rounded-pill me-1">Breaking</span> 
 Colors `red`, `pink`, `purple`, `indigo`, `blue`, `cyan`, `teal`, `green`, `yellow` & `orange`
 have been removed in favour of custom theming.
 
-## Components
+### Components
 - Added elevated buttons (Buttons with shadows).
 - Added support for Dark Select and Text Fields.
 - <span class="badge text-bg-danger rounded-pill me-1">Breaking</span> 

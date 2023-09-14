@@ -11,23 +11,22 @@
   pages:
     - title: Sass
     - title: CSS variables
-    - title: Options
-    - title: Components
-
-- title: Colors
-  pages:
     - title: Theme Colors
     - title: Color modes
     - title: Theming
-    - title: Background color
-    - title: Text color
-    - title: Colored Links
+    - title: Options
+    - title: Components
 
-- title: Utilities
+- title: Layout
   pages:
-    - title: Ripple
-    - title: Shadows
-    - title: Shapes
+    - title: Breakpoints
+    - title: Containers
+    - title: Grid
+    - title: Columns
+    - title: Gutters
+    - title: Utilities
+    - title: Z-index
+    - title: CSS Grid
 
 - title: Forms
   pages:
@@ -67,14 +66,52 @@
     - title: Toasts
     - title: Tooltips
 
+- title: Utilities
+  pages:
+    - title: Api
+    - title: Background color
+    - title: Borders
+    - title: Display
+    - title: Flex
+    - title: Float
+    - title: Interactions
+    - title: Link
+    - title: Object fit
+    - title: Opacity
+    - title: Overflow
+    - title: Position
+    - title: Ripple
+    - title: Shadows
+    - title: Shapes
+    - title: Sizing
+    - title: Spacing
+    - title: Text
+    - title: Text color
+    - title: Vertical align
+    - title: Visibility
+    - title: Z-index
+
+- title: Helpers
+  pages:
+    - title: Clearfix
+    - title: Focus ring
+    - title: Icon link
+    - title: Position
+    - title: Ratio
+    - title: Stacks
+    - title: Stretched link
+    - title: Text truncation
+    - title: Vertical rule
+    - title: Visually hidden
+
 - title: Demos
   pages:
-  - title: Drawer
-  - title: Drawer End
-  - title: Drawer Responsive
-  - title: Drawer Responsive End
-  - title: Navbar Fixed Top
-  - title: Navbar Fixed Bottom
-  - title: Navbar Auto Hide
+    - title: Drawer
+    - title: Drawer End
+    - title: Drawer Responsive
+    - title: Drawer Responsive End
+    - title: Navbar Fixed Top
+    - title: Navbar Fixed Bottom
+    - title: Navbar Auto Hide
 
 - title: Migration

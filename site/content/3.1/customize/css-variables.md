@@ -7,7 +7,7 @@ keywords: customize, css variables
 ---
 
 <p class="fs-4 ms-0 mb-4 page-description">
-Use Material Style's CSS custom properties for fast and forward-looking design and development. 
+  Embrace Forward-Looking Design and Development with Material Style's CSS Custom Properties for Speed and Flexibility.
 </p>
 
 Material Style includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
