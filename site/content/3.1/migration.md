@@ -22,11 +22,10 @@ Text and Select Fields now use the global `border-width` & `border-radius`
 
 ### Theming
 We have created <a class="link-pink" href="https://materialstyle.github.io/theme-builder">Theme builder</a>, 
-a tool for customizing Material Style themes. With this tool, you can effortlessly select your **primary** theme color, 
+a tool for customizing Material Style. With this tool, you can effortlessly select your theme color, 
 set the global `border-width`, and adjust `border-radius`. The tool offers real-time previews on components, making it 
 easy to visualize your design choices. Additionally, it automatically generates **CSS variables** based on your 
-**primary** theme color selection. To customize other theme colors, simply replace the word "primary" in the 
-CSS variables with the theme of your choice like **secondary**, **tertiary** etc.
+theme color selection.
 
 ---
 
