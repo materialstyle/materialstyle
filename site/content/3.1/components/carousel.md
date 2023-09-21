@@ -3,11 +3,8 @@ layout: docs
 title: Carousel
 group: components
 toc: true
+description: The carousel is a slideshow for cycling through a series of images, text, or custom markup.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-The carousel is a slideshow for cycling through a series of images, text, or custom markup.
-</p>
 
 ## How it works
  - In browsers where the 

@@ -4,11 +4,8 @@ title: Text truncation
 group: helpers
 toc: true
 keywords: helpers, text truncation
+description: Truncate long strings of text with an ellipsis.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Truncate long strings of text with an ellipsis.
-</p>
 
 For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
 

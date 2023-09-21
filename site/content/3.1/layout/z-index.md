@@ -4,12 +4,8 @@ title: Z-index
 group: layout
 toc: true
 keywords: layout, z-index
+description: While not a part of Material Style's grid system, z-indexes play an important part in how our components overlay and interact with one another.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- While not a part of Material Style's grid system, z-indexes play an important part in how our components overlay 
- and interact with one another.
-</p>
 
 Several Material Style components utilize `z-index`, the CSS property that helps control layout by providing a 
 third axis to arrange content. We utilize a default z-index scale in Material Style that's been designed to 

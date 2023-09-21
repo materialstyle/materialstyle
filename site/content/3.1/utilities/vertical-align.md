@@ -4,11 +4,8 @@ title: Vertical align
 group: utilities
 toc: true
 keywords: utilities, vertical align
+description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
-</p>
 
 Change the alignment of elements with the vertical-alignment utilities. Please note that vertical-align only 
 affects inline, inline-block, inline-table, and table cell elements.

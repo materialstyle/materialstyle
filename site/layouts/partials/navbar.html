@@ -16,13 +16,23 @@
 
         <a class="navbar-brand d-flex align-items-center py-0 me-0 rounded" href="/">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
-          <div id="site-name" class="text-white ml-1">Material Style</div>
+          <div class="site-name text-white ml-1">Material Style</div>
         </a>
     </div>
 
-    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-2 me-2">
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://materialstyle.github.io/theme-builder">
+          Theme Builder
+        </a>
+      </li>
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://github.com/materialstyle/materialstyle">
+          GitHub
+        </a>
+      </li>
       <li class="nav-item dropdown">
-        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-1 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
           v{{ .Site.Params.docs_version }}
           <span class="ripple-surface"></span>
         </button>

@@ -4,12 +4,8 @@ title: Starter Templates
 group: getting-started
 toc: true
 keywords: getting-started, layout, starter-template
+description: Quickly kickstart your projects with our HTML templates that follow modern web development standards, ensuring ease and efficiency.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Quickly kickstart your projects with our HTML templates that follow modern web development standards, 
-  ensuring ease and efficiency.
-</p>
 
 **Ensure your webpages adhere to best practices, include an HTML5 doctype and a viewport meta tag for proper 
 responsive behaviors.**

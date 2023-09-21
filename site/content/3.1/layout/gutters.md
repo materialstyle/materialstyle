@@ -4,12 +4,8 @@ title: Gutters
 group: layout
 toc: true
 keywords: layout, gutters
+description:  Gutters are the gaps between your columns, used to responsively space and align content in the Material Style grid system.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Gutters are the gaps between your columns, used to responsively space and align content in the Material Style 
- grid system.
-</p>
 
 ## How they work
 

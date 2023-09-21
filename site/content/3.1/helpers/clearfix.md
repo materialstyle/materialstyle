@@ -2,13 +2,13 @@
 layout: docs
 title: Clearfix
 group: helpers
+aliases:
+  - "/3.1/helpers/"
+  - "/helpers/"
 toc: true
 keywords: helpers, clearfix
+description: Quickly and easily clear floated content within a container by adding a clearfix utility.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Quickly and easily clear floated content within a container by adding a clearfix utility.
-</p>
 
 Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
 

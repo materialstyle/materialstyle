@@ -2,16 +2,10 @@
 layout: docs
 title: Ripple
 group: utilities
-aliases:
-  - "/3.1/utilities/"
-  - "/utilities/"
 toc: true
 keywords: utilities, ripple
+description: Ripples are visual representations used to communicate the status of a component or interactive element.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Ripples are visual representations used to communicate the status of a component or interactive element.
-</p>
 
 ## Installation
 

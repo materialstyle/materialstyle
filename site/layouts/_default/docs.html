@@ -3,14 +3,25 @@
 
   <div class="component-showcase">
     <h1 id="content">{{ .Title | markdownify }}</h1>
+
+    {{ if (.Page.Params.Description) }}
+    <p class="fs-4 ms-0 mb-4 page-description">{{ .Page.Params.Description | markdownify }}</p>
+    {{ end }}
+
     {{ .Content }}
   </div>
 
   <div class="component-map">
     <div class="row">
       <div class="col">
-        <div class="adspace bg-gray-100">
-
+        <div class="adspace rounded mb-2">
+          <a target="_blank" class="text-decoration-none text-body" href="https://materialstyle.github.io/theme-builder">
+            <div class="d-flex align-items-center">
+              <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+              <div class="site-name ml-1">Theme Builder <i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+            <small>Personalize Material Style to reflect your product's brand identity.</small>
+          </a>
         </div>
       </div>
     </div>

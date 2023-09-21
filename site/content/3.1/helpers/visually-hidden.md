@@ -4,11 +4,8 @@ title: Visually hidden
 group: helpers
 toc: true
 keywords: helpers, visually hidden
+description: Use these helpers to visually hide elements but keep them accessible to assistive technologies.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Use these helpers to visually hide elements but keep them accessible to assistive technologies.
-</p>
 
 Visually hide an element while still allowing it to be exposed to assistive technologies 
 (such as screen readers) with `.visually-hidden`. Use `.visually-hidden-focusable` to visually hide an element by 

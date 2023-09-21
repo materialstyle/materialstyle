@@ -4,12 +4,8 @@ title: Ratio
 group: helpers
 toc: true
 keywords: helpers, ratios
+description: Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for 
-  responsively handling video or slideshow embeds based on the width of the parent.
-</p>
 
 ## About
 

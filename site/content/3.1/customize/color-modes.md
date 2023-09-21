@@ -4,11 +4,8 @@ title: Color modes
 group: customize
 toc: true
 keywords: customize, colors, color modes
+description: Material Style supports color modes, or themes, as of v3.1.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-Material Style supports color modes, or themes, as of v3.1.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template. 
-</p>
 
 ## Dark mode
 **Material Style supports color modes, starting with dark mode!** As of v3.1.0 you can implement 

@@ -7,11 +7,8 @@ aliases:
   - "/customize/"
 toc: true
 keywords: customize, sass
+description: Customize Material Style with Sass, Harness the power of variables, maps, mixins, and functions.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Customize Material Style with Sass: Harness the power of variables, maps, mixins, and functions. 
-</p>
 
 ## File structure
 

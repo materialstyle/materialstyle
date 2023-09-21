@@ -4,11 +4,8 @@ title: Position
 group: utilities
 toc: true
 keywords: utilities, position
+description: Use these shorthand utilities for quickly configuring the position of an element.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Use these shorthand utilities for quickly configuring the position of an element.
-</p>
 
 ## Position
 Quick positioning classes are available, though they are not responsive.

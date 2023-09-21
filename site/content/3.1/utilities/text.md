@@ -4,11 +4,8 @@ title: Text
 group: utilities
 toc: true
 keywords: utilities, text
+description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
-</p>
 
 ## Text alignment
 

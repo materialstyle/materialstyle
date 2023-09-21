@@ -3,11 +3,8 @@ layout: docs
 title: Tabs
 group: components
 toc: true
+description: Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
-</p>
 
 {{< callout >}}
 {{< partial "callout-requiresjavascript.md" >}}

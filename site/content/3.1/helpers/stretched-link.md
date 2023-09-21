@@ -4,11 +4,8 @@ title: Stretched link
 group: helpers
 toc: true
 keywords: helpers, stretched link
+description: Make any HTML element or Bootstrap component clickable by "stretching" a nested link via CSS.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Make any HTML element or Bootstrap component clickable by "stretching" a nested link via CSS.
-</p>
 
 Add `.stretched-link` to a link to make its 
 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) 

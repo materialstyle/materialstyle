@@ -4,11 +4,8 @@ title: Float
 group: utilities
 toc: true
 keywords: utilities, float
+description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Toggle floats on any element, across any breakpoint, using our responsive float utilities.
-</p>
 
 ## Overview
 These utility classes float an element to the left or right, or disable floating, based on the current viewport 

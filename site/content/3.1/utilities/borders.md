@@ -4,11 +4,8 @@ title: Borders
 group: utilities
 toc: true
 keywords: utilities, borders
+description: Use border utilities to quickly style the border and border-radius of an element.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Use border utilities to quickly style the border and border-radius of an element.
-</p>
 
 ## Border
 ### Add borders

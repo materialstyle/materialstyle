@@ -4,11 +4,8 @@ title: Z-index
 group: utilities
 toc: true
 keywords: utilities, z-index
+description: Use our low-level `z-index` utilities to quickly change the stack level of an element or component.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Use our low-level `z-index` utilities to quickly change the stack level of an element or component.
-</p>
 
 ## Example
 Use `z-index` utilities to stack elements on top of one another. Requires a `position` value other than `static`, 

@@ -2,14 +2,13 @@
 layout: docs
 title: Breakpoints
 group: layout
+aliases:
+  - "/3.1/layout/"
+  - "/layout/"
 toc: true
 keywords: layout, breakpoints
+description: Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Material Style.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport 
- sizes in Material Style.
-</p>
 
 ## Core concepts
 - **Breakpoints are the building blocks of responsive design.** Use them to control when your layout can be adapted 

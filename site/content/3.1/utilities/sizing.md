@@ -4,11 +4,8 @@ title: Sizing
 group: utilities
 toc: true
 keywords: utilities, sizing
+description: Easily make an element as wide or as tall with our width and height utilities.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Easily make an element as wide or as tall with our width and height utilities.
-</p>
 
 ## Relative to the parent
 Width and height utilities are generated from the utility API in `_utilities.scss`. Includes support 

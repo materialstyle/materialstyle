@@ -3,12 +3,8 @@ layout: docs
 title: Modal
 group: components
 toc: true
+description: A Modal appears in front of app content to provide critical information or ask for a decision. Modals remain on screen until confirmed, dismissed, or a required action has been taken.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-A Modal appears in front of app content to provide critical information or ask for a decision. 
-Modals remain on screen until confirmed, dismissed, or a required action has been taken.
-</p>
 
 ## How it works
 - Modals are positioned over everything else in the document and remove scroll from 

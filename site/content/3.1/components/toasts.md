@@ -4,9 +4,8 @@ title: Toasts
 group: components
 toc: true
 keywords: snackbar, toast
+description: Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
 
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}
 

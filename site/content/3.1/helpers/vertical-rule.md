@@ -4,11 +4,8 @@ title: Vertical rule
 group: helpers
 toc: true
 keywords: helpers, vertical rule
+description: Use the custom vertical rule helper to create vertical dividers like the <code>&lt;hr&gt;</code> element.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Use the custom vertical rule helper to create vertical dividers like the <code>&lt;hr&gt;</code> element.
-</p>
 
 ## How it works
 

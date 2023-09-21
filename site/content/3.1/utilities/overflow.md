@@ -4,11 +4,8 @@ title: Overflow
 group: utilities
 toc: true
 keywords: utilities, overflow
+description: Use these shorthand utilities for quickly configuring how content overflows an element.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Use these shorthand utilities for quickly configuring how content overflows an element.
-</p>
 
 ## Overflow
 Adjust the `overflow` property on the fly with four default values and classes. 

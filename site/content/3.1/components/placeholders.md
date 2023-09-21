@@ -3,9 +3,8 @@ layout: docs
 title: Placeholders
 group: components
 toc: true
+description: Use loading placeholders for your components or pages to indicate something may still be loading.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">Use loading placeholders for your components or pages to indicate something may still be loading.</p>
 
 ## How it works
 Create placeholders with the ```.placeholder``` class and a grid column class (e.g., ```.col-6```) 

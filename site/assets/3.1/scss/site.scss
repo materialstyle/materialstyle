@@ -272,9 +272,7 @@ footer {
   }
 }
 
-#site-home-top-nav .navbar-brand,
-#site-offcanvas .offcanvas-title,
-.footer-brand {
+.site-name {
   font-family: "Roboto Mono", monospace;
   font-size: 1rem !important;
   font-weight: 500;
@@ -328,8 +326,14 @@ h5:not(.badge-example-headings h5) {
   }
 }
 
-@media (max-width: 475px) {
-  #site-home-top-nav #site-name {
+@media (max-width: 490px) {
+  .extra-links {
+    display: none;
+  }
+}
+
+@media (max-width: 625px) {
+  #site-home-top-nav .site-name {
     display: none;
   }
 
@@ -355,12 +359,17 @@ h5:not(.badge-example-headings h5) {
   }
 
   #site-home-top-nav .navbar-nav {
-    gap: .5rem !important;
     margin-right: 0 !important;
   }
 }
 
-@media (max-width: 293px) {
+@media (max-width: 289px) {
+  #site-home-top-nav .container-fluid {
+    gap: .3rem !important;
+  }
+}
+
+@media (max-width: 279px) {
   #site-home-top-nav .navbar-nav {
     width: 100%;
   }
@@ -416,9 +425,8 @@ h5:not(.badge-example-headings h5) {
 }
 
 .adspace {
-  //height: 220px;
   padding: 10px;
-  border-bottom: 5px solid #fafafa;
+  background-color: rgba(95, 61, 196, .2);
 
   .ad {
     width: 200px;

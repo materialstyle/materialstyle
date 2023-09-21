@@ -3,11 +3,8 @@ layout: docs
 title: Collapse
 group: components
 toc: true
+description: A collase toggles the visibility of content.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-A collase toggles the visibility of content.
-</p>
 
 ## How it works
 The collapse JavaScript plugin is used to show and hide content. Buttons or anchors 

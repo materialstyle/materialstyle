@@ -4,9 +4,8 @@ title: Breadcrumb
 group: components
 toc: true
 keywords: breadcrumb
+description: Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.</p>
 
 {{< example codeId="code1" >}}
 

@@ -8,13 +8,8 @@ aliases:
   - "/getting-started/"
 toc: true
 keywords: getting-started, installation
+description: We offer three convenient options to integrate Material Style into your project. Choose the one that aligns with your preferences, and let Material Style enhance the visual appeal of your project with its Material Design goodness.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  We offer three convenient options to integrate Material Style into your project.
-  Choose the one that aligns with your preferences, and let Material Style 
-  enhance the visual appeal of your project with its Material Design goodness.
-</p>
 
 ## CDN
 Use Material Style instantly by including its CSS and JavaScript files directly from a Content Delivery Network (CDN). 

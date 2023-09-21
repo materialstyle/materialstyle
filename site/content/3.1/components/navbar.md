@@ -4,11 +4,8 @@ title: Navbar
 group: components
 toc: true
 keywords: layout, navbar
+description: Navigation bars offer a persistent and convenient way to switch between primary destinations in an app.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Navigation bars offer a persistent and convenient way to switch between primary destinations in an app.
-</p>
 
 {{< example codeId="code1" >}}
 <nav class="navbar navbar-expand-xl bg-primary">

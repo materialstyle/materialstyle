@@ -4,11 +4,8 @@ title: Opacity
 group: utilities
 toc: true
 keywords: utilities, opacity
+description: Control the opacity of elements.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Control the opacity of elements.
-</p>
 
 The `opacity` property sets the opacity level for an element. The opacity level describes the transparency 
 level, where `1` is not transparent at all, `.5` is 50% visible, and `0` is completely transparent.

@@ -4,11 +4,8 @@ title: Position
 group: helpers
 toc: true
 keywords: helpers, position
+description: Use these helpers for quickly configuring the position of an element.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Use these helpers for quickly configuring the position of an element.
-</p>
 
 ## Fixed top
 

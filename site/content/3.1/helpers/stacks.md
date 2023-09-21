@@ -4,12 +4,8 @@ title: Stacks
 group: helpers
 toc: true
 keywords: helpers, stacks
+description: Shorthand helpers that build on top of our flexbox utilities to make component layout faster and easier than ever.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Shorthand helpers that build on top of our flexbox utilities to make component layout faster and easier 
-  than ever.
-</p>
 
 ## Vertical
 

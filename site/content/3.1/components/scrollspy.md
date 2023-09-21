@@ -4,12 +4,8 @@ title: Scrollspy
 group: components
 toc: true
 keywords: scrollspy
+description: Automatically update navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-Automatically update navigation or list group components based on scroll position to 
-indicate which link is currently active in the viewport.
-</p>
 
 ## How it works
 <a class="link-pink" href="https://www.w3.org/TR/page-visibility/">Page Visibility API</a> 
