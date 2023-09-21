@@ -7,9 +7,8 @@ aliases:
   - "/forms/"
 toc: true
 keywords: forms, text-field
+description: Text fields allow users to enter text into a UI.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">Text fields allow users to enter text into a UI.</p> 
 
 They come in two types:
 - Filled text fields

@@ -3,11 +3,8 @@ layout: docs
 title: Close button
 group: components
 toc: true
+description: A generic close button for dismissing content like modals and alerts.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-A generic close button for dismissing content like modals and alerts.
-</p>
 
 {{< example codeId="code1" >}}
 

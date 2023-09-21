@@ -4,12 +4,8 @@ title: CSS Grid
 group: layout
 toc: true
 keywords: layout, css grid
+description: Learn how to enable, use, and customize our alternate layout system built on CSS Grid with examples and code snippets.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Learn how to enable, use, and customize our alternate layout system built on CSS Grid with examples and code 
-  snippets.
-</p>
 
 Material Style's default grid system represents the culmination of over a decade of CSS layout techniques, tried and 
 tested by millions of people. But, it was also created without many of the modern CSS features and techniques 

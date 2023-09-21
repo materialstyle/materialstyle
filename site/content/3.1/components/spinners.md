@@ -4,9 +4,8 @@ title: Spinners
 group: components
 toc: true
 keywords: progress, spinners
+description: Indicate the loading state of a component or page with spinners.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">Indicate the loading state of a component or page with spinners.</p>
 
 ## Material Design Spinner
 

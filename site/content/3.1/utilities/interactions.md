@@ -4,11 +4,8 @@ title: Interactions
 group: utilities
 toc: true
 keywords: utilities, interactions
+description: Utility classes that change how users interact with contents of a website.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Utility classes that change how users interact with contents of a website.
-</p>
 
 ## Text selection
 Change the way in which the content is selected when the user interacts with it.

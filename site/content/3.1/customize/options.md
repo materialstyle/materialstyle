@@ -4,11 +4,8 @@ title: Options
 group: customize
 toc: true
 keywords: customize, options
+description: Customize Material Style with our built-in variables file and easily toggle global CSS preferences with new <code>$enable-*</code> Sass variables. Override a variable's value and recompile with <code>npm run test</code> as needed.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-Customize Material Style with our built-in variables file and easily toggle global CSS preferences with new <code>$enable-*</code> Sass variables. Override a variable's value and recompile with <code>npm run test</code> as needed. 
-</p>
 
 You can find and customize these variables for key global options in Material Style's `scss/_variables.scss` file.
 

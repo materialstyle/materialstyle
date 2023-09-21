@@ -4,11 +4,8 @@ title: Icon link
 group: helpers
 toc: true
 keywords: helpers, icon link
+description: Quickly create stylized hyperlinks with Bootstrap Icons or other icons.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Quickly create stylized hyperlinks with Bootstrap Icons or other icons.
-</p>
 
 The icon link helper component modifies our default link styles to enhance their appearance and quickly align any 
 pairing of icon and text. Alignment is set via inline flexbox styling and a default `gap` value. We stylize the 

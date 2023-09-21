@@ -4,13 +4,8 @@ title: Object fit
 group: utilities
 toc: true
 keywords: utilities, object fit
+description: Use the object fit utilities to modify how the content of a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">replaced element</a>, such as an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code>, should be resized to fit its container.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Use the object fit utilities to modify how the content of a 
- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">replaced element</a>, 
- such as an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code>, should be resized to fit its container.
-</p>
 
 ## How it works
 Change the value of the [object-fit property](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) with our 

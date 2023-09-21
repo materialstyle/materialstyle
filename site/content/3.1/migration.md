@@ -4,12 +4,8 @@ title: Migrating to v3
 group: migration
 toc: true
 keywords: migration
+description: Review changes in Material Style source files, documentation, and components to migrate from v2 to v3.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-Review changes in Material Style source files, documentation, and components to 
-migrate from v2 to v3.
-</p>
 
 ## **v3.1.0**
 *Based on Bootstrap v5.3.1*

@@ -4,11 +4,8 @@ title: Spacing
 group: utilities
 toc: true
 keywords: utilities, spacing
+description: A wide range of shorthand responsive margin, padding, and gap utility classes.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- A wide range of shorthand responsive margin, padding, and gap utility classes.
-</p>
 
 ## Margin and padding
 Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand 

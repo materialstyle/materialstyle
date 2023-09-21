@@ -4,12 +4,8 @@ title: Grid
 group: layout
 toc: true
 keywords: layout, grid
+description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column 
- system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
-</p>
 
 ## Example
 Material Style's grid system uses a series of containers, rows, and columns to layout and align content. It's built with 

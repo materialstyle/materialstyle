@@ -4,12 +4,8 @@ title: Display
 group: utilities
 toc: true
 keywords: utilities, display
+description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Quickly and responsively toggle the display value of components and more with our display utilities. Includes 
- support for some of the more common values, as well as some extras for controlling display when printing.
-</p>
 
 ## Notation
 Display utility classes that apply to all breakpoints, from `xs` to `xxl`, have no breakpoint abbreviation in them. 

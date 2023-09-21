@@ -4,12 +4,8 @@ title: Link
 group: utilities
 toc: true
 keywords: utilities, colors, link
+description: Link utilities are used to stylize your anchors to adjust their color, opacity, underline offset, underline color, and more.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Link utilities are used to stylize your anchors to adjust their color, opacity, underline offset, 
- underline color, and more.
-</p>
 
 ## Default link
 {{< example codeId="code1" class="d-flex justify-content-center" >}}

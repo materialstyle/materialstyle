@@ -4,11 +4,8 @@ title: Theming
 group: customize
 toc: true
 keywords: customize, colors, theming
+description: Personalize Material Style to align with your product's unique brand identity and style preferences.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-Personalize Material Style to align with your product's unique brand identity and style preferences.
-</p>
 
 ## Theme Builder
 At Material Style, we believe in empowering our users to create designs that are uniquely their own. That's why we've 

@@ -3,9 +3,8 @@ layout: docs
 title: Dropdowns
 group: components
 toc: true
+description: Dropdowns display a list of choices.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">Dropdowns display a list of choices.</p>
 
 ## Button
 {{< example codeId="code1" class="d-flex justify-content-center align-items-center flex-wrap">}}

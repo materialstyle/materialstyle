@@ -4,11 +4,8 @@ title: Drawer / Sidebar
 group: components
 toc: true
 keywords: layout, drawer
+description: Drawers provide access to destinations and app functionality, such as switching accounts.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Drawers provide access to destinations and app functionality, such as switching accounts.
-</p>
 
 <div class="d-flex align-items-center justify-content-center my-4">
   <img class="lazy border border-purple" style="width:100%;max-width:800px;"

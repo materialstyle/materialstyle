@@ -4,12 +4,8 @@ title: Containers
 group: layout
 toc: true
 keywords: layout, containers
+description: Containers are a fundamental building block of Material Style that contain, pad, and align your content within a given device or viewport.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Containers are a fundamental building block of Material Style that contain, pad, and align your content within a given 
- device or viewport.
-</p>
 
 ## How they work
 Containers are the most basic layout element in Material Style and are **required when using our default grid system**. 

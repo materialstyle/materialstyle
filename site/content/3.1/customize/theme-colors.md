@@ -4,11 +4,8 @@ title: Theme colors
 group: customize
 toc: true
 keywords: customize, colors, theme colors
+description: Material Style comes designed with a baseline theme that is adaptive to color modes and can be used as-is, straight out of the box or customized as per your need.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-Material Style comes designed with a baseline theme that is adaptive to color modes and can be used as-is, straight out of the box or customized as per your need. 
-</p>
 
 Theme colors are adaptive to color modes, meaning they change according to the color mode (for example, dark and light mode). Try switching to dark/light mode from the top navigation bar.
 

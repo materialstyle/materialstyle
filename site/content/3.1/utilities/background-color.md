@@ -4,11 +4,8 @@ title: Background color
 group: utilities
 toc: true
 keywords: utilities, colors, background color
+description: Convey meaning through <code>background-color</code> and add decoration with gradients.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Convey meaning through <code>background-color</code> and add decoration with gradients.
-</p>
 
 {{< example codeId="code1" class="d-flex flex-column gap-2" >}}
 

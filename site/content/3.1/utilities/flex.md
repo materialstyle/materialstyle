@@ -4,12 +4,8 @@ title: Flex
 group: utilities
 toc: true
 keywords: utilities, flex
+description: Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
- full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-</p>
 
 ## Enable flex behaviors
 Apply `display` utilities to create a flexbox container and transform **direct children elements** into flex items. 

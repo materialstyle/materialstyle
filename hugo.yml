@@ -50,7 +50,7 @@ related:
   toLower: false
 
 params:
-  description:          "A Material Design UI Library based on Bootstrap"
+  description:          "Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap"
   authors:              "Neeraj Kumar Das"
 
   current_version:      "3.1.0"

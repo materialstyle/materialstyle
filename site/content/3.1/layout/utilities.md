@@ -4,12 +4,8 @@ title: Utilities
 group: layout
 toc: true
 keywords: layout, utilities
+description: For faster mobile-friendly and responsive development, Material Style includes dozens of utility classes for showing, hiding, aligning, and spacing content.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
- For faster mobile-friendly and responsive development, Material Style includes dozens of utility classes for 
- showing, hiding, aligning, and spacing content.
-</p>
 
 ## Changing `display`
 

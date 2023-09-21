@@ -4,11 +4,8 @@ title: CSS variables
 group: customize
 toc: true
 keywords: customize, css variables
+description: Embrace Forward-Looking Design and Development with Material Style's CSS Custom Properties for Speed and Flexibility.
 ---
-
-<p class="fs-4 ms-0 mb-4 page-description">
-  Embrace Forward-Looking Design and Development with Material Style's CSS Custom Properties for Speed and Flexibility.
-</p>
 
 Material Style includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
 
