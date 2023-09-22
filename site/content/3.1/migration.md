@@ -8,7 +8,7 @@ description: Review changes in Material Style source files, documentation, and c
 ---
 
 ## **v3.1.0**
-*Based on Bootstrap v5.3.1*
+*Based on Bootstrap v5.3.2*
 
 ### Docs
 Added documentation for Layout, Utilities & Helpers
