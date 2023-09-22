@@ -1,0 +1,1837 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+<script src="/materialstyle/3.1/js/color-modes/index.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.">
+<meta name="author" content="Neeraj Kumar Das">
+<meta name="generator" content="Hugo 0.118.2">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="3.1">
+
+<meta name="theme-color" content="#6f42c1">
+
+<meta property="og:url" content="https://materialstyle.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grid · Material Style v3.1">
+<meta property="og:description" content="Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.">
+<meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg">
+
+<title>Grid · Material Style v3.1</title>
+
+<link rel="canonical" href="http://materialstyle.github.io/materialstyle/3.1/layout/grid/">
+<link rel="icon" href="/materialstyle/assets/images/favicon.ico" type="image/x-icon">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link href="/materialstyle/3.1/dist/css/materialstyle.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<link rel="preconnect" href="https://3EHDQBJAE1-dsn.algolia.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/materialstyle/3.1/assets/css/styles.css" rel="stylesheet">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T3YPJV7LJD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T3YPJV7LJD');
+</script>
+
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+  <nav id="site-home-top-nav" class="navbar fixed-top">
+  
+  <div class="d-flex justify-content-center align-items-center w-100 visually-hidden-focusable overflow-hidden" >
+    <a class="link-light p-2 m-1 rounded" href="#content">Skip to main content</a>
+    <a class="link-light d-none d-lg-inline-block p-2 m-1 rounded" href="#sidebar">Skip to sidebar</a>
+  </div>
+
+  <div class="container-fluid gap-3">
+    <div class="d-flex align-items-center">
+        <button class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#site-offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand d-flex align-items-center py-0 me-0 rounded" href="/">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <div class="site-name text-white ml-1">Material Style</div>
+        </a>
+    </div>
+
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-2 me-2">
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://materialstyle.github.io/theme-builder">
+          Theme Builder
+        </a>
+      </li>
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://github.com/materialstyle/materialstyle">
+          GitHub
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-1 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+          v3.1
+          <span class="ripple-surface"></span>
+        </button>
+        <ul class="dropdown-menu position-absolute" style="--bs-dropdown-min-width: auto;">
+          <li><a class="dropdown-item" href="/materialstyle/3.0/">3.0</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="/docs/2.0/">2.0</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="/docs/1.2/">1.2</a></li>
+          <li><a class="dropdown-item" href="/docs/1.1/">1.1</a></li>
+          <li><a class="dropdown-item" href="/docs/1.0/">1.0</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-1 py-0" id="docsearch">
+          <i class="bi bi-search text-white fs-4"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center"
+                id="theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                data-bs-display="static">
+          <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+          <span class="visually-hidden">Toggle theme</span>
+          <span class="ripple-surface"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="theme" style="--bs-dropdown-min-width: 8rem;">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+              Light
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+              Dark
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+              Auto
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <aside class="offcanvas-start offcanvas-lg offcanvas-fixed"
+       data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
+  <div class="offcanvas-header">
+    <a class="site-name offcanvas-title d-flex align-items-center text-white py-0" href="/">
+      <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
+           alt="Material Style Logo" style="width:40px; height:40px;">Material Style
+    </a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            data-bs-target="#site-offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body"><ul class="nav flex-column" id="sidebar">
+
+          <li class="nav-item list-heading"><b>Getting started</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/installation/">Installation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/starter-templates/">Starter Templates</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/browsers-and-devices/">Browsers and Devices</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Customize</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/sass/">Sass</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/css-variables/">CSS variables</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theme-colors/">Theme Colors</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/color-modes/">Color modes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theming/">Theming</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/options/">Options</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/components/">Components</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Layout</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/breakpoints/">Breakpoints</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/containers/">Containers</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill  active"
+                 href="/materialstyle/3.1/layout/grid/">Grid</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/columns/">Columns</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/gutters/">Gutters</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/utilities/">Utilities</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/z-index/">Z-index</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/css-grid/">CSS Grid</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Forms</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/text-fields/">Text Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/select-fields/">Select Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/checkbox-radio-switch/">Checkbox, Radio &amp; Switch</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/input-groups/">Input Groups</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/range/">Range</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/validation/">Validation</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Components</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/accordion/">Accordion</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/alerts/">Alerts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/badges/">Badges</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/breadcrumb/">Breadcrumb</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/buttons/">Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/cards/">Cards</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/carousel/">Carousel</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/close-button/">Close Button</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/collapse/">Collapse</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/dropdowns/">Dropdowns</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/floating-action-buttons/">Floating Action Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/lists/">Lists</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/modal/">Modal</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/navbar/">Navbar</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/pagination/">Pagination</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/placeholders/">Placeholders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/popovers/">Popovers</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/progress-bars/">Progress Bars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/scrollspy/">Scrollspy</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/snackbars/">Snackbars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/spinners/">Spinners</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tables/">Tables</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tabs/">Tabs</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/toasts/">Toasts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tooltips/">Tooltips</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Utilities</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/api/">Api</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/background-color/">Background color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/borders/">Borders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/display/">Display</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/flex/">Flex</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/float/">Float</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/interactions/">Interactions</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/link/">Link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/object-fit/">Object fit</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/opacity/">Opacity</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/overflow/">Overflow</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/sizing/">Sizing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/spacing/">Spacing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text/">Text</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text-color/">Text color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/vertical-align/">Vertical align</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/visibility/">Visibility</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/z-index/">Z-index</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Helpers</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/clearfix/">Clearfix</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/focus-ring/">Focus ring</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/icon-link/">Icon link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/ratio/">Ratio</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stacks/">Stacks</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stretched-link/">Stretched link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/text-truncation/">Text truncation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/vertical-rule/">Vertical rule</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/visually-hidden/">Visually hidden</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Demos</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-end/">Drawer End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-responsive/">Drawer Responsive</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-responsive-end/">Drawer Responsive End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-fixed-top/">Navbar Fixed Top</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-fixed-bottom/">Navbar Fixed Bottom</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-auto-hide/">Navbar Auto Hide</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item my-1">
+            <a class="nav-link rounded-pill "
+               href="/materialstyle/3.1/migration">Migration</a>
+          </li>
+    </ul>
+  </div>
+</aside>
+
+
+  <div class="offcanvas-pushed-content pt-4" style="margin-top: var(--navbar-fixed-height);">
+    <div class="container" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-root-margin="0px 0px -80%">
+      
+<div class="component-page">
+
+  <div class="component-showcase">
+    <h1 id="content">Grid</h1>
+
+    
+    <p class="fs-4 ms-0 mb-4 page-description">Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.</p>
+    
+
+    <h2 id="example">Example</h2>
+<p>Material Style&rsquo;s grid system uses a series of containers, rows, and columns to layout and align content. It&rsquo;s built with
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> and
+is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row">
+    <div class="col border p-2">
+      Column
+    </div>
+    <div class="col border p-2">
+      Column
+    </div>
+    <div class="col border p-2">
+      Column
+    </div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code1" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code1" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Column
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Column
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Column
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>The above example creates three equal-width columns across all devices and viewports using our predefined
+grid classes. Those columns are centered in the page with the parent <code>.container</code>.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Breaking it down, here&rsquo;s how the grid system comes together:</p>
+<ul>
+<li>
+<p><strong>Our grid supports <a href="/materialstyle/3.1/layout/breakpoints">six responsive breakpoints</a>.</strong><br>
+Breakpoints are based on <code>min-width</code> media queries, meaning they affect that breakpoint and all those
+above it (e.g., <code>.col-sm-4</code> applies to <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>). This means you can control container
+and column sizing and behavior by each breakpoint.</p>
+</li>
+<li>
+<p><strong>Containers center and horizontally pad your content.</strong> Use <code>.container</code> for a responsive pixel width,
+<code>.container-fluid</code> for <code>width: 100%</code> across all viewports and devices, or a responsive container
+(e.g., <code>.container-md</code>) for a combination of fluid and pixel widths.</p>
+</li>
+<li>
+<p><strong>Rows are wrappers for columns.</strong> Each column has horizontal <code>padding</code> (called a gutter) for controlling the
+space between them. This <code>padding</code> is then counteracted on the rows with negative margins to ensure the content
+in your columns is visually aligned down the left side. Rows also support modifier classes to <a href="#row-columns">uniformly apply
+column sizing</a> and <a href="/materialstyle/3.1/layout/gutters">gutter classes</a> to change the spacing of
+your content.</p>
+</li>
+<li>
+<p><strong>Columns are incredibly flexible.</strong> There are 12 template columns available per row, allowing you to create
+different combinations of elements that span any number of columns. Column classes indicate the number of
+template columns to span (e.g., <code>col-4</code> spans four). <code>width</code>s are set in percentages so you always have the
+same relative sizing.</p>
+</li>
+<li>
+<p><strong>Gutters are also responsive and customizable.</strong> <a href="/materialstyle/3.1/layout/gutters">Gutter classes are available</a>
+across all breakpoints, with all the same sizes as our <a href="/materialstyle/3.1/utilities/spacing">margin and padding spacing</a>.
+Change horizontal gutters with <code>.gx-*</code> classes, vertical gutters with <code>.gy-*</code>, or all gutters with <code>.g-*</code> classes.
+<code>.g-0</code> is also available to remove gutters.</p>
+</li>
+<li>
+<p><strong>Sass variables, maps, and mixins power the grid.</strong> If you don&rsquo;t want to use the predefined grid classes in
+Material Style, you can use our <a href="#sass-variables">grid&rsquo;s source Sass</a> to create your own with more semantic markup.
+We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.</p>
+</li>
+</ul>
+<p>Be aware of the limitations and <a href="https://github.com/philipwalton/flexbugs">bugs around flexbox</a>, like the
+<a href="https://github.com/philipwalton/flexbugs#flexbug-9">inability to use some HTML elements as flex containers</a>.</p>
+<h2 id="grid-options">Grid options</h2>
+<p>Material Style&rsquo;s grid system can adapt across all six default breakpoints, and any breakpoints you customize.
+The six default grid tiers are as follows:</p>
+<ul>
+<li>Extra small (xs)</li>
+<li>Small (sm)</li>
+<li>Medium (md)</li>
+<li>Large (lg)</li>
+<li>Extra large (xl)</li>
+<li>Extra extra large (xxl)</li>
+</ul>
+<p>As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here&rsquo;s
+how the grid changes across these breakpoints:</p>
+<div class="table-responsive">
+  <table class="table mb-4">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">
+          xs<br>
+          <span class="fw-normal">&lt;576px</span>
+        </th>
+        <th scope="col">
+          sm<br>
+          <span class="fw-normal">&ge;576px</span>
+        </th>
+        <th scope="col">
+          md<br>
+          <span class="fw-normal">&ge;768px</span>
+        </th>
+        <th scope="col">
+          lg<br>
+          <span class="fw-normal">&ge;992px</span>
+        </th>
+        <th scope="col">
+          xl<br>
+          <span class="fw-normal">&ge;1200px</span>
+        </th>
+        <th scope="col">
+          xxl<br>
+          <span class="fw-normal">&ge;1400px</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+        <td>None (auto)</td>
+        <td>540px</td>
+        <td>720px</td>
+        <td>960px</td>
+        <td>1140px</td>
+        <td>1320px</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Class prefix</th>
+        <td><code>.col-</code></td>
+        <td><code>.col-sm-</code></td>
+        <td><code>.col-md-</code></td>
+        <td><code>.col-lg-</code></td>
+        <td><code>.col-xl-</code></td>
+        <td><code>.col-xxl-</code></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row"># of columns</th>
+        <td colspan="6">12</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Gutter width</th>
+        <td colspan="6">1.5rem (.75rem on left and right)</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Custom gutters</th>
+        <td colspan="6"><a href="/materialstyle/3.1/layout/gutters">Yes</a></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Nestable</th>
+        <td colspan="6"><a href="#nesting">Yes</a></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Column ordering</th>
+        <td colspan="6"><a href="/materialstyle/3.1/layout/columns#reordering">Yes</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<h2 id="auto-layout-columns">Auto-layout columns</h2>
+<p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like
+<code>.col-sm-6</code>.</p>
+<h3 id="equal-width">Equal-width</h3>
+<p>For example, here are two grid layouts that apply to every device and viewport, from <code>xs</code> to <code>xxl</code>. Add any
+number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row">
+    <div class="col border p-2">
+      1 of 2
+    </div>
+    <div class="col border p-2">
+      2 of 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col border p-2">
+      1 of 3
+    </div>
+    <div class="col border p-2">
+      2 of 3
+    </div>
+    <div class="col border p-2">
+      3 of 3
+    </div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code2" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code2" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      1 of 2
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      2 of 2
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      1 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      2 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      3 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h3 id="setting-one-column-width">Setting one column width</h3>
+<p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns
+automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths.
+Note that the other columns will resize no matter the width of the center column.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row">
+    <div class="col border p-2">
+      1 of 3
+    </div>
+    <div class="col-6 border p-2">
+      2 of 3 (wider)
+    </div>
+    <div class="col border p-2">
+      3 of 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col border p-2">
+      1 of 3
+    </div>
+    <div class="col-5 border p-2">
+      2 of 3 (wider)
+    </div>
+    <div class="col border p-2">
+      3 of 3
+    </div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code3" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code3" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      1 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      2 of 3 (wider)
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      3 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      1 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-5 border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      2 of 3 (wider)
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      3 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h3 id="variable-width-content">Variable width content</h3>
+<p>Use <code>col-{breakpoint}-auto</code> classes to size columns based on the natural width of their content.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2 border p-2">
+      1 of 3
+    </div>
+    <div class="col-md-auto border p-2">
+      Variable width content
+    </div>
+    <div class="col col-lg-2 border p-2">
+      3 of 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col border p-2">
+      1 of 3
+    </div>
+    <div class="col-md-auto border p-2">
+      Variable width content
+    </div>
+    <div class="col col-lg-2 border p-2">
+      3 of 3
+    </div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code4" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code4" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row justify-content-md-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2 border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      1 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-auto border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Variable width content
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2 border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      3 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      1 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-auto border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Variable width content
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2 border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      3 of 3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="responsive-classes">Responsive classes</h2>
+<p>Material Style&rsquo;s grid includes six tiers of predefined classes for building complex responsive layouts. Customize
+the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.</p>
+<h3 id="all-breakpoints">All breakpoints</h3>
+<p>For grids that are the same from the smallest of devices to the largest, use the <code>.col</code> and <code>.col-*</code> classes.
+Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to <code>.col</code>.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row">
+    <div class="col border p-2">col</div>
+    <div class="col border p-2">col</div>
+    <div class="col border p-2">col</div>
+    <div class="col border p-2">col</div>
+  </div>
+  <div class="row">
+    <div class="col-8 border p-2">col-8</div>
+    <div class="col-4 border p-2">col-4</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code5" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code5" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-8 border p-2&#34;</span><span class="p">&gt;</span>col-8<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 border p-2&#34;</span><span class="p">&gt;</span>col-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h3 id="stacked-to-horizontal">Stacked to horizontal</h3>
+<p>Using a single set of <code>.col-sm-*</code> classes, you can create a basic grid system that starts out stacked and becomes
+horizontal at the small breakpoint (<code>sm</code>).</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-8 border p-2">col-sm-8</div>
+    <div class="col-sm-4 border p-2">col-sm-4</div>
+  </div>
+  <div class="row">
+    <div class="col-sm border p-2">col-sm</div>
+    <div class="col-sm border p-2">col-sm</div>
+    <div class="col-sm border p-2">col-sm</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code6" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code6" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-8 border p-2&#34;</span><span class="p">&gt;</span>col-sm-8<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-4 border p-2&#34;</span><span class="p">&gt;</span>col-sm-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm border p-2&#34;</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm border p-2&#34;</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm border p-2&#34;</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h3 id="mix-and-match">Mix and match</h3>
+<p>Don&rsquo;t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier
+as needed. See the example below for a better idea of how it all works.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row">
+    <div class="col-md-8 border p-2">.col-md-8</div>
+    <div class="col-6 col-md-4 border p-2">.col-6 .col-md-4</div>
+  </div>
+
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <div class="row">
+    <div class="col-6 col-md-4 border p-2">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4 border p-2">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4 border p-2">.col-6 .col-md-4</div>
+  </div>
+
+  <!-- Columns are always 50% wide, on mobile and desktop -->
+  <div class="row">
+    <div class="col-6 border p-2">.col-6</div>
+    <div class="col-6 border p-2">.col-6</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code7" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code7" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-8 border p-2&#34;</span><span class="p">&gt;</span>.col-md-8<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 border p-2&#34;</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 border p-2&#34;</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 border p-2&#34;</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4 border p-2&#34;</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 border p-2&#34;</span><span class="p">&gt;</span>.col-6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 border p-2&#34;</span><span class="p">&gt;</span>.col-6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h3 id="row-columns">Row columns</h3>
+<p>Use the responsive <code>.row-cols-*</code> classes to quickly set the number of columns that best render your content and
+layout. Whereas normal <code>.col-*</code> classes apply to the individual columns (e.g., <code>.col-md-4</code>), the row columns
+classes are set on the parent <code>.row</code> as a shortcut. With <code>.row-cols-auto</code> you can give the columns their natural width.</p>
+<p>Use these row columns classes to quickly create basic grid layouts or to control your card layouts.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row row-cols-2">
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code8" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code8" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row row-cols-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row row-cols-3">
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code9" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code9" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row row-cols-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row row-cols-auto">
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code10" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code10" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row row-cols-auto&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row row-cols-4">
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code11" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code11" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row row-cols-4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row row-cols-4">
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col-6 border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code12" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code12" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row row-cols-4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+    <div class="col border p-2">Column</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code13" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code13" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row row-cols-1 row-cols-sm-2 row-cols-md-4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col border p-2&#34;</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>You can also use the accompanying Sass mixin, <code>row-cols()</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Three columns to start
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">@include</span><span class="nd"> row-cols</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Five columns from medium breakpoint up
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> row-cols</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<h2 id="nesting">Nesting</h2>
+<p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-sm-*</code> columns within an existing
+<code>.col-sm-*</code> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required
+that you use all 12 available columns).</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-3 border py-3">
+      Level 1: .col-sm-3
+    </div>
+    <div class="col-sm-9 border py-3">
+      <div class="row">
+        <div class="col-8 col-sm-6 border p-2">
+          Level 2: .col-8 .col-sm-6
+        </div>
+        <div class="col-4 col-sm-6 border p-2">
+          Level 2: .col-4 .col-sm-6
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code14" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code14" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container text-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-3 border py-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Level 1: .col-sm-3
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-9 border py-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-8 col-sm-6 border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          Level 2: .col-8 .col-sm-6
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 col-sm-6 border p-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          Level 2: .col-4 .col-sm-6
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="css">CSS</h2>
+<p>When using Material Style&rsquo;s source Sass files, you have the option of using Sass variables and mixins to create custom,
+semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide
+a whole suite of ready-to-use classes for fast responsive layouts.</p>
+<h3 id="sass-variables">Sass variables</h3>
+<p>Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin
+floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom
+mixins listed below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-columns</span><span class="o">:</span>      <span class="mi">12</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$grid-row-columns</span><span class="o">:</span>  <span class="mi">6</span><span class="p">;</span>
+</span></span></code></pre></div><br>
+<div class="d-flex align-items-center pe-2 py-1">
+    <small class="font-monospace text-muted">scss/_variables.scss</small>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div>
+<br>
+<div class="d-flex align-items-center pe-2 py-1">
+    <small class="font-monospace text-muted">scss/_variables.scss</small>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$container-max-widths</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="na">sm</span><span class="o">:</span> <span class="mi">540</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">xl</span><span class="o">:</span> <span class="mi">1140</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1320</span><span class="kt">px</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div>
+<br>
+<h3 id="sass-mixins">Sass mixins</h3>
+<p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Creates a wrapper for a series of columns
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-row</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Make the element grid-ready (applying everything but the width)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-col-ready</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Without optional size values, the mixin will create equal columns (similar to using .col)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-col</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> make-col</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Offset with margins
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
+</span></span></code></pre></div><br>
+<h3 id="example-usage">Example usage</h3>
+<p>You can modify the variables to your own custom values, or just use the mixins with their default values.
+Here&rsquo;s an example of using the default settings to create a two-column layout with a gap between.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.example-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> make-container</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Make sure to define this width after the mixin to override
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// `width: 100%` generated by `make-container()`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">width</span><span class="o">:</span> <span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.example-row</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> make-row</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.example-content-main</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> make-col-ready</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> make-col</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> make-col</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.example-content-secondary</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> make-col-ready</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> make-col</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> make-col</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<div class="border mb-4 rounded"><div class="p-4 ">
+<div class="example-container">
+  <div class="example-row">
+    <div class="example-content-main">Main content</div>
+    <div class="example-content-secondary">Secondary content</div>
+  </div>
+</div>
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+            
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;example-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;example-row&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;example-content-main&#34;</span><span class="p">&gt;</span>Main content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;example-content-secondary&#34;</span><span class="p">&gt;</span>Secondary content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="customizing-the-grid">Customizing the grid</h2>
+<p>Using our built-in grid Sass variables and maps, it&rsquo;s possible to completely customize the predefined grid classes.
+Change the number of tiers, the media query dimensions, and the container widths—then recompile.</p>
+<h3 id="columns-and-gutters">Columns and gutters</h3>
+<p>The number of grid columns can be modified via Sass variables. <code>$grid-columns</code> is used to generate the widths
+(in percent) of each individual column while <code>$grid-gutter-width</code> sets the width for the column gutters.
+<code>$grid-row-columns</code> is used to set the maximum number of columns of <code>.row-cols-*</code>, any number over this limit
+is ignored.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-columns</span><span class="o">:</span> <span class="mi">12</span> <span class="k">!default</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!default</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$grid-row-columns</span><span class="o">:</span> <span class="mi">6</span> <span class="k">!default</span><span class="p">;</span>
+</span></span></code></pre></div><br>
+<h3 id="grid-tiers">Grid tiers</h3>
+<p>Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four
+grid tiers, you&rsquo;d update the <code>$grid-breakpoints</code> and <code>$container-max-widths</code> to something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">sm</span><span class="o">:</span> <span class="mi">480</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">lg</span><span class="o">:</span> <span class="mi">1024</span><span class="kt">px</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$container-max-widths</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="na">sm</span><span class="o">:</span> <span class="mi">420</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><p>When making any changes to the Sass variables or maps, you&rsquo;ll need to save your changes and recompile.
+Doing so will output a brand-new set of predefined grid classes for column widths, offsets, and ordering.
+Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid
+values in <code>px</code> (not <code>rem</code>, <code>em</code>, or <code>%</code>).</p>
+
+  </div>
+
+  <div class="component-map">
+    <div class="row">
+      <div class="col">
+        <a target="_blank" class="text-decoration-none text-body" href="https://materialstyle.github.io/theme-builder">
+          <div class="adspace rounded mb-2">
+            <div class="d-flex align-items-center">
+              <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+              <div class="site-name ml-1">Theme Builder <i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+            <small>Personalize Material Style to reflect your product's brand identity.</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="sticky-md-top" style="top: 3rem;">
+      
+      <div class="row">
+        <div class="col">
+          <div class="ms-toc my-2">
+            <label class="text-secondary-emphasis mb-2">CONTENTS</label>
+            <nav id="TableOfContents">
+  <ul class="nav flex-column">
+    <li class="nav-item"><a class="nav-link" href="#example">Example</a></li>
+    <li class="nav-item"><a class="nav-link" href="#how-it-works">How it works</a></li>
+    <li class="nav-item"><a class="nav-link" href="#grid-options">Grid options</a></li>
+    <li class="nav-item"><a class="nav-link" href="#auto-layout-columns">Auto-layout columns</a>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#equal-width">Equal-width</a></li>
+        <li class="nav-item"><a class="nav-link" href="#setting-one-column-width">Setting one column width</a></li>
+        <li class="nav-item"><a class="nav-link" href="#variable-width-content">Variable width content</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#responsive-classes">Responsive classes</a>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#all-breakpoints">All breakpoints</a></li>
+        <li class="nav-item"><a class="nav-link" href="#stacked-to-horizontal">Stacked to horizontal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mix-and-match">Mix and match</a></li>
+        <li class="nav-item"><a class="nav-link" href="#row-columns">Row columns</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#nesting">Nesting</a></li>
+    <li class="nav-item"><a class="nav-link" href="#css">CSS</a>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#sass-variables">Sass variables</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sass-mixins">Sass mixins</a></li>
+        <li class="nav-item"><a class="nav-link" href="#example-usage">Example usage</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#customizing-the-grid">Customizing the grid</a>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#columns-and-gutters">Columns and gutters</a></li>
+        <li class="nav-item"><a class="nav-link" href="#grid-tiers">Grid tiers</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="row">
+        <div class="col">
+          <div class="ms-toc mt-4 mb-2">
+            <label class="text-secondary-emphasis mb-2">SEE ALSO</label>
+            <nav>
+              <ul class="nav flex-column">
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/css-grid/">CSS Grid</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/breakpoints/">Breakpoints</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/columns/">Columns</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/containers/">Containers</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/components/drawer/">Drawer / Sidebar</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/gutters/">Gutters</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/components/navbar/">Navbar</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/getting-started/starter-templates/">Starter Templates</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/utilities/">Utilities</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/z-index/">Z-index</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+    </div>
+    <footer id="site-footer" class="m-5 rounded-4rem">
+  <div class="container">
+    <div class="row py-4 px-2 px-sm-4">
+      <div class="d-flex flex-column justify-content-center align-items-center mb-2">
+        <a class="footer-brand site-name text-body text-decoration-none text-center" href="/" aria-label="Material Style">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <span class="d-block">Material Style</span>
+        </a>
+      </div>
+      <p class="text-center">
+        Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.<br>
+        Currently v3.1.0 based on Bootstrap v5.3.2
+      </p>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://materialstyle.github.io/theme-builder">Theme Builder</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="bg-dark m-0">
+    <div class="row py-4 px-2 px-sm-4">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
+        integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
+        crossorigin="anonymous"></script>
+
+<script src="/materialstyle/3.1/dist/js/materialstyle.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script src="/materialstyle/3.1/assets/js/site.min.js"></script>
+
+</body>
+</html>

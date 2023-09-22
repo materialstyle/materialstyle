@@ -1,0 +1,2079 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+<script src="/materialstyle/3.1/js/color-modes/index.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta name="author" content="Neeraj Kumar Das">
+<meta name="generator" content="Hugo 0.118.2">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="3.1">
+
+<meta name="theme-color" content="#6f42c1">
+
+<meta property="og:url" content="https://materialstyle.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flex · Material Style v3.1">
+<meta property="og:description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg">
+
+<title>Flex · Material Style v3.1</title>
+
+<link rel="canonical" href="http://materialstyle.github.io/materialstyle/3.1/utilities/flex/">
+<link rel="icon" href="/materialstyle/assets/images/favicon.ico" type="image/x-icon">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link href="/materialstyle/3.1/dist/css/materialstyle.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<link rel="preconnect" href="https://3EHDQBJAE1-dsn.algolia.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/materialstyle/3.1/assets/css/styles.css" rel="stylesheet">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T3YPJV7LJD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T3YPJV7LJD');
+</script>
+
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+  <nav id="site-home-top-nav" class="navbar fixed-top">
+  
+  <div class="d-flex justify-content-center align-items-center w-100 visually-hidden-focusable overflow-hidden" >
+    <a class="link-light p-2 m-1 rounded" href="#content">Skip to main content</a>
+    <a class="link-light d-none d-lg-inline-block p-2 m-1 rounded" href="#sidebar">Skip to sidebar</a>
+  </div>
+
+  <div class="container-fluid gap-3">
+    <div class="d-flex align-items-center">
+        <button class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#site-offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand d-flex align-items-center py-0 me-0 rounded" href="/">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <div class="site-name text-white ml-1">Material Style</div>
+        </a>
+    </div>
+
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-2 me-2">
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://materialstyle.github.io/theme-builder">
+          Theme Builder
+        </a>
+      </li>
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://github.com/materialstyle/materialstyle">
+          GitHub
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-1 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+          v3.1
+          <span class="ripple-surface"></span>
+        </button>
+        <ul class="dropdown-menu position-absolute" style="--bs-dropdown-min-width: auto;">
+          <li><a class="dropdown-item" href="/materialstyle/3.0/">3.0</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="/docs/2.0/">2.0</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="/docs/1.2/">1.2</a></li>
+          <li><a class="dropdown-item" href="/docs/1.1/">1.1</a></li>
+          <li><a class="dropdown-item" href="/docs/1.0/">1.0</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-1 py-0" id="docsearch">
+          <i class="bi bi-search text-white fs-4"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center"
+                id="theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                data-bs-display="static">
+          <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+          <span class="visually-hidden">Toggle theme</span>
+          <span class="ripple-surface"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="theme" style="--bs-dropdown-min-width: 8rem;">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+              Light
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+              Dark
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+              <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+              Auto
+              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <aside class="offcanvas-start offcanvas-lg offcanvas-fixed"
+       data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
+  <div class="offcanvas-header">
+    <a class="site-name offcanvas-title d-flex align-items-center text-white py-0" href="/">
+      <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
+           alt="Material Style Logo" style="width:40px; height:40px;">Material Style
+    </a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            data-bs-target="#site-offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body"><ul class="nav flex-column" id="sidebar">
+
+          <li class="nav-item list-heading"><b>Getting started</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/installation/">Installation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/starter-templates/">Starter Templates</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/getting-started/browsers-and-devices/">Browsers and Devices</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Customize</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/sass/">Sass</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/css-variables/">CSS variables</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theme-colors/">Theme Colors</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/color-modes/">Color modes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theming/">Theming</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/options/">Options</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/components/">Components</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Layout</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/breakpoints/">Breakpoints</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/containers/">Containers</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/grid/">Grid</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/columns/">Columns</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/gutters/">Gutters</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/utilities/">Utilities</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/z-index/">Z-index</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/layout/css-grid/">CSS Grid</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Forms</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/text-fields/">Text Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/select-fields/">Select Fields</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/checkbox-radio-switch/">Checkbox, Radio &amp; Switch</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/input-groups/">Input Groups</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/range/">Range</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/forms/validation/">Validation</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Components</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/accordion/">Accordion</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/alerts/">Alerts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/badges/">Badges</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/breadcrumb/">Breadcrumb</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/buttons/">Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/cards/">Cards</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/carousel/">Carousel</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/close-button/">Close Button</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/collapse/">Collapse</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/dropdowns/">Dropdowns</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/floating-action-buttons/">Floating Action Buttons</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/lists/">Lists</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/modal/">Modal</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/navbar/">Navbar</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/pagination/">Pagination</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/placeholders/">Placeholders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/popovers/">Popovers</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/progress-bars/">Progress Bars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/scrollspy/">Scrollspy</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/snackbars/">Snackbars</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/spinners/">Spinners</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tables/">Tables</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tabs/">Tabs</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/toasts/">Toasts</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/components/tooltips/">Tooltips</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Utilities</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/api/">Api</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/background-color/">Background color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/borders/">Borders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/display/">Display</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill  active"
+                 href="/materialstyle/3.1/utilities/flex/">Flex</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/float/">Float</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/interactions/">Interactions</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/link/">Link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/object-fit/">Object fit</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/opacity/">Opacity</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/overflow/">Overflow</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/sizing/">Sizing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/spacing/">Spacing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text/">Text</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text-color/">Text color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/vertical-align/">Vertical align</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/visibility/">Visibility</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/z-index/">Z-index</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Helpers</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/clearfix/">Clearfix</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/focus-ring/">Focus ring</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/icon-link/">Icon link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/ratio/">Ratio</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stacks/">Stacks</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stretched-link/">Stretched link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/text-truncation/">Text truncation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/vertical-rule/">Vertical rule</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/visually-hidden/">Visually hidden</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Demos</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer/">Drawer</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-end/">Drawer End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-responsive/">Drawer Responsive</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/drawer-responsive-end/">Drawer Responsive End</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-fixed-top/">Navbar Fixed Top</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-fixed-bottom/">Navbar Fixed Bottom</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/demos/navbar-auto-hide/">Navbar Auto Hide</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item my-1">
+            <a class="nav-link rounded-pill "
+               href="/materialstyle/3.1/migration">Migration</a>
+          </li>
+    </ul>
+  </div>
+</aside>
+
+
+  <div class="offcanvas-pushed-content pt-4" style="margin-top: var(--navbar-fixed-height);">
+    <div class="container" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-root-margin="0px 0px -80%">
+      
+<div class="component-page">
+
+  <div class="component-showcase">
+    <h1 id="content">Flex</h1>
+
+    
+    <p class="fs-4 ms-0 mb-4 page-description">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
+    
+
+    <h2 id="enable-flex-behaviors">Enable flex behaviors</h2>
+<p>Apply <code>display</code> utilities to create a flexbox container and transform <strong>direct children elements</strong> into flex items.
+Flex containers and items are able to be modified further with additional flex properties.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex p-2 text-bg-tertiary">I'm a flexbox container!</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code1" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code1" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex p-2 text-bg-tertiary&#34;</span><span class="p">&gt;</span>I&#39;m a flexbox container!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-inline-flex p-2 text-bg-tertiary">I'm an inline flexbox container!</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code2" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code2" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-flex p-2 text-bg-tertiary&#34;</span><span class="p">&gt;</span>I&#39;m an inline flexbox container!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Responsive variations also exist for <code>.d-flex</code> and <code>.d-inline-flex</code>.</p>
+<ul>
+<li><code>.d-flex</code></li>
+<li><code>.d-inline-flex</code></li>
+<li><code>.d-sm-flex</code></li>
+<li><code>.d-sm-inline-flex</code></li>
+<li><code>.d-md-flex</code></li>
+<li><code>.d-md-inline-flex</code></li>
+<li><code>.d-lg-flex</code></li>
+<li><code>.d-lg-inline-flex</code></li>
+<li><code>.d-xl-flex</code></li>
+<li><code>.d-xl-inline-flex</code></li>
+<li><code>.d-xxl-flex</code></li>
+<li><code>.d-xxl-inline-flex</code></li>
+</ul>
+<h2 id="direction">Direction</h2>
+<p>Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the
+horizontal class here as the browser default is <code>row</code>. However, you may encounter situations where you needed
+to explicitly set this value (like responsive layouts).</p>
+<p>Use <code>.flex-row</code> to set a horizontal direction (the browser default), or <code>.flex-row-reverse</code> to start the horizontal
+direction from the opposite side.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex flex-row mb-3 bg-tertiary-subtle">
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 1</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 2</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 3</div>
+</div>
+<div class="d-flex flex-row-reverse bg-tertiary-subtle">
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 1</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 2</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 3</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code3" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code3" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row mb-3 bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row-reverse bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Use <code>.flex-column</code> to set a vertical direction, or <code>.flex-column-reverse</code> to start the vertical direction from
+the opposite side.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex flex-column mb-3 bg-tertiary-subtle">
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 1</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 2</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 3</div>
+</div>
+<div class="d-flex flex-column-reverse bg-tertiary-subtle">
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 1</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 2</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item 3</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code4" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code4" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column mb-3 bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column-reverse bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Responsive variations also exist for <code>flex-direction</code>.</p>
+<ul>
+<li><code>.flex-row</code></li>
+<li><code>.flex-row-reverse</code></li>
+<li><code>.flex-column</code></li>
+<li><code>.flex-column-reverse</code></li>
+<li><code>.flex-sm-row</code></li>
+<li><code>.flex-sm-row-reverse</code></li>
+<li><code>.flex-sm-column</code></li>
+<li><code>.flex-sm-column-reverse</code></li>
+<li><code>.flex-md-row</code></li>
+<li><code>.flex-md-row-reverse</code></li>
+<li><code>.flex-md-column</code></li>
+<li><code>.flex-md-column-reverse</code></li>
+<li><code>.flex-lg-row</code></li>
+<li><code>.flex-lg-row-reverse</code></li>
+<li><code>.flex-lg-column</code></li>
+<li><code>.flex-lg-column-reverse</code></li>
+<li><code>.flex-xl-row</code></li>
+<li><code>.flex-xl-row-reverse</code></li>
+<li><code>.flex-xl-column</code></li>
+<li><code>.flex-xl-column-reverse</code></li>
+<li><code>.flex-xxl-row</code></li>
+<li><code>.flex-xxl-row-reverse</code></li>
+<li><code>.flex-xxl-column</code></li>
+<li><code>.flex-xxl-column-reverse</code></li>
+</ul>
+<h2 id="justify-content">Justify content</h2>
+<p>Use <code>justify-content</code> utilities on flexbox containers to change the alignment of flex items on the main
+axis (the x-axis to start, y-axis if <code>flex-direction: column</code>). Choose from <code>start</code> (browser default), <code>end</code>,
+<code>center</code>, <code>between</code>, <code>around</code>, or <code>evenly</code>.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex justify-content-start mb-3 bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Justify</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Content</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Start</div>
+</div>
+<div class="d-flex justify-content-end mb-3 bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Justify</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Content</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">End</div>
+</div>
+<div class="d-flex justify-content-center mb-3 bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Justify</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Content</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Center</div>
+</div>
+<div class="d-flex justify-content-between mb-3 bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Justify</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Content</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Between</div>
+</div>
+<div class="d-flex justify-content-around mb-3 bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Justify</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Content</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Around</div>
+</div>
+<div class="d-flex justify-content-evenly bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Justify</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Content</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Evenly</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code5" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code5" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-start mb-3 bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Justify<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Start<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-end mb-3 bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Justify<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>End<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center mb-3 bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Justify<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Center<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-between mb-3 bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Justify<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Between<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-around mb-3 bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Justify<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Around<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-evenly bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Justify<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Evenly<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Responsive variations also exist for <code>justify-content</code>.</p>
+<ul>
+<li><code>.justify-content-start</code></li>
+<li><code>.justify-content-end</code></li>
+<li><code>.justify-content-center</code></li>
+<li><code>.justify-content-between</code></li>
+<li><code>.justify-content-around</code></li>
+<li><code>.justify-content-evenly</code></li>
+<li><code>.justify-content-sm-start</code></li>
+<li><code>.justify-content-sm-end</code></li>
+<li><code>.justify-content-sm-center</code></li>
+<li><code>.justify-content-sm-between</code></li>
+<li><code>.justify-content-sm-around</code></li>
+<li><code>.justify-content-sm-evenly</code></li>
+<li><code>.justify-content-md-start</code></li>
+<li><code>.justify-content-md-end</code></li>
+<li><code>.justify-content-md-center</code></li>
+<li><code>.justify-content-md-between</code></li>
+<li><code>.justify-content-md-around</code></li>
+<li><code>.justify-content-md-evenly</code></li>
+<li><code>.justify-content-lg-start</code></li>
+<li><code>.justify-content-lg-end</code></li>
+<li><code>.justify-content-lg-center</code></li>
+<li><code>.justify-content-lg-between</code></li>
+<li><code>.justify-content-lg-around</code></li>
+<li><code>.justify-content-lg-evenly</code></li>
+<li><code>.justify-content-xl-start</code></li>
+<li><code>.justify-content-xl-end</code></li>
+<li><code>.justify-content-xl-center</code></li>
+<li><code>.justify-content-xl-between</code></li>
+<li><code>.justify-content-xl-around</code></li>
+<li><code>.justify-content-xl-evenly</code></li>
+<li><code>.justify-content-xxl-start</code></li>
+<li><code>.justify-content-xxl-end</code></li>
+<li><code>.justify-content-xxl-center</code></li>
+<li><code>.justify-content-xxl-between</code></li>
+<li><code>.justify-content-xxl-around</code></li>
+<li><code>.justify-content-xxl-evenly</code></li>
+</ul>
+<h2 id="align-items">Align items</h2>
+<p>Use <code>align-items</code> utilities on flexbox containers to change the alignment of flex items on the cross axis
+(the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>,
+or <code>stretch</code> (browser default).</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-items-start mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Align</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Items</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Start</div>
+</div>
+<div class="d-flex align-items-end mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Align</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Items</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">End</div>
+</div>
+<div class="d-flex align-items-center mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Align</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Items</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Center</div>
+</div>
+<div class="d-flex align-items-baseline mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Align</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Items</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Baseline</div>
+</div>
+<div class="d-flex align-items-stretch bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Align</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Items</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Stretch</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code6" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code6" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Align<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Items<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Start<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-end mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Align<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Items<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>End<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Align<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Items<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Center<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-baseline mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Align<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Items<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Baseline<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-stretch bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Align<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Items<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Stretch<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="align-self">Align self</h2>
+<p>Use <code>align-self</code> utilities on flexbox items to individually change their alignment on the cross axis
+(the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from the same options as <code>align-items</code>:
+<code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle align-self-start">Align Self Start</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+</div>
+<div class="d-flex mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle align-self-end">Align Self End</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+</div>
+<div class="d-flex mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle align-self-center">Align Self Center</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+</div>
+<div class="d-flex mb-3 bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle align-self-baseline">Align Self Baseline</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+</div>
+<div class="d-flex bg-tertiary-subtle" style="height: 100px;">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle align-self-stretch">Align Self Stretch</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code7" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code7" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle align-self-start&#34;</span><span class="p">&gt;</span>Align Self Start<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle align-self-end&#34;</span><span class="p">&gt;</span>Align Self End<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle align-self-center&#34;</span><span class="p">&gt;</span>Align Self Center<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle align-self-baseline&#34;</span><span class="p">&gt;</span>Align Self Baseline<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle align-self-stretch&#34;</span><span class="p">&gt;</span>Align Self Stretch<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Responsive variations also exist for <code>align-self</code>.</p>
+<ul>
+<li><code>.align-self-start</code></li>
+<li><code>.align-self-end</code></li>
+<li><code>.align-self-center</code></li>
+<li><code>.align-self-baseline</code></li>
+<li><code>.align-self-stretch</code></li>
+<li><code>.align-self-sm-start</code></li>
+<li><code>.align-self-sm-end</code></li>
+<li><code>.align-self-sm-center</code></li>
+<li><code>.align-self-sm-baseline</code></li>
+<li><code>.align-self-sm-stretch</code></li>
+<li><code>.align-self-md-start</code></li>
+<li><code>.align-self-md-end</code></li>
+<li><code>.align-self-md-center</code></li>
+<li><code>.align-self-md-baseline</code></li>
+<li><code>.align-self-md-stretch</code></li>
+<li><code>.align-self-lg-start</code></li>
+<li><code>.align-self-lg-end</code></li>
+<li><code>.align-self-lg-center</code></li>
+<li><code>.align-self-lg-baseline</code></li>
+<li><code>.align-self-lg-stretch</code></li>
+<li><code>.align-self-xl-start</code></li>
+<li><code>.align-self-xl-end</code></li>
+<li><code>.align-self-xl-center</code></li>
+<li><code>.align-self-xl-baseline</code></li>
+<li><code>.align-self-xl-stretch</code></li>
+<li><code>.align-self-xxl-start</code></li>
+<li><code>.align-self-xxl-end</code></li>
+<li><code>.align-self-xxl-center</code></li>
+<li><code>.align-self-xxl-baseline</code></li>
+<li><code>.align-self-xxl-stretch</code></li>
+</ul>
+<h2 id="fill">Fill</h2>
+<p>Use the <code>.flex-fill</code> class on a series of sibling elements to force them into widths equal to their content
+(or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex bg-tertiary-subtle">
+    <div class="flex-fill p-2 text-bg-tertiary border border-tertiary-subtle">Flex item with a lot of content</div>
+    <div class="flex-fill p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="flex-fill p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code8" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code8" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-fill p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item with a lot of content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-fill p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-fill p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Responsive variations also exist for <code>flex-fill</code>.</p>
+<ul>
+<li><code>.flex-fill</code></li>
+<li><code>.flex-sm-fill</code></li>
+<li><code>.flex-md-fill</code></li>
+<li><code>.flex-lg-fill</code></li>
+<li><code>.flex-xl-fill</code></li>
+<li><code>.flex-xxl-fill</code></li>
+</ul>
+<h2 id="grow-and-shrink">Grow and shrink</h2>
+<p>Use <code>.flex-grow-*</code> utilities to toggle a flex item’s ability to grow to fill available space. In the example
+below, the <code>.flex-grow-1</code> elements uses all available space it can, while allowing the remaining two flex items
+their necessary space.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex bg-tertiary-subtle">
+    <div class="flex-grow-1 p-2 text-bg-tertiary border border-tertiary-subtle">Flex Grow 1</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code9" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code9" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-grow-1 p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Grow 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Use <code>.flex-shrink-*</code> utilities to toggle a flex item’s ability to shrink if necessary. In the example below,
+the second flex item with <code>.flex-shrink-1</code> is forced to wrap its contents to a new line, “shrinking” to allow
+more space for the previous flex item with <code>.w-100</code>.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex bg-tertiary-subtle">
+    <div class="w-100 p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item</div>
+    <div class="flex-shrink-1 p-2 text-bg-tertiary border border-tertiary-subtle">Flex Shrink 1</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code10" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code10" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-shrink-1 p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Shrink 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Responsive variations also exist for <code>flex-grow</code> and <code>flex-shrink</code>.</p>
+<ul>
+<li><code>.flex-{grow|shrink}-0</code></li>
+<li><code>.flex-{grow|shrink}-1</code></li>
+<li><code>.flex-sm-{grow|shrink}-0</code></li>
+<li><code>.flex-sm-{grow|shrink}-1</code></li>
+<li><code>.flex-md-{grow|shrink}-0</code></li>
+<li><code>.flex-md-{grow|shrink}-1</code></li>
+<li><code>.flex-lg-{grow|shrink}-0</code></li>
+<li><code>.flex-lg-{grow|shrink}-1</code></li>
+<li><code>.flex-xl-{grow|shrink}-0</code></li>
+<li><code>.flex-xl-{grow|shrink}-1</code></li>
+<li><code>.flex-xxl-{grow|shrink}-0</code></li>
+<li><code>.flex-xxl-{grow|shrink}-1</code></li>
+</ul>
+<h2 id="auto-margins">Auto margins</h2>
+<p>Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three
+examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the
+right (<code>.me-auto</code>), and pushing two items to the left (<code>.ms-auto</code>).</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex bg-tertiary-subtle mb-3">
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+</div>
+
+<div class="d-flex bg-tertiary-subtle mb-3">
+  <div class="me-auto p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+</div>
+
+<div class="d-flex bg-tertiary-subtle">
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="ms-auto p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code11" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code11" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bg-tertiary-subtle mb-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bg-tertiary-subtle mb-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;me-auto p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ms-auto p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h3 id="with-align-items">With align-items</h3>
+<p>Vertically move one flex item to the top or bottom of a container by mixing <code>align-items</code>,
+<code>flex-direction: column</code>, and <code>margin-top: auto</code> or <code>margin-bottom: auto</code>.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-items-start flex-column mb-3 bg-tertiary-subtle" style="height: 200px;">
+  <div class="mb-auto p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+</div>
+
+<div class="d-flex align-items-end flex-column bg-tertiary-subtle" style="height: 200px;">
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+  <div class="mt-auto p-2 text-bg-tertiary border border-tertiary-subtle">Flex item</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code12" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code12" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start flex-column mb-3 bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-auto p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-end flex-column bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-auto p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="wrap">Wrap</h2>
+<p>Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default)
+with <code>.flex-nowrap</code>, wrapping with <code>.flex-wrap</code>, or reverse wrapping with <code>.flex-wrap-reverse</code>.</p>
+<p><strong><code>flex-nowrap</code></strong>
+<div class="border mb-4 rounded"><div class="p-4  overflow-x-auto">
+
+<div class="d-flex flex-nowrap bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 3</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 4</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 5</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 6</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 7</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 8</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 9</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 10</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 11</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 12</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 13</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 14</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 15</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code13" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code13" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 5<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 7<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 8<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 9<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 10<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 11<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 12<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 13<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 14<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 15<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p><strong><code>flex-wrap</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex flex-wrap bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 3</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 4</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 5</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 6</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 7</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 8</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 9</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 10</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 11</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 12</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 13</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 14</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 15</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code14" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code14" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 5<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 7<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 8<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 9<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 10<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 11<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 12<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 13<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 14<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 15<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p><strong><code>flex-wrap-reverse</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex flex-wrap-reverse bg-tertiary-subtle">
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 3</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 4</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 5</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 6</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 7</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 8</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 9</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 10</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 11</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 12</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 13</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 14</div>
+    <div class="p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 15</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code15" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code15" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap-reverse bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 5<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 7<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 8<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 9<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 10<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 11<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 12<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 13<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 14<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 15<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p>Responsive variations also exist for <code>flex-wrap</code>.</p>
+<ul>
+<li><code>.flex-nowrap</code></li>
+<li><code>.flex-wrap</code></li>
+<li><code>.flex-wrap-reverse</code></li>
+<li><code>.flex-sm-nowrap</code></li>
+<li><code>.flex-sm-wrap</code></li>
+<li><code>.flex-sm-wrap-reverse</code></li>
+<li><code>.flex-md-nowrap</code></li>
+<li><code>.flex-md-wrap</code></li>
+<li><code>.flex-md-wrap-reverse</code></li>
+<li><code>.flex-lg-nowrap</code></li>
+<li><code>.flex-lg-wrap</code></li>
+<li><code>.flex-lg-wrap-reverse</code></li>
+<li><code>.flex-xl-nowrap</code></li>
+<li><code>.flex-xl-wrap</code></li>
+<li><code>.flex-xl-wrap-reverse</code></li>
+<li><code>.flex-xxl-nowrap</code></li>
+<li><code>.flex-xxl-wrap</code></li>
+<li><code>.flex-xxl-wrap-reverse</code></li>
+</ul>
+<h2 id="order">Order</h2>
+<p>Change the <em>visual</em> order of specific flex items with a handful of <code>order</code> utilities. We only provide options
+for making an item first or last, as well as a reset to use the DOM order. As <code>order</code> takes any integer value
+from 0 to 5, add custom CSS for any additional values needed.</p>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex flex-nowrap bg-tertiary-subtle">
+    <div class="order-3 p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="order-2 p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+    <div class="order-1 p-2 text-bg-tertiary border border-tertiary-subtle">Flex Item 3</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code16" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code16" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap bg-tertiary-subtle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-3 p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-2 p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-1 p-2 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<p>Responsive variations also exist for <code>order</code>.</p>
+<ul>
+<li><code>.order-0</code></li>
+<li><code>.order-1</code></li>
+<li><code>.order-2</code></li>
+<li><code>.order-3</code></li>
+<li><code>.order-4</code></li>
+<li><code>.order-5</code></li>
+<li><code>.order-sm-0</code></li>
+<li><code>.order-sm-1</code></li>
+<li><code>.order-sm-2</code></li>
+<li><code>.order-sm-3</code></li>
+<li><code>.order-sm-4</code></li>
+<li><code>.order-sm-5</code></li>
+<li><code>.order-md-0</code></li>
+<li><code>.order-md-1</code></li>
+<li><code>.order-md-2</code></li>
+<li><code>.order-md-3</code></li>
+<li><code>.order-md-4</code></li>
+<li><code>.order-md-5</code></li>
+<li><code>.order-lg-0</code></li>
+<li><code>.order-lg-1</code></li>
+<li><code>.order-lg-2</code></li>
+<li><code>.order-lg-3</code></li>
+<li><code>.order-lg-4</code></li>
+<li><code>.order-lg-5</code></li>
+<li><code>.order-xl-0</code></li>
+<li><code>.order-xl-1</code></li>
+<li><code>.order-xl-2</code></li>
+<li><code>.order-xl-3</code></li>
+<li><code>.order-xl-4</code></li>
+<li><code>.order-xl-5</code></li>
+<li><code>.order-xxl-0</code></li>
+<li><code>.order-xxl-1</code></li>
+<li><code>.order-xxl-2</code></li>
+<li><code>.order-xxl-3</code></li>
+<li><code>.order-xxl-4</code></li>
+<li><code>.order-xxl-5</code></li>
+</ul>
+<p>Additionally there are also responsive <code>.order-first</code> and <code>.order-last</code> classes that change the <code>order</code> of an
+element by applying <code>order: -1</code> and <code>order: 6</code>, respectively.</p>
+<ul>
+<li><code>.order-first</code></li>
+<li><code>.order-last</code></li>
+<li><code>.order-sm-first</code></li>
+<li><code>.order-sm-last</code></li>
+<li><code>.order-md-first</code></li>
+<li><code>.order-md-last</code></li>
+<li><code>.order-lg-first</code></li>
+<li><code>.order-lg-last</code></li>
+<li><code>.order-xl-first</code></li>
+<li><code>.order-xl-last</code></li>
+<li><code>.order-xxl-first</code></li>
+<li><code>.order-xxl-last</code></li>
+</ul>
+<h2 id="align-content">Align content</h2>
+<p>Use <code>align-content</code> utilities on flexbox containers to align flex items together on the cross axis. Choose
+from <code>start</code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, or <code>stretch</code>. To demonstrate these utilities,
+we’ve enforced <code>flex-wrap: wrap</code> and increased the number of flex items.</p>
+<p><strong>Heads up!</strong> This property has no effect on single rows of flex items.</p>
+<p><strong><code>align-content-start</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-content-start flex-wrap bg-tertiary-subtle" style="height: 150px;">
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code17" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code17" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-start flex-wrap bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 150px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p><strong><code>align-content-end</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-content-end flex-wrap bg-tertiary-subtle" style="height: 150px;">
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code18" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code18" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-end flex-wrap bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 150px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p><strong><code>align-content-center</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-content-center flex-wrap bg-tertiary-subtle" style="height: 150px;">
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code19" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code19" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-center flex-wrap bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 150px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p><strong><code>align-content-between</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-content-between flex-wrap bg-tertiary-subtle" style="height: 150px;">
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code20" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code20" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-between flex-wrap bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 150px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p><strong><code>align-content-around</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-content-around flex-wrap bg-tertiary-subtle" style="height: 150px;">
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code21" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code21" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-around flex-wrap bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 150px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p><strong><code>align-content-stretch</code></strong>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<div class="d-flex align-content-stretch flex-wrap bg-tertiary-subtle" style="height: 150px;">
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 1</div>
+    <div class="p-2 w-100 text-bg-tertiary border border-tertiary-subtle">Flex Item 2</div>
+</div>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code22" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code22" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-stretch flex-wrap bg-tertiary-subtle&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 150px;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 text-bg-tertiary border border-tertiary-subtle&#34;</span><span class="p">&gt;</span>Flex Item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+</p>
+<p>Responsive variations also exist for <code>align-content</code>.</p>
+<ul>
+<li><code>.align-content-start</code></li>
+<li><code>.align-content-end</code></li>
+<li><code>.align-content-center</code></li>
+<li><code>.align-content-between</code></li>
+<li><code>.align-content-around</code></li>
+<li><code>.align-content-stretch</code></li>
+<li><code>.align-content-sm-start</code></li>
+<li><code>.align-content-sm-end</code></li>
+<li><code>.align-content-sm-center</code></li>
+<li><code>.align-content-sm-between</code></li>
+<li><code>.align-content-sm-around</code></li>
+<li><code>.align-content-sm-stretch</code></li>
+<li><code>.align-content-md-start</code></li>
+<li><code>.align-content-md-end</code></li>
+<li><code>.align-content-md-center</code></li>
+<li><code>.align-content-md-between</code></li>
+<li><code>.align-content-md-around</code></li>
+<li><code>.align-content-md-stretch</code></li>
+<li><code>.align-content-lg-start</code></li>
+<li><code>.align-content-lg-end</code></li>
+<li><code>.align-content-lg-center</code></li>
+<li><code>.align-content-lg-between</code></li>
+<li><code>.align-content-lg-around</code></li>
+<li><code>.align-content-lg-stretch</code></li>
+<li><code>.align-content-xl-start</code></li>
+<li><code>.align-content-xl-end</code></li>
+<li><code>.align-content-xl-center</code></li>
+<li><code>.align-content-xl-between</code></li>
+<li><code>.align-content-xl-around</code></li>
+<li><code>.align-content-xl-stretch</code></li>
+<li><code>.align-content-xxl-start</code></li>
+<li><code>.align-content-xxl-end</code></li>
+<li><code>.align-content-xxl-center</code></li>
+<li><code>.align-content-xxl-between</code></li>
+<li><code>.align-content-xxl-around</code></li>
+<li><code>.align-content-xxl-stretch</code></li>
+</ul>
+
+  </div>
+
+  <div class="component-map">
+    <div class="row">
+      <div class="col">
+        <a target="_blank" class="text-decoration-none text-body" href="https://materialstyle.github.io/theme-builder">
+          <div class="adspace rounded mb-2">
+            <div class="d-flex align-items-center">
+              <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+              <div class="site-name ml-1">Theme Builder <i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+            <small>Personalize Material Style to reflect your product's brand identity.</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="sticky-md-top" style="top: 3rem;">
+      
+      <div class="row">
+        <div class="col">
+          <div class="ms-toc my-2">
+            <label class="text-secondary-emphasis mb-2">CONTENTS</label>
+            <nav id="TableOfContents">
+  <ul class="nav flex-column">
+    <li class="nav-item"><a class="nav-link" href="#enable-flex-behaviors">Enable flex behaviors</a></li>
+    <li class="nav-item"><a class="nav-link" href="#direction">Direction</a></li>
+    <li class="nav-item"><a class="nav-link" href="#justify-content">Justify content</a></li>
+    <li class="nav-item"><a class="nav-link" href="#align-items">Align items</a></li>
+    <li class="nav-item"><a class="nav-link" href="#align-self">Align self</a></li>
+    <li class="nav-item"><a class="nav-link" href="#fill">Fill</a></li>
+    <li class="nav-item"><a class="nav-link" href="#grow-and-shrink">Grow and shrink</a></li>
+    <li class="nav-item"><a class="nav-link" href="#auto-margins">Auto margins</a>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#with-align-items">With align-items</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#wrap">Wrap</a></li>
+    <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
+    <li class="nav-item"><a class="nav-link" href="#align-content">Align content</a></li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="row">
+        <div class="col">
+          <div class="ms-toc mt-4 mb-2">
+            <label class="text-secondary-emphasis mb-2">SEE ALSO</label>
+            <nav>
+              <ul class="nav flex-column">
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/background-color/">Background color</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/borders/">Borders</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/display/">Display</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/float/">Float</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/interactions/">Interactions</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/link/">Link</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/object-fit/">Object fit</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/opacity/">Opacity</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/overflow/">Overflow</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/utilities/position/">Position</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+    </div>
+    <footer id="site-footer" class="m-5 rounded-4rem">
+  <div class="container">
+    <div class="row py-4 px-2 px-sm-4">
+      <div class="d-flex flex-column justify-content-center align-items-center mb-2">
+        <a class="footer-brand site-name text-body text-decoration-none text-center" href="/" aria-label="Material Style">
+          <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+          <span class="d-block">Material Style</span>
+        </a>
+      </div>
+      <p class="text-center">
+        Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.<br>
+        Currently v3.1.0 based on Bootstrap v5.3.2
+      </p>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://materialstyle.github.io/theme-builder">Theme Builder</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="bg-dark m-0">
+    <div class="row py-4 px-2 px-sm-4">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@material/ripple@14.0.0/dist/mdc.ripple.min.js"
+        integrity="sha384-9QANVmWxL3S8VRs8x1Q+bF1Zzogpy7P/Qw1+y5qHLdC1ig0EuoHg9VbB1SXyecdZ"
+        crossorigin="anonymous"></script>
+
+<script src="/materialstyle/3.1/dist/js/materialstyle.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script src="/materialstyle/3.1/assets/js/site.min.js"></script>
+
+</body>
+</html>

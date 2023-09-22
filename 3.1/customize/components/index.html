@@ -6,9 +6,9 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A Material Design UI Library based on Bootstrap">
+<meta name="description" content="Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap">
 <meta name="author" content="Neeraj Kumar Das">
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="3.1">
@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://materialstyle.github.io">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Components · Material Style v3.1">
-<meta property="og:description" content="A Material Design UI Library based on Bootstrap">
+<meta property="og:description" content="Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap">
 <meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg">
 
 <title>Components · Material Style v3.1</title>
@@ -38,6 +38,16 @@
 
 <link href="/materialstyle/3.1/assets/css/styles.css" rel="stylesheet">
 
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T3YPJV7LJD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T3YPJV7LJD');
+</script>
 
 </head>
 <body>
@@ -75,13 +85,23 @@
 
         <a class="navbar-brand d-flex align-items-center py-0 me-0 rounded" href="/">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
-          <div id="site-name" class="text-white ml-1">Material Style</div>
+          <div class="site-name text-white ml-1">Material Style</div>
         </a>
     </div>
 
-    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-2 me-2">
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://materialstyle.github.io/theme-builder">
+          Theme Builder
+        </a>
+      </li>
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://github.com/materialstyle/materialstyle">
+          GitHub
+        </a>
+      </li>
       <li class="nav-item dropdown">
-        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-1 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
           v3.1
           <span class="ripple-surface"></span>
         </button>
@@ -143,7 +163,7 @@
   <aside class="offcanvas-start offcanvas-lg offcanvas-fixed"
        data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
   <div class="offcanvas-header">
-    <a class="offcanvas-title d-flex align-items-center text-white py-0" href="/">
+    <a class="site-name offcanvas-title d-flex align-items-center text-white py-0" href="/">
       <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
            alt="Material Style Logo" style="width:40px; height:40px;">Material Style
     </a>
@@ -185,6 +205,21 @@
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theme-colors/">Theme Colors</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/color-modes/">Color modes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theming/">Theming</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
                  href="/materialstyle/3.1/customize/options/">Options</a>
             </li>
 
@@ -195,55 +230,46 @@
           <li><hr class="dropdown-divider"></li>
         
 
-          <li class="nav-item list-heading"><b>Colors</b></li>
+          <li class="nav-item list-heading"><b>Layout</b></li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/theme-colors/">Theme Colors</a>
+                 href="/materialstyle/3.1/layout/breakpoints/">Breakpoints</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/color-modes/">Color modes</a>
+                 href="/materialstyle/3.1/layout/containers/">Containers</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/theming/">Theming</a>
+                 href="/materialstyle/3.1/layout/grid/">Grid</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/background-color/">Background color</a>
+                 href="/materialstyle/3.1/layout/columns/">Columns</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/text-color/">Text color</a>
+                 href="/materialstyle/3.1/layout/gutters/">Gutters</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/colored-links/">Colored Links</a>
-            </li>
-          <li><hr class="dropdown-divider"></li>
-        
-
-          <li class="nav-item list-heading"><b>Utilities</b></li>
-
-            <li class="nav-item mb-1">
-              <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+                 href="/materialstyle/3.1/layout/utilities/">Utilities</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+                 href="/materialstyle/3.1/layout/z-index/">Z-index</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+                 href="/materialstyle/3.1/layout/css-grid/">CSS Grid</a>
             </li>
           <li><hr class="dropdown-divider"></li>
         
@@ -416,6 +442,174 @@
           <li><hr class="dropdown-divider"></li>
         
 
+          <li class="nav-item list-heading"><b>Utilities</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/api/">Api</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/background-color/">Background color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/borders/">Borders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/display/">Display</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/flex/">Flex</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/float/">Float</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/interactions/">Interactions</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/link/">Link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/object-fit/">Object fit</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/opacity/">Opacity</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/overflow/">Overflow</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/sizing/">Sizing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/spacing/">Spacing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text/">Text</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text-color/">Text color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/vertical-align/">Vertical align</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/visibility/">Visibility</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/z-index/">Z-index</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Helpers</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/clearfix/">Clearfix</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/focus-ring/">Focus ring</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/icon-link/">Icon link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/ratio/">Ratio</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stacks/">Stacks</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stretched-link/">Stretched link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/text-truncation/">Text truncation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/vertical-rule/">Vertical rule</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/visually-hidden/">Visually hidden</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
           <li class="nav-item list-heading"><b>Demos</b></li>
 
             <li class="nav-item mb-1">
@@ -471,6 +665,9 @@
 
   <div class="component-showcase">
     <h1 id="content">Components</h1>
+
+    
+
     <h2 id="base-classes">Base classes</h2>
 <p>Material Style&rsquo;s components are largely built with a base-modifier nomenclature. We group as many shared properties as possible into a base class, like <code>.btn</code>, and then group individual styles for each variant into modifier classes, like <code>.btn-primary</code> or <code>.btn-success</code>.</p>
 <p>To build our modifier classes, we use Sass&rsquo;s <code>@each</code> loops to iterate over a Sass map. This is especially helpful for generating variants of a component by our <code>$theme-colors</code> and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you&rsquo;ll automatically see your changes reflected in these loops.</p>
@@ -574,9 +771,15 @@
   <div class="component-map">
     <div class="row">
       <div class="col">
-        <div class="adspace bg-gray-100">
-
-        </div>
+        <a target="_blank" class="text-decoration-none text-body" href="https://materialstyle.github.io/theme-builder">
+          <div class="adspace rounded mb-2">
+            <div class="d-flex align-items-center">
+              <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+              <div class="site-name ml-1">Theme Builder <i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+            <small>Personalize Material Style to reflect your product's brand identity.</small>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -610,9 +813,15 @@
                 
                 <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/css-variables/">CSS variables</a></li>
                 
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/color-modes/">Color modes</a></li>
+                
                 <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/options/">Options</a></li>
                 
                 <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/sass/">Sass</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/theme-colors/">Theme colors</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/customize/theming/">Theming</a></li>
                 
               </ul>
             </nav>
@@ -630,18 +839,24 @@
   <div class="container">
     <div class="row py-4 px-2 px-sm-4">
       <div class="d-flex flex-column justify-content-center align-items-center mb-2">
-        <a class="footer-brand text-body text-decoration-none text-center" href="/" aria-label="Material Style">
+        <a class="footer-brand site-name text-body text-decoration-none text-center" href="/" aria-label="Material Style">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
           <span class="d-block">Material Style</span>
         </a>
       </div>
-      <p class="text-center">Material Style is a Material Design UI Library based on Bootstrap. Currently v3.1.0-alpha1</p>
+      <p class="text-center">
+        Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.<br>
+        Currently v3.1.0 based on Bootstrap v5.3.2
+      </p>
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+          <a target="_blank" class="nav-link fw-bold" href="https://materialstyle.github.io/theme-builder">Theme Builder</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
         </li>
       </ul>
     </div>
@@ -649,19 +864,19 @@
     <div class="row py-4 px-2 px-sm-4">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
+          <a target="_blank" class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+          <a target="_blank" class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
+          <a target="_blank" class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
+          <a target="_blank" class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
+          <a target="_blank" class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
         </li>
       </ul>
     </div>

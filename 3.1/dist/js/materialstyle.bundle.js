@@ -1,10 +1,10 @@
 /*!
-  * Material Style v3.1.0-alpha1 (https://materialstyle.github.io/)
+  * Material Style v3.1.0 (https://materialstyle.github.io/)
   * Copyright 2018-2023 Neeraj Kumar Das (https://github.com/nkdas91)
   * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)  
   * This a fork of Bootstrap: Initial license below
-  * 
-  * Bootstrap v5.3.0 (https://getbootstrap.com/)
+  *
+  * Bootstrap v5.3.2 (https://getbootstrap.com/)
   * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -316,6 +316,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -594,6 +595,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Class definition
    */
@@ -646,11 +648,12 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
 
-  const VERSION = '5.3.0-alpha2';
+  const VERSION = '5.3.2';
 
   /**
    * Class definition
@@ -713,6 +716,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   const getSelector = element => {
     let selector = element.getAttribute('data-bs-target');
     if (!selector || selector === '#') {
@@ -730,9 +734,9 @@
       if (hrefAttribute.includes('#') && !hrefAttribute.startsWith('#')) {
         hrefAttribute = `#${hrefAttribute.split('#')[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== '#' ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return parseSelector(selector);
+    return selector;
   };
   const SelectorEngine = {
     find(selector, element = document.documentElement) {
@@ -801,6 +805,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -825,6 +830,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -900,6 +906,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -962,6 +969,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -1081,6 +1089,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -1453,6 +1462,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -2131,7 +2141,6 @@
     }
 
     if (!contains(state.elements.popper, arrowElement)) {
-
       return;
     }
 
@@ -2273,7 +2282,6 @@
         adaptive = _options$adaptive === void 0 ? true : _options$adaptive,
         _options$roundOffsets = options.roundOffsets,
         roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
-
     var commonStyles = {
       placement: getBasePlacement(state.placement),
       variation: getVariation(state.placement),
@@ -3341,8 +3349,7 @@
 
           state.orderedModifiers = orderedModifiers.filter(function (m) {
             return m.enabled;
-          }); // Validate the provided modifiers so that the consumer will get warned
-
+          });
           runModifierEffects();
           return instance.update();
         },
@@ -3362,7 +3369,6 @@
           // anymore
 
           if (!areValidElements(reference, popper)) {
-
             return;
           } // Store the reference and popper rects to be read by modifiers
 
@@ -3387,7 +3393,6 @@
           });
 
           for (var index = 0; index < state.orderedModifiers.length; index++) {
-
             if (state.reset === true) {
               state.reset = false;
               index = -1;
@@ -3425,7 +3430,6 @@
       };
 
       if (!areValidElements(reference, popper)) {
-
         return instance;
       }
 
@@ -3440,11 +3444,11 @@
       // one.
 
       function runModifierEffects() {
-        state.orderedModifiers.forEach(function (_ref3) {
-          var name = _ref3.name,
-              _ref3$options = _ref3.options,
-              options = _ref3$options === void 0 ? {} : _ref3$options,
-              effect = _ref3.effect;
+        state.orderedModifiers.forEach(function (_ref) {
+          var name = _ref.name,
+              _ref$options = _ref.options,
+              options = _ref$options === void 0 ? {} : _ref$options,
+              effect = _ref.effect;
 
           if (typeof effect === 'function') {
             var cleanupFn = effect({
@@ -3531,6 +3535,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -3899,6 +3904,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -3917,13 +3923,15 @@
   const ARROW_RIGHT_KEY = 'ArrowRight';
   const ARROW_UP_KEY = 'ArrowUp';
   const ARROW_DOWN_KEY = 'ArrowDown';
+  const HOME_KEY = 'Home';
+  const END_KEY = 'End';
   const CLASS_NAME_ACTIVE$1 = 'active';
   const CLASS_NAME_FADE$4 = 'fade';
   const CLASS_NAME_SHOW$5 = 'show';
   const CLASS_DROPDOWN = 'dropdown';
   const SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
   const SELECTOR_DROPDOWN_MENU = '.dropdown-menu';
-  const NOT_SELECTOR_DROPDOWN_TOGGLE = ':not(.dropdown-toggle)';
+  const NOT_SELECTOR_DROPDOWN_TOGGLE = `:not(${SELECTOR_DROPDOWN_TOGGLE$1})`;
   const SELECTOR_TAB_PANEL = '.list-group, .nav, [role="tablist"]';
   const SELECTOR_OUTER = '.nav-item, .list-group-item';
   const SELECTOR_INNER = `.nav-link${NOT_SELECTOR_DROPDOWN_TOGGLE}, .list-group-item${NOT_SELECTOR_DROPDOWN_TOGGLE}, [role="tab"]${NOT_SELECTOR_DROPDOWN_TOGGLE}`;
@@ -4023,13 +4031,19 @@
       this._queueCallback(complete, element, element.classList.contains(CLASS_NAME_FADE$4));
     }
     _keydown(event) {
-      if (![ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY].includes(event.key)) {
+      if (![ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY, HOME_KEY, END_KEY].includes(event.key)) {
         return;
       }
       event.stopPropagation(); // stopPropagation/preventDefault both added to support up/down keys without scrolling the page
       event.preventDefault();
-      const isNext = [ARROW_RIGHT_KEY, ARROW_DOWN_KEY].includes(event.key);
-      const nextActiveElement = getNextActiveElement(this._getChildren().filter(element => !isDisabled(element)), event.target, isNext, true);
+      const children = this._getChildren().filter(element => !isDisabled(element));
+      let nextActiveElement;
+      if ([HOME_KEY, END_KEY].includes(event.key)) {
+        nextActiveElement = children[event.key === HOME_KEY ? 0 : children.length - 1];
+      } else {
+        const isNext = [ARROW_RIGHT_KEY, ARROW_DOWN_KEY].includes(event.key);
+        nextActiveElement = getNextActiveElement(children, event.target, isNext, true);
+      }
       if (nextActiveElement) {
         nextActiveElement.focus({
           preventScroll: true
@@ -4160,6 +4174,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -4265,6 +4280,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -4390,6 +4406,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -4488,6 +4505,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -4584,6 +4602,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -4937,6 +4956,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -5167,34 +5187,6 @@
    * --------------------------------------------------------------------------
    */
 
-  const uriAttributes = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
-
-  /**
-   * A pattern that recognizes a commonly useful subset of URLs that are safe.
-   *
-   * Shout-out to Angular https://github.com/angular/angular/blob/12.2.x/packages/core/src/sanitization/url_sanitizer.ts
-   */
-  const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file|sms):|[^#&/:?]*(?:[#/?]|$))/i;
-
-  /**
-   * A pattern that matches safe data URLs. Only matches image, video and audio types.
-   *
-   * Shout-out to Angular https://github.com/angular/angular/blob/12.2.x/packages/core/src/sanitization/url_sanitizer.ts
-   */
-  const DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
-  const allowedAttribute = (attribute, allowedAttributeList) => {
-    const attributeName = attribute.nodeName.toLowerCase();
-    if (allowedAttributeList.includes(attributeName)) {
-      if (uriAttributes.has(attributeName)) {
-        return Boolean(SAFE_URL_PATTERN.test(attribute.nodeValue) || DATA_URL_PATTERN.test(attribute.nodeValue));
-      }
-      return true;
-    }
-
-    // Check if a regular expression validates the attribute.
-    return allowedAttributeList.filter(attributeRegex => attributeRegex instanceof RegExp).some(regex => regex.test(attributeName));
-  };
-
   // js-docs-start allow-list
   const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
   const DefaultAllowlist = {
@@ -5232,6 +5224,28 @@
   };
   // js-docs-end allow-list
 
+  const uriAttributes = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
+
+  /**
+   * A pattern that recognizes URLs that are safe wrt. XSS in URL navigation
+   * contexts.
+   *
+   * Shout-out to Angular https://github.com/angular/angular/blob/15.2.8/packages/core/src/sanitization/url_sanitizer.ts#L38
+   */
+  // eslint-disable-next-line unicorn/better-regex
+  const SAFE_URL_PATTERN = /^(?!javascript:)(?:[a-z0-9+.-]+:|[^&:/?#]*(?:[/?#]|$))/i;
+  const allowedAttribute = (attribute, allowedAttributeList) => {
+    const attributeName = attribute.nodeName.toLowerCase();
+    if (allowedAttributeList.includes(attributeName)) {
+      if (uriAttributes.has(attributeName)) {
+        return Boolean(SAFE_URL_PATTERN.test(attribute.nodeValue));
+      }
+      return true;
+    }
+
+    // Check if a regular expression validates the attribute.
+    return allowedAttributeList.filter(attributeRegex => attributeRegex instanceof RegExp).some(regex => regex.test(attributeName));
+  };
   function sanitizeHtml(unsafeHtml, allowList, sanitizeFunction) {
     if (!unsafeHtml.length) {
       return unsafeHtml;
@@ -5265,6 +5279,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -5400,6 +5415,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -5912,6 +5928,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -5992,6 +6009,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -6046,6 +6064,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -6225,11 +6244,11 @@
         if (!anchor.hash || isDisabled(anchor)) {
           continue;
         }
-        const observableSection = SelectorEngine.findOne(anchor.hash, this._element);
+        const observableSection = SelectorEngine.findOne(decodeURI(anchor.hash), this._element);
 
         // ensure that the observableSection exists & is visible
         if (isVisible(observableSection)) {
-          this._targetLinks.set(anchor.hash, anchor);
+          this._targetLinks.set(decodeURI(anchor.hash), anchor);
           this._observableSections.set(anchor.hash, observableSection);
         }
       }
@@ -6301,7 +6320,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Material Style (v3.1.0-alpha1): color.js
+   * Material Style util/color.js
    * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6341,6 +6360,7 @@
    * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -6656,6 +6676,8 @@
       for (const [, item] of Object.entries(dropdownItems)) {
         let optionText = '';
         optionText = this._multiSelectEnabled ? item.querySelector('.dropdown-text').innerHTML : item.innerHTML;
+
+        // eslint-disable-next-line unicorn/no-negated-condition
         if (!optionText.toLowerCase().includes(value)) {
           item.classList.add('d-none');
           item.classList.remove('d-flex');
@@ -6670,6 +6692,7 @@
       EventHandler.on(this._selectedItem, EVENT_FOCUSOUT$1, () => this.handleFocusOut());
       EventHandler.on(this._dropdown, EVENT_SHOWN$1, () => this._dropdown.classList.add('float'));
       EventHandler.on(this._dropdown, EVENT_HIDDEN$1, e => {
+        // eslint-disable-next-line unicorn/no-negated-condition
         if (!e.clickEvent) {
           this._selectedItem.focus();
         } else {
@@ -6756,6 +6779,7 @@
    * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -6877,6 +6901,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -6992,10 +7017,11 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Material Style (v3.1.0-alpha1): text_field.js
+   * Material Style text_field.js
    * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -7101,11 +7127,9 @@
       document.fonts.ready.then(() => {
         if (this._formFloatingWithIcon) {
           if (this._prepend) {
-            this._prepend.style.height = `${this._textField.offsetHeight}px`;
             this._formFloating.style.setProperty('--prepend-width', `${this._prepend.offsetWidth}px`);
           }
           if (this._append) {
-            this._append.style.height = `${this._textField.offsetHeight}px`;
             this._formFloating.style.setProperty('--append-width', `${this._append.offsetWidth}px`);
           }
         }
@@ -7125,6 +7149,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -7308,6 +7333,7 @@
    * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   const index_umd = {
     Alert,
     Button,

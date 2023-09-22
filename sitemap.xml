@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://materialstyle.github.io/materialstyle/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/404.html</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/accordion/</loc>
@@ -11,13 +14,22 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/alerts/</loc>
     </url>
     <url>
-        <loc>http://materialstyle.github.io/materialstyle/3.1/colors/background-color/</loc>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/api/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/background-color/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/badges/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/borders/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/breadcrumb/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/breakpoints/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/getting-started/browsers-and-devices/</loc>
@@ -35,22 +47,34 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/forms/checkbox-radio-switch/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/clearfix/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/close-button/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/collapse/</loc>
     </url>
     <url>
-        <loc>http://materialstyle.github.io/materialstyle/3.1/colors/color-modes/</loc>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/customize/color-modes/</loc>
     </url>
     <url>
-        <loc>http://materialstyle.github.io/materialstyle/3.1/colors/colored-links/</loc>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/columns/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/customize/components/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/containers/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/css-grid/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/customize/css-variables/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/display/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/demos/drawer/</loc>
@@ -71,13 +95,37 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/dropdowns/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/flex/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/float/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/floating-action-buttons/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/focus-ring/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/grid/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/gutters/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/icon-link/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/forms/input-groups/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/getting-started/installation/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/interactions/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/link/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/lists/</loc>
@@ -101,7 +149,16 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/demos/navbar-fixed-top/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/object-fit/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/opacity/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/customize/options/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/overflow/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/pagination/</loc>
@@ -113,10 +170,19 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/popovers/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/position/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/position/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/progress-bars/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/forms/range/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/ratio/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/ripple/</loc>
@@ -137,13 +203,25 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/shapes/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/sizing/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/snackbars/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/spacing/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/spinners/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/stacks/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/getting-started/starter-templates/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/stretched-link/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/tables/</loc>
@@ -152,16 +230,22 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/tabs/</loc>
     </url>
     <url>
-        <loc>http://materialstyle.github.io/materialstyle/3.1/colors/text-color/</loc>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/text/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/text-color/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/forms/text-fields/</loc>
     </url>
     <url>
-        <loc>http://materialstyle.github.io/materialstyle/3.1/colors/theme-colors/</loc>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/text-truncation/</loc>
     </url>
     <url>
-        <loc>http://materialstyle.github.io/materialstyle/3.1/colors/theming/</loc>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/customize/theme-colors/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/customize/theming/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/toasts/</loc>
@@ -170,7 +254,28 @@
         <loc>http://materialstyle.github.io/materialstyle/3.1/components/tooltips/</loc>
     </url>
     <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/utilities/</loc>
+    </url>
+    <url>
         <loc>http://materialstyle.github.io/materialstyle/3.1/forms/validation/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/vertical-align/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/vertical-rule/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/visibility/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/helpers/visually-hidden/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/layout/z-index/</loc>
+    </url>
+    <url>
+        <loc>http://materialstyle.github.io/materialstyle/3.1/utilities/z-index/</loc>
     </url>
     <url>
         <loc>http://materialstyle.github.io/materialstyle/3.0/components/accordion/</loc>

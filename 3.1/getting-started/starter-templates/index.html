@@ -6,9 +6,9 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A Material Design UI Library based on Bootstrap">
+<meta name="description" content="Quickly kickstart your projects with our HTML templates that follow modern web development standards, ensuring ease and efficiency.">
 <meta name="author" content="Neeraj Kumar Das">
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="3.1">
@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://materialstyle.github.io">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Starter Templates · Material Style v3.1">
-<meta property="og:description" content="A Material Design UI Library based on Bootstrap">
+<meta property="og:description" content="Quickly kickstart your projects with our HTML templates that follow modern web development standards, ensuring ease and efficiency.">
 <meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg">
 
 <title>Starter Templates · Material Style v3.1</title>
@@ -38,6 +38,16 @@
 
 <link href="/materialstyle/3.1/assets/css/styles.css" rel="stylesheet">
 
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T3YPJV7LJD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T3YPJV7LJD');
+</script>
 
 </head>
 <body>
@@ -75,13 +85,23 @@
 
         <a class="navbar-brand d-flex align-items-center py-0 me-0 rounded" href="/">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
-          <div id="site-name" class="text-white ml-1">Material Style</div>
+          <div class="site-name text-white ml-1">Material Style</div>
         </a>
     </div>
 
-    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-2 me-2">
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://materialstyle.github.io/theme-builder">
+          Theme Builder
+        </a>
+      </li>
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://github.com/materialstyle/materialstyle">
+          GitHub
+        </a>
+      </li>
       <li class="nav-item dropdown">
-        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-1 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
           v3.1
           <span class="ripple-surface"></span>
         </button>
@@ -143,7 +163,7 @@
   <aside class="offcanvas-start offcanvas-lg offcanvas-fixed"
        data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
   <div class="offcanvas-header">
-    <a class="offcanvas-title d-flex align-items-center text-white py-0" href="/">
+    <a class="site-name offcanvas-title d-flex align-items-center text-white py-0" href="/">
       <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
            alt="Material Style Logo" style="width:40px; height:40px;">Material Style
     </a>
@@ -185,6 +205,21 @@
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theme-colors/">Theme Colors</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/color-modes/">Color modes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theming/">Theming</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
                  href="/materialstyle/3.1/customize/options/">Options</a>
             </li>
 
@@ -195,55 +230,46 @@
           <li><hr class="dropdown-divider"></li>
         
 
-          <li class="nav-item list-heading"><b>Colors</b></li>
+          <li class="nav-item list-heading"><b>Layout</b></li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/theme-colors/">Theme Colors</a>
+                 href="/materialstyle/3.1/layout/breakpoints/">Breakpoints</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/color-modes/">Color modes</a>
+                 href="/materialstyle/3.1/layout/containers/">Containers</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/theming/">Theming</a>
+                 href="/materialstyle/3.1/layout/grid/">Grid</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/background-color/">Background color</a>
+                 href="/materialstyle/3.1/layout/columns/">Columns</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/text-color/">Text color</a>
+                 href="/materialstyle/3.1/layout/gutters/">Gutters</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/colored-links/">Colored Links</a>
-            </li>
-          <li><hr class="dropdown-divider"></li>
-        
-
-          <li class="nav-item list-heading"><b>Utilities</b></li>
-
-            <li class="nav-item mb-1">
-              <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+                 href="/materialstyle/3.1/layout/utilities/">Utilities</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+                 href="/materialstyle/3.1/layout/z-index/">Z-index</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+                 href="/materialstyle/3.1/layout/css-grid/">CSS Grid</a>
             </li>
           <li><hr class="dropdown-divider"></li>
         
@@ -416,6 +442,174 @@
           <li><hr class="dropdown-divider"></li>
         
 
+          <li class="nav-item list-heading"><b>Utilities</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/api/">Api</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/background-color/">Background color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/borders/">Borders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/display/">Display</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/flex/">Flex</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/float/">Float</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/interactions/">Interactions</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/link/">Link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/object-fit/">Object fit</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/opacity/">Opacity</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/overflow/">Overflow</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/sizing/">Sizing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/spacing/">Spacing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text/">Text</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text-color/">Text color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/vertical-align/">Vertical align</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/visibility/">Visibility</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/z-index/">Z-index</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Helpers</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/clearfix/">Clearfix</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/focus-ring/">Focus ring</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/icon-link/">Icon link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/ratio/">Ratio</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stacks/">Stacks</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stretched-link/">Stretched link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/text-truncation/">Text truncation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/vertical-rule/">Vertical rule</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/visually-hidden/">Visually hidden</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
           <li class="nav-item list-heading"><b>Demos</b></li>
 
             <li class="nav-item mb-1">
@@ -471,13 +665,16 @@
 
   <div class="component-showcase">
     <h1 id="content">Starter Templates</h1>
-    <p class="fs-4 ms-0 mb-4 page-description">
-  Be sure to have your pages set up with the latest design and development standards. 
-  That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.
-</p>
+
+    
+    <p class="fs-4 ms-0 mb-4 page-description">Quickly kickstart your projects with our HTML templates that follow modern web development standards, ensuring ease and efficiency.</p>
+    
+
+    <p><strong>Ensure your webpages adhere to best practices, include an HTML5 doctype and a viewport meta tag for proper
+responsive behaviors.</strong></p>
+<br>
 <h2 id="html5-doctype">HTML5 doctype</h2>
-<p>Bootstrap requires the use of the HTML5 doctype.
-Without it, you’ll see some funky incomplete styling,
+<p>Material Style requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling,
 but including it shouldn’t cause any considerable hiccups.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
@@ -486,13 +683,12 @@ but including it shouldn’t cause any considerable hiccups.</p>
 </span></span></code></pre></div><br>
 <h2 id="responsive-meta-tag">Responsive meta tag</h2>
 <p>Bootstrap is developed mobile first, a strategy in which it optimizes code for mobile devices first
-and then scales up components as necessary using CSS media queries.
-To ensure proper rendering and touch zooming for all devices,
-add the responsive viewport meta tag to your <code>&lt;head&gt;</code>.</p>
+and then scales up components as necessary using CSS media queries. To ensure proper rendering and touch zooming
+for all devices, add the responsive viewport meta tag to your <code>&lt;head&gt;</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
 </span></span></code></pre></div><br>
 <h2 id="box-sizing">Box-sizing</h2>
-<p>For more straightforward sizing in CSS, Bootstrap switches the global <code>box-sizing</code> value
+<p>For more straightforward sizing in CSS, Material Style switches the global <code>box-sizing</code> value
 from <code>content-box</code> to <code>border-box</code>. This ensures <code>padding</code> does not affect the final
 computed width of an element, but it can cause problems with some third-party software like
 Google Maps and Google Custom Search Engine.</p>
@@ -501,10 +697,10 @@ Google Maps and Google Custom Search Engine.</p>
 </span></span><span class="line"><span class="cl">  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">content-box</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><br>
-<p>For your convenience, we have created two starter templates:</p>
+<p><strong>For your convenience, we have created two starter templates:</strong></p>
 <ol>
-<li><a class="link-theme text-decoration-none" href="#template-with-sidebardrawer">With Sidebar/Drawer</a></li>
-<li><a class="link-theme text-decoration-none" href="#template-without-sidebardrawer">Without Sidebar/Drawer</a></li>
+<li><a href="#template-with-sidebardrawer">With Sidebar/Drawer</a></li>
+<li><a href="#template-without-sidebardrawer">Without Sidebar/Drawer</a></li>
 </ol>
 <br>
 <h2 id="template-with-sidebardrawer">Template with Sidebar/Drawer</h2>
@@ -524,7 +720,7 @@ Google Maps and Google Custom Search Engine.</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Material Style CSS --&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Material Style<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -616,7 +812,7 @@ Google Maps and Google Custom Search Engine.</p>
 </span></span><span class="line"><span class="cl">        <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Material Style JS --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -638,7 +834,7 @@ Google Maps and Google Custom Search Engine.</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Material Style CSS --&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/css/materialstyle.min.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Material Style<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -671,7 +867,7 @@ Google Maps and Google Custom Search Engine.</p>
 </span></span><span class="line"><span class="cl">        <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Material Style JS --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0-alpha1/dist/js/materialstyle.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -681,9 +877,15 @@ Google Maps and Google Custom Search Engine.</p>
   <div class="component-map">
     <div class="row">
       <div class="col">
-        <div class="adspace bg-gray-100">
-
-        </div>
+        <a target="_blank" class="text-decoration-none text-body" href="https://materialstyle.github.io/theme-builder">
+          <div class="adspace rounded mb-2">
+            <div class="d-flex align-items-center">
+              <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+              <div class="site-name ml-1">Theme Builder <i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+            <small>Personalize Material Style to reflect your product's brand identity.</small>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -716,9 +918,21 @@ Google Maps and Google Custom Search Engine.</p>
             <nav>
               <ul class="nav flex-column">
                 
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/breakpoints/">Breakpoints</a></li>
+                
                 <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/getting-started/browsers-and-devices/">Browsers and Devices</a></li>
                 
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/css-grid/">CSS Grid</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/columns/">Columns</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/containers/">Containers</a></li>
+                
                 <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/components/drawer/">Drawer / Sidebar</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/grid/">Grid</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/layout/gutters/">Gutters</a></li>
                 
                 <li class="nav-item"><a class="nav-link" href="/materialstyle/3.1/getting-started/installation/">Installation</a></li>
                 
@@ -740,18 +954,24 @@ Google Maps and Google Custom Search Engine.</p>
   <div class="container">
     <div class="row py-4 px-2 px-sm-4">
       <div class="d-flex flex-column justify-content-center align-items-center mb-2">
-        <a class="footer-brand text-body text-decoration-none text-center" href="/" aria-label="Material Style">
+        <a class="footer-brand site-name text-body text-decoration-none text-center" href="/" aria-label="Material Style">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
           <span class="d-block">Material Style</span>
         </a>
       </div>
-      <p class="text-center">Material Style is a Material Design UI Library based on Bootstrap. Currently v3.1.0-alpha1</p>
+      <p class="text-center">
+        Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.<br>
+        Currently v3.1.0 based on Bootstrap v5.3.2
+      </p>
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+          <a target="_blank" class="nav-link fw-bold" href="https://materialstyle.github.io/theme-builder">Theme Builder</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
         </li>
       </ul>
     </div>
@@ -759,19 +979,19 @@ Google Maps and Google Custom Search Engine.</p>
     <div class="row py-4 px-2 px-sm-4">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
+          <a target="_blank" class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+          <a target="_blank" class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
+          <a target="_blank" class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
+          <a target="_blank" class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
+          <a target="_blank" class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
         </li>
       </ul>
     </div>

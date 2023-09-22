@@ -1,10 +1,10 @@
 /*!
- * Material Style Reboot v3.1.0-alpha1 (https://materialstyle.github.io/)
- * Copyright 2018-2022 Neeraj Kumar Das
+ * Material Style Reboot v3.1.0 (https://materialstyle.github.io/)
+ * Copyright 2018-2023 Neeraj Kumar Das
  * Licensed under MIT (https://github.com/materialstyle/materialstyle/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
  *
- * Bootstrap Reboot v5.3.0-alpha1 (https://getbootstrap.com/)
+ * Bootstrap Reboot v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -143,6 +143,7 @@
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-muted-color: #868e96;
+  --bs-heading-color: inherit;
   --bs-link-color: var(--bs-primary);
   --bs-link-decoration: underline;
   --bs-link-hover-color: var(--bs-primary-hover);
@@ -313,7 +314,7 @@
   --bs-dark-emphasis-hover: #909294;
   --bs-text-on-dark: #fff;
   --bs-dark-border-subtle: #141619;
-  --bs-heading-color: #fff;
+  --bs-heading-color: inherit;
   --bs-border-color: #495057;
   --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
 }
@@ -356,7 +357,7 @@ h6, h5, h4, h3, h2, h1 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: var(--bs-heading-color, inherit);
+  color: var(--bs-heading-color);
 }
 
 h1 {
@@ -681,8 +682,8 @@ legend + * {
 }
 
 [type=search] {
-  outline-offset: -2px;
   -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
 [type="tel"],

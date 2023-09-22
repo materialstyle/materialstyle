@@ -6,9 +6,9 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A Material Design UI Library based on Bootstrap">
+<meta name="description" content="Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap">
 <meta name="author" content="Neeraj Kumar Das">
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="3.1">
@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://materialstyle.github.io">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Validation · Material Style v3.1">
-<meta property="og:description" content="A Material Design UI Library based on Bootstrap">
+<meta property="og:description" content="Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap">
 <meta property="og:image" content="https://materialstyle.github.io/assets/images/MSIconNewGreyBg.jpg">
 
 <title>Validation · Material Style v3.1</title>
@@ -38,6 +38,16 @@
 
 <link href="/materialstyle/3.1/assets/css/styles.css" rel="stylesheet">
 
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T3YPJV7LJD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T3YPJV7LJD');
+</script>
 
 </head>
 <body>
@@ -75,13 +85,23 @@
 
         <a class="navbar-brand d-flex align-items-center py-0 me-0 rounded" href="/">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
-          <div id="site-name" class="text-white ml-1">Material Style</div>
+          <div class="site-name text-white ml-1">Material Style</div>
         </a>
     </div>
 
-    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-4 me-2">
+    <ul class="navbar-nav d-flex flex-row align-items-center justify-content-evenly gap-2 me-2">
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://materialstyle.github.io/theme-builder">
+          Theme Builder
+        </a>
+      </li>
+      <li class="nav-item extra-links">
+        <a target="_blank" class="nav-link px-1 py-0 btn btn-outline-light text-white border-0 rounded" href="https://github.com/materialstyle/materialstyle">
+          GitHub
+        </a>
+      </li>
       <li class="nav-item dropdown">
-        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-2 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-outline-light text-white border-0 dropdown-toggle rounded px-1 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
           v3.1
           <span class="ripple-surface"></span>
         </button>
@@ -143,7 +163,7 @@
   <aside class="offcanvas-start offcanvas-lg offcanvas-fixed"
        data-bs-scroll="true" tabindex="-1" id="site-offcanvas">
   <div class="offcanvas-header">
-    <a class="offcanvas-title d-flex align-items-center text-white py-0" href="/">
+    <a class="site-name offcanvas-title d-flex align-items-center text-white py-0" href="/">
       <img src="/materialstyle/assets/images/MSIconNewColorV2.svg"
            alt="Material Style Logo" style="width:40px; height:40px;">Material Style
     </a>
@@ -185,6 +205,21 @@
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theme-colors/">Theme Colors</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/color-modes/">Color modes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/customize/theming/">Theming</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
                  href="/materialstyle/3.1/customize/options/">Options</a>
             </li>
 
@@ -195,55 +230,46 @@
           <li><hr class="dropdown-divider"></li>
         
 
-          <li class="nav-item list-heading"><b>Colors</b></li>
+          <li class="nav-item list-heading"><b>Layout</b></li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/theme-colors/">Theme Colors</a>
+                 href="/materialstyle/3.1/layout/breakpoints/">Breakpoints</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/color-modes/">Color modes</a>
+                 href="/materialstyle/3.1/layout/containers/">Containers</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/theming/">Theming</a>
+                 href="/materialstyle/3.1/layout/grid/">Grid</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/background-color/">Background color</a>
+                 href="/materialstyle/3.1/layout/columns/">Columns</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/text-color/">Text color</a>
+                 href="/materialstyle/3.1/layout/gutters/">Gutters</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/colors/colored-links/">Colored Links</a>
-            </li>
-          <li><hr class="dropdown-divider"></li>
-        
-
-          <li class="nav-item list-heading"><b>Utilities</b></li>
-
-            <li class="nav-item mb-1">
-              <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+                 href="/materialstyle/3.1/layout/utilities/">Utilities</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+                 href="/materialstyle/3.1/layout/z-index/">Z-index</a>
             </li>
 
             <li class="nav-item mb-1">
               <a class="nav-link rounded-pill "
-                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+                 href="/materialstyle/3.1/layout/css-grid/">CSS Grid</a>
             </li>
           <li><hr class="dropdown-divider"></li>
         
@@ -416,6 +442,174 @@
           <li><hr class="dropdown-divider"></li>
         
 
+          <li class="nav-item list-heading"><b>Utilities</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/api/">Api</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/background-color/">Background color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/borders/">Borders</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/display/">Display</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/flex/">Flex</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/float/">Float</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/interactions/">Interactions</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/link/">Link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/object-fit/">Object fit</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/opacity/">Opacity</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/overflow/">Overflow</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/ripple/">Ripple</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shadows/">Shadows</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/shapes/">Shapes</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/sizing/">Sizing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/spacing/">Spacing</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text/">Text</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/text-color/">Text color</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/vertical-align/">Vertical align</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/visibility/">Visibility</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/utilities/z-index/">Z-index</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
+          <li class="nav-item list-heading"><b>Helpers</b></li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/clearfix/">Clearfix</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/focus-ring/">Focus ring</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/icon-link/">Icon link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/position/">Position</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/ratio/">Ratio</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stacks/">Stacks</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/stretched-link/">Stretched link</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/text-truncation/">Text truncation</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/vertical-rule/">Vertical rule</a>
+            </li>
+
+            <li class="nav-item mb-1">
+              <a class="nav-link rounded-pill "
+                 href="/materialstyle/3.1/helpers/visually-hidden/">Visually hidden</a>
+            </li>
+          <li><hr class="dropdown-divider"></li>
+        
+
           <li class="nav-item list-heading"><b>Demos</b></li>
 
             <li class="nav-item mb-1">
@@ -471,6 +665,9 @@
 
   <div class="component-showcase">
     <h1 id="content">Validation</h1>
+
+    
+
     <h2 id="how-it-works-in-bootstrap">How it works in Bootstrap</h2>
 <ul>
 <li>HTML form validation is applied via CSS’s two pseudo-classes, <code>:invalid</code> and <code>:valid</code>.
@@ -518,36 +715,22 @@ better communicate feedback.</p>
 
   <div>
     <div class="form-floating">
-      <input type="text" class="form-control" id="textfield" placeholder="textfield" autocomplete="off" required>
-      <label for="textfield">Text Field</label>
+      <input type="text" class="form-control" id="textFieldExample" placeholder="textField" autocomplete="off" required>
+      <label for="textFieldExample">Text Field</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
   </div>
-
+  
   <div>
     <div class="form-floating form-floating-outlined">
-      <input type="text" class="form-control" id="textfieldOutlined" placeholder="textfield" autocomplete="off" required>
-      <label for="textfieldOutlined">Outlined Text Field</label>
+      <input type="text" class="form-control" id="textFieldOutlinedExample" placeholder="textField" autocomplete="off" required>
+      <label for="textFieldOutlinedExample">Outlined Text Field</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
   </div>
-
-  <div class="input-group has-validation">
-    <div class="form-floating">
-      <input type="text" class="form-control" id="inputgroup" placeholder="inputgroup" autocomplete="off" required>
-      <label for="inputgroup">Input Group</label>
-    </div>
-    <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
-    </span>
-    <div class="validation-feedbacks">
-      <div class="valid-feedback">Looks good!</div>
-      <div class="invalid-feedback">Doesn't look good!</div>
-    </div>
-  </div>
-
+  
   <div>
     <div class="form-floating">
       <select class="form-select" required>
@@ -559,8 +742,8 @@ better communicate feedback.</p>
       </select>
       <label>Select</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
   </div>
 
   <div>
@@ -574,40 +757,12 @@ better communicate feedback.</p>
       </select>
       <label>Outlined Select</label>
     </div>
-    <div class="valid-feedback">Looks good!</div>
-    <div class="invalid-feedback">Doesn't look good!</div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
   </div>
 
-  <div class="input-group has-validation">
-    <div class="form-floating">
-      <select class="form-select" required>
-        <option value="" label="blank option"></option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-        <option value="4">Option 4</option>
-      </select>
-      <label>Select with Input Group</label>
-    </div>
-    <div class="input-group-text">
-      <i class="bi bi-star-fill"></i>
-    </div>
-    <div class="validation-feedbacks">
-      <div class="valid-feedback">Looks good!</div>
-      <div class="invalid-feedback">Doesn't look good!</div>
-    </div>
-  </div>
-
-  <div class="form-check w-100">
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-    <label class="form-check-label" for="invalidCheck">
-      Agree to terms and conditions
-    </label>
-    <div class="invalid-feedback">
-      You must agree before submitting.
-    </div>
-  </div>
-
+  <div class="w-100"></div>
+  
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 
@@ -632,36 +787,22 @@ better communicate feedback.</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span><span class="p">&gt;</span>Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textFieldExample&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textFieldExample&#34;</span><span class="p">&gt;</span>Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldOutlined&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textfieldOutlined&#34;</span><span class="p">&gt;</span>Outlined Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textFieldOutlinedExample&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textFieldOutlinedExample&#34;</span><span class="p">&gt;</span>Outlined Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputgroup&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;inputgroup&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inputgroup&#34;</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
@@ -673,8 +814,8 @@ better communicate feedback.</p>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -688,9 +829,577 @@ better communicate feedback.</p>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Outlined Select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>Submit form<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</div>
+
+<h2 id="supported-components">Supported Components</h2>
+<div class="border mb-4 rounded"><div class="p-4 ">
+
+<form class="needs-validation d-flex flex-wrap gap-2" novalidate>
+
+  <label class="w-100 text-primary"><b>Text field</b></label>
+
+  <div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="textField" placeholder="textField" autocomplete="off" required>
+      <label for="textField">Text Field</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+
+  <div>
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="textFieldOutlined" placeholder="textField" autocomplete="off" required>
+      <label for="textFieldOutlined">Outlined Text Field</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+  
+  <label class="w-100 text-primary"><b>Input group</b></label>
+
+  <div class="input-group has-validation">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="inputGroup" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroup">Input Group</label>
+    </div>
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <div class="input-group has-validation">
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="inputGroupOutlined" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroupOutlined">Input Group</label>
+    </div>
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <div class="input-group has-validation">
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="inputGroupPrepend" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroupPrepend">Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <div class="input-group has-validation">
+    <span class="input-group-text">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="inputGroupOutlinedPrepend" placeholder="inputGroup" autocomplete="off" required>
+      <label for="inputGroupOutlinedPrepend">Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please fill in this field</div>
+    </div>
+  </div>
+  
+  <label class="w-100 text-primary"><b>With icon</b></label>
+  
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="withIcon"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIcon">With Icon</label>
+    </div>
+    <span class="prepend">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+  
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="withIconOutlined"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIconOutlined">With Icon</label>
+    </div>
+    <span class="prepend">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="withIconAppend"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIconAppend">With Icon</label>
+    </div>
+    <span class="append">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+  
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <input type="text" class="form-control" id="withIconOutlinedAppend"
+             placeholder="withIcon" autocomplete="off" required>
+      <label for="withIconOutlinedAppend">With Icon</label>
+    </div>
+    <span class="append">
+      <i class="bi bi-person-circle"></i>
+    </span>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please fill in this field</div>
+  </div>
+
+  <label class="w-100 text-primary"><b>Select</b></label>
+
+  <div>
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Select</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div>
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Outlined Select</label>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <label class="w-100 text-primary"><b>Input group</b></label>
+
+  <div class="input-group has-validation">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Input Group</label>
+    </div>
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
+    </div>
+  </div>
+
+  <div class="input-group has-validation">
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Input Group</label>
+    </div>
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
+    </div>
+  </div>
+
+  <div class="input-group has-validation">
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
+    </div>
+  </div>
+
+  <div class="input-group has-validation">
+    <div class="input-group-text">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>Input Group</label>
+    </div>
+    <div class="validation-feedbacks">
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please select an item in the list</div>
+    </div>
+  </div>
+  
+  <label class="w-100 text-primary"><b>With icon</b></label>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="prepend">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="prepend">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="append">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <div class="form-floating-with-icon">
+    <div class="form-floating form-floating-outlined">
+      <select class="form-select" required>
+        <option value="" label="blank option"></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+      <label>With icon</label>
+    </div>
+    <div class="append">
+      <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="valid-feedback">Valid</div>
+    <div class="invalid-feedback">Please select an item in the list</div>
+  </div>
+
+  <label class="w-100 text-primary"><b>Checks and Radios</b></label>
+
+  <div class="w-100 d-flex gap-3">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Checkbox
+      </label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
+
+    <div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radioSet1" id="radio1" required>
+        <label class="form-check-label" for="radio1">Radio</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radioSet1" id="radio2" required>
+        <label class="form-check-label" for="radio2">Radio</label>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please select one of these options</div>
+      </div>
+    </div>
+    
+    <div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="switch1" required>
+      <label class="form-check-label" for="switch1">Switch</label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
+
+    <div class="form-check form-switch form-switch-square">
+      <input class="form-check-input" type="checkbox" id="switch5" required>
+      <label class="form-check-label" for="switch5">Switch</label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
+
+    <div class="form-check form-switch form-switch-material">
+      <input class="form-check-input" type="checkbox" id="switch9" required>
+      <label class="form-check-label" for="switch9">Switch</label>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Please tick this box</div>
+    </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+</div><div class="d-flex justify-content-end">
+    <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
+            data-bs-toggle="collapse"
+             href="#code2" 
+            style="border-top-left-radius: 0.275rem !important;">
+      <i class="bi bi-code-slash fs-5 me-1"></i> CODE
+      <span class="ripple-surface"></span>
+    </a>
+  </div>
+
+  <div class="collapse"  id="code2" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+      <small class="font-monospace text-muted text-uppercase">html</small>
+      <div class="d-flex ms-auto">
+        <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
+          <i class="bi bi-clipboard2" role="img" aria-label="Copy"></i>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;needs-validation d-flex flex-wrap gap-2&#34;</span> <span class="na">novalidate</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Text field<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textField&#34;</span><span class="p">&gt;</span>Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textFieldOutlined&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textFieldOutlined&#34;</span><span class="p">&gt;</span>Outlined Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Input group<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputGroup&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;inputGroup&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inputGroup&#34;</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputGroupOutlined&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;inputGroup&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inputGroupOutlined&#34;</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;inputGroup&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend&#34;</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputGroupOutlinedPrepend&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;inputGroup&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inputGroupOutlinedPrepend&#34;</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>With icon<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;withIcon&#34;</span>
+</span></span><span class="line"><span class="cl">             <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;withIcon&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;withIcon&#34;</span><span class="p">&gt;</span>With Icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;prepend&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;withIconOutlined&#34;</span>
+</span></span><span class="line"><span class="cl">             <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;withIcon&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;withIconOutlined&#34;</span><span class="p">&gt;</span>With Icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;prepend&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;withIconAppend&#34;</span>
+</span></span><span class="line"><span class="cl">             <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;withIcon&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;withIconAppend&#34;</span><span class="p">&gt;</span>With Icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;append&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;withIconOutlinedAppend&#34;</span>
+</span></span><span class="line"><span class="cl">             <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;withIcon&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;withIconOutlinedAppend&#34;</span><span class="p">&gt;</span>With Icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;append&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please fill in this field<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Select<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Outlined Select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Input group<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
@@ -701,24 +1410,197 @@ better communicate feedback.</p>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Select with Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check w-100&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheck&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      Agree to terms and conditions
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      You must agree before submitting.
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>With icon<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>With icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;prepend&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>With icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;prepend&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>With icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;append&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating-with-icon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>With icon<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;append&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select an item in the list<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 text-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Checks and Radios<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 d-flex gap-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheck&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        Checkbox
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please tick this box<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;radioSet1&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;radio1&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;radio1&#34;</span><span class="p">&gt;</span>Radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;radioSet1&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;radio2&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;radio2&#34;</span><span class="p">&gt;</span>Radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please select one of these options<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;switch1&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;switch1&#34;</span><span class="p">&gt;</span>Switch<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please tick this box<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch form-switch-square&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;switch5&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;switch5&#34;</span><span class="p">&gt;</span>Switch<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please tick this box<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check form-switch form-switch-material&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;switch9&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;switch9&#34;</span><span class="p">&gt;</span>Switch<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Please tick this box<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
@@ -792,36 +1674,22 @@ Be sure to have a parent with <code>position: relative</code> on it for tooltip 
 
 <form class="needs-validation d-flex flex-wrap gap-2" novalidate>
 
-  <div class="position-relative mb-5">
+  <div class="position-relativ mb-5">
     <div class="form-floating">
-      <input type="text" class="form-control" id="textfieldTooltip" placeholder="textfield" autocomplete="off" required>
+      <input type="text" class="form-control" id="textfieldTooltip" placeholder="textField" autocomplete="off" required>
       <label for="textfieldTooltip">Text Field</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
 
   <div class="position-relative mb-5">
     <div class="form-floating form-floating-outlined">
-      <input type="text" class="form-control" id="textfieldOutlinedTooltip" placeholder="textfield" autocomplete="off" required>
+      <input type="text" class="form-control" id="textfieldOutlinedTooltip" placeholder="textField" autocomplete="off" required>
       <label for="textfieldOutlinedTooltip">Outlined Text Field</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
-  </div>
-
-  <div class="input-group has-validation position-relative mb-5">
-    <div class="form-floating">
-      <input type="text" class="form-control" id="inputgroupTooltip" placeholder="inputgroup" autocomplete="off" required>
-      <label for="inputgroupTooltip">Input Group</label>
-    </div>
-    <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
-    </span>
-    <div class="validation-feedbacks">
-      <div class="valid-tooltip">Looks good!</div>
-      <div class="invalid-tooltip">Doesn't look good!</div>
-    </div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
 
   <div class="position-relative mb-5">
@@ -835,8 +1703,8 @@ Be sure to have a parent with <code>position: relative</code> on it for tooltip 
       </select>
       <label>Select</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
 
   <div class="position-relative mb-5">
@@ -850,54 +1718,26 @@ Be sure to have a parent with <code>position: relative</code> on it for tooltip 
       </select>
       <label>Outlined Select</label>
     </div>
-    <div class="valid-tooltip">Looks good!</div>
-    <div class="invalid-tooltip">Doesn't look good!</div>
+    <div class="valid-tooltip">Valid</div>
+    <div class="invalid-tooltip">Invalid</div>
   </div>
-
-  <div class="input-group has-validation position-relative mb-5">
-    <div class="form-floating">
-      <select class="form-select" required>
-        <option value="" label="blank option"></option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-        <option value="4">Option 4</option>
-      </select>
-      <label>Select with Input Group</label>
-    </div>
-    <div class="input-group-text">
-      <i class="bi bi-star-fill"></i>
-    </div>
-    <div class="validation-feedbacks">
-      <div class="valid-tooltip">Looks good!</div>
-      <div class="invalid-tooltip">Doesn't look good!</div>
-    </div>
-  </div>
-
-  <div class="form-check w-100 position-relative mb-5">
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheckTooltip" required>
-    <label class="form-check-label" for="invalidCheckTooltip">
-      Agree to terms and conditions
-    </label>
-    <div class="invalid-tooltip">
-      You must agree before submitting.
-    </div>
-  </div>
-
+  
+  <div class="w-100"></div>
+    
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 
 </div><div class="d-flex justify-content-end">
     <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
             data-bs-toggle="collapse"
-             href="#code2" 
+             href="#code3" 
             style="border-top-left-radius: 0.275rem !important;">
       <i class="bi bi-code-slash fs-5 me-1"></i> CODE
       <span class="ripple-surface"></span>
     </a>
   </div>
 
-  <div class="collapse"  id="code2" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+  <div class="collapse"  id="code3" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
       <small class="font-monospace text-muted text-uppercase">html</small>
       <div class="d-flex ms-auto">
         <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
@@ -906,36 +1746,22 @@ Be sure to have a parent with <code>position: relative</code> on it for tooltip 
       </div>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;needs-validation d-flex flex-wrap gap-2&#34;</span> <span class="na">novalidate</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-relative mb-5&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-relativ mb-5&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldTooltip&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldTooltip&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textfieldTooltip&#34;</span><span class="p">&gt;</span>Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Invalid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-relative mb-5&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldOutlinedTooltip&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldOutlinedTooltip&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textfieldOutlinedTooltip&#34;</span><span class="p">&gt;</span>Outlined Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation position-relative mb-5&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputgroupTooltip&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;inputgroup&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inputgroupTooltip&#34;</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Invalid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-relative mb-5&#34;</span><span class="p">&gt;</span>
@@ -949,8 +1775,8 @@ Be sure to have a parent with <code>position: relative</code> on it for tooltip 
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Invalid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-relative mb-5&#34;</span><span class="p">&gt;</span>
@@ -964,40 +1790,12 @@ Be sure to have a parent with <code>position: relative</code> on it for tooltip 
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Outlined Select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Valid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Invalid<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation position-relative mb-5&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Select with Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;validation-feedbacks&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-tooltip&#34;</span><span class="p">&gt;</span>Looks good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>Doesn&#39;t look good!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check w-100 position-relative mb-5&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheckTooltip&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheckTooltip&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      Agree to terms and conditions
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-tooltip&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      You must agree before submitting.
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>Submit form<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 </div>
@@ -1013,23 +1811,13 @@ text through JavaScript.</p>
 <form class="d-flex flex-wrap gap-2">
 
   <div class="form-floating">
-    <input type="text" class="form-control" id="textfieldDefault" placeholder="textfield" autocomplete="off" required>
+    <input type="text" class="form-control" id="textfieldDefault" placeholder="textField" autocomplete="off" required>
     <label for="textfieldDefault">Text Field</label>
   </div>
 
   <div class="form-floating form-floating-outlined">
-    <input type="text" class="form-control" id="textfieldOutlinedDefault" placeholder="textfield" autocomplete="off" required>
+    <input type="text" class="form-control" id="textfieldOutlinedDefault" placeholder="textField" autocomplete="off" required>
     <label for="textfieldOutlinedDefault">Outlined Text Field</label>
-  </div>
-
-  <div class="input-group">
-    <div class="form-floating">
-      <input type="text" class="form-control" id="inputgroupDefault" placeholder="inputgroup" autocomplete="off" required>
-      <label for="inputgroupDefault">Input Group</label>
-    </div>
-    <span class="input-group-text">
-      <i class="bi bi-person-circle"></i>
-    </span>
   </div>
 
   <div class="form-floating">
@@ -1054,43 +1842,22 @@ text through JavaScript.</p>
     <label>Outlined Select</label>
   </div>
 
-  <div class="input-group">
-    <div class="form-floating">
-      <select class="form-select" required>
-        <option value="" label="blank option"></option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-        <option value="4">Option 4</option>
-      </select>
-      <label>Select with Input Group</label>
-    </div>
-    <div class="input-group-text">
-      <i class="bi bi-star-fill"></i>
-    </div>
-  </div>
-
-  <div class="form-check w-100">
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheckDefault" required>
-    <label class="form-check-label" for="invalidCheckDefault">
-      Agree to terms and conditions
-    </label>
-  </div>
-
+  <div class="w-100"></div>
+  
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 
 </div><div class="d-flex justify-content-end">
     <a class="btn btn-sm btn-outline-secondary border-0 rounded-0 d-flex align-items-center"
             data-bs-toggle="collapse"
-             href="#code3" 
+             href="#code4" 
             style="border-top-left-radius: 0.275rem !important;">
       <i class="bi bi-code-slash fs-5 me-1"></i> CODE
       <span class="ripple-surface"></span>
     </a>
   </div>
 
-  <div class="collapse"  id="code3" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
+  <div class="collapse"  id="code4" ><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-top border-bottom">
       <small class="font-monospace text-muted text-uppercase">html</small>
       <div class="d-flex ms-auto">
         <button type="button" class="copy-to-clipboard btn btn-outline-secondary btn-fab mini-fab border-0" title="Copy to clipboard">
@@ -1100,23 +1867,13 @@ text through JavaScript.</p>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap gap-2&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldDefault&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldDefault&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textfieldDefault&#34;</span><span class="p">&gt;</span>Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating form-floating-outlined&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldOutlinedDefault&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textfield&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;textfieldOutlinedDefault&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;textField&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;textfieldOutlinedDefault&#34;</span><span class="p">&gt;</span>Outlined Text Field<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputgroupDefault&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;inputgroup&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inputgroupDefault&#34;</span><span class="p">&gt;</span>Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-person-circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
@@ -1141,29 +1898,8 @@ text through JavaScript.</p>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Outlined Select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-floating&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">label</span><span class="o">=</span><span class="s">&#34;blank option&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>Option 4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Select with Input Group<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-star-fill&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check w-100&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheckDefault&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheckDefault&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      Agree to terms and conditions
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>Submit form<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 </div>
@@ -1232,9 +1968,15 @@ function toggleValidityClasses(input, formFloating) {
   <div class="component-map">
     <div class="row">
       <div class="col">
-        <div class="adspace bg-gray-100">
-
-        </div>
+        <a target="_blank" class="text-decoration-none text-body" href="https://materialstyle.github.io/theme-builder">
+          <div class="adspace rounded mb-2">
+            <div class="d-flex align-items-center">
+              <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
+              <div class="site-name ml-1">Theme Builder <i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+            <small>Personalize Material Style to reflect your product's brand identity.</small>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -1249,6 +1991,7 @@ function toggleValidityClasses(input, formFloating) {
     <li class="nav-item"><a class="nav-link" href="#how-it-works-in-bootstrap">How it works in Bootstrap</a></li>
     <li class="nav-item"><a class="nav-link" href="#whats-changed-in-material-style">What&rsquo;s changed in Material Style</a></li>
     <li class="nav-item"><a class="nav-link" href="#validation-styles">Validation styles</a></li>
+    <li class="nav-item"><a class="nav-link" href="#supported-components">Supported Components</a></li>
     <li class="nav-item"><a class="nav-link" href="#javascript">Javascript</a></li>
     <li class="nav-item"><a class="nav-link" href="#tooltips">Tooltips</a></li>
     <li class="nav-item"><a class="nav-link" href="#browser-defaults">Browser defaults</a></li>
@@ -1294,18 +2037,24 @@ function toggleValidityClasses(input, formFloating) {
   <div class="container">
     <div class="row py-4 px-2 px-sm-4">
       <div class="d-flex flex-column justify-content-center align-items-center mb-2">
-        <a class="footer-brand text-body text-decoration-none text-center" href="/" aria-label="Material Style">
+        <a class="footer-brand site-name text-body text-decoration-none text-center" href="/" aria-label="Material Style">
           <img src="/materialstyle/assets/images/MSIconNewColorV2.svg" alt="Material Style Logo" style="width:40px; height:40px;">
           <span class="d-block">Material Style</span>
         </a>
       </div>
-      <p class="text-center">Material Style is a Material Design UI Library based on Bootstrap. Currently v3.1.0-alpha1</p>
+      <p class="text-center">
+        Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.<br>
+        Currently v3.1.0 based on Bootstrap v5.3.2
+      </p>
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+          <a target="_blank" class="nav-link fw-bold" href="https://materialstyle.github.io/theme-builder">Theme Builder</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle/blob/main/LICENSE">License</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link fw-bold" href="https://github.com/materialstyle/materialstyle">GitHub</a>
         </li>
       </ul>
     </div>
@@ -1313,19 +2062,19 @@ function toggleValidityClasses(input, formFloating) {
     <div class="row py-4 px-2 px-sm-4">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
+          <a target="_blank" class="nav-link small text-center" href="https://getbootstrap.com/">Bootstrap</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+          <a target="_blank" class="nav-link small text-center" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
+          <a target="_blank" class="nav-link small text-center" href="https://m3.material.io/">Material Design 3</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
+          <a target="_blank" class="nav-link small text-center" href="https://m2.material.io/">Material Design 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
+          <a target="_blank" class="nav-link small text-center" href="https://fonts.google.com/">Google Fonts & Icons</a>
         </li>
       </ul>
     </div>
