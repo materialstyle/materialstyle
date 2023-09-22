@@ -39,15 +39,15 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
-        integrity="sha384-DlOXFEUJgOq983IwRUvHG+n6CsUjQ9t8eVTO8BGW9jJQ7a99uxeE8Ux1aIt2qLsS" 
+        integrity="sha384-4++OWTOVActq1JUQD3WiMJ2cZEGd4qoZK4SbmGqUI0UzweRjLVJxN2yfW1GH012L" 
         crossorigin="anonymous">
   ```
   
   Scripts
   ```html
   <!-- Popper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
-          integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
           crossorigin="anonymous"></script>
           
   <!-- MDC Ripple JS (Only for Ripple effects) -->
@@ -57,7 +57,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   
   <!-- Material Style JS -->
   <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
-          integrity="sha384-9dHtyYn5MfqSZOa0jU8joThzRiDJXezY3JupswCbQEIvXwLt/ZtGapT/m7tzKmiT" 
+          integrity="sha384-x6erLHsRB7M2L36eSvoMT8VoA7aKL60aRJFl+5n02aXIXC+g/wK7ZwHinpdgAOUq" 
           crossorigin="anonymous"></script>
   ```
   </div>
@@ -69,15 +69,15 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
-        integrity="sha384-DlOXFEUJgOq983IwRUvHG+n6CsUjQ9t8eVTO8BGW9jJQ7a99uxeE8Ux1aIt2qLsS" 
+        integrity="sha384-4++OWTOVActq1JUQD3WiMJ2cZEGd4qoZK4SbmGqUI0UzweRjLVJxN2yfW1GH012L" 
         crossorigin="anonymous">
   ```
   
   Scripts
   ```html
   <!-- Popper JS -->
-  <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
-          integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
+  <script src="https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
           crossorigin="anonymous"></script>
           
   <!-- MDC Ripple JS (Only for Ripple effects) -->
@@ -87,7 +87,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   
   <!-- Material Style JS -->
   <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
-          integrity="sha384-9dHtyYn5MfqSZOa0jU8joThzRiDJXezY3JupswCbQEIvXwLt/ZtGapT/m7tzKmiT" 
+          integrity="sha384-x6erLHsRB7M2L36eSvoMT8VoA7aKL60aRJFl+5n02aXIXC+g/wK7ZwHinpdgAOUq" 
           crossorigin="anonymous"></script>
   ```
   </div>
