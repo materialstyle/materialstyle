@@ -39,7 +39,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
-        integrity="sha384-4++OWTOVActq1JUQD3WiMJ2cZEGd4qoZK4SbmGqUI0UzweRjLVJxN2yfW1GH012L" 
+        integrity="sha384-uWMQ++O/dPFfC7zGeOrjA4sg28pmr4DAfsAEt25TZoW9Ls2G4myi/ZNcTmoCht8a" 
         crossorigin="anonymous">
   ```
   
@@ -57,7 +57,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   
   <!-- Material Style JS -->
   <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
-          integrity="sha384-x6erLHsRB7M2L36eSvoMT8VoA7aKL60aRJFl+5n02aXIXC+g/wK7ZwHinpdgAOUq" 
+          integrity="sha384-PvbYJ/pbuObkpTariCPHClLome6dHTDMG8RuCqOEpTr/hVv++d+7s443ythOubNW" 
           crossorigin="anonymous"></script>
   ```
   </div>
@@ -69,7 +69,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   <!-- Material Style CSS -->
   <link rel="stylesheet"
         href="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
-        integrity="sha384-4++OWTOVActq1JUQD3WiMJ2cZEGd4qoZK4SbmGqUI0UzweRjLVJxN2yfW1GH012L" 
+        integrity="sha384-uWMQ++O/dPFfC7zGeOrjA4sg28pmr4DAfsAEt25TZoW9Ls2G4myi/ZNcTmoCht8a" 
         crossorigin="anonymous">
   ```
   
@@ -87,7 +87,7 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   
   <!-- Material Style JS -->
   <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
-          integrity="sha384-x6erLHsRB7M2L36eSvoMT8VoA7aKL60aRJFl+5n02aXIXC+g/wK7ZwHinpdgAOUq" 
+          integrity="sha384-PvbYJ/pbuObkpTariCPHClLome6dHTDMG8RuCqOEpTr/hVv++d+7s443ythOubNW" 
           crossorigin="anonymous"></script>
   ```
   </div>
