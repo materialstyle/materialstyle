@@ -4,11 +4,11 @@ title: Color modes
 group: customize
 toc: true
 keywords: customize, colors, color modes
-description: Material Style supports color modes, or themes, as of v3.1.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
+description: Material Style supports color modes, or themes, as of v3.1.1. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 ---
 
 ## Dark mode
-**Material Style supports color modes, starting with dark mode!** As of v3.1.0 you can implement 
+**Material Style supports color modes, starting with dark mode!** As of v3.1.1 you can implement 
 your own color mode toggler and apply the different color modes as you see fit. 
 We support a light mode (default) and dark mode. 
 Color modes can be toggled globally on the ```<html>``` element, or on specific components 
@@ -98,7 +98,7 @@ attribute applied.
 
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css">
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.1/dist/css/materialstyle.min.css">
 
   <title>Material Style</title>
 </head>
@@ -190,7 +190,7 @@ attribute applied.
         crossorigin="anonymous"></script>
 
 <!-- Material Style JS -->
-<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.1/dist/js/materialstyle.min.js"></script>
 
 </body>
 </html>

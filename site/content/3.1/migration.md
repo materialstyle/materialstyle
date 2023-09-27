@@ -7,7 +7,7 @@ keywords: migration
 description: Review changes in Material Style source files, documentation, and components to migrate from v2 to v3.
 ---
 
-## **v3.1.0**
+## **v3.1.1**
 *Based on Bootstrap v5.3.2*
 
 ### Docs

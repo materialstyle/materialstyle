@@ -38,8 +38,8 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
-        integrity="sha384-uWMQ++O/dPFfC7zGeOrjA4sg28pmr4DAfsAEt25TZoW9Ls2G4myi/ZNcTmoCht8a" 
+        href="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.1/dist/css/materialstyle.min.css" 
+        integrity="sha384-TveZ4SBMG9Zwu44Pq5aK2bgL+4CaFRTtx6pSSsxmQKWhIRKoONDSRW+k+NA9A0Gk" 
         crossorigin="anonymous">
   ```
   
@@ -56,8 +56,8 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
-          integrity="sha384-PvbYJ/pbuObkpTariCPHClLome6dHTDMG8RuCqOEpTr/hVv++d+7s443ythOubNW" 
+  <script src="https://cdn.jsdelivr.net/npm/@materialstyle/materialstyle@3.1.1/dist/js/materialstyle.min.js" 
+          integrity="sha384-rqhP61M9WSmzd7+ssgyoWP2I+R68vVHx7o+UmmIs6/Nxe8Lt1DoF6+0CKptZIXC0" 
           crossorigin="anonymous"></script>
   ```
   </div>
@@ -68,8 +68,8 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
   ```html
   <!-- Material Style CSS -->
   <link rel="stylesheet"
-        href="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/css/materialstyle.min.css" 
-        integrity="sha384-uWMQ++O/dPFfC7zGeOrjA4sg28pmr4DAfsAEt25TZoW9Ls2G4myi/ZNcTmoCht8a" 
+        href="https://unpkg.com/@materialstyle/materialstyle@3.1.1/dist/css/materialstyle.min.css" 
+        integrity="sha384-TveZ4SBMG9Zwu44Pq5aK2bgL+4CaFRTtx6pSSsxmQKWhIRKoONDSRW+k+NA9A0Gk" 
         crossorigin="anonymous">
   ```
   
@@ -86,8 +86,8 @@ seamlessly. This method is convenient and ideal for those who want a straightfor
           crossorigin="anonymous"></script>
   
   <!-- Material Style JS -->
-  <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.0/dist/js/materialstyle.min.js" 
-          integrity="sha384-PvbYJ/pbuObkpTariCPHClLome6dHTDMG8RuCqOEpTr/hVv++d+7s443ythOubNW" 
+  <script src="https://unpkg.com/@materialstyle/materialstyle@3.1.1/dist/js/materialstyle.min.js" 
+          integrity="sha384-rqhP61M9WSmzd7+ssgyoWP2I+R68vVHx7o+UmmIs6/Nxe8Lt1DoF6+0CKptZIXC0" 
           crossorigin="anonymous"></script>
   ```
   </div>
@@ -114,7 +114,7 @@ usage and updates.
 Install
 
 ```console
-npm i @materialstyle/materialstyle@3.1.0
+npm i @materialstyle/materialstyle
 ```
 
 Our Select Fields, Dropdowns, Popovers, and Tooltips depend on Popper, install it using:
@@ -157,8 +157,8 @@ suitable for developers who prefer to have local copies of the required files an
 project's code.
 
 <a class="btn btn-tertiary btn-lg rounded-pill" 
-   href="https://github.com/materialstyle/materialstyle/releases/download/v3.1.0/materialstyle-3.1.0-dist.zip" download>
-  Download v3.1.0
+   href="https://github.com/materialstyle/materialstyle/releases/download/v3.1.1/materialstyle-3.1.1-dist.zip" download>
+  Download v3.1.1
 </a>
 
 <br>

@@ -1,4 +1,4 @@
-@include deprecate("`alert-variant()`", "v3.1.0", "v4.0.0");
+@include deprecate("`alert-variant()`", "v3.1.1", "v4.0.0");
 
 // scss-docs-start alert-variant-mixin
 @mixin alert-variant($background, $border, $color) {
