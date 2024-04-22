@@ -193,11 +193,10 @@
 .offcanvas-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
-    margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
+    margin: calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) calc(-.5 * var(--#{$prefix}offcanvas-padding-x)) calc(-.5 * var(--#{$prefix}offcanvas-padding-y)) auto;
   }
 }
 
