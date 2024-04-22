@@ -10,6 +10,9 @@
   A Material Design UI Library based on Bootstrap.
 </p>
 
+[![](https://data.jsdelivr.com/v1/package/npm/@materialstyle/materialstyle/badge)](https://www.jsdelivr.com/package/npm/@materialstyle/materialstyle)
+[![npm version](https://img.shields.io/npm/v/@materialstyle/materialstyle?logo=npm&color=ea2039&style=flat-square)](https://www.npmjs.com/package/@materialstyle/materialstyle)
+
 ## Table of contents
 
 - [Components](#components)
@@ -18,7 +21,7 @@
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Creator](#creator)
-- [Thank you](#thank-you)
+- [A Big Thanks](#a-big-thanks)
 
 ## Components
 https://materialstyle.github.io/materialstyle/3.1/components/alert/
@@ -55,7 +58,7 @@ Editor preferences are available in the [editor config](https://github.com/mater
 - <https://github.com/nkdas91>
 - <https://neerajdas.com/>
 
-## Thank you!
+## A Big Thanks
 
 <p align="center">
   <a href="https://getbootstrap.com/">
@@ -64,29 +67,53 @@ Editor preferences are available in the [editor config](https://github.com/mater
 </p>
     
 <p align="center">
-Thank you <a href="https://getbootstrap.com/">Bootstrap</a> for an awesome front-end framework!
+Material Style is built using <a href="https://getbootstrap.com/">Bootstrap</a>.
 </p>
   
 <br><br>
  
 <p align="center">
-  <a href="https://www.browserstack.com/">
+  <a href="https://browserstack.com/">
     <img src="https://materialstyle.github.io/assets/images/browserstack-logo.svg" alt="BrowserStack" width="50">
   </a>
 </p>
     
 <p align="center">
-Thank you <a href="https://www.browserstack.com/">BrowserStack</a> for providing the infrastructure that allows us to test in real browsers!
+  Browser testing is powered by <a href="https://browserstack.com/">BrowserStack</a>.
 </p>
 
 <br><br>
  
 <p align="center">
-  <a href="https://www.netlify.com/">
-    <img src="https://www.netlify.com/v3/img/components/logomark.svg" alt="Netlify" width="50">
+  <a href="https://netlify.com/">
+    <img src="https://netlify.com/v3/img/components/logomark.svg" alt="Netlify" width="50">
   </a>
 </p>
     
 <p align="center">
-Thank you <a href="https://www.netlify.com/">Netlify</a> for providing us with Deploy Previews!
+  <a href="https://netlify.com/">Netlify</a> provides us with Deploy Previews.
+</p>
+
+<br><br>
+ 
+<p align="center">
+  <a href="https://www.algolia.com/">
+    <img src="https://materialstyle.github.io/assets/images/Algolia-mark-blue.svg" alt="Algolia" width="50">
+  </a>
+</p>
+    
+<p align="center">
+  Doc search is powered by <a href="https://algolia.com/">Algolia</a>.
+</p>
+
+<br><br>
+ 
+<p align="center">
+  <a href="https://pages.github.com/">
+    <img src="https://materialstyle.github.io/assets/images/github-mark-white.svg" alt="GitHub Pages" width="50">
+  </a>
+</p>
+    
+<p align="center">
+  Material Style is hosted on <a href="https://pages.github.com/">GitHub Pages</a>.
 </p>
