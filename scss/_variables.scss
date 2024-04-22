@@ -1093,7 +1093,9 @@ $accordion-transition:                    $btn-transition, border-radius .15s ea
 $accordion-button-active-bg:              var(--#{$prefix}primary-subtle) !default;
 $accordion-button-active-color:           var(--#{$prefix}primary-active) !default;
 
-$accordion-button-focus-border-color:     $input-focus-border-color !default;
+// fusv-disable
+$accordion-button-focus-border-color:     $input-focus-border-color !default; // Deprecated in v3.1.2
+// fusv-enable
 $accordion-button-focus-box-shadow:       none !default;
 
 $accordion-icon-width:                    1.25rem !default;
