@@ -159,7 +159,7 @@ Make use of `--bs-nav-tabs-link-color`, `--bs-nav-tabs-link-hover-bg`, `--bs-nav
     <i class="bi bi-info-circle-fill"></i>
   </div>
   <div class="flex-grow-1 p-3 text-body">
-    Classes <b>.base-[color]</b> & <b>.primary-[color]</b> are depricated in v3.1.1
+    Classes <b>.base-[color]</b> & <b>.primary-[color]</b> are deprecated in v3.1.1
   </div>
 </div>
 

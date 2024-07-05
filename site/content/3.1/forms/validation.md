@@ -31,7 +31,7 @@ via CSS) or our custom feedback styles with additional HTML and CSS.
 
 - Since we use ```.form-floating``` for our Text and Select fields, feedback messages 
 ```.valid-feedback``` and ```.invalid-feedback``` must be kept outside the ```.form-floating``` block.
-- To apply the styles on feeback messages, we apply the ```.is-invalid``` and ```.is-valid``` 
+- To apply the styles on feedback messages, we apply the ```.is-invalid``` and ```.is-valid``` 
 classes on ```.form-floating``` and ```.was-validated``` class is also required.
 - To reset the appearance of the form, classes ```.is-valid``` and ```.is-invalid``` have to be removed
 as well, along with ```.was-validated```.
@@ -557,7 +557,7 @@ function toggleValidityClasses(input, formFloating) {
 
 If your form layout allows it, you can swap the ```.{valid|invalid}-feedback``` classes 
 for ```.{valid|invalid}-tooltip``` classes to display validation feedback in a styled tooltip. 
-Be sure to have a parent with ```position: relative``` on it for tooltip positioning.
+Be sure to have a parent with ```position: relative ``` on it for tooltip positioning.
 
 {{< example codeId="code3">}}
 

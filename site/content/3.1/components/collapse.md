@@ -3,7 +3,7 @@ layout: docs
 title: Collapse
 group: components
 toc: true
-description: A collase toggles the visibility of content.
+description: A collapse toggles the visibility of content.
 ---
 
 ## How it works

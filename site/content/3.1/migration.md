@@ -54,7 +54,7 @@ have been removed in favour of custom theming.
 - Added elevated buttons (Buttons with shadows).
 - Added support for Dark Select and Text Fields.
 - <span class="badge text-bg-danger rounded-pill me-1">Breaking</span> 
-Classes `.base-[color]` & `.primary-[color]` are depricated from Selects, Text fields & Tabs.
+Classes `.base-[color]` & `.primary-[color]` are deprecated from Selects, Text fields & Tabs.
 
 ---
 
