@@ -557,13 +557,13 @@ function toggleValidityClasses(input, formFloating) {
 
 If your form layout allows it, you can swap the ```.{valid|invalid}-feedback``` classes 
 for ```.{valid|invalid}-tooltip``` classes to display validation feedback in a styled tooltip. 
-Be sure to have a parent with ```position: relative ``` on it for tooltip positioning.
+Be sure to have a parent with ```position: relative``` on it for tooltip positioning.
 
 {{< example codeId="code3">}}
 
 <form class="needs-validation d-flex flex-wrap gap-2" novalidate>
 
-  <div class="position-relativ mb-5">
+  <div class="position-relative mb-5">
     <div class="form-floating">
       <input type="text" class="form-control" id="textfieldTooltip" placeholder="textField" autocomplete="off" required>
       <label for="textfieldTooltip">Text Field</label>
