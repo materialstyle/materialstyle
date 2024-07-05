@@ -48,7 +48,7 @@ This way, you get a global divider that you can override without recompiling CSS
 
 <br>
 
-### Via custom poperty
+### Via custom property
 
 {{< example codeId="code2" >}}
 
@@ -76,7 +76,7 @@ $breadcrumb-divider: quote(">");
 
 ## Using an SVG as divider
 
-### Via custom poperty
+### Via custom property
 
 {{< example codeId="code4">}}
 
@@ -99,7 +99,7 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 
 ## Removing divider
 
-### Via custom poperty
+### Via custom property
 
 Remove the divider by setting ```--bs-breadcrumb-divider: '';``` (empty strings in CSS custom properties counts as a value).
 
