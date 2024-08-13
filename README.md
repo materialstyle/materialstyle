@@ -10,9 +10,6 @@
   A Material Design UI Library based on Bootstrap.
 </p>
 
-[![](https://data.jsdelivr.com/v1/package/npm/@materialstyle/materialstyle/badge)](https://www.jsdelivr.com/package/npm/@materialstyle/materialstyle)
-[![npm version](https://img.shields.io/npm/v/@materialstyle/materialstyle?logo=npm&color=ea2039&style=flat-square)](https://www.npmjs.com/package/@materialstyle/materialstyle)
-
 ## Table of contents
 
 - [Components](#components)
@@ -117,3 +114,7 @@ Material Style is built using <a href="https://getbootstrap.com/">Bootstrap</a>.
 <p align="center">
   Material Style is hosted on <a href="https://pages.github.com/">GitHub Pages</a>.
 </p>
+
+[![](https://data.jsdelivr.com/v1/package/npm/@materialstyle/materialstyle/badge)](https://www.jsdelivr.com/package/npm/@materialstyle/materialstyle)
+[![npm version](https://img.shields.io/npm/v/@materialstyle/materialstyle?logo=npm&color=ea2039&style=flat-square)](https://www.npmjs.com/package/@materialstyle/materialstyle)
+
