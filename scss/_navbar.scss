@@ -231,7 +231,7 @@
           flex-basis: auto;
         }
 
-        .navbar-toggler {
+        .navbar-toggler:not([data-bs-toggle="offcanvas"]) {
           display: none;
         }
 
