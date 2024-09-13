@@ -261,9 +261,10 @@ class SelectField extends BaseComponent {
       dropdownItem.append(label)
     } else {
       dropdownItem.innerHTML = text
-      if (checked) {
-        dropdownItem.setAttribute('aria-selected', 'true')
-      }
+    }
+
+    if (checked) {
+      dropdownItem.setAttribute('aria-selected', 'true')
     }
 
     return dropdownItem

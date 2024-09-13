@@ -136,6 +136,9 @@
 
     .dropdown-item {
       min-height: 40px;
+      word-break: break-all;
+      white-space: break-spaces;
+
       > * {
         pointer-events: none;
       }
@@ -251,6 +254,7 @@
     }
 
     .checkmark {
+      flex-shrink: 0;
       width: 20px;
       height: 20px;
       visibility: hidden;
